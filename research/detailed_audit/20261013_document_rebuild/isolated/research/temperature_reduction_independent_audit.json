@@ -1,0 +1,10 @@
+{
+  "precision_digits": 70,
+  "parameter_points": 281,
+  "temperature_derivative_value_checks": 6744,
+  "gradient_checks": 360,
+  "all_passed": true,
+  "seed": 12102045,
+  "method": "Direct matrix exponential, temperature finite differences at step 1e-14, parameter/time finite differences at step 1e-12",
+  "scope": "Independent numerical cross-check of analytic first/second temperature derivatives and their interval gradients; not a box certificate"
+}

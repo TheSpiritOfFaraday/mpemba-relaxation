@@ -1,0 +1,166 @@
+Independent skeptical audit of the sharp quarter-amplitude upper bound
+2026-10-11, verifier agent. Read the complete Schur/reset proof in
+research/full_triplet_amplitude_bound.tex and the independently parameterized
+Perron-coupling proof in research/extended_adversarial_progress.txt, together
+with its symbolic checker. No audited source file was changed.
+
+CONCLUSION
+The proposed upper bound is proved under its exact stated hypotheses:
+four distinct ordered energies, positive finite bath temperature, reversible
+thermalizing generator, SIMPLE slow nonzero eigenvalue, and failure of all
+original triplet predicates. Every finite cooling amplitude advantage is
+strictly less than 25%; the existing quarter-limit family establishes sharpness
+as a supremum. The corresponding relative-entropy leading-coefficient
+advantage has supremum 7/16. This audit does not extend the scalar bound to
+a degenerate slow eigenspace or finite-time entropy/TV crossings.
+
+This conclusion does not rest on agent agreement or symbolic factorization
+alone. The zero-rate face inequalities, eigenvalue sign, Schur-complement
+ordering, reducible boundaries, final thermal comparison, and limiting
+construction were checked separately as described below.
+
+1. RESET SUBTRACTION IS LEGITIMATE EVEN ON REDUCIBLE FACES
+G_ijk<=0 means k_ik<=k_jk for reduced conductances k_ij=a_ij/q_i.
+For each upper state j, its smallest incident conductance from a lower state
+is k_1j. Thus the global minimum is among k12,k13,k14. Subtracting that
+minimum times the reset generator leaves every off-diagonal rate nonnegative,
+retains conservation/reversibility, and makes at least one of a12,a13,a14 zero.
+It changes every nonstationary eigenvalue by the same constant and changes
+no eigenvector, F, or G. The resulting generator may be reducible. That is
+allowed: its eigenvalues are still nonpositive, so the shifted top contrast
+eigenvalue lambda satisfies lambda<=0. Irreducibility of this auxiliary
+generator is not used. Original slow simplicity survives the common shift
+within the nonstationary space, even if lambda becomes zero.
+
+2. THE DIVISION lambda-B33 IS JUSTIFIED
+The contrast matrix B is diagonally similar to a symmetric matrix A. Its top
+eigenvalue lambda is simple and its eigenvector x is nonnegative. If x1=0,
+the desired x2>=s*x1 is immediate. If x1>0, lambda-B33 must be strictly
+positive. Otherwise A33=lambda and the positive semidefinite matrix lambda I-A
+has a zero third diagonal element. Every 2-by-2 principal minor then forces
+its third row/column to vanish. Thus e3 is a top eigenvector. Simplicity would
+force x to be supported on its third coordinate, contradicting x1>0.
+This argument works when lambda=0 and for reducible B.
+
+Alternatively, adding delta times the all-downward-rates-one generator gives
+strict F,G and strictly positive Helmert off-diagonals/Perron coordinates.
+Then lambda>B33 follows directly from the third eigen equation. Taking
+delta->0 with fixed weighted normalization is valid by the original simple
+eigenvalue's spectral continuity. Both boundary treatments are valid; the
+report's direct semidefinite argument needs no limiting approximation.
+
+3. SCHUR SIGN IMPLIES THE EIGENVECTOR INEQUALITY
+Eliminating the third coordinate gives a symmetrizable Metzler 2-by-2 matrix
+mathcal B at the selected lambda. After the diagonal similarity, lambda I-
+mathcal B is the Schur complement of lambda I-A with strictly positive
+last pivot. It is positive semidefinite and has a one-dimensional kernel.
+Hence lambda is the simple largest eigenvalue of mathcal B.
+
+If its off-diagonals are positive, the Perron ratio r=x2/x1 is the unique
+positive root of f(z)=mathcal B21+(mathcal B22-mathcal B11)z-mathcal B12*z^2.
+Therefore f(s)>=0 implies r>=s. If the off-diagonals vanish, both vanish by
+symmetrizability. Since x1>0 and the top eigenvalue is simple, x2=0 and
+mathcal B11>mathcal B22; then f(s)<0 because s>0. The exceptional case
+cannot invalidate the implication from f(s)>=0. No irreducibility assumption
+has been smuggled into this step.
+
+4. INDEPENDENT RECONSTRUCTION OF THE PIVOTAL ALGEBRA
+Executed a separate SymPy calculation starting from generic downward rates
+(a,b,c,d,e,f), weights (p,q,r,h), the full conserving reversible generator,
+and explicit unnormalized Helmert basis. It reconstructed B=eta^-1 H^T D L H,
+rather than importing either agent's B formulas. Exact factorization verified:
+
+  s=(p-q)r/[2q(p+q+r)],
+  C=B21+s(B22-B11)-s^2 B12,
+  Dstar=(B23-s B13)(B31+s B32),
+  -B33*C+Dstar = P*T,
+  P=(p+q)(p+q+r+h)/[4p q^2(p+q+r)^2],
+  T=(c+e+f)N+h[2ce r(p-q)+fJ],
+  N=-2pqr F123,
+  J=e p(2q+r)-c q(2p+r).
+
+Also independently verified
+  B23-s B13 = Q4*r/Q3 [k34-(k14+k24)/2].
+The G inequalities give k34>=k14,k24, so this is nonnegative; the other
+factor B31+s B32 is nonnegative by Metzler positivity. Thus Dstar>=0.
+If C>=0, (lambda-B33)C+Dstar>=0 immediately. If C<0, lambda<=0 yields
+(lambda-B33)C+Dstar>=-B33*C+Dstar. This direction of the inequality is
+correct; it is the essential use of the shifted generator's spectral sign.
+
+5. FACE SIGN ANALYSIS DOES NOT DIVIDE BY VANISHING RATES
+N>=0 follows from F123<=0. At least one of a,b,c is zero, with all six
+rates nonnegative after reset subtraction.
+
+If c=0: J=e p(2q+r)>=0 and every term of T is nonnegative.
+
+If a=0: the exact identity
+  J=-(2p+r)/(2p+h) * 2pq F124
+      +2ep(p-q)(r-h)/(2p+h)
+has nonnegative terms. It uses only division by 2p+h>0, so it also covers
+e=0 and/or c=0. Thus T>=0.
+
+If b=0 and c<=e:
+  J=(e-c)p(2q+r)+c r(p-q)>=0.
+If b=0 and c>e, independently verified the exact identity
+  N+hJ = 2pq(r-h)(c-e)+dpr(2q+r)-2pqr F124 >=0.
+Then T=(c+e)N+f(N+hJ)+2ce rh(p-q)>=0.
+
+These cases are exhaustive and include multiple zero faces simultaneously.
+The positive prefactor P and the preceding Schur implication give x2>=s*x1,
+equivalently w1+w2>=2w3. The other inequalities w1>=w2 and w4<=0 follow
+directly from the nonnegative Helmert coordinates.
+
+6. CHECK OF THE SECOND, PERRON-COUPLING PROOF
+The independent proof first makes G strict by adding delta H. H has original
+downward rates one, F=-(1-t)(1+u/2)<0 and G=t-1<0. This is a valid
+reversible perturbation at fixed bath; slow simplicity and the chosen
+normalization persist for sufficiently small delta.
+
+After shifting lambda to zero, weighted self-adjointness reconstructs the
+contrast diagonal entries from its positive Perron vector (1,b,c). The shifted
+physical rates need not be nonnegative in this alternative proof, and no step
+requires them to be. F and G remain the unchanged linear expressions.
+The four displayed G equations give the claimed three nonnegative coupling
+parameters. Under b<s, the coefficients A,B of F123 are positive; m>0
+therefore forces C<0 and v0>0, hence 0<c<cmax. The coefficient k cancelling
+v0 in F124+k F123 is strictly positive.
+
+The remaining numerator is a concave quadratic in c. Its c=0 endpoint is
+strictly positive because bq<(p-q)r/(2Q3)<p. At c=cmax it is a concave
+quadratic in b with the two displayed strictly positive endpoint values.
+Concavity gives positivity on both entire intervals, making the supposedly
+nonpositive linear combination strictly positive. Thus the second proof's
+sign argument is sound, including its strictness mechanism m>0. Its symbolic
+checker verifies the accompanying identities; the sign reasoning was audited
+separately here. The continuity step proves the weak-inequality boundary case
+only under the stated original slow simplicity.
+
+7. FROM THE ARITHMETIC RESTRICTION TO THE THERMAL BOUND
+The first three components decompose into a constant plus
+u(1,-1,0)+v(1,1,-2), with u=(w1-w2)/2>=0 and
+v=(w1+w2-2w3)/6>=0. For energies (0,a,b), 0<a<b, and beta>=0,
+t=exp(-a beta),y=exp(-b beta), direct differentiation gives
+  (p1-p2)'=[2at+by-(b-a)ty]/(1+t+y)^2>0,
+  (p1+p2-2p3)'=-3p3'>0.
+The first numerator is positive since t<=1; the second follows from E3
+being larger than the three-state mean energy. Thus the conditional mean
+m(beta) is nondecreasing. No full four-component monotonicity is asserted.
+
+Let P=Z3/Z4. Exclusion of the highest energy implies P strictly increases
+from 3/4 at beta=0 towards 1; in particular 3/4<P_h<P_c<1 for the
+finite positive cooling pair. Put R=P_c/P_h<4/3. Then exactly
+  b_c-R*b_h=P_c(m_c-m_h)+(1-R)w4>=0.
+The established G theorem gives b_c,b_h<0. Reversing their signs therefore
+gives |b_c|<=R|b_h|<(4/3)|b_h|. Hence any anomalous advantage
+1-|b_h|/|b_c| is strictly below 1/4. No equality endpoint is admitted.
+
+The quarter-limit family audited separately attains ratio 4/3 only as a limit,
+including with all eight inequalities strict. It establishes the claimed
+supremum. Squaring the limiting inverse ratio gives entropy advantage 7/16;
+the dimensionless asymptotic time advance is strictly below log(4/3), or
+log(4/3)/|lambda2| in the generator's time unit. These are asymptotic amplitude
+comparisons, not bounds on every finite-time distance or cooling threshold.
+
+No substantive flaw found in either proof. Publication novelty is outside
+this mathematical audit. Degenerate slow modes remain outside this scalar
+upper-bound theorem unless separately treated.

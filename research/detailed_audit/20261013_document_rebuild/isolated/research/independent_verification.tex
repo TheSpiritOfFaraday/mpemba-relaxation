@@ -1,0 +1,67 @@
+\subsection{A separate proof using inertia and residual bounds}\label{sec:separatecheck}
+The primary example also admits a verification that does not use its cubic coefficients, cofactor polynomials, previously computed root brackets or certificate JSON files. The standalone script \path{research/standalone_primary_check.py} starts only from the six printed downward rates and four bath weights. It uses Python's standard-library integers and fractions, with explicit rejection checks that remain active under optimization. It rebuilds the generator and evaluates the original two-branch predicates directly, without invoking Lemma~1. The following argument explains its complete spectral and thermal certificate.
+
+\paragraph{Exact identification of the slow eigenspace.}
+Put $L=M^\top$, $D_q=\diag(q)$ and $H=D_qL$. Detailed balance makes $H$ symmetric. For rational $\xi$, exact symmetric elimination of $H-\xi D_q$ into a unit triangular factor, a diagonal factor and the transpose triangular factor gives the following pivot signs, eliminating coordinates in the order $1,2,3,4$:
+\begin{center}
+\begin{tabular}{c c c}
+\toprule $\xi$&Pivot signs&Number of eigenvalues of $L$ above $\xi$\\\midrule
+$-337$&$+,+,+,+$&4\\
+$-336$&$+,+,-,+$&3\\
+$-60$&$+,-,+,+$&3\\
+$-59$&$+,-,+,-$&2\\
+$-20$&$+,-,+,-$&2\\
+$-19$&$+,-,-,-$&1\\\bottomrule
+\end{tabular}
+\end{center}
+All pivots are nonzero; the script records their exact rational values. Each elimination step replaces the trailing block by $A_{ij}-A_{ik}A_{kj}/A_{kk}$ and is a congruence. Congruence preserves the counts of positive and negative eigenvalues. Also $H-\xi D_q$ is congruent to $D_q^{1/2}LD_q^{-1/2}-\xi I$. Thus the counts drop by one across each of $(-337,-336)$, $(-60,-59)$ and $(-20,-19)$. These account for three simple negative eigenvalues; $L\mathbf1=0$ accounts for the fourth. In particular the slow nonzero eigenspace is one-dimensional and lies in $(-20,-19)$. No approximate eigensolver is used in this identification.
+
+\paragraph{Residual control replaces an exact eigenvector formula.}
+Define the following exact rational trial values (each decimal terminates):
+\[
+\widehat r=-19.86836952145135,\qquad
+\widehat w_1=1,\quad
+\widehat w_2=-0.75893729814493,\quad
+\widehat w_3=-0.61211930644096,
+\]
+\[
+\widehat w_4=-\frac{q_1\widehat w_1+q_2\widehat w_2+q_3\widehat w_3}{q_4}
+=-\frac{193315388213}{50000000000000}.
+\]
+Use the weighted norm $\|f\|_q^2=\sum_iq_if_i^2$. Direct rational multiplication verifies
+\[
+q^\top\widehat w=0,\qquad
+\|L\widehat w-\widehat r\widehat w\|_q^2<10^{-16}.
+\]
+These trial values are not accepted as eigenvalues or eigenvectors: only their explicitly checked residual bound is used.
+
+Let $z$ be the orthogonal projection of $\widehat w$ onto the true slow eigenspace in this weighted inner product. The operator $L$ is self-adjoint there. Its stationary component in $\widehat w$ vanishes because $q^\top\widehat w=0$. The two faster eigenvalues are below $-59$, whereas $\widehat r>-20$, so their distances from $\widehat r$ exceed $39$. Expanding in a weighted orthonormal eigenbasis gives
+\[
+\|L\widehat w-\widehat r\widehat w\|_q^2
+\geq39^2\|\widehat w-z\|_q^2,
+\qquad
+\|\widehat w-z\|_q<\frac{10^{-8}}{39}.
+\]
+Since $\|\widehat w\|_q\geq1$, the projection is nonzero. The minimum bath weight is $1/400$, hence each coordinate error is less than $20\,10^{-8}/39$. For every probability vector $p$ this implies
+\begin{equation}\label{eq:residualoverlap}
+|z^\top p-\widehat w^\top p|<\delta,
+\qquad \delta=\frac1{195000000}.
+\end{equation}
+
+\paragraph{Independent thermal enclosures.}
+For $n=1000$ and $100$, integer binary search finds $m_i$ satisfying
+\[
+\left(\frac{m_i}{10^{12}}\right)^n\leq q_i
+<\left(\frac{m_i+1}{10^{12}}\right)^n.
+\]
+These comparisons use integer powers and positive denominators. Signed sums of the endpoint bounds enclose $\sum_i\widehat w_iq_i^{1/n}$; positive sums enclose its partition function. Taking all numerator/denominator endpoint quotients and adding the error in Eq.~\eqref{eq:residualoverlap} proves the deliberately widened rational intervals
+\begin{align*}
+z^\top\pi(1/1000)&\in(-0.093745434,-0.093745422),\\
+z^\top\pi(1/100)&\in(-0.093848841,-0.093848830).
+\end{align*}
+Both overlaps are negative, and their absolute-value difference exceeds $0.000103396>10^{-4}$. This proves the cooling reversal for the actual simple slow mode, rather than for the trial vector. The paired right mode is $D_qz/(z^\top D_qz)$, giving unit left-right overlap. Here the left mode is $z$, whose first coordinate is in $(1-\delta,1+\delta)$, rather than exactly one. Dividing by this positive coordinate recovers the main report's normalization; the checker verifies that the normalized advantage still exceeds $10^{-4}$.
+
+\paragraph{Independence and its limits.}
+The original certificate uses symbolic characteristic polynomials and cofactor intervals; this checker uses rational congruence and a spectral residual bound. Its standalone implementation requires no research data files or third-party packages. Ten adversarial tests include an isolated execution with only the checker present, identical results under normal and optimized Python, rejection of a transposed generator, a false triplet premise, a wrong mode, a poor eigenvector and reversed temperatures, plus analytically known arithmetic examples. These tests exercise failure paths; they do not themselves prove the checker correct.
+
+This is a separate implementation and a different proof within the same model-assisted project, not independent human authorship, formal proof-assistant verification or external peer review. It still trusts Python's integer/fraction arithmetic and the mathematical argument above. It independently verifies the primary asymptotic counterexample; the finite-time crossing brackets remain supported by their separate uniformization certificate. All methods still require review of the correspondence to the published claim in Section~\ref{sec:claimscope}. A reviewer can run the standalone checker in an empty directory and audit the argument above without trusting the discovery search or any stored numerical output.

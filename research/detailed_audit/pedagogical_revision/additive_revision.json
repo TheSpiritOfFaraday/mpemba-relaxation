@@ -1,0 +1,29 @@
+{
+  "before_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+  "after_sha256": "a4d2f296bdd7301a52688b475ba7cdd2295b5a99571b2381237312b398bf0187",
+  "course_sha256": "319c8e2c6409956648c2567edb2ebdfd5166794ae05e3b51eef4d0acffa65506",
+  "exact_additive_reconstruction": true,
+  "change": "Insert a 32-lesson unnumbered teaching part immediately after maketitle; every original byte outside this insertion is preserved.",
+  "review_migration": [
+    "research_report.tex:1",
+    "research_report.tex:3",
+    "research_report.tex:4",
+    "research_report.tex:8",
+    "research_report.tex:20",
+    "research_report.tex:19",
+    "research_report.tex:21",
+    "research_report.tex:22",
+    "research_report.tex:2",
+    "research_report.tex:5",
+    "research_report.tex:6",
+    "research_report.tex:7",
+    "research_report.tex:11",
+    "research_report.tex:12",
+    "research_report.tex:13",
+    "research_report.tex:14",
+    "research_report.tex:15"
+  ],
+  "migration_scope": "Prior review status applies only to unchanged retained claims and proofs. It does not imply full review of the new course.",
+  "lessons": 32,
+  "words_approximate": 13246
+}

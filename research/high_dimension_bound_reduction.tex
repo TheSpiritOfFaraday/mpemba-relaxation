@@ -1,0 +1,163 @@
+\section{A precise reduction of the remaining dimensional bound}
+\label{sec:highdimboundreduction}
+The construction above and the contrast bound leave a specific structural
+question. The next proposition isolates a sufficient additional inequality;
+it does not assert that all the original $F$ tests force that inequality
+in arbitrary dimension.
+
+\begin{proposition}[Conditional three-state reduction]
+\label{prop:highdimboundreduction}
+Let $n\geq4$, let the energies be distinct and ordered, and let a positive
+reversible generator at $0<\beta_b<\infty$ have a simple slow mode.
+Suppose every original $G_{ijk}\leq0$. Orient the slow left eigenfunction
+$w$ by its nonnegative weighted-prefix contrast coordinates, as in
+Theorem~\ref{thm:orderedk}. If additionally
+\begin{equation}\label{eq:highdimarithmetic}
+w_1+w_2\geq2w_3,
+\end{equation}
+then every finite cooling pair $0<\beta_h<\beta_c<\beta_b$ satisfies
+\[
+\frac{|b_2(\beta_c)|}{|b_2(\beta_h)|}<\frac n3.
+\]
+In particular its amplitude advantage is strictly below $1-3/n$.
+\end{proposition}
+\begin{proof}
+Write $q_i=\pi_i(\beta_b)$, $Q_k=\sum_{i\leq k}q_i$, and
+\[
+h^{(k)}_i=
+\begin{cases}
+1,&i\leq k,\\
+-Q_k/q_{k+1},&i=k+1,\\
+0,&i>k+1.
+\end{cases}
+\]
+The contrast theorem supplies $w=\sum_{k=1}^{n-1}x_kh^{(k)}$ with
+$x_k\geq0$, not all zero. Put
+$f=x_1h^{(1)}+x_2h^{(2)}$; it is supported on the first three states.
+Every contrast with $k\geq3$ is constant on these states, so
+\[
+f_1-f_2=w_1-w_2=\frac{Q_2}{q_2}x_1\geq0,
+\qquad f_1+f_2-2f_3=w_1+w_2-2w_3\geq0.
+\]
+Thus the first three entries of $f$ are a constant plus
+$u(1,-1,0)+v(1,1,-2)$ with $u,v\geq0$.
+
+Let $m_f(\beta)$ be the conditional Gibbs mean of $f$ on states
+$1,2,3$. This mean is increasing when $f\ne0$. Indeed, shifting
+$E_1=0$ and writing $a=E_2$, $b=E_3$, $t=e^{-a\beta}$,
+$y=e^{-b\beta}$, the conditional probabilities are
+$(p_1,p_2,p_3)=(1,t,y)/(1+t+y)$ and
+\[
+(p_1-p_2)'=
+\frac{2at+by-(b-a)ty}{(1+t+y)^2}>0,
+\qquad (p_1+p_2-2p_3)'=-3p_3'>0.
+\]
+Here $0<a<b$ and $0<t\leq1$ for $\beta\geq0$.
+If $f\ne0$, its zero bath mean prevents its first three entries from
+being constant, so at least one of $u,v$ is positive. Consequently
+$m_f(\beta_b)=0$ and $m_f(\beta)<0$ for $0\leq\beta<\beta_b$.
+
+For $j\leq n$, write $P_j(\beta)=Z_j(\beta)/Z_n(\beta)$ for the
+Gibbs mass on the first $j$ states. If $j<n$, their lower energies give
+$j/n<P_j(\beta)<1$ for finite $\beta>0$. The overlap of $f$ is
+$P_3m_f$, and hence, when $f\ne0$,
+\[
+0<\frac{|\langle f\rangle_{\beta_c}|}
+        {|\langle f\rangle_{\beta_h}|}
+=\frac{P_3(\beta_c)}{P_3(\beta_h)}
+  \frac{|m_f(\beta_c)|}{|m_f(\beta_h)|}
+<\frac n3.
+\]
+
+For each $k\geq3$, the conditional mean of $h^{(k)}$ on its first
+$k+1$ states equals
+\[
+m_k(\beta)=1-\left(1+\frac{Q_k}{q_{k+1}}\right)
+ \frac{e^{-\beta E_{k+1}}}{Z_{k+1}(\beta)}.
+\]
+It is strictly increasing, since $E_{k+1}$ is the largest energy in
+that conditional system, and it vanishes at $\beta_b$. Its cooling
+values are therefore negative. The same factorization gives
+\[
+\frac{|\langle h^{(k)}\rangle_{\beta_c}|}
+     {|\langle h^{(k)}\rangle_{\beta_h}|}
+<\frac{n}{k+1}\leq\frac n4.
+\]
+For $k+1=n$, the mass factor is identically one and strictness instead
+comes directly from the strict increase of the negative conditional
+mean; this handles the full-support contrast without asserting
+$P_n<1$.
+
+The nonzero terms in
+$b_2(\beta)=\langle f\rangle_\beta+
+\sum_{k=3}^{n-1}x_k\langle h^{(k)}\rangle_\beta$
+are all negative on cooling. Its ratio of absolute overlaps is thus a
+weighted average of the corresponding component ratios, with positive
+weights proportional to their hot absolute overlaps. Each ratio is
+strictly below $n/3$, proving the assertion.
+\end{proof}
+
+To state the remaining gap precisely, let $S_n$ be the supremum of
+\[
+1-\frac{|b_2(\beta_h)|}{|b_2(\beta_c)|}
+\]
+over positive reversible $n$-state generators with distinct ordered
+energies, a positive finite bath, a simple slow mode, all original
+$F_{ijk},G_{ijk}\leq0$, and finite cooling pairs. The construction in
+Theorem~\ref{thm:highdimamplitude} and the general contrast bound give
+\[
+1-\frac3n\ \leq\ S_n\ \leq\ 1-\frac2n.
+\]
+Every individual finite pair has advantage strictly below the displayed
+upper bound; that strictness does not replace the non-strict inequality
+for the supremum. For $n=4$, Theorem~\ref{thm:fulltripletbound} settles
+$S_4=1/4$. For $n>4$, proving that the full original triplet premise
+forces \eqref{eq:highdimarithmetic} would, by the proposition and the
+existing construction, settle $S_n=1-3/n$. This all-dimensional
+arithmetic implication is not proved here. A counterexample to that
+intermediate implication alone would not establish that the amplitude
+supremum exceeds $1-3/n$; a thermal-overlap violation would still be needed.
+
+\begin{proposition}[A constant rare-tail subfamily]
+Let a positive reversible $n$-state generator, $n\geq4$, have distinct
+ordered energies, a positive finite bath, and all original $F,G\leq0$.
+Suppose its oriented simple slow eigenfunction is constant on states $4,\ldots,n$, and
+$Q_T:=\sum_{k=4}^n q_k<q_3$. Then $w_1+w_2\geq2w_3$ and the
+amplitude bound of Proposition~\ref{prop:highdimboundreduction} holds.
+The full dynamics need not be lumpable.
+\end{proposition}
+\begin{proof}
+Orthogonally compress the reversible backward generator onto functions
+constant on the tail, using its $q$-weighted inner product. The compressed
+four-state generator has weights $(q_1,q_2,q_3,Q_T)$, unchanged low-low
+rates, and
+\[
+a_{iT}=\sum_{k\geq4}\frac{q_k}{Q_T}a_{ik},\qquad
+a_{Ti}=\sum_{k\geq4}a_{ki}=\frac{Q_T}{q_i}a_{iT}.
+\]
+Its rates are positive, its diagonal conserves probability, and it is
+reversible. The original slow eigenfunction belongs to this subspace,
+so it remains an eigenfunction. The Rayleigh variational principle bounds
+every compressed nonstationary eigenvalue above by the original slow
+eigenvalue. Equality is simple because the original slow eigenspace is
+one-dimensional. Hence this is also the compressed simple slow mode.
+
+For $i<j\leq3$, direct substitution gives
+\[
+G_{ijT}=\sum_{k\geq4}\frac{q_k}{Q_T}G_{ijk},\qquad
+F_{ijT}=\sum_{k\geq4}\frac{q_k}{Q_T}F_{ijk}
+ +\sum_{k\geq4}\frac{q_k(Q_T-q_k)}{2Q_Tq_j}G_{ijk}.
+\]
+All coefficients are nonnegative, and the test on $123$ is unchanged.
+The compressed weights are strictly ordered because $Q_T<q_3$.
+The four-state arithmetic lemma therefore applies. Its orientation agrees
+with the original one: the first two contrast coordinates are unchanged,
+and the third is nonnegative because the common tail value is $w_n\leq0$.
+The preceding conditional bound completes the proof.
+\end{proof}
+
+This compression is different from eliminating states by a Schur
+complement. Its test preservation is the displayed identity, not an
+assumption about effective rates. The restrictions of a constant tail
+mode and $Q_T<q_3$ are substantive; aggregation can reorder energies
+when the latter fails.

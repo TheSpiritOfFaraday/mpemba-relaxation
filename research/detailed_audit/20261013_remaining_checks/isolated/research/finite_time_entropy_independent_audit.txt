@@ -1,0 +1,86 @@
+Independent numerical crosscheck of finite-time entropy claims
+Executed 2026-10-11, fixed seed 202610112253. These computations are supporting
+checks, not mathematical proofs or exhaustive parameter searches.
+
+Targets read before testing:
+  research/near_bath_entropy_window.tex
+  research/tridiagonal_contrast_entropy.tex
+Reproduce:
+  python3 research/finite_time_entropy_independent_audit.py
+  python3 research/finite_time_entropy_ratio_recheck.py
+Outputs: same-stem .json and .log, plus ratio_recheck.json.
+
+1. General G cone, near-bath KL
+240 independent generators, 40 each in dimensions 3,4,5,6,7,8. Bath beta_b=1.
+Ordered energies obtained from positive loguniform gaps (10^-2 to 10), then
+rescaled to a uniformly sampled total span between 1 and 15. Bath weights are
+normalized exp(-E). For each upper column j, independently sampled reduced
+conductances in [10^-3,10^3] are sorted increasing with i<j; symmetry completes
+k_ij. This enforces every G_ijk<=0. Generator offdiagonals are M_ij=q_i k_ij.
+All sampled offdiagonals positive, min 3.2586e-10. Largest raw column-sum residual
+1.2e-13; detailed balance and contrast Metzler structure checked numerically.
+
+For z=|beta-1|*(E_n-E_1) in {.0001,.05,.25,.5,.8,2/sqrt(5)}, both heating and
+cooling were tested. All beta remain positive because span>=1. For each use
+tau=t*|lambda_2| in {0,.001,.01,.1,1,3,10}. Total 20,160 KL outward-derivative
+checks: all positive, zero rejected for tiny signal, zero violations.
+Minimum derivative / sum(abs(component contributions)) = 0.9948480451.
+
+2. Physical tridiagonal contrast generators, heating convex divergences
+Another 240 independent generators, same dimension and energy ranges. Start
+with a real symmetric tridiagonal orthonormal Helmert contrast matrix whose
+positive offdiagonals and negative diagonal magnitudes lie in [10^-2,10^2].
+Lift it to a reversible zero-column-sum matrix, then add rho*(q*1^T-I), choosing
+rho one unit above the largest reduced-rate deficit. This makes all physical
+offdiagonals strictly positive and shifts only the contrast diagonal. All 240
+also pass the original G tests numerically (tolerance 10^-10).
+Min physical offdiagonal 3.2242e-7; largest raw column-sum residual 1.6e-11.
+
+Heating z in {.001,.05,.3,1,3,8}, same seven normalized times. 10,080 evaluations
+per divergence. KL, chi-square, reverse KL, squared Hellinger, quartic (r-1)^4,
+and total variation |r-1| were tested by sum q_i (dr_i/d beta) Phi'(r_i).
+TV uses its derivative away from kinks, not a dedicated test of kink points.
+All accepted derivatives positive; no negative values. Exactly 320 quartic
+values had absolute contribution sum below 10^-24 and were REJECTED as tiny,
+not accepted as zeros. All other 60,160 tridiagonal derivative checks accepted.
+Smallest normalized signed values by divergence:
+  KL .3845313; chi-square .2322931; reverse KL .7315716;
+  Hellinger .6235952; quartic .4933675; total variation .01231246.
+Negative-violation threshold: -10^-10 times sum(abs(component contributions)).
+The explicit signal cutoff prevents underflow-sized values counting as success.
+
+3. Independent numerical formulation
+Main evolution uses an orthogonal spectral decomposition in the weighted
+Helmert contrast space; probability derivatives are analytically differentiated
+Gibbs initial states with bath and generator held fixed. At 12 points in each
+family, independently compute exp(t M), propagate the probability and its
+derivative, and compare with spectral results. Also use centered finite
+differences in beta with h=10^-5/max(1,energy span).
+Largest relative KL-derivative discrepancy, expm vs spectral:
+  general G: 1.67e-13; tridiagonal: 2.23e-15.
+Largest relative finite-difference discrepancy:
+  general G: 4.30e-7; tridiagonal: 4.11e-6.
+Every spot check passed the explicit 10^-7 / 10^-5 tolerances respectively.
+
+4. Ratio-order obstruction for a broader TP2-style proof
+At points where all contrast x,y coordinates exceed 10^-12, test whether the
+heating derivative ratios y_k/x_k decrease in k (relative tolerance 10^-8).
+There were zero observed failures for the tridiagonal family, but 2,235 failures
+for the general-G family. The first n=5 example is fully specified in the audit
+JSON, including q, E, physical M, beta and physical time. Rebuilding a reversible
+generator from those decimal upper rates and checking at 80 decimal digits gives
+final consecutive ratios 124674.89514246866 < 124674.99188580388, increase
+0.0967433352201991. KL outward derivative is still +6.23659510031135e-8.
+Thus ratio ordering does not numerically extend to arbitrary general-G dynamics;
+this is not a KL counterexample. The high precision result is not an interval
+certificate and should be described as a verified numerical obstruction only.
+
+5. Exact independent J3 check
+With q=(3/5,3/10,1/10), z=(1,2,-12), D=diag(q), and
+J3=q*1^T-I-D*z*z^T/(z^T D z), exact rational SymPy computation gives
+ J3=[[-59/135, 71/135, 47/45],
+     [71/270,-209/270,67/90],
+     [47/270,67/270,-161/90]].
+Exactly J3*q=0, 1^T*J3=0, eigenvalues 0,-1,-2, F123=0, G123=-2/9.
+The physical adjacent-difference entry J3[0,1]-J3[0,2]=-14/27 exactly.
+This part is an exact arithmetic verification; the parameter sweeps are not.

@@ -1,0 +1,229 @@
+\section{A finite classification for every simple four-state slow mode}\label{sec:universal}
+The triplet test uses local rate information. A replacement can instead use the
+full generator's slow eigenvector. The result below is necessary and sufficient
+for ordinary \emph{asymptotic} cooling and heating effects throughout the working
+domain: four distinct energies, a positive finite bath temperature, a reversible
+irreducible generator, and a simple slow nonzero eigenvalue. It does not classify
+all transient crossings or a degenerate slow eigenspace. Computing the full slow
+mode is part of the test; this is not another local rate-only criterion.
+
+\subsection{The geometry of Gibbs derivatives}
+Shift the energies to $(0,a,b,c)$ with $0<a<b<c$, without changing their gaps.
+Write $\pi_i(\beta)=e^{-\beta E_i}/Z(\beta)$, and let a prime always mean a
+derivative in the initial inverse temperature. Define
+\[
+g=\pi_1'>0,\qquad u=\frac{\pi_2'}{\pi_1'},\qquad
+v=\frac{\pi_3'}{\pi_1'}.
+\]
+For any fixed vector $w$, including the left slow mode,
+\begin{equation}\label{eq:finitephi}
+\frac{d}{d\beta}(w^\top\pi)=g\Phi(\beta),\qquad
+\Phi=A+Bu+Cv,\quad (A,B,C)=(w_1-w_4,w_2-w_4,w_3-w_4).
+\end{equation}
+The identity follows from $\sum_i\pi_i'=0$.
+
+\begin{lemma}[Strictly convex derivative curve]\label{lem:convexcurve}
+For finite real $\beta$, $u'(\beta)<0$ and $v$, considered as a function
+of $u$, has strictly positive second derivative. For $\beta\geq0$, put
+\[
+c_0=ab(b-a),\quad c_1=ac(c-a),\quad c_2=bc(c-b),\quad
+\gamma=\frac{c-a}{c-b}>1,\qquad x=e^{-(c-b)\beta}.
+\]
+Then
+\begin{equation}\label{eq:slopescalar}
+\frac{dv}{du}=s(x)=\frac{c_2x^\gamma-c_0}{c_0+c_1x},\qquad
+s'(x)=\frac{c_0c_2\gamma x^{\gamma-1}
++c_1c_2(\gamma-1)x^\gamma+c_0c_1}{(c_0+c_1x)^2}>0.
+\end{equation}
+Here $s(0)=-1$, while $s(1)>-1$ need not be positive.
+\end{lemma}
+\begin{proof}
+For functions $h_1,\ldots,h_k$ let $W(h_1,\ldots,h_k)$ denote the
+determinant with derivative orders $0,\ldots,k-1$ in its rows.
+The following identity holds for any number $n$ of distinct ordered energies,
+with $f_i=e^{-\beta E_i}$ and $Z=\sum_i f_i$:
+\begin{equation}\label{eq:gibbswronskian}
+W(\pi_1',\ldots,\pi_k')=
+\frac{(-1)^{k(k-1)/2}}{Z^{k+1}}
+\left(\prod_{i<j\leq k}(E_j-E_i)\right)
+\left(\prod_{i=1}^k f_i\right)
+\sum_{j=k+1}^n f_j\prod_{i=1}^k(E_j-E_i),\quad k<n.
+\end{equation}
+Indeed, adjoining a constant column gives
+$W(\pi_1',\ldots,\pi_k')=W(1,\pi_1,\ldots,\pi_k)$.
+Multiplying all $k+1$ functions by $Z$ multiplies their Wronskian by
+$Z^{k+1}$: the product-rule transformation of the derivative rows is triangular
+with diagonal $Z$. Expand the first column of $W(Z,f_1,\ldots,f_k)$.
+Terms with index at most $k$ vanish by repeated columns; every remaining term
+is an exponential Vandermonde determinant with the displayed sign.
+
+For $k=2$ the identity gives $W(g,gu)=g^2u'<0$.
+For $k=3$ it gives
+$W(g,gu,gv)=g^3(u')^3d^2v/du^2<0$, proving strict convexity.
+For completeness, a mixed two-column calculation gives
+\[
+W(\pi_1',\pi_3')=
+\frac{f_1f_3}{Z^3}\{ab(b-a)f_2-bc(c-b)f_4\},
+\]
+whereas
+$W(\pi_1',\pi_2')=-f_1f_2\{ab(b-a)f_3+ac(c-a)f_4\}/Z^3$.
+Their ratio is $dv/du$ and simplifies to \eqref{eq:slopescalar}.
+Differentiation gives the strictly positive displayed numerator.
+\end{proof}
+
+\subsection{The finite test and its equality cases}
+The endpoint values needed below are explicit:
+\begin{align*}
+u(0)&=1-\frac{4a}{a+b+c},&v(0)&=1-\frac{4b}{a+b+c},\\
+u(\infty)&=-1,&v(\infty)&=0.
+\end{align*}
+At the bath and any other finite temperature, stable formulas are
+\[
+u=\frac{-a+(b-a)e^{-b\beta}+(c-a)e^{-c\beta}}
+{a+be^{-(b-a)\beta}+ce^{-(c-a)\beta}},
+\]
+\[
+v=\frac{e^{-(b-a)\beta}\{-b+(a-b)e^{-a\beta}+(c-b)e^{-c\beta}\}}
+{a+be^{-(b-a)\beta}+ce^{-(c-a)\beta}}.
+\]
+
+\begin{theorem}[Necessary and sufficient finite test]\label{thm:finiteclassification}
+Let $w$ be a nonzero left eigenvector of the simple slow nonzero mode, with
+$w^\top\pi(\beta_b)=0$. Form $A,B,C,\Phi$ as in \eqref{eq:finitephi}.
+If $C\ne0$ and $-1<-B/C<s(1)$, define $\beta_*$ by the unique solution
+\[
+s(x_*)=-B/C,\quad 0<x_*<1,\qquad
+\beta_*=-\frac{\log x_*}{c-b}.
+\]
+Otherwise omit $\beta_*$. Form the two finite sets of real numbers
+\begin{align*}
+\mathcal V_c&=\{\Phi(0),\Phi(\beta_b)\}
+\cup\{\Phi(\beta_*):0<\beta_*<\beta_b\},\\
+\mathcal V_h&=\{\Phi(\beta_b),w_1-w_2\}
+\cup\{\Phi(\beta_*):\beta_b<\beta_*<\infty\}.
+\end{align*}
+An ordinary asymptotic cooling effect exists if and only if
+$\min\mathcal V_c<0<\max\mathcal V_c$. An ordinary asymptotic heating effect
+exists if and only if $\min\mathcal V_h<0<\max\mathcal V_h$.
+All inequalities are strict. A zero extremum without opposite signs does not
+certify an effect. Endpoints $\beta=0,\infty$ are used only as limits; every
+effect asserted by the theorem has witnesses at finite positive temperatures.
+\end{theorem}
+\begin{proof}
+If $C=0$, then $\Phi=A+Bu$ is monotone (or constant). Otherwise
+$\Phi'=u'(B+C\,s(x))$. Lemma~\ref{lem:convexcurve} shows that this has at
+most one zero for $\beta>0$, precisely the $\beta_*$ just specified. If
+$-B/C$ equals either limiting slope, there is no interior zero. Thus the
+listed values give the infimum and supremum of $\Phi$ on each side of the
+bath, including its limiting endpoint. Since $g>0$, they decide whether
+$b'(\beta)$ takes both positive and negative values on that open side.
+
+It remains to justify the equivalence with a Mpemba ordering; a stationary
+point alone would not suffice. Write $b=w^\top\pi$, so $b(\beta_b)=0$.
+If $b'$ has only one sign on a side, $b$ is monotone there and $|b|$ increases
+with distance from the bath. There is no anomalous pair. Conversely, suppose
+$b'$ takes both signs. The strictly convex representation implies at most
+two zeros of $b'$ in total, counting multiplicities, unless it vanishes
+identically; the latter would require $w$ constant and is excluded. On the
+cooling side consider the last sign-changing zero before the bath. On the
+interval immediately to its right, $b$ has sign opposite to $b'$, because
+$b(\beta_b)=0$ and there are no further sign changes. Immediately to its
+left $b$ keeps that nonzero sign but $b'$ changes sign. Consequently
+$\partial_\beta|b|>0$ there, yielding a finite cooling witness. For heating,
+use the first sign-changing zero after the bath. Immediately to its left
+$b$ has the same sign as $b'$; immediately to its right the derivative changes
+sign while $b$ does not, so $\partial_\beta|b|<0$. This yields a finite
+heating witness. Isolated tangencies do not affect this reasoning. If the
+bath itself is stationary, apply the same argument on the open side.
+Strict opposite signs at a limiting endpoint persist at nearby finite
+temperatures by continuity.
+\end{proof}
+
+The theorem replaces an unbounded scan of initial temperatures by endpoint
+evaluations and at most one scalar equation with a unique solution. Its scope
+is every generator in the stated simple-mode working domain, with no restriction
+on energy spacing, rate scales, or triplet branches. It is an exact mathematical
+criterion, not a claim that floating-point arithmetic decides every equality
+case. With rational commensurate energies in an exponential coordinate and
+algebraic mode data, polynomial root isolation can certify the test. General
+transcendental boundary cases require exact arguments or suitable enclosures.
+
+\paragraph{Strong effects can also be classified with finitely many tests.}
+The same construction isolates every zero of $b'$: on either side of the
+optional $\beta_*$, $\Phi$ is strictly monotone unless $B=C=0$. Opposite
+endpoint signs give one unique root; an exact zero at $\beta_*$ is a tangency.
+There are at most two finite positive roots in total. On each side of the
+bath, insert these stationary temperatures between the bath and the limiting
+endpoint ($0$ or $\infty$). Evaluate $b$ at the resulting ordered knots.
+Every pair of consecutive nonzero values of opposite sign gives exactly one
+strong preparation in that open interval, since $b$ is strictly monotone
+there. Every stationary knot with $b=0$, other than the bath, is itself a
+strong preparation, including a tangential zero. A zero at $0$ or $\infty$
+is excluded. Intervals adjacent to a zero knot contain no additional zero.
+This is a complete finite classification of nonbath strong preparations;
+their actual temperatures, if desired, are the unique roots on those monotone
+intervals. It preserves the distinction between an ordinary turning point and
+a strong zero. The floating-point implementation supplies the ordinary-effect
+test. Section~\ref{sec:exactclassifier} also implements strong-root counts
+exactly for rational rates and commensurate energies; for unrestricted energy
+ratios the construction here is a mathematical root-isolation prescription.
+
+\subsection{A sharp limit on thermal complexity}
+For four states, Lemma~\ref{lem:convexcurve} shows that $b'$ has at most two
+zeros counting multiplicity: a line intersects a strictly convex graph at
+most twice, with tangency counting twice. More generally,
+\eqref{eq:gibbswronskian} shows that $(\pi_1',\ldots,\pi_{n-1}')$ is an
+extended complete Chebyshev system. This means every nonzero linear combination
+of its first $k$ functions has at most $k-1$ zeros counting multiplicity.
+The implication from nonvanishing prefix Wronskians is the standard repeated
+weighted Rolle argument (see, for example,
+\href{https://repository.tudelft.nl/file/File_ce2c559d-93ee-46e3-8128-227b977215ac}{Gasull, Geyer and Ma\~nosas,
+\emph{A Chebyshev criterion with applications}, J. Differential Equations 269
+(2020), Lemma 2.3}): divide by the first nonvanishing function,
+differentiate, and repeat; the transformed prefix Wronskians remain nonzero.
+At each differentiation the number of zeros can decrease by at most one.
+Thus any nonconstant Gibbs expectation has at most $n-2$ stationary points.
+This is a consequence of established Chebyshev-system theory; no new general
+Wronskian or zero-counting principle is claimed.
+
+Likewise, $Zb=\sum_iw_i e^{-\beta E_i}$ has at most $n-1$ zeros counting
+multiplicity by the exponential Vandermonde argument. One is the bath, so
+there are at most $n-2$ nonbath strong preparations. These two bounds are
+sharp even for positive reversible generators with a simple slow mode.
+Indeed, prescribe $n-2$ distinct positive nonbath inverse temperatures.
+Together with the bath they impose $n-1$ homogeneous interpolation conditions
+on $n$ coefficients $w_i$. The exponential Chebyshev property makes the
+nullspace one-dimensional and its nonzero solution has exactly those simple
+zeros and no others. Rolle's theorem forces $n-2$ stationary points between
+them, attaining the derivative bound as well.
+
+To realize this $w$, let $D=\operatorname{diag}(\pi_b)$,
+$N=w^\top Dw>0$, and choose
+\begin{equation}\label{eq:rankonerealization}
+M=-I+\pi_b\mathbf1^\top+\epsilon\frac{Dw w^\top}{N},\qquad
+0<\epsilon<\min\left\{1,\frac{N}{\max_i|w_i|^2}\right\}.
+\end{equation}
+Its off-diagonal entries are $\pi_{bi}(1+\epsilon w_iw_j/N)>0$;
+its column sums vanish and detailed balance holds. The eigenvalues are
+$0,-1+\epsilon,-1,\ldots,-1$, with $w$ the left slow mode. This is the rank-one realization construction of
+\href{https://arxiv.org/abs/1711.05829v3}{Klich, Raz, Hirschberg and Vucelja,
+\emph{The Mpemba index and anomalous relaxation}, Appendix VIII, Eq.~(67)},
+after time normalization and conversion of conventions. We use their
+established realization theorem to prove attainability. It need not obey the triplet premise.
+
+In particular, four is the minimum number of distinct states allowing both
+ordinary cooling and ordinary heating effects at one fixed bath with a simple
+slow mode: each side needs a sign-changing stationary point, while three states
+allow at most one globally. Four states attain the bound. Take
+$E_i=(i-1)\log2$, $\beta_b=1$, and
+\[
+w=(-3/32,\ 11/16,\ -3/2,\ 1),\qquad
+\sum_{i=1}^4w_i x^{i-1}=(x-1/4)(x-1/2)(x-3/4).
+\]
+The two nonbath strong preparations are
+$\beta=\log(4/3)/\log2<1$ and $\beta=2>1$. Choosing $\epsilon=1/100$
+in \eqref{eq:rankonerealization} gives an entirely rational generator, with
+eigenvalues $0,-99/100,-1,-1$. Both effects follow from the two exact nonbath
+zeros. This example illustrates attainability, not a second triplet
+counterexample. Publication priority for these Gibbs-specific consequences
+requires a separate literature assessment.

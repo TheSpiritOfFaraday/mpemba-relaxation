@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-12",
+  "previous_turn_classification": "progress: priority recorded and documents updated",
+  "current_turn_classification": "progress: constrained model discovered, fixed-input finite-time certificate passed, robustness searched and results recorded",
+  "goal_status": "active",
+  "goal_complete": false,
+  "requirements": {
+    "physically_motivated_rate_model": "Three shared Arrhenius barrier excesses; common attempt frequency; phenomenological physical interpretation explicit",
+    "finite_time_distance": "Certified >=10% advantage on a contiguous interval longer than 0.25 tau; cold KL above 0.00349",
+    "finite_time_saving": "Certified >=8.12% over entire KL threshold band [0.001,0.01] at the nominal point",
+    "moderate_ranges": "Interval-certified throughout +/-5% box",
+    "parameter_robustness": "All 256 corners and 3000 interior samples pass sampled benchmarks; three continuous adversarial searches found no failure; whole-box performance NOT certified",
+    "physical_model_constraints": "Positive reversible rates verified; microscopic derivation and rate-approximation errors NOT validated",
+    "triplet_scope": "Two triplets pass original predicate; does not extend the all-triplet-failure counterexample",
+    "documentation": "Report section 22.4, pages 68-70, with figure, independent checker, reproducible certificate and retained failed candidates"
+  },
+  "next_steps": [
+    "Certify continuous parameter-neighborhood performance or find an interior failure; do not equate sampling or optimizer success with a proof",
+    "Assess a microscopic realization or quantify the limitation of the phenomenological activated network",
+    "Keep the separate triplet-counterexample criterion explicit"
+  ],
+  "pdf_pages": {
+    "focused_paper": 10,
+    "research_report": 72,
+    "focused_appendices": 74
+  },
+  "render_review": "Report changed pages and appendix equivalents inspected, including corrected filled uncertainty envelope; no clipping or unresolved references",
+  "preservation": "Focused main paper and original archived source/PDF hashes unchanged",
+  "sha256": {
+    "research_report.tex": "4561460fd0e12187d40f1691948d4b2fcc259c96c609c0cb80c5553056309ca1",
+    "focused_appendices.tex": "9a332b52b021f285de1db40f17262004fb8bd649c6f263fe49fd96b920cbcead",
+    "output/pdf/research_report.pdf": "b229b69a5c5b83290615cd439811b27867f38d14f0f1a072f4b3c72bbc746ce6",
+    "output/pdf/focused_appendices.pdf": "ca1000e6f14aa2017c869efd144900416b0b32ae686be0406572b8e9a397c3ea",
+    "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+    "research/certify_physical_nominal.py": "133efb0e665e2ad9c259a4bd24848d3f8dfd16659abe90d7c5bd0a76d49b62e6",
+    "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+    "research/physical_rate_refined.json": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+    "research/physical_rate_refined_audit.json": "b40ddb4139d77787971941ade7db552cc6e57a576f4ca18781dcccc6cde60977",
+    "research/physical_rate_refined_interval_certificate.json": "6e328fa82343c54fb1d937ba3bd473e164769ec6661e67ef046d35972fb23570",
+    "research/physical_rate_adversarial_robustness.json": "1e6f09339b1ab7f2991e664c242efaff34816944b7e9ac3a714ae32b96e8494e",
+    "research/physical_finite_time_results.tex": "64266ff7c807a6840d556b6f140818e453cb2171e1a02b7c73a2d2a83248e503",
+    "research/physical_rate_plots.py": "d20625d8ffa29d5b8f99df8d313dc273913cc7d0787379ed4f108a294c552e23",
+    "output/figures/physical_finite_time.pdf": "f67e6ec23bb12186cc67b4add2f60b3d3c3cebfe6c0102dda4a9260643f176c4",
+    "focused_paper.tex": "f49ed22fa5394bdf1f1bb455dbdc8ed1b0c5643f7c334b17ef569c025293bb1e",
+    "output/pdf/focused_paper.pdf": "d32fbbc7aaf947f764dccc8ae1cfe204568812178ba06bbf31e43f4d83105c75",
+    "research/archive/research_report_before_focused_paper.tex": "346bceb86c912d45af05a5dbcb0216510988adb140306ca873bac5c701a29569",
+    "research/archive/research_report_before_focused_paper.pdf": "d8052d5049348c30197b3d2092cc8a5c895bf2326ee1d53dbdb4a30d2617719c"
+  }
+}

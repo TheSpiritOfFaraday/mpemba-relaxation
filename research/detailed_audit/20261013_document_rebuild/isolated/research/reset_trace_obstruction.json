@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "q": [
+    "10/11",
+    "2/55",
+    "3/110",
+    "1/55",
+    "1/110"
+  ],
+  "base_reduced_rates": [
+    "1",
+    "999/1000",
+    "999/1000",
+    "0",
+    "1",
+    "999/1000",
+    "0",
+    "2",
+    "0",
+    "2"
+  ],
+  "strict_downward_repair": "1/1000000",
+  "minimum_subtracted_from_repaired_base": "11/10000000",
+  "physical_input_reduced_rates": [
+    "2",
+    "1999/1000",
+    "1999/1000",
+    "1",
+    "2500033/1250000",
+    "2498783/1250000",
+    "1250033/1250000",
+    "90001067/30000000",
+    "30001067/30000000",
+    "30000539/10000000"
+  ],
+  "physical_minimum_reset": "1",
+  "all_original_tests_strict": true,
+  "trace_F123": "452114029270345354793/30223906046743763750000",
+  "trace_F123_float": 0.014958821952765261,
+  "scope": "Even after subtracting the minimum reset from a strictly positive full-F/G generator, the trace onto first3 may violate F123. This rules out the proposed zero-energy Schur sufficient lemma; it does not refute the all-n slow-mode arithmetic conjecture."
+}

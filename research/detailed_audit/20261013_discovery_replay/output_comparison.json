@@ -1,0 +1,12 @@
+{
+  "ignored_fields": [
+    "elapsed_seconds"
+  ],
+  "differences": [
+    {
+      "path": "physical_rate_search/profile",
+      "original": null,
+      "replay": "nominal"
+    }
+  ]
+}

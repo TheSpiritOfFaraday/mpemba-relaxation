@@ -1,0 +1,27 @@
+{
+  "precision_digits": 80,
+  "thermal_points": 453,
+  "maxima_points": 101,
+  "hot_preparation": "beta_h=1/log(1/epsilon)^2",
+  "representative_peaks": [
+    {
+      "exponent": 3,
+      "hot_beta": 0.02095685522351266,
+      "peak_beta": 0.08846828295231918,
+      "peak_gain": 4.541451858714637
+    },
+    {
+      "exponent": 10,
+      "hot_beta": 0.0018861169701161393,
+      "peak_beta": 0.055506777938810876,
+      "peak_gain": 16.46993514775394
+    },
+    {
+      "exponent": 50,
+      "hot_beta": 7.544467880464557e-05,
+      "peak_beta": 0.01832409586845836,
+      "peak_gain": 22.747485381308223
+    }
+  ],
+  "scope": "Numerical illustration of the unperturbed certified family, not additional rigorous acceptance"
+}

@@ -1,0 +1,122 @@
+\subsection{Exact classification of the degenerate slow boundary}
+\label{sec:fulltripletdegenerate}
+The full triplet premise is especially restrictive at a repeated slow
+rate. In fact this boundary admits an explicit description, and its
+absence of anomalous thermal ordering holds at every time for convex
+divergences.
+
+\begin{theorem}[The repeated-slow boundary is reset plus one adjacent pair]
+\label{thm:tripletdegenerate}
+Let $M$ be an irreducible reversible four-state generator with distinct
+energy levels, positive bath temperature, and all four original-rate
+triplet failures, equivalently $F_{ijk},G_{ijk}\leq0$.
+Write $q=\pi(\beta_b)$, $D=\operatorname{diag}(q)$ and
+$R=q\mathbf1^\top-I$. If
+$0>\lambda_2=\lambda_3>\lambda_4$, then, for exactly one
+$k\in\{1,2,3\}$,
+\[
+M=\rho R+\delta J^{(k)},\qquad \rho>0,\quad\delta>0,
+\]
+where $J^{(k)}$ is supported on the adjacent pair $(k,k+1)$,
+\[
+J^{(k)}_{k,k+1}=\frac{q_k}{q_k+q_{k+1}},\qquad
+J^{(k)}_{k+1,k}=\frac{q_{k+1}}{q_k+q_{k+1}},
+\]
+and its diagonal is set by zero column sums. Conversely, every such
+matrix obeys the full triplet premise and has spectrum
+$0,-\rho,-\rho,-\rho-\delta$.
+If all three nonzero eigenvalues coincide, then $M=\rho R$.
+
+Every generator in these two degenerate classes preserves stochastic
+order. Consequently, for cooling or heating Gibbs preparations, the
+farther preparation has at least as large a convex divergence from the
+bath at every $t\geq0$. This statement holds for every convex function
+finite on positive arguments; it is strict at finite times for strictly
+convex functions and distinct preparations. In particular there is no
+ordinary or strong asymptotic effect in KL or weighted Euclidean distance.
+No scalar choice within the repeated eigenspace is used in this conclusion.
+\end{theorem}
+\begin{proof}
+Use normalized weights $q_1>q_2>q_3>q_4>0$.
+Set $\rho=-\lambda_2$ and $\delta=\lambda_2-\lambda_4$.
+The spectral theorem for the reversible generator gives
+\[
+M=\rho R-\frac{\delta}{N}Dzz^\top,
+\qquad q^\top z=0,\qquad N=z^\top Dz>0,
+\]
+where $z$ is a real fast left eigenvector. In particular
+$a_{ij}=\rho q_i-\delta q_i z_i z_j/N$ for $i\ne j$.
+Substitution into the original triplet tests gives the exact identities
+\begin{align*}
+G_{ijk}&=-\frac{\delta q_j}{N}z_k(z_i-z_j),\\
+F_{ijk}&=\frac{\delta}{N}\left\{
+(q_i-q_j)z_i z_j-z_k\left[q_i z_i-q_j z_j
+ +\frac{q_k}{2}(z_i-z_j)\right]\right\}.
+\end{align*}
+Thus $G\leq0$ means $z_k(z_i-z_j)\geq0$.
+When $z_i=z_j=a$, the second identity reduces to
+$F_{ijk}=\delta(q_i-q_j)a(a-z_k)/N$; when $z_k=0$ it reduces to
+$F_{ijk}=\delta(q_i-q_j)z_i z_j/N$.
+
+If $z_4\ne0$, orient $z_4>0$. The three tests with $k=4$
+give $z_1\geq z_2\geq z_3$. If $z_1>z_2$, the remaining
+$G_{123}\leq0$ forces $z_3\geq0$, contradicting the zero bath
+mean. Therefore $z_1=z_2=a$.
+Now $F_{124}\leq0$ gives $0\leq a\leq z_4$.
+The zero bath mean then forces $z_3<0$, and $F_{123}\leq0$
+forces $a=0$. Hence $z$ is supported exactly on states $3,4$.
+
+If $z_4=0$ and $z_3\ne0$, orient $z_3>0$.
+Then $G_{123}\leq0$ gives $z_1\geq z_2$; the zero bath mean
+implies $z_2<0$. The test $F_{124}\leq0$ now gives $z_1\geq0$,
+whereas $F_{134}\leq0$ gives $z_1\leq0$.
+Thus $z_1=0$ and the support is exactly states $2,3$.
+Finally, if $z_4=z_3=0$, the nonzero zero-mean vector $z$ is
+supported exactly on states $1,2$.
+
+For support $(k,k+1)$ choose the normalization
+$z_k=-1/q_k$, $z_{k+1}=1/q_{k+1}$.
+Then $-Dzz^\top/N=J^{(k)}$ with the rates displayed in the theorem.
+This proves necessity and uniqueness of the pair. It also shows that
+these generators have strictly positive off-diagonal rates, even if
+only nonnegative rates were assumed initially.
+
+For completeness, write $d_k=\delta/(q_k+q_{k+1})$. The nonzero
+triplet evaluations for the converse are given below; all omitted
+evaluations are zero.
+\[
+\begin{array}{c|c|c}
+\text{pair}&F\text{ values}&G\text{ values}\\ \hline
+12&F_{123}=F_{124}=-(q_1-q_2)d_1&\text{none}\\[2pt]
+23&\begin{gathered}F_{123}=-(q_2+q_3/2)d_2\\
+F_{234}=-(q_2-q_3)d_2\end{gathered}&G_{123}=-q_2d_2\\[2pt]
+34&F_{134}=F_{234}=-(q_3+q_4/2)d_3&G_{134}=G_{234}=-q_3d_3
+\end{array}
+\]
+The extra matrix $J^{(k)}$ has eigenvalue $-1$ on its fast
+right eigenvector $Dz$ and vanishes on its three-dimensional kernel; $R$ is
+$-I$ on the zero-sum probability-perturbation subspace. This proves the claimed spectrum.
+If the three nonzero eigenvalues coincide, the reversible spectral
+resolution directly gives $M=\rho R$.
+
+To check stochastic monotonicity directly, let the adjacent differences
+of a function be $d_i=f_{i+1}-f_i$. The backward reset generator acts
+on these differences as $-I$. For $J^{(k)}$, its adjacent-difference
+matrix has only column $k$ nonzero: the diagonal entry is $-1$,
+the entry in row $k-1$, when present, is $q_{k+1}/(q_k+q_{k+1})$,
+and the entry in row $k+1$, when present, is
+$q_k/(q_k+q_{k+1})$. Therefore the adjacent-difference matrix for
+$M$ is Metzler. The earlier reversible stochastic-order argument gives
+the all-time convex-divergence ordering. Strict convexity makes its
+supporting-line inequality strict for distinct evolved distributions;
+$e^{tM}$ is invertible at finite $t$, so distinct Gibbs preparations
+remain distinct. This proves the asserted strictness without any
+spectral simplicity assumption.
+\end{proof}
+
+The classification also proves that strict failure of all eight linear
+tests forces a simple slow mode: every repeated-slow generator above
+has several triplet equalities. This is a mathematical classification
+within the stated premise, not a priority claim. The exact symbolic
+identities, converse tables, spectra and adjacent-difference matrices
+are checked in \texttt{research/full\_triplet\_degenerate\_certificate.py}.

@@ -1,0 +1,46 @@
+{
+  "reviewed_utc": "2026-10-13T03:15:57.411797+00:00",
+  "scope": "Physical discovery algorithms, saved-point values and interpretation; exact optimizer replay and old rejected-case counts recorded separately",
+  "steps": [
+    "Physical parameters are three positive energy gaps, three shared barrier excesses and two preparation temperatures; the reversible generator uses symmetric saddles and one common attempt frequency.",
+    "The numerical propagator uses a symmetric similarity transform, bath Gibbs weights, and the slow relaxation time; saved-point audit instead constructs the generator and uses direct matrix exponentials in physical time.",
+    "Both searches enforce nominal energy span <=4.76, temperature separation >=0.3 and component bounds before recording improving feasible candidates.",
+    "The nominal rate-ratio screen uses actual generator off-diagonal extremes with ceiling 850.",
+    "The robust screen bound takes the largest activation at +5% divided by the smallest barrier rate at -5%; independent corner-rate construction reproduces this conservative bound with ceiling 995.",
+    "Temperatures are perturbed relative to bath: T becomes 1+(T-1)(1+0.05s), not T(1+0.05s). Energies and barriers use multiplicative perturbations.",
+    "Initial KL above .011 brackets the largest tested target .01; the discovery score otherwise returns a positive rejection penalty.",
+    "KL contractivity permits the time-target residual Dh(.95tc)/delta-1. It checks three threshold values, not the continuous band.",
+    "Robust screening evaluates the nominal point and 16 single-coordinate perturbations. It does not cover simultaneous corners or interiors.",
+    "All 82 nominal and 71 robust-screen saved improvements have increasing evaluation indices and strictly decreasing scores; direct-exponential scores agree.",
+    "Both final saved search scores agree with direct-exponential evaluation. Historical evaluation counts and timing are recorded data, not proved by that point-value check.",
+    "Refinement begins with the second search candidate and accumulates the worst 12 of all 256 corners before each stage.",
+    "The active corner set is training evidence only; each proposed point is then evaluated on all 256 corners before acceptance.",
+    "All three saved active-corner sets, active scores, all-corner scores, acceptance decisions and final parameter identity were independently reconstructed.",
+    "The first accepted stage still fails a target: worst residual decreases from about .138016 to .036299 but remains positive.",
+    "The next two stages have negative worst-corner scores about -.00365153 and -.00365154; this gives finite corner/threshold evidence, not an interior proof.",
+    "The adversarial objective minimizes time savings over eight perturbation coordinates and log10(delta) in [-3,-2].",
+    "All three saved adversarial points lie in the declared domain, reproduce their recorded perturbed parameters and match independently recomputed hitting-time savings.",
+    "All three adversarial optimizer_success flags are false. Valid point values do not require convergence, but no converged global minimizer or exhaustive absence claim is supported.",
+    "The smallest saved adversarial saving is about .05120353437; this corroborates the displayed 5.1203 percent statement as a finite search observation.",
+    "The source explicitly separates numerical searches from the complete interval certificates; no new all-triplet-failure counterexample is claimed.",
+    "The independent checker passed 166 numerical comparisons with maximum discrepancy below 8e-13, using a declared absolute tolerance of 2e-8. These are finite floating-point cross-checks.",
+    "RUNME stale 32-lesson description corrected to 40; checker description now distinguishes original additive preservation from explicitly reviewed later technical edits.",
+    "All four advertised physical search commands replayed in isolation under Python3.9.13, NumPy1.26.4, SciPy1.13.1 and OPENBLAS_NUM_THREADS=1; all saved numeric fields, histories, stage decisions and counters match exactly, ignoring elapsed times and one new nominal profile label.",
+    "Both earlier rejected-candidate audits replayed over 1256 perturbations each. All historical fields match exactly, including failure counts441 and50; current output additionally supplies three threshold/envelope arrays."
+  ],
+  "step_count": 25,
+  "source_sha256": {
+    "research/search_physical_rate_model.py": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706",
+    "research/refine_physical_rate_model.py": "b9ef7619cbf65099709cee715a4d1b0fc8bb5afee1635112ea960d72df6b87f6",
+    "research/adversarial_physical_robustness.py": "5874a32b7f1c9caeeba02799795969c6f22dbfd58fcbc93be286774fb9a4eb72",
+    "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+    "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+    "research/physical_finite_time_results.tex": "37ea732a26a5c6f9656b9ab655e3978bf74abec75d60f6f3a07cc6b44e569180",
+    "RUNME.txt": "13705be2bb352de3c8c605baf4a42e1537521cbada77d4da341519c542281b5d"
+  },
+  "independent_evidence": "research/detailed_audit/physical_search_history_checks.json",
+  "replay_evidence": [
+    "research/detailed_audit/20261013_discovery_replay/receipt.json",
+    "research/detailed_audit/20261013_history_validation/receipt.json"
+  ]
+}

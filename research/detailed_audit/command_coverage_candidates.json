@@ -1,0 +1,1507 @@
+{
+  "generated_utc": "2026-10-13T03:18:50.640597+00:00",
+  "scope": "All85 advertised lines adjudicated against execution, source composition or documented setup applicability; broader research audit remains active.",
+  "commands": [
+    {
+      "line": 12,
+      "command": "python3 -I -S research/check_freshman_walkthrough.py",
+      "working_directory": ".",
+      "script": "research/check_freshman_walkthrough.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 13,
+      "command": "python3 research/test_freshman_walkthrough.py",
+      "working_directory": ".",
+      "script": "research/test_freshman_walkthrough.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 14,
+      "command": "python3 research/recheck_all.py --group core",
+      "working_directory": ".",
+      "script": "research/recheck_all.py",
+      "evidence_candidates": [],
+      "status": "verified wrapper by complete child replay and source review",
+      "complete": true
+    },
+    {
+      "line": 15,
+      "command": "python3 research/recheck_all.py --group extensions",
+      "working_directory": ".",
+      "script": "research/recheck_all.py",
+      "evidence_candidates": [],
+      "status": "verified wrapper by complete child replay and source review",
+      "complete": true
+    },
+    {
+      "line": 16,
+      "command": "python3 research/recheck_all.py --group physical",
+      "working_directory": ".",
+      "script": "research/recheck_all.py",
+      "evidence_candidates": [],
+      "status": "verified wrapper by complete child replay and source review",
+      "complete": true
+    },
+    {
+      "line": 17,
+      "command": "python3 research/check_publication_consistency.py",
+      "working_directory": ".",
+      "script": "research/check_publication_consistency.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_publication_consistency.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_publication_consistency.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_source_approach/receipt.json",
+          "log": "research/detailed_audit/publication_consistency.json"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 18,
+      "command": "python3 research/check_sharpness_correspondence.py",
+      "working_directory": ".",
+      "script": "research/check_sharpness_correspondence.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_sharpness_correspondence.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_sharpness_correspondence.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_source_approach/receipt.json",
+          "log": "research/detailed_audit/sharpness_correspondence.json"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 19,
+      "command": "python3 research/check_quarter_approach.py",
+      "working_directory": ".",
+      "script": "research/check_quarter_approach.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_quarter_approach.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_quarter_approach.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_source_approach/receipt.json",
+          "log": "research/detailed_audit/quarter_approach_checks.json"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 20,
+      "command": "python3 research/build_freshman_guide.py",
+      "working_directory": ".",
+      "script": "research/build_freshman_guide.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 74,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py",
+      "working_directory": ".",
+      "script": "research/search_physical_rate_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/search_physical_rate_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/search_physical_rate_model.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+          "log": "research/detailed_audit/20261013_discovery_replay/0_discovery.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 75,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py --profile robust_screen --iterations 150",
+      "working_directory": ".",
+      "script": "research/search_physical_rate_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/search_physical_rate_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/search_physical_rate_model.py",
+            "--profile",
+            "robust_screen",
+            "--iterations",
+            "150"
+          ],
+          "receipt": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+          "log": "research/detailed_audit/20261013_discovery_replay/1_discovery.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 76,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/refine_physical_rate_model.py",
+      "working_directory": ".",
+      "script": "research/refine_physical_rate_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/refine_physical_rate_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/refine_physical_rate_model.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+          "log": "research/detailed_audit/20261013_discovery_replay/2_discovery.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 77,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/check_physical_rate_model.py research/physical_rate_refined.json --samples 3000",
+      "working_directory": ".",
+      "script": "research/check_physical_rate_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_physical_rate_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_physical_rate_model.py",
+            "research/physical_rate_refined.json",
+            "--samples",
+            "3000"
+          ],
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/check_physical_rate_model_3000.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 78,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/certify_physical_nominal.py research/physical_rate_refined.json",
+      "working_directory": ".",
+      "script": "research/certify_physical_nominal.py",
+      "evidence_candidates": [
+        {
+          "script": "research/certify_physical_nominal.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/certify_physical_nominal.py",
+            "research/physical_rate_refined.json"
+          ],
+          "receipt": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+          "log": "research/detailed_audit/20261013T022649Z_physical_support/certify_physical_nominal.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 79,
+      "command": "python3 research/physical_rate_plots.py",
+      "working_directory": ".",
+      "script": "research/physical_rate_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/physical_rate_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/physical_rate_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 80,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/adversarial_physical_robustness.py",
+      "working_directory": ".",
+      "script": "research/adversarial_physical_robustness.py",
+      "evidence_candidates": [
+        {
+          "script": "research/adversarial_physical_robustness.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/adversarial_physical_robustness.py"
+          ],
+          "receipt": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+          "log": "research/detailed_audit/20261013_discovery_replay/3_discovery.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 104,
+      "command": "sh research/build_papers.sh",
+      "working_directory": ".",
+      "script": "research/build_papers.sh",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 124,
+      "command": "python3 research/mechanism_plots.py",
+      "working_directory": ".",
+      "script": "research/mechanism_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/mechanism_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/mechanism_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 125,
+      "command": "python3 research/quarter_limit_plots.py",
+      "working_directory": ".",
+      "script": "research/quarter_limit_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/quarter_limit_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/quarter_limit_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 126,
+      "command": "python3 research/focused_overview.py",
+      "working_directory": ".",
+      "script": "research/focused_overview.py",
+      "evidence_candidates": [
+        {
+          "script": "research/focused_overview.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/focused_overview.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 137,
+      "command": "cd formal",
+      "working_directory": ".",
+      "script": null,
+      "evidence_candidates": [],
+      "status": "verified working-directory transition",
+      "complete": true
+    },
+    {
+      "line": 138,
+      "command": "lake exe cache get",
+      "working_directory": "formal",
+      "script": null,
+      "evidence_candidates": [],
+      "status": "conditional first-setup step; not needed for installed workspace",
+      "complete": true
+    },
+    {
+      "line": 139,
+      "command": "./check.sh",
+      "working_directory": "formal",
+      "script": "formal/check.sh",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 140,
+      "command": "cd ..",
+      "working_directory": "formal",
+      "script": null,
+      "evidence_candidates": [],
+      "status": "verified working-directory transition",
+      "complete": true
+    },
+    {
+      "line": 162,
+      "command": "python3 -I -S research/standalone_primary_check.py",
+      "working_directory": ".",
+      "script": "research/standalone_primary_check.py",
+      "evidence_candidates": [
+        {
+          "script": "research/standalone_primary_check.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/standalone_primary_check.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/standalone_primary_check.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 163,
+      "command": "python3 -I -S research/test_standalone_primary_check.py",
+      "working_directory": ".",
+      "script": "research/test_standalone_primary_check.py",
+      "evidence_candidates": [
+        {
+          "script": "research/test_standalone_primary_check.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/test_standalone_primary_check.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/test_standalone_primary_check.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 184,
+      "command": "python3 research/adversarial_certificate.py",
+      "working_directory": ".",
+      "script": "research/adversarial_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/adversarial_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/adversarial_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/adversarial_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 185,
+      "command": "python3 research/adversarial_rational_mode_certificate.py",
+      "working_directory": ".",
+      "script": "research/adversarial_rational_mode_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/adversarial_rational_mode_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/adversarial_rational_mode_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/adversarial_rational_mode_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 186,
+      "command": "python3 research/independent_mode_audit.py",
+      "working_directory": ".",
+      "script": "research/independent_mode_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/independent_mode_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/independent_mode_audit.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/independent_mode_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 187,
+      "command": "python3 research/finite_time_certificate.py",
+      "working_directory": ".",
+      "script": "research/finite_time_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/finite_time_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/finite_time_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/finite_time_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 201,
+      "command": "python3 research/physics_plots.py",
+      "working_directory": ".",
+      "script": "research/physics_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/physics_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/physics_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 202,
+      "command": "python3 research/mechanism_plots.py",
+      "working_directory": ".",
+      "script": "research/mechanism_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/mechanism_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/mechanism_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 203,
+      "command": "python3 research/revise_report.py",
+      "working_directory": ".",
+      "script": "research/revise_report.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 272,
+      "command": "python3 research/mechanism_certificate.py",
+      "working_directory": ".",
+      "script": "research/mechanism_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/mechanism_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/mechanism_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/mechanism_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 273,
+      "command": "python3 research/mechanism_plots.py",
+      "working_directory": ".",
+      "script": "research/mechanism_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/mechanism_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/mechanism_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 274,
+      "command": "python3 research/revise_report.py",
+      "working_directory": ".",
+      "script": "research/revise_report.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 303,
+      "command": "python3 research/ordered_conductance_certificate.py",
+      "working_directory": ".",
+      "script": "research/ordered_conductance_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/ordered_conductance_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/ordered_conductance_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/ordered_conductance_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 304,
+      "command": "python3 research/energy_threshold_certificate.py",
+      "working_directory": ".",
+      "script": "research/energy_threshold_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/energy_threshold_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/energy_threshold_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/energy_threshold_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 305,
+      "command": "python3 research/classification_exact_certificate.py",
+      "working_directory": ".",
+      "script": "research/classification_exact_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/classification_exact_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/classification_exact_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/classification_exact_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 306,
+      "command": "python3 research/degenerate_exact_certificate.py",
+      "working_directory": ".",
+      "script": "research/degenerate_exact_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/degenerate_exact_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/degenerate_exact_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/degenerate_exact_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 307,
+      "command": "python3 research/exact_mode_realizability.py",
+      "working_directory": ".",
+      "script": "research/exact_mode_realizability.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 308,
+      "command": "python3 research/inverse_realizability_audit.py",
+      "working_directory": ".",
+      "script": "research/inverse_realizability_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/inverse_realizability_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/inverse_realizability_audit.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/inverse_realizability_audit.log"
+        },
+        {
+          "script": "research/inverse_realizability_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/inverse_realizability_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 309,
+      "command": "python3 research/quarter_limit_certificate.py",
+      "working_directory": ".",
+      "script": "research/quarter_limit_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/quarter_limit_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/quarter_limit_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 310,
+      "command": "python3 research/quarter_limit_thermal_certificate.py",
+      "working_directory": ".",
+      "script": "research/quarter_limit_thermal_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/quarter_limit_thermal_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/quarter_limit_thermal_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_thermal_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 341,
+      "command": "python3 research/classifier_audit.py",
+      "working_directory": ".",
+      "script": "research/classifier_audit.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 342,
+      "command": "python3 research/ordered_conductance_numeric_audit.py",
+      "working_directory": ".",
+      "script": "research/ordered_conductance_numeric_audit.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 363,
+      "command": "python3 research/exact_commensurate_classifier.py research/commensurate_example.json",
+      "working_directory": ".",
+      "script": "research/exact_commensurate_classifier.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 364,
+      "command": "python3 research/test_exact_commensurate_classifier.py",
+      "working_directory": ".",
+      "script": "research/test_exact_commensurate_classifier.py",
+      "evidence_candidates": [
+        {
+          "script": "research/test_exact_commensurate_classifier.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/test_exact_commensurate_classifier.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/test_exact_commensurate_classifier.log"
+        },
+        {
+          "script": "research/test_exact_commensurate_classifier.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/test_exact_commensurate_classifier.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 382,
+      "command": "python3 research/transient_only_chi_certificate.py",
+      "working_directory": ".",
+      "script": "research/transient_only_chi_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/transient_only_chi_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/transient_only_chi_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/transient_only_chi_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 396,
+      "command": "python3 research/five_state_extension_certificate.py",
+      "working_directory": ".",
+      "script": "research/five_state_extension_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/five_state_extension_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/five_state_extension_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_extension_certificate.log"
+        },
+        {
+          "script": "research/five_state_extension_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T020537Z_dimension/receipt.json",
+          "log": "research/detailed_audit/20261013T020537Z_dimension/five_state_extension_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 407,
+      "command": "python3 research/exact_classifier_cross_audit.py",
+      "working_directory": ".",
+      "script": "research/exact_classifier_cross_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/exact_classifier_cross_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/exact_classifier_cross_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 408,
+      "command": "python3 research/quarter_limit_plots.py",
+      "working_directory": ".",
+      "script": "research/quarter_limit_plots.py",
+      "evidence_candidates": [
+        {
+          "script": "research/quarter_limit_plots.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/20261013T025557Z_figures/quarter_limit_plots.py.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 434,
+      "command": "python3 research/full_triplet_amplitude_certificate.py",
+      "working_directory": ".",
+      "script": "research/full_triplet_amplitude_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/full_triplet_amplitude_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/full_triplet_amplitude_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/full_triplet_amplitude_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 435,
+      "command": "python3 research/extended_arithmetic_certificate.py",
+      "working_directory": ".",
+      "script": "research/extended_arithmetic_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/extended_arithmetic_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/extended_arithmetic_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/extended_arithmetic_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 436,
+      "command": "python3 research/extended_mode_obstruction_certificate.py",
+      "working_directory": ".",
+      "script": "research/extended_mode_obstruction_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/extended_mode_obstruction_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/extended_mode_obstruction_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+          "log": "research/detailed_audit/20261013T011946Z_core/extended_mode_obstruction_certificate.log"
+        },
+        {
+          "script": "research/extended_mode_obstruction_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/extended_mode_obstruction_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 454,
+      "command": "python3 research/one_fast_mode_certificate.py",
+      "working_directory": ".",
+      "script": "research/one_fast_mode_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/one_fast_mode_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/one_fast_mode_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/one_fast_mode_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 455,
+      "command": "python3 research/compact_endpoint_equality_certificate.py",
+      "working_directory": ".",
+      "script": "research/compact_endpoint_equality_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/compact_endpoint_equality_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/compact_endpoint_equality_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/compact_endpoint_equality_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 456,
+      "command": "python3 research/independent_rational_classifier_audit.py",
+      "working_directory": ".",
+      "script": "research/independent_rational_classifier_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/independent_rational_classifier_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/independent_rational_classifier_audit.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/independent_rational_classifier_audit.log"
+        },
+        {
+          "script": "research/independent_rational_classifier_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/independent_rational_classifier_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 457,
+      "command": "python3 research/independent_classifier_nearzero_audit.py",
+      "working_directory": ".",
+      "script": "research/independent_classifier_nearzero_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/independent_classifier_nearzero_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/independent_classifier_nearzero_audit.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/independent_classifier_nearzero_audit.log"
+        },
+        {
+          "script": "research/independent_classifier_nearzero_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T014313Z_classifiers/receipt.json",
+          "log": "research/detailed_audit/20261013T014313Z_classifiers/independent_classifier_nearzero_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 458,
+      "command": "python3 research/exact_rational_triplet_classifier.py research/rational_triplet_compact_equality.json",
+      "working_directory": ".",
+      "script": "research/exact_rational_triplet_classifier.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 492,
+      "command": "python3 research/check_transient_heating_candidate.py",
+      "working_directory": ".",
+      "script": "research/check_transient_heating_candidate.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 497,
+      "command": "python3 research/high_dimension_amplitude_certificate.py",
+      "working_directory": ".",
+      "script": "research/high_dimension_amplitude_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/high_dimension_amplitude_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/high_dimension_amplitude_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/high_dimension_amplitude_certificate.log"
+        },
+        {
+          "script": "research/high_dimension_amplitude_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T020537Z_dimension/receipt.json",
+          "log": "research/detailed_audit/20261013T020537Z_dimension/high_dimension_amplitude_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 498,
+      "command": "python3 research/clone_rate_bound_certificate.py",
+      "working_directory": ".",
+      "script": "research/clone_rate_bound_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/clone_rate_bound_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/clone_rate_bound_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/clone_rate_bound_certificate.log"
+        },
+        {
+          "script": "research/clone_rate_bound_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T020537Z_dimension/receipt.json",
+          "log": "research/detailed_audit/20261013T020537Z_dimension/clone_rate_bound_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 499,
+      "command": "python3 research/five_state_large_advantage_certificate.py",
+      "working_directory": ".",
+      "script": "research/five_state_large_advantage_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/five_state_large_advantage_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/five_state_large_advantage_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_large_advantage_certificate.log"
+        },
+        {
+          "script": "research/five_state_large_advantage_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T020537Z_dimension/receipt.json",
+          "log": "research/detailed_audit/20261013T020537Z_dimension/five_state_large_advantage_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 519,
+      "command": "python3 research/thermal_ratio_obstruction_certificate.py",
+      "working_directory": ".",
+      "script": "research/thermal_ratio_obstruction_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/thermal_ratio_obstruction_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/thermal_ratio_obstruction_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/thermal_ratio_obstruction_certificate.log"
+        },
+        {
+          "script": "research/thermal_ratio_obstruction_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T015615Z_entropy/receipt.json",
+          "log": "research/detailed_audit/20261013T015615Z_entropy/thermal_ratio_obstruction_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 520,
+      "command": "python3 research/reset_trace_obstruction.py",
+      "working_directory": ".",
+      "script": "research/reset_trace_obstruction.py",
+      "evidence_candidates": [
+        {
+          "script": "research/reset_trace_obstruction.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/reset_trace_obstruction.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_obstruction.log"
+        },
+        {
+          "script": "research/reset_trace_obstruction.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T015615Z_entropy/receipt.json",
+          "log": "research/detailed_audit/20261013T015615Z_entropy/reset_trace_obstruction.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 521,
+      "command": "python3 research/reset_trace_independent_audit.py",
+      "working_directory": ".",
+      "script": "research/reset_trace_independent_audit.py",
+      "evidence_candidates": [
+        {
+          "script": "research/reset_trace_independent_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/reset_trace_independent_audit.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_independent_audit.log"
+        },
+        {
+          "script": "research/reset_trace_independent_audit.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T015615Z_entropy/receipt.json",
+          "log": "research/detailed_audit/20261013T015615Z_entropy/reset_trace_independent_audit.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 522,
+      "command": "python3 -I -S research/kl_contrast_gradient_obstruction.py",
+      "working_directory": ".",
+      "script": "research/kl_contrast_gradient_obstruction.py",
+      "evidence_candidates": [
+        {
+          "script": "research/kl_contrast_gradient_obstruction.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/kl_contrast_gradient_obstruction.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+          "log": "research/detailed_audit/20261013T012015Z_extensions/kl_contrast_gradient_obstruction.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 565,
+      "command": "python3 research/activated_intermediate_model.py",
+      "working_directory": ".",
+      "script": "research/activated_intermediate_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/activated_intermediate_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/activated_intermediate_model.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+          "log": "research/detailed_audit/20261013T022649Z_physical_support/activated_intermediate_model.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 566,
+      "command": "python3 research/check_activated_intermediates.py",
+      "working_directory": ".",
+      "script": "research/check_activated_intermediates.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_activated_intermediates.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_activated_intermediates.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+          "log": "research/detailed_audit/20261013T022649Z_physical_support/check_activated_intermediates.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 580,
+      "command": "python3 research/run_robust_finite_time_certificate.py",
+      "working_directory": ".",
+      "script": "research/run_robust_finite_time_certificate.py",
+      "evidence_candidates": [
+        {
+          "script": "research/run_robust_finite_time_certificate.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "./research/run_robust_finite_time_certificate.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T021448Z_physical/receipt.json",
+          "log": "research/detailed_audit/20261013T021448Z_physical/run_robust_finite_time_certificate.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 594,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_temperature_reduction.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_temperature_reduction",
+      "working_directory": ".",
+      "script": "research/check_temperature_reduction.cpp",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 595,
+      "command": "python3 research/check_temperature_reduction.py",
+      "working_directory": ".",
+      "script": "research/check_temperature_reduction.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 598,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_threshold_constraint_logic.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_threshold_constraint_logic",
+      "working_directory": ".",
+      "script": "research/check_threshold_constraint_logic.cpp",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 599,
+      "command": "./tmp/check_threshold_constraint_logic",
+      "working_directory": ".",
+      "script": null,
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 609,
+      "command": "python3 research/thermal_collision_model.py",
+      "working_directory": ".",
+      "script": "research/thermal_collision_model.py",
+      "evidence_candidates": [
+        {
+          "script": "research/thermal_collision_model.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/thermal_collision_model.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+          "log": "research/detailed_audit/20261013T022649Z_physical_support/thermal_collision_model.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 624,
+      "command": "python3 research/audit_physical_goal_completion.py",
+      "working_directory": ".",
+      "script": "research/audit_physical_goal_completion.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 634,
+      "command": "python3 research/revise_report.py",
+      "working_directory": ".",
+      "script": "research/revise_report.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 635,
+      "command": "python3 research/check_pedagogical_revision.py",
+      "working_directory": ".",
+      "script": "research/check_pedagogical_revision.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_pedagogical_revision.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": [
+            "python3",
+            "research/check_pedagogical_revision.py"
+          ],
+          "receipt": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+          "log": "research/detailed_audit/pedagogical_revision/course_checks.json"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 642,
+      "command": "python3 research/test_polynomial_reference.py",
+      "working_directory": ".",
+      "script": "research/test_polynomial_reference.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 650,
+      "command": "python3 research/check_entropy_reductions.py",
+      "working_directory": ".",
+      "script": "research/check_entropy_reductions.py",
+      "evidence_candidates": [
+        {
+          "script": "research/check_entropy_reductions.py",
+          "source_current": true,
+          "log_present_and_hash_valid_if_supplied": true,
+          "recorded_command": null,
+          "receipt": "research/detailed_audit/20261013T015615Z_entropy/receipt.json",
+          "log": "research/detailed_audit/20261013T015615Z_entropy/check_entropy_reductions.log"
+        }
+      ],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 651,
+      "command": "python3 research/test_entropy_audit_verdict.py",
+      "working_directory": ".",
+      "script": "research/test_entropy_audit_verdict.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 658,
+      "command": "python3 research/test_robust_runner_inputs.py",
+      "working_directory": ".",
+      "script": "research/test_robust_runner_inputs.py",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 659,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_interval_primitives.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_interval_primitives",
+      "working_directory": ".",
+      "script": "research/check_interval_primitives.cpp",
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    },
+    {
+      "line": 660,
+      "command": "./tmp/check_interval_primitives",
+      "working_directory": ".",
+      "script": null,
+      "evidence_candidates": [],
+      "status": "verified command execution; stated scope retained",
+      "complete": true
+    }
+  ],
+  "command_count": 85,
+  "with_current_script_replay": 51
+}

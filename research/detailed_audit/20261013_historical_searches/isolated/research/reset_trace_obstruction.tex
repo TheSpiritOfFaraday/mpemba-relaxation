@@ -1,0 +1,60 @@
+\subsection{An exact obstruction to a higher-dimensional trace proof}
+\label{sec:resettraceobstruction}
+The successful four-state arithmetic proof does not extend merely by
+replacing its one tail coordinate with a zero-energy Schur complement.
+The following exact five-state example rules out that intermediate
+closure claim; it does not disprove the slow-mode arithmetic conjecture.
+
+Take normalized bath weights $q=(100,4,3,2,1)/110$.
+In the pair order
+\[
+12,13,14,15,23,24,25,34,35,45,
+\]
+start with reduced conductances
+\[
+k^{(0)}=(1,999/1000,999/1000,0,1,999/1000,0,2,0,2).
+\]
+For $i<j$ set
+\[
+\eta=10^{-6},\qquad
+k^*_{ij}=k^{(0)}_{ij}+\eta/q_i-\eta/q_1,
+\qquad k^*_{ji}=k^*_{ij}.
+\]
+The initial $F$ tests are negative and the $G$ tests are nonpositive.
+Adding the term $\eta/q_i$ amounts to adding the strictly interior
+constant-downward-rate generator. Subtracting $\eta/q_1$ is a reset
+translation, which leaves every $F,G$ unchanged. Thus $k^*$ has all
+triplet tests strict, is nonnegative, and has minimum zero on edge15.
+Now use the strictly positive physical rates
+\[
+a_{ij}=q_i(1+k^*_{ij})\quad(i\ne j)
+\]
+with a conserving diagonal. This is reversible, has every original
+triplet predicate false with strict $F,G<0$, and its minimum reduced
+conductance is exactly one.
+
+Subtract this minimum reset and trace out states5 and4. The resulting
+three-state generator is the genuine conserving Schur complement; in
+reduced-conductance coordinates, elimination of a highest state $l$
+updates the remaining off-diagonal entries by
+\[
+k_{ij}\longmapsto k_{ij}
+ +\frac{q_l k_{il}k_{jl}}{\sum_{a<l}q_a k_{al}}.
+\]
+Both denominators are positive in this example. Exact rational arithmetic
+gives, for the resulting effective rates,
+\[
+F^{\mathrm{trace}}_{123}
+=\frac{452114029270345354793}{30223906046743763750000}>0.
+\]
+The complete exact checks are in
+\texttt{research/reset\_trace\_obstruction.py} and its JSON certificate.
+
+This disproves the implication that full original triplet failure,
+after subtracting the minimum reset, forces $F_{123}\leq0$ on the
+three-state trace. The original-rate inequalities and the effective-rate
+test above concern different generators. In particular this calculation
+provides no anomalous thermal pair and makes no claim that the original
+five-state slow vector violates $w_1+w_2\geq2w_3$.
+The higher-dimensional proof, if that inequality is true, must retain
+more of the slow eigenvalue dependence or use a different argument.

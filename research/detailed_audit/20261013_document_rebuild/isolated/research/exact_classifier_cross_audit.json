@@ -1,0 +1,2714 @@
+{
+  "status": "finished",
+  "seed": 202610112133,
+  "precision_digits": 70,
+  "samples_completed": 100,
+  "rows": [
+    {
+      "sample": 0,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        7
+      ],
+      "rates": [
+        "3",
+        "33/5",
+        "16/25",
+        "72",
+        "9/10",
+        "7/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "5.69396535791525972514382121793255433083295563984745544120422046401943",
+      "algebraic_sign_refinements": 8
+    },
+    {
+      "sample": 1,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        7,
+        8
+      ],
+      "rates": [
+        "36",
+        "23/10",
+        "2/5",
+        "58",
+        "43/50",
+        "7/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "29.99094457485677090692288834392088687137585773196119830151499133063898",
+      "algebraic_sign_refinements": 12
+    },
+    {
+      "sample": 2,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        3,
+        6,
+        7
+      ],
+      "rates": [
+        "99",
+        "8",
+        "73/100",
+        "97",
+        "3/100",
+        "1/20"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "83.2484245298076990498852906313545950542409262794411367029042805015028",
+      "algebraic_sign_refinements": 73
+    },
+    {
+      "sample": 3,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        6,
+        7
+      ],
+      "rates": [
+        "15",
+        "3",
+        "12/25",
+        "13/50",
+        "1",
+        "22/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "6.189725908733224606082215790243535890382016821644200677564742932615461",
+      "algebraic_sign_refinements": 28
+    },
+    {
+      "sample": 4,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        4,
+        7
+      ],
+      "rates": [
+        "83",
+        "73/10",
+        "94",
+        "67",
+        "38/5",
+        "27/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "40.7016596159363021840895101654852681659405977038467930244084636973392",
+      "algebraic_sign_refinements": 22
+    },
+    {
+      "sample": 5,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        4,
+        6
+      ],
+      "rates": [
+        "83/100",
+        "59",
+        "99/100",
+        "7/100",
+        "7/50",
+        "38"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "30.23921322990993926562910218209715764338230600243843514033576806328456",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 6,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "rates": [
+        "37/10",
+        "29",
+        "35",
+        "33/50",
+        "9/100",
+        "92"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "39.87106703638227872143509265639070351235248782368666470049707546978365",
+      "algebraic_sign_refinements": 1
+    },
+    {
+      "sample": 7,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "rates": [
+        "81",
+        "17/100",
+        "48/5",
+        "8/5",
+        "1",
+        "87"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "116.8046750611298427278430945189058622847309199652383468672764141190937",
+      "algebraic_sign_refinements": 7
+    },
+    {
+      "sample": 8,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "rates": [
+        "65",
+        "24/25",
+        "5",
+        "11/2",
+        "33/10",
+        "3/25"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "1.756270131047546548758039686859721901032622227650483038728611152502357",
+      "algebraic_sign_refinements": 37
+    },
+    {
+      "sample": 9,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "rates": [
+        "11/50",
+        "3/100",
+        "77",
+        "3",
+        "64",
+        "14/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "5.1126367154817566015489930489455316710615554495144331613154612793578",
+      "algebraic_sign_refinements": 10
+    },
+    {
+      "sample": 10,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "rates": [
+        "7",
+        "13/25",
+        "17/5",
+        "71",
+        "33",
+        "4/25"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "31.09163068536359482378470278358394220577870330843462168858262029918432",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 11,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        3,
+        4,
+        8
+      ],
+      "rates": [
+        "17/20",
+        "3/2",
+        "11/5",
+        "7/2",
+        "63",
+        "98"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "25.77628133078889665545300506858030428251433136807345075827447785575475",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 12,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "rates": [
+        "17/5",
+        "94",
+        "51",
+        "63",
+        "23/100",
+        "38"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "50.91227644699947365624507895653061650122623435927339350346606696031015",
+      "algebraic_sign_refinements": 25
+    },
+    {
+      "sample": 13,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        7
+      ],
+      "rates": [
+        "13/2",
+        "73/100",
+        "69/100",
+        "33/10",
+        "27",
+        "7"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "5.157960879385844817655213750567584872472397485232315115745626822596948",
+      "algebraic_sign_refinements": 1
+    },
+    {
+      "sample": 14,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        8
+      ],
+      "rates": [
+        "49/5",
+        "3/4",
+        "89/100",
+        "61/10",
+        "37/5",
+        "82"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.228679884648319932354044445481121471563485213253736216779182310152883",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 15,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        3,
+        4,
+        8
+      ],
+      "rates": [
+        "93/100",
+        "11",
+        "3/10",
+        "43",
+        "6",
+        "93"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "56.03497224466946742702168048939587131106897671035590641606028522707173",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 16,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        7
+      ],
+      "rates": [
+        "46",
+        "11/5",
+        "9/10",
+        "9",
+        "46/5",
+        "40"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "43.93694120199444702604007356822968213185005335576160172705569972705301",
+      "algebraic_sign_refinements": 6
+    },
+    {
+      "sample": 17,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "rates": [
+        "49/10",
+        "10",
+        "3/50",
+        "9/10",
+        "29/50",
+        "51/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "4.856075896024692824507682888226506065096406361916758486113828033971407",
+      "algebraic_sign_refinements": 35
+    },
+    {
+      "sample": 18,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "rates": [
+        "70",
+        "3/100",
+        "48/5",
+        "3/25",
+        "8/25",
+        "9/20"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "10.85570388635438680425192969999563777395290805744687181052022607562588",
+      "algebraic_sign_refinements": 32
+    },
+    {
+      "sample": 19,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        4,
+        6,
+        8
+      ],
+      "rates": [
+        "54",
+        "19/2",
+        "37/100",
+        "4/25",
+        "77/100",
+        "68"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "57.38883015307603310612111488145899623641706431322266997996747966198759",
+      "algebraic_sign_refinements": 5
+    },
+    {
+      "sample": 20,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "49/10",
+        "16/5",
+        "7/100",
+        "79/100",
+        "6/5",
+        "29"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "4.025213851440208373431947577045669730687314302247214813437074227000103",
+      "algebraic_sign_refinements": 7
+    },
+    {
+      "sample": 21,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "rates": [
+        "1/5",
+        "19/5",
+        "31",
+        "43/10",
+        "7/20",
+        "22/25"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.257950787126144179481542488349496661719346188935189515588941238830423",
+      "algebraic_sign_refinements": 4
+    },
+    {
+      "sample": 22,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "rates": [
+        "2/25",
+        "21/5",
+        "57/100",
+        "24",
+        "17/10",
+        "15/2"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.885488516293343990734086453608185433804756859297500888084766479905278",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 23,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "rates": [
+        "42/5",
+        "27/50",
+        "12/25",
+        "33",
+        "18/25",
+        "21/10"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.140170993429954288852129081741875472536938343479239577605852977393277",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 24,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "43/100",
+        "32",
+        "19/25",
+        "7/10",
+        "12/25",
+        "34"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "17.45800021195791036274867778694250388576953735346036998847484648417912",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 25,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        6,
+        8
+      ],
+      "rates": [
+        "53",
+        "59",
+        "93/10",
+        "4/5",
+        "88",
+        "37/100"
+      ],
+      "exact_cooling": true,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "19.60661895700826754376227650242788151916257495987858912798220169109894",
+      "algebraic_sign_refinements": 14
+    },
+    {
+      "sample": 26,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        8
+      ],
+      "rates": [
+        "11/10",
+        "19/2",
+        "1/2",
+        "31/10",
+        "34",
+        "65"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "11.54570082890863058305093876548976055333976658825228473731502922813818",
+      "algebraic_sign_refinements": 5
+    },
+    {
+      "sample": 27,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "rates": [
+        "43/50",
+        "63",
+        "7/5",
+        "1/10",
+        "38",
+        "80"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "52.1216765640120188463249258011378874872639862471250797369760565122489",
+      "algebraic_sign_refinements": 11
+    },
+    {
+      "sample": 28,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "rates": [
+        "11/20",
+        "27/100",
+        "2",
+        "43",
+        "77/10",
+        "31/50"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "10.30052260223068761543699044519673745034121803403833467516419732050084",
+      "algebraic_sign_refinements": 5
+    },
+    {
+      "sample": 29,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "rates": [
+        "55",
+        "73",
+        "46",
+        "53/10",
+        "12/5",
+        "79/10"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "12.23414345660843447575678900266533605827086664458383678515290173392566",
+      "algebraic_sign_refinements": 10
+    },
+    {
+      "sample": 30,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        5,
+        7
+      ],
+      "rates": [
+        "19/25",
+        "17/20",
+        "73",
+        "81/100",
+        "80",
+        "70"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "11.62728548339151213195867842804307526108472878515005857445075632736394",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 31,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        3,
+        8
+      ],
+      "rates": [
+        "37/5",
+        "89",
+        "1/5",
+        "85",
+        "1/20",
+        "94"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "58.35758391198671026179012999263945680035789496185622308390335216267835",
+      "algebraic_sign_refinements": 2
+    },
+    {
+      "sample": 32,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        6,
+        7
+      ],
+      "rates": [
+        "4",
+        "5",
+        "3/50",
+        "61/100",
+        "1",
+        "19/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "3.168306299051659133150615182787296261543748592320673812339000573985504",
+      "algebraic_sign_refinements": 12
+    },
+    {
+      "sample": 33,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        3,
+        5,
+        7
+      ],
+      "rates": [
+        "73/10",
+        "44/5",
+        "5",
+        "49/5",
+        "27",
+        "65"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "23.1708784167825159383678818378723237779441682247984211028522662958727",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 34,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        6,
+        8
+      ],
+      "rates": [
+        "37/50",
+        "77",
+        "22/5",
+        "96",
+        "45",
+        "61/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "41.21120811868745880311146552225593189281197934553060122232395138563453",
+      "algebraic_sign_refinements": 4
+    },
+    {
+      "sample": 35,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "rates": [
+        "16/5",
+        "13/20",
+        "7",
+        "67/10",
+        "42/5",
+        "49/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "5.14996510479591221576118224024606111892913154097374186470822940425286",
+      "algebraic_sign_refinements": 29
+    },
+    {
+      "sample": 36,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "rates": [
+        "1/100",
+        "36/5",
+        "57/10",
+        "23/100",
+        "23/10",
+        "43/5"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.338532113196067207363532038357094962577881527290912252714523433314968",
+      "algebraic_sign_refinements": 4
+    },
+    {
+      "sample": 37,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        6,
+        8
+      ],
+      "rates": [
+        "39",
+        "91",
+        "19/100",
+        "13/25",
+        "19/50",
+        "37/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "47.55750225893603730629786826876969055728150469018813849192205525995459",
+      "algebraic_sign_refinements": 9
+    },
+    {
+      "sample": 38,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "rates": [
+        "21/25",
+        "7/50",
+        "47/10",
+        "39/50",
+        "49/10",
+        "53/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "1.631478504307961728689745014189630859844060575275222673312768298659917",
+      "algebraic_sign_refinements": 9
+    },
+    {
+      "sample": 39,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        5,
+        7,
+        8
+      ],
+      "rates": [
+        "1",
+        "51/100",
+        "3",
+        "18/25",
+        "49/50",
+        "82"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "1.341814096602729634093888308916463375779874296110133466989453266300022",
+      "algebraic_sign_refinements": 4
+    },
+    {
+      "sample": 40,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        5,
+        8
+      ],
+      "rates": [
+        "39/100",
+        "18/5",
+        "23/100",
+        "22",
+        "66",
+        "7"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "34.49238677788632561270008527326264792676332897002507422869539889082567",
+      "algebraic_sign_refinements": 13
+    },
+    {
+      "sample": 41,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        4,
+        8
+      ],
+      "rates": [
+        "38/5",
+        "3/10",
+        "77",
+        "70",
+        "47",
+        "93/10"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "101.6272745954612419986256627192295599497031109882253247428017775118961",
+      "algebraic_sign_refinements": 1
+    },
+    {
+      "sample": 42,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "rates": [
+        "7/100",
+        "57/10",
+        "33/5",
+        "11/2",
+        "12",
+        "99/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "11.16275797029501427682582954950275464745745131114867974740363204262297",
+      "algebraic_sign_refinements": 18
+    },
+    {
+      "sample": 43,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "rates": [
+        "17/100",
+        "2/5",
+        "1/100",
+        "48",
+        "74",
+        "81/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "59.36681891089025819400809233196006752029162936497164435753239761943199",
+      "algebraic_sign_refinements": 2
+    },
+    {
+      "sample": 44,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "rates": [
+        "19",
+        "92",
+        "1",
+        "99/10",
+        "8/5",
+        "86"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "38.473925584693229852405702654783820531548696065977735611419036289807",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 45,
+      "family": "independent rational rates",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        6,
+        8
+      ],
+      "rates": [
+        "4",
+        "28",
+        "18",
+        "24",
+        "56",
+        "43/50"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "47.34468524393856733511952840925002093282914522303150489932705670967268",
+      "algebraic_sign_refinements": 12
+    },
+    {
+      "sample": 46,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "rates": [
+        "61/100",
+        "14/25",
+        "88",
+        "53/10",
+        "49/10",
+        "13"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.473213183991150449415339397036937927290995639988530283749101513058695",
+      "algebraic_sign_refinements": 2
+    },
+    {
+      "sample": 47,
+      "family": "independent rational rates",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "rates": [
+        "51/100",
+        "12/25",
+        "47",
+        "11/2",
+        "14/5",
+        "19/100"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "8.494838030959625445921493839503670574990963554738824889921434079618559",
+      "algebraic_sign_refinements": 3
+    },
+    {
+      "sample": 48,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        6,
+        7
+      ],
+      "rates": [
+        "3/4",
+        "67/100",
+        "20",
+        "34/5",
+        "35",
+        "27/5"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "11.31394770560173391872714776036071699098669452567400735429405010326393",
+      "algebraic_sign_refinements": 5
+    },
+    {
+      "sample": 49,
+      "family": "independent rational rates",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "rates": [
+        "49/10",
+        "66",
+        "72",
+        "1",
+        "2",
+        "15"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "87.56697424131723262519562663263792938462426422069245231825517502752004",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 50,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "rates": [
+        "4417948382819620258/8737744134628515625",
+        "4417948380453917632/8737744134628515625",
+        "883589682579567872/1747548826925703125",
+        "2485095989161631301/8737744134628515625",
+        "497019192386475996/1747548826925703125",
+        "209679971632160562/1747548826925703125"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000003939215443598830785293492621251436117724303386693897425037883143819852",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 51,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "rates": [
+        "2832183399/6094781000",
+        "705627831/1523695250",
+        "2653787349/6094781000",
+        "470279779/1523695250",
+        "1831142091/6094781000",
+        "312338486/2285542875"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.04072144448030390445712669759768416799735890610525810707736850776280745",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 52,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "rates": [
+        "15063971087530170804627/25322441398338700000000",
+        "4303991750727942221139/7234983256668200000000",
+        "1369451925098164860021/2302040127121700000000",
+        "1912885237277115522291/7234983256668200000000",
+        "608645299140343105749/2302040127121700000000",
+        "19322072997813551277/164431437651550000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004642307244616716341793242371117546096923244507175306805123866797716189",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 53,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "rates": [
+        "4661949568/6179975405",
+        "4697813536/6179975405",
+        "4860055296/6179975405",
+        "1257189112/6179975405",
+        "1098795232/6179975405",
+        "141363533/6179975405"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02233381080907392381442657213940805319434762378314028257851942049921482",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 54,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "rates": [
+        "32261894904779096733/58490358465500000000",
+        "129047580166085753967/233961433862000000000",
+        "15182068241044474407/27524874572000000000",
+        "86031720313228324593/233961433862000000000",
+        "10121378873434423353/27524874572000000000",
+        "166607059283058129/3440609321500000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004788870806035768148151015369673448492433739707527421291317543141248449",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 55,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        3,
+        8
+      ],
+      "rates": [
+        "1679616704/2752836759",
+        "8438555872/13764183795",
+        "8011347712/13764183795",
+        "847029124/2752836759",
+        "923248384/2752836759",
+        "1077739472/13764183795"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00739248661711146527159549601175606795215712970650578267725027860978224",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 56,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "rates": [
+        "255925964862882820912/637378120802176953125",
+        "255925966235837695936/637378120802176953125",
+        "255925965697424019456/637378120802176953125",
+        "191944474871388654928/637378120802176953125",
+        "191944475333360933888/637378120802176953125",
+        "143958356110057198848/637378120802176953125"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004162697906920274696983447111874166259797559886925387759775112621930677",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 57,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "rates": [
+        "129849608/154865625",
+        "130855808/154865625",
+        "130443008/154865625",
+        "17569801/154865625",
+        "17904451/154865625",
+        "4324744/154865625"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.01612985047521036382347599733640050850535746715902899691264604394939164",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 58,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        3,
+        4,
+        8
+      ],
+      "rates": [
+        "688610021005830881447/1265936648202961718750",
+        "26485000915782743641/48689871084729296875",
+        "26485000811911615744/48689871084729296875",
+        "715095021529690498341/3116151749422675000000",
+        "11173359826799552196/48689871084729296875",
+        "8380019784991765266/48689871084729296875"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00000000291175134560472764062316585998187322877136357746391120951004797585084",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 59,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "rates": [
+        "1006885809/2064482525",
+        "1062631224/2064482525",
+        "1044481554/2064482525",
+        "644189841/2064482525",
+        "673339311/2064482525",
+        "209268084/2064482525"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.03417746052367287536134509058147634356943757613060929154631618884737224",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 60,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "rates": [
+        "57767499967871/67696289062500",
+        "38511666583689/45130859375000",
+        "19255833333007/22565429687500",
+        "38511667003239/361046875000000",
+        "19255833334657/180523437500000",
+        "115535000030767/4332562500000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000001260509802224434154152421344181416886657722767992383260483836103953118",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 61,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "rates": [
+        "2666249116317/4178201027000",
+        "691385215383/1044550256750",
+        "336013223724/522275128375",
+        "202263360807/1044550256750",
+        "109335358971/522275128375",
+        "45050778896/522275128375"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02904846525670372760964173046557755616896825135296041210162034009124598",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 62,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "rates": [
+        "11089912496938623/20917187500000000",
+        "11089912507036623/20917187500000000",
+        "1386239063353281/2614648437500000",
+        "22179824916342371/62751562500000000",
+        "924159371618479/2614648437500000",
+        "924159382772479/13236657714843750"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000001589676834690986065038835969174689160081290091333001951097450053439792",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 63,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "rates": [
+        "74516041774592/155801153657375",
+        "75927721294592/155801153657375",
+        "77339400814592/155801153657375",
+        "42249275950608/155801153657375",
+        "39465922180608/155801153657375",
+        "24227338871592/155801153657375"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02627303387441082901876330320732911106301007679290891235099847908867769",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 64,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "rates": [
+        "394126416521396437824/761960099238583984375",
+        "394126414739264645824/761960099238583984375",
+        "394126416343183258624/761960099238583984375",
+        "221696110595303982576/761960099238583984375",
+        "221696110016629099776/761960099238583984375",
+        "93528046752242382468/761960099238583984375"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000003667170620825148774490609717845451081150822492858494561859531663025632",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 65,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "1420967032/1591116035",
+        "1429674472/1591116035",
+        "1422832912/1591116035",
+        "557615651/9546696210",
+        "293605823/4773348105",
+        "277418533/9546696210"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.0082079824031606008336574061782154477920692105064899724089994898874026",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 66,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        4,
+        6,
+        7
+      ],
+      "rates": [
+        "1686024541132276670384/2744626508458689453125",
+        "1686024544463146168736/2744626508458689453125",
+        "1686024542025924584576/2744626508458689453125",
+        "8535499305767297350101/43914024135339031250000",
+        "2133874832360141007729/10978506033834757812500",
+        "9602436714095370151647/87828048270678062500000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000003420119640014080608085371409878423259289732041187118321783726902356339",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 67,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "rates": [
+        "194029/353175",
+        "186304/353175",
+        "201136/353175",
+        "104192/353175",
+        "97928/353175",
+        "47864/353175"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.03963049479719685708218305372690592482480356763644085793162030155022294",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 68,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        6,
+        7,
+        8
+      ],
+      "rates": [
+        "263097124751669/311858915156250",
+        "78929137422226583/93557674546875000",
+        "263097124751669/311858915156250",
+        "33676432304529997/454690298297812500",
+        "112254774323521/1515634327659375",
+        "33676432304529997/682035447446718750"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000001551064648683052498742709739118021921610922486318667912135900930878554",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 69,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "rates": [
+        "1269309888/2036047975",
+        "1342051648/2036047975",
+        "4093700864/6108143925",
+        "1987863712/6108143925",
+        "639898624/2036047975",
+        "20955972/2036047975"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.04973905636973018771819460688297386509274173659881467183994031378361792",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 70,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        4,
+        7,
+        8
+      ],
+      "rates": [
+        "22269574179905929/23922394160156250",
+        "3711595701913159/3987065693359375",
+        "11134787101903502/11961197080078125",
+        "3711595666609759/63793051093750000",
+        "5567393533389151/95689576640625000",
+        "927898926581521/127586102187500000"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00000000100380437449046511181161245552687756373896003813130832110835777566555",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 71,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "rates": [
+        "5164750035712/10984784286025",
+        "1022910549248/2196956857205",
+        "5281116479488/10984784286025",
+        "596848363164/2196956857205",
+        "2843458786224/10984784286025",
+        "303323647509/2196956857205"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02341865161690299702527790039794032715428158857712710848271743861606605",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 72,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "rates": [
+        "585141118437143/1033139790000000",
+        "403545597641297/712510200000000",
+        "731426397883511/1291424737500000",
+        "20177280110839/71251020000000",
+        "36571320099457/129142473750000",
+        "25221600150103/178127550000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00000000404863291781647476765946648904113934088241824467916389126780218970548",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 73,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rates": [
+        "8656826/16220775",
+        "8471771/16220775",
+        "8758226/16220775",
+        "4307503/16220775",
+        "4336318/16220775",
+        "3989203/32441550"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02224392792576187019424164381788169800764760006843076240191976030738356",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 74,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "rates": [
+        "788076799403/1015880250000",
+        "197019200321/253970062500",
+        "49254799973/63492515625",
+        "2462739978707/12698503125000",
+        "615685001791/3174625781250",
+        "153921249037/6349251562500"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00000000135393910847267677464937427418241470882025711199720636364374638277676",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 75,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        6,
+        7,
+        8
+      ],
+      "rates": [
+        "14242556992/14659332015",
+        "2851975424/2931866403",
+        "14236783616/14659332015",
+        "45846608/2931866403",
+        "244850243/14659332015",
+        "23059538/2931866403"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.001798290619451530309036390291484915249052703852004268831617700419482546",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 76,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "rates": [
+        "26646528217994338491/37141060896406250000",
+        "106586112845819425779/148564243585625000000",
+        "13323264105749372793/18570530448203125000",
+        "31581070403456376521/148564243585625000000",
+        "3947633800511726307/18570530448203125000",
+        "5263511795028999161/125351080525371093750"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.0000000007801100295312127123795713941986545161023514018674376297414044137322344",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 77,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        4,
+        7,
+        8
+      ],
+      "rates": [
+        "935365739548977/1221721933325485",
+        "946175212170009/1221721933325485",
+        "190716340533921/244344386665097",
+        "181961485631604/1221721933325485",
+        "34088334060456/244344386665097",
+        "11374568729664/244344386665097"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.01466914180795133059024729906591057153717489790143812401913423961066935",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 78,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        6,
+        8
+      ],
+      "rates": [
+        "17888612918105869/27182306472656250",
+        "71554452190460611/108729225890625000",
+        "17888612997044861/27182306472656250",
+        "17888612903035231/54364612945312500",
+        "4472153251504481/13591153236328125",
+        "17888612996501039/1739667614250000000"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004579525589826332539029157822353247845431057175869364494608944797999828",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 79,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "rates": [
+        "29765516314563/62318996212040",
+        "5828364652419/12463799242408",
+        "16017533016633/31159498106020",
+        "4320500563953/12463799242408",
+        "9900258093279/31159498106020",
+        "215104335399/1557974905301"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.04196380332508879223516650516088696688382989260534154901923288279486813",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 80,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "rates": [
+        "22439358478750324/35149151400390625",
+        "22439358349288276/35149151400390625",
+        "1726104498780352/2703780876953125",
+        "22439358659282529/70298302800781250",
+        "863052250644504/2703780876953125",
+        "107881531821387/2703780876953125"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000002901645160667137610016792592355080026017677822652550428302128177390579",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 81,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        4,
+        7
+      ],
+      "rates": [
+        "142396596930880/286057683550521",
+        "235202804220736/476762805917535",
+        "238282046623744/476762805917535",
+        "26019628359556/95352561183507",
+        "27159181689088/95352561183507",
+        "23024861522064/158920935305845"
+      ],
+      "exact_cooling": true,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02147390497608768773625013966064962102024545163610744102908256953625829",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 82,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        5,
+        7
+      ],
+      "rates": [
+        "1297993599086419/1997693275000000",
+        "2595987194788181/3995386550000000",
+        "129799359746767/199769327500000",
+        "2595987208532871/7990773100000000",
+        "129799360414597/399538655000000",
+        "259598722365203/12785236960000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.0000000008890036129608035047322267228436257312824963081482065859184513453317836",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 83,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rates": [
+        "5100372304/14360107125",
+        "5255262704/14360107125",
+        "4913592704/14360107125",
+        "3937179478/14360107125",
+        "4089770728/14360107125",
+        "983803382/4786702375"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.03562011293143469499013225501965048885385665254917100766405320252790245",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 84,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        2,
+        8
+      ],
+      "rates": [
+        "792824939401818633127/1912779695368459375000",
+        "1585649882023282956587/3825559390736918750000",
+        "99103118364290655488/239097461921057421875",
+        "2378474831974802714847/7651118781473837500000",
+        "74327337853774452864/239097461921057421875",
+        "55745503590532255344/239097461921057421875"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000003339926356397072728323743174559519146422810429827632493391890168199725",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 85,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "2750589798669/3994364004535",
+        "2848850182143/3994364004535",
+        "2812126604481/3994364004535",
+        "516899471544/3994364004535",
+        "565789252158/3994364004535",
+        "368581544304/3994364004535"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02831694562277815732384456112071030965569956711791976472856100920095811",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 86,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "rates": [
+        "2583009002616453/5963243000000000",
+        "2583008994534687/5963243000000000",
+        "1291504496154039/2981621500000000",
+        "1722005995674843/5963243000000000",
+        "861002996956371/2981621500000000",
+        "287001002119203/1490810750000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000002616043149675436670952366019630593621625011759540907522970303263734503",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 87,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "35976509721/51503050585",
+        "35534716281/51503050585",
+        "7078963005/10300610117",
+        "777476005696/5407820311425",
+        "52103256248/360521354095",
+        "108618992656/1081564062285"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.01935608841986176139575977454726283017654799511359610497668185596109331",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 88,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "rates": [
+        "47766150165392731/101083249918750000",
+        "47766150452593909/101083249918750000",
+        "11941537625115193/25270812479687500",
+        "26868459524134197/101083249918750000",
+        "6717114863771769/25270812479687500",
+        "60454034173094319/404332999675000000"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004606578636908533453849360236490818401811170447597970968160750105003942",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 89,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        3,
+        6,
+        7
+      ],
+      "rates": [
+        "221207549918967/325355624667275",
+        "228781047054807/325355624667275",
+        "227945734870707/325355624667275",
+        "61953413720148/325355624667275",
+        "63205587220248/325355624667275",
+        "20605427706432/325355624667275"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02711003141390343321155434093175557695219922612808826499762580705753905",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 90,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        5,
+        7,
+        8
+      ],
+      "rates": [
+        "138259709240794128/169953445712890625",
+        "553038837298301457/679813782851562500",
+        "553038837968551347/679813782851562500",
+        "145656320691582171/1359627565703125000",
+        "145656319697312841/1359627565703125000",
+        "64736142061878531/1359627565703125000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000001819220922989201302728234870715650617548385876934093477488973628832355",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 91,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "rates": [
+        "56372928/62936885",
+        "11227328/12587377",
+        "56736448/62936885",
+        "774341/12587377",
+        "17716082/314684425",
+        "708311/25174754"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.008068555506043872365148036799088483645162927907855623931816771675306126",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 92,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        4,
+        8
+      ],
+      "rates": [
+        "1703602399348319/2242632846875000",
+        "170360239591193/224263284687500",
+        "212950299810068/280329105859375",
+        "6814409625111863/35882125550000000",
+        "2129503002916747/11213164234375000",
+        "212950301829709/4485265693750000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000001407812057555213587395744453048434306032910026424005976981483439315464",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 93,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "rates": [
+        "106354822024/174408784625",
+        "109039099984/174408784625",
+        "4318615552/6976351385",
+        "57839180372/174408784625",
+        "2353969216/6976351385",
+        "285696832/6976351385"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.04292248518958452664006688361498006740668209618859386051409450328310839",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 94,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        5,
+        7
+      ],
+      "rates": [
+        "21496822927243623/39917054513800000",
+        "816879277017053631/1516848071524400000",
+        "326751709153103469/606739228609760000",
+        "3582803812038698007/9979263628450000000",
+        "1433121537651480693/3991705451380000000",
+        "672328618900356141/9480300447027500000"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.00000000384244769891461359592497819137018992619035502778826279921335309994151",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 95,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "rates": [
+        "25351567803136/59749621492015",
+        "25399584512128/59749621492015",
+        "26984135908864/59749621492015",
+        "20106533141568/59749621492015",
+        "18174517576704/59749621492015",
+        "7711641110286/59749621492015"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.03431743732656992207143372159672004394119567018295584393636539461311694",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 96,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        6,
+        8
+      ],
+      "rates": [
+        "403911079806147275349/724405075008317500000",
+        "8078221596510325866717/14488101500166350000000",
+        "403911080580907994823/724405075008317500000",
+        "1077096223670908964031/2897620300033270000000",
+        "53854811053690806189/144881015001663500000",
+        "4432494736773924759/90550634376039687500"
+      ],
+      "exact_cooling": false,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000004351508375304530174762241374788014920195307419541857199907055525410383",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 97,
+      "family": "prescribed rational mode",
+      "base": "3/4",
+      "exponents": [
+        0,
+        1,
+        7,
+        8
+      ],
+      "rates": [
+        "5147361027632095232/10412538485776211435",
+        "5414334774141304832/10412538485776211435",
+        "5336022475165270016/10412538485776211435",
+        "3661260975896666112/10412538485776211435",
+        "3792118154589290496/10412538485776211435",
+        "742429041027058404/10412538485776211435"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.02996414173931097057952300433828607041994214956688591307210931830068642",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 98,
+      "family": "prescribed rational mode",
+      "base": "2/3",
+      "exponents": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "rates": [
+        "1458938949422735427/2645035640000000000",
+        "729469477343856111/1322517820000000000",
+        "1458938956877569827/2645035640000000000",
+        "486312982070615569/1322517820000000000",
+        "972625960997235933/2645035640000000000",
+        "162104329217144123/3347623231875000000"
+      ],
+      "exact_cooling": false,
+      "exact_heating": true,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.000000002491600082386449299490634204411864931823411895578753455614090669268258",
+      "algebraic_sign_refinements": 0
+    },
+    {
+      "sample": 99,
+      "family": "prescribed rational mode",
+      "base": "1/2",
+      "exponents": [
+        0,
+        2,
+        7,
+        8
+      ],
+      "rates": [
+        "3642466592/4742602455",
+        "2293444480/2845561473",
+        "1251697152/1580867485",
+        "175015072/948520491",
+        "314508416/1580867485",
+        "1953390/316173497"
+      ],
+      "exact_cooling": true,
+      "exact_heating": false,
+      "comparison": {
+        "cooling": "agrees",
+        "heating": "agrees"
+      },
+      "slow_gap": "0.03121782806060644186968861171392448073111791108369423723920372322246429",
+      "algebraic_sign_refinements": 0
+    }
+  ],
+  "verified": true,
+  "elapsed_seconds": 38.63642120361328,
+  "disagreements": 0,
+  "unresolved_comparisons": 0,
+  "cooling_cases": 24,
+  "heating_cases": 16
+}

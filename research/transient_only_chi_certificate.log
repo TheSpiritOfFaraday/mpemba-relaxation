@@ -1,0 +1,35 @@
+{
+  "verified": true,
+  "q": [
+    "512/585",
+    "64/585",
+    "8/585",
+    "1/585"
+  ],
+  "energies": "(0,3 log2,6 log2,9 log2)",
+  "beta_hot": "1/3",
+  "beta_cold": "2/3",
+  "beta_bath": "1",
+  "eigenvalues": [
+    "0",
+    "-9095338650776300404/67044604590211691",
+    "-9162383255366512095/67044604590211691",
+    "-9229427859956723786/67044604590211691"
+  ],
+  "scaled_difference": "A+B*x+C*x^2, x=exp(-2t)",
+  "critical_x": "24824274596190056/5320883090010697687",
+  "crossing_times": [
+    "-log((-B+sqrt(B^2-4AC))/(2C))/2",
+    "-log((-B-sqrt(B^2-4AC))/(2C))/2"
+  ],
+  "displayed_crossing_times": [
+    "2.36803213879904",
+    "3.74577445369709"
+  ],
+  "displayed_coefficients": [
+    "1.80809318484e-5",
+    "-0.0344769300576",
+    "3.69492597715"
+  ],
+  "scope": "Exact purely transient weighted-Euclidean reversal with normal eventual ordering; not asserted to satisfy triplet failure"
+}

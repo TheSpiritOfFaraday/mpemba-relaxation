@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "scope": "Five deliberate corruptions must fail in both ordinary and optimized Python.",
+  "negative_controls": [
+    {
+      "mutation": "wrong_upward_balance",
+      "optimized": false,
+      "rejected": true,
+      "reason": "balances"
+    },
+    {
+      "mutation": "wrong_slow_eigenvalue",
+      "optimized": false,
+      "rejected": true,
+      "reason": "left eigenpair"
+    },
+    {
+      "mutation": "wrong_overlap_sign",
+      "optimized": false,
+      "rejected": true,
+      "reason": "bath-orthogonal mode"
+    },
+    {
+      "mutation": "invalid_fast_root_interval",
+      "optimized": false,
+      "rejected": true,
+      "reason": "one fast root"
+    },
+    {
+      "mutation": "reversed_temperature_preparations",
+      "optimized": false,
+      "rejected": true,
+      "reason": "printed hot bracket"
+    },
+    {
+      "mutation": "wrong_upward_balance",
+      "optimized": true,
+      "rejected": true,
+      "reason": "balances"
+    },
+    {
+      "mutation": "wrong_slow_eigenvalue",
+      "optimized": true,
+      "rejected": true,
+      "reason": "left eigenpair"
+    },
+    {
+      "mutation": "wrong_overlap_sign",
+      "optimized": true,
+      "rejected": true,
+      "reason": "bath-orthogonal mode"
+    },
+    {
+      "mutation": "invalid_fast_root_interval",
+      "optimized": true,
+      "rejected": true,
+      "reason": "one fast root"
+    },
+    {
+      "mutation": "reversed_temperature_preparations",
+      "optimized": true,
+      "rejected": true,
+      "reason": "printed hot bracket"
+    }
+  ]
+}

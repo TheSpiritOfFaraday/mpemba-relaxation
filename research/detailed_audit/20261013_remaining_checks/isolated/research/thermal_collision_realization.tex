@@ -1,0 +1,112 @@
+\subsection{An energy-conserving thermal-collision realization of the same rates}
+\label{sec:thermalcollision}
+The Arrhenius network also has an exact stochastic bath realization that
+does not invoke a large-barrier escape approximation. This clarifies what
+can be physically modeled without claiming a particular material or a
+continuum potential. The system retains the same four energies, the same
+three shared saddle excesses, and the same eight uncertain parameters.
+
+Give each unordered pair $ij$ an independent Poisson contact clock of
+rate $\nu_0$. At a contact, draw a fresh reservoir energy
+$Y\geq0$ with density $\beta_b e^{-\beta_bY}$. This is a canonical
+reservoir with constant density of energy states. If the system is in
+endpoint $j$, the contact changes it to $i$ precisely when
+\[
+ E_j+Y\geq B_{ij}.
+\]
+After an accepted contact, the outgoing reservoir energy is
+$Y'=Y+E_j-E_i$. Otherwise the state and reservoir energy are unchanged.
+Contacts on pairs not containing the current state do nothing.
+Because $B_{ij}>\max(E_i,E_j)$, accepted moves always have $Y'\geq0$.
+They conserve the combined energy exactly.
+
+\paragraph{Rate reduction and detailed balance.}
+Integrating out the independent reservoir mark yields
+\[
+ a_{ij}=\nu_0\Pr(Y\geq B_{ij}-E_j)
+       =\nu_0e^{-\beta_b(B_{ij}-E_j)}.
+\]
+This is the original generator, with its original physical contact clock;
+no residence time is deleted and no rate is rescaled to improve the
+advantage. For an accepted move the reverse contact is allowed because
+$E_i+Y'=E_j+Y\geq B_{ij}$. Applying the map twice returns the original
+state and energy, and the translation $Y\mapsto Y'$ preserves its
+integration measure. The joint canonical density
+$e^{-\beta_b(E_j+Y)}$ is also unchanged. Thus each contact kernel, and
+their Poisson superposition, obey detailed balance. These identities
+hold throughout the uncertainty box, not just at the nominal point.
+
+Equivalently, with $h_{ij}=B_{ij}-\max(E_i,E_j)$, the rate is
+$\nu_0e^{-\beta_bh_{ij}}\min\{1,e^{-\beta_b(E_i-E_j)}\}$.
+The acceptance factor is the familiar
+\href{https://doi.org/10.1063/1.1699114}{Metropolis form (1953)}.
+The original method accepts downhill proposals and accepts uphill proposals
+with the Boltzmann factor; rejected proposals still contribute to its
+configuration averages (Section II, pp.~5--6 of the
+\href{https://www.osti.gov/servlets/purl/4390578}{Los Alamos report}).
+Auxiliary-energy simulation methods also have a long history.
+\href{https://doi.org/10.1103/PhysRevLett.50.1411}{Creutz (1983)},
+pp.~1411--1412, introduces a retained energy-carrying demon with conserved
+combined energy. He also explicitly describes redrawing its energy from
+the Boltzmann distribution before each visit, recovering Metropolis sampling.
+Thus a refreshed thermal auxiliary energy is itself an established device.
+Our specified pair clocks and symmetric barrier gates provide the rate and
+time interpretation used here; neither cited sampling method alone
+establishes that physical clock or this model's finite-time performance.
+No new thermostat or sampling algorithm is claimed here.
+The contribution of this construction is an explicit bath interpretation
+of the particular constrained rate family and its finite-time clock.
+
+\paragraph{A two-coordinate interpretation of the states.}
+Label the ordered states by $(x,y)=(0,0),(1,0),(1,1),(0,1)$ and write
+\[
+ H(x,y)=\epsilon_x x+\epsilon_y y+Jxy,
+\quad
+(\epsilon_x,\epsilon_y,J)=(E_2,E_4,E_3-E_2-E_4).
+\]
+Nominally these coefficients are approximately
+$(0.83089,3.67638,-3.56003)\,k_BT_b$.
+The two basins fix $x$; their internal degree of freedom is $y$.
+Within basin $A$, its excited configuration is expensive, whereas the two
+configurations in basin $B$ are nearly degenerate. The exact equilibrium
+basin free energies are
+\[
+ F_A(T)=-T\log(1+e^{-E_4/T}),\qquad
+ F_B(T)=E_2-T\log(1+e^{-(E_3-E_2)/T}),
+\]
+with $k_B=1$ and $E_1=0$. Their different temperature dependence explains
+the changing basin populations used in the slow-mode mechanism. This
+interpretation does not assume exact lumpability into two basins. Changes
+of these Hamiltonian coefficients are correlated by the independently
+perturbed gaps; no additional independent uncertainty claim is made.
+Contacts may change one or both coordinates. Thus this is not a claim
+about standard single-spin-flip dynamics or an identified spin material.
+
+\paragraph{Independent event-clock check and physical limits.}
+An executable algebra check verifies the canonical tail integral, energy
+conservation and the contact involution. An independent simulation uses
+500,000 trajectories per preparation and Poisson contact counts, with no
+fixed time step. It samples the thermal reservoir energies explicitly.
+For efficiency it thins only the state-independent gate $Y\geq h_{ij}$:
+the retained pair clock has rate $\nu_0e^{-\beta_bh_{ij}}$, and the
+conditional reservoir energy is $h_{ij}$ plus a fresh exponential energy.
+This exact thinning retains the waiting-time cost of rejected contacts.
+At five checked physical times, simulated probabilities agree with direct
+matrix exponentials within $0.00118$ in every component, passing the
+declared six-standard-error diagnostic envelopes. This Monte Carlo check
+is supplementary; the collision-to-generator equality is analytic and
+the performance certificates do not depend on sampling.
+Code and receipts are \path{research/thermal_collision_model.py} and
+\path{research/thermal_collision_audit.json}.
+
+The result is an idealized stochastic collision model. Its assumptions
+include fresh independent thermal contacts, a constant reservoir density
+of states, Poisson contact clocks and instantaneous energy-conserving
+updates. It is not a derivation from an autonomous Hamiltonian, an
+identified material or a measured bath. The costs of maintaining the
+reservoir/contact process and preparing the two initial temperatures are
+not included in the post-quench relaxation comparison. For the activated
+landscape interpretation, intrawell equilibration and the accuracy of a
+continuum escape-rate approximation remain separate physical questions.
+The collision realization avoids that approximation within its stated
+stochastic assumptions; it does not validate it for a material.

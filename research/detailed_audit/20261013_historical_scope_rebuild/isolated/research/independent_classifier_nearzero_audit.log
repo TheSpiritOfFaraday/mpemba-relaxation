@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "elapsed_seconds": 3.2814037799835205,
+  "cases": [
+    {
+      "label": "below",
+      "bounded_verified": false,
+      "exact_cooling": false,
+      "exact_rounds": 2
+    },
+    {
+      "label": "above",
+      "bounded_verified": false,
+      "exact_cooling": true,
+      "exact_rounds": 2
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "navigation_markdown_files": 46,
+  "relative_links_checked": 3809,
+  "heading_anchors_checked": 92,
+  "broken_links": [],
+  "research_files_covered_by_navigation": 3196,
+  "scientific_file_bytes_unchanged_from_prior_package": true,
+  "catalog_pages": 35,
+  "catalog_page_entry_limit": 120,
+  "scope": "Local Markdown destinations and heading anchors; complete research-file navigation coverage; preserved prior scientific bytes. External source availability was not rechecked."
+}

@@ -1,0 +1,430 @@
+% Unnumbered teaching material; technical statement numbering is preserved.
+\clearpage
+\section*{An extended bridge: from random events to a physical certificate}
+\addcontentsline{toc}{section}{Extended bridge: from random events to a physical certificate}
+The previous lessons supplied the vocabulary. These eight additional lessons
+slow down the transition from that vocabulary to the physical computations.
+They answer a practical question: how can a finite calculation establish a
+statement about an entire interval of times? They then examine what it means
+for a mathematical rate to have a physical interpretation.
+
+\section*{Lesson 33. A rate is not a probability: build the clock first}
+\addcontentsline{toc}{section}{33. A rate is not a probability}
+\paragraph{Begin with units.}
+A probability is a number between zero and one. A rate has units of inverse
+time. A rate of three events per second is perfectly meaningful; a probability
+of three is not. If an event has constant rate $r$, its probability of occurring
+in a very short interval of length $h$ is $rh+o(h)$. The notation $o(h)$ means
+that the error divided by $h$ tends to zero as $h$ tends to zero. It does not
+mean that the approximation is exact for a one-second interval.
+
+\paragraph{Derive the waiting law.}
+Let $S(t)$ be the probability that no event has happened by time $t$.
+Assume that, conditional on no event so far, the chance in the next short
+interval is still $rh+o(h)$. Then
+\[
+ S(t+h)=S(t)(1-rh+o(h)),\qquad S'(t)=-rS(t),\qquad S(0)=1.
+\]
+The function with this derivative and initial value is $S(t)=e^{-rt}$.
+Thus the probability of at least one event by time $t$ is $1-e^{-rt}$.
+For $r=2$ per second and $t=0.1$ seconds, this is $1-e^{-0.2}$,
+approximately $0.1813$. The short-time estimate $rt=0.2$ is close but different.
+For $t=1$ second the estimate $rt=2$ is not a probability at all.
+
+\paragraph{Why the mean wait is $1/r$.}
+The density of the first event time is $re^{-rt}$. Its mean is
+\[
+ \int_0^\infty t r e^{-rt}\,dt
+ =[-te^{-rt}]_0^\infty+\int_0^\infty e^{-rt}\,dt=\frac1r.
+\]
+The integration by parts has merely moved the factor $t$ onto a derivative.
+There is also a geometric interpretation: the mean waiting time is the area
+under the survival curve $S(t)$.
+
+\paragraph{Several possible exits.}
+From state $j$, let the exit rates to other states be $a_{ij}$.
+Independent exponential clocks compete. The probability that none has rung
+by $t$ is the product $\prod_{i\ne j}e^{-a_{ij}t}$, hence the total exit rate
+is $r_j=\sum_{i\ne j}a_{ij}$. Conditional on an exit, its destination is $i$
+with probability $a_{ij}/r_j$. This produces the diagonal entry
+$M_{jj}=-r_j$ and explains why a column sums to zero. The negative diagonal
+does not describe a negative probability; it describes probability leaving.
+
+\paragraph{Try it.}
+Suppose the rates from one state to two others are $2$ and $3$ per second.
+The mean residence time is $1/5$ second, and the next destination probabilities
+are $2/5$ and $3/5$. Multiplying all rates by ten divides every waiting time
+by ten. It does not change these destination probabilities or the equilibrium
+distribution. Consequently, a percentage time advantage alone supplies no
+absolute number of seconds without a physical rate calibration.
+
+\section*{Lesson 34. Replace unequal clocks by one clock and harmless pauses}
+\addcontentsline{toc}{section}{34. One clock and harmless pauses}
+\paragraph{A deliberately simple two-state example.}
+Use a column probability vector and let
+\[
+ M=\begin{pmatrix}-2&1\\2&-1\end{pmatrix},\qquad
+ \rho=2,\qquad
+ P=I+M/\rho=\begin{pmatrix}0&1/2\\1&1/2\end{pmatrix}.
+\]
+The first state exits at rate $2$; the second exits at rate $1$.
+Instead ring a clock of rate $2$ in either state. At each ring, choose the
+next state using the current column of $P$. In state two, half the rings
+leave the state unchanged. Its actual transition rate is therefore
+$2\times(1/2)=1$, exactly as required. The pauses are real elapsed time.
+
+\paragraph{Generalize only after the example.}
+Choose $\rho$ at least as large as every exit rate. Then $P=I+M/\rho$
+has nonnegative entries and unit column sums. Such a matrix is called
+stochastic: it sends probability vectors to probability vectors. The identity
+$M=\rho(P-I)$ gives
+\[
+ e^{Mt}=e^{\rho t(P-I)}
+ =e^{-\rho t}\sum_{k=0}^\infty\frac{(\rho t)^k}{k!}P^k.
+\]
+The factorization is allowed because $P$ commutes with $I$.
+It would not be legitimate to split an arbitrary matrix exponential into
+two factors without checking commutation.
+
+\paragraph{Read every factor as a probability.}
+Write $\mu=\rho t$. A Poisson random variable $N$ has probabilities
+$\Pr(N=k)=e^{-\mu}\mu^k/k!$. Here $N$ counts clock rings by time $t$.
+Conditional on $N=k$, the distribution is $P^kp(0)$. Averaging these
+conditional distributions gives the displayed formula. This procedure is
+called uniformization. It is an exact continuous-time construction, not a
+small-time-step approximation.
+
+At $\mu=1$, the probabilities of zero, one and two rings are respectively
+$e^{-1}$, $e^{-1}$ and $e^{-1}/2$. Their sum is about $0.9197$.
+The missing $0.0803$ is the probability of three or more rings; it cannot
+simply be discarded when a rigorous error bound is required.
+
+\paragraph{Check the two-state equilibrium.}
+Solving $M\pi=0$ and $\pi_1+\pi_2=1$ gives $\pi=(1/3,2/3)^\top$.
+Starting from $(1,0)^\top$, the exact first component is
+$p_1(t)=1/3+(2/3)e^{-3t}$ and the second is its complement.
+Differentiating verifies $p'_1=1-3p_1$, which is also the first row of
+$Mp$. This small solvable model is a useful check of the matrix convention,
+the clock interpretation and any implementation of uniformization.
+
+\section*{Lesson 35. Bound the part of an infinite sum that you did not compute}
+\addcontentsline{toc}{section}{35. Bound an infinite remainder}
+\paragraph{First learn the geometric comparison.}
+For $0\leq q<1$, multiplying $1+q+q^2+\cdots$ by $1-q$ cancels every
+term except the first, giving $1/(1-q)$. If a nonnegative series starts with
+$a$ and every later term is at most $q$ times its predecessor, its whole sum
+is at most $a/(1-q)$. Equality is unnecessary; an upper bound suffices.
+
+For Poisson weights $w_k=e^{-\mu}\mu^k/k!$,
+\[
+ \frac{w_{k+1}}{w_k}=\frac{\mu}{k+1}.
+\]
+After keeping terms $0$ through $K$, the first omitted weight is $w_{K+1}$.
+Every subsequent ratio is at most $q=\mu/(K+2)$. Provided $q<1$,
+\[
+ R_K=\sum_{k=K+1}^\infty w_k
+ \leq\frac{w_{K+1}}{1-\mu/(K+2)}.
+\]
+The $K+2$ in the denominator is intentional: it bounds the ratio from the
+first omitted term to the next omitted term. Confusing it with the first
+omitted term's index is an easy off-by-one mistake.
+
+\paragraph{Work a numerical example.}
+Take $\mu=1$ and keep $K=2$. Then $w_3=e^{-1}/6$ and $q=1/4$, so
+$R_2\leq 2e^{-1}/9$, approximately $0.08175$. The actual missing mass
+is approximately $0.08030$, below the bound. The bound is a little wider
+than necessary, but its validity is transparent.
+
+\paragraph{Turn a scalar tail into a vector guarantee.}
+Every component of $P^kp(0)$ lies in $[0,1]$. If $s_i$ is the computed
+partial sum for component $i$, then $p_i(t)\in[s_i,s_i+R_K]$.
+These independent intervals need not sum to exactly one; they are an
+enclosure of a probability vector, not themselves a new probability vector.
+Renormalizing their endpoints without a proof could invalidate the enclosure.
+
+\paragraph{Include arithmetic error as well as truncation error.}
+An exact tail formula does not excuse rounding errors in the partial sum.
+The nominal checker computes interval bounds for inputs, exponentials,
+matrix products and logarithms. If the entire probability interval is
+positive, it can enclose each term $p_i\log(p_i/\pi_i)$ and hence KL.
+An interval crossing zero requires a valid alternative treatment or a
+failure to certify; a logarithm of an invalid endpoint is not evidence.
+
+In the replayed nominal calculation, at most 281 terms were needed and the
+largest reported tail upper bound was below $10^{-45}$. The small tail is
+one part of the certificate. The validity of $P$, the input correspondence,
+the outward arithmetic and the later comparison inequalities remain
+separate necessary parts. More printed digits alone establish none of them.
+
+\section*{Lesson 36. Prove a whole time interval using its endpoints}
+\addcontentsline{toc}{section}{36. From endpoints to continuous time}
+\paragraph{A descending staircase picture.}
+Suppose two distances $D_c(t)$ and $D_h(t)$ are nonincreasing in time.
+On a cell $[a,b]$, the cold distance is at least its value at the right
+endpoint, while the hot distance is at most its value at the left endpoint:
+\[
+ D_c(t)\geq D_c(b),\qquad D_h(t)\leq D_h(a).
+\]
+Therefore a single strict inequality
+\[
+ D_h(a)<0.9D_c(b)
+\]
+proves $D_h(t)<0.9D_c(t)$ for every time in that cell.
+The endpoints are deliberately mismatched to use the worst case for each
+curve. Merely checking $D_h(a)<0.9D_c(a)$ and the analogous inequality at
+$b$ would not control a crossing between them.
+
+\paragraph{Why KL decreases here.}
+For a stochastic transition matrix $K$ and positive equilibrium $\pi$,
+let $r_i=p_i/\pi_i$. When $K\pi=\pi$, the output likelihood ratio is
+\[
+ \frac{(Kp)_j}{\pi_j}=\sum_i\frac{K_{ji}\pi_i}{\pi_j}r_i.
+\]
+The coefficients in this sum are nonnegative and sum to one. Convexity of
+$f(r)=r\log r$ says that $f$ of this weighted average is no greater than
+the weighted average of $f$. Multiply by $\pi_j$, sum over $j$, and use
+$\sum_jK_{ji}=1$ to obtain
+\[
+ D(Kp\Vert\pi)\leq D(p\Vert\pi).
+\]
+Apply this to $K=e^{M(b-a)}$. This argument proves the monotonicity used
+above. It does not say that $D_h(t)/D_c(t)$ is monotone.
+
+\paragraph{A hand-checkable cell.}
+Suppose outward bounds give $D_h(a)\leq0.0080$ and
+$D_c(b)\geq0.0090$. Then $0.9D_c(b)-D_h(a)\geq0.0001>0$.
+Every interior time passes the ten-percent comparison. If the computed
+margin interval were $[-0.0001,0.0002]$, no conclusion would follow;
+a narrower cell might resolve it.
+
+\paragraph{Join the cells and check the floor.}
+A finite list $t_0<t_1<\cdots<t_N$ covers the entire closed interval
+$[t_0,t_N]$ without gaps. Proving the endpoint inequality on every cell
+proves the full window. Since cold KL decreases, a lower bound
+$D_c(t_N)\geq10^{-3}$ also proves that floor throughout the window.
+The nominal replay used 80 cells and a minimum certified comparison margin
+greater than $0.0004408$. Its fixed endpoints were approximately
+$58.89269$ and $117.78539$ in attempt-time units. The script separately
+encloses the slow time to justify the window-length requirement; a decimal
+time chosen from a numerical eigenvalue does not become exact merely by
+being described as a multiple of that numerical estimate.
+
+\section*{Lesson 37. Prove a whole band of target distances}
+\addcontentsline{toc}{section}{37. A whole band of target distances}
+\paragraph{Reverse the graph in your mind.}
+For a positive target $\delta$ below the initial distance, define
+$t_x(\delta)$ as the first time preparation $x$ reaches that target.
+A smaller target means getting closer to equilibrium, so it takes longer.
+Thus if $\delta_a<\delta_b$, then $t_x(\delta_a)\geq t_x(\delta_b)$.
+For the irreducible reversible model and a nonequilibrium preparation,
+KL strictly decreases until its limiting equilibrium value; positive targets
+below the initial value have unique crossings.
+
+\paragraph{A root estimate proposes; a sign bracket verifies.}
+A numerical solver might propose $t=10.1234$. To verify a bracket $[L,U]$,
+enclose $D(L)-\delta$ strictly above zero and $D(U)-\delta$ strictly below
+zero. Continuity gives a crossing between them; strict decrease gives
+uniqueness. An approximate residual close to zero is weaker than these
+two certified signs. We also need $0<L<U$ for the ratio bound below.
+
+\paragraph{Choose the unfavorable corners.}
+For every $\delta\in[\delta_a,\delta_b]$,
+\[
+ t_h(\delta)\leq t_h(\delta_a)\leq U_h(\delta_a),\qquad
+ t_c(\delta)\geq t_c(\delta_b)\geq L_c(\delta_b)>0.
+\]
+Division by a positive denominator preserves the intended order, giving
+\[
+ 1-\frac{t_h(\delta)}{t_c(\delta)}
+ \geq 1-\frac{U_h(\delta_a)}{L_c(\delta_b)}.
+\]
+If the right side exceeds $0.05$, every target in that cell has at least
+five-percent time saving. Notice that the numerator and denominator use
+opposite ends of the target cell. This conservative mismatch is exactly
+what covers its interior.
+
+\paragraph{Try the ratio with ordinary numbers.}
+Suppose the hottest trajectory's slowest permitted arrival is at most
+$90$ seconds and the cold trajectory's fastest permitted arrival is at
+least $100$ seconds. The saving is at least $1-90/100=10\%$.
+If the denominator were instead only known to exceed $92$, the bound would
+fall to about $2.17\%$, even if all sampled same-target comparisons looked
+better. The proof must use the bounds it has actually established.
+
+The nominal certificate covers $[10^{-3},10^{-2}]$ with 60 target cells.
+Its conservative lower bound on time saving is approximately $8.12245\%$.
+This is a guaranteed lower bound for that nominal model, not the exact
+minimum. The later eight-obligation certificate handles the full uncertain
+four-state parameter box. It is a distinct proof, not a conclusion obtained
+by silently extrapolating the nominal calculation.
+
+\section*{Lesson 38. Derive a transition rate from an energy exchange}
+\addcontentsline{toc}{section}{38. From energy exchange to transition rate}
+\paragraph{Begin with one uphill move.}
+Let two system energies be $E_j=1$ and $E_i=3$, with barrier energy $B=5$.
+Draw a nonnegative reservoir energy $Y$ with density $\beta e^{-\beta Y}$.
+The move from $j$ is allowed when $1+Y\geq5$, namely when $Y\geq4$.
+At acceptance, set $Y'=Y+1-3=Y-2$. It is nonnegative, and
+$E_i+Y'=3+Y-2=1+Y=E_j+Y$: combined energy is conserved.
+The reverse contact sees the same total energy and can undo the move.
+
+\paragraph{Integrate the acceptance probability.}
+For any $c\geq0$,
+\[
+ \Pr(Y\geq c)=\int_c^\infty\beta e^{-\beta y}\,dy=e^{-\beta c}.
+\]
+If contacts for this pair arrive at rate $\nu_0$, the accepted rate from
+$j$ to $i$ is therefore
+\[
+ a_{ij}=\nu_0e^{-\beta(B-E_j)}.
+\]
+The reverse rate is $a_{ji}=\nu_0e^{-\beta(B-E_i)}$.
+Their ratio is $e^{-\beta(E_i-E_j)}$. Multiplying by Gibbs weights
+gives the stronger flux identity
+\[
+ a_{ij}e^{-\beta E_j}=a_{ji}e^{-\beta E_i}
+ =\nu_0e^{-\beta B},
+\]
+which is detailed balance before the common normalization is inserted.
+
+\paragraph{Separate an always-required gate from the uphill cost.}
+Write $h=B-\max(E_i,E_j)$. Since
+$B-E_j=h+\max(E_i-E_j,0)$, the rate becomes
+\[
+ a_{ij}=\nu_0e^{-\beta h}\min\{1,e^{-\beta(E_i-E_j)}\}.
+\]
+In the example at $\beta=1$, the common gate contributes $e^{-2}$,
+the uphill acceptance contributes another $e^{-2}$, and their product is
+$e^{-4}$. The reverse move has only the common $e^{-2}$ gate.
+
+\paragraph{Why simulation may omit attempts but not their time.}
+One can retain only contacts with $Y\geq h$. Their clock has rate
+$\nu_0e^{-\beta h}$. Conditional on passing the gate,
+\[
+ \Pr(Y-h\geq z\mid Y\geq h)
+ =\frac{e^{-\beta(h+z)}}{e^{-\beta h}}=e^{-\beta z}.
+\]
+Thus a retained mark is $h$ plus a fresh exponential energy. This proves
+the thinning rule used in the event simulation. Counting every attempted
+contact as an accepted transition would alter the process; ignoring
+rejected contacts without adjusting the clock would alter physical time.
+
+\paragraph{What this construction establishes.}
+Under independent fresh thermal marks, independent Poisson pair clocks,
+constant reservoir density of energy states, and instantaneous updates,
+the rate identity holds exactly for every allowed barrier and energy.
+It supplies a stochastic bath interpretation of the same four-state model.
+It does not identify a material or derive an autonomous microscopic bath.
+The replayed simulation of 500,000 trajectories per preparation agrees
+with direct evolution at five times to within $0.00118$ per component.
+That is a diagnostic check of the simulation; the rate identity above is
+the reason the mathematical generators coincide.
+
+\section*{Lesson 39. An intermediate state introduces a second clock}
+\addcontentsline{toc}{section}{39. Intermediate states and two clocks}
+\paragraph{Insert a waiting room between two wells.}
+Suppose the desired well-to-well rates are $u$ from $j$ to $i$ and $v$
+from $i$ to $j$. Insert state $s$. Use entrance rates $2u$ from $j$
+and $2v$ from $i$, and exit rate $b$ from $s$ to each well. On entering
+$s$, the next well is selected with probabilities $1/2$ and $1/2$.
+Half the visits return to the well just left.
+
+If the clock is stopped during every visit to $s$, the successful transition
+rate from $j$ to $i$ is $2u\times(1/2)=u$. This is the trace clock:
+only time actually spent in the wells is retained. With ordinary physical
+time, each visit adds a mean wait $1/(2b)$. Those waits cannot be removed
+when claiming a physical completion time.
+
+\paragraph{Derive the block identity one entry at a time.}
+Order the wells as $(j,i)$. Their direct block, the entrance block, the
+exit block and the intermediate block are
+\[
+ Q_{ww}=\begin{pmatrix}-2u&0\\0&-2v\end{pmatrix},\quad
+ Q_{sw}=\begin{pmatrix}2u&2v\end{pmatrix},\quad
+ Q_{ws}=\begin{pmatrix}b\\b\end{pmatrix},\quad Q_{ss}=-2b.
+\]
+The subscripts give destination first, as everywhere else. Multiplication
+now gives
+\[
+ Q_{ww}-Q_{ws}Q_{ss}^{-1}Q_{sw}
+ =\begin{pmatrix}-2u&0\\0&-2v\end{pmatrix}
+  +\begin{pmatrix}u&v\\u&v\end{pmatrix}
+ =\begin{pmatrix}-u&v\\u&-v\end{pmatrix}.
+\]
+This is exactly the intended two-well generator. Adding the six pair
+contributions gives the four-well identity in the technical report.
+This exact algebra identifies the trace generator; it does not assert that
+the physical-time well probabilities solve that same four-state equation.
+
+\paragraph{Equilibrium and preparation also change.}
+In the expanded model, each intermediate has energy $B$ and phase-space
+weight $\eta>0$. Its equilibrium weight is $\eta e^{-B}$, compared
+with $e^{-E_j}$ for a well. Taking $b=2/\eta$ in attempt-time units
+gives mean intermediate residence time $\eta/4$ and matched equilibrium
+fluxes. At preparation temperature $T$, all ten states must be prepared
+with weights $g_a e^{-E_a/T}$. Preparing only the wells would be a different
+experiment. The phase-space weight $\eta$ need not be an integer count.
+
+At $\eta=0.05$, the nominal cold and hot preparations place about $1.90\%$
+and $4.07\%$ of their mass in intermediates. Full ten-state calculations
+retain those populations and every residence time. Their finite-time
+advantage persists at the tested points. The expanded system also has
+higher energies and faster rates outside the original all-state caps.
+It is a separate test of a modeling assumption, not a new certificate
+inside the original constrained four-state class.
+
+\section*{Lesson 40. Read a computational result at the right strength}
+\addcontentsline{toc}{section}{40. Read the evidence at the right strength}
+\paragraph{Four questions before accepting a result.}
+What object was calculated? What inputs were used? Which errors were bounded?
+Which variables were covered continuously? An answer such as ``70 digits''
+only addresses numerical precision, and even then does not itself establish
+a bound on every implementation or modeling error.
+
+The independent ten-state calculation directly constructs and exponentiates
+the full generator at 70-digit working precision. It agrees with the fast
+spectral implementation within $6.55\times10^{-13}$ in KL at five tested
+times. Different formulas agreeing is useful evidence against a numerical
+implementation mistake. Neither implementation uses outward error bounds
+for that comparison, so it is a high-precision diagnostic, not an interval
+certificate.
+
+\paragraph{Interpret a large sample precisely.}
+For each of three fixed $\eta$ values, the study tests 256 corners and 500
+seeded interior parameter points. The total is $3(256+500)=2268$.
+Each point is further tested on finite target and time grids. No sampled
+case fails the declared benchmarks. This says exactly what happened on
+those grids. It does not exclude a narrow failure between points, between
+time samples, between targets, or at an untested value of $\eta$.
+The continuous four-state certificate cannot be transferred to this
+ten-state extension merely because their trace generators agree.
+
+\paragraph{A percentage needs a denominator and a clock.}
+At $\eta=0.05$ and target $10^{-3}$, the independently computed arrival
+times are approximately $210.67249$ for cold and $190.05131$ for hot.
+Using the cold time as denominator gives
+\[
+ \frac{210.67249-190.05131}{210.67249}\approx0.0978826,
+\]
+or about $9.78826\%$. Dividing by the hot time would answer a different
+percentage question. These are attempt-time units, not calibrated seconds.
+The calculation includes post-quench intermediate residence times but does
+not include the cost or duration of preparing the hotter initial state.
+
+\paragraph{Know what a program's success message establishes.}
+A zero exit code means that the process completed without a reported
+execution failure. Some exploratory programs record failures in JSON
+without returning a nonzero code. Read the recorded failure counts, input
+hashes, unresolved cells, parameter scope and numerical residuals. A
+certificate runner must also reject incomplete coverage. A numerical
+search that found nothing has a different meaning from a complete proof
+that nothing exists.
+
+\paragraph{The final handoff to advanced mathematics.}
+You can now read the physical section by following a chain of explicit
+claims: construct valid rates; establish equilibrium; evolve preparations;
+bound numerical error; prove continuous comparisons; and interpret the
+clock and physical assumptions. The advanced spectral and interval
+methods make that chain efficient over an uncertain parameter box.
+They do not replace any link. When a later formula looks forbidding,
+identify which link it serves before trying to manipulate its symbols.

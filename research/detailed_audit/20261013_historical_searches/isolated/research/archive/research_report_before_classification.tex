@@ -1,0 +1,741 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,hyperref}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Mp}{M}
+\title{A counterexample to the four state Mpemba triplet conjecture}
+\author{Research report and reproducible mathematical certificate}
+\date{11 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We disprove the four-state case of the finite-temperature triplet conjecture of Avitan, Factor and Gelbwaser-Klimovsky (arXiv:2603.04567v1). An explicit reversible generator with strictly positive rates and four distinct energies fails the necessary-condition test of Avitan, Factor and Gelbwaser-Klimovsky on every original-rate triplet, but has an ordinary asymptotic cooling Mpemba effect between two finite positive initial temperatures. The bath inverse temperature is one; the initial inverse temperatures are $1/1000$ and $1/100$. Rational interval arithmetic certifies the thermal-overlap inequality. A second standalone verification uses exact inertia counts and spectral residual bounds. The example has a simple slow mode and strict margins. A controlled family additionally gives an exact onset inequality, a unique thermal maximum when the effect occurs, and onset laws giving linear growth of the inverse-temperature window and quadratic growth of the amplitude advantage. We connect the triplet inequalities to established stochastic monotonicity, obtaining corrected sufficient conditions for absence. The counterexample is the central contribution; the order and convex-divergence results are supporting applications of established stochastic-monotonicity and thermomajorization methods. Overlap plots and a certified finite-time distance crossing show the physical effect, whose amplitude advantage is about 0.1102\%.
+\end{abstract}
+
+\section{Outcome}
+The proposed triplet test can miss a genuine four-state relaxation reversal. In the example, the hotter preparation begins farther from equilibrium, yet later becomes slightly closer. The reversal is mathematically rigorous and physically small. Every input rate and bath weight is rational. The energies are logarithms of those weights. A cubic with integer coefficients specifies the slow eigenvalue, and cofactor polynomials specify its left eigenvector exactly. Thermal probabilities at the two selected temperatures are algebraic numbers bounded by rational numbers whose correctness is checked by integer powers.
+
+A companion example has an exactly rational slow eigenvalue and left eigenvector. It gives a second, simpler spectral certificate, at the expense of two less compact rates. Both examples are strictly inside the required positive-rate and simple-slow-mode domain. Section~\ref{sec:mechanism} extends the companion into a parameter family that crosses a proved cooling threshold while all triplet tests continue to fail. No assertion about a strong Mpemba effect is needed: the two displayed slow-mode overlaps are nonzero.
+
+\section{Problem and literature status}
+The target is the inference that failure of Eq.~(3) on every energy-ordered triplet of a four-state reversible thermalizing generator precludes the Mpemba effect. The triplets retain the original off-diagonal rates. This is the conjecture in \href{https://arxiv.org/html/2603.04567v1}{Avitan, Factor and Gelbwaser-Klimovsky, arXiv:2603.04567v1}, submitted 4 March 2026. Its main text and supporting information, particularly S2--S14, were checked on 11 October 2026. The version history listed only v1. Its finite-temperature claim is numerical; the analytic theorem assumes zero bath temperature and stronger triplet inequalities.
+
+The later \href{https://arxiv.org/html/2609.09988v1}{Gelbwaser-Klimovsky, arXiv:2609.09988v1}, submitted 9 September 2026, repeats the inference without providing a general proof. Its examples without an exact three-state mechanism concern a different, stronger predicate. Searches by title, identifier, conjecture, correction and counterexample located no other primary-source resolution. This establishes the scope of the literature check; it does not exclude unindexed or unpublished work. The source-to-counterexample correspondence is made explicit in Section~\ref{sec:claimscope}. Publication priority or exhaustive novelty is not claimed.
+
+For supporting no-Mpemba results we additionally checked \href{https://arxiv.org/html/2410.06623v2}{Ohga, Hayakawa and Ito, arXiv:2410.06623v2}, version-history date 19 October 2024, including Result 2 and SI B--D, on 11 October 2026. Their theorem is a prior application of monotone coupling to absence of mean-energy crossings. Section~\ref{sec:priororder} compares the assumptions and observables precisely. The broader assessment in Section~\ref{sec:novelty} also checks Fill--Kahn (v3, 6 September 2013), Baake--Sumner (v3, 25 September 2022), and Vu--Hayakawa (v2, 6 January 2025), including their relevant full-text arguments. Supporting applications carry no independent novelty claim.
+
+For definitions we use \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/}{Lu and Raz, PNAS 114, 5083--5088 (2017)}, and distinguish the strong effect of \href{https://arxiv.org/abs/1711.05829}{Klich et al., Phys. Rev. X 9, 021060 (2019)}. The asymptotic conclusion is supplemented below by certified finite-time crossing brackets.
+
+\subsection{Model and reductions}
+With column probabilities, $\dot p=Mp$, $M_{ij}=a_{ij}$ for $i\ne j$, and $M_{jj}=-\sum_{i\ne j}a_{ij}$. The rate $a_{ij}$ goes from $j$ to $i$. Write
+\[
+q_i=e^{-\beta_b E_i},\qquad Q=\sum_iq_i,\qquad \pi_b=q/Q.
+\]
+Detailed balance is $M_{ij}q_j=M_{ji}q_i$. An energy shift sets $E_1=0$; measuring energies in bath units sets $\beta_b=1$. A common positive multiplier of $M$ changes only the time unit. We use $a_{12}=1$. We neither assume equally spaced energies nor normalize the total energy span. These would impose additional restrictions.
+
+If $D=\diag(\pi_b)$, detailed balance makes $S=D^{-1/2}MD^{1/2}$ symmetric: $MD=DM^\top$. Hence the spectrum is real and the generator is diagonalizable. Its Dirichlet form is
+\[
+-f^\top D M^\top f=\sum_{i<j}c_{ij}(f_i-f_j)^2,\qquad c_{ij}=M_{ij}\pi_{bj}=c_{ji}.
+\]
+In the positive-rate domain the stationary eigenvalue is simple. The slowest nonzero eigenvalue is additionally assumed simple and is certified below.
+
+\subsection{Exact predicate and its negation}
+For $i<j<k$, put $A=a_{ik}$, $B=a_{jk}$, $C=a_{ij}$, $t=q_j/q_i$, $u=q_k/q_j$. The source's $(-,0,+)$ correspond to $(i,j,k)$. Its exact test is
+\begin{align*}
+\kappa&=\frac{A+B}{C(1+t)},&G&=At-B,\\
+F&=A(1+tu/2)-B(1+u/2)-C(1-t),\\
+P_{ijk}&=(\kappa\geq1\ \land\ F>0)\ \lor\ (\kappa\leq1\ \land\ G>0).
+\end{align*}
+Both strict comparisons and both inclusive branch comparisons match Eq.~(3) and S9. This is a direct transcription of the published test, using destination-first rate indices.
+
+\begin{lemma}[The branch logic reduces to a convex cone]
+For positive $C$ and $0<t<1$, $\neg P_{ijk}$ is equivalent to $F\leq0$ and $G\leq0$.
+\end{lemma}
+\begin{proof}
+Let $H=A+B-C(1+t)$, $d=(1-t)/(1+t)>0$, and $h=2/(1+t)+u/2>0$. Direct expansion gives $F=hG+dH$. If $H>0$, failure is $F\leq0$, which forces $G<0$. If $H<0$, failure is $G\leq0$, which forces $F<0$. At $H=0$ both branches apply, but $F=hG$, so their strict tests agree. These cases prove both directions.
+\end{proof}
+For fixed energies the eight linear inequalities define one closed polyhedral cone. The admissible rates are its intersection with the strictly positive orthant. This conclusion does not discard the original branch logic; it proves an equivalent formulation including $\kappa=1$.
+
+The supporting-information fast-vector formulas divide by $-uG$. We do not use that division. When $G=0$, direct triplet diagonalization gives nonzero eigenvalues $-A(1+t+tu)$ and $-[C(1+t)+Atu]$. If also $H=0$, they coincide. The predicate remains well-defined whenever $C>0$. Isolated triplet generators require their diagonals to be recomputed, not inherited as principal submatrices.
+
+\subsection{Precise published claim and the contradiction}\label{sec:claimscope}
+The target is the finite-temperature conjecture in Avitan, Factor and Gelbwaser-Klimovsky, rather than an extrapolation supplied by this report. Their \href{https://arxiv.org/html/2603.04567v1#Sx3}{N-level protocol} states: ``if all triplets violate the conditions, the $N$-level system will not exhibit the Mpemba effect.'' The \href{https://arxiv.org/html/2603.04567v1#Sx3.SSx2}{non-zero-temperature subsection} explicitly identifies this as a conjecture. The protocol and SI Eqs.~(S10)--(S14) specify the original rates.
+
+Let $\mathsf{ME}_{\rm cool}(M,E,\beta_b)$ mean that there exist finite $0<\beta_h<\beta_c<\beta_b$ with $|b_2(\beta_h)|<|b_2(\beta_c)|$, where the bath and generator are fixed and the slow nonzero eigenvalue is simple. Section~\ref{sec:cooling} shows that this implies an initial-to-eventual KL-distance reversal. A necessary consequence of the published conjecture, restricted to four states and this regular domain, is
+\begin{equation}\label{eq:claimC4}
+\boxed{\quad
+\bigwedge_{i<j<k}\neg P_{ijk}
+\quad\Longrightarrow\quad
+\neg\mathsf{ME}_{\rm cool}(M,E,\beta_b).
+\quad}\tag{$\mathcal C_4$}
+\end{equation}
+This is a universally quantified implication over distinct ordered energies, positive reversible rates and $0<\beta_b<\infty$. Requiring positive rates and a simple slow mode restricts the domain; it does not enlarge the authors' claim. Restricting the conclusion to cooling makes it weaker. A counterexample to this restricted consequence therefore suffices to refute the unrestricted finite-temperature conjecture, independently of any heating or spectral-boundary convention.
+
+\begin{center}\small
+\begin{tabular}{p{.42\textwidth}p{.49\textwidth}}
+\toprule Requirement in $(\mathcal C_4)$&Witness in Theorem~\ref{thm:counterexample}\\\midrule
+Four ordered distinct energies&$E=(0,\log(200/199),\log(5/2),\log400)$.\\
+Finite positive bath&$\beta_b=1$.\\
+Conservative reversible thermal dynamics&All twelve off-diagonal rates are positive; $\mathbf1^\top M=0$ and $M\diag(q)$ is symmetric.\\
+Simple slow nonzero eigenvalue&One root in each of $(-20,-19)$, $(-60,-59)$ and $(-337,-336)$.\\
+Original-rate triplet failures&Exact evaluations below give $F<0$ and $G<0$ on all four triplets, with both $\kappa$ branches represented.\\
+Conclusion contradicted&$\beta_h=1/1000<\beta_c=1/100<1$ and $|b_2(\beta_c)|-|b_2(\beta_h)|>0.0001034076$.\\\bottomrule
+\end{tabular}
+\end{center}
+The table records the proof obligations, which the exact construction below discharges. No effective rate, principal-submatrix diagonal, infinite initial temperature or equality case is used. Shifting all energies by the same positive constant also makes $E_1>0$, if desired, without changing any rate test or Gibbs distribution.
+
+\paragraph{Three distinct statements.}
+The March paper's zero-temperature theorem assumes $\beta_b\to\infty$, a nondegenerate spectrum and $C>A+B$ for every triplet (SI Eq.~S20). Our bath is finite and the latter inequality fails already for $123$: $1<28+1799/8$. Thus the counterexample does not challenge that theorem or the three-state necessity of Eq.~(3).
+
+The September paper, \href{https://arxiv.org/html/2609.09988v1#S2}{Gelbwaser-Klimovsky, Section II}, distinguishes Eq.~(3) from its exact three-state mechanisms. Write $\mathcal E_{ijk}$ for satisfaction of one of those mechanisms. In their nondegenerate three-state setting, necessity gives $\mathcal E_{ijk}\Rightarrow P_{ijk}$, but not conversely. Consequently
+\[
+\bigwedge\neg P_{ijk}\ \Longrightarrow\ \bigwedge\neg\mathcal E_{ijk}.
+\]
+Necessity supplies no converse to this implication. Its reported four-state effects with no triplet mechanism therefore do not, by that fact alone, establish failure of $(\mathcal C_4)$. Section II separately reiterates the original-rate Eq.~(3) absence inference. Our witness verifies the stronger premise $\bigwedge\neg P_{ijk}$ explicitly.
+
+\paragraph{General conjecture versus sampled parameter ranges.}
+The March Fig.~2 uses rates from $0.05$ to $1$ and $\beta_bE_i$ from $0$ to $1$; the September Fig.~5 uses rates from $0.001$ to $1$ and $\beta_bE_i$ from $0$ to $5$. These are sampling ranges, not hypotheses attached to the general inference. Our invariant energy span is $\beta_b(E_4-E_1)=\log400>5$, outside both boxes. Even the downward-rate ratio $a_{12}/a_{23}=8/1799<0.05$ prevents a common time rescaling from placing all downward rates in the March box. We therefore refute the unrestricted conjecture; we neither reproduce nor contradict the finite sample counts, and make no claim of a counterexample within either sampled box.
+
+\subsection{What the cooling witness proves}\label{sec:cooling}
+Choose $Mv_2=\lambda_2v_2$, $w_2^\top M=\lambda_2w_2^\top$ and $w_2^\top v_2=1$. Since $\lambda_2\ne0$, $w_2^\top\pi_b=0$. Thus
+\[
+b_2(\beta)=w_2^\top[\pi(\beta)-\pi_b]=w_2^\top\pi(\beta).
+\]
+All initial temperatures here are finite and positive. Cooling has $0<\beta_h<\beta_c<\beta_b$, with anomalous ordering $|b_2(\beta_h)|<|b_2(\beta_c)|$. Heating instead has $\beta_b<\beta_h<\beta_c$ and requires $|b_2(\beta_c)|<|b_2(\beta_h)|$.
+
+With a simple slow mode,
+\[
+p(t;\beta)-\pi_b=e^{\lambda_2t}b_2(\beta)v_2+O(e^{\lambda_3t}).
+\]
+Consequently a strict overlap comparison gives the same eventual comparison in every fixed norm. For relative entropy,
+\[
+D_{\rm KL}(p(t;\beta)\Vert\pi_b)=\tfrac12e^{2\lambda_2t}b_2(\beta)^2
+\sum_i v_{2i}^2/\pi_{bi}+o(e^{2\lambda_2t}).
+\]
+The hotter initial Gibbs state is initially farther in this distance because
+\[
+\frac{d}{d\beta}D_{\rm KL}(\pi(\beta)\Vert\pi_b)
+=(\beta-\beta_b)\Var_{\pi(\beta)}(E).
+\]
+Thus the example gives a genuine initial-to-eventual distance reversal. It does not claim reversal at every time or for arbitrary distance functionals without appropriate hypotheses. A strong effect would require a nonbath preparation with zero slow overlap; that is not the witness used here.
+
+Holding the bath, generator and eigenvectors fixed gives
+\[
+b_2'(\beta)=-\Cov_{\pi(\beta)}(w_2,E)
+=-\sum_{i<j}\pi_i(\beta)\pi_j(\beta)(w_{2j}-w_{2i})(E_j-E_i).
+\]
+A stationary point alone does not prove a maximum. We instead certify two strict overlap values on the same bath side. Since $b_2(1)=0$, their increasing absolute ordering also forces an interior maximum somewhere between $\beta_h$ and the bath.
+
+\section{Main result and exact counterexample}
+\begin{theorem}[Counterexample to the published finite-temperature inference]\label{thm:counterexample}
+There exist four distinct ordered energies, a finite positive bath temperature and a strictly positive reversible generator with a simple slowest nonzero eigenvalue such that all four original-rate predicates $P_{ijk}$ fail, yet two finite cooling preparations obey $|b_2(\beta_h)|<|b_2(\beta_c)|$. Thus the antecedent of $(\mathcal C_4)$ holds and its conclusion is false.
+\end{theorem}
+\begin{proof}
+Set
+\[
+\beta_b=1,\quad q=(1,199/200,2/5,1/400),\quad
+E=(0,\log(200/199),\log(5/2),\log400).
+\]
+These energies are distinct and strictly ordered. The downward rates in the order $(12,13,14,23,24,34)$ are
+\[
+(1,28,249/10,1799/8,4983/200,251/25).
+\]
+Set upward rates by $a_{ji}=a_{ij}q_j/q_i$ for $i<j$. The full generator is
+\[
+M=\begin{pmatrix}
+-49029/4000&1&28&249/10\\
+199/200&-7280583/79600&1799/8&4983/200\\
+56/5&17990/199&-1011751/4000&251/25\\
+249/4000&4983/79600&251/4000&-11971/200
+\end{pmatrix}.
+\]
+Every off-diagonal entry is positive. Its columns sum to zero and $M\diag(q)$ is symmetric. Since $Q=959/400$, the equilibrium is $\pi_b=(400,398,160,1)/959$.
+
+Exact original-rate triplet evaluations are:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule Triplet&$\kappa$&$F$&$G$\\\midrule
+123&$7225/57$&$-1176493/4975$&$-39403/200$\\
+124&$3321/133$&$-32119/1592000$&$-279/2000$\\
+134&$1747/1960$&$-7761/4000$&$-2/25$\\
+234&$1391209/12548025$&$-190400119/1592000$&$-119/4975$\\\bottomrule
+\end{tabular}
+\end{center}
+All four predicates fail strictly, with two upper branches and two lower branches. No boundary convention is needed.
+
+The characteristic polynomial is $xC(x)/1273600000000$, where
+\begin{align*}
+C(x)={}&1273600000000x^3+530473008000000x^2\\
+&+35732953114072400x+510539126345027563.
+\end{align*}
+Exact opposite endpoint signs show one root in each of $(-337,-336)$, $(-60,-59)$ and $(-20,-19)$. These three disjoint sign-changing intervals exhaust a cubic's roots; all are simple. The largest, denoted $r$, is $\lambda_2$. Approximately,
+\[
+(\lambda_2,\lambda_3,\lambda_4)=(-19.86836952145,-59.91747997894,-336.72876105237).
+\]
+In particular the slow-mode spectral gap exceeds 39 in these time units.
+
+Let $P_i(x)$ be the explicit cofactor polynomials listed in \hyperref[app:cofactors]{Appendix A}. Their common factor corresponds to the first column of $\operatorname{adj}(M^\top-xI)$. Put $w_i=P_i(r)/P_1(r)$. The nonvanishing denominator is certified by the rational isolating interval below. The adjugate identity proves $M^\top w=rw$. It also follows that $q^\top w=0$. To impose the required biorthogonal normalization set
+\[
+N=\sum_iq_iw_i^2>0,\qquad v_i=q_iw_i/N.
+\]
+Detailed balance gives $Mv=rv$ and $w^\top v=1$. Thus $w=w_2$, $v=v_2$ is a valid consistently normalized pair. Approximately,
+\[
+w=(1,-0.75893729814493,-0.61211930644096,-0.0038663077658171).
+\]
+The relevant overlap is exactly
+\[
+b_2(\beta)=\frac{\sum_iw_iq_i^\beta}{\sum_iq_i^\beta}.
+\]
+For $\beta_h=1/1000$ and $\beta_c=1/100$, rational interval certification gives the following deliberately widened enclosures:
+\begin{align*}
+-0.0937454280&<b_2(\beta_h)<-0.0937454279,\\
+-0.0938488357&<b_2(\beta_c)<-0.0938488356.
+\end{align*}
+Every displayed terminating decimal denotes an exact rational number. In particular
+\[
+|b_2(\beta_c)|-|b_2(\beta_h)|>0.0001034076>0.
+\]
+Both preparations have finite temperatures, $T_h=1000$ and $T_c=100$ in units with $k_B=1$, versus $T_b=1$. The strict overlap comparison and spectral expansion establish the ordinary cooling Mpemba effect. The verification construction below proves the enclosures without relying on floating-point acceptance tests. This completes the counterexample.
+\end{proof}
+
+\section{Mathematical explanation and supporting applications}
+\subsection{Why the triplet inference fails}
+The highest-energy state's slow-mode value is almost zero, while the intermediate states have strongly negative values. At very high initial temperature, occupation of state 4 therefore dilutes the negative slow overlap. The slightly cooler preparation depopulates state 4 enough to increase the magnitude of that overlap. At still lower temperatures, transfer toward the positive ground-state component returns the overlap to zero at the bath. This explanation concerns projection onto a relaxation mode, not merely mean energy.
+
+An isolated triplet has a different eigenvector and a different equilibrium normalization from the full four-state system. Pairwise detailed balance and the inequalities $F,G<0$ do not control the orientation of the full slow eigenvector relative to the entire Gibbs curve. In particular, nonmonotone slow eigenvectors are permitted. This explains the missing implication in a triplet-only argument.
+
+All rates, $F$ and $G$ are strict; the slow eigenvalue is separated; the overlap gap is strict. Continuous dependence of a simple eigenprojection, Gibbs probabilities and the predicates on rates and energies therefore yields an open neighborhood of counterexamples, including varying energies. This is not an equality-surface artifact. No numerical radius for that neighborhood is claimed.
+
+There is also an explicit one-parameter family. Let $R_0=\pi_b\mathbf1^\top-I$ and $M_\rho=M+\rho R_0$ for $\rho\geq0$. Its off-diagonal reset rates are $\rho\pi_{bi}$, for which $F=G=0$ on every triplet. Thus $F,G$ remain unchanged. On the zero-sum subspace $R_0=-I$, so every nonzero eigenvalue shifts by $-\rho$ and every mode and overlap is preserved. Positivity and the counterexample persist for all $\rho\geq0$. A subsequent common positive time rescaling also preserves the result. More explicitly, for every $\alpha>24$, the same $q$ and the downward rates
+\[
+(\alpha-24,\alpha+3,\alpha-1/10,
+199\alpha/200+200,199\alpha/200+1/25,2\alpha/5+1/25)
+\]
+form a counterexample. Their generator equals $M+(\alpha-25)(q\mathbf1^\top-QI)$. All nonzero eigenvalues shift by $-(\alpha-25)Q$, while their ordering, modes, overlaps and all $F,G$ remain unchanged. Positivity follows directly from $\alpha>24$.
+
+\subsection{A predictive mechanism and an exact onset threshold}\label{sec:mechanism}
+The following construction controls the eigenvector rather than interpreting it after diagonalization. It extends the rational-mode companion in Appendix B, not merely the reset direction: two rates and the slow eigenvector change with a parameter. Throughout the entire parameter interval, the four triplet predicates fail. Nevertheless, the family crosses a sharp boundary between ordinary and anomalous asymptotic cooling.
+
+\begin{lemma}[A single-turn criterion for a nearly neutral top state]\label{lem:singleturn}
+Let $E_1=0<E_2<E_3<E_4$, $\beta_b=1$, and suppose the simple slow left mode, normalized with $w_1=1$, is
+\[
+w=(1,-p,-r,z),\qquad p>r>-z>0,\qquad \sum_iw_i e^{-E_i}=0.
+\]
+Assume also
+\[
+E_4>E_2+E_3,\qquad (1+r)E_3>(p-r)(E_3-E_2).
+\]
+Write $E_\Sigma=E_2+E_3+E_4$ and
+\[
+D_0=(1-p-r+z)E_\Sigma+4(pE_2+rE_3-zE_4).
+\]
+There is an ordinary asymptotic cooling Mpemba effect at finite positive initial temperatures if and only if $D_0<0$. In that case $|b_2(\beta)|$ has exactly one maximum on $0<\beta<1$. If $D_0\geq0$, it strictly decreases throughout that interval. There is no asymptotic heating reversal for $\beta>1$ under these hypotheses.
+\end{lemma}
+\begin{proof}
+Let $N(\beta)=\sum_iw_i e^{-\beta E_i}$ and $Z(\beta)=\sum_i e^{-\beta E_i}$, so $b_2=N/Z$. All three excited-state coefficients are negative, hence $N'(\beta)>0$. Since $N(1)=0$, $b_2<0$ for $0\leq\beta<1$ and $b_2>0$ for $\beta>1$.
+
+Define $D(\beta)=Z(\beta)^2b_2'(\beta)$. Its pair expansion has three positive and three negative terms:
+\begin{align*}
+D(\beta)={}&c_{12}e^{-\beta E_2}+c_{13}e^{-\beta E_3}+c_{14}e^{-\beta E_4}\\
+&-c_{23}e^{-\beta(E_2+E_3)}-c_{24}e^{-\beta(E_2+E_4)}-c_{34}e^{-\beta(E_3+E_4)},
+\end{align*}
+where $c_{1j}=(w_1-w_j)E_j>0$ and $c_{ij}=(w_j-w_i)(E_j-E_i)>0$ for $2\leq i<j\leq4$. In particular $c_{13}>c_{23}$. Multiplying by a positive exponential gives
+\begin{align*}
+J(\beta):=e^{\beta E_4}D(\beta)
+={}&c_{12}e^{\beta(E_4-E_2)}
++e^{\beta(E_4-E_2-E_3)}(c_{13}e^{\beta E_2}-c_{23})\\
+&+c_{14}-c_{24}e^{-\beta E_2}-c_{34}e^{-\beta E_3}.
+\end{align*}
+Every nonconstant summand is strictly increasing for $\beta\geq0$; the second is a product of positive increasing functions. Thus $J'>0$. Also $J(1)>0$ because $N'(1)>0$ and $N(1)=0$. Direct evaluation gives $J(0)=D_0$. If $D_0<0$, there is exactly one zero $\beta_m\in(0,1)$, with $b_2'<0$ before it and $b_2'>0$ afterwards. As $b_2<0$, this is exactly a maximum of its absolute value. Two finite $0<\beta_h<\beta_c<\beta_m$ give a strict cooling witness. If $D_0\geq0$, then $J(\beta)>0$ for every $\beta>0$, excluding any such reversal. Finally $J>0$ and $b_2>0$ for $\beta>1$, giving ordinary heating ordering.
+\end{proof}
+The condition uses $\beta=0$ only as an analytic endpoint. Infinite initial temperature is not required for any witness. The single-turn proof is essential: the sign of an endpoint derivative alone would not generally exclude a maximum elsewhere.
+
+\paragraph{Rates that force this geometry while every triplet fails.}
+Keep $q=(1,199/200,2/5,1/400)$ and set
+\[
+p=\frac{759}{1000},\quad r_0=\frac{48959}{80000},\quad
+\eta=\frac1{160},\quad -\frac3{100}\leq z\leq-\frac1{250}.
+\]
+Use $w(z)=(1,-p,-r_0-\eta z,z)$. The small compensation $\eta z$ makes $q^\top w(z)=0$ exactly. Define the downward rates by
+\[
+a_{12}=1,\qquad a_{13}=28,\qquad a_{14}=249/10,\qquad a_{24}=4983/200,
+\]
+\begin{align*}
+a_{23}(z)&=\frac{528238451563-2257386450z}{200000(11761-500z)},\\
+a_{34}(z)&=\frac{2(1550z^2-5989657z+1197903)}{5(80500z+48959)}.
+\end{align*}
+As before, $a_{ji}=a_{ij}q_j/q_i$ and the diagonal enforces column conservation. These formulas arise by taking the first component of $Lw=\lambda w$ to define
+\[
+\lambda(z)=-\frac{1550z+3973343}{200000},
+\]
+then solving its second and fourth components for $a_{23}$ and $a_{34}$. The third follows from bath orthogonality and stationarity; direct substitution checks all four. This is a rate-level design prescription. At $z=-1/250$ it reproduces Appendix B exactly.
+
+\begin{theorem}[A controlled triplet-failing family with a sharp cooling threshold]\label{thm:family}
+Every generator just defined is strictly positive and reversible, fails all four original triplet tests strictly, and has the displayed $w(z)$ as its simple slow mode. Put
+\begin{align*}
+U&=(1-p-r_0)E_\Sigma+4(pE_2+r_0E_3),\\
+V&=(3+\eta)E_4-(1-\eta)E_2-(1+3\eta)E_3>0,\qquad z_*=U/V.
+\end{align*}
+Within the stated closed parameter interval, an ordinary asymptotic cooling effect occurs exactly when
+\[
+\boxed{z>z_*,\qquad -0.017940112<z_*<-0.017940111.}
+\]
+For $z\leq z_*$ there is no asymptotic cooling effect. For $z>z_*$ the cooling amplitude has a unique maximum; the family has no asymptotic heating effect.
+\end{theorem}
+\begin{proof}
+Both rate denominators stay positive. Exact polynomial bounds throughout the interval give $224<a_{23}<225$, $10<a_{34}<12$, and the following uniform bounds:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule Triplet&Upper bound on $F$&Upper bound on $G$\\\midrule
+123&$-230$&$-196$\\
+124&$-1/50$&$-13/100$\\
+134&$-19/10$&$-2/25$\\
+234&$-118$&$-3/100$\\\bottomrule
+\end{tabular}
+\end{center}
+Every comparison is strict; $123,124$ stay in the upper $\kappa$ branch and $134,234$ in the lower branch.
+
+To identify the slow mode uniformly, let $M_0$ use the four fixed rates above and $a_{23}=224$, $a_{34}=10$. An exact $LDL^\top$ congruence of $\diag(q)(M_0^\top+50I)$ has successive pivots
+\[
+\frac{150971}{4000},\quad
+-\frac{494381936093}{12077680000},\quad
+\frac{2188881388080131}{19775277443720},\quad
+-\frac{432951459178371}{17511051104641048}.
+\]
+There are two negative pivots, so $M_0$ has exactly two eigenvalues below $-50$. Increasing conductances increases the reversible Dirichlet form. The min--max principle therefore puts two eigenvalues of every $M(z)$ below $-50$ as well. The explicit eigenvalue satisfies $-20<\lambda(z)<-19$; the remaining eigenvalue is the simple stationary zero. Consequently $\lambda(z)$ is the simple slow nonzero eigenvalue, with separation exceeding 30. This rules out realizing the desired geometry in a faster mode by mistake.
+
+The hypotheses of Lemma~\ref{lem:singleturn} hold uniformly, and substitution of $r=r_0+\eta z$ gives $D_0=U-Vz$. The exact logarithm enclosures described below prove $V>0$ and the displayed bracket for $z_*$. Apply the lemma, including its equality case.
+\end{proof}
+
+\paragraph{Predictions for finite preparations and for onset.}
+The pair $\beta_h=1/1000$, $\beta_c=1/100$ has its own exact threshold. Write
+\[
+u(\beta)=\frac{1-pq_2^\beta-r_0q_3^\beta}{Z(\beta)},\qquad
+v(\beta)=\frac{q_4^\beta-\eta q_3^\beta}{Z(\beta)},\qquad b_z=u+zv.
+\]
+Since both overlaps are negative, this pair reverses if and only if
+\[
+z>z_{\rm pair}:=-\frac{u(1/1000)-u(1/100)}{v(1/1000)-v(1/100)}
+\simeq-0.01480024798314.
+\]
+The denominator is certified positive by integer-power enclosures. For $z_*<z\leq z_{\rm pair}$ other, sufficiently high but finite temperatures witness the effect; this particular pair does not. This distinguishes existence of the effect from success of a chosen temperature grid.
+
+Let $d_*=\partial_\beta D(0,z_*)>0$ and $\delta=z-z_*$. Analyticity and the implicit function theorem give, as $\delta\downarrow0$,
+\begin{align*}
+\beta_m(z)&=\frac{V}{d_*}\delta+O(\delta^2),\\
+|b_z(\beta_m)|-|b_z(0)|&=\frac{V^2}{32d_*}\delta^2+O(\delta^3).
+\end{align*}
+Here $V/d_*\simeq1.76871$ and $V^2/(32d_*)\simeq0.943684$ in the fixed normalization $w_1=1$. The factors follow from $Z(0)=4$, $b_z'(0)=-V\delta/16$ and $b_{z_*}''(0)=d_*/16$. The peak is born at the high-temperature endpoint with a linearly opening inverse-temperature window and a quadratically small advantage. Figure~\ref{fig:mechanism} illustrates this prediction.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.65cm},width=.43\textwidth,height=5.6cm,tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},scaled ticks=false]
+\nextgroupplot[title={A: A thermal maximum emerges},xlabel={Initial inverse temperature $\beta$},ylabel={$10^4(|b_z(\beta)|-|b_z(0)|)$},xmin=0,xmax=.05,ymin=-11.5,ymax=2.4,xtick={0,.01,.02,.03,.04,.05},xticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},legend style={font=\scriptsize,draw=none,at={(.02,.02)},anchor=south west}]
+\addplot[blue,thick] coordinates {(0.0,0.0) (0.0003333333333333334,-0.025435041859519596) (0.0006666666666666668,-0.05151647812271278) (0.001,-0.07824391076742812) (0.0013333333333333335,-0.10561694004242354) (0.001666666666666667,-0.1336351644729556) (0.002,-0.16229818086637288) (0.0023333333333333335,-0.1916055843177139) (0.002666666666666667,-0.22155696821530835) (0.0030000000000000005,-0.2521519242463828) (0.003333333333333334,-0.28339004240266985) (0.003666666666666667,-0.31527091098602145) (0.004,-0.34779411661402565) (0.004333333333333334,-0.3809592442256267) (0.004666666666666667,-0.41476587708674895) (0.005000000000000001,-0.44921359679592426) (0.005333333333333334,-0.4843019832899222) (0.005666666666666667,-0.5200306148493842) (0.006000000000000001,-0.5563990681044604) (0.006333333333333334,-0.5934069180404492) (0.006666666666666668,-0.6310537380034414) (0.007000000000000001,-0.6693390997059646) (0.007333333333333334,-0.7082625732326331) (0.007666666666666668,-0.7478237270457991) (0.008,-0.7880221279912062) (0.008333333333333335,-0.8288573413036473) (0.008666666666666668,-0.8703289306126223) (0.009000000000000001,-0.9124364579480008) (0.009333333333333334,-0.9551794837456857) (0.009666666666666667,-0.9985575668532796) (0.010000000000000002,-1.0425702645357526) (0.010333333333333335,-1.0872171324811126) (0.010666666666666668,-1.1324977248060788) (0.011000000000000001,-1.1784115940617548) (0.011333333333333334,-1.2249582912393056) (0.011666666666666669,-1.2721373657756354) (0.012000000000000002,-1.319948365559066) (0.012333333333333335,-1.3683908369350204) (0.012666666666666668,-1.4174643247117027) (0.013000000000000001,-1.467168372165785) (0.013333333333333336,-1.5175025210480912) (0.013666666666666669,-1.5684663115892832) (0.014000000000000002,-1.6200592825055509) (0.014333333333333335,-1.6722809710043003) (0.014666666666666668,-1.7251309127898433) (0.015000000000000001,-1.7786086420690892) (0.015333333333333336,-1.8327136915572373) (0.01566666666666667,-1.8874455924834679) (0.016,-1.9428038745966372) (0.016333333333333335,-1.9987880661709736) (0.01666666666666667,-2.0553976940117673) (0.017,-2.1126322834610693) (0.017333333333333336,-2.170491358403388) (0.017666666666666667,-2.2289744412713812) (0.018000000000000002,-2.2880810530515565) (0.018333333333333337,-2.3478107132899653) (0.018666666666666668,-2.4081629400978994) (0.019000000000000003,-2.469137250157591) (0.019333333333333334,-2.5307331587279034) (0.01966666666666667,-2.592950179650035) (0.020000000000000004,-2.6557878253532077) (0.020333333333333335,-2.7192456068603685) (0.02066666666666667,-2.783323033793885) (0.021,-2.848019614381236) (0.021333333333333336,-2.913334855460714) (0.02166666666666667,-2.9792682624871123) (0.022000000000000002,-3.045819339537421) (0.022333333333333337,-3.112987589316525) (0.02266666666666667,-3.180772513162886) (0.023000000000000003,-3.2491736110542444) (0.023333333333333338,-3.318190381613303) (0.02366666666666667,-3.387822322113419) (0.024000000000000004,-3.4580689284842916) (0.024333333333333335,-3.5289296953176494) (0.02466666666666667,-3.6004041158729385) (0.025000000000000005,-3.672491682083003) (0.025333333333333336,-3.7451918845597714) (0.02566666666666667,-3.8185042125999398) (0.026000000000000002,-3.892428154190649) (0.026333333333333337,-3.9669631960151657) (0.026666666666666672,-4.04210882345856) (0.027000000000000003,-4.117864520613377) (0.027333333333333338,-4.19422977028532) (0.02766666666666667,-4.271204053998911) (0.028000000000000004,-4.348786852003169) (0.028333333333333335,-4.426977643277275) (0.02866666666666667,-4.50577590553624) (0.029000000000000005,-4.585181115236564) (0.029333333333333336,-4.665192747581904) (0.02966666666666667,-4.745810276528732) (0.030000000000000002,-4.827033174791989) (0.030333333333333337,-4.908860913850743) (0.030666666666666672,-4.991292963953842) (0.031000000000000003,-5.074328794125557) (0.03133333333333334,-5.157967872171242) (0.03166666666666667,-5.242209664682966) (0.032,-5.3270536370451635) (0.03233333333333334,-5.412499253440272) (0.03266666666666667,-5.498545976854358) (0.033,-5.585193269082771) (0.03333333333333334,-5.672440590735756) (0.03366666666666667,-5.760287401244085) (0.034,-5.848733158864689) (0.03433333333333334,-5.937777320686274) (0.03466666666666667,-6.027419342634929) (0.035,-6.117658679479761) (0.035333333333333335,-6.208494784838493) (0.03566666666666667,-6.299927111183069) (0.036000000000000004,-6.391955109845269) (0.036333333333333336,-6.484578231022302) (0.036666666666666674,-6.577795923782408) (0.037000000000000005,-6.671607636070443) (0.037333333333333336,-6.766012814713482) (0.037666666666666675,-6.861010905426398) (0.038000000000000006,-6.956601352817437) (0.03833333333333334,-7.052783600393809) (0.03866666666666667,-7.149557090567256) (0.03900000000000001,-7.246921264659624) (0.03933333333333334,-7.344875562908423) (0.03966666666666667,-7.443419424472399) (0.04000000000000001,-7.542552287437087) (0.04033333333333334,-7.642273588820358) (0.04066666666666667,-7.742582764577981) (0.04100000000000001,-7.843479249609162) (0.04133333333333334,-7.9449624777620755) (0.04166666666666667,-8.047031881839414) (0.042,-8.149686893603917) (0.04233333333333334,-8.25292694378389) (0.04266666666666667,-8.356751462078726) (0.043000000000000003,-8.461159877164437) (0.04333333333333334,-8.566151616699152) (0.04366666666666667,-8.671726107328627) (0.044000000000000004,-8.777882774691754) (0.044333333333333336,-8.884621043426055) (0.044666666666666674,-8.991940337173174) (0.045000000000000005,-9.09984007858436) (0.04533333333333334,-9.208319689325965) (0.045666666666666675,-9.3173785900849) (0.046000000000000006,-9.427016200574124) (0.04633333333333334,-9.537231939538104) (0.046666666666666676,-9.64802522475828) (0.04700000000000001,-9.759395473058513) (0.04733333333333334,-9.87134210031054) (0.04766666666666667,-9.983864521439427) (0.04800000000000001,-10.096962150429) (0.04833333333333334,-10.210634400327274) (0.04866666666666667,-10.324880683251893) (0.04900000000000001,-10.43970041039555) (0.04933333333333334,-10.555092992031392) (0.04966666666666667,-10.671057837518447) (0.05,-10.78759435530702)};\addlegendentry{$z=-0.025$}
+\addplot[orange,thick] coordinates {(0.0,0.0) (0.0003333333333333334,-0.0003351101266055592) (0.0006666666666666668,-0.0013401840059951292) (0.001,-0.003014835507794835) (0.0013333333333333335,-0.005358676666552211) (0.001666666666666667,-0.00837131768744747) (0.002,-0.012052366952009714) (0.0023333333333333335,-0.016401431023837988) (0.002666666666666667,-0.021418114654327046) (0.0030000000000000005,-0.02710202078839781) (0.003333333333333334,-0.033452750570232385) (0.003666666666666667,-0.04046990334901354) (0.004,-0.048153076684668644) (0.004333333333333334,-0.056501866353617806) (0.004666666666666667,-0.06551586635452623) (0.005000000000000001,-0.07519466891406093) (0.005333333333333334,-0.08553786449265101) (0.005666666666666667,-0.09654504179025249) (0.006000000000000001,-0.10821578775211649) (0.006333333333333334,-0.12054968757456137) (0.006666666666666668,-0.13354632471074876) (0.007000000000000001,-0.14720528087646273) (0.007333333333333334,-0.16152613605589305) (0.007666666666666668,-0.17650846850742138) (0.008,-0.1921518547694109) (0.008333333333333335,-0.20845586966599983) (0.008666666666666668,-0.22542008631289662) (0.009000000000000001,-0.2430440761231802) (0.009333333333333334,-0.2613274088131016) (0.009666666666666667,-0.28026965240788926) (0.010000000000000002,-0.29987037324755716) (0.010333333333333335,-0.320129135992715) (0.010666666666666668,-0.34104550363038216) (0.011000000000000001,-0.3626190374798035) (0.011333333333333334,-0.38484929719826766) (0.011666666666666669,-0.40773584078692793) (0.012000000000000002,-0.43127822459662524) (0.012333333333333335,-0.4554760033337139) (0.012666666666666668,-0.48032873006588894) (0.013000000000000001,-0.5058359562280158) (0.013333333333333336,-0.531997231627962) (0.013666666666666669,-0.5588121044524299) (0.014000000000000002,-0.5862801212727934) (0.014333333333333335,-0.6144008270509337) (0.014666666666666668,-0.6431737651450788) (0.015000000000000001,-0.6725984773156436) (0.015333333333333336,-0.7026745037310715) (0.01566666666666667,-0.7334013829736777) (0.016,-0.7647786520454934) (0.016333333333333335,-0.7968058463741131) (0.01666666666666667,-0.829482499818539) (0.017,-0.8628081446750305) (0.017333333333333336,-0.8967823116829545) (0.017666666666666667,-0.9314045300306321) (0.018000000000000002,-0.9666743273611929) (0.018333333333333337,-1.0025912297784236) (0.018666666666666668,-1.039154761852622) (0.019000000000000003,-1.0763644466264506) (0.019333333333333334,-1.114219805620787) (0.01966666666666667,-1.1527203588405814) (0.020000000000000004,-1.1918656247807076) (0.020333333333333335,-1.2316551204318194) (0.02066666666666667,-1.2720883612862057) (0.021,-1.3131648613436429) (0.021333333333333336,-1.3548841331172536) (0.02166666666666667,-1.3972456876393575) (0.022000000000000002,-1.4402490344673287) (0.022333333333333337,-1.4838936816894504) (0.02266666666666667,-1.5281791359307677) (0.023000000000000003,-1.5731049023589432) (0.023333333333333338,-1.6186704846901103) (0.02366666666666667,-1.664875385194725) (0.024000000000000004,-1.7117191047034215) (0.024333333333333335,-1.7592011426128606) (0.02466666666666667,-1.807320996891585) (0.025000000000000005,-1.8560781640858661) (0.025333333333333336,-1.9054721393255554) (0.02566666666666667,-1.9555024163299342) (0.026000000000000002,-2.0061684874135595) (0.026333333333333337,-2.0574698434921124) (0.026666666666666672,-2.1094059740882423) (0.027000000000000003,-2.161976367337411) (0.027333333333333338,-2.215180509993738) (0.02766666666666667,-2.2690178874358398) (0.028000000000000004,-2.3234879836726714) (0.028333333333333335,-2.378590281349364) (0.02866666666666667,-2.434324261753064) (0.029000000000000005,-2.4906894048187658) (0.029333333333333336,-2.5476851891351475) (0.02966666666666667,-2.605311091950404) (0.030000000000000002,-2.663566589178073) (0.030333333333333337,-2.7224511554028674) (0.030666666666666672,-2.781964263886499) (0.031000000000000003,-2.842105386573503) (0.03133333333333334,-2.902873994097063) (0.03166666666666667,-2.964269555784822) (0.032,-3.026291539664712) (0.03233333333333334,-3.0889394124707614) (0.03266666666666667,-3.152212639648905) (0.033,-3.216110685362803) (0.03333333333333334,-3.2806330124996435) (0.03366666666666667,-3.3457790826759424) (0.034,-3.4115483562433577) (0.03433333333333334,-3.4779402922944813) (0.03466666666666667,-3.5449543486686306) (0.035,-3.612589981957655) (0.035333333333333335,-3.6808466475117187) (0.03566666666666667,-3.7497237994450883) (0.036000000000000004,-3.8192208906419185) (0.036333333333333336,-3.8893373727620353) (0.036666666666666674,-3.9600726962467148) (0.037000000000000005,-4.031426310324451) (0.037333333333333336,-4.103397663016738) (0.037666666666666675,-4.175986201143833) (0.038000000000000006,-4.249191370330516) (0.03833333333333334,-4.323012615011861) (0.03866666666666667,-4.397449378438986) (0.03900000000000001,-4.472501102684812) (0.03933333333333334,-4.548167228649805) (0.03966666666666667,-4.624447196067733) (0.04000000000000001,-4.701340443511402) (0.04033333333333334,-4.778846408398393) (0.04066666666666667,-4.856964526996801) (0.04100000000000001,-4.935694234430968) (0.04133333333333334,-5.015034964687193) (0.04166666666666667,-5.094986150619479) (0.042,-5.175547223955231) (0.04233333333333334,-5.25671761530098) (0.04266666666666667,-5.338496754148082) (0.043000000000000003,-5.420884068878438) (0.04333333333333334,-5.503878986770181) (0.04366666666666667,-5.587480934003378) (0.044000000000000004,-5.671689335665719) (0.044333333333333336,-5.756503615758206) (0.044666666666666674,-5.841923197200833) (0.045000000000000005,-5.9279475018382595) (0.04533333333333334,-6.014575950445493) (0.045666666666666675,-6.1018079627335435) (0.046000000000000006,-6.189642957355094) (0.04633333333333334,-6.278080351910158) (0.046666666666666676,-6.3671195629517285) (0.04700000000000001,-6.456760005991424) (0.04733333333333334,-6.547001095505134) (0.04766666666666667,-6.637842244938655) (0.04800000000000001,-6.729282866713325) (0.04833333333333334,-6.821322372231635) (0.04866666666666667,-6.913960171882871) (0.04900000000000001,-7.007195675048718) (0.04933333333333334,-7.101028290108862) (0.04966666666666667,-7.1954574244466105) (0.05,-7.290482484454481)};\addlegendentry{$z=z_*$}
+\addplot[green!60!black,thick] coordinates {(0.0,0.0) (0.0003333333333333334,0.0207836908785624) (0.0006666666666666668,0.04087758701838509) (0.001,0.0602820645442337) (0.0013333333333333335,0.07899750150512955) (0.001666666666666667,0.09702427786853562) (0.002,0.11436277551453723) (0.0023333333333333335,0.1310133782300171) (0.002666666666666667,0.14697647170282502) (0.0030000000000000005,0.16225244351594229) (0.003333333333333334,0.17684168314164095) (0.003666666666666667,0.19074458193563798) (0.004,0.2039615331312444) (0.004333333333333334,0.2164929318335096) (0.004666666666666667,0.22833917501336043) (0.005000000000000001,0.23950066150173632) (0.005333333333333334,0.249977791983719) (0.005666666666666667,0.2597709689926581) (0.006000000000000001,0.2688805969042922) (0.006333333333333334,0.27730708193086545) (0.006666666666666668,0.28505083211523996) (0.007000000000000001,0.29211225732500395) (0.007333333333333334,0.29849176924657594) (0.007666666666666668,0.30418978137930497) (0.008,0.3092067090295664) (0.008333333333333335,0.3135429693048545) (0.008666666666666668,0.3171989811078712) (0.009000000000000001,0.32017516513061073) (0.009333333333333334,0.3224719438484412) (0.009666666666666667,0.3240897415141825) (0.010000000000000002,0.32502898415218084) (0.010333333333333335,0.3252900995523799) (0.010666666666666668,0.32487351726438907) (0.011000000000000001,0.323779668591548) (0.011333333333333334,0.32200898658498883) (0.011666666666666669,0.31956190603769496) (0.012000000000000002,0.31643886347855704) (0.012333333333333335,0.31264029716642655) (0.012666666666666668,0.3081666470841659) (0.013000000000000001,0.303018354932697) (0.013333333333333336,0.29719586412504634) (0.013666666666666669,0.2906996197803882) (0.014000000000000002,0.28353006871808545) (0.014333333333333335,0.27568765945172785) (0.014666666666666668,0.26717284218316845) (0.015000000000000001,0.25798606879655767) (0.015333333333333336,0.24812779285237563) (0.01566666666666667,0.2375984695814625) (0.016,0.22639855587904686) (0.016333333333333335,0.21452851029877193) (0.01666666666666667,0.2019887930467216) (0.017,0.18877986597544327) (0.017333333333333336,0.17490219257796935) (0.017666666666666667,0.16035623798183912) (0.018000000000000002,0.14514246894311636) (0.018333333333333337,0.1292613538404086) (0.018666666666666668,0.1127133626688835) (0.019000000000000003,0.0954989670342838) (0.019333333333333334,0.07761864014694356) (0.01966666666666667,0.05907285681580013) (0.020000000000000004,0.039862093442408944) (0.020333333333333335,0.019986828014954494) (0.02066666666666667,-0.000552459897738349) (0.021,-0.02175528915219192) (0.021333333333333336,-0.04362117703626762) (0.02166666666666667,-0.06614963927515345) (0.022000000000000002,-0.08934019003735615) (0.022333333333333337,-0.1131923419406917) (0.02266666666666667,-0.1377056060582751) (0.023000000000000003,-0.1628794919245126) (0.023333333333333338,-0.18871350754109212) (0.02366666666666667,-0.21520715938297383) (0.024000000000000004,-0.24235995240438218) (0.024333333333333335,-0.270171390044795) (0.02466666666666667,-0.2986409742349358) (0.025000000000000005,-0.3277682054027616) (0.025333333333333336,-0.35755258247945365) (0.02566666666666667,-0.3879936029054075) (0.026000000000000002,-0.4190907626362194) (0.026333333333333337,-0.45084355614867594) (0.026666666666666672,-0.4832514764467398) (0.027000000000000003,-0.5163140150675365) (0.027333333333333338,-0.5500306620873409) (0.02766666666666667,-0.5844009061275592) (0.028000000000000004,-0.619424234360715) (0.028333333333333335,-0.6551001325164292) (0.02866666666666667,-0.6914280848874033) (0.029000000000000005,-0.7284075743353968) (0.029333333333333336,-0.7660380822972072) (0.02966666666666667,-0.8043190887906472) (0.030000000000000002,-0.8432500724205192) (0.030333333333333337,-0.8828305103845904) (0.030666666666666672,-0.9230598784795636) (0.031000000000000003,-0.963937651107049) (0.03133333333333334,-1.0054633012795342) (0.03166666666666667,-1.047636300626347) (0.032,-1.0904561193996256) (0.03233333333333334,-1.1339222264802802) (0.03266666666666667,-1.1780340893839485) (0.033,-1.2227911742669635) (0.03333333333333334,-1.2681929459323058) (0.03366666666666667,-1.3142388678355534) (0.034,-1.3609284020908425) (0.03433333333333334,-1.408261009476813) (0.03466666666666667,-1.4562361494425509) (0.035,-1.504853280113541) (0.035333333333333335,-1.5541118582976046) (0.03566666666666667,-1.6040113394908375) (0.036000000000000004,-1.6545511778835482) (0.036333333333333336,-1.7057308263661912) (0.036666666666666674,-1.757549736535299) (0.037000000000000005,-1.8100073586994048) (0.037333333333333336,-1.8631031418849733) (0.037666666666666675,-1.9168365338423203) (0.038000000000000006,-1.9712069810515254) (0.03833333333333334,-2.0262139287283567) (0.03866666666666667,-2.0818568208301738) (0.03900000000000001,-2.1381351000618443) (0.03933333333333334,-2.195048207881638) (0.03966666666666667,-2.2525955845071395) (0.04000000000000001,-2.310776668921141) (0.04033333333333334,-2.3695908988775307) (0.04066666666666667,-2.4290377109071963) (0.04100000000000001,-2.4891165403239017) (0.04133333333333334,-2.549826821230169) (0.04166666666666667,-2.611167986523165) (0.042,-2.6731394679005707) (0.04233333333333334,-2.735740695866455) (0.04266666666666667,-2.7989710997371344) (0.043000000000000003,-2.8628301076470484) (0.04333333333333334,-2.9273171465546075) (0.04366666666666667,-2.992431642248048) (0.044000000000000004,-3.058173019351289) (0.044333333333333336,-3.124540701329771) (0.044666666666666674,-3.191534110496299) (0.045000000000000005,-3.2591526680168776) (0.04533333333333334,-3.3273957939165473) (0.045666666666666675,-3.396262907085205) (0.046000000000000006,-3.465753425283431) (0.04633333333333334,-3.5358667651483064) (0.046666666666666676,-3.6066023421992246) (0.04700000000000001,-3.677959570843697) (0.04733333333333334,-3.7499378643831616) (0.04766666666666667,-3.822536635018776) (0.04800000000000001,-3.895755293857216) (0.04833333333333334,-3.9695932509164518) (0.04866666666666667,-4.044049915131544) (0.04900000000000001,-4.1191246943604165) (0.04933333333333334,-4.19481699538962) (0.04966666666666667,-4.2711262239401115) (0.05,-4.348051784673009)};\addlegendentry{$z=-0.012$}
+\addplot[red,thick] coordinates {(0.0,0.0) (0.0003333333333333334,0.04922598794815132) (0.0006666666666666668,0.0977354732590607) (0.001,0.14552881858217945) (0.0013333333333333335,0.19260638861131607) (0.001666666666666667,0.23896855007868406) (0.002,0.2846156717489434) (0.0023333333333333335,0.3295481244132362) (0.002666666666666667,0.3737662808832148) (0.0030000000000000005,0.41727051598506537) (0.003333333333333334,0.4600612065535245) (0.003666666666666667,0.5021387314258899) (0.004,0.543503471436026) (0.004333333333333334,0.5841558094083626) (0.004666666666666667,0.6240961301518893) (0.005000000000000001,0.6633248204541429) (0.005333333333333334,0.7018422690751905) (0.005666666666666667,0.7396488667416072) (0.006000000000000001,0.7767450061404477) (0.006333333333333334,0.8131310819132129) (0.006666666666666668,0.8488074906498131) (0.007000000000000001,0.8837746308825231) (0.007333333333333334,0.9180329030799355) (0.007666666666666668,0.9515827096409075) (0.008,0.9844244548885033) (0.008333333333333335,1.0165585450639325) (0.008666666666666668,1.0479853883204826) (0.009000000000000001,1.0787053947174485) (0.009333333333333334,1.1087189762140577) (0.009666666666666667,1.1380265466633899) (0.010000000000000002,1.1666285218062937) (0.010333333333333335,1.1945253192652985) (0.010666666666666668,1.221717358538523) (0.011000000000000001,1.2482050609935804) (0.011333333333333334,1.2739888498614778) (0.011666666666666669,1.2990691502305136) (0.012000000000000002,1.3234463890401713) (0.012333333333333335,1.3471209950750092) (0.012666666666666668,1.3700933989585466) (0.013000000000000001,1.3923640331471476) (0.013333333333333336,1.4139333319239002) (0.013666666666666669,1.4348017313924937) (0.014000000000000002,1.4549696694710925) (0.014333333333333335,1.4744375858862067) (0.014666666666666668,1.4932059221665603) (0.015000000000000001,1.5112751216369558) (0.015333333333333336,1.5286456294121373) (0.01566666666666667,1.5453178923906505) (0.016,1.5612923592486987) (0.016333333333333335,1.576569480434) (0.01666666666666667,1.591149708159638) (0.017,1.6050334963979125) (0.017333333333333336,1.6182213008741893) (0.017666666666666667,1.6307135790607439) (0.018000000000000002,1.6425107901706073) (0.018333333333333337,1.6536133951514078) (0.018666666666666668,1.6640218566792113) (0.019000000000000003,1.6737366391523605) (0.019333333333333334,1.682758208685311) (0.01966666666666667,1.6910870331024679) (0.020000000000000004,1.6987235819320192) (0.020333333333333335,1.7056683263997687) (0.02066666666666667,1.711921739422967) (0.021,1.7174842956041427) (0.021333333333333336,1.7223564712249302) (0.02166666666666667,1.726538744239898) (0.022000000000000002,1.7300315942703763) (0.022333333333333337,1.7328355025982825) (0.02266666666666667,1.734950952159947) (0.023000000000000003,1.7363784275399379) (0.023333333333333338,1.737118414964884) (0.02366666666666667,1.7371714022973) (0.024000000000000004,1.7365378790294081) (0.024333333333333335,1.7352183362769615) (0.02466666666666667,1.7332132667730658) (0.025000000000000005,1.7305231648620023) (0.025333333333333336,1.7271485264930495) (0.02566666666666667,1.7230898492143047) (0.026000000000000002,1.7183476321665063) (0.026333333333333337,1.7129223760768564) (0.026666666666666672,1.7068145832528416) (0.027000000000000003,1.7000247575760579) (0.027333333333333338,1.6925534044960309) (0.02766666666666667,1.6844010310240418) (0.028000000000000004,1.6755681457269491) (0.028333333333333335,1.6660552587210145) (0.02866666666666667,1.6558628816657268) (0.029000000000000005,1.644991527757629) (0.029333333333333336,1.6334417117241449) (0.02966666666666667,1.6212139498174052) (0.030000000000000002,1.6083087598080776) (0.030333333333333337,1.5947266609791961) (0.030666666666666672,1.580468174119992) (0.031000000000000003,1.565533821519725) (0.03133333333333334,1.5499241269615172) (0.03166666666666667,1.533639615716188) (0.032,1.5166808145360902) (0.03233333333333334,1.4990482516489456) (0.03266666666666667,1.4807424567516885) (0.033,1.4617639610043023) (0.03333333333333334,1.4421132970236636) (0.03366666666666667,1.4217909988773894) (0.034,1.4007976020776782) (0.03433333333333334,1.3791336435751624) (0.03466666666666667,1.3567996617527587) (0.035,1.3337961964195177) (0.035333333333333335,1.3101237888044803) (0.03566666666666667,1.2857829815505362) (0.036000000000000004,1.2607743187082803) (0.036333333333333336,1.235098345729877) (0.036666666666666674,1.2087556094629217) (0.037000000000000005,1.181746658144311) (0.037333333333333336,1.154072041394109) (0.037666666666666675,1.12573231020942) (0.038000000000000006,1.096728016958266) (0.03833333333333334,1.0670597153734604) (0.03866666666666667,1.036727960546492) (0.03900000000000001,1.0057333089214051) (0.03933333333333334,0.9740763182886915) (0.03966666666666667,0.9417575477791742) (0.04000000000000001,0.9087775578579034) (0.04033333333333334,0.875136910318055) (0.04066666666666667,0.840836168274825) (0.04100000000000001,0.8058758961593352) (0.04133333333333334,0.7702566597125425) (0.04166666666666667,0.7339790259791429) (0.042,0.6970435633014891) (0.04233333333333334,0.6594508413135057) (0.04266666666666667,0.6212014309346146) (0.043000000000000003,0.5822959043636524) (0.04333333333333334,0.5427348350728051) (0.04366666666666667,0.5025187978015393) (0.044000000000000004,0.46164836855053604) (0.044333333333333336,0.4201241245756356) (0.044666666666666674,0.37794664438177833) (0.045000000000000005,0.33511650771695844) (0.04533333333333334,0.2916342955661715) (0.045666666666666675,0.24750059014537665) (0.046000000000000006,0.2027159748954571) (0.04633333333333334,0.15728103447618494) (0.046666666666666676,0.11119635476019464) (0.04700000000000001,0.06446252282695795) (0.04733333333333334,0.017080126956763506) (0.04766666666666667,-0.03095024337529894) (0.04800000000000001,-0.07962799750534882) (0.04833333333333334,-0.12895254358671496) (0.04866666666666667,-0.1789232885959449) (0.04900000000000001,-0.22953963833879618) (0.04933333333333334,-0.2808009974562224) (0.04966666666666667,-0.33270676943036775) (0.05,-0.3852563565905413)};\addlegendentry{$z=-0.004$}
+\addplot[gray,forget plot] coordinates {(0,0)(.05,0)};
+\nextgroupplot[title={B: The onset boundary},xlabel={Highest-state mode value $z$},ylabel={$\beta_m$},xmin=-.03,xmax=-.004,ymin=0,ymax=.027,xtick={-.03,-.02,-.01},ytick={0,.01,.02},xticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},legend style={font=\scriptsize,draw=none,at={(.02,.98)},anchor=north west}]
+\addplot[fill=orange!25,draw=none,forget plot] coordinates {(-0.017940111223364898,0.0) (-0.017800710111131247,0.0002464413443806452) (-0.0176613089988976,0.0004926451841585077) (-0.01752190788666395,0.0007386118890034555) (-0.0173825067744303,0.0009843418279155665) (-0.017243105662196653,0.0012298353692260999) (-0.017103704549963003,0.0014750928805984682) (-0.016964303437729356,0.0017201147290291602) (-0.016824902325495706,0.001964901280848743) (-0.016685501213262056,0.0022094529017227865) (-0.01654610010102841,0.0024537699566528426) (-0.01640669898879476,0.002697852809977433) (-0.01626729787656111,0.002941701825372973) (-0.01612789676432746,0.003185317365854769) (-0.01598849565209381,0.0034286997937779803) (-0.015849094539860165,0.0036718494708385843) (-0.015709693427626514,0.003914766758074382) (-0.015570292315392864,0.004157452015865918) (-0.015430891203159216,0.004399905603937492) (-0.015291490090925567,0.004642127881358138) (-0.015152088978691918,0.004884119206542585) (-0.01501268786645827,0.005125879937252245) (-0.01487328675422462,0.005367410430596202) (-0.014733885641990971,0.005608711043032173) (-0.014594484529757323,0.005849782130367511) (-0.014455083417523672,0.006090624047760189) (-0.014315682305290024,0.0063312371497197635) (-0.014176281193056375,0.006571621790108394) (-0.014036880080822725,0.006811778322141807) (-0.013897478968589078,0.0070517070983902854) (-0.013758077856355428,0.0072914084707796836) (-0.01361867674412178,0.0075308827905923815) (-0.013479275631888131,0.007770130408468309) (-0.01333987451965448,0.008009151674405923) (-0.013200473407420832,0.00824794693776319) (-0.013061072295187184,0.00848651654725862) (-0.012921671182953533,0.008724860850972226) (-0.012782270070719885,0.008962980196346523) (-0.012642868958486236,0.009200874930187551) (-0.012503467846252586,0.009438545398665852) (-0.01236406673401894,0.009675991947317462) (-0.012224665621785289,0.009913214921044956) (-0.01208526450955164,0.01015021466411838) (-0.011945863397317992,0.010386991520176308) (-0.011806462285084342,0.010623545832226832) (-0.011667061172850693,0.010859877942648541) (-0.011527660060617045,0.011095988193191552) (-0.011388258948383394,0.01133187692497851) (-0.011248857836149746,0.01156754447850557) (-0.011109456723916097,0.011802991193643432) (-0.010970055611682447,0.012038217409638334) (-0.0108306544994488,0.012273223465113052) (-0.01069125338721515,0.012508009698067925) (-0.010551852274981502,0.01274257644588184) (-0.010412451162747853,0.012976924045313261) (-0.010273050050514203,0.013211052832501223) (-0.010133648938280554,0.013444963142966346) (-0.009994247826046906,0.013678655311611845) (-0.009854846713813257,0.013912129672724543) (-0.009715445601579607,0.014145386559975878) (-0.009576044489345958,0.014378426306422904) (-0.00943664337711231,0.01461124924450932) (-0.009297242264878661,0.01484385570606647) (-0.009157841152645011,0.015076246022314358) (-0.009018440040411363,0.015308420523862653) (-0.008879038928177714,0.015540379540711713) (-0.008739637815944064,0.015772123402253587) (-0.008600236703710415,0.016003652437273034) (-0.008460835591476767,0.016234966973948526) (-0.008321434479243118,0.01646606733985328) (-0.008182033367009468,0.016696953861956246) (-0.00804263225477582,0.016927626866623142) (-0.007903231142542171,0.01715808667961746) (-0.007763830030308522,0.017388333626101468) (-0.007624428918074872,0.01761836803063724) (-0.007485027805841224,0.017848190217187664) (-0.007345626693607575,0.018077800509117448) (-0.0072062255813739266,0.018307199229194153) (-0.007066824469140276,0.01853638669958918) (-0.006927423356906628,0.018765363241878802) (-0.006788022244672979,0.018994129177045183) (-0.006648621132439329,0.01922268482547737) (-0.0065092200202056805,0.01945103050697232) (-0.006369818907972032,0.01967916654073592) (-0.006230417795738383,0.019907093245383988) (-0.006091016683504733,0.020134810938943294) (-0.005951615571271085,0.02036231993885256) (-0.005812214459037436,0.0205896205619635) (-0.005672813346803788,0.0208167131245418) (-0.005533412234570137,0.021043597942268167) (-0.005394011122336489,0.021270275330239303) (-0.00525461001010284,0.021496745602968947) (-0.005115208897869192,0.021723009074388868) (-0.0049758077856355415,0.021949066057849905) (-0.004836406673401893,0.02217491686612294) (-0.0046970055611682444,0.022400561811399933) (-0.004557604448934594,0.022626001205294937) (-0.004418203336700946,0.022851235358845094) (-0.004278802224467297,0.02307626458251166) (-0.004139401112233649,0.023301089186181005) (-0.004,0.023525709479165623) (-.004,0)} --cycle;
+\addplot[black,thick] coordinates {(-0.017940111223364898,0.0) (-0.017800710111131247,0.0002464413443806452) (-0.0176613089988976,0.0004926451841585077) (-0.01752190788666395,0.0007386118890034555) (-0.0173825067744303,0.0009843418279155665) (-0.017243105662196653,0.0012298353692260999) (-0.017103704549963003,0.0014750928805984682) (-0.016964303437729356,0.0017201147290291602) (-0.016824902325495706,0.001964901280848743) (-0.016685501213262056,0.0022094529017227865) (-0.01654610010102841,0.0024537699566528426) (-0.01640669898879476,0.002697852809977433) (-0.01626729787656111,0.002941701825372973) (-0.01612789676432746,0.003185317365854769) (-0.01598849565209381,0.0034286997937779803) (-0.015849094539860165,0.0036718494708385843) (-0.015709693427626514,0.003914766758074382) (-0.015570292315392864,0.004157452015865918) (-0.015430891203159216,0.004399905603937492) (-0.015291490090925567,0.004642127881358138) (-0.015152088978691918,0.004884119206542585) (-0.01501268786645827,0.005125879937252245) (-0.01487328675422462,0.005367410430596202) (-0.014733885641990971,0.005608711043032173) (-0.014594484529757323,0.005849782130367511) (-0.014455083417523672,0.006090624047760189) (-0.014315682305290024,0.0063312371497197635) (-0.014176281193056375,0.006571621790108394) (-0.014036880080822725,0.006811778322141807) (-0.013897478968589078,0.0070517070983902854) (-0.013758077856355428,0.0072914084707796836) (-0.01361867674412178,0.0075308827905923815) (-0.013479275631888131,0.007770130408468309) (-0.01333987451965448,0.008009151674405923) (-0.013200473407420832,0.00824794693776319) (-0.013061072295187184,0.00848651654725862) (-0.012921671182953533,0.008724860850972226) (-0.012782270070719885,0.008962980196346523) (-0.012642868958486236,0.009200874930187551) (-0.012503467846252586,0.009438545398665852) (-0.01236406673401894,0.009675991947317462) (-0.012224665621785289,0.009913214921044956) (-0.01208526450955164,0.01015021466411838) (-0.011945863397317992,0.010386991520176308) (-0.011806462285084342,0.010623545832226832) (-0.011667061172850693,0.010859877942648541) (-0.011527660060617045,0.011095988193191552) (-0.011388258948383394,0.01133187692497851) (-0.011248857836149746,0.01156754447850557) (-0.011109456723916097,0.011802991193643432) (-0.010970055611682447,0.012038217409638334) (-0.0108306544994488,0.012273223465113052) (-0.01069125338721515,0.012508009698067925) (-0.010551852274981502,0.01274257644588184) (-0.010412451162747853,0.012976924045313261) (-0.010273050050514203,0.013211052832501223) (-0.010133648938280554,0.013444963142966346) (-0.009994247826046906,0.013678655311611845) (-0.009854846713813257,0.013912129672724543) (-0.009715445601579607,0.014145386559975878) (-0.009576044489345958,0.014378426306422904) (-0.00943664337711231,0.01461124924450932) (-0.009297242264878661,0.01484385570606647) (-0.009157841152645011,0.015076246022314358) (-0.009018440040411363,0.015308420523862653) (-0.008879038928177714,0.015540379540711713) (-0.008739637815944064,0.015772123402253587) (-0.008600236703710415,0.016003652437273034) (-0.008460835591476767,0.016234966973948526) (-0.008321434479243118,0.01646606733985328) (-0.008182033367009468,0.016696953861956246) (-0.00804263225477582,0.016927626866623142) (-0.007903231142542171,0.01715808667961746) (-0.007763830030308522,0.017388333626101468) (-0.007624428918074872,0.01761836803063724) (-0.007485027805841224,0.017848190217187664) (-0.007345626693607575,0.018077800509117448) (-0.0072062255813739266,0.018307199229194153) (-0.007066824469140276,0.01853638669958918) (-0.006927423356906628,0.018765363241878802) (-0.006788022244672979,0.018994129177045183) (-0.006648621132439329,0.01922268482547737) (-0.0065092200202056805,0.01945103050697232) (-0.006369818907972032,0.01967916654073592) (-0.006230417795738383,0.019907093245383988) (-0.006091016683504733,0.020134810938943294) (-0.005951615571271085,0.02036231993885256) (-0.005812214459037436,0.0205896205619635) (-0.005672813346803788,0.0208167131245418) (-0.005533412234570137,0.021043597942268167) (-0.005394011122336489,0.021270275330239303) (-0.00525461001010284,0.021496745602968947) (-0.005115208897869192,0.021723009074388868) (-0.0049758077856355415,0.021949066057849905) (-0.004836406673401893,0.02217491686612294) (-0.0046970055611682444,0.022400561811399933) (-0.004557604448934594,0.022626001205294937) (-0.004418203336700946,0.022851235358845094) (-0.004278802224467297,0.02307626458251166) (-0.004139401112233649,0.023301089186181005) (-0.004,0.023525709479165623)};\addlegendentry{Unique maximum}
+\addplot[gray,dashed,forget plot] coordinates {(-.0179401112234,0)(-.0179401112234,.027)};
+\end{groupplot}
+\end{tikzpicture}
+\caption{Predictive family of Theorem~\ref{thm:family}. All four triplet predicates fail throughout. Above $z_*$ the amplitude initially increases with inverse temperature and has exactly one cooling maximum; below $z_*$ it decreases throughout cooling. The shaded region has $\partial_\beta|b_z|>0$, so any two finite inverse temperatures inside one vertical slice give a witness. The $\beta=0$ limit is only a reference for the left ordinate. Curves are numerical; the onset and single-turn classification have a continuous-parameter proof.}
+\label{fig:mechanism}
+\end{figure}
+
+
+This makes the neutral-state explanation predictive. Raising $z$ toward zero decreases the negative slow-mode weight carried by state 4, while its small bath weight requires only the weak adjustment $\eta z$ in state 3. The two rate formulas enforce that geometry, the spectral comparison makes it dynamically dominant, and $U-Vz<0$ quantifies when high-temperature occupation of state 4 reverses thermal ordering. The theorem classifies this controlled family and the stated single-turn geometry; it does not classify every four-state counterexample or every finite-time transient crossing. The covariance and spectral tools are established; no exhaustive priority claim is made for this particular construction or lemma.
+
+\paragraph{Continuous-parameter verification.}
+Run \path{research/mechanism_certificate.py}. It checks the rational eigenvector identities, all original triplet inequalities and the two branches on the entire interval. For each rational inequality, it clears the nonvanishing denominator, substitutes $z=-3/100+(13/500)t$, and verifies positive Bernstein coefficients on $0\leq t\leq1$. Since the Bernstein basis is nonnegative and sums to one, these are certificates over a continuum, not sampled evidence. The script records every coefficient and the baseline inertia pivots; a second spectral check bounds the remaining quadratic using its value at $-50$ and the mean of its two real roots.
+
+Logarithms are reduced to arguments in $[1,2]$. With $x=(a-1)/(a+1)$, the positive series $2\sum_{k=0}^{m-1}x^{2k+1}/(2k+1)$ bounds $\log a$ from below, and its remainder is at most $2x^{2m+1}/[(2m+1)(1-x^2)]$. Rational bounds with $m=45$ certify the onset bracket and coefficient signs. Integer bisection bounds the algebraic Gibbs weights for the finite-pair threshold. Separately, \path{research/mechanism_plots.py} checks eight family members against symmetric diagonalization and numerical differentiation at 65-digit precision. Those checks and the plotted curves are illustrative cross-checks, not the continuous proof.
+
+
+\subsection{Visible reversal and its size}
+Figures~\ref{fig:overlap} and \ref{fig:crossing} separate two facts: the hotter initial state has a smaller slow-mode amplitude, and the full time-dependent distance actually changes ordering. These use the primary generator in Theorem~1, with the bath and generator fixed throughout. The high-temperature amplitude reaches its numerical maximum near $\beta=0.0237422$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.6cm},width=0.43\textwidth,height=5.3cm,tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},xlabel={Initial inverse temperature $\beta$},scaled ticks=false]
+\nextgroupplot[title={A: Full cooling interval},xmin=0,xmax=1,ymin=0,ymax=.1,ylabel={$|b_2(\beta)|$}]
+\addplot[black,thick] coordinates {(0,0.0937307280879) (0.008595988539,0.0938361114547) (0.01719197708,0.0938944479609) (0.02578796562,0.0939064820036) (0.03438395415,0.0938730351736) (0.04297994269,0.0937949992222) (0.05157593123,0.0936733290335) (0.06017191977,0.0935090356587) (0.06876790831,0.093303179468) (0.07736389685,0.0930568634644) (0.08595988539,0.0927712268026) (0.09455587393,0.0924474385483) (0.1031518625,0.0920866917064) (0.111747851,0.091690197544) (0.1203438395,0.0912591802263) (0.1289398281,0.0907948717793) (0.1375358166,0.0902985073893) (0.1461318052,0.0897713210442) (0.1547277937,0.0892145415173) (0.1633237822,0.0886293886924) (0.1719197708,0.088017070225) (0.1805157593,0.087378778531) (0.1891117479,0.0867156880944) (0.1977077364,0.0860289530815) (0.2063037249,0.085319705248) (0.2148997135,0.0845890521258) (0.223495702,0.0838380754735) (0.2320916905,0.0830678299749) (0.2406876791,0.0822793421697) (0.2492836676,0.0814736095994) (0.2578796562,0.0806516001538) (0.2664756447,0.0798142515995) (0.2750716332,0.0789624712781) (0.2836676218,0.0780971359555) (0.2922636103,0.0772190918105) (0.3008595989,0.0763291545473) (0.3094555874,0.0754281096185) (0.3180515759,0.0745167125467) (0.3266475645,0.0735956893329) (0.335243553,0.0726657369393) (0.3438395415,0.0717275238384) (0.3524355301,0.0707816906165) (0.3610315186,0.0698288506244) (0.3696275072,0.0688695906667) (0.3782234957,0.0679044717215) (0.3868194842,0.0669340296855) (0.3954154728,0.0659587761365) (0.4040114613,0.0649791991088) (0.4126074499,0.0639957638763) (0.4212034384,0.0630089137392) (0.4297994269,0.0620190708094) (0.4383954155,0.0610266367929) (0.446991404,0.0600319937636) (0.4555873926,0.0590355049289) (0.4641833811,0.058037515382) (0.4727793696,0.057038352841) (0.4813753582,0.0560383283716) (0.4899713467,0.0550377370939) (0.4985673352,0.0540368588702) (0.5071633238,0.0530359589736) (0.5157593123,0.0520352887381) (0.5243553009,0.0510350861871) (0.5329512894,0.0500355766425) (0.5415472779,0.049036973312) (0.5501432665,0.0480394778568) (0.558739255,0.047043280937) (0.5673352436,0.0460485627376) (0.5759312321,0.0450554934736) (0.5845272206,0.0440642338746) (0.5931232092,0.0430749356501) (0.6017191977,0.0420877419348) (0.6103151862,0.0411027877157) (0.6189111748,0.0401202002396) (0.6275071633,0.0391400994034) (0.6361031519,0.0381625981269) (0.6446991404,0.0371878027077) (0.6532951289,0.0362158131611) (0.6618911175,0.035246723543) (0.670487106,0.0342806222577) (0.6790830946,0.0333175923518) (0.6876790831,0.0323577117925) (0.6962750716,0.0314010537338) (0.7048710602,0.0304476867682) (0.7134670487,0.0294976751673) (0.7220630372,0.0285510791088) (0.7306590258,0.0276079548935) (0.7392550143,0.0266683551503) (0.7478510029,0.0257323290311) (0.7564469914,0.0247999223954) (0.7650429799,0.0238711779861) (0.7736389685,0.0229461355949) (0.782234957,0.0220248322201) (0.7908309456,0.0211073022154) (0.7994269341,0.0201935774316) (0.8080229226,0.0192836873498) (0.8166189112,0.0183776592084) (0.8252148997,0.0174755181225) (0.8338108883,0.0165772871976) (0.8424068768,0.0156829876369) (0.8510028653,0.0147926388423) (0.8595988539,0.0139062585109) (0.8681948424,0.0130238627254) (0.8767908309,0.0121454660398) (0.8853868195,0.0112710815608) (0.893982808,0.0104007210243) (0.9025787966,0.00953439486783) (0.9111747851,0.00867211229882) (0.9197707736,0.00781388135965) (0.9283667622,0.0069597089885) (0.9369627507,0.00610960107717) (0.9455587393,0.00526356252561) (0.9541547278,0.00442159729348) (0.9627507163,0.00358370844877) (0.9713467049,0.00274989821385) (0.9799426934,0.00192016800883) (0.9885386819,0.00109451849265) (0.9971346705,0.000272949601771) (1,1.2910072431e-80)};
+\addplot[only marks,red,mark=*] coordinates {(.001,.0937454279941)};
+\addplot[only marks,blue,mark=*] coordinates {(.01,.0938488356221)};
+\nextgroupplot[title={B: High-temperature enlargement},xmin=0,xmax=.07,xtick={0,.02,.04,.06},xticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},ymin=-.55,ymax=.22,ylabel={Amplitude increase (\%)},legend style={font=\scriptsize,draw=none,at={(.02,.02)},anchor=south west}]
+\addplot[black,thick,forget plot] coordinates {(0,-0.0156806646424) (0.000562248996,-0.00677952456806) (0.001124497992,0.00190404580884) (0.001686746988,0.0103702331446) (0.002248995984,0.018619225856) (0.00281124498,0.0266512141114) (0.003373493976,0.0344663898221) (0.003935742972,0.0420649466338) (0.004497991968,0.0494470799176) (0.005060240964,0.0566129867615) (0.00562248996,0.0635628659613) (0.006184738956,0.0702969180123) (0.006746987952,0.0768153451) (0.007309236948,0.0831183510916) (0.007871485944,0.0892061415273) (0.00843373494,0.0950789236112) (0.008995983936,0.100736906202) (0.009558232932,0.106180299807) (0.01012048193,0.111409316567) (0.01068273092,0.116424170254) (0.01124497992,0.121225076261) (0.01180722892,0.125812251588) (0.01236947791,0.130185914841) (0.01293172691,0.134346286216) (0.0134939759,0.138293587494) (0.0140562249,0.142028042032) (0.0146184739,0.145549874752) (0.01518072289,0.148859312135) (0.01574297189,0.151956582208) (0.01630522088,0.15484191454) (0.01686746988,0.157515540229) (0.01742971888,0.159977691894) (0.01799196787,0.162228603667) (0.01855421687,0.164268511185) (0.01911646586,0.166097651579) (0.01967871486,0.167716263463) (0.02024096386,0.169124586931) (0.02080321285,0.170322863542) (0.02136546185,0.171311336317) (0.02192771084,0.172090249723) (0.02248995984,0.17265984967) (0.02305220884,0.173020383499) (0.02361445783,0.173172099973) (0.02417670683,0.173115249269) (0.02473895582,0.17285008297) (0.02530120482,0.172376854053) (0.02586345382,0.171695816882) (0.02642570281,0.170807227198) (0.02698795181,0.169711342112) (0.0275502008,0.168408420095) (0.0281124498,0.166898720967) (0.0286746988,0.165182505889) (0.02923694779,0.163260037358) (0.02979919679,0.161131579191) (0.03036144578,0.158797396522) (0.03092369478,0.156257755789) (0.03148594378,0.153512924727) (0.03204819277,0.150563172361) (0.03261044177,0.147408768991) (0.03317269076,0.144049986189) (0.03373493976,0.140487096787) (0.03429718876,0.136720374869) (0.03485943775,0.132750095761) (0.03542168675,0.128576536025) (0.03598393574,0.124199973444) (0.03654618474,0.119620687021) (0.03710843373,0.114838956963) (0.03767068273,0.109855064677) (0.03823293173,0.104669292758) (0.03879518072,0.0992819249809) (0.03935742972,0.0936932462927) (0.03991967871,0.0879035428024) (0.04048192771,0.0819131017723) (0.04104417671,0.0757222116093) (0.0416064257,0.0693311618559) (0.0421686747,0.0627402431815) (0.04273092369,0.0559497473733) (0.04329317269,0.0489599673275) (0.04385542169,0.0417711970405) (0.04441767068,0.0343837316002) (0.04497991968,0.0267978671768) (0.04554216867,0.0190139010143) (0.04610441767,0.0110321314216) (0.04666666667,0.00285285776347) (0.04722891566,-0.00552361954771) (0.04779116466,-0.0140969990613) (0.04835341365,-0.0228669782967) (0.04891566265,-0.0318332537526) (0.04947791165,-0.0409955209151) (0.05004016064,-0.050353474267) (0.05060240964,-0.0599068072963) (0.05116465863,-0.0696552125048) (0.05172690763,-0.079598381417) (0.05228915663,-0.0897360045884) (0.05285140562,-0.100067771615) (0.05341365462,-0.110593371141) (0.05397590361,-0.121312490867) (0.05453815261,-0.132224817561) (0.05510040161,-0.143330037065) (0.0556626506,-0.154627834303) (0.0562248996,-0.166117893292) (0.05678714859,-0.177799897148) (0.05734939759,-0.189673528097) (0.05791164659,-0.201738467481) (0.05847389558,-0.213994395769) (0.05903614458,-0.226440992562) (0.05959839357,-0.239077936608) (0.06016064257,-0.251904905801) (0.06072289157,-0.264921577198) (0.06128514056,-0.278127627025) (0.06184738956,-0.291522730681) (0.06240963855,-0.305106562752) (0.06297188755,-0.318878797018) (0.06353413655,-0.332839106459) (0.06409638554,-0.346987163266) (0.06465863454,-0.361322638848) (0.06522088353,-0.375845203842) (0.06578313253,-0.390554528117) (0.06634538153,-0.405450280787) (0.06690763052,-0.420532130219) (0.06746987952,-0.435799744036) (0.06803212851,-0.451252789132) (0.06859437751,-0.466890931676) (0.06915662651,-0.482713837121) (0.0697188755,-0.498721170213) (0.07,-0.506793892168)};
+\addplot[gray,forget plot] coordinates {(0,0)(.07,0)};
+\addplot[only marks,red,mark=*] coordinates {(.001,0)};\addlegendentry{$T_h=1000$}
+\addplot[only marks,blue,mark=*] coordinates {(.01,.1103068468)};\addlegendentry{$T_c=100$}
+\end{groupplot}
+\end{tikzpicture}
+\caption{Thermal overlap of the exact primary generator, with $w_1=1$ and $T_b=1$. The broad curve conceals a small high-temperature maximum; the enlargement displays it. The blue preparation has a larger slow amplitude than the hotter red preparation. The enlarged ordinate uses the hot amplitude as its reference; the quoted 0.1102\% reduction uses the cold amplitude. Numerical curves use 80-digit arithmetic; the two selected overlaps are independently certified exactly.}
+\label{fig:overlap}
+\end{figure}
+
+
+Initially $D_h(0)\simeq1.210137886$ and $D_c(0)\simeq1.155489557$, so the hotter preparation is farther away in relative entropy. The two distances cross numerically near $t=0.14967233$. Exact rational bounds prove a crossing in $(0.14,0.16)$: at the endpoints,
+\begin{align*}
+D_h(0.14)-D_c(0.14)&\in(5.9361291891,5.9361291893)\,10^{-8},\\
+D_h(0.16)-D_c(0.16)&\in(-1.3100324358,-1.3100324356)\,10^{-8}.
+\end{align*}
+Total variation also reverses, with a certified crossing in $(0.10,0.11)$ and numerical location $0.10436410$. The difference between these times is expected: finite-time crossings depend on the distance. Continuity plus the certified signs proves existence; no uniqueness or earliest-crossing theorem is asserted.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.6cm},width=0.43\textwidth,height=5.4cm,tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},xlabel={Time $t$ (units $a_{12}^{-1}$)},xmin=0,xmax=.5]
+\nextgroupplot[title={A: Relaxation distance},ymode=log,ymin=1e-11,ymax=2,ytick={1,1e-2,1e-4,1e-6,1e-8,1e-10},ylabel={$D_{\rm KL}(p(t)\Vert\pi_b)$},legend style={font=\scriptsize,draw=none,at={(.98,.98)},anchor=north east}]
+\addplot[red,thick] coordinates {(0,1.21013788612) (0.004297994269,0.842995461777) (0.008595988539,0.608987398936) (0.01289398281,0.440341581659) (0.01719197708,0.317610499322) (0.02148997135,0.228359408254) (0.02578796562,0.163590181022) (0.03008595989,0.116712896394) (0.03438395415,0.0828931212786) (0.03868194842,0.0585837956434) (0.04297994269,0.0411839769259) (0.04727793696,0.0287887239354) (0.05157593123,0.0200052178145) (0.0558739255,0.0138173290506) (0.06017191977,0.0094857680391) (0.06446991404,0.00647444487958) (0.06876790831,0.00439616683326) (0.07306590258,0.00297261554659) (0.07736389685,0.00200487053096) (0.08166189112,0.00135171854244) (0.08595988539,0.000913707520456) (0.09025787966,0.000621437483811) (0.09455587393,0.000426978003437) (0.09885386819,0.000297596870429) (0.1031518625,0.000211201716764) (0.1074498567,0.000153053858448) (0.111747851,0.000113426372608) (0.1160458453,8.59590776246e-05) (0.1203438395,6.65220464343e-05) (0.1246418338,5.24440941518e-05) (0.1289398281,4.19979987345e-05) (0.1332378223,3.40624669361e-05) (0.1375358166,2.79032297638e-05) (0.1418338109,2.30328834405e-05) (0.1461318052,1.91219036217e-05) (0.1504297994,1.59424477581e-05) (0.1547277937,1.33329329201e-05) (0.159025788,1.11756708466e-05) (0.1633237822,9.38266728223e-06) (0.1676217765,7.88651546087e-06) (0.1719197708,6.63447149767e-06) (0.176217765,5.58452620241e-06) (0.1805157593,4.70273986701e-06) (0.1848137536,3.96138595297e-06) (0.1891117479,3.33762156401e-06) (0.1934097421,2.81250823938e-06) (0.1977077364,2.37027154024e-06) (0.2020057307,1.99772792466e-06) (0.2063037249,1.68383221109e-06) (0.2106017192,1.41931443341e-06) (0.2148997135,1.19638469923e-06) (0.2191977077,1.00849096794e-06) (0.223495702,8.50118800469e-07) (0.2277936963,7.1662491024e-07) (0.2320916905,6.040982621e-07) (0.2363896848,5.09243827335e-07) (0.2406876791,4.292850983e-07) (0.2449856734,3.61882214057e-07) (0.2492836676,3.05063124171e-07) (0.2535816619,2.57165670569e-07) (0.2578796562,2.16788829415e-07) (0.2621776504,1.82751648505e-07) (0.2664756447,1.5405865608e-07) (0.270773639,1.29870715468e-07) (0.2750716332,1.09480464761e-07) (0.2793696275,9.22916181458e-08) (0.2836676218,7.78015204764e-08) (0.287965616,6.55864430043e-08) (0.2922636103,5.52891890983e-08) (0.2965616046,4.66086467801e-08) (0.3008595989,3.92909821095e-08) (0.3051575931,3.31222156051e-08) (0.3094555874,2.79219644352e-08) (0.3137535817,2.35381672681e-08) (0.3180515759,1.984263745e-08) (0.3223495702,1.67273144245e-08) (0.3266475645,1.41011037445e-08) (0.3309455587,1.18872132503e-08) (0.335243553,1.00209075023e-08) (0.3395415473,8.44761479409e-09) (0.3438395415,7.12133138393e-09) (0.3481375358,6.00327627651e-09) (0.3524355301,5.06075721525e-09) (0.3567335244,4.26621472219e-09) (0.3610315186,3.59641623017e-09) (0.3653295129,3.03177674123e-09) (0.3696275072,2.5557861454e-09) (0.3739255014,2.1545264534e-09) (0.3782234957,1.81626482611e-09) (0.38252149,1.53111050007e-09) (0.3868194842,1.29072557705e-09) (0.3911174785,1.08808122076e-09) (0.3954154728,9.17252131338e-10) (0.399713467,7.73243288105e-10) (0.4040114613,6.51843894075e-10) (0.4083094556,5.49504251606e-10) (0.4126074499,4.63231968835e-10) (0.4169054441,3.90504461927e-10) (0.4212034384,3.29195194641e-10) (0.4255014327,2.77511498414e-10) (0.4297994269,2.33942154795e-10) (0.4340974212,1.9721320751e-10) (0.4383954155,1.66250712102e-10) (0.4426934097,1.40149333914e-10) (0.446991404,1.18145876234e-10) (0.4512893983,9.95969645406e-11) (0.4555873926,8.39602343497e-11) (0.4598853868,7.07784725827e-11) (0.4641833811,5.96662487535e-11) (0.4684813754,5.02986450691e-11) (0.4727793696,4.24017559113e-11) (0.4770773639,3.57446789062e-11) (0.4813753582,3.01327634e-11) (0.4856733524,2.54019189279e-11) (0.4899713467,2.14138172552e-11) (0.494269341,1.80518477013e-11) (0.4985673352,1.52177074778e-11) (0.5,1.43755705045e-11)};\addlegendentry{Hot preparation}
+\addplot[blue,dashed,thick] coordinates {(0,1.1554895572) (0.004297994269,0.803461576189) (0.008595988539,0.580185474244) (0.01289398281,0.419364575234) (0.01719197708,0.302354194621) (0.02148997135,0.217286688894) (0.02578796562,0.155575093154) (0.03008595989,0.110929645075) (0.03438395415,0.0787358757628) (0.03868194842,0.0556082906007) (0.04297994269,0.0390647635126) (0.04727793696,0.0272877691897) (0.05157593123,0.0189487897175) (0.0558739255,0.0130789599167) (0.06017191977,0.00897369130476) (0.06446991404,0.00612233088008) (0.06876790831,0.00415629420604) (0.07306590258,0.00281084148171) (0.07736389685,0.00189692923778) (0.08166189112,0.00128049982498) (0.08595988539,0.000867258167281) (0.09025787966,0.000591495738387) (0.09455587393,0.000407901651071) (0.09885386819,0.000285582655926) (0.1031518625,0.000203720946556) (0.1074498567,0.000148448546014) (0.111747851,0.000110624197399) (0.1160458453,8.42754713897e-05) (0.1203438395,6.55252253156e-05) (0.1246418338,5.18646974948e-05) (0.1289398281,4.16696612046e-05) (0.1332378223,3.38833734381e-05) (0.1375358166,2.78116075661e-05) (0.1418338109,2.29915772606e-05) (0.1461318052,1.91087726656e-05) (0.1504297994,1.59444421841e-05) (0.1547277937,1.3342468424e-05) (0.159025788,1.11884247183e-05) (0.1633237822,9.39624667441e-06) (0.1676217765,7.89965729757e-06) (0.1719197708,6.64656461516e-06) (0.176217765,5.59532783414e-06) (0.1805157593,4.71220880055e-06) (0.1848137536,3.96958540287e-06) (0.1891117479,3.34466348692e-06) (0.1934097421,2.81852213046e-06) (0.1977077364,2.37538757317e-06) (0.2020057307,2.00206840073e-06) (0.2063037249,1.68750774255e-06) (0.2106017192,1.42242275658e-06) (0.2148997135,1.19901088906e-06) (0.2191977077,1.01070834563e-06) (0.223495702,8.51990133239e-07) (0.2277936963,7.18203682565e-07) (0.2320916905,6.05429902655e-07) (0.2363896848,5.10366836116e-07) (0.2406876791,4.30232052248e-07) (0.2449856734,3.62680647913e-07) (0.2492836676,3.05736292829e-07) (0.2535816619,2.57733203551e-07) (0.2578796562,2.17267289645e-07) (0.2621776504,1.83155007565e-07) (0.2664756447,1.54398697361e-07) (0.270773639,1.30157375524e-07) (0.2750716332,1.0972212196e-07) (0.2793696275,9.24953365351e-08) (0.2836676218,7.79732556769e-08) (0.287965616,6.57312159652e-08) (0.2922636103,5.54112326839e-08) (0.2965616046,4.67115294085e-08) (0.3008595989,3.9377712018e-08) (0.3051575931,3.31953287689e-08) (0.3094555874,2.7983598696e-08) (0.3137535817,2.35901248321e-08) (0.3180515759,1.98864375779e-08) (0.3223495702,1.67642378516e-08) (0.3266475645,1.41322301285e-08) (0.3309455587,1.19134527402e-08) (0.335243553,1.00430273512e-08) (0.3395415473,8.46626179447e-09) (0.3438395415,7.13705077999e-09) (0.3481375358,6.01652770769e-09) (0.3524355301,5.0719281564e-09) (0.3567335244,4.27563181367e-09) (0.3610315186,3.60435482906e-09) (0.3653295129,3.03846897295e-09) (0.3696275072,2.56142769121e-09) (0.3739255014,2.15928227225e-09) (0.3782234957,1.82027397811e-09) (0.38252149,1.53449021265e-09) (0.3868194842,1.2935746728e-09) (0.3911174785,1.09048300697e-09) (0.3954154728,9.19276835952e-10) (0.399713467,7.74950113201e-10) (0.4040114613,6.53282746945e-10) (0.4083094556,5.50717204048e-10) (0.4126074499,4.64254487339e-10) (0.4169054441,3.91366444716e-10) (0.4212034384,3.29921845895e-10) (0.4255014327,2.7812406524e-10) (0.4297994269,2.34458548491e-10) (0.4340974212,1.9764852729e-10) (0.4383954155,1.66617686596e-10) (0.4426934097,1.40458693352e-10) (0.446991404,1.18406666193e-10) (0.4512893983,9.98168104413e-11) (0.4555873926,8.41455644174e-11) (0.4598853868,7.09347058098e-11) (0.4641833811,5.97979533491e-11) (0.4684813754,5.0409672032e-11) (0.4727793696,4.24953516327e-11) (0.4770773639,3.58235800932e-11) (0.4813753582,3.01992770962e-11) (0.4856733524,2.54579899704e-11) (0.4899713467,2.14610851417e-11) (0.494269341,1.80916945279e-11) (0.4985673352,1.52512983514e-11) (0.5,1.44073024831e-11)};\addlegendentry{Cool preparation}
+\nextgroupplot[title={B: Relative ordering},ylabel={$100(D_h/D_c-1)$ (\%)},ymin=-.6,ymax=6.2]
+\addplot[black,thick] coordinates {(0,4.72945242796) (0.002865329513,4.89158842429) (0.005730659026,4.93838902716) (0.008595988539,4.96426159744) (0.01146131805,4.98892905107) (0.01432664756,5.01595684521) (0.01719197708,5.04583861343) (0.02005730659,5.07853498975) (0.0229226361,5.11393161062) (0.02578796562,5.15190941246) (0.02865329513,5.19234463846) (0.03151862464,5.23509603344) (0.03438395415,5.27998891932) (0.03724928367,5.32679719851) (0.04011461318,5.37522281625) (0.04297994269,5.42487198877) (0.04584527221,5.4752275317) (0.04871060172,5.52561674363) (0.05157593123,5.57517452435) (0.05444126074,5.62280178951) (0.05730659026,5.66711985913) (0.06017191977,5.70642244031) (0.06303724928,5.73862820073) (0.0659025788,5.76123884197) (0.06876790831,5.77131009811) (0.07163323782,5.76544617307) (0.07449856734,5.73983155693) (0.07736389685,5.69031733132) (0.08022922636,5.61258084449) (0.08309455587,5.50237615175) (0.08595988539,5.35588535542) (0.0888252149,5.17016528956) (0.09169054441,4.94365846468) (0.09455587393,4.67670388594) (0.09742120344,4.3719502183) (0.100286533,4.03455512448) (0.1031518625,3.67206727382) (0.106017192,3.29394163068) (0.1088825215,2.91072690005) (0.111747851,2.53305811393) (0.1146131805,2.1706483271) (0.11747851,1.8314729471) (0.1203438395,1.52127842967) (0.1232091691,1.24345246791) (0.1260744986,0.999204660263) (0.1289398281,0.787953442396) (0.1318051576,0.607803886449) (0.1346704871,0.456021168678) (0.1375358166,0.329438697433) (0.1404011461,0.224773429427) (0.1432664756,0.138845874155) (0.1461318052,0.0687168997329) (0.1489971347,0.011759483314) (0.1518624642,-0.0343160525548) (0.1547277937,-0.0714673148158) (0.1575931232,-0.101343199991) (0.1604584527,-0.125316431572) (0.1633237822,-0.144519324029) (0.1661891117,-0.159879081081) (0.1690544413,-0.172150543859) (0.1719197708,-0.18194538362) (0.1747851003,-0.18975741719) (0.1776504298,-0.195984128036) (0.1805157593,-0.200944693858) (0.1833810888,-0.20489492013) (0.1862464183,-0.208039504929) (0.1891117479,-0.210542045055) (0.1919770774,-0.212533156905) (0.1948424069,-0.214117040194) (0.1977077364,-0.215376765843) (0.2005730659,-0.216378524956) (0.2034383954,-0.217175035928) (0.2063037249,-0.217808271964) (0.2091690544,-0.218311641636) (0.212034384,-0.218711730305) (0.2148997135,-0.219029689635) (0.217765043,-0.219282345544) (0.2206303725,-0.219483081147) (0.223495702,-0.219642540063) (0.2263610315,-0.219769186431) (0.229226361,-0.219869750693) (0.2320916905,-0.219949584356) (0.2349570201,-0.220012942266) (0.2378223496,-0.22006320717) (0.2406876791,-0.220103068339) (0.2435530086,-0.220134663631) (0.2464183381,-0.22015969248) (0.2492836676,-0.22017950574) (0.2521489971,-0.220195177131) (0.2550143266,-0.220207560044) (0.2578796562,-0.220217332713) (0.2607449857,-0.220225034124) (0.2636103152,-0.220231092572) (0.2664756447,-0.220235848355) (0.2693409742,-0.220239571828) (0.2722063037,-0.220242477746) (0.2750716332,-0.220244736672) (0.2779369628,-0.220246484044) (0.2808022923,-0.220247827385) (0.2836676218,-0.220248852033) (0.2865329513,-0.220249625696) (0.2893982808,-0.220250202072) (0.2922636103,-0.22025062373) (0.2951289398,-0.220250924397) (0.2979942693,-0.220251130777) (0.3008595989,-0.220251263996) (0.3037249284,-0.22025134075) (0.3065902579,-0.220251374221) (0.3094555874,-0.220251374801) (0.3123209169,-0.220251350667) (0.3151862464,-0.220251308242) (0.3180515759,-0.220251252559) (0.3209169054,-0.220251187546) (0.323782235,-0.220251116263) (0.3266475645,-0.220251041076) (0.329512894,-0.220250963809) (0.3323782235,-0.220250885855) (0.335243553,-0.220250808268) (0.3381088825,-0.220250731836) (0.340974212,-0.220250657136) (0.3438395415,-0.220250584586) (0.3467048711,-0.220250514471) (0.3495702006,-0.220250446981) (0.3524355301,-0.220250382226) (0.3553008596,-0.220250320261) (0.3581661891,-0.220250261093) (0.3610315186,-0.220250204697) (0.3638968481,-0.220250151022) (0.3667621777,-0.2202501) (0.3696275072,-0.220250051549) (0.3724928367,-0.220250005577) (0.3753581662,-0.22024996199) (0.3782234957,-0.220249920688) (0.3810888252,-0.22024988157) (0.3839541547,-0.220249844537) (0.3868194842,-0.220249809489) (0.3896848138,-0.220249776329) (0.3925501433,-0.220249744964) (0.3954154728,-0.220249715303) (0.3982808023,-0.220249687258) (0.4011461318,-0.220249660744) (0.4040114613,-0.220249635681) (0.4068767908,-0.220249611993) (0.4097421203,-0.220249589605) (0.4126074499,-0.220249568448) (0.4154727794,-0.220249548456) (0.4183381089,-0.220249529564) (0.4212034384,-0.220249511714) (0.4240687679,-0.220249494849) (0.4269340974,-0.220249478915) (0.4297994269,-0.22024946386) (0.4326647564,-0.220249449636) (0.435530086,-0.220249436199) (0.4383954155,-0.220249423504) (0.441260745,-0.220249411511) (0.4441260745,-0.220249400181) (0.446991404,-0.220249389478) (0.4498567335,-0.220249379366) (0.452722063,-0.220249369814) (0.4555873926,-0.22024936079) (0.4584527221,-0.220249352265) (0.4613180516,-0.220249344212) (0.4641833811,-0.220249336604) (0.4670487106,-0.220249329418) (0.4699140401,-0.220249322629) (0.4727793696,-0.220249316215) (0.4756446991,-0.220249310157) (0.4785100287,-0.220249304434) (0.4813753582,-0.220249299027) (0.4842406877,-0.22024929392) (0.4871060172,-0.220249289095) (0.4899713467,-0.220249284537) (0.4928366762,-0.220249280232) (0.4957020057,-0.220249276164) (0.4985673352,-0.220249272322) (0.5,-0.220249270481)};
+\addplot[gray] coordinates {(0,0)(.5,0)};
+\addplot[gray,dotted] coordinates {(0,-.2202492067)(.5,-.2202492067)};
+\addplot[only marks,violet,mark=*] coordinates {(.1496723312,0)};
+\node[font=\scriptsize,anchor=west] at (axis cs:.21,1) {Crossing near $0.14967$};
+\draw[->,gray] (axis cs:.22,.9) -- (axis cs:.1496723312,.04);
+\end{groupplot}
+\end{tikzpicture}
+\caption{Actual evolution $p(t)=e^{tM}\pi(\beta)$ for the same two preparations. Relative entropy decreases for each, and the hotter state's distance becomes smaller. The ratio panel resolves the crossing that is difficult to see on the logarithmic plot. The horizontal dotted line is the asymptotic ratio difference, $-0.2202492\%$. Rational uniformization and logarithm bounds certify opposite KL orderings at $t=0.14$ and $0.16$; the displayed root location is numerical, with no claim of uniqueness.}
+\label{fig:crossing}
+\end{figure}
+
+
+The relevant fractional amplitude reduction is
+\[
+\epsilon_b=1-\frac{|b_h|}{|b_c|}\simeq0.0011018531=0.11018531\%.
+\]
+For relative entropy the leading term is quadratic, so
+\[
+1-\lim_{t\to\infty}\frac{D_h(t)}{D_c(t)}
+=1-\frac{b_h^2}{b_c^2}\simeq0.22024921\%.
+\]
+Both preparations have the same decay exponent $\lambda_2$. This is an ordinary effect, not the exponentially faster strong effect. For an increasingly small common distance threshold, the asymptotic time advance is
+\[
+\Delta t=\frac{\log(|b_c|/|b_h|)}{|\lambda_2|}
+\simeq5.5488\,10^{-5}\,a_{12}^{-1}.
+\]
+The slow relaxation time is $1/|\lambda_2|\simeq0.0503313\,a_{12}^{-1}$, so this advance is only about $0.11025\%$ of one slow relaxation time. It is not a percentage reduction in the full cooling time, which depends on the chosen threshold. The time unit has no assigned experimental value, and $T_h/T_b=1000$, $T_c/T_b=100$. These data establish a strict mathematical failure of the triplet inference; they do not establish a practically useful cooling protocol.
+
+\subsection{Triplet-rate applications of stochastic monotonicity}
+Let $L=M^\top$ act on functions, $(Lf)_i=\sum_{j\ne i}a_{ji}(f_j-f_i)$. Define adjacent differences $y_i=f_{i+1}-f_i$, the difference map $Bf=y$, and $(H_0y)_j=\sum_{\ell<j}y_\ell$. Then $BL=KB$ with $K=BLH_0$, since $L\mathbf1=0$. In the constant-plus-differences basis, $L$ is block triangular with blocks 0 and $K$, so $K$ has precisely the nonzero generator eigenvalues. For its off-diagonal entries,
+\[
+K_{i\ell}=\begin{cases}
+\sum_{j\leq\ell}(a_{j,i}-a_{j,i+1}),&\ell<i,\\
+\sum_{j>\ell}(a_{j,i+1}-a_{j,i}),&\ell>i.
+\end{cases}
+\]
+\begin{theorem}[Application of stochastic monotonicity]
+For any finite number of states, strictly ordered energies, a fixed $0<\beta_b<\infty$, positive reversible rates and a simple slowest nonzero eigenvalue, if every off-diagonal entry of $K$ is nonnegative, there is no asymptotic cooling or heating Mpemba effect at positive initial temperatures.
+\end{theorem}
+\begin{proof}
+Such a matrix $K$ is called Metzler. After a sufficiently large scalar diagonal shift it is nonnegative. Perron theory gives a nonzero nonnegative eigenvector $y$ at its spectral abscissa, which is $\lambda_2$. This does not require irreducibility of $K$. Choose $w$ with $Bw=y$ and $\pi_b^\top w=0$. Then $B(Lw-\lambda_2w)=0$, so $Lw-\lambda_2w$ is constant. Its bath expectation is zero, hence it vanishes. Thus $w$ is the slow left eigenfunction, nondecreasing and nonconstant in energy.
+
+The covariance identity now gives $b_2'(\beta)<0$ for every finite positive $\beta$: all its pairwise summands are nonnegative and at least one is strictly positive. Because $b_2(\beta_b)=0$, its absolute value decreases toward the bath on the cooling side and increases away from the bath on the heating side. These are exactly the normal asymptotic orderings.
+\end{proof}
+In four states, the six off-diagonal entries are
+\begin{align*}
+K_{12}&=a_{32}+a_{42}-a_{31}-a_{41},&K_{13}&=a_{42}-a_{41},\\
+K_{21}&=a_{12}-a_{13},&K_{23}&=a_{43}-a_{42},\\
+K_{31}&=a_{13}-a_{14},&K_{32}&=a_{13}+a_{23}-a_{14}-a_{24}.
+\end{align*}
+The original failures already ensure the three upper entries are nonnegative, since $G\leq0$ orders upward rates. A corrected, directly checkable sufficient condition is therefore the four original failures together with
+\[
+a_{12}\geq a_{13},\qquad a_{13}\geq a_{14},\qquad
+ a_{13}+a_{23}\geq a_{14}+a_{24}.
+\]
+This is a proved sufficient condition, not a proposed necessary characterization.
+
+\begin{corollary}
+If every triplet has $\kappa\leq1$ and fails the original predicate, then the absence conclusion is true, for any state count under the theorem's assumptions.
+\end{corollary}
+\begin{proof}
+$H\leq0$ and $G\leq0$ give $A+B\leq C(1+t)$ and $B\geq At$, so $A\leq C$. These comparisons make each downward summand in $K$ nonnegative; $G\leq0$ and detailed balance do the same for each upward summand. Apply the theorem.
+\end{proof}
+A second subfamily consists of downward gap laws $a_{ij}=f(E_j-E_i)$, $i<j$, with positive nonincreasing $f$. Both $f(x)$ and $e^{-\beta_bx}f(x)$ are nonincreasing, so every required summand is nonnegative. This establishes the same absence conclusion directly, without the false general triplet conjecture. The following comparison locates this argument within established order theory; no general monotonicity novelty is claimed.
+
+\subsection{Relation to earlier no-Mpemba theorems}\label{sec:priororder}
+\href{https://arxiv.org/html/2410.06623v2}{Ohga, Hayakawa and Ito (OHI), Result 2 and SI D} already use monotone coupling to exclude Mpemba behavior. Their SI D2 explicitly treats a total order. Our matrix condition is precisely a finite-chain expression of stochastic monotonicity, not a separate physical principle. The relevant distinctions are:
+\begin{center}\small
+\begin{tabular}{p{.17\textwidth}p{.36\textwidth}p{.36\textwidth}}
+\toprule &OHI Result 2&The preceding spectral criterion\\\midrule
+State order&Finite partial order; energy respects it&Total order by distinct energies\\
+Dynamics&Irreducible and Gibbs-stationary; reversibility unnecessary&Positive reversible rates\\
+Order condition&Comparable jumps and a monotone coupling&$K=BLH_0$ is Metzler\\
+Bath range&Hypotheses throughout a temperature interval&One fixed finite positive bath\\
+Spectrum&No simplicity requirement&Simple slowest nonzero eigenvalue\\
+Conclusion&No cooling mean-energy crossing at any time&No asymptotic cooling/heating reversal in fixed norms or KL\\\bottomrule
+\end{tabular}
+\end{center}
+OHI SI B extends their Result 1, the microscopic characterization, to KL divergence; it does not state Result 2 as an all-time KL theorem. Thus the different observable and time scopes must not be conflated.
+
+Indeed $BL=KB$ gives $Be^{tL}=e^{tK}B$. The Metzler condition is equivalent to $e^{tL}$ preserving increasing functions: sufficiency follows from $e^{tK}\geq0$, and necessity by differentiation at zero on coordinate vectors of adjacent differences. This also gives a monotone coupling. Choose $r$ large enough that $I+L/r$ is stochastic and $I+K/r$ is entrywise nonnegative. Its transition rows are stochastically ordered. A common Poisson clock of rate $r$ and common-uniform inverse-CDF updates preserve the order of two copies. On a total order, energy compatibility and comparability of jumps are automatic.
+
+For fixed bath, $e^{tL}E$ is then increasing, so
+\[
+\partial_\beta\{\pi(\beta)^\top e^{tL}E\}
+=-\Cov_{\pi(\beta)}(e^{tL}E,E)\leq0.
+\]
+This gives all-time energy ordering without reversibility or spectral simplicity. It explains the direct relation to OHI while avoiding an inference from a single observable to all possible distances.
+
+The likelihood-ratio and stochastic-order methods below also have precedent in \href{https://arxiv.org/abs/1109.6075}{Fill and Kahn, Ann. Appl. Probab. 23 (2013), 1778--1816}, specifically Proposition 3.2, Corollary 3.3 and the density-ratio identity (3.2). They compare different kernels from a common initial law and obtain TV, separation and, with additional assumptions, weighted $L^2$ comparisons. Here one kernel acts on different Gibbs preparations. Their argument is a methodological precedent, not a verbatim statement of the corollary below. We provide the following consequence for clarity, without a priority claim.
+
+\begin{corollary}[Application: all-time convex-divergence ordering]
+Let a finite irreducible generator be reversible with positive Gibbs equilibrium, on a total energy order, and let $K$ be Metzler. For any convex $\Phi$ finite on positive arguments, with $\Phi(1)=0$, define
+\[
+D_\Phi(p\Vert\pi_b)=\sum_i\pi_{bi}\Phi(p_i/\pi_{bi}).
+\]
+For same-side Gibbs preparations, the farther initial temperature has at least as large a divergence at every $t\geq0$. This includes KL and total variation, and requires no simple eigenvalue. For KL the inequality is strict at every finite time for distinct initial temperatures.
+\end{corollary}
+\begin{proof}
+Write $p\succeq_{\rm st}q$ when $\sum_i p_i f_i\geq\sum_i q_i f_i$ for every increasing $f$. Gibbs laws are stochastically ordered by temperature, by the pairwise covariance identity. A monotone semigroup preserves this order. Thus for cooling $p_h(t)\succeq_{\rm st}p_c(t)\succeq_{\rm st}\pi_b$.
+
+Reversibility implies $p_c(t)/\pi_b=e^{tL}[\pi(\beta_c)/\pi_b]$ componentwise. The initial ratio is proportional to $e^{(\beta_b-\beta_c)E_i}$ and is increasing; it stays increasing. Choose a nondecreasing subgradient $g$ of $\Phi$. Convexity and stochastic order give
+\[
+D_\Phi(p_h\Vert\pi_b)-D_\Phi(p_c\Vert\pi_b)
+\geq\sum_i(p_{hi}-p_{ci})g(p_{ci}/\pi_{bi})\geq0.
+\]
+For heating, $p_c\preceq_{\rm st}p_h\preceq_{\rm st}\pi_b$ and $p_h/\pi_b$ is decreasing. Apply the same supporting-line inequality at $p_h/\pi_b$ to obtain $D_\Phi(p_c\Vert\pi_b)\geq D_\Phi(p_h\Vert\pi_b)$. KL is strictly convex, and invertibility of $e^{tM}$ keeps two distinct initial distributions distinct at finite $t$, proving strictness.
+\end{proof}
+This does not assert all-time ordering for every arbitrary norm. The original spectral proof supplies the every-fixed-norm conclusion asymptotically with a simple slow mode. Our counterexample violates monotonicity explicitly: $K_{21}=a_{12}-a_{13}=-27$. It therefore challenges neither OHI's theorem nor this corollary.
+
+\subsection{Broader literature assessment and contribution scope}\label{sec:novelty}
+The main contribution is the explicit, certified failure of the published original-rate triplet implication. Section~\ref{sec:mechanism} also supplies a controlled family and a proved onset classification for a specified eigenvector geometry. This is a problem-specific structural result; its individual publication priority has not been established. The supporting results organize and apply established mathematics. The following comparison was checked on 11 October 2026; it separates mathematical validity from publication priority.
+
+\paragraph{The matrix criterion and reset algebra have direct precedents.}
+\href{https://arxiv.org/abs/2007.11433v3}{Baake and Sumner, \emph{On equal-input and monotone Markov matrices}, v3, 25 September 2022}, Fact 3.1 and Proposition 3.11, give the cumulative-coordinate characterization of stochastic monotonicity for matrices and generators. In their row-generator convention, let $T_{ij}=\mathbf1_{i\geq j}$. Its coordinates are $(f_1,Bf)$, so
+\[
+T^{-1}LT=\begin{pmatrix}0&*\\0&K\end{pmatrix}.
+\]
+The upper row outside the diagonal consists of outgoing-rate tail sums and is automatically nonnegative. Their transformed-generator criterion is therefore exactly our condition that $K$ is Metzler. Our Perron and covariance argument is an application of that order structure, not a new monotonicity criterion.
+
+Their Section 2.1 also treats equal-input generators $C-cI$, with identical rows in $C$ and $C^2=cC$. Our reset generator is the transpose of this construction, with $C=\mathbf1\pi_b^\top$ and $c=1$. Its scalar action on nonstationary modes is elementary equal-input algebra. The useful calculation here is its compatibility with the particular triplet inequalities, $F(R_0)=G(R_0)=0$; the general reset construction is not claimed as new.
+
+\paragraph{The divergence corollary also follows from established thermomajorization.}
+\href{https://arxiv.org/html/2410.06686v2}{Vu and Hayakawa, \emph{Thermomajorization Mpemba Effect}, v2, 6 January 2025}, give the Lorenz-curve and all-convex-divergence characterizations of thermomajorization. The connection to our corollary is explicit. In cooling, both $p_h/\pi_b$ and $p_c/\pi_b$ are increasing, so both curves use the order $n,n-1,\ldots,1$. At their common horizontal knots,
+\[
+x_k=\sum_{i=k}^n\pi_{bi},\qquad
+y_{h,k}=\sum_{i=k}^np_{hi}\geq\sum_{i=k}^np_{ci}=y_{c,k},
+\]
+by stochastic ordering. Linear interpolation orders the entire curves: $p_h$ thermomajorizes $p_c$. Heating uses the order $1,\ldots,n$ and lower-tail inequalities, so $p_c$ thermomajorizes $p_h$. This yields the corollary from the known convex-divergence characterization. The supporting-line proof above is an alternative elementary derivation; neither derivation establishes priority for a new general theorem.
+
+This absence argument does not assert a thermomajorization reversal for our counterexample. Vu and Hayakawa's Result 4 distinguishes that stronger notion from the scalar slow-overlap criterion. The counterexample's stated conclusions remain eventual fixed-norm and KL ordering, with separate finite-time KL and TV brackets.
+
+\paragraph{What is claimed, and what is retained only as support.}
+\begin{itemize}
+\item \textbf{Central result:} the four-state witness satisfying all original-rate triplet failures, its exact certification and the consequent refutation of $(\mathcal C_4)$. The checked sources do not supply this witness or settle that precise implication. This bounded finding is not an exhaustive priority guarantee.
+\item \textbf{Established tools:} reversible symmetrization, slow-mode overlaps, Perron theory, stochastic monotonicity, likelihood-ratio evolution, thermomajorization, and equal-input reset algebra. The report claims no methodological novelty for these tools or for rational certification itself.
+\item \textbf{Applications proved here:} the additional rate inequalities, the all-$\kappa\leq1$ subfamily, the nonincreasing gap-law subfamily, and the all-time convex-divergence corollary. Their role is to explain sufficient conditions that survive the failed conjecture. They are not promoted as independently novel theorems.
+\item \textbf{Problem-specific deductions:} the identity $F=hG+dH$, the feasible-cone formulation, and reset compatibility simplify construction and verification. They are proved directly; their individual publication priority remains unestablished. The open-neighborhood result is a continuity consequence, not a new perturbation principle.
+\end{itemize}
+
+The review covers the exact source conjecture, OHI's coupling result and SI, Fill--Kahn's comparison and density-ratio argument, Baake--Sumner's matrix and generator criteria, and Vu--Hayakawa's thermomajorization formulation. Searches combined Mpemba, triplet, monotonicity, convex divergence, likelihood ratio, nonincreasing rates and equal-input generators. Relevant full-text sections were inspected, rather than inferred from titles. No identical all-lower-branch or gap-law statement was located in this bounded review; that absence is insufficient evidence of novelty. Unindexed work and exhaustive citation tracing remain outside the check. The paper's significance therefore rests on the certified counterexample, independently of whether any supporting application has appeared before.
+
+\section{Approaches explored}
+The initial route comparison, including explicit continue/change criteria, is recorded in \path{research/approaches.md}. The decisive work covered both theorem construction and adversarial falsification.
+\begin{enumerate}
+\item \textbf{Reversible spectral geometry.} Symmetrization and the Dirichlet form gave reliable eigenvalue ordering and an equilibrium-orthogonal search space. The obstacle was that rate inequalities do not make the slow-mode orientation convex. Spectral certificates remain essential; this route did not yield the full absence theorem.
+\item \textbf{Order and covariance.} The first calculation was $K=BLH_0$. Its Metzler subfamily yielded the theorem above. An exact auxiliary example in \path{research/theorem_notes.md} disproves the intermediate claim that all triplet failures force a monotone slow eigenvector. This identified the missing implication rather than assuming it.
+\item \textbf{Exponential-polynomial zero counting.} Multiplying by $Z(\beta)^2$ gives
+\[
+Z^2b_2'=-\sum_{i<j}(w_j-w_i)(E_j-E_i)e^{-\beta(E_i+E_j)}.
+\]
+For four states there are at most six distinct exponential terms. Chebyshev/variation arguments could bound turning points, but cannot exclude the certified turning behavior. No new general zero-count theorem is claimed. This route became explanatory, not decisive.
+\item \textbf{Feasible-rate geometry.} The identity $F=hG+dH$ converted apparent branch enumeration into eight linear inequalities. A search enumerated extremal rays after removing the reset direction, then sampled positive mixtures. It found the first root-search candidate after 67,000 systems. Extremal rays were used for discovery only: we did not assume eigenvector properties are inherited by mixtures.
+\item \textbf{Backward eigenvector design.} Starting from the discovered thermal mode, we prescribed rational $q$ and rational $w$ with $q^\top w=0$, then solved the linear eigenvector equations for rates. This produced the rational-mode companion and an exact eigenvalue. The remaining spectrum was checked independently; realization of an arbitrary faster eigenmode would not suffice.
+\item \textbf{Lumping and perturbation.} The near-neutral highest state explains the observed mode. No adiabatically eliminated rate was substituted into the original predicate. Strict-margin continuity supplies a rigorous open family; a separate singular-perturbation theorem was unnecessary once a finite positive example was certified.
+\item \textbf{Difficult regimes and targeted sampling.} Broad positive-rate sampling missed the effect. Signed-cone directions plus reset restoration found an independent witness. This concentrated the search on unequal energy gaps and narrow high-temperature windows, where a coarse temperature grid is weak.
+\item \textbf{Algebraic proof.} Rational bath weights made the selected Gibbs probabilities algebraic even though the energy gaps are not commensurate. Exact root brackets and rational interval arithmetic proved the two-temperature inequality. Commensurate energies were therefore not needed.
+\item \textbf{Additional idea: reset lineality.} The reset generator lies in the lineality space of all the triplet inequalities and acts as a scalar on nonstationary modes. This allowed signed directions to be made physical without changing their mode geometry, and gives the explicit counterexample family above. The September paper also studies the fully degenerate reset point. Section~\ref{sec:novelty} traces the general algebra to established equal-input generators; only its problem-specific use is needed here.
+\item \textbf{Additional idea: thermal dual cones.} The cone spanned by Gibbs tangent vectors would have a dual consisting of modes with controlled derivative sign. The first calculation was the covariance expansion. The counterexample shows that the original rate cone's slow modes cross the required thermal dual. A complete dual-cone characterization remains an extension, not a premise used in the proof.
+\end{enumerate}
+
+\section{Verification and reproducibility}
+\subsection{Exact certificate construction}
+Run from the workspace root:
+\begin{verbatim}
+python3 research/adversarial_certificate.py
+python3 research/adversarial_rational_mode_certificate.py
+\end{verbatim}
+The primary script uses SymPy rational/integer arithmetic to check positivity, column sums, detailed balance and the original Boolean predicates. It derives the characteristic polynomial and cofactor vector and verifies its eigenvector residual and bath expectation modulo $C(x)$. The actual slow root is enclosed between
+\[
+-\frac{42820190741029}{2155193997917}
+\quad\hbox{and}\quad
+-\frac{135549509489200}{6822377112669}.
+\]
+Opposite exact polynomial signs certify this interval. Two disjoint negative intervals similarly contain the other roots; degree three proves completeness. The interval evaluation of $P_1$ excludes zero, so division by it is justified.
+
+For each $q_i^{1/n}$, $n=1000,100$, the script proposes adjacent grid points $L_i,U_i$ of mesh $10^{-24}$, then checks exactly
+\[
+0\leq L_i,\qquad L_i^n\leq q_i\leq U_i^n.
+\]
+Strict monotonicity of the positive $n$th-power map proves the enclosure. Approximate arithmetic only proposes the endpoints; it never accepts an inequality. Polynomial Horner evaluation, products and division use exact interval endpoints. All denominators are verified to exclude zero. The final interval comparison is also exact. Full rational endpoints, rather than merely rounded decimals, are saved in the JSON certificates.
+
+The tighter certified margin in the primary normalization is greater than
+\[0.00010340762800011847331527.\]
+The deliberately widened report bounds are conservative. Scaling $w$ consistently changes the displayed numbers but never the conclusion; search logs may use a unit weighted norm, whereas the final report fixes $w_1=1$.
+
+\subsection{A separate proof using inertia and residual bounds}\label{sec:separatecheck}
+The primary example also admits a verification that does not use its cubic coefficients, cofactor polynomials, previously computed root brackets or certificate JSON files. The standalone script \path{research/standalone_primary_check.py} starts only from the six printed downward rates and four bath weights. It uses Python's standard-library integers and fractions, with explicit rejection checks that remain active under optimization. It rebuilds the generator and evaluates the original two-branch predicates directly, without invoking Lemma~1. The following argument explains its complete spectral and thermal certificate.
+
+\paragraph{Exact identification of the slow eigenspace.}
+Put $L=M^\top$, $D_q=\diag(q)$ and $H=D_qL$. Detailed balance makes $H$ symmetric. For rational $\xi$, exact symmetric elimination of $H-\xi D_q$ into a unit triangular factor, a diagonal factor and the transpose triangular factor gives the following pivot signs, eliminating coordinates in the order $1,2,3,4$:
+\begin{center}
+\begin{tabular}{c c c}
+\toprule $\xi$&Pivot signs&Number of eigenvalues of $L$ above $\xi$\\\midrule
+$-337$&$+,+,+,+$&4\\
+$-336$&$+,+,-,+$&3\\
+$-60$&$+,-,+,+$&3\\
+$-59$&$+,-,+,-$&2\\
+$-20$&$+,-,+,-$&2\\
+$-19$&$+,-,-,-$&1\\\bottomrule
+\end{tabular}
+\end{center}
+All pivots are nonzero; the script records their exact rational values. Each elimination step replaces the trailing block by $A_{ij}-A_{ik}A_{kj}/A_{kk}$ and is a congruence. Congruence preserves the counts of positive and negative eigenvalues. Also $H-\xi D_q$ is congruent to $D_q^{1/2}LD_q^{-1/2}-\xi I$. Thus the counts drop by one across each of $(-337,-336)$, $(-60,-59)$ and $(-20,-19)$. These account for three simple negative eigenvalues; $L\mathbf1=0$ accounts for the fourth. In particular the slow nonzero eigenspace is one-dimensional and lies in $(-20,-19)$. No approximate eigensolver is used in this identification.
+
+\paragraph{Residual control replaces an exact eigenvector formula.}
+Define the following exact rational trial values (each decimal terminates):
+\[
+\widehat r=-19.86836952145135,\qquad
+\widehat w_1=1,\quad
+\widehat w_2=-0.75893729814493,\quad
+\widehat w_3=-0.61211930644096,
+\]
+\[
+\widehat w_4=-\frac{q_1\widehat w_1+q_2\widehat w_2+q_3\widehat w_3}{q_4}
+=-\frac{193315388213}{50000000000000}.
+\]
+Use the weighted norm $\|f\|_q^2=\sum_iq_if_i^2$. Direct rational multiplication verifies
+\[
+q^\top\widehat w=0,\qquad
+\|L\widehat w-\widehat r\widehat w\|_q^2<10^{-16}.
+\]
+These trial values are not accepted as eigenvalues or eigenvectors: only their explicitly checked residual bound is used.
+
+Let $z$ be the orthogonal projection of $\widehat w$ onto the true slow eigenspace in this weighted inner product. The operator $L$ is self-adjoint there. Its stationary component in $\widehat w$ vanishes because $q^\top\widehat w=0$. The two faster eigenvalues are below $-59$, whereas $\widehat r>-20$, so their distances from $\widehat r$ exceed $39$. Expanding in a weighted orthonormal eigenbasis gives
+\[
+\|L\widehat w-\widehat r\widehat w\|_q^2
+\geq39^2\|\widehat w-z\|_q^2,
+\qquad
+\|\widehat w-z\|_q<\frac{10^{-8}}{39}.
+\]
+Since $\|\widehat w\|_q\geq1$, the projection is nonzero. The minimum bath weight is $1/400$, hence each coordinate error is less than $20\,10^{-8}/39$. For every probability vector $p$ this implies
+\begin{equation}\label{eq:residualoverlap}
+|z^\top p-\widehat w^\top p|<\delta,
+\qquad \delta=\frac1{195000000}.
+\end{equation}
+
+\paragraph{Independent thermal enclosures.}
+For $n=1000$ and $100$, integer binary search finds $m_i$ satisfying
+\[
+\left(\frac{m_i}{10^{12}}\right)^n\leq q_i
+<\left(\frac{m_i+1}{10^{12}}\right)^n.
+\]
+These comparisons use integer powers and positive denominators. Signed sums of the endpoint bounds enclose $\sum_i\widehat w_iq_i^{1/n}$; positive sums enclose its partition function. Taking all numerator/denominator endpoint quotients and adding the error in Eq.~\eqref{eq:residualoverlap} proves the deliberately widened rational intervals
+\begin{align*}
+z^\top\pi(1/1000)&\in(-0.093745434,-0.093745422),\\
+z^\top\pi(1/100)&\in(-0.093848841,-0.093848830).
+\end{align*}
+Both overlaps are negative, and their absolute-value difference exceeds $0.000103396>10^{-4}$. This proves the cooling reversal for the actual simple slow mode, rather than for the trial vector. The paired right mode is $D_qz/(z^\top D_qz)$, giving unit left-right overlap. Here the left mode is $z$, whose first coordinate is in $(1-\delta,1+\delta)$, rather than exactly one. Dividing by this positive coordinate recovers the main report's normalization; the checker verifies that the normalized advantage still exceeds $10^{-4}$.
+
+\paragraph{Independence and its limits.}
+The original certificate uses symbolic characteristic polynomials and cofactor intervals; this checker uses rational congruence and a spectral residual bound. Its standalone implementation requires no research data files or third-party packages. Ten adversarial tests include an isolated execution with only the checker present, identical results under normal and optimized Python, rejection of a transposed generator, a false triplet premise, a wrong mode, a poor eigenvector and reversed temperatures, plus analytically known arithmetic examples. These tests exercise failure paths; they do not themselves prove the checker correct.
+
+This is a separate implementation and a different proof within the same model-assisted project, not independent human authorship, formal proof-assistant verification or external peer review. It still trusts Python's integer/fraction arithmetic and the mathematical argument above. It independently verifies the primary asymptotic counterexample; the finite-time crossing brackets remain supported by their separate uniformization certificate. All methods still require review of the correspondence to the published claim in Section~\ref{sec:claimscope}. A reviewer can run the standalone checker in an empty directory and audit the argument above without trusting the discovery search or any stored numerical output.
+
+\subsection{Figure and finite-time verification}
+Run \path{research/physics_plots.py} for the figures and data, and \path{research/finite_time_certificate.py} for exact finite-time bounds. Plot values use 80-digit mpmath arithmetic. Direct matrix exponentiation and reversible symmetric spectral propagation agree within $6\,10^{-81}$ at ten checks spanning $t=0$ to $0.4$. The plot CSV files and numerical metrics are saved under \path{output/figures/}. Those numerical comparisons are distinct from the exact certificates.
+
+The finite-time certificate uses uniformization with $\nu=253$ and the exactly stochastic matrix $P=I+M/\nu$:
+\[
+e^{tM}p(0)=e^{-\nu t}\sum_{k=0}^{\infty}\frac{(\nu t)^k}{k!}P^kp(0).
+\]
+It retains terms through $k=250$. Each omitted probability component is at most one; the scalar positive-series tail is bounded by its first omitted term divided by $1-\nu t/252$. The same positive Taylor bounds give a rational enclosure of $e^{-\nu t}$. Initial Gibbs probabilities use the already-certified algebraic brackets. For logarithms it uses
+\[
+\log r=2\sum_{k=0}^{59}\frac{z^{2k+1}}{2k+1}+R,
+\quad z=\frac{r-1}{r+1},\quad
+|R|\leq\frac{2|z|^{121}}{121(1-z^2)}.
+\]
+All interval operations round outward onto a rational grid of mesh $10^{-50}$. Exact rational endpoint signs prove the displayed KL and TV crossing brackets. The script uses floating point only to print readable values. The root estimates shown on the figures are numerical; their enclosing crossing intervals are exact.
+
+\subsection{Executed discovery calculations}
+The discovery environment used Python with NumPy 1.26.4, SciPy 1.13.1 and SymPy 1.14.0. Seeds and actual parameters are retained in the scripts and output files. Floating-point discovery outputs are not mathematical certificates.
+
+\path{research/cone_search.py} used seed 10411, energy gaps $\exp U[-4,2]$, 1,000 ray mixtures per energy set, and 150 cooling inverse temperatures from 0.001 to 0.999. It stopped after 67 energy sets, 67,000 systems, on a strict candidate. Coefficients of the ray mixtures were $\exp U[-9,3]$; a reset direction restored positivity. SVD acceptance tolerances for rays were $10^{-8}$ and $10^{-9}$, and deduplication tolerance $10^{-6}$. These are discovery tolerances only.
+
+The independent positive-rate search used seed 934256 and 20,000,000 draws. Gaps were $10^{U[-3,1]}$, rates $10^{U[-5,5]}$ rescaled by their maximum; 2,020,118 draws passed the predicates. It found no accepted witness on its 18-point cooling/heating grid, under the margins and spectral filters in \path{research/adversarial_search.py}. The signed search used seed 742908, gaps $10^{U[-3,0.7]}$, and normal signed variables scaled by $10^{U[-3,3]}$, alternating an additional destination-weight factor. It stopped at 9,950,000 draws (573,427 feasible) with a witness. Full grids, filters and stopping records are retained in the scripts and \path{research/adversarial_notes.md}. Neither a failed search nor its sample count was used as proof. A separate model-assisted verification checked the primary candidate at 70 digits, then reviewed the exact certificate's matrix orientation, branch logic, root exhaustion and interval operations. The rational-mode companion was checked separately by symbolic equations and root counts.
+
+No experiments, empirical measurements, messages to authors, or external publication were performed. All generator tests use original rates. All promised executed certificate checks passed.
+
+\subsection{Boundary audit}
+The disproof does not require zero rates, $\beta_b=0$, a zero-temperature bath, equality of energies or spectral degeneracy. The source numerically discusses equal and zero rates but does not supply a general finite-temperature boundary proof. If zero rates are allowed, irreducibility must still be checked; otherwise bath equilibrium need not be unique. The printed $\kappa$ quotient is undefined if $C=0$. A closure defined through $F,G$ requires a stated extension, not silent division by zero.
+
+For a degenerate slow eigenspace the scalar $b_2$ must be replaced by the full slow spectral projection. Its norm or entropy contribution can depend on several coefficients. Reversibility prevents Jordan blocks but not this ambiguity. Continuity of a selected scalar mode cannot be assumed across an eigenvalue crossing. Our strict spectral separation avoids these issues. The spectral theorem assumes a simple slowest nonzero eigenvalue; no unstated limiting argument is used. The all-time divergence corollary separately covers degenerate spectra under its reversible monotonicity assumptions.
+
+\section{Remaining gap}
+The explicit witness contradicts the published unrestricted finite-temperature implication $(\mathcal C_4)$ under its stated original-rate interpretation. This conclusion concerns neither the separate zero-temperature theorem nor the simulation boxes discussed in Section~\ref{sec:claimscope}. Section~\ref{sec:mechanism} now gives a sharp onset characterization for a controlled family and a single-turn eigenvector geometry. What remains open is an unrestricted replacement characterization, a complete phase diagram of admissible slow-mode orientations, and a minimal structural description of all counterexamples. We have not proved that a particular number of upper-$\kappa$ triplets is necessary, nor that all effects under the failed premise share the near-neutral-state mechanism.
+
+The corrected order-preserving conditions are sufficient, not necessary, and are explicitly attributed to established monotonicity methods. The report proves an asymptotic effect and certifies finite crossing brackets for KL and total variation. It does not prove uniqueness of those crossings or characterize every transient distance crossing. The literature search is bounded and does not establish priority over unpublished work.
+
+\section{Best next step}
+A concrete next calculation is to vary $q_4$ and $p$ in the construction of Section~\ref{sec:mechanism}, solving the same two rate equations and checking where positivity, triplet failure and spectral separation persist. The single-turn lemma would continue to classify cooling wherever its two energy/coefficient inequalities hold. This would test how the onset boundary and effect size change beyond the one-parameter family, rather than merely searching for another isolated witness.
+
+For external review, the immediate useful package is this report, the standalone inertia/residual checker and its adversarial tests, the original spectral/overlap certificates, the finite-time certificate, figures, and the hypothesis-by-hypothesis literature comparison. Section~\ref{sec:separatecheck} gives the alternative mathematical argument and distinguishes algorithmic independence from external peer review. Any eventual publication should separately check priority, polish the structural theorem and have a researcher independently run the certificates. The mathematical result here does not depend on that future step.
+\clearpage
+\section*{Appendix A: Explicit slow-mode cofactor polynomials}\label{app:cofactors}
+The primary counterexample's exact left eigenvector is $w_i=P_i(r)/P_1(r)$, where $r$ is the simple slow root specified in Theorem~1 and
+\begin{align*}
+P_1(x)={}&3184000000x^3+1287155436000x^2\\
+&+74562002576870x+532366138003157,\\
+P_2(x)={}&3184000000x^2+9060415184000x+532366138003157,\\
+P_3(x)={}&89152000000x^2+14211422840400x+532366138003157,\\
+P_4(x)={}&79281600000x^2+28279185628400x+532366138003157.
+\end{align*}
+
+\section*{Appendix B: A rational slow-mode companion}
+Keep the same $q$, $a_{12}$, $a_{13}$, $a_{14}$ and $a_{24}$, but set
+\[
+a_{23}=\frac{330154675693}{1470375000},\qquad
+ a_{34}=\frac{1527327066}{151990625}.
+\]
+Use detailed balance and conservative diagonals as before. Then
+\[
+w=\left(1,-\frac{759}{1000},-\frac{48957}{80000},-\frac1{250}\right),
+\qquad \lambda_2=-\frac{4966671}{250000}
+\]
+obey $M^\top w=\lambda_2w$ and $q^\top w=0$ by rational arithmetic. Here $N=27567998009/16000000000$ and $v=\diag(q)w/N$.
+
+The characteristic polynomial factors as
+\[
+\frac{x(250000x+4966671)R(x)}{632507162050000000000000},
+\]
+where
+\begin{align*}
+R(x)={}&2530028648200000000x^2\\
+&+1002356769715761942000x+50981800562345565497767.
+\end{align*}
+One root of $R$ lies in $(-337,-336)$ and the other in $(-60,-59)$, as exact endpoint signs show. The rational eigenvalue is therefore the simple slow mode. The companion certificate checks all original predicates strictly and proves
+\begin{align*}
+b_2(1/1000)&\in(-0.093755177882,-0.093755177881),\\
+b_2(1/100)&\in(-0.093857287853,-0.093857287852).
+\end{align*}
+This is an independent exact realization of the same thermal mechanism, constructed backward from a prescribed mode.
+
+
+\end{document}

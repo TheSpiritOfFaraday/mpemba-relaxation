@@ -1,0 +1,228 @@
+\section{A substantial cooling reversal with a uniform spectral gap}\label{sec:quarterlimit}
+The first counterexample has a small amplitude advantage. This is not a
+necessary consequence of the triplet inequalities. The following family has
+an advantage approaching $25\%$, with a uniformly separated slow mode.
+The percentage concerns the slow amplitude, not a percentage reduction in
+the time needed to reach an arbitrary distance threshold.
+
+\begin{theorem}[A quarter-amplitude limit]\label{thm:quarterlimit}
+There are strictly positive four-state reversible generators, with four
+distinct energies and bath inverse temperature one, for which every original
+triplet predicate fails and finite preparations $0<\beta_h<\beta_c<1$ satisfy
+\[
+1-\frac{|b_2(\beta_h)|}{|b_2(\beta_c)|}\longrightarrow\frac14.
+\]
+The slow eigenvalue can be fixed at $-3$, while its separation from the next
+mode exceeds $1/3$. There is also a perturbed family with all eight $F,G$
+inequalities strict, the same amplitude limit, and a slow spectral gap
+exceeding $1/4$. The independent upper-bound theorem in
+Section~\ref{sec:fulltripletbound} proves that $25\%$ is the sharp supremum
+under the full triplet premise; it is not attained at finite parameters.
+\end{theorem}
+
+\begin{proof}
+Take $0<\varepsilon\leq1/30$ and unnormalized bath weights
+\[
+\widehat q=(1,1-\varepsilon/3,3/5,\varepsilon^2),\qquad
+q=\widehat q/\sum_i\widehat q_i,\qquad E_i=-\log\widehat q_i.
+\]
+They are strictly decreasing. Put $d=1-\varepsilon/3$ and
+\[
+r=-\frac13-\frac{4\varepsilon}{9}+\frac{5\varepsilon^3}{3},\qquad
+w=(1,-4/5,r,-\varepsilon)^\top.
+\]
+Direct substitution gives $q^\top w=0$. Use the fast-space basis
+\[
+U=\begin{pmatrix}
+-3/5-(r-1)/3&\varepsilon^2(5\varepsilon-4)/9\\
+(r-1)/(3d)&-5\varepsilon^2(\varepsilon+1)/(9d)\\
+1&0\\0&1
+\end{pmatrix}.
+\]
+Its columns have zero $q$-mean and are $q$-orthogonal to $w$.
+Let $B=\frac12\left(\begin{smallmatrix}1+x&y\\y&1-x\end{smallmatrix}\right)$,
+and determine $x,y$ by the two linear equations
+\[
+F_{124}(-DUBU^\top)=0,\qquad G_{234}(-DUBU^\top)=0.
+\]
+Define the physical generator
+\begin{equation}\label{eq:quartergenerator}
+M_\varepsilon=-DU(B/\varepsilon^2)U^\top
+       +3(q\mathbf1^\top-I).
+\end{equation}
+These formulas specify the generator using rational arithmetic alone.
+
+The continuous sign verification is supplied by
+\texttt{quarter\_limit\_certificate.py}. It independently forms the two
+linear equations from the stated original-rate predicates and proves their
+coefficient determinant is nonzero. For every rational function whose sign
+is needed, it removes powers of $\varepsilon$, substitutes
+$\varepsilon=t/30$, and expands numerator and denominator in the Bernstein
+basis $\binom nk t^k(1-t)^{n-k}$. All recorded coefficients have the requisite
+strict sign. Positivity of the Bernstein basis for $0<t<1$ and the strictly
+positive endpoint coefficients prove the signs on the full interval,
+not just on a mesh. The 30 certificates establish
+\begin{itemize}
+\item $B_{11}>0$, $\det B>0$, and positivity of all twelve transition rates;
+\item $F_{124}=G_{234}=0$ identically, with the other six $F,G$ expressions
+strictly negative;
+\item writing $J=U^\top DU$, the positive fast eigenvalue increments satisfy
+\[
+\min(\nu_1,\nu_2)>
+\frac{\det(BJ)/\varepsilon^4}{\operatorname{tr}(BJ)/\varepsilon^2}
+>\frac13;
+\]
+\item all eight $F,G$ expressions of the auxiliary generator $H$ below are
+strictly negative.
+\end{itemize}
+The first strict inequality follows from $ab/(a+b)<\min(a,b)$ for $a,b>0$.
+Detailed balance, column conservation and $M_\varepsilon^\top w=-3w$ are
+checked symbolically. Thus the spectrum is
+$0,-3,-3-\nu_1,-3-\nu_2$, as required. The certificate's rational
+coefficients, together with the short checker, are part of the proof.
+
+To compute the thermal limit set $L=\log(1/\varepsilon)$ and choose
+$\beta_h=L^{-2}$, $\beta_c=L^{-1/2}$. Both are finite positive cooling
+preparations and are correctly ordered on the stated interval. At $\beta_h$
+all four unnormalized Gibbs weights tend to one. At $\beta_c$ the first
+three tend to one and the fourth tends to zero, since
+$e^{-\beta_c E_4}=e^{-2\sqrt L}$. Meanwhile
+$w\to(1,-4/5,-1/3,0)$, whose first three entries sum to $-2/15$. Hence
+\[
+b_h\longrightarrow-\frac1{30},\qquad
+b_c\longrightarrow-\frac2{45},\qquad
+\frac{|b_h|}{|b_c|}\longrightarrow\frac34.
+\]
+The strict anomalous ordering therefore holds for all sufficiently small
+positive $\varepsilon$.
+
+For strict triplet inequalities, let $H$ have reduced conductances
+\[
+(k_{12},k_{13},k_{14},k_{23},k_{24},k_{34})=(100,10,1,11,2,3)
+\]
+at the same bath weights, with conserving diagonal, and put
+$\widetilde M_\varepsilon=M_\varepsilon+\varepsilon^4H$.
+Linearity and the certified signs give all eight strict inequalities.
+Its symmetrized perturbation has operator norm at most $100\varepsilon^4$:
+for any function $f$, its Dirichlet form is bounded by
+\[
+\sum_{i<j}q_iq_jk_{ij}(f_i-f_j)^2
+\leq100\sum_{i<j}q_iq_j(f_i-f_j)^2
+=100\operatorname{Var}_q(f).
+\]
+Weyl's bound preserves a gap greater than
+$1/3-200\varepsilon^4>1/4$. Work in the nonstationary symmetric subspace,
+where the original slow eigenvector is isolated by a gap greater than $1/3$.
+Resolving a perturbed unit eigenvector into its original slow component and
+its orthogonal complement gives an orthogonal component at most
+$100\varepsilon^4/(1/3-100\varepsilon^4)$.
+Orient the two eigenvectors to have positive inner product and give them
+the same weighted norm. Since $\|w\|_q\leq1$, their weighted difference
+is less than $500\varepsilon^4$. Also $q_i\geq\varepsilon^2/3$.
+Consequently one can normalize the perturbed left eigenvector so that
+\[
+\max_i|\widetilde w_i-w_i|<1000\varepsilon^3.
+\]
+Every thermal overlap changes by at most this amount, uniformly in the
+initial temperature. The nonzero limiting overlaps and their ratio persist.
+\end{proof}
+
+\paragraph{A finite, strict example.}
+Take $\varepsilon=10^{-50}$, $\beta_h=1/10000$ and $\beta_c=1/50$ in
+\eqref{eq:quartergenerator}, and optionally add $\varepsilon^4H$.
+The integer-root interval checker
+\texttt{quarter\_limit\_thermal\_certificate.py} proves that the unperturbed
+amplitude advantage lies between $22.6171597478\%$ and $22.6171597506\%$.
+The above perturbation error bound proves an advantage greater than $22\%$
+also for the strict family. Every energy and temperature is finite. These
+large energy and temperature separations are a mathematical construction,
+not an experimentally validated parameter regime.
+
+The physical mechanism is simple in this limit. Raising inverse temperature
+slightly empties the highest state, whose slow-mode component is approaching
+zero, while scarcely changing the other three relative populations. Their
+normalization changes from four-state to three-state weighting. Their slow
+overlap therefore grows by a factor approaching $4/3$. Neither a vanishing
+slow spectral gap nor cancellation of the slow mode is responsible. For
+relative entropy the asymptotic distance advantage approaches
+$1-(3/4)^2=7/16$. The asymptotic time advance approaches
+$\log(4/3)/3$, or $\log(4/3)$ slow relaxation times, rather than a $25\%$
+reduction of an unspecified cooling time.
+
+\paragraph{How quickly the quarter limit is approached.}
+Write $a=\log(5/3)$ and $L=\log(1/\varepsilon)$. For all sufficiently large
+$L$ the unperturbed family has a unique cooling amplitude maximum at
+\[
+\beta_m=\frac{\log(4L/(13a))}{2L}
++O\!\left(\frac{\log L}{L^2}\right).
+\]
+Its advantage over the infinite-temperature limiting amplitude satisfies
+\begin{equation}\label{eq:quarterapproach}
+1-\frac{|b_2(0)|}{|b_2(\beta_m)|}
+=\frac14-\frac{13a}{16L}
+ \left[\log\frac{4L}{13a}+1\right]
++O\!\left(\frac{(\log L)^2}{L^2}\right).
+\end{equation}
+Here $\beta=0$ is only a limiting reference; finite sufficiently hot
+preparations approach the same advantage.
+
+To verify these expansions, put $y=e^{-a\beta}$ and $x=e^{-2L\beta}$.
+Uniformly on bounded cooling intervals, the positive amplitude is
+\[
+R(\beta)=|b_2(\beta)|
+=\frac{y/3-1/5}{2+y+x}+O(\varepsilon),
+\]
+with derivative error $O(L\varepsilon)$ near the maximum. Its derivative is
+initially positive for large $L$, while $b_2'(1)>0$ by the contrast theorem.
+The two-stationary-point bound and these opposite endpoint signs force exactly
+one cooling stationary point; a second zero, even a tangency, would violate
+the bound counting multiplicity. The limiting amplitude at any fixed
+$0<\beta<1$ strictly decreases with $\beta$, so this maximum tends to zero.
+It satisfies $L\beta_m\to\infty$, since the positive normalization derivative
+would otherwise remain of order $L$. Differentiating the displayed leading
+ratio gives the stationarity equation
+\[
+x=\frac{13ay}{5(2L-a)y-6L}\,[1+o(1)]
+=\frac{13a}{4L}\left[1+O\!\left(\beta_m+\frac1L\right)\right].
+\]
+The exponentially small remainder does not change the indicated algebraic
+orders. More explicitly, the exact numerator of the positive amplitude is
+$-1+(4/5)(1-\varepsilon/3)^\beta-r y+\varepsilon x$,
+and its denominator is $1+(1-\varepsilon/3)^\beta+y+x$.
+On $0\leq\beta\leq1$, their differences from the displayed leading
+numerator and denominator are $O(\varepsilon)$; their derivative
+differences are $O(L\varepsilon)$. The denominator stays bounded below.
+For the leading ratio, multiplying its derivative by $15(2+y+x)^2$
+gives exactly
+\[
+x\bigl[(10L-5a)y-6L\bigr]-13ay.
+\]
+Near the maximum $y\to1$, so the coefficient of $x$ is asymptotic to
+$4L$ and the exponentially small derivative error remains negligible.
+Taking logarithms first gives
+$2L\beta_m=\log(4L/(13a))+O(\beta_m+1/L)$.
+Absorbing the $O(\beta_m)$ term into the left side proves
+$\beta_m=O(\log L/L)$; substituting this bound back gives the stated
+$O(\log L/L^2)$ remainder. This intermediate bound is needed before
+the sharper remainder can be asserted. Substituting into
+\[
+R(\beta_m)=\frac2{45}
+\left[1-\frac{13a}{6}\beta_m-\frac{x}{3}
++O(\beta_m^2+\beta_m x+x^2+\varepsilon)\right],
+\qquad R(0)=\frac1{30}+O(\varepsilon),
+\]
+proves the two expansions. The leading deficit is of order
+$\log L/L$, equivalently $\log E_4/E_4$. Thus a nonvanishing spectral gap
+does not imply that a near-quarter amplitude advantage requires only modest
+energy separation.
+
+The numerical figure uses the finite hot preparation $\beta_h=L^{-2}$,
+whereas \eqref{eq:quarterapproach} uses the limiting reference $\beta_h=0$.
+The finite-hot numerator differs by $O(1/L)$, since its highest-state
+weight is $e^{-2/L}$ instead of one. Both advantages approach $1/4$,
+but their subleading corrections are not identical.
+\path{research/check_quarter_approach.py} verifies the stationarity and
+Taylor-coefficient algebra symbolically and independently recomputes five
+plotted maxima at 100-digit precision. Its finite residual table is a
+diagnostic illustration of the remainder scales, not a proof of a big-$O$
+bound; the analytic argument above supplies that bound.

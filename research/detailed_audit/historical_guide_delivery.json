@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-13T03:47:08.594902+00:00",
+  "pages": {
+    "research_report": 126,
+    "focused_appendices": 81,
+    "focused_paper": 10,
+    "freshman_guide": 90
+  },
+  "all_68_current_statement_reviews_preserved": true,
+  "all_inventoried_hashes_current": true,
+  "local_links_resolve": true,
+  "html_ids_unique": true,
+  "pdf_pages_nonempty": true,
+  "visual_review": [
+    "report113,125",
+    "appendices66,79",
+    "guide72,73,74",
+    "desktop and390-pixel mobile lesson"
+  ],
+  "mobile_document_width": 390,
+  "screenshot": "output/playwright/guide-historical-review.png",
+  "sha256": {
+    "research_report.tex": "3044a0fb078698ec3e5626e7cf9d7087fa2c0f0b2f92c9645ea3c2e21e109001",
+    "focused_appendices.tex": "493e0240553df717ce644a547106dd275716b9ffb646e7f7817230714e14462f",
+    "freshman_guide.html": "d5e0753a5216c56438818d3bed389a8b85d253ef6c9ae6678502911205723127",
+    "output/pdf/research_report.pdf": "6cae39aa09055a00297c52058078dfb85c833903a4b0f64311c7fe21b1770bc4",
+    "output/pdf/focused_appendices.pdf": "e927c97a8c2cc205c61e0c45ec0eaf4f35fa248f393d1178aac73e472fc3ea37",
+    "output/pdf/freshman_guide.pdf": "b1fdfc73d720e58ae25772343d1cbb5330cfac8aca33668e8a5c80d1e7a257b9"
+  }
+}

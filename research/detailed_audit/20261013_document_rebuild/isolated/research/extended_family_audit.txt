@@ -1,0 +1,197 @@
+Independent skeptical audit: quarter-limit family and inverse realizability
+Date: 2026-10-11. Verifier agent. No audited source file was edited.
+
+Read in full:
+  research/quarter_limit_family.tex
+  research/quarter_limit_certificate.py
+  research/quarter_limit_thermal_certificate.py
+  research/mode_realizability.tex
+  research/exact_mode_realizability.py
+Also inspected the thermal-root helper, continuous-certificate metadata and
+finite thermal receipt. Did not rerun the expensive certificates: the new
+work was independent derivation of their pivotal implications, inspection
+of the checker logic, and exact checks of constants/printed enclosures.
+
+OUTCOME
+The quarter-amplitude construction, spectral separation, strict perturbation,
+coordinate error, finite >22% witness, and peak asymptotic formulas are valid.
+The inverse feasibility theorem and zero-slack implementation are valid.
+One API scope issue was identified and reported: nonzero positive slack
+strengthens the original half-planes, so infeasibility at that slack does not
+prove original infeasibility. Returned positive constructions remain correct.
+No error was found in the asserted 25% limiting advantage or its error order.
+
+1. INVERSE REALIZABILITY: BOTH DIRECTIONS
+For normalized q and q-centered nonzero w, the two columns of U span the
+orthogonal complement of 1,w under the D inner product. Thus D^(1/2)U has
+rank two, is orthogonal to sqrt(q),D^(1/2)w, and
+  D^(-1/2) M0 D^(1/2)=-D^(1/2) U B U^T D^(1/2).
+For B positive definite this has exactly two strictly negative eigenvalues
+and the two-dimensional stated kernel. Adding rho(q 1^T-I) shifts only
+the nonstationary spectrum, producing a simple slow mode w. Large rho
+makes every off-diagonal entry positive. Reset invariance of F,G is exact,
+so original predicates fail after positivity makes the branch lemma applicable.
+
+Conversely, M0=M+lambda2(q 1^T-I) has eigenvalues zero on the stationary
+and slow spaces and lambda_j-lambda2<0 on the two faster spaces. Its negative
+restriction can be represented uniquely as U B U^T after the D similarity,
+with B positive definite. Homogeneous triplet inequalities survive the reset
+and positive scaling. Trace normalization gives the open disk exactly.
+
+The nearest-point enumeration for rational half-planes is complete. A
+nonempty closed polyhedron in R^2 has a unique norm minimizer: it is the
+origin, a projection onto one active line, or a vertex from two independent
+active lines. Degenerate line/point intersections are included. Each candidate
+and squared norm is rational. A minimum equal to one is correctly excluded.
+The constructed rho exceeds every off-diagonal entry of UBU^T, giving
+strictly positive rates in both directions. The det/trace gap lower bound
+is positive because U^TDU and B are positive definite.
+
+IMPLEMENTATION SCOPE ISSUE (reported promptly)
+exact_realize(...,slack>0) replaces c+a x+b y<=0 by a stronger inequality
+c+a x+b y+slack*max(|c|,|a|,|b|)<=0. A feasible answer still gives a valid
+original realization, but feasible=False does not exclude feasibility at
+slack=0. Therefore the exact completeness claim must be restricted to
+slack=0, and nonzero-slack failures labeled as failures of the strengthened
+problem. The optional slack should also be checked/converted as a nonnegative
+rational if the interface promises no floating comparisons. The default
+zero-slack mathematical classification is unaffected.
+
+2. THE EXPLICIT FAST BASIS AND CONTINUOUS CERTIFICATE
+Independently substituted the displayed U into q^T U=0 and w^T D U=0.
+Both identities hold. Its third/fourth-coordinate identity block proves
+rank two. Its entries agree algebraically with the nullspace basis recorded
+by the certificate. The two equations used in the code are precisely rows
+F124 and G234 in lexicographic triplet order.
+
+The Bernstein checker correctly converts a power polynomial p(t) of degree n
+to coefficients b_k=sum_{j<=k} a_j binom(k,j)/binom(n,j). All-positive
+numerator and denominator Bernstein coefficients imply a strictly positive
+rational function for 0<t<=1. Removing powers of epsilon is legitimate
+because epsilon>0. Flipping both numerator and denominator when needed
+preserves the ratio. The nonzero coefficient determinant is separately
+certified, so the linear solution has no hidden singularity in the interval.
+
+The receipt contains 30 checks: two for B, one determinant, twelve rates,
+six nonzero negative original F/G expressions, one spectral bound and eight
+strict auxiliary F/G expressions. The two equality expressions are exact
+rational identities, rather than uncertain zero tests. This is a continuous
+interval argument, not a finite parameter sample. These observations audit
+the proof mechanism; they do not replace the recorded rational coefficients.
+
+3. UNIFORM SLOW SIMPLICITY AND THE STRICT PERTURBATION
+The two fast increments are the positive eigenvalues of BJ/epsilon^2,
+where J=U^TDU is positive definite. BJ is similar to a positive definite
+symmetric matrix. Their product/trace is therefore strictly smaller than
+the lesser increment. The certified product/trace >1/3 proves the uniform
+slow gap and spectrum 0,-3,-3-nu1,-3-nu2.
+
+For H with reduced conductances bounded by 100, the symmetric Dirichlet form
+is bounded by 100 Var_q(f); hence the symmetric perturbation epsilon^4 H
+has operator norm at most delta=100 epsilon^4. It preserves the stationary
+vector. Weyl gives a new slow-fast gap >1/3-2 delta>1/4 throughout
+0<epsilon<=1/30. Adding epsilon^4 H turns the two equalities and the six
+already strict inequalities into eight strict negative F/G expressions.
+All original rates also remain strictly positive.
+
+For the eigenvector estimate, resolve a perturbed unit symmetric slow vector
+into the old slow direction plus its fast orthogonal complement. Projection
+of its eigen equation bounds the latter by delta/(gap-delta). With common
+orientation, the full unit-vector difference is at most sqrt(2) times this.
+Rescaling both to the same original weighted norm is harmless, and
+||w||_q<=1 since every displayed component has magnitude <=1. Even using
+3/2 instead of sqrt(2), the coefficient obeys
+  (3/2)*100/(1/3-100/30^4) < 500.
+Thus the weighted difference is <500 epsilon^4. Since sum(qhat)<3 and
+each qhat_i>=epsilon^2, q_i>=epsilon^2/3. Consequently the coordinate error
+is <500 sqrt(3) epsilon^3<1000 epsilon^3, uniformly for all four entries.
+Every Gibbs overlap error is bounded by the maximum coordinate error.
+This normalization is consistent for both temperatures; ratios do not depend
+on the common eigenvector scale. It does not assert wtilde_1=1.
+
+4. THE QUARTER LIMIT AND FINITE WITNESS
+For L=log(1/epsilon), beta_h=L^-2 gives exp(-2L beta_h)->1, whereas
+beta_c=L^-1/2 gives exp(-2L beta_c)->0. At both preparations the first
+three weights tend to one. Their limiting slow components sum to -2/15.
+The resulting overlaps are -1/30 and -2/45, respectively, with ratio 3/4.
+Their limits are nonzero; the uniform O(epsilon^3) perturbation error cannot
+change the limit or eventual strict ordering. For L>=log 30 both temperatures
+are finite, positive, less than one, and beta_h<beta_c.
+
+The nth-root helper bounds each q_i^(1/n) by exact integer-power bisection
+on a 10^-12 grid. Signed numerator terms and positive denominator corners
+give a valid overlap enclosure. For negative overlaps, the gain interval
+uses largest hot magnitude/smallest cold magnitude for its lower endpoint,
+and the converse for its upper endpoint. The thermal checker uses exactly
+these directions and enlarges both intervals by the proved perturbation error.
+No thermal estimate is inferred from a floating-point root.
+
+Independently compared the receipt's rational gain endpoints with the printed
+decimal bounds: both displayed inequalities round outward, namely
+  22.6171597478 < 100*gain_lower <= 100*gain_upper < 22.6171597506.
+The finite perturbed claim is >22%, rather than the entire narrow unperturbed
+interval, as justified by the checker. At epsilon=10^-50 all energies and
+initial temperatures remain finite.
+
+The KL asymptotic advantage is 1-(3/4)^2=7/16. With slow rate tending to
+3, the asymptotic time advance is log(4/3)/3. Neither quantity equals a
+universal percentage reduction of a finite cooling time.
+
+5. INDEPENDENT SIGN ARGUMENT FOR THE PEAK
+An elementary check avoids relying on an external contrast-cone result.
+The unnormalized bath-weighted prefixes of w are
+  S1=1, S2=1/5+4 epsilon/15, S3=epsilon^3, S4=0.
+All first three are positive. For beta<1 the Gibbs-to-bath likelihood ratio
+strictly increases in energy, so summation by parts gives b(beta)<0.
+At the bath,
+  b'(1)=sum_{k=1}^3 S_k(E_{k+1}-E_k)/sum(qhat)>0.
+Thus R=|b|=-b throughout cooling. This confirms the absolute-amplitude sign
+used in the expansion and the endpoint derivative at the bath.
+
+The leading ratio R0=(y/3-1/5)/(2+y+x), y=exp(-a beta),x=exp(-2L beta),
+approximates R uniformly on beta in [0,1] with error O(epsilon). Indeed
+d^beta=1+O(epsilon), r=-1/3+O(epsilon), and the fourth numerator term is
+-epsilon x. Its derivative error is O(L epsilon), which is exponentially
+smaller than the algebraic orders retained below.
+
+Independently differentiating gives, after multiplying the derivative
+numerator by 15,
+  -13 a y + x[5(2L-a)y-6L].
+Initially R'>0 for large L; at beta=1, R'=-b'<0. The two-stationary-point
+bound counts multiplicities: a single sign change is forced, and any extra
+simple crossing would have the wrong endpoint parity, while a tangency or
+triple zero would exceed the bound. Hence there is exactly one cooling
+stationary point, a strict amplitude maximum.
+
+The maximum tends to beta=0: at every fixed positive beta the limiting
+amplitude is strictly smaller than 2/45, whereas the beta_c=L^-1/2 sequence
+attains 2/45 in the limit. Also L beta_m must diverge; otherwise the positive
+normalization derivative term is order L and cannot balance the bounded
+negative numerator derivative. The stationary equation therefore first yields
+x~13a/(4L) and beta_m~log L/(2L). Substitution back sharpens it to
+  x=13a/(4L)[1+O(beta_m+1/L)],
+  beta_m=log(4L/(13a))/(2L)+O(log L/L^2).
+The O(L epsilon) derivative residual changes x only by O(epsilon), negligible
+relative to 1/L and to all stated algebraic errors.
+
+Finally expansion of the ratio gives
+  R(beta_m)=(2/45)[1-(13a/6)beta_m-x/3
+                   +O(beta_m^2+beta_m x+x^2+epsilon)],
+  R(0)=1/30+O(epsilon).
+Thus 1-R(0)/R(beta_m)=1/4-(13a/8)beta_m-x/4 plus the same quadratic
+orders. Substitution produces precisely
+  1/4 - (13a/(16L))[log(4L/(13a))+1]
+       + O((log L)^2/L^2).
+Both the numerical coefficient and error order in the report are correct.
+The infinite-temperature reference is explicitly a limit; finite sufficiently
+hot preparations can approach it. The result asserts attainability of this
+quarter limit, not global optimality under the triplet constraints.
+
+6. LIMITATIONS OF THIS AUDIT
+The proofs rely on exact symbolic simplification/Bernstein arithmetic in the
+continuous checker, previously generated rational receipts, and the stated
+Chebyshev stationary-point bound audited separately. No independent second
+implementation of the entire continuous certificate was run, and no claim
+of publication novelty was assessed in this audit. The only identified issue
+is the optional-slack API scope described above, not the mathematical theorem
+or the accepted family/counterexample.

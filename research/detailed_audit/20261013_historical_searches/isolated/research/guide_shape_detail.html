@@ -1,0 +1,32 @@
+<details class="proof-route" id="shape-proof"><summary>Slow route: derive the difficult first-three mode restriction</summary>
+<p>This route builds on the weighted-coordinate explanation immediately above. It uses algebra, inequalities, and the largest-eigenvalue idea. The new matrix-elimination step is explained along the way. Its hypotheses are four states, strictly ordered energies, positive reversible rates, every F and G nonpositive, and a simple slow eigenvalue.</p>
+<h3>1. Isolate the one inequality that needs proof</h3>
+<p>Use the unnormalized contrasts as columns of H. Write the slow mode w = Hx, where x = (x₁,x₂,x₃) has nonnegative entries. The matrix in these coordinates is B = diag(η)⁻¹Hᵀdiag(q)LH. Multiplying coordinate k by √ηₖ turns B into the symmetric matrix A above, so it has the same eigenvalues.</p>
+<div class="math">w₁−w₂ = (Q₂/q₂)x₁ ≥ 0, &nbsp; w₄ = −(Q₃/q₄)x₃ ≤ 0,<br>w₁+w₂−2w₃ = (2Q₃/q₃)(x₂−sx₁),<br>s = (q₁−q₂)q₃/(2q₂Q₃) &gt; 0.</div>
+<p>Only x₂ ≥ sx₁ remains. If x₁ = 0, it already holds.</p>
+<h3>2. Subtract a common mixing process</h3>
+<p>The reduced conductances kᵢⱼ = aᵢⱼ/qᵢ have their minimum in the first row, because G ≤ 0 orders each column. Let k* be the smallest of k₁₂,k₁₃,k₁₄. Subtract the reset generator k*(q1ᵀ−Q₄I). Its off-diagonal rate into state i is k*qᵢ. All remaining rates are nonnegative, and at least one of rates 12, 13, 14 is now zero.</p>
+<p>This operation leaves F and G unchanged: substituting aᵢⱼ−k*qᵢ makes the extra terms cancel. On every bath-mean-zero mode it merely adds k*Q₄ to the eigenvalue. Eigenvectors, ordering and simplicity are unchanged. The remaining generator may disconnect; the proof allows that.</p>
+<p>Its eigenvalues are at most zero. To see why, detailed balance gives −⟨f,Lf⟩<sub>q</sub> = Σᵢ&lt;ⱼ qᵢqⱼkᵢⱼ(fᵢ−fⱼ)² ≥ 0 for the remaining conductances. For an eigenvector the left side is −λ‖f‖². Thus λ ≤ 0, even when some edges vanish.</p>
+<h3>3. Eliminate the third unknown safely</h3>
+<p>All following B entries refer to the remaining generator. Put δ = λ−B₃₃, where λ is its largest contrast eigenvalue. We need δ &gt; 0 before dividing. Symmetry implies λ ≥ B₃₃: test the quadratic expression on the third unit vector. If equality held, the third diagonal entry of λI−A would be zero. This matrix has nonnegative quadratic expression; any nonzero off-diagonal entry in that row would make the expression negative for a suitable small perturbation. Its whole third row must therefore vanish. The third unit vector would be a largest-eigenvalue vector. Simplicity would force x₁ = 0, contrary to the case under consideration. Hence δ &gt; 0.</p>
+<p>The third equation gives x₃ = (B₃₁x₁+B₃₂x₂)/δ. Substitute it into the first two equations. The resulting two-by-two matrix is Eᵢⱼ = Bᵢⱼ+Bᵢ₃B₃ⱼ/δ, for i,j = 1,2.</p>
+<p>Why is λ still its simple largest eigenvalue? In symmetric coordinates, complete the square in the third variable of the nonnegative quadratic expression for λI−A. The remaining two-variable expression is exactly the symmetric version of λI−E. It is nonnegative. Completing the square is an invertible change of variables, and the eliminated square has positive coefficient δ, so the dimension of the zero space remains one. This gives both largest-eigenvalue ordering and simplicity.</p>
+<h3>4. Turn the eigenvector ratio into a polynomial sign</h3>
+<div class="math">f(s) = E₂₁+s(E₂₂−E₁₁)−s²E₁₂,<br>δf(s) = δC+D*,<br>C = B₂₁+s(B₂₂−B₁₁)−s²B₁₂,<br>D* = (B₂₃−sB₁₃)(B₃₁+sB₃₂).</div>
+<p>If the off-diagonal entries of E are positive, its eigenvector ratio x₂/x₁ is the unique positive zero of f. The quadratic begins positive at zero and opens downward. Therefore f(s) ≥ 0 implies s ≤ x₂/x₁. If one off-diagonal entry vanishes, symmetry after positive rescaling makes both vanish. Simplicity and x₁ &gt; 0 then give x₂ = 0 and E₁₁ &gt; E₂₂, so f(s) &lt; 0. Thus showing f(s) ≥ 0 also excludes this exceptional case.</p>
+<p>The G inequalities give B₃₁,B₃₂ ≥ 0 and</p>
+<div class="math">B₂₃−sB₁₃ = [Q₄/(2q₁q₂Q₃)](2a₃₄q₁q₂−a₁₄q₂q₃−a₂₄q₁q₃) ≥ 0.</div>
+<p>For the last sign, G₁₃₄ ≤ 0 and G₂₃₄ ≤ 0 bound each of the two subtracted terms by a₃₄q₁q₂. Hence D* ≥ 0. If C ≥ 0, we are done. If C &lt; 0, use λ ≤ 0 to get δC+D* ≥ −B₃₃C+D*. The unknown eigenvalue has disappeared.</p>
+<h3>5. Check every zero-rate boundary</h3>
+<p>Call the six remaining downward rates (a,b,c,d,e,f) = (a₁₂,a₁₃,a₁₄,a₂₃,a₂₄,a₃₄). Here the rate f is unrelated to the polynomial f(s) above. Direct expansion gives</p>
+<div class="math">−B₃₃C+D* = [Q₂Q₄/(4q₁q₂²Q₃²)]T,<br>T = (c+e+f)N+q₄[2ceq₃(q₁−q₂)+fJ],<br>N = −2q₁q₂q₃F₁₂₃ ≥ 0,<br>J = eq₁(2q₂+q₃)−cq₂(2q₁+q₃).</div>
+<p>The prefactor is positive. At least one of a,b,c is zero; this is exactly why we subtracted the reset process.</p>
+<ol>
+<li><strong>c = 0:</strong> J = eq₁(2q₂+q₃) ≥ 0. Every term in T is nonnegative.</li>
+<li><strong>a = 0:</strong> F₁₂₄ ≤ 0 gives eq₁(2q₂+q₄)−cq₂(2q₁+q₄) ≥ 0. Multiply this by (2q₁+q₃)/(2q₁+q₄), then add 2eq₁(q₁−q₂)(q₃−q₄)/(2q₁+q₄). The result is exactly J. Both pieces are nonnegative, including when c or e is zero. Thus T ≥ 0.</li>
+<li><strong>b = 0:</strong> N = 2aq₂q₃(q₁−q₂)+dq₁q₃(2q₂+q₃). If c ≤ e, write J = (e−c)q₁(2q₂+q₃)+cq₃(q₁−q₂) ≥ 0. If c &gt; e, use the identity N+q₄J = 2q₁q₂(q₃−q₄)(c−e)+dq₁q₃(2q₂+q₃)−2q₁q₂q₃F₁₂₄ ≥ 0. Now T = (c+e)N+f(N+q₄J)+2ceq₃q₄(q₁−q₂) ≥ 0.</li>
+</ol>
+<p>These cases can overlap, but they cover every possibility. We have proved δf(s) ≥ 0; δ &gt; 0 then gives x₂ ≥ sx₁. This completes the missing mode inequality, including disconnected remaining generators and equality in the triplet tests. The weighted-average argument in Step 14 now supplies the strict 25% upper bound. Showing that systems can approach this bound is a separate construction in Step 15.</p>
+<p class="small">The long algebraic identities can be checked in <a href="research/full_triplet_amplitude_certificate.py">the exact symbolic certificate</a>; the formal developments begin in <a href="formal/Mpemba/ModeShape.lean">ModeShape.lean</a>. The <a href="research/detailed_audit/mechanism_and_shape_review.json">review record</a> states exactly which results have been checked.</p>
+</details>

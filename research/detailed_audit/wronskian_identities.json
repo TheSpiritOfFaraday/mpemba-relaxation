@@ -1,0 +1,20 @@
+{
+  "scope": "Exact symbolic four-state prefix Wronskians; general n follows the separate analytic determinant derivation. Variables f are independent positive Boltzmann weights and differentiation uses f_i prime=-E_i f_i.",
+  "checks": [
+    {
+      "k": 1,
+      "identity_verified": true,
+      "expected": "f0*(a*f1 + b*f2 + c*f3)/(f0 + f1 + f2 + f3)**2"
+    },
+    {
+      "k": 2,
+      "identity_verified": true,
+      "expected": "-a*f0*f1*(b*f2*(-a + b) + c*f3*(-a + c))/(f0 + f1 + f2 + f3)**3"
+    },
+    {
+      "k": 3,
+      "identity_verified": true,
+      "expected": "-a*b*c*f0*f1*f2*f3*(-a + b)*(-a + c)*(-b + c)/(f0 + f1 + f2 + f3)**4"
+    }
+  ]
+}

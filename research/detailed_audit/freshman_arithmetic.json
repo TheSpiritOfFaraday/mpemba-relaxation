@@ -1,0 +1,284 @@
+{
+  "passed": true,
+  "scope": "Exact focused-witness arithmetic; eventual dynamics use the separately checked spectral proof.",
+  "checks": [
+    "column 1 conserves mass",
+    "column 2 conserves mass",
+    "column 3 conserves mass",
+    "column 4 conserves mass",
+    "edge 12 positive in both directions",
+    "edge 12 balances",
+    "edge 13 positive in both directions",
+    "edge 13 balances",
+    "edge 14 positive in both directions",
+    "edge 14 balances",
+    "edge 23 positive in both directions",
+    "edge 23 balances",
+    "edge 24 positive in both directions",
+    "edge 24 balances",
+    "edge 34 positive in both directions",
+    "edge 34 balances",
+    "printed equilibrium",
+    "stationarity",
+    "branch-reduction identity",
+    "original inclusive-branch predicate fails",
+    "printed strict triplet bounds",
+    "branch-reduction identity",
+    "original inclusive-branch predicate fails",
+    "printed strict triplet bounds",
+    "branch-reduction identity",
+    "original inclusive-branch predicate fails",
+    "printed strict triplet bounds",
+    "branch-reduction identity",
+    "original inclusive-branch predicate fails",
+    "printed strict triplet bounds",
+    "bath-orthogonal mode",
+    "left eigenpair",
+    "printed mode normalization",
+    "paired normalization",
+    "right eigenpair",
+    "full characteristic factor x(x-lambda)(x^2-s*x+p)",
+    "one fast root in (-337,-336)",
+    "one fast root in (-60,-59)",
+    "simple slow eigenvalue in (-20,-19); gap greater than 39",
+    "integer root enclosure n=1000, q=1",
+    "integer root enclosure n=1000, q=199/200",
+    "integer root enclosure n=1000, q=2/5",
+    "integer root enclosure n=1000, q=1/400",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "integer root enclosure n=100, q=1",
+    "integer root enclosure n=100, q=199/200",
+    "integer root enclosure n=100, q=2/5",
+    "integer root enclosure n=100, q=1/400",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "interval denominator positive",
+    "printed hot bracket",
+    "printed cold bracket",
+    "nonzero reversed overlap ordering",
+    "initial hotter-farther ordering",
+    "interval denominator positive"
+  ],
+  "q": [
+    "1",
+    "199/200",
+    "2/5",
+    "1/400"
+  ],
+  "rates": [
+    "1",
+    "28",
+    "249/10",
+    "330154675693/1470375000",
+    "4983/200",
+    "1527327066/151990625"
+  ],
+  "generator": [
+    [
+      "-49029/4000",
+      "1",
+      "28",
+      "249/10"
+    ],
+    [
+      "199/200",
+      "-10689318350801/117041850000",
+      "330154675693/1470375000",
+      "4983/200"
+    ],
+    [
+      "56/5",
+      "660309351386/7315115625",
+      "-36129268114499561/143029257750000",
+      "1527327066/151990625"
+    ],
+    [
+      "249/4000",
+      "4983/79600",
+      "763663533/12159250000",
+      "-72789920403/1215925000"
+    ]
+  ],
+  "triplets": [
+    {
+      "states": "123",
+      "kappa": "371325175693/2933398125",
+      "F": "-8634614389219/36575578125",
+      "G": "-289190028193/1470375000"
+    },
+    {
+      "states": "124",
+      "kappa": "3321/133",
+      "F": "-32119/1592000",
+      "G": "-279/2000"
+    },
+    {
+      "states": "134",
+      "kappa": "10623787257/11916065000",
+      "F": "-94798461561/48637000000",
+      "G": "-13500441/151990625"
+    },
+    {
+      "states": "234",
+      "kappa": "55287172999274895/497789721812093671",
+      "F": "-424826254560207977/3557852786531250",
+      "G": "-990372384/30246134375"
+    }
+  ],
+  "lambda": "-4966671/250000",
+  "fast_quadratic_coefficients": [
+    "1",
+    "501178384857880971/1265014324100000",
+    "50981800562345565497767/2530028648200000000"
+  ],
+  "hot_overlap": {
+    "exact": [
+      "-598998916059484333/6388968903821883200",
+      "-29949945802974026653/319448445191094480000"
+    ],
+    "decimal_display_only": [
+      -0.09375517788185868,
+      -0.093755177881858
+    ]
+  },
+  "cold_overlap": {
+    "exact": [
+      "-1845550456647859361/19663368704564275000",
+      "-29528807306365559779/314613899273028720000"
+    ],
+    "decimal_display_only": [
+      -0.09385728785218114,
+      -0.09385728785218045
+    ]
+  },
+  "hot_initial_Dq": {
+    "exact": [
+      "2392268910180849438524597195144953088465122306776444880902870203300245/97038672351021919441103439694587861276941790119582776743664019342658",
+      "1196134455090429554637744486334955756360384280959051433815349666207139/48519336175510959720551719847293930638470895059791388371832009671329"
+    ],
+    "decimal_display_only": [
+      24.652737431600446,
+      24.652737431600546
+    ]
+  },
+  "cold_initial_Dq": {
+    "exact": [
+      "9256986479234542063100507213881146707025419191328766027633627983229/405761497332373616829309551012936549187257317445192288553270429058",
+      "208282195782778068518458814277838480124549290250918340946233445164197/9129633689978406378659464897791072356713289642516826492448584653805"
+    ],
+    "decimal_display_only": [
+      22.813861197016966,
+      22.81386119701706
+    ]
+  },
+  "amplitude_advantage": {
+    "exact": [
+      "128279378453747969815525486820033/117911644779573741262098536923722383",
+      "128279378455491759118727220361141/117911644779574618055405774540685456"
+    ],
+    "decimal_display_only": [
+      0.001087927987889202,
+      0.0010879279879039826
+    ]
+  },
+  "hot_probabilities": [
+    {
+      "exact": [
+        "333333333333333/1331035188296227",
+        "1000000000000000/3993105564888677"
+      ],
+      "decimal_display_only": [
+        0.2504316461836082,
+        0.2504316461836087
+      ]
+    },
+    {
+      "exact": [
+        "999994987470739/3993105564888681",
+        "999994987470740/3993105564888677"
+      ],
+      "decimal_display_only": [
+        0.25043039088765406,
+        0.25043039088765456
+      ]
+    },
+    {
+      "exact": [
+        "999084128934289/3993105564888681",
+        "999084128934290/3993105564888677"
+      ],
+      "decimal_display_only": [
+        0.2502022830849305,
+        0.250202283084931
+      ]
+    },
+    {
+      "exact": [
+        "331342149494550/1331035188296227",
+        "994026448483651/3993105564888677"
+      ],
+      "decimal_display_only": [
+        0.2489356798438063,
+        0.2489356798438068
+      ]
+    }
+  ],
+  "cold_probabilities": [
+    {
+      "exact": [
+        "333333333333333/1310891246970953",
+        "200000000000000/786534748182571"
+      ],
+      "decimal_display_only": [
+        0.2542799290967568,
+        0.2542799290967573
+      ]
+    },
+    {
+      "exact": [
+        "999949875838022/3932673740912859",
+        "999949875838023/3932673740912855"
+      ],
+      "decimal_display_only": [
+        0.2542671835284032,
+        0.2542671835284037
+      ]
+    },
+    {
+      "exact": [
+        "330292981397269/1310891246970953",
+        "990878944191808/3932673740912855"
+      ],
+      "decimal_display_only": [
+        0.25196062767256217,
+        0.25196062767256266
+      ]
+    },
+    {
+      "exact": [
+        "313948306961009/1310891246970953",
+        "941844920883028/3932673740912855"
+      ],
+      "decimal_display_only": [
+        0.23949225970227683,
+        0.23949225970227733
+      ]
+    }
+  ],
+  "source_sha256": "3b98a3ef0626fb63338cb62757ebff02522de419429f16ad3177135f934d5ca8",
+  "paper_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb"
+}

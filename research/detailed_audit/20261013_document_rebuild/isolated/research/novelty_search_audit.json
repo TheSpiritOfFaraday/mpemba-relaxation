@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-11",
+  "objective": "Broaden novelty assessment and revise contribution claims in response to criticism 3",
+  "primary_sources": [
+    {
+      "authors": "Ohga, Hayakawa and Ito",
+      "identifier": "2410.06623v2",
+      "version_date": "2024-10-19",
+      "url": "https://arxiv.org/html/2410.06623v2",
+      "local": [
+        "sources/2410.06623v2.html",
+        "sources/2410.06623v2.txt"
+      ],
+      "inspected": "Result 2; SI B-D",
+      "relation": "Prior monotone coupling no-Mpemba theorem for energy; do not conflate SI B extension of Result 1 with all-time KL Result 2."
+    },
+    {
+      "authors": "Fill and Kahn",
+      "identifier": "1109.6075v3",
+      "version_date": "2013-09-06",
+      "url": "https://arxiv.org/abs/1109.6075v3",
+      "local": [
+        "sources/1109.6075v3.pdf",
+        "sources/1109.6075v3.txt"
+      ],
+      "inspected": "Sections 3.1-3.3; Proposition 3.2, Corollary 3.3, equation (3.2)",
+      "relation": "Stochastic domination and density-ratio precedent; distinct common-initial/different-kernel setup, not verbatim all-convex thermal corollary."
+    },
+    {
+      "authors": "Baake and Sumner",
+      "identifier": "2007.11433v3",
+      "version_date": "2022-09-25",
+      "url": "https://arxiv.org/abs/2007.11433v3",
+      "local": [
+        "sources/2007.11433v3.pdf",
+        "sources/2007.11433v3.txt"
+      ],
+      "inspected": "Section 2.1; Fact 3.1; Proposition 3.11 and proof",
+      "relation": "Direct precedents for equal-input reset algebra and transformed-generator monotonicity. Report explicitly identifies K block."
+    },
+    {
+      "authors": "Vu and Hayakawa",
+      "identifier": "2410.06686v2",
+      "version_date": "2025-01-06",
+      "url": "https://arxiv.org/html/2410.06686v2",
+      "local": [
+        "sources/2410.06686v2.html",
+        "sources/2410.06686v2.txt"
+      ],
+      "inspected": "Main-text Lorenz definition, equivalent conditions (a)-(c), Results 2-4; main-text Result 5 scope",
+      "relation": "Known thermomajorization characterization yields corollary by common likelihood-ratio ordering; no thermomajorization reversal claimed for counterexample. SI not independently rederived in this novelty pass."
+    }
+  ],
+  "queries_executed_this_continuation": [
+    "Mpemba \"triplet\" \"monotonicity\"",
+    "Mpemba \"convex\" \"monotone\" divergence",
+    "Mpemba \"nonincreasing\" rates"
+  ],
+  "additional_evidence": "Direct full-text inspection of the four primary papers listed, plus existing exact-source/definition audit. This search record describes a bounded review, not an exhaustive survey.",
+  "claim_classification": {
+    "central": "Certified four-state counterexample to original-rate inference; no exhaustive priority claim",
+    "established": "Stochastic monotonicity, equal-input algebra, density-ratio evolution, thermomajorization, spectral and rational verification methods",
+    "supporting_applications": "Additional rate conditions, all-lower-kappa branch, nonincreasing gap law, all-time convex-divergence corollary",
+    "priority_unestablished": "Individual cone simplification, reset compatibility and explicit rate subfamilies"
+  },
+  "new_mathematical_exposition": [
+    "T inverse L T has K as lower block; remaining off-diagonal entries are nonnegative tail sums",
+    "Common energy ordering of likelihood ratios gives matching Lorenz knots; stochastic tails compare ordinates for cooling and heating"
+  ],
+  "limits": [
+    "No identical all-lower-branch or gap-law statement found in this bounded review; this is not evidence of first publication",
+    "No exhaustive citation tracing or unpublished-work search",
+    "Massey publisher abstract and Keilson-Kester landing page were located in earlier screening; no inaccessible full-text theorem is used as a foundation",
+    "No claim of external human review or proof-assistant verification",
+    "Existing counterexample claims remain fixed-norm asymptotics and KL, with separately certified finite-time KL/TV brackets"
+  ]
+}

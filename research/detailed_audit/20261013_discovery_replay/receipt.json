@@ -1,0 +1,74 @@
+{
+  "group": "isolated bounded physical discovery replay",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/search_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/search_physical_rate_model.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 6.525318833,
+      "log": "research/detailed_audit/20261013_discovery_replay/0_discovery.log",
+      "log_sha256": "2953bfd848965b0074de7340777f7c118f8314c7d10cb581407e990f61ebfd87",
+      "source_sha256": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706"
+    },
+    {
+      "script": "research/search_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/search_physical_rate_model.py",
+        "--profile",
+        "robust_screen",
+        "--iterations",
+        "150"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 71.902693666,
+      "log": "research/detailed_audit/20261013_discovery_replay/1_discovery.log",
+      "log_sha256": "513289b726798c43670dbbca355c8da9aa677fc5506042bf1d5b7e841a8a7b7b",
+      "source_sha256": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706"
+    },
+    {
+      "script": "research/refine_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/refine_physical_rate_model.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 164.26250829100002,
+      "log": "research/detailed_audit/20261013_discovery_replay/2_discovery.log",
+      "log_sha256": "f3128b8386982bde1c40acba8c7fac9f6d380e8c6eefa7c8923f118b4c5acb81",
+      "source_sha256": "b9ef7619cbf65099709cee715a4d1b0fc8bb5afee1635112ea960d72df6b87f6"
+    },
+    {
+      "script": "research/adversarial_physical_robustness.py",
+      "command": [
+        "python3",
+        "research/adversarial_physical_robustness.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 23.67906800000003,
+      "log": "research/detailed_audit/20261013_discovery_replay/3_discovery.log",
+      "log_sha256": "29980cdd1af5489ef075600b266a9ee411f6ac1873e0441ddb3b587987dabedd",
+      "source_sha256": "5874a32b7f1c9caeeba02799795969c6f22dbfd58fcbc93be286774fb9a4eb72"
+    }
+  ],
+  "scope": "Optimizer replay is numerical discovery, not proof. Original published candidate is preserved.",
+  "environment": {
+    "python": "3.9.13 (main, Oct 27 2024, 16:26:11) \n[Clang 16.0.0 (clang-1600.0.26.3)]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "mpmath": "1.3.0",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "output_comparison": "research/detailed_audit/20261013_discovery_replay/output_comparison.json",
+  "interpretation": "All saved numeric results, histories, stage decisions, iteration/evaluation counts and adversarial optimizer-success flags reproduced exactly. Elapsed time ignored; the current nominal receipt additionally records profile=nominal. No claim of global optimality or continuous robustness."
+}

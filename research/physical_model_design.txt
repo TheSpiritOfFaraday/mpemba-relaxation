@@ -1,0 +1,25 @@
+Study declared 12 October 2026 before numerical screening.
+
+Four metastable configurations have ordered energies 0, g1, g1+g2,
+g1+g2+g3. Basin A consists of configurations 0 and 3; basin B consists
+of 1 and 2. This models interleaved energy levels in two conformational
+basins, with a higher activation cost for changing basin.
+
+Saddle energies are max(Ei,Ej)+h_A on edge (0,3),
+max(Ei,Ej)+h_B on edge (1,2), and max(Ei,Ej)+h_X on all four
+interbasin edges. A common attempt frequency is fixed to 1.
+These are three shared activation parameters, chosen independently of
+eigenvectors. The same bath generator acts on both thermal preparations.
+
+Initial screening will use the previously declared benchmark box.
+Hypothesis: rapid equilibration within each basin leaves a slow mismatch
+of basin populations. Interleaved energies can make this mismatch
+nonmonotonic in preparation temperature. A hotter preparation may then
+have less mismatch while its larger intrabasin disturbance decays rapidly.
+
+This is a phenomenological activated configuration network, not yet a
+derived continuum potential or an experimental system. The barrier law,
+metastability approximation, and microscopic realization must be assessed
+separately. Known metastable-population mechanisms are not claimed novel.
+All triplet tests will be evaluated, without assuming their failure.
+Sampling is discovery, not a certified robust neighborhood.

@@ -1,0 +1,15 @@
+{
+  "seed": 111027,
+  "count": 250000,
+  "patterns": {
+    "(1, -1, -1, -1)": 146714,
+    "CDF_nonnegative": 250000,
+    "(1, 1, 1, -1)": 42570,
+    "(1, 1, -1, -1)": 57028,
+    "(1, -1, 1, -1)": 3687,
+    "(1, 0, -1, -1)": 1
+  },
+  "multiple_sign_change_examples": [],
+  "elapsed": 3.493330717086792,
+  "scope": "Numerical observations only; near-zero coordinates use relative1e-8 threshold"
+}

@@ -1,0 +1,176 @@
+\section{What the triplet premise still guarantees in any dimension}\label{sec:orderedconductances}
+The counterexample invalidates the proposed exclusion of ordinary cooling.
+A substantial part of the exclusion principle nevertheless survives, under
+only the $G$ inequalities and for any number of states.
+
+Let $q_i=\pi_i(\beta_b)>0$ and define the symmetric reduced conductances
+\[
+k_{ij}=\frac{M_{ij}}{q_i}=\frac{M_{ji}}{q_j},\qquad i\ne j.
+\]
+These are conductances divided by both equilibrium weights. For an ordered
+triplet $i<j<k$, its original-rate expression is
+$G_{ijk}=a_{ik}q_j/q_i-a_{jk}=q_j(k_{ik}-k_{jk})$. Thus the condition
+\begin{equation}\label{eq:orderedk}
+k_{ik}\leq k_{jk}\quad\text{for all }i<j<k
+\end{equation}
+is exactly $G_{ijk}\leq0$ for every triplet. Failure of every original
+predicate implies this condition, by the branch-equivalence lemma. No
+$F$ inequality is used in the following theorem.
+
+\begin{theorem}[No strong effect and no anomalous heating]\label{thm:orderedk}
+Consider an irreducible reversible $n$-state generator, $n\geq2$, with distinct ordered
+energies and $0<\beta_b<\infty$. Suppose \eqref{eq:orderedk} holds.
+Then:
+\begin{enumerate}
+\item No nonbath Gibbs preparation at a finite positive temperature has zero
+projection onto the entire slowest nonstationary eigenspace. Hence there is
+no strong cooling or strong heating effect, including when that eigenspace
+is degenerate.
+\item For any $\beta_f>\beta_n>\beta_b$ and every finite $t\geq0$,
+\[
+\sum_i\frac{[p_i(t;\beta_f)-q_i]^2}{q_i}
+>
+\sum_i\frac{[p_i(t;\beta_n)-q_i]^2}{q_i}.
+\]
+Thus heating has no finite-time weighted Euclidean reversal. It also has
+no asymptotic relative-entropy reversal, for any slow multiplicity.
+\item If the slow mode is simple, its thermal overlap can be oriented to be
+strictly negative throughout cooling, strictly positive throughout heating,
+and strictly increasing throughout heating. Consequently there is no
+asymptotic heating effect in any fixed norm.
+\end{enumerate}
+These statements do not exclude ordinary cooling, and do not assert
+finite-time relative-entropy or total-variation ordering.
+\end{theorem}
+
+\begin{proof}
+Write $L=M^\top$, $Q_k=\sum_{i=1}^kq_i$, and define the weighted prefix
+contrasts, for $k=1,\ldots,n-1$, by
+\[
+h^{(k)}_i=\begin{cases}
+1,&i\leq k,\\
+-Q_k/q_{k+1},&i=k+1,\\
+0,&i>k+1.
+\end{cases}
+\]
+They have zero $q$-mean and are mutually orthogonal in
+$\langle f,g\rangle_q=\sum_iq_if_ig_i$. Their squared norms are
+$\eta_k=Q_kQ_{k+1}/q_{k+1}$. Put $e^{(k)}=h^{(k)}/\sqrt{\eta_k}$.
+This is a weighted Helmert basis of the entire nonstationary function space.
+
+Detailed balance makes the matrix $A_{kl}=\langle e^{(k)},Le^{(l)}\rangle_q$
+symmetric. For $k<l$, direct multiplication gives
+\begin{align}\label{eq:helmertoffdiag}
+\sqrt{\eta_k\eta_l}A_{kl}
+={}&Q_{l+1}\sum_{i=1}^kq_i(k_{k+1,l+1}-k_{i,l+1})\\
+&+\sum_{j=l+2}^nq_j\sum_{i=1}^kq_i(k_{k+1,j}-k_{ij})\geq0.\nonumber
+\end{align}
+To check the identity, note that for every $i\leq k+1\leq l$,
+$(Lh^{(l)})_i=-Q_{l+1}k_{i,l+1}-\sum_{j=l+2}^nq_jk_{ij}$.
+The weighted contrast subtracts its value at $i=k+1$ from the weighted
+prefix values. Each resulting difference is nonnegative by
+\eqref{eq:orderedk}. Thus $A$ is a symmetric Metzler matrix. In particular
+$e^{tA}$ is entrywise nonnegative for $t\geq0$, with positive diagonal.
+This follows by choosing $c$ so that $A+cI$ is entrywise nonnegative and
+using the exponential power series.
+
+Let $g_k(\beta)=\sum_i e^{(k)}_i\pi_i(\beta)$. Apart from its positive
+normalization $\sqrt{\eta_k}$, its numerator is
+\begin{align*}
+N_k(\beta)
+&=\sum_{i=1}^k e^{-\beta E_i}-\frac{Q_k}{q_{k+1}}e^{-\beta E_{k+1}}\\
+&=e^{-\beta E_{k+1}}\sum_{i=1}^k
+\left[e^{\beta(E_{k+1}-E_i)}-e^{\beta_b(E_{k+1}-E_i)}\right].
+\end{align*}
+Every gap in this sum is strictly positive. Therefore every coordinate
+$g_k$ is strictly negative for $\beta<\beta_b$, zero at the bath, and
+strictly positive for $\beta>\beta_b$.
+
+Each $g_k$ is also strictly increasing on the heating side. Indeed, put
+\[
+T_k=(1+Q_k/q_{k+1})e^{-\beta E_{k+1}}+
+\sum_{j=k+2}^ne^{-\beta E_j},\qquad Z=N_k+T_k.
+\]
+For $\beta>\beta_b$, both $N_k,T_k$ are positive and
+\[
+\frac{N_k'}{N_k}>-E_{k+1},\qquad
+\frac{T_k'}{T_k}\leq-E_{k+1}.
+\]
+The first inequality follows by differentiating the positive bracketed sum
+in $N_k$; the second is its interpretation as the negative weighted average
+of energies at least $E_{k+1}$. Consequently
+$(N_k/Z)'=(N_k'T_k-N_kT_k')/Z^2>0$.
+
+The Gibbs likelihood ratio expands as
+$\pi(\beta)/q=\mathbf1+\sum_k g_k(\beta)e^{(k)}$.
+Under the reversible evolution its nonconstant coordinate vector becomes
+$e^{tA}g(\beta)$. For two heating preparations farther and nearer the bath,
+$g(\beta_f)>g(\beta_n)>0$ entrywise. The nonnegative matrix $e^{tA}$ with
+positive diagonal preserves both strict inequalities. Taking squared
+Euclidean norms of the coordinate vectors proves the finite-time assertion.
+
+For the slow-space conclusions let $\lambda_2$ be the largest eigenvalue
+of $A$ and let $\Pi_2$ be its orthogonal spectral projector. Symmetry gives
+\[
+\Pi_2=\lim_{t\to\infty}e^{-\lambda_2t}e^{tA}.
+\]
+Hence $\Pi_2$ is entrywise nonnegative and nonzero. Since $g(\beta)$ has
+strictly one sign in every coordinate, $\Pi_2g(\beta)\ne0$ for every
+nonbath $\beta$. This proves absence of strong effects without assuming
+simplicity. Moreover $\|\Pi_2g(\beta)\|^2$ is strictly increasing on the
+heating side: its derivative is
+$2(\Pi_2g)^\top(\Pi_2g')>0$. Strictness follows from any positive diagonal
+entry of the nonzero nonnegative projector, since $g,g'>0$. The same
+quantity controls the leading relative-entropy coefficient.
+
+If the slow mode is simple, Perron theory for a symmetric Metzler matrix
+allows its coordinate eigenvector $v$ to be chosen nonnegative and nonzero.
+Then $b_2(\beta)=v^\top g(\beta)$ has the stated signs and heating
+monotonicity. Its scale does not affect any ordering conclusion.
+\end{proof}
+
+\paragraph{A larger rate family.}
+The proof in fact requires only that the right-hand side of
+\eqref{eq:helmertoffdiag} be nonnegative for each $k<l$; the individual
+conductance inequalities are sufficient, but not necessary. In four states
+this larger, explicitly checkable family is given by just three inequalities:
+\begin{align*}
+Q_3(k_{23}-k_{13})+q_4(k_{24}-k_{14})&\geq0,\\
+k_{24}-k_{14}&\geq0,\\
+(q_1+q_2)k_{34}-q_1k_{14}-q_2k_{24}&\geq0.
+\end{align*}
+Every conclusion of Theorem~\ref{thm:orderedk} holds under these three
+aggregate inequalities. More generally there are $(n-1)(n-2)/2$ linear
+aggregate inequalities. They can be evaluated before any eigendecomposition.
+
+For a simple four-state slow mode in this family, the anomalous cooling
+region $\{\beta\in(0,\beta_b):\partial_\beta|b_2|>0\}$ is either empty or
+one connected interval. Indeed $b_2<0$ on cooling and $b_2'>0$ throughout
+heating, while the global derivative bound allows at most two stationary
+points counting multiplicity. The negative set of $b_2'$ before the bath can therefore have at most
+one connected component. In this larger family its left endpoint is not
+determined by the present argument. Under the original full triplet premise,
+Corollary~\ref{cor:tripletendpoint} proves that any such interval starts at
+$\beta=0$ and supplies an exact endpoint criterion.
+
+\paragraph{A corrected implication and its mechanism.}
+For every finite $n$, failure of all the original triplet predicates excludes
+strong effects and excludes asymptotic heating in relative entropy; with a
+simple slow mode, heating is excluded in every fixed norm. The finite-time
+weighted Euclidean statement is stronger for its specified distance. The
+four-state counterexample therefore occupies a precise remaining possibility:
+ordinary cooling without eliminating the slow mode. Its small thermal maximum
+is compatible with a slow overlap that never changes sign on either side of
+the bath.
+
+The proof uses a different order structure from monotone energy eigenvectors.
+A positive combination of prefix contrasts can have nonmonotone components,
+so the counterexample does not conflict with this cone. Nevertheless its
+weighted prefix sums are nonnegative. More directly, every Gibbs preparation
+on one side of the bath has coordinates of the same sign in this basis; a
+nonnegative slow spectral projector cannot cancel all of them. This is the
+mechanism excluding strong effects. On heating, all those coordinates also
+grow with the distance from the bath, which explains the additional exclusion.
+The basis, Metzler positivity, and Perron theory are established tools; the
+specific rate-to-contrast identity and its Mpemba consequences require a
+separate priority assessment.

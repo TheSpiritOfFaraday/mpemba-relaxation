@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "exact_check_count": 41,
+  "elapsed_seconds": 0.18428707122802734,
+  "five_state_epsilon": "1/1000",
+  "five_state_gap_lower_bound": "124037/375000",
+  "scope": "Generic cloning identities; rigorous rate/repair bounds over 0<epsilon<=1/30; exact five-state strict positive family member. Thermal advantage limits proved analytically in high_dimension_amplitude.tex."
+}

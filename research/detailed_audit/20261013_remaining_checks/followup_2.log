@@ -1,0 +1,15 @@
+test_inertia_on_known_nondiagonal_spectrum (__main__.AdversarialChecks) ... ok
+test_isolated_no_dependencies_and_optimized_mode (__main__.AdversarialChecks) ... ok
+test_known_root_and_signed_overlap (__main__.AdversarialChecks) ... ok
+test_reversed_temperature_order_is_rejected (__main__.AdversarialChecks) ... ok
+test_transposed_generator_is_rejected_by_weighted_symmetry (__main__.AdversarialChecks) ... ok
+test_triplet_violation_is_rejected (__main__.AdversarialChecks) ... ok
+test_wrong_eigenvector_is_rejected (__main__.AdversarialChecks) ... ok
+test_wrong_mode_interval_is_rejected (__main__.AdversarialChecks) ... ok
+test_zero_pivot_fails_closed (__main__.AdversarialChecks) ... ok
+test_zero_rate_is_rejected (__main__.AdversarialChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.079s
+
+OK

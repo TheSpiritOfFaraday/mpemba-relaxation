@@ -1,0 +1,4 @@
+{
+  "reason": "70-digit check finds positive F134 about4.52e-12 and gap about8.24e-12; fails exact triplet premise. Optimizer exploited floating feasibility tolerance.",
+  "accepted": false
+}

@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-11T21:07:42.351118+00:00",
+  "source": "https://doi.org/10.5281/zenodo.21298061",
+  "version": "v1",
+  "stated_publication_date": "2026-07-10",
+  "repository_created": "2026-07-17",
+  "sha256": "652ab8413de300ae8a117d10e918a6153ca0269a7271e6801554f89c2e17dd5d",
+  "read": [
+    "Section7 Theorem7.3 Corollary7.5",
+    "Warning7.13",
+    "Section11 Theorems11.1-11.2 and Remark11.3"
+  ],
+  "conclusion": "Prior explicit scalar nonbath strong-temperature n-2 bound. Our stationary-point theorem is a different derivative statement; rank-r extension and triplet-specific theorems remain separately assessed.",
+  "limitations": [
+    "PhilArchive web open returned403; primary Zenodo full PDF retrieved and read",
+    "Peer-review status not verified",
+    "No exhaustive priority guarantee"
+  ]
+}

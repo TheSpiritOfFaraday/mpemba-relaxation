@@ -1,0 +1,33 @@
+{
+  "reviewed_utc": "2026-10-13T03:26:59.672096+00:00",
+  "source_sha256": "8f5b70dfad77ce682132c26d03b93f836f4f81bcde3ca7c79e7390fdfdd5d23c",
+  "groups": [
+    {
+      "command": "python3 research/recheck_all.py --group core",
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "children": 12,
+      "all_current_sources_and_logs_match": true
+    },
+    {
+      "command": "python3 research/recheck_all.py --group extensions",
+      "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "children": 19,
+      "all_current_sources_and_logs_match": true
+    },
+    {
+      "command": "python3 research/recheck_all.py --group physical",
+      "receipt": "research/detailed_audit/20261013T021448Z_physical/receipt.json",
+      "children": 1,
+      "all_current_sources_and_logs_match": true
+    }
+  ],
+  "steps": [
+    "Argparse accepts exactly the three fixed group names and requires a group. No user command text is evaluated.",
+    "Each listed child executes with sys.executable and an absolute script path from the project root, with no omitted required arguments.",
+    "OPENBLAS_NUM_THREADS and OMP_NUM_THREADS are fixed to1; PYTHONOPTIMIZE is removed so assertion-based certificates remain active.",
+    "Before and after source hashes and full stdout/stderr logs are retained per child. Nonzero exit or source change marks that child failed.",
+    "The final complete flag records that execution ended; all_passed and process exit are the success signals. A complete=true receipt alone does not certify anything.",
+    "The three existing completed group receipts match every current GROUPS member, invocation, source hash and saved log. This verifies the wrapper by composition with the completed child executions; it does not repeat the expensive certificates or replace their mathematical review."
+  ],
+  "scope": "Command orchestration and exact correspondence of existing full group executions, separate from analytic proof review."
+}

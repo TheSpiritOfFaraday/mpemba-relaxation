@@ -1,0 +1,64 @@
+{
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "arithmetic": "mpmath.iv, 60 decimal digits",
+  "uniformization_rate": ".5",
+  "max_terms": 281,
+  "max_tail": 9.989733678108822e-46,
+  "time_interval_attempt_units": [
+    58.89269283538078,
+    117.78538567076156
+  ],
+  "time_interval_nominal_tau_units": [
+    0.4,
+    0.8
+  ],
+  "slow_eigenvalue_bracket": [
+    -0.007471215507667577,
+    -0.0061128126880916536
+  ],
+  "tau_interval_attempt_units": [
+    133.8470291713199,
+    163.59081343161327
+  ],
+  "distance_cell_count": 80,
+  "minimum_KL_inequality_margin": 0.000440871811706654,
+  "cold_distance_floor_lower": 0.003491753420104463,
+  "threshold_band": [
+    0.001,
+    0.01
+  ],
+  "threshold_cells": 60,
+  "certified_min_time_saving_lower": 0.08122451759242905,
+  "parameter_neighborhood_certified": false,
+  "parameter_box_physical_constraints": {
+    "scope": "entire independent +/-5% parameter box",
+    "energy_span_upper": 3.8602031085913384,
+    "min_adjacent_gap_lower": 0.1105351118367327,
+    "barrier_excess_range": [
+      2.0083607241871397,
+      5.922084445418439
+    ],
+    "rate_ratio_upper": 993.7522347006822,
+    "preparation_ranges": [
+      [
+        3.7259373528566972,
+        4.012878126841613
+      ],
+      [
+        9.048480903744657,
+        9.89568941992831
+      ]
+    ],
+    "performance_certified": false
+  },
+  "scope": "fixed decimal model; whole time interval and whole threshold band"
+}

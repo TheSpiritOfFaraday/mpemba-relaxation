@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "checks": [
+    "F123 strict-repair identity",
+    "G123 strict-repair identity",
+    "F124 strict-repair identity",
+    "G124 strict-repair identity",
+    "F134 strict-repair identity",
+    "G134 strict-repair identity",
+    "F234 strict-repair identity",
+    "G234 strict-repair identity",
+    "sqrt(eta1) times f-prime(0)=q1 Q3>0"
+  ],
+  "scope": "Exact all-strict triplet identities and positive initial-time derivative of the cold-preparation limit. The companion analytic argument establishes finite thermal reachability; no KL reversal claim."
+}

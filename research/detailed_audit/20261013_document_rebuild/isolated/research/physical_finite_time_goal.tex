@@ -1,0 +1,115 @@
+\section{Priority research goal: robust finite-time cooling}
+\label{sec:physicalfinitetimegoal}
+\textbf{Research priority recorded 12 October 2026; verified rate-model outcome below.}
+The objective is a physically motivated thermalization rate model with a
+substantial, robust \emph{finite-time} Mpemba advantage under moderate parameter
+ranges. This takes priority over extending the asymptotic amplitude extremum.
+The sharp $25\%$ bound concerns a slow-mode amplitude; it does not establish
+a $25\%$ reduction in cooling time. The existing extreme-parameter sharpness
+families are therefore mathematical benchmarks, not solutions of this goal.
+
+\subsection{Physical model and scope}
+Start with thermally activated transitions between four metastable states,
+using the energy-landscape framework of
+\href{https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/}{Lu and Raz (2017)}.
+For a transition from $j$ to $i$, use
+\[
+ a_{ij}=\nu_{ij}\exp[-\beta_b(B_{ij}-E_j)],\qquad
+ B_{ij}=B_{ji}>\max(E_i,E_j),\qquad \nu_{ij}=\nu_{ji}>0.
+\]
+Then $a_{ij}e^{-\beta_b E_j}=a_{ji}e^{-\beta_b E_i}$, so detailed balance
+is automatic. Both preparations evolve with this same bath generator.
+Begin with a common attempt frequency and a low-dimensional, physically
+specified barrier geometry. Choose that geometry before optimizing the
+effect. Merely expressing an arbitrary reversible matrix as six independently
+fitted barriers does not establish a physical mechanism. A convincing
+candidate must explain its state interpretation, barrier constraints,
+metastable coarse-graining and separation from intrawell relaxation; a
+continuum landscape or other independent microscopic model should test the
+rate approximation when feasible.
+
+The preferred extension of the present paper also retains positive rates,
+a simple slow mode and failure of every original-rate triplet test.
+Check and report those predicates separately. A physically useful example
+that fails this additional premise may meet the finite-time research
+objective, but is not a stronger counterexample to the triplet conjecture.
+Similarly, sparse topologies and additional state counts must be labeled as
+changes of scope, not silently substituted for the four-state construction.
+
+\subsection{Provisional quantitative benchmarks}
+These are initial research targets, not established experimental standards.
+Set $k_B T_b=1$ and fix the reference attempt frequency $\nu_0$.
+Use ordered energies with adjacent gaps at least $0.1$ and total span at most
+$5$; take barrier excesses $B_{ij}-\max(E_i,E_j)$ between $2$ and $6$.
+Start with $\nu_{ij}=\nu_0$, and require the ratio of the largest to smallest
+nonzero directed rate to be at most $10^3$. Restrict preparations to
+$1.25\leq T_c/T_b<T_h/T_b\leq10$.
+These constraints jointly define the initial search box; they do not
+guarantee that any target is feasible. Report the actual rate range and
+relaxation time, not just the energy range. Any wider box, variable
+prefactors, or changed threshold must be recorded as a separate study.
+
+For $x\in\{h,c\}$, let $p_x(t)=e^{Mt}\pi(T_x)$ and use relative entropy
+in nats as the primary distance,
+\[
+ D_x(t)=\sum_i p_{x,i}(t)\log\frac{p_{x,i}(t)}{\pi_{b,i}},
+ \qquad
+ A_D(t)=1-\frac{D_h(t)}{D_c(t)},\qquad
+ \tau=\frac{1}{|\lambda_2|}.
+\]
+Require normal initial ordering $D_h(0)>D_c(0)$. Target both:
+\begin{enumerate}
+\item \textbf{A resolved distance advantage.}
+Find a contiguous interval $[t_1,t_2]\subset(0,5\tau]$ of length at least
+$0.25\tau$ on which $A_D(t)\geq0.10$ and $D_c(t)\geq10^{-3}$.
+The distance floor excludes a large percentage arising only in an
+arbitrarily small asymptotic tail.
+\item \textbf{Time saved to a common threshold.}
+Define $t_x(\delta)=\inf\{t\geq0:D_x(t)\leq\delta\}$ and
+$A_t(\delta)=1-t_h(\delta)/t_c(\delta)$.
+Target $A_t(\delta)\geq0.05$ throughout the predeclared band
+$10^{-3}\leq\delta\leq10^{-2}$, with both initial distances above $10^{-2}$.
+Report absolute time savings in units of $\nu_0^{-1}$ as well as percentages
+and $\tau$ units. These are post-quench relaxation times; preparation time
+and energy cost require a separate accounting for any operational claim.
+\end{enumerate}
+Also report total-variation and Pearson chi-square trajectories to expose
+distance dependence. A KL success is not automatically a success for every
+distance. Common rate rescaling cannot improve either percentage and must
+not be presented as a cooling mechanism.
+
+\subsection{Robustness, verification and decision record}
+The target is a neighborhood, not a single tuned optimum. Test simultaneous
+$\pm5\%$ variations in the independent positive energy gaps, barrier
+excesses and preparation-temperature excesses $T_x/T_b-1$, rebuilding
+detailed balance each time. For models with independently variable
+prefactors, perturb those too. Specify parameter correlations imposed by
+the physical geometry. Seek a neighborhood inside the declared parameter
+box in which both performance benchmarks survive; quantify a smaller
+verified neighborhood if the target tolerance fails. If the result is
+advertised as an extension of the counterexample, the triplet predicates
+must also survive throughout that neighborhood.
+
+Use sampled perturbations and optimization for discovery, followed by
+independent high-precision matrix-exponential and first-passage checks.
+Certify interval-wide distance and threshold claims with interval bounds
+or analytic estimates; a time grid or a random perturbation cloud alone
+does not certify robustness. Record seeds, search boxes, tolerances,
+rejected candidates and all benchmark revisions. The deliverable is a
+compact physical model, explicit parameters, a finite-time performance
+figure, reproducible calculations and a stated robustness domain, with
+physical approximation errors distinguished from numerical errors.
+
+The first milestone was to specify and justify the constrained barrier
+geometry, then screen the declared box and analyze the best candidates.
+Sections~\ref{sec:physicalresults}--\ref{sec:thermalcollision} now establish
+both benchmarks on the full requested neighborhood for an idealized
+thermal-collision rate model. Material and continuum validation remain
+outside that verified conclusion.
+At the time this priority was recorded, no new candidate meeting these
+benchmarks had been established. If a model or box fails, report the
+bounded search evidence or a proved obstruction and the next justified
+model change. Failure to find a candidate is not a general impossibility
+theorem. New evidence and any resulting conclusions belong in this
+comprehensive research report before being promoted into the focused paper.
+

@@ -1,0 +1,106 @@
+\section{Prescribing the slow mode: a two-dimensional feasibility test}\label{sec:realizability}
+The thermal classification concerns an eigenvector of the full generator.
+There is also a finite inverse test for whether a proposed direction can occur
+while every original triplet test fails. It reduces the rate-design problem,
+including spectral ordering, to the intersection of a disk and eight half-planes.
+
+Fix the bath probabilities $q$ and a nonconstant vector $w$ with $q^\top w=0$.
+Let $D=\operatorname{diag}(q)$, and choose any full-rank $4\times2$ matrix $U$
+whose columns span
+\[
+\{f:q^\top f=0,\ (Dw)^\top f=0\}.
+\]
+For a symmetric $2\times2$ matrix $B$, set
+\[
+M_0(B)=-DU B U^\top.
+\]
+This auxiliary matrix need not have nonnegative transition rates; it has
+zero column sums, detailed balance, and null left vectors $\mathbf1,w$.
+
+\begin{theorem}[Exact inverse feasibility]\label{thm:inversefeasibility}
+There exists a strictly positive reversible generator for which $w$ is the
+simple slow left mode and every original triplet predicate fails if and only
+if some positive definite $B$ satisfies the eight linear inequalities
+$F_{ijk}(M_0(B))\leq0$ and $G_{ijk}(M_0(B))\leq0$.
+Equivalently, normalize $\operatorname{tr}B=1$ and write
+\[
+B=\frac12\begin{pmatrix}1+x&y\\y&1-x\end{pmatrix}.
+\]
+The exact feasibility condition is that the resulting eight closed
+half-planes intersect $x^2+y^2<1$.
+\end{theorem}
+\begin{proof}
+If $B$ is positive definite, $D^{-1/2}M_0D^{1/2}$ is negative semidefinite,
+with exactly the two-dimensional kernel spanned by $\sqrt q$ and
+$D^{1/2}w$. Add a reset generator:
+\[
+M=M_0+\rho(q\mathbf1^\top-I).
+\]
+For sufficiently large $\rho>0$, all off-diagonal entries are strictly
+positive. The nonstationary eigenvalues are $-\rho,-\rho-\nu_1,
+-\rho-\nu_2$ with $\nu_1,\nu_2>0$, so $w$ is the simple slow mode.
+The reset contributes zero to every $F$ and $G$, hence the inequalities
+persist. Since the physical rates are now positive, the branch-equivalence
+lemma identifies these with failure of the original predicates.
+
+Conversely, start with any such physical generator, with simple slow
+eigenvalue $\lambda_2<0$. Put
+$M_0=M+\lambda_2(q\mathbf1^\top-I)$. Its symmetrization is zero on the
+stationary and slow directions, and strictly negative on their two-dimensional
+orthogonal complement. Therefore $M_0=-DU B U^\top$ for a positive definite
+$B$. Reset invariance gives the eight inequalities. Positive scaling of $B$
+preserves them, so trace normalization loses no solution. A symmetric trace-one
+$2\times2$ matrix is positive definite exactly when $x^2+y^2<1$.
+\end{proof}
+
+For rational $q,w$, choose $U$ rational by Gaussian elimination. All eight
+half-planes then have rational coefficients. Exact feasibility is particularly
+simple: find the point of their intersection closest to the origin, and compare
+its squared norm with one. The closest point, when the polyhedron is nonempty,
+is either the origin, the orthogonal projection of the origin onto one boundary
+line, or the intersection of two nonparallel boundary lines. Enumerate these
+finitely many candidates and discard those violating any half-plane. Each
+remaining squared norm is rational. A minimum below one certifies realizability;
+a minimum equal to or above one, or no feasible candidate, excludes a simple
+slow realization. Equality must not be rounded into an admissible positive
+definite matrix.
+
+This gives a complete checkable inverse characterization at fixed rational
+bath weights and rational mode direction. It uses established reset and
+semidefinite geometry, but the half-planes enforce the exact original triplet
+premise. It is not a claim that eigenvectors depend convexly on rates. It also
+explains why prescribing a thermal shape can make adversarial searches much
+more efficient than sampling rate matrices: spectral ordering is enforced by
+positive definiteness of only a $2\times2$ matrix.
+
+\paragraph{The necessary slow-mode inequalities are not sufficient.}
+The structural restriction proved in Section~\ref{sec:fulltripletbound}
+does not replace this inverse test. For an exact obstruction, use
+unnormalized bath weights $\widehat q=(5,4,2,1)$ and
+\[
+w=(162,-18,71,-880).
+\]
+Its bath mean is zero, its three Helmert coefficients are $(80,2,80)>0$,
+and $w_1>w_2$, $w_1+w_2-2w_3=2>0$, $w_4<0$. Nevertheless no positive
+full-triplet generator can have this simple slow direction. To see this,
+use $\widehat D=\operatorname{diag}(\widehat q)$ and
+\[
+U=\begin{pmatrix}
+-89/450&431/450\\ -91/360&-521/360\\1&0\\0&1
+\end{pmatrix}.
+\]
+For the signed core $M_0=-\widehat DUBU^\top$, exact expansion gives
+\[
+\frac{482571629}{11676414}F_{123}(M_0)
++\frac{496382581}{11676414}F_{124}(M_0)
++\frac{16620682809}{77842760}G_{234}(M_0)
+=\operatorname{tr}B.
+\]
+All coefficients are positive. The triplet constraints would imply
+$\operatorname{tr}B\leq0$, contradicting $B\succ0$. Using unnormalized
+weights only rescales the fast matrix by a positive constant and does not
+change feasibility. Reset addition leaves these expressions unchanged.
+This is a Farkas-type separating certificate, checked by
+\texttt{extended\_mode\_obstruction\_certificate.py}; it explains why the
+new structural inequalities remain necessary rather than a complete
+realizability characterization.

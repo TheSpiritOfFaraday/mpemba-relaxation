@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-12",
+  "previous_turn_classification": "progress: activated-intermediate model and independent audit recorded",
+  "current_turn_classification": "progress: continuous robustness certificates, independent spectral audit, and rebuilt report",
+  "goal_status": "active",
+  "goal_complete": false,
+  "verified": {
+    "both_benchmarks_simultaneous_radius": ".01",
+    "distance_benchmark_simultaneous_radius": ".05",
+    "physical_ranges_simultaneous_radius": ".05",
+    "threshold_band": [
+      0.001,
+      0.01
+    ],
+    "distance_window_tau": [
+      0.4,
+      0.8
+    ],
+    "time_saving_lower_bound": 0.05,
+    "distance_advantage_lower_bound": 0.1,
+    "cold_distance_floor": 0.001,
+    "independent_audit": {
+      "precision_digits": 70,
+      "method": "independent direct 4x4 matrix exponential and symmetric eigensolve",
+      "parameter_points": 281,
+      "normalized_times": [
+        ".02",
+        ".4",
+        "1.5",
+        "3"
+      ],
+      "distance_enclosure_checks": 2248,
+      "derivative_enclosure_checks": 180,
+      "derivative_method": "central difference with step 1e-20; numerical cross-check, not a derivative certificate",
+      "maximum_point_KL_interval_width": 2.291222767070167e-13,
+      "all_checks_passed": true,
+      "seed": 12102042,
+      "point_audit_is_not_a_box_certificate": true
+    }
+  },
+  "remaining": [
+    "Complete the +/-5% time-saving coverage run or find a failure; do not promote the +/-1% certificate as that target"
+  ],
+  "physical_scope": "Phenomenological shared-barrier Arrhenius network. Activated-intermediate clock check is numerical and separately scoped; no material, continuum, experimental or absolute-time validation.",
+  "completed_5pct_runs": {
+    "spectral_verified_5pct_distance": {
+      "complete": true,
+      "mode": 1,
+      "radius": 0.05,
+      "cells": 128575,
+      "passed": 64288,
+      "pending": 0,
+      "enclosure_errors": 5,
+      "seconds": 154.570598041
+    },
+    "spectral_verified_5pct_start_tight": {
+      "complete": true,
+      "mode": 2,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 7677,
+      "passed": 3839,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 10.038621833
+    },
+    "spectral_verified_5pct_end_tight": {
+      "complete": true,
+      "mode": 3,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.0012955
+    }
+  },
+  "active_run": {
+    "session_id": 34737,
+    "pid": 79168,
+    "command": "./tmp/physical_box_spectral cover .05 1000000 0 .1 2",
+    "log": "research/spectral_verified_5pct_time_tight.log",
+    "binary_sha256": "c15d1beeec7c0ea6b0e056c31ad258fb9170de412c52239c4d14789c0140e5d5",
+    "archived_source": "research/archive/physical_box_spectral_running_20261012.cpp",
+    "archived_source_sha256": "df8eba2a47a1f824afbce6fcb721d911dece60a9c83e6aa3c59765c747439754",
+    "note": "Latest source improves unsplittable interval handling in the driver; accepted-cell arithmetic is unchanged."
+  },
+  "superseded_run": {
+    "session_id": 94648,
+    "pid": 77199,
+    "status": "terminated with exit 143 after the tighter endpoint obligations passed; no completion claim",
+    "reason": "Validated crossing window [0.1,2] tau replaces redundant [0.02,3] coverage"
+  },
+  "pdf_pages": {
+    "research_report": 75,
+    "focused_appendices": 77,
+    "focused_paper": 10
+  },
+  "render_review": "Changed report pages 70-73 and appendix equivalents rendered and visually inspected; no overfull boxes or undefined references.",
+  "preservation": {
+    "focused_paper.tex": true,
+    "output/pdf/focused_paper.pdf": true,
+    "research/archive/research_report_before_focused_paper.tex": true,
+    "research/archive/research_report_before_focused_paper.pdf": true
+  },
+  "sha256": {
+    "research/physical_box_spectral.cpp": "c6256f88a577d884416e79987113a7508482a355e6a89699a51efcbcde4e16f6",
+    "research/run_physical_box_certificate.py": "9138c641cc4e394b88f3860df89c094decc1599cd16b110d27718ab8dc38fbda",
+    "research/check_physical_box_spectral.cpp": "9142c96ed160d73bd7b31e6b656bd4252ef78a93eb04913332041400f21cdc91",
+    "research/check_physical_box_spectral.py": "612dbbb10f2ed960116418ad4750bbf1c1effc9cca60776d5c87e5c3c89b7fea",
+    "research/spectral_box_1pct_certificate.json": "4bed264713535910fd9e4b736bd9c43089ab55f2d947b280e6a26e572e979b53",
+    "research/physical_box_spectral_independent_audit.json": "236cd0b9f0c4c26b44119ef39d407cbc4ed10f6c1099f6ad2293f8ed6827a963",
+    "research/physical_box_ranges_recheck.json": "2aca94ff6fd0292b6c58d6a4ee30425cd8c84d503e117922551793d2afdd6ec2",
+    "research/physical_robustness_certificate.tex": "19f4ce88b7d49b3c118c9e791105eb2bda6e27ba36f71f6880e8d5b2e7853c2d",
+    "research/physical_finite_time_results.tex": "9e7db3a734b7df8cb31887425cd35057c3471818444cf9ea0fff83bdae45fd20",
+    "research_report.tex": "eeef679b0b41c3f47438ecc8d4dd4b66b9d350fed783f0ccb6a53f5fdeb4964b",
+    "focused_appendices.tex": "fdfb01fab480c4cc23e2a3cdc80482ed6be68d0c6e5f5d5cc9dea6ee5f0ed171",
+    "output/pdf/research_report.pdf": "01aa7234d10e7beea9cb11f3409667ca2d2c5fe44b845ecea941aaba2dfc0348",
+    "output/pdf/focused_appendices.pdf": "239d308a2dd66f410ae31347bca8b0fe5a7d6c14a68b0b9dcad9be79acaad70b"
+  }
+}

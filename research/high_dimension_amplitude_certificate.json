@@ -1,0 +1,179 @@
+{
+  "verified": true,
+  "checks": [
+    "base a14 <2 over whole interval",
+    "bounded rate limit 1",
+    "base a24 <2 over whole interval",
+    "bounded rate limit 2",
+    "base a34 <2 over whole interval",
+    "bounded rate limit 3",
+    "two-low clone correction identity",
+    "one-low clone G identity",
+    "one-low clone F identity",
+    "auxiliary low pair 12 clone F formula",
+    "auxiliary low pair 12 F<-1/3 (worst r=0)",
+    "auxiliary low pair 13 clone F formula",
+    "auxiliary low pair 13 F<-1/3 (worst r=0)",
+    "auxiliary low pair 23 clone F formula",
+    "auxiliary low pair 23 F<-1/3 (worst r=0)",
+    "five-state exact lumped left slow mode",
+    "five-state exact clone-only fast mode",
+    "five-state conservation",
+    "five-state detailed balance",
+    "five-state all rates positive",
+    "five-state strict G123",
+    "five-state strict F123",
+    "five-state strict G124",
+    "five-state strict F124",
+    "five-state strict G125",
+    "five-state strict F125",
+    "five-state strict G134",
+    "five-state strict F134",
+    "five-state strict G135",
+    "five-state strict F135",
+    "five-state strict G145",
+    "five-state strict F145",
+    "five-state strict G234",
+    "five-state strict F234",
+    "five-state strict G235",
+    "five-state strict F235",
+    "five-state strict G245",
+    "five-state strict F245",
+    "five-state strict G345",
+    "five-state strict F345",
+    "five-state perturbed gap lower bound >1/4"
+  ],
+  "bernstein_certificates": {
+    "base a14 <2 over whole interval": {
+      "numerator": [
+        "535248",
+        "29367036/55",
+        "146616083/275",
+        "39564326639/74250",
+        "28496950208207/53460000",
+        "432330720761/810000",
+        "16014159699449/29937600",
+        "17211231376754387/32076000000",
+        "2591966732759203/4811400000",
+        "43408867899139571/80190000000",
+        "13096816955061023/24057000000",
+        "532614997557793/972000000"
+      ],
+      "denominator": [
+        "766584",
+        "42050268/55",
+        "209854221/275",
+        "113193704729/148500",
+        "40734841928131/53460000",
+        "190170196063979/249480000",
+        "228464638227587/299376000",
+        "24524479424467201/32076000000",
+        "14753225005553297/19245600000",
+        "246709246314710617/320760000000",
+        "844466496302167/1093500000",
+        "47138030603699/60750000"
+      ]
+    },
+    "base a24 <2 over whole interval": {
+      "numerator": [
+        "535248",
+        "29373336/55",
+        "146679163/275",
+        "6598348309/12375",
+        "28522064762237/53460000",
+        "44435867420051/83160000",
+        "133636109846153/249480000",
+        "17239891153901327/32076000000",
+        "4721949098404651/8748000000",
+        "43508763221911841/80190000000",
+        "26263388161445101/48114000000",
+        "801365348750857/1458000000"
+      ],
+      "denominator": [
+        "766584",
+        "42050268/55",
+        "209854221/275",
+        "113193704729/148500",
+        "40734841928131/53460000",
+        "190170196063979/249480000",
+        "228464638227587/299376000",
+        "24524479424467201/32076000000",
+        "14753225005553297/19245600000",
+        "246709246314710617/320760000000",
+        "844466496302167/1093500000",
+        "47138030603699/60750000"
+      ]
+    },
+    "base a34 <2 over whole interval": {
+      "numerator": [
+        "934416",
+        "51230952/55",
+        "255558921/275",
+        "68897262107/74250",
+        "49572265160279/53460000",
+        "115684411564103/124740000",
+        "347382120224399/374220000",
+        "29827747621888883/32076000000",
+        "44855486825017447/48114000000",
+        "150015873366784627/160380000000",
+        "11297302222248829/12028500000",
+        "229336367503297/243000000"
+      ],
+      "denominator": [
+        "766584",
+        "42050268/55",
+        "209854221/275",
+        "113193704729/148500",
+        "40734841928131/53460000",
+        "190170196063979/249480000",
+        "228464638227587/299376000",
+        "24524479424467201/32076000000",
+        "14753225005553297/19245600000",
+        "246709246314710617/320760000000",
+        "844466496302167/1093500000",
+        "47138030603699/60750000"
+      ]
+    },
+    "auxiliary low pair 12 F<-1/3 (worst r=0)": {
+      "numerator": [
+        "6",
+        "367/12",
+        "1103/20"
+      ],
+      "denominator": [
+        "117",
+        "467/4",
+        "2331/20"
+      ]
+    },
+    "auxiliary low pair 13 F<-1/3 (worst r=0)": {
+      "numerator": [
+        "177",
+        "2125/12",
+        "3543/20"
+      ],
+      "denominator": [
+        "117",
+        "467/4",
+        "2331/20"
+      ]
+    },
+    "auxiliary low pair 23 F<-1/3 (worst r=0)": {
+      "numerator": [
+        "150",
+        "887/6",
+        "2913/20"
+      ],
+      "denominator": [
+        "117",
+        "467/4",
+        "2331/20"
+      ]
+    }
+  },
+  "exact_check_count": 41,
+  "elapsed_seconds": 0.18428707122802734,
+  "five_state_epsilon": "1/1000",
+  "five_state_gap_lower_bound": "124037/375000",
+  "scope": "Generic cloning identities; rigorous rate/repair bounds over 0<epsilon<=1/30; exact five-state strict positive family member. Thermal advantage limits proved analytically in high_dimension_amplitude.tex."
+}

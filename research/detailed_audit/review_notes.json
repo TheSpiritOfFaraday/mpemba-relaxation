@@ -1,0 +1,121 @@
+{
+  "overall_status": "Completed current-report review; final_completion.json supersedes intermediate status notes without extending their individual verification scopes.",
+  "scope": "All current manuscripts and supporting work; historical explorations require scope/claim checking rather than promotion to proofs.",
+  "completed_reviews": [
+    {
+      "topic": "focused witness literal data and arithmetic",
+      "evidence": "research/detailed_audit/freshman_arithmetic.json",
+      "finding": "70 explicit exact checks passed. Fresh independent standard-library reconstruction covers generator, all original predicates, eigenpair and spectral order, stated overlap bounds and initial distance reversal."
+    },
+    {
+      "topic": "Lean build and axiom dependencies",
+      "evidence": "research/detailed_audit/lean_recheck.log",
+      "finding": "Build and all 43 named theorem axiom audits passed. Does not expand the formal theorem scope."
+    },
+    {
+      "topic": "branch reduction",
+      "source": "focused_paper.tex Lemma 1",
+      "finding": "Checked F=hG+dH algebra and separate H positive, negative, zero cases, including inclusive branch equality."
+    },
+    {
+      "topic": "thermal part of quarter bound",
+      "source": "focused_paper.tex thermal proof",
+      "finding": "Checked contrast decomposition, both conditional Gibbs derivatives, 3/4<P<1, signs in b_c-r*b_h, and inequality reversal for negative overlaps. Structural mode-shape theorem is now separately reviewed in mechanism_and_shape_review.json; full sharpness-family admissibility remains separate."
+    },
+    {
+      "topic": "sharp-family limiting arithmetic",
+      "source": "focused_paper.tex sharpness section",
+      "finding": "Checked E4=2L^2, hot/cold high-state weights exp(-2/L), exp(-2L), limiting averages -1/30 and -2/45, ratio 3/4. Full family admissibility remains separate from this limit calculation. Both formal-family admissibility and the uniform-gap strict perturbation are now reviewed in sharpness_review.json."
+    },
+    {
+      "topic": "physical temperature reduction calculus",
+      "source": "research/physical_robustness_certificate.tex",
+      "finding": "Checked cold concavity earliest-root logic, hot implicit-root derivative sign, and why two endpoint inequalities suffice conditional on all continuous derivative and spectral certificates."
+    },
+    {
+      "topic": "source correspondence",
+      "evidence": "research/detailed_audit/source_correspondence.json",
+      "finding": "Original strict/inclusive tests and finite-temperature conjecture status checked live against fixed arXiv versions."
+    },
+    {
+      "topic": "new checker negative controls",
+      "evidence": "research/detailed_audit/freshman_negative_controls.json",
+      "finding": "All five deliberately invalid variants rejected in both normal and optimized Python."
+    },
+    {
+      "topic": "complete physical robustness replay",
+      "evidence": "research/detailed_audit/20261013T011947Z_physical/receipt.json",
+      "finding": "Fresh compile and all eight coverage obligations passed. Continuous mathematical interpretation still depends on the separately reviewed temperature reduction and implementation assumptions."
+    },
+    {
+      "topic": "controlled mechanism, ordered-conductance theorem and first-three restriction",
+      "evidence": "research/detailed_audit/mechanism_and_shape_review.json",
+      "finding": "45 detailed analytic/implementation review steps; four prior passing replay source/log hashes revalidated; nine additional numbered statement instances reviewed. Sharpness and remaining results stay open."
+    },
+    {
+      "topic": "sharpness constructions, sharp upper bound and finite-span corollary",
+      "evidence": "research/detailed_audit/sharpness_review.json",
+      "finding": "38 analytic review steps and 21 new exact formula/enclosure checks. Seven more numbered statement instances reviewed; total 20."
+    },
+    {
+      "topic": "expanded guide rendering and print behavior",
+      "evidence": "research/detailed_audit/guide_expansion_qa.json",
+      "finding": "Four advanced proof routes plus finite-span explanation added; keyboard expansion, desktop and 390px layout, complete print and screen-state restoration verified. Selected printed pages visually reviewed; all PDF words are inside page bounds."
+    },
+    {
+      "topic": "primary witness, monotonicity, energy thresholds, G-only amplitude and simple-mode finite classification",
+      "evidence": "research/detailed_audit/primary_order_classification_review.json",
+      "finding": "59 analytic and implementation-review steps; five prior replay hashes matched; 11 primary manuscript correspondence comparisons passed; 18 additional statement instances reviewed."
+    }
+  ],
+  "issues_found": [
+    {
+      "issue": "RESULTS.txt falsely said no Lean formalization",
+      "resolution": "Updated dated status and bounded formal coverage after fresh build."
+    },
+    {
+      "issue": "focused_paper.tex onset equation printed literal quad",
+      "resolution": "Restored missing backslash; rebuilt ten-page PDF; only page six text changed; rendered page six inspected."
+    },
+    {
+      "issue": "old physical completion audit pins focused source/PDF hashes",
+      "resolution": "Preserved original PDF and fixed baseline hashes. Added strict revision verifier: only one missing backslash may change in the source, only literal quad may disappear on PDF page six. Other pages and text must agree."
+    },
+    {
+      "issue": "bundled Playwright launcher lacks playwright-cli executable",
+      "resolution": "Use browser automation for rendered verification; no inference of UI success from source alone."
+    },
+    {
+      "issue": "Closed HTML details disappeared from Chromium print output despite print CSS.",
+      "resolution": "beforeprint opens all details and shows every audit row; afterprint restores exact prior open/hidden state. Verified filtered three-row screen restores after full-table print, including all advanced explanations."
+    }
+  ],
+  "next_required_work": [
+    "All 31 selected core/extension scripts and eight physical coverage obligations passed. Audit the advertised commands not yet included, then complete the per-claim analytic and implementation reviews.",
+    "Review each numbered claim plus unnumbered analytic arguments against actual implementation coverage.",
+    "Audit interval rounding, transcendental enclosures, spectral assumptions, complete box coverage, and false-claim handling.",
+    "Recheck source correspondence and attribution against primary literature.",
+    "Complete guide browser interaction, narrow-screen and accessibility checks; expand remaining advanced proof walkthroughs.",
+    "Finish all unchanged-page figure/table checks; the focused typography revision alone is now checked."
+  ],
+  "partial_implementation_review": {
+    "source": "research/physical_temperature_reduced_combined.cpp",
+    "checked": [
+      "Basic interval +, -, *, / enclose finite binary64 operations with nextafter; reciprocal rejects zero-containing denominator.",
+      "MPFR 128-bit directed exp/log/sqrt and decimal conversion retain rounding direction.",
+      "phi interval uses monotone branches and nonnegative mathematical floor.",
+      "Independent box coordinates use temperature excess, with radius rounded outward.",
+      "Threshold rejection needs entire cold-distance interval outside the band.",
+      "Nonnegative multiplier certificates have the correct implication sign on the band.",
+      "Closed children share their midpoint, unresolved cells subdivide, and empty queue is required for completion.",
+      "Slow-root bracket uses strict signs and derivative positivity; root refinements are intersections."
+    ],
+    "remaining": [
+      "Full semigroup and derivative derivations",
+      "All interval edge cases and implementation negative controls",
+      "Independent binary64/MPFR bounds stress checks",
+      "Mapping every code branch to the analytic certificate"
+    ]
+  },
+  "completion_evidence": "research/detailed_audit/final_completion.json"
+}

@@ -1,0 +1,12 @@
+{
+  "review": "Rendered revised report pages66-77 and appendix pages68-79; inspected equation, table and figure layout with no clipping or overlap. Final report source also passed the built-in LaTeX compiler.",
+  "files": {
+    "output/pdf/research_report.pdf": "13e3cd46949c522a052d789cce2a8391b60d05b63a06bff65abd17663263d63a",
+    "output/pdf/focused_appendices.pdf": "c635b6c993668803e20296c54a0679f88d3dad5a264df78a18d9197e4da59879"
+  },
+  "image_sets": [
+    "tmp/pdfs/finite-report-*.png",
+    "tmp/pdfs/finite-appendix-*.png"
+  ],
+  "reviewed_by": "authoring agent; not external human peer review"
+}

@@ -1,0 +1,3 @@
+progress cells=3000 passed=1494 pending=13 enclosure_errors=437 seconds=3.8097649580000001
+progress cells=7000 passed=3494 pending=13 enclosure_errors=1007 seconds=8.8533755000000003
+{"complete":false,"mode":0,"radius":0.01,"cells":10000,"passed":4995,"pending":11,"enclosure_errors":1386,"seconds":12.690239833}

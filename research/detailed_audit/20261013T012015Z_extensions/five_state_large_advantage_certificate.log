@@ -1,0 +1,9 @@
+{
+  "verified": true,
+  "displayed_gain_percent": [
+    37.677816870814965,
+    37.67781687300184
+  ],
+  "elapsed_seconds": 1.1260559558868408,
+  "scope": "Exact thermal enclosures plus explicit analytic spectral-perturbation bound; positivity/triplets/gap depend on the companion proof and symbolic certificate. Not a Lean formalization."
+}

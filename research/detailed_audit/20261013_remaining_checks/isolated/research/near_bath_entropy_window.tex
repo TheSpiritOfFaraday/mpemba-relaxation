@@ -1,0 +1,115 @@
+\section{A uniform finite-time KL window around the bath}
+\label{sec:nearbatheentropy}
+The full finite-time KL question under the ordered-conductance condition
+can also be settled on a quantitative temperature interval, without
+any additional sparsity or spectral assumptions.
+
+\begin{theorem}[A bath-neighborhood KL ordering window]
+\label{thm:nearbatheentropy}
+Assume a finite irreducible reversible generator has distinct energies
+and every $G_{ijk}\leq0$. Put $c=E_n-E_1>0$.
+On either side of the bath, KL divergence increases strictly with the
+initial inverse-temperature distance from the bath at every finite time,
+provided that distance is at most
+\[
+|\beta-\beta_b|\,c\leq\frac2{\sqrt5}.
+\]
+Thus two same-side preparations within this interval have the usual
+finite-time KL ordering. Cooling preparations must additionally satisfy
+$\beta>0$. The assertion is uniform in time and needs no simple slow
+mode. The numerical constant is a sufficient bound, not a sharp one.
+\end{theorem}
+\begin{proof}
+Shift $E_1=0$ and let $\delta=|\beta-\beta_b|>0$, $z=\delta c$.
+Use orthonormal weighted Helmert columns $e^{(k)}$ and let $E$ denote
+their matrix in this proof. If $\sigma=\operatorname{sign}(\beta-\beta_b)$,
+the Gibbs density-ratio coordinates have the form $\sigma x_0(\delta)$,
+where every component of $x_0$ is positive. Apart from positive constants,
+their numerator is, on heating,
+\[
+\sum_{i\leq k}q_i(e^{-\delta E_i}-e^{-\delta E_{k+1}})
+=\delta\sum_{i\leq k}q_i\int_{E_i}^{E_{k+1}}e^{-\delta s}\,ds,
+\]
+and on cooling it is
+\[
+\sum_{i\leq k}q_i(e^{\delta E_{k+1}}-e^{\delta E_i})
+=\delta\sum_{i\leq k}q_i\int_{E_i}^{E_{k+1}}e^{\delta s}\,ds.
+\]
+Divide by the corresponding relative partition function
+$Z_\sigma=\sum_iq_i e^{-\sigma\delta E_i}$.
+Both the integral's logarithmic derivative after removal of its leading
+$\delta$, and that of the partition function, are signed averages of
+energies in $[0,c]$. Their difference therefore lies in $[-c,c]$.
+Consequently, coordinatewise,
+\[
+\left(\frac1\delta-c\right)x_0
+\leq y_0:=\partial_\delta x_0
+\leq\left(\frac1\delta+c\right)x_0.
+\]
+For $z<1$ both bounds are positive. The contrast semigroup
+$P_t=e^{tA}$ is nonnegative, with positive diagonal, so the evolved
+positive vectors $x=P_tx_0$, $y=P_ty_0$ obey the same inequalities.
+Set $a=1/\delta-c$, $b=1/\delta+c$.
+Their Euclidean angle satisfies
+\[
+\frac{x^\top y}{\|x\|\|y\|}
+\geq\frac{2\sqrt{ab}}{a+b}=\sqrt{1-z^2}.
+\]
+For completeness, with weights $x_i^2/\|x\|^2$ and ratios
+$v_i=y_i/x_i\in[a,b]$, the bound follows from
+$\mathbb E[v^2]\leq(a+b)\mathbb E[v]-ab$ and minimization of
+$\mathbb E[v]^2/\mathbb E[v^2]$.
+
+Initially the density ratio lies in a positive interval $[r_-,r_+]$
+whose endpoint ratio is exactly $r_+/r_-=e^z$. Its weighted mean is one,
+so the interval also contains one. The Markov backward semigroup
+preserves that interval. Thus $r=\mathbf1+\sigma Ex$ at time $t$ and
+the whole straight segment from equilibrium to $r$ lie in the same
+interval. The Hessian of KL in orthonormal contrast coordinates is
+\[
+T_s=E^\top D\operatorname{diag}\bigl((1+s(r-1))^{-1}\bigr)E,
+\qquad mI\preceq T_s\preceq MI,
+\quad m=1/r_+,\quad M=1/r_-.
+\]
+Here $M/m=e^z$. The gradient vanishes at equilibrium. Integrating the
+Hessian along this segment, put $T=\int_0^1T_s\,ds$; the sign $\sigma$
+cancels in the outward temperature derivative, giving
+\[
+\partial_\delta D_{\rm KL}=y^\top T x.
+\]
+The bound $\|T-(M+m)I/2\|\leq(M-m)/2$ and the angle estimate yield
+\[
+\partial_\delta D_{\rm KL}
+\geq\frac{M+m}{2}
+ \left[\sqrt{1-z^2}-\tanh(z/2)\right]\|x\|\|y\|>0
+\]
+whenever $0<z\leq2/\sqrt5$: then
+$\sqrt{1-z^2}\geq z/2>\tanh(z/2)$.
+Both vectors are nonzero at finite time. Integration between two
+same-side preparation temperatures gives the stated strict ordering.
+The result at the bath itself follows from zero equilibrium divergence
+and positivity at every distinct finite-time state.
+\end{proof}
+
+The argument actually covers the larger explicit range
+$\sqrt{1-z^2}>\tanh(z/2)$ within $0<z<1$; the simpler constant
+$2/\sqrt5$ avoids a transcendental threshold. It does not establish
+finite-time KL ordering for arbitrarily far preparations under general
+$G$-only dynamics. The proof uses exact inequalities rather than a
+truncated linear-response expansion, so its time-uniform conclusion
+remains valid even near spectral degeneracy.
+
+More generally, at any heating temperature define
+$a=\min_k g_k'/g_k>0$ and $b=\max_k g_k'/g_k$ from the initial Gibbs
+contrast coordinates. If the evolved density ratios have condition
+number $\kappa=\max_i r_i/\min_i r_i$, the same argument gives the
+finite-time sufficient condition
+\[
+\frac{\kappa-1}{\kappa+1}<\frac{2\sqrt{ab}}{a+b}
+\quad\Longrightarrow\quad
+\partial_\beta D_{\rm KL}(p_t(\beta)\Vert q)>0.
+\]
+The semigroup preserves the initial coordinate-ratio bounds, while
+$\kappa\to1$ under thermalization. This supplies a quantitative route
+to finite-time certification at an arbitrary fixed heating preparation;
+it does not settle the derivative's sign before the condition holds.

@@ -1,0 +1,59 @@
+{
+  "verified": true,
+  "scope": "symbolic coordinate and slope identities; rational sharpness realization",
+  "q": [
+    "1",
+    "1/2",
+    "1/4",
+    "1/8"
+  ],
+  "w": [
+    "-3/32",
+    "11/16",
+    "-3/2",
+    "1"
+  ],
+  "weighted_norm_squared": "191/384",
+  "epsilon": "1/100",
+  "generator": [
+    [
+      "-133673/286500",
+      "76301/143250",
+      "38308/71625",
+      "38128/71625"
+    ],
+    [
+      "76301/286500",
+      "-104687/143250",
+      "18704/71625",
+      "19364/71625"
+    ],
+    [
+      "9577/71625",
+      "9352/71625",
+      "-61643/71625",
+      "9262/71625"
+    ],
+    [
+      "4766/71625",
+      "4841/71625",
+      "4631/71625",
+      "-66754/71625"
+    ]
+  ],
+  "spectrum": [
+    "0",
+    "-99/100",
+    "-1",
+    "-1"
+  ],
+  "Gibbs_numerator": "(2*x - 1)*(4*x - 3)*(4*x - 1)/32",
+  "derivative_polynomial": "5*x**4/2 + 5*x**3/8 + 35*x**2/32 - 45*x/16 + 25/32",
+  "stationary_roots_cooling": 1,
+  "stationary_roots_heating": 1,
+  "strong_beta": [
+    "log(4/3)/log(2)",
+    "2"
+  ],
+  "triplet_constraints_claimed": false
+}

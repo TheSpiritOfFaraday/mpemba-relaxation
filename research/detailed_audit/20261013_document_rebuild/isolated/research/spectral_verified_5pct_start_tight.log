@@ -1,0 +1,8 @@
+progress cells=1000 passed=494 pending=13 enclosure_errors=0 seconds=1.422936875
+progress cells=2000 passed=994 pending=13 enclosure_errors=0 seconds=2.7026380830000001
+progress cells=3000 passed=1494 pending=13 enclosure_errors=0 seconds=3.982320708
+progress cells=4000 passed=1995 pending=11 enclosure_errors=0 seconds=5.2822322909999997
+progress cells=5000 passed=2496 pending=9 enclosure_errors=0 seconds=6.5745948329999999
+progress cells=6000 passed=2995 pending=11 enclosure_errors=0 seconds=7.8534740000000003
+progress cells=7000 passed=3496 pending=9 enclosure_errors=0 seconds=9.1537493330000004
+{"complete":true,"mode":2,"radius":0.050000000000000003,"start_u":[0.099999999999999992,0.10000000000000001],"end_u":[2,2],"cells":7677,"passed":3839,"pending":0,"enclosure_errors":0,"seconds":10.038621833000001}

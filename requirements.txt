@@ -1,0 +1,12 @@
+# Scientific versions recorded as validated in RUNME.txt.
+# Python 3.11 is recommended for a fresh environment.
+sympy==1.14.0
+numpy==1.26.4
+scipy==1.13.1
+mpmath==1.3.0
+matplotlib==3.9.2
+
+# Document/privacy inspection versions used by the packaging environment.
+# These are not asserted to be the original research environment's versions.
+pypdf==6.11.0
+Pillow==10.4.0

@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-11",
+  "objective": "Address criticism 1: verify and expose correspondence to the actual published claim",
+  "source_verification": [
+    {
+      "url": "https://arxiv.org/abs/2603.04567",
+      "version": "v1",
+      "date": "2026-03-04",
+      "checked": "live version history; only v1 listed"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.04567v1#Sx3",
+      "evidence": "N-level protocol explicitly keeps original off-diagonal rates; SI S10-S14 matches all four indexed triplets"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.04567v1#Sx3.SSx2",
+      "evidence": "Explicit conjecture for all-triplet Eq(3) failure, not restricted to Fig 2 sampling box"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.04567v1#Sx3.SSx1",
+      "evidence": "Separate theorem at zero bath temperature requires nondegenerate spectrum and C>A+B on all triplets"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.09988",
+      "version": "v1",
+      "date": "2026-09-09",
+      "checked": "live version history; only v1 listed"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.09988v1#S2",
+      "evidence": "Section II distinguishes exact mechanisms from Eq(3); reiterates necessary-condition inference; Fig 5 example does not establish all predicates fail"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": "State exact published implication without assignment-dependent language",
+      "status": "verified",
+      "evidence": "Report section 2.3, formal C4; abstract and Theorem 1 revised"
+    },
+    {
+      "requirement": "Match all hypotheses and contradictory conclusion side by side",
+      "status": "verified",
+      "evidence": "Section 2.3 six-row table; primary exact certificate rerun and passed; current rational generator checked directly"
+    },
+    {
+      "requirement": "Preserve original-rate, branch and temperature semantics",
+      "status": "verified",
+      "evidence": "Original Boolean P evaluated directly for all four triplets; finite cooling witness; original column generator"
+    },
+    {
+      "requirement": "Distinguish zero-temperature theorem and later exact three-state criterion",
+      "status": "verified",
+      "evidence": "Section 2.3 Three distinct statements; C>A+B fails for triplet123; E implies P implication direction explained"
+    },
+    {
+      "requirement": "Separate universal conjecture from finite numerical sampling claims",
+      "status": "verified",
+      "evidence": "Section 2.3 sampling paragraph; log400>5 and rate ratio8/1799<0.05 checked; no claim within sampled boxes"
+    },
+    {
+      "requirement": "Deliver reproducible clean source and PDF",
+      "status": "verified",
+      "evidence": "revise_report.py embeds claim_scope.tex; RUNME updated; built-in compiler and Tectonic success; 15-page final render inspected, including enlarged new section; no overfull boxes or unresolved references"
+    }
+  ],
+  "triplets_checked": [
+    {
+      "triplet": "123",
+      "kappa": "7225/57",
+      "F": "-1176493/4975",
+      "G": "-39403/200",
+      "P": false
+    },
+    {
+      "triplet": "124",
+      "kappa": "3321/133",
+      "F": "-32119/1592000",
+      "G": "-279/2000",
+      "P": false
+    },
+    {
+      "triplet": "134",
+      "kappa": "1747/1960",
+      "F": "-7761/4000",
+      "G": "-2/25",
+      "P": false
+    },
+    {
+      "triplet": "234",
+      "kappa": "1391209/12548025",
+      "F": "-190400119/1592000",
+      "G": "-119/4975",
+      "P": false
+    }
+  ],
+  "outstanding_required_work": [],
+  "scope_limit": "Addresses criticism 1 only. Does not establish a new counterexample inside either sampling box or provide external peer review."
+}

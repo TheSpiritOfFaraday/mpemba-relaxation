@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "method": "ordered algebraic field and exact Sturm root counts",
+  "base": "1/2",
+  "energy_exponents": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "downward_rates": [
+    "76301/143250",
+    "38308/71625",
+    "38128/71625",
+    "18704/71625",
+    "19364/71625",
+    "9262/71625"
+  ],
+  "slow_eigenvalue": "-99/100",
+  "slow_multiplicity": 1,
+  "nonzero_characteristic_polynomial": "lambda**3 + 299*lambda**2/100 + 149*lambda/50 + 99/100",
+  "ordinary_cooling": true,
+  "ordinary_heating": true,
+  "strong_cooling_count": 1,
+  "strong_heating_count": 1,
+  "cooling_sign_changing_stationary_points": 1,
+  "heating_sign_changing_stationary_points": 1,
+  "thermal_numerator": "-297*x**3/29843750 + 891*x**2/59687500 - 3267*x/477500000 + 891/955000000",
+  "partition_power": 1,
+  "derivative_numerator": "-297*x**4/11937500 - 297*x**3/47750000 - 2079*x**2/191000000 + 2673*x/95500000 - 297/38200000",
+  "algebraic_sign_refinements": 0,
+  "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+}

@@ -1,0 +1,11 @@
+progress 0 1000 0
+progress 50 51000 0
+progress 100 101000 0
+progress 150 151000 0
+progress 200 201000 0
+progress 250 251000 0
+progress 300 301000 0
+progress 350 351000 0
+progress 400 401000 0
+progress 450 451000 0
+{"seed": 111027, "count": 250000, "patterns": {"(1, -1, -1, -1)": 146714, "CDF_nonnegative": 250000, "(1, 1, 1, -1)": 42570, "(1, 1, -1, -1)": 57028, "(1, -1, 1, -1)": 3687, "(1, 0, -1, -1)": 1}, "multiple_sign_change_examples": [], "elapsed": 3.493330717086792, "scope": "Numerical observations only; near-zero coordinates use relative1e-8 threshold"}

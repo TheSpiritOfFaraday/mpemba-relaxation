@@ -1,0 +1,36 @@
+{
+  "pages": {
+    "research_report": 126,
+    "focused_appendices": 81,
+    "focused_paper": 10,
+    "freshman_guide": 90
+  },
+  "status_pages": [
+    76
+  ],
+  "local_links_valid": 231,
+  "unique_ids": 72,
+  "checked_utc": "2026-10-13T03:56:15.508955+00:00",
+  "all_current_source_hashes_match": true,
+  "all_current_command_dependency_hashes_match": true,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "mobile_document_width": 390,
+  "visual_review": [
+    "guide PDF page 1",
+    "guide PDF page 76",
+    "desktop guide introduction"
+  ],
+  "source_manuscripts_unchanged": true,
+  "sha256": {
+    "research_report.tex": "3044a0fb078698ec3e5626e7cf9d7087fa2c0f0b2f92c9645ea3c2e21e109001",
+    "focused_appendices.tex": "493e0240553df717ce644a547106dd275716b9ffb646e7f7817230714e14462f",
+    "focused_paper.tex": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "freshman_guide.html": "bfde1ccd3fc2b08f53eec36d2a795633e8cf50ed96475b658fa7be9543732fae",
+    "output/pdf/research_report.pdf": "6cae39aa09055a00297c52058078dfb85c833903a4b0f64311c7fe21b1770bc4",
+    "output/pdf/focused_appendices.pdf": "e927c97a8c2cc205c61e0c45ec0eaf4f35fa248f393d1178aac73e472fc3ea37",
+    "output/pdf/focused_paper.pdf": "338083e5d49de4466111e307586d41ca530e2fe2893e48c454c16bdf27e652fb",
+    "output/pdf/freshman_guide.pdf": "d5c37fc2822de371d20818fb32a4deecde3f8c0a5684d135b0cc66b9f50ee257",
+    "output/playwright/guide-final.png": "f9460c9b044746c4f856b6a9f7ab797eaa75574a4f7100af03acf09784e33cd9"
+  }
+}

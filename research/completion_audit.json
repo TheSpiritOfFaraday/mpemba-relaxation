@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-11",
+  "objective": "implement the goal found in the file called goal",
+  "outcome": "Four-state positive finite-bath-temperature conjecture disproved by exact certified counterexample",
+  "requirements": [
+    {
+      "item": 1,
+      "requirement": "Source and current status",
+      "evidence": "research/source_audit.md; research_report.tex section 2; original full text sources/2603.04567v1.html",
+      "status": "verified"
+    },
+    {
+      "item": 2,
+      "requirement": "Model and conventions",
+      "evidence": "research_report.tex sections 2.1 and 6.3; exact generator assertions in both certificates",
+      "status": "verified"
+    },
+    {
+      "item": 3,
+      "requirement": "Triplet predicate and equality cases",
+      "evidence": "research_report.tex section 2.2; exact original Boolean predicate assertions in certificates",
+      "status": "verified"
+    },
+    {
+      "item": 4,
+      "requirement": "Mpemba definition and normalization",
+      "evidence": "research_report.tex section 2.3 and theorem 1; cofactor bath-mean/right-left checks",
+      "status": "verified"
+    },
+    {
+      "item": 5,
+      "requirement": "Six approaches plus two additional ideas and complementary agents",
+      "evidence": "research/approaches.md; report section 5; theorem, search and skeptical audit files",
+      "status": "verified"
+    },
+    {
+      "item": 6,
+      "requirement": "Concrete proof and counterexample routes",
+      "evidence": "research/theorem_notes.md; cone_search.py; adversarial scripts; exact-mode companion",
+      "status": "verified"
+    },
+    {
+      "item": 7,
+      "requirement": "Adversarial reproducible search",
+      "evidence": "research/adversarial_notes.md and saved scripts, seeds, logs; root cone_candidate.json",
+      "status": "verified"
+    },
+    {
+      "item": 8,
+      "requirement": "Checkable counterexample and audit",
+      "evidence": "research/adversarial_certificate.py and JSON; rational_mode certificate; independent_mode_audit.py; report section 3",
+      "status": "verified"
+    },
+    {
+      "item": 9,
+      "requirement": "Structural result and corrected condition",
+      "evidence": "report section 4; open family, reset family and Metzler theorem; no incomplete full-conjecture gap remains",
+      "status": "verified"
+    },
+    {
+      "item": 10,
+      "requirement": "Autonomous concrete work and useful progress",
+      "evidence": "Executed exact certificates, source audit, research findings, and continuation calculation in report section 8",
+      "status": "verified"
+    },
+    {
+      "item": 11,
+      "requirement": "Eight-part final report",
+      "evidence": "research_report.tex has eight sections; compiled success; output/pdf/research_report.pdf exported with no TeX warnings and visually inspected",
+      "status": "verified"
+    }
+  ],
+  "limits": [
+    "Bounded primary-source literature search; no exhaustive priority claim",
+    "Asymptotic cooling witness; no specified finite crossing-time calculation",
+    "Corrected absence theorem retains simple slow-mode assumption"
+  ],
+  "required_work_remaining": []
+}

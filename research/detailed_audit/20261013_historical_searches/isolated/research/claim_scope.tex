@@ -1,0 +1,37 @@
+\subsection{Precise published claim and the contradiction}\label{sec:claimscope}
+The target is the finite-temperature conjecture in Avitan, Factor and Gelbwaser-Klimovsky, rather than an extrapolation supplied by this report. Their \href{https://arxiv.org/html/2603.04567v1#Sx3}{N-level protocol} states: ``if all triplets violate the conditions, the $N$-level system will not exhibit the Mpemba effect.'' The \href{https://arxiv.org/html/2603.04567v1#Sx3.SSx2}{non-zero-temperature subsection} explicitly identifies this as a conjecture. The protocol and SI Eqs.~(S10)--(S14) specify the original rates.
+
+Let $\mathsf{ME}_{\rm cool}(M,E,\beta_b)$ mean that there exist finite $0<\beta_h<\beta_c<\beta_b$ with $|b_2(\beta_h)|<|b_2(\beta_c)|$, where the bath and generator are fixed and the slow nonzero eigenvalue is simple. Section~\ref{sec:cooling} shows that this implies an initial-to-eventual KL-distance reversal. A necessary consequence of the published conjecture, restricted to four states and this regular domain, is
+\begin{equation}\label{eq:claimC4}
+\boxed{\quad
+\bigwedge_{i<j<k}\neg P_{ijk}
+\quad\Longrightarrow\quad
+\neg\mathsf{ME}_{\rm cool}(M,E,\beta_b).
+\quad}\tag{$\mathcal C_4$}
+\end{equation}
+This is a universally quantified implication over distinct ordered energies, positive reversible rates and $0<\beta_b<\infty$. Requiring positive rates and a simple slow mode restricts the domain; it does not enlarge the authors' claim. Restricting the conclusion to cooling makes it weaker. A counterexample to this restricted consequence therefore suffices to refute the unrestricted finite-temperature conjecture, independently of any heating or spectral-boundary convention.
+
+\begin{center}\small
+\begin{tabular}{p{.42\textwidth}p{.49\textwidth}}
+\toprule Requirement in $(\mathcal C_4)$&Witness in Theorem~\ref{thm:counterexample}\\\midrule
+Four ordered distinct energies&$E=(0,\log(200/199),\log(5/2),\log400)$.\\
+Finite positive bath&$\beta_b=1$.\\
+Conservative reversible thermal dynamics&All twelve off-diagonal rates are positive; $\mathbf1^\top M=0$ and $M\diag(q)$ is symmetric.\\
+Simple slow nonzero eigenvalue&One root in each of $(-20,-19)$, $(-60,-59)$ and $(-337,-336)$.\\
+Original-rate triplet failures&Exact evaluations below give $F<0$ and $G<0$ on all four triplets, with both $\kappa$ branches represented.\\
+Conclusion contradicted&$\beta_h=1/1000<\beta_c=1/100<1$ and $|b_2(\beta_c)|-|b_2(\beta_h)|>0.0001034076$.\\\bottomrule
+\end{tabular}
+\end{center}
+The table records the proof obligations, which the exact construction below discharges. No effective rate, principal-submatrix diagonal, infinite initial temperature or equality case is used. Shifting all energies by the same positive constant also makes $E_1>0$, if desired, without changing any rate test or Gibbs distribution.
+
+\paragraph{Three distinct statements.}
+The March paper's zero-temperature theorem assumes $\beta_b\to\infty$, a nondegenerate spectrum and $C>A+B$ for every triplet (SI Eq.~S20). Our bath is finite and the latter inequality fails already for $123$: $1<28+1799/8$. Thus the counterexample does not challenge that theorem or the three-state necessity of Eq.~(3).
+
+The September paper, \href{https://arxiv.org/html/2609.09988v1#S2}{Gelbwaser-Klimovsky, Section II}, distinguishes Eq.~(3) from its exact three-state mechanisms. Write $\mathcal E_{ijk}$ for satisfaction of one of those mechanisms. In their nondegenerate three-state setting, necessity gives $\mathcal E_{ijk}\Rightarrow P_{ijk}$, but not conversely. Consequently
+\[
+\bigwedge\neg P_{ijk}\ \Longrightarrow\ \bigwedge\neg\mathcal E_{ijk}.
+\]
+Necessity supplies no converse to this implication. Its reported four-state effects with no triplet mechanism therefore do not, by that fact alone, establish failure of $(\mathcal C_4)$. Section II separately reiterates the original-rate Eq.~(3) absence inference. Our witness verifies the stronger premise $\bigwedge\neg P_{ijk}$ explicitly.
+
+\paragraph{General conjecture versus sampled parameter ranges.}
+The March Fig.~2 uses rates from $0.05$ to $1$ and $\beta_bE_i$ from $0$ to $1$; the September Fig.~5 uses rates from $0.001$ to $1$ and $\beta_bE_i$ from $0$ to $5$. These are sampling ranges, not hypotheses attached to the general inference. Our invariant energy span is $\beta_b(E_4-E_1)=\log400>5$, outside both boxes. Even the downward-rate ratio $a_{12}/a_{23}=8/1799<0.05$ prevents a common time rescaling from placing all downward rates in the March box. We therefore refute the unrestricted conjecture; we neither reproduce nor contradict the finite sample counts, and make no claim of a counterexample within either sampled box.

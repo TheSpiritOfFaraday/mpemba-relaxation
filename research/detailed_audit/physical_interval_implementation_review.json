@@ -1,0 +1,104 @@
+{
+  "reviewed_utc": "2026-10-13T02:19:48.336104+00:00",
+  "groups": {
+    "arithmetic": [
+      "Basic interval addition, subtraction and multiplication take extrema of all endpoint operations and widen by one nextafter. Under the stated IEEE binary64 round-to-nearest, gradual-underflow and no-contraction compilation assumptions this includes each exact real operation.",
+      "Division explicitly rejects denominators containing zero; reciprocal endpoints are ordered correctly for either positive or negative denominators. Empty intersections, nonpositive logarithm arguments and negative square-root lower bounds throw and cannot certify a cell.",
+      "MPFR receives binary endpoints exactly and evaluates exp/log/sqrt with directed rounding before directed conversion back to double. Decimal input parsing is separately directed downward and upward, enclosing the specified real decimal value.",
+      "phi(z)=(1+z)log(1+z)-z decreases on(-1,0) and increases on(0,infinity). Endpoint hulls and the exact zero minimum on crossing intervals therefore enclose it; clipping a negative lower rounding artifact to zero uses a proved global lower bound.",
+      "First-order interval automatic differentiation uses the product and quotient rules with interval values and all nine parameter/time derivatives. For phi its derivative is log(1+z), including negative arguments above-1.",
+      "The entire functions cosh(sqrt(z)) and sinh(sqrt(z))/sqrt(z) have positive Taylor coefficients for z>=0; their derivatives are respectively half the second function and the explicitly evaluated third function.",
+      "For z<1e-8, retaining terms through degree8 leaves tails far below1e-80 for each function, including f1-prime. The f1-prime recurrence multiplies by z(n+1)/(n(2n+2)(2n+3)), matching its exact coefficients.",
+      "For larger z, the MPFR formulas account for cancellation in(cosh(sqrt(z))-sinh(sqrt(z))/sqrt(z))/(2z) with separately outward terms. Real fast spectra justify clipping squared gaps to the nonnegative domain.",
+      "295 primitive regression comparisons cover cancellation, subnormal binary values, exp/log/sqrt, zero and both sides of the1e-8 entire-function branch, phi across its minimum, and five invalid-domain rejections. These point checks supplement the analytic arithmetic argument."
+    ],
+    "reduction_and_spectrum": [
+      "The model uses six independent physical coordinates: three positive gaps and three symmetric barrier excesses. Downward exp(-h) and upward exp(-h-(Ej-Ei)) satisfy detailed balance with exp(-Ei) exactly; column diagonals conserve mass.",
+      "For a zero-sum probability deviation, eliminate its fourth coordinate as minus the first three. A directed edge j-to-i contributes the reduced matrix(delta_ai-delta_aj)*(delta_bj if j<3 else-1); the code matches this convention.",
+      "The fixed near-eigenbasis is specified by exact decimals rather than assumed exact numerical eigenvectors. Interval Gaussian elimination encloses its inverse and rejects any pivot interval through zero.",
+      "Transforming each constant edge matrix before multiplying its uncertain rate retains cancellations without altering the mathematical reduced generator. The basis and inverse remain parameter independent.",
+      "Centered mean-value intersections for R, Gibbs coordinates and modal inputs use the original whole-box derivative enclosures and a recomputed point value. Omitting coordinate8 there is correct because these quantities do not depend on time.",
+      "The characteristic polynomial is det(xI-R) in scalar-plus-two-block form. Its derivative includes the block determinant and the two off-diagonal coupling derivatives with the correct signs.",
+      "Opposite endpoint polynomial signs and positive derivative on[-.015,-.001] establish one simple root for every parameter choice. Interval Newton intersections and the Schur-complement fixed-point equation both preserve every such root.",
+      "Implicit derivatives of the root are minus the partial characteristic derivatives divided by its nonzero x derivative. Evaluating characteristic(J(L)) holds the root argument derivative at zero, as required for those partials.",
+      "The normalized right and left slow eigenvectors solve the fast two-by-two block equations with first component one. The block determinant is checked through interval division; left-right normalization gives the rank-one spectral projector.",
+      "With right slow vector(1,v), H=F-vb acts on quotient coordinates W=(-v,I). The identities WR=HW, WQ=W and Q[:,fast]W=Q give exp(Rt)=exp(lambda t)P+Q[:,fast]exp(Ht)W.",
+      "Detailed balance makes all actual eigenvalues real and diagonalizable. The fast half-gap squared is nonnegative; explicitly checking a+sqrt(d2)<lambda isolates the slow mode from both fast eigenvalues.",
+      "Normalized time uses t=-u/lambda and exp(lambda t)=exp(-u). Parameter derivatives therefore include the changing slow clock through t, while the slow scalar exponential is independent of physical parameters at fixed u."
+    ],
+    "semigroup": [
+      "The two-by-two Dyson expansion separates diagonal D from off-diagonal C in Ht. The retained diagonal is exp(Dii); the one-insertion off-diagonal integral equals Cij exp((D11+D22)/2) sinhc((D11-D22)/2).",
+      "The induced infinity norm of diagonal exponentials on a segment is bounded by exp(segment*max Dii). Each n-insertion simplex has volume1/n!, giving omitted norm<=exp(m)(exp(c)-1-c).",
+      "Differentiating a term contributes either a diagonal derivative with total segment length one, or one of n off-diagonal derivatives. Summing n>=2 gives exp(m)[norm(Dprime)(exp(c)-1-c)+norm(Cprime)(exp(c)-1)].",
+      "The code adds symmetric bounds of these sizes to every matrix entry and derivative. It differentiates the retained formulas by interval AD and includes parameter dependence of the block transformation separately.",
+      "The exact alternative uses the fast spectral quadratic: on Q, (R-aI)^2=d2 I. Splitting its exponential series into even and odd terms yields the printed hyperbolic identity, also at coincident fast eigenvalues.",
+      "Entire-function evaluation avoids division by an uncertain fast gap. Intersecting values and derivatives of the Dyson and exact hyperbolic enclosures is valid because both bound the same differentiable expression.",
+      "The final two coverage engines are byte-identical except that the combined version adds this hyperbolic intersection. The derivative obligations use the Dyson engine; distance, endpoint and time obligations use the combined engine.",
+      "The generic Taylor scaling-and-squaring helper is retained but not called by the final Spectral eval path. It is not silently counted as an independent proof route for these completed obligations."
+    ],
+    "entropy_and_temperature": [
+      "The basin split is A={1,4}, B={2,3}. deltaA equals minus deviations in states2 and3; conditional contrasts subtract bath conditional fraction times the basin mass deviation.",
+      "The binary KL formula q phi(d/q)+(1-q)phi(-d/(1-q)) is exact because linear terms cancel. Adding basin KL and mass-weighted conditional KL yields the full four-state KL by its chain rule.",
+      "Temperature derivatives of a Gibbs distribution are qi(Ei-U)/T^2 and qi[((Ei-U)^2-Var(E))/T^4-2(Ei-U)/T^3]. Their masses vanish, so the same reduced semigroup propagates them without adding equilibrium.",
+      "The reconstructed evolved derivatives give D_T=sum pprime log(p/pi) and D_TT=sum[(pprime)^2/p+psecond log(p/pi)]. Interval AD through those expressions also supplies parameter gradients and the next thermal derivatives needed by centered bounds.",
+      "For positive reversible rates, the entropy derivative in time is minus one-half the detailed-balance edge sum of(ri-rj)(log ri-log rj), strictly negative outside equilibrium. Finite-time invertibility excludes exact arrival at equilibrium from a distinct preparation.",
+      "Modes2,3,6 prove both preparations above.01 at u=.1 and below.001 at u=2. Strict decrease therefore brackets a unique threshold root for every threshold in[.001,.01].",
+      "Mode4 proves cold concavity in temperature on the full time/physical domain. At the earlier of the two cold endpoint root times, both endpoint distances are at least the threshold; concavity puts every interior distance above their chord, so interior cold roots are no earlier.",
+      "Mode5 proves hot temperature derivative nonpositive whenever hot distance lies in the threshold band. The implicit root derivative -D_T/D_u is then nonpositive because D_u<0, making the lowest hot temperature the latest arrival.",
+      "Modes7 and8 fix the cold temperature to each enclosing endpoint and the hot temperature to its enclosing lower endpoint. Together with the two derivative obligations, their continuous conditional time margins imply the full temperature-domain time-saving inequality.",
+      "Fixing the unused other preparation temperature in modes4,5,6 is valid because each single-preparation quantity depends on the same six physical parameters and only its own temperature.",
+      "The independent checker reconstructs the original four-by-four generator, obtains the clock by a70-digit symmetric eigensolve, and uses a direct matrix exponential. It does not share the reduced spectral or Dyson implementation.",
+      "Its finite differences at1e-14 and1e-12 check temperature derivatives and their parameter/time gradients, with6744 value comparisons and360 gradient comparisons over the nominal point,256 corners and24 seeded interior points. These remain numerical cross-checks, not whole-box proofs."
+    ],
+    "acceptance_and_coverage": [
+      "Distance acceptance requires both0.9 Dc-Dh>=0 and Dc>=.001 throughout the cell. Interval comparisons use the conservative endpoints of the exact decimal thresholds.",
+      "Time-margin acceptance concerns F=Dc(u)-Dh(.95u) when Dc lies in the threshold band. The derivative with respect to u of the hot term is explicitly multiplied by.95 after evaluation; physical-parameter derivatives already include the fixed factor in the input time.",
+      "Whole-cell exclusion is allowed only if the enclosing cold distance interval is disjoint from the threshold band. Otherwise F+alpha(Dc-.01) or F+alpha(.001-Dc)>=0 with alpha>=0 implies F>=0 on the band.",
+      "Heuristic choices of alpha are finite nonnegative binary constants. Every chosen expression is reevaluated with interval arithmetic; the heuristic estimate itself supplies no proof.",
+      "When selected-expression partial derivatives have fixed sign over the whole cell, its minimum lies on the corresponding face. The face evaluates exactly the same selected multiplier expression; a face outside the threshold band never excludes the original cell.",
+      "The hot-derivative obligation uses the analogous band multipliers on -D_T and whole-cell hot-distance exclusion. It requires nonnegativity, not strict negativity of D_T, which is sufficient for the root monotonicity reduction.",
+      "Each initial physical coordinate encloses nominal times1+[-.05,.05]; for preparations the perturbation applies to T-1 before adding one back. Directed decimal parsing and one-up radius expansion enclose the exact requested box.",
+      "The coverage stack starts with the entire relevant domain. An accepted cell is removed; an unresolved cell is replaced by two closed children sharing exactly the same binary midpoint. No gaps are introduced.",
+      "Wide time cells are subdivided before evaluation. Derivative scores and fallback widths choose where to split but do not affect validity. Exceptions become unresolved cells; unsplittable points or exhausted precision produce nonzero failure.",
+      "A run is complete only when the pending stack is empty. The runner checks exit status, complete, pending, mode, radius, time endpoints and the full-binary-tree identity cells=2*passed-1. A zero-node-budget control correctly returns exit2 with complete=false and one pending cell.",
+      "False-claim controls reject time savings and distance advantage for equal preparations, while permitting an implication for a whole cell outside the band. The positive nominal control is accepted.",
+      "The runner formerly compared embedded and JSON parameter decimals only after float conversion. Distinct nearby decimals can share a float; the new exact Decimal comparison rejects this, missing arrays, wrong counts and nonfinite parameters before compilation. Current inputs matched exactly even before this repair, and the separate completion audit already checked exact Decimal equality.",
+      "The runner now verifies source stability across compilation and input-file stability through completion, records exact parameter strings and preserves source/binary/log hashes. The prior certificate directory was saved before the refreshed replay."
+    ]
+  },
+  "step_count": 54,
+  "sources": {
+    "research/physical_temperature_reduction.cpp": "121561f78fd5f0b23eb986678d5c289ff60e180f0f1166af197da3eaf04c917c",
+    "research/physical_temperature_reduced_combined.cpp": "7e9435c46d11f66154b52925becbe15d42c8cfb72d4b7b001f74f012b4781cb9",
+    "research/run_robust_finite_time_certificate.py": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177",
+    "research/physical_robustness_certificate.tex": "aca001f090535db244f8074390eae65628bd3cddc27b0d090e7f1cb991071b14",
+    "research/physical_rate_refined.json": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+    "research/check_temperature_reduction.cpp": "e144f8851c9a4ad2e2f72949d2417f05b79f64ddcf37900459f1bcb522bff697",
+    "research/check_temperature_reduction.py": "5dfe98b5337e8294965d7474cfac8246f8aef1030ab3fb887dd0dfbe1c44c1eb",
+    "research/check_physical_box_spectral.py": "612dbbb10f2ed960116418ad4750bbf1c1effc9cca60776d5c87e5c3c89b7fea",
+    "research/check_threshold_constraint_logic.cpp": "83b73d7562dfa1c3f15d33ef4d62212ab2e087cc9b95155e8ec13bd0b18ab862",
+    "research/check_interval_primitives.cpp": "e1d39d09b76a0a4b4ff85d817638126aadd4e8a8581a5d664674e88d198daddb",
+    "research/test_robust_runner_inputs.py": "01ba5b6037e03db7937d59ac28499088cdb0491e8808e584984e0e068fdcbac8"
+  },
+  "evidence": [
+    "research/detailed_audit/physical_runner_input_regressions.json",
+    "research/detailed_audit/physical_interval_controls.json",
+    "research/detailed_audit/temperature_derivative_replay.log"
+  ],
+  "scope": "Final +/-5percent coverage engines and analytic temperature reduction reviewed. Historical alternative engines, nominal uniformization, collision/coarse-graining models, figures and broader publication/command audit require their own recorded coverage.",
+  "fresh_replay": {
+    "all_eight_complete": true,
+    "all_pending_and_errors_zero": true,
+    "published_counts_match": true,
+    "evidence_sha256": {
+      "research/robust_finite_time_certificate/certificate.json": "adce32d8b97e88451fa363faf03ac2af9e29cda4e75cf31549e10a4ec217d9f3",
+      "research/detailed_audit/20261013T021448Z_physical/receipt.json": "0310aa98f9bed674ff54261ad30d5cf839a4742864d21ad8c9f965540daf7985",
+      "research/temperature_reduction_independent_audit.json": "49d1d58fa3538672e0a652406d8a3b5e2efc7a8fc1ae15a4ea87b5dd4d5f342f",
+      "research/detailed_audit/temperature_derivative_replay.log": "995395e7fb5de761b07a942785cc971ba4fa044a735329f78531cd9ebad330dd",
+      "research/physical_finite_time_completion_audit.json": "ad7aed9c7b48177d0d7fd414c3e637ba444f32d981e0dec5e066d1282ea6fb41",
+      "research/detailed_audit/physical_interval_controls.json": "23f74e580f7b2060c9bf5765eb60226e3c446835fc6e1e6dc4f1afc68d7b0bee",
+      "research/detailed_audit/physical_runner_input_regressions.json": "2f97d705adb851646d7aed5daec44ce0292b805751d45ff363016a91ae0eb453"
+    },
+    "independent_binary_sha256": "dcc7c030d5672fe3ad54023b9979e43d726977750f0f4c08cff2c0ecb2102f86"
+  }
+}

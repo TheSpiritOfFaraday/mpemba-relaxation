@@ -1,0 +1,36 @@
+{
+  "accepted": false,
+  "reason": "Exact rational projected realization violates original triplet constraints; floating feasibility residual cannot be accepted.",
+  "positive_tests": [
+    {
+      "test": "G135",
+      "value_approx": "5.06566142537142086870485764156e-10"
+    },
+    {
+      "test": "G146",
+      "value_approx": "0.00000000359796070303982285204537647795"
+    },
+    {
+      "test": "F234",
+      "value_approx": "0.000000129857113381853926980441145083"
+    },
+    {
+      "test": "G235",
+      "value_approx": "5.30573862688493408283643982262e-10"
+    },
+    {
+      "test": "G236",
+      "value_approx": "5.98932299023078017748780605220e-10"
+    },
+    {
+      "test": "G246",
+      "value_approx": "0.00000000516249869367462290616801248290"
+    },
+    {
+      "test": "G346",
+      "value_approx": "0.00000000459340194899528154289078626923"
+    }
+  ],
+  "arithmetic_margin": "-124010588633/50000000000",
+  "positive_definite_fast_matrix": true
+}

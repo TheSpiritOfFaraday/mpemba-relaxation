@@ -1,0 +1,7 @@
+{
+  "source": "research_report.tex",
+  "retained_labels": 83,
+  "all_original_labels_retained": true,
+  "added_appendix": "Explicit rates for the formal sharpness family",
+  "scope": "All technical report sections retained from Problem and literature status onward."
+}

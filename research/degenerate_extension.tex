@@ -1,0 +1,114 @@
+\section{Degenerate slow spaces and a sharp bound on strong preparations}\label{sec:degenerateextension}
+A scalar overlap does not classify a degenerate slow eigenspace. There is,
+however, a complete finite test for a specified asymptotic distance, and a
+simple sharp bound on strong preparations that works for any number of states.
+
+Let $S=D^{-1/2}MD^{1/2}$, and let $P$ be the orthogonal projector onto the
+entire slowest nonstationary eigenspace of dimension $r$. Put
+\[
+H=D^{-1/2}PD^{-1/2},\qquad
+Q(\beta)=\pi(\beta)^\top H\pi(\beta).
+\]
+Since $P\sqrt{\pi_b}=0$, $H\pi_b=0$. Spectral expansion gives
+\[
+\sum_i\frac{(p_i(t;\beta)-\pi_{bi})^2}{\pi_{bi}}
+=e^{2\lambda_2t}Q(\beta)+o(e^{2\lambda_2t}).
+\]
+Relative entropy has the same leading term multiplied by $1/2$. Thus strict
+ordering of $Q$ certifies asymptotic weighted Euclidean and relative-entropy
+reversals. If two specified preparations have equal $Q$, subleading terms can
+decide their eventual ordering; the leading coefficient alone does not decide
+that pair. The existence test below remains complete over all allowed initial
+temperatures: if $Q'$ has no sign change on a side, analyticity and the bath
+zero make $Q$ strictly ordered there. For other norms a degenerate projection can give different orderings;
+no norm-independent scalar assertion is made. A strong preparation is precisely
+$Q=0$ away from the bath, equivalently $PD^{-1/2}\pi(\beta)=0$.
+
+\begin{theorem}[State count and slow-space dimension]\label{thm:strongdimension}
+For $n$ distinct energies and a slow eigenspace of dimension $r$, there are at
+most $n-r-1$ distinct nonbath strong Gibbs preparations. For every prescribed
+set of $n-r-1$ distinct positive nonbath inverse temperatures, and every
+positive finite bath, this bound is attained by a strictly positive reversible
+generator with an $r$-dimensional slow eigenspace.
+\end{theorem}
+\begin{proof}
+Any $k\leq n$ distinct Gibbs vectors are linearly independent. To see this,
+take their first $k$ coordinates and multiply each column by its positive
+partition function. The resulting evaluation matrix of $k$ distinct
+exponentials has nonzero determinant by the exponential Chebyshev property.
+Multiplication by $D^{-1/2}$ preserves independence.
+
+The kernel of $P$ has dimension $n-r$ and already contains the transformed
+bath vector $\sqrt{\pi_b}$. It therefore contains at most $n-r-1$ additional
+Gibbs vectors. For attainability, let $U$ be the span of the transformed bath
+and the $n-r-1$ prescribed transformed Gibbs vectors. They are independent,
+so $\dim U=n-r$. Let $P$ project orthogonally onto $U^\perp$, and define
+\[
+S=-I+ss^\top+\epsilon P,\qquad s=\sqrt{\pi_b},\qquad
+M=D^{1/2}SD^{-1/2}.
+\]
+Choose $0<\epsilon<1$ sufficiently small that
+$s_is_j+\epsilon P_{ij}>0$ for every $i\ne j$; this is possible because all
+$s_i$ are positive and there are only finitely many entries. Then $M$ has
+positive off-diagonal entries, vanishing column sums, detailed balance, and
+spectrum $0$, $-1+\epsilon$ with multiplicity $r$, and $-1$ with multiplicity
+$n-r-1$. Its strong preparations include all the prescribed ones, and the
+bound just proved excludes any others.
+\end{proof}
+
+For four states the maximum number of distinct strong preparations is therefore
+two, one, or zero when the slow multiplicity is one, two, or three. This bound
+counts exact absence of the \emph{whole} slow projection; canceling one chosen
+vector in a degenerate eigenspace is insufficient. It also clarifies why a
+classification must retain spectral multiplicity. The realization proof extends the rank-one perturbation in Klich et al.,
+Appendix VIII, to an orthogonal projector of rank $r$. No novelty claim is made
+for the underlying linear-independence or projector-construction principles;
+publication priority for the sharp Gibbs-preparation bound remains to be checked.
+For $r=1$, the $n-2$ nonbath-zero bound already follows explicitly from
+Emmerson's Theorem 7.3 and Corollary 7.5, as detailed in
+Section~\ref{sec:novelty}; no new scalar strong-temperature bound is claimed.
+The dimension argument here also covers simultaneous cancellation when $r>1$.
+
+\paragraph{Finite classification when $r=2$.}
+Write $f_i=e^{-\beta E_i}$ and $Z=\sum_i f_i$. Then
+\[
+Q'=\frac{R(\beta)}{Z^3},\qquad
+R=(f^\top Hf)'Z-2(f^\top Hf)Z'.
+\]
+For four states, $R$ contains at most sixteen distinct exponential terms.
+There are twelve terms $f_i^2f_k$ with $i\ne k$, with coefficients
+$2(E_k-E_i)(H_{ii}-H_{ik})$, and four terms with distinct indices $i,j,k$,
+with coefficients
+\[
+2\{H_{ij}(2E_k-E_i-E_j)+H_{ik}(2E_j-E_i-E_k)
++H_{jk}(2E_i-E_j-E_k)\}.
+\]
+All four pure cubes have zero coefficient; coincident exponent sums can only
+reduce the count. After combining equal exponents, a nonzero $m$-term $R$
+has at most $m-1\leq15$ real zeros counting multiplicity. It cannot vanish
+identically: that would make $Q$ constantly zero since $Q(\beta_b)=0$, forcing
+$P$ to annihilate all Gibbs vectors, which span the full state space.
+
+Isolate these finitely many zeros on $(0,\beta_b)$ and $(\beta_b,\infty)$,
+then evaluate the sign of $R$ once on each intervening interval. An ordinary
+asymptotic cooling effect exists exactly when some cooling interval has $R>0$;
+a heating effect exists exactly when some heating interval has $R<0$.
+This follows directly by differentiating the nonnegative amplitude $Q$.
+Exponential root isolation can be organized by the repeated Rolle procedure:
+factor out the smallest exponent, differentiate to reduce the number of terms
+by one, recursively isolate derivative roots, and use monotonicity between
+those roots. Limiting endpoint signs follow from the leading nonzero term.
+Exact tangencies must be retained. This is a finite mathematical prescription;
+it does not assert that floating-point sampling or arbitrary transcendental
+equality testing is a certified terminating decision algorithm.
+
+For $r=3$, $S=-\mu(I-ss^\top)$ for some $\mu>0$, hence
+$M=\mu(\pi_b\mathbf1^\top-I)$. This reset generator is stochastically monotone,
+so the earlier all-time convex-divergence ordering applies. There is no
+asymptotic cooling or heating effect in the distances just specified.
+Together with Theorem~\ref{thm:finiteclassification}, these cases cover all
+slow multiplicities of irreducible reversible four-state systems for
+asymptotic relative entropy and weighted Euclidean distance. The arguments
+also allow zero transition rates when irreducibility and the stated spectral
+conditions remain valid; disconnected generators require a different target
+equilibrium and are outside this thermalizing model.

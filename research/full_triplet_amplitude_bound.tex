@@ -1,0 +1,184 @@
+\section{The sharp four-state amplitude bound under all triplet tests}
+\label{sec:fulltripletbound}
+The additional $F$ inequalities sharpen the contrast-cone bound from one
+half to one quarter. The key restriction concerns the first three entries
+of the slow eigenfunction, rather than monotonicity of all four entries.
+
+\begin{lemma}[First-three arithmetic restriction]\label{lem:firstthreearithmetic}
+Let a positive reversible four-state generator have distinct ordered
+energies, a finite positive bath, a simple slow mode, and $F_{ijk}\leq0$,
+$G_{ijk}\leq0$ on every original-rate triplet. Orient its slow left
+eigenfunction by the nonnegative contrast coordinates of
+Theorem~\ref{thm:orderedk}. Then
+\[
+w_1\geq w_2,\qquad w_1+w_2\geq2w_3,\qquad w_4\leq0.
+\]
+\end{lemma}
+\begin{proof}
+Write $q_i=\pi_i(\beta_b)$, $Q_j=\sum_{i\leq j}q_i$, and use the
+unnormalized prefix contrasts $h^{(1)},h^{(2)},h^{(3)}$ from the contrast
+theorem. Their coordinate generator is
+\[
+B=\operatorname{diag}(\eta_1,\eta_2,\eta_3)^{-1}H^\top D L H,
+\quad H=(h^{(1)},h^{(2)},h^{(3)}),\quad D=\operatorname{diag}(q).
+\]
+It is diagonally similar to the symmetric Metzler contrast matrix. Its
+Perron eigenvector $x$ can be chosen nonnegative and nonzero, and $w=Hx$.
+Consequently $w_1-w_2=(Q_2/q_2)x_1\geq0$ and
+$w_4=-(Q_3/q_4)x_3\leq0$. Put
+\[
+s=\frac{(q_1-q_2)q_3}{2q_2Q_3}>0.
+\]
+The remaining assertion is equivalent to $x_2\geq sx_1$, since
+$w_1+w_2-2w_3=(2Q_3/q_3)(x_2-sx_1)$.
+
+We first make a reset subtraction, which is used only in this proof and
+does not alter the original triplet tests. The reduced conductances are
+$k_{ij}=a_{ij}/q_i$. Their minimum is in the first row, by all the $G$
+inequalities. Subtract
+$k_* (q\mathbf1^\top-Q_4 I)$, where
+$k_* =\min\{k_{12},k_{13},k_{14}\}$.
+All resulting rates are nonnegative; their generator is reversible and
+conservative, although it may be reducible. Every $F$ and $G$ is unchanged.
+On the nonstationary contrast space this operation adds $k_*Q_4I$ to $B$,
+so its eigenvectors, simplicity and eigenvalue ordering are unchanged.
+The shifted largest contrast eigenvalue, denoted $\lambda$, is at most zero,
+because the shifted full matrix remains a Markov generator. At least one
+of the shifted downward rates $a_{12},a_{13},a_{14}$ is zero. All quantities
+in the rest of this proof refer to this shifted generator.
+
+If $x_1=0$, the assertion is immediate. Suppose $x_1>0$. Then
+$\delta=\lambda-B_{33}>0$. To see strictness, symmetrize $B$: its largest
+eigenvalue is at least its third diagonal entry. Equality would force the
+third row and column of the positive semidefinite matrix
+$\lambda I-\operatorname{diag}(\sqrt\eta)B
+\operatorname{diag}(1/\sqrt\eta)$ to vanish. The third coordinate vector
+would then be a Perron eigenvector. Simplicity would force $x_1=0$, a
+contradiction. This also handles a zero shifted eigenvalue.
+
+Eliminate $x_3$ from the eigenvector equations. The resulting two by two
+matrix is
+\[
+\mathcal B_{ij}=B_{ij}+\frac{B_{i3}B_{3j}}{\delta},\qquad i,j\leq2.
+\]
+It has nonnegative off-diagonal entries and is diagonally symmetrizable.
+The Schur complement of $\lambda I-B$ shows that $\lambda$ is its simple
+largest eigenvalue, with eigenvector $(x_1,x_2)$.
+Define
+\[
+C=B_{21}+s(B_{22}-B_{11})-s^2B_{12},\qquad
+D_*=(B_{23}-sB_{13})(B_{31}+sB_{32}).
+\]
+Then
+\[
+\delta\{\mathcal B_{21}+s(\mathcal B_{22}-\mathcal B_{11})
+-s^2\mathcal B_{12}\}=\delta C+D_*.
+\]
+A nonnegative value of this expression implies $x_2/x_1\geq s$. Indeed,
+if the two off-diagonal entries of $\mathcal B$ are positive, its Perron
+ratio is the unique positive root of the concave quadratic in braces,
+viewed as a function of $s$. If those entries vanish, symmetrizability makes
+both vanish. Since $x_1>0$ and the largest eigenvalue is simple, one then
+has $x_2=0$ and $\mathcal B_{11}>\mathcal B_{22}$; the expression in braces
+is strictly negative. Thus this exceptional case cannot occur when the
+expression is nonnegative.
+
+All $G$ inequalities give $B_{31},B_{32}\geq0$, and direct simplification gives
+\[
+B_{23}-sB_{13}
+=\frac{Q_4}{2q_1q_2Q_3}
+\{2a_{34}q_1q_2-a_{14}q_2q_3-a_{24}q_1q_3\}\geq0.
+\]
+Hence $D_*\geq0$. If $C\geq0$ the desired expression is already
+nonnegative. If $C<0$, use $\lambda\leq0$ to obtain
+\[
+\delta C+D_*\geq-B_{33}C+D_*.
+\]
+It remains to prove that this last, eigenvalue-free expression is nonnegative.
+
+For brevity write the shifted downward rates as
+$(a,b,c,d,e,f)=(a_{12},a_{13},a_{14},a_{23},a_{24},a_{34})$ and define
+\[
+N=-2q_1q_2q_3F_{123}\geq0,\qquad
+J=e q_1(2q_2+q_3)-c q_2(2q_1+q_3).
+\]
+Exact multiplication yields
+\[
+-B_{33}C+D_*=
+\frac{Q_2Q_4}{4q_1q_2^2Q_3^2}\,T,
+\quad
+T=(c+e+f)N+q_4\{2ceq_3(q_1-q_2)+fJ\}.
+\]
+The prefactor is positive. Since at least one of $a,b,c$ is zero,
+nonnegativity follows from these three exhaustive cases:
+\begin{enumerate}
+\item If $c=0$, then $J=e q_1(2q_2+q_3)\geq0$ and all terms of $T$
+are nonnegative.
+\item If $a=0$, $F_{124}\leq0$ gives
+$c q_2(2q_1+q_4)\leq e q_1(2q_2+q_4)$.
+The ratio $(2q_2+z)/(2q_1+z)$ strictly increases with $z$ and
+$q_3>q_4$. It follows, without division by $c$ or $e$, that $J\geq0$.
+Thus $T\geq0$.
+\item If $b=0$, then
+$N=2a q_2q_3(q_1-q_2)+d q_1q_3(2q_2+q_3)$.
+If $c\leq e$, one has $J\geq0$. If $c>e$, the inequality
+$F_{124}\leq0$ gives instead
+\[
+N+q_4J\geq
+2q_1q_2(q_3-q_4)(c-e)+d q_1q_3(2q_2+q_3)\geq0.
+\]
+Now write
+$T=(c+e)N+f(N+q_4J)+2ceq_3q_4(q_1-q_2)\geq0$.
+\end{enumerate}
+This proves $x_2\geq sx_1$ and completes the lemma, including equality
+faces and every reducible reset-subtracted case.
+\end{proof}
+
+\begin{theorem}[Sharp quarter-amplitude bound]\label{thm:fulltripletbound}
+Under the hypotheses of Lemma~\ref{lem:firstthreearithmetic}, for every
+$0<\beta_h<\beta_c<\beta_b$,
+\[
+\frac{|b_2(\beta_c)|}{|b_2(\beta_h)|}<\frac43.
+\]
+Consequently every ordinary cooling amplitude advantage is strictly below
+$25\%$. The bound is sharp as a supremum, by
+Theorem~\ref{thm:quarterlimit}. The corresponding supremum of the
+asymptotic relative-entropy advantage is $7/16$, and the time advance is
+strictly below $\log(4/3)/|\lambda_2|$.
+\end{theorem}
+\begin{proof}
+Let $m(\beta)$ be the conditional Gibbs expectation of $w$ on states
+$1,2,3$. It is nondecreasing for $\beta\geq0$. To verify this directly,
+shift $E_1=0$, put $a=E_2$, $b=E_3$, $t=e^{-\beta a}$ and
+$y=e^{-\beta b}$, and use conditional probabilities
+$(p_1,p_2,p_3)=(1,t,y)/(1+t+y)$. The first-three vector is a constant
+plus
+\[
+u(1,-1,0)+v(1,1,-2),\qquad
+u=(w_1-w_2)/2\geq0,\quad v=(w_1+w_2-2w_3)/6\geq0.
+\]
+Furthermore
+\[
+(p_1-p_2)'=\frac{2at+by-(b-a)ty}{(1+t+y)^2}>0,
+\qquad (p_1+p_2-2p_3)'=-3p_3'>0.
+\]
+The first inequality uses $t\leq1$ and $b>a>0$; the second uses that
+$E_3$ is the largest of the three energies. Thus $m$ is nondecreasing,
+strictly unless the first three mode components coincide.
+
+Let $P(\beta)=Z_3(\beta)/Z_4(\beta)$ be the Gibbs mass on the first three
+states. It strictly increases with $\beta$, since the excluded state has
+strictly higher energy. For finite positive $\beta$, $3/4<P(\beta)<1$.
+Write $P_h=P(\beta_h)$, $P_c=P(\beta_c)$, and $r=P_c/P_h<4/3$.
+The full overlap is $b_2=Pm+(1-P)w_4$. Therefore
+\[
+b_2(\beta_c)-r b_2(\beta_h)
+=P_c\{m(\beta_c)-m(\beta_h)\}+(1-r)w_4\geq0.
+\]
+The contrast theorem ensures both overlaps are strictly negative on cooling,
+so $|b_2(\beta_c)|\leq r|b_2(\beta_h)|<(4/3)|b_2(\beta_h)|$.
+The relative-entropy and time-advance statements follow from their respective
+quadratic and logarithmic dependence on the amplitude ratio. The existing
+quarter-limit family proves sharpness; none of these suprema is attained at
+finite parameters in the stated domain.
+\end{proof}

@@ -1,0 +1,9 @@
+Completed mode 5: hot_temperature_monotonicity, 52785 nodes
+Completed mode 4: cold_temperature_concavity, 135721 nodes
+Completed mode 7: cold_low_hot_low_time, 54425 nodes
+Completed mode 1: distance_window, 23351 nodes
+Completed mode 2: both_early_endpoints, 105 nodes
+Completed mode 3: cold_late_endpoint, 1 nodes
+Completed mode 6: hot_late_endpoint, 1 nodes
+Completed mode 8: cold_high_hot_low_time, 65045 nodes
+All eight obligations completed: ./research/robust_finite_time_certificate/certificate.json

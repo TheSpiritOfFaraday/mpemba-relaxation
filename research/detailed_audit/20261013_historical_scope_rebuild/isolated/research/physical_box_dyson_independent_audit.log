@@ -1,0 +1,24 @@
+audited points 1
+audited points 51
+audited points 101
+audited points 151
+audited points 201
+audited points 251
+{
+  "precision_digits": 70,
+  "method": "independent direct 4x4 matrix exponential and symmetric eigensolve",
+  "parameter_points": 281,
+  "normalized_times": [
+    ".02",
+    ".4",
+    "1.5",
+    "3"
+  ],
+  "distance_enclosure_checks": 2248,
+  "derivative_enclosure_checks": 180,
+  "derivative_method": "central difference with step 1e-20; numerical cross-check, not a derivative certificate",
+  "maximum_point_KL_interval_width": 2.6503839597458168e-06,
+  "all_checks_passed": true,
+  "seed": 12102042,
+  "point_audit_is_not_a_box_certificate": true
+}

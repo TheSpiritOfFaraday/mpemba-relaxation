@@ -1,0 +1,189 @@
+Independent skeptical audit of the extended classifiers
+Checked 2026-10-11 by the verifier agent.
+
+Files read in full:
+  research/universal_classification.tex
+  research/degenerate_extension.tex
+  research/commensurate_classification.tex
+  research/finite_chi_classification.tex
+  research/exact_commensurate_classifier.py
+Also read the regression suite, cross-audit implementation/results, and the
+transient-only chi-squared construction/certificate implementation.
+The audited files were not edited.
+
+OUTCOME
+No substantive mathematical or implementation defect was found in these five
+files after independent derivations and additional exact boundary tests. This
+is a source/code audit, not a formal verification of SymPy. The analytic
+classification and exact commensurate implementation have different scopes;
+the latter is terminating only under its rationality/commensurability input
+hypotheses. Finite-time classification here applies to weighted Euclidean
+distance (equivalently its square chi-squared), not automatically to KL, TV,
+or arbitrary norms.
+
+1. UNIVERSAL SIMPLE-MODE TEST
+The Wronskian identity has the stated sign: adjoining 1, multiplying all
+columns by Z, and expanding W(Z,f_1,...,f_k) leaves precisely the terms
+j>k with sign (-1)^(k(k-1)/2). In particular, u'<0 and the v(u) curvature
+is strictly positive. The mixed Wronskians give the stated slope formula;
+the slope increases strictly with x and ranges from -1 to s(1), with no
+assumption that s(1) is positive. Thus Phi has at most one interior extremum
+and its infimum/supremum on either side of the bath occur among the listed
+values. Equality of -B/C with a limiting slope correctly creates no interior
+extremum. C=0 and B=C=0 are handled.
+
+The link to an ordinary effect uses the bath zero, not merely the existence
+of a stationary point: absence of anomalous absolute-amplitude ordering
+forces a fixed sign of b and a fixed weak sign of b' on each open side. In
+the reverse direction a last/first sign-changing stationary point gives
+the required interval of anomalous absolute-amplitude ordering. A stationary
+bath does not invalidate this argument. Opposite strict endpoint signs persist
+at finite temperatures; a zero endpoint alone is not treated as a finite
+strong preparation. The strong-root knot procedure is complete because
+between consecutive stationary knots the overlap is strictly monotone.
+
+The Chebyshev bounds count multiplicity, and the interpolation/rank-one
+construction attains them. The perturbation bound implies positive off-diagonal
+rates; bath centering gives conservation. The realization does not imply the
+triplet-failure premise, and the text explicitly avoids that implication.
+
+2. DEGENERATE PROJECTIONS
+The symmetric-projector form H=D^(-1/2) P D^(-1/2) is positive semidefinite,
+annihilates the bath distribution, and gives the correct leading chi-squared
+amplitude. The KL coefficient is half as large. Vanishing Q is equivalent
+to cancellation of the entire slow eigenspace.
+
+Distinct Gibbs vectors are independent up to the number of states by the
+exponential evaluation determinant. Therefore the kernel-dimension argument
+gives at most n-r-1 nonbath strong preparations. The proposed projector
+construction realizes any prescribed set of that size while retaining
+strictly positive rates and the desired slow multiplicity. The endpoint
+r=n-1 remains valid: no prescribed extra preparation and a reset generator.
+
+Independently expanded the formal polynomial R=(f^T H f)' Z-2(f^T H f)Z'
+using f_i'=-E_i f_i and symmetric indeterminate H. All twelve squared-index
+and four distinct-index coefficients match the text exactly; all pure cubes
+cancel. Thus the 16-term/15-zero upper bound is valid, though not asserted
+sharp. R cannot vanish identically for a nonzero slow projector. The finite
+Rolle prescription properly disclaims a terminating oracle for arbitrary
+transcendental equality problems.
+
+Scope wording to tighten: the sentence saying strict ordering of Q
+"classifies ... reversals" can be misread as a decision for every specified
+pair. If Q(beta_f)=Q(beta_n), subleading terms can decide that pair's eventual
+ordering. Strict inequality certifies the leading-amplitude reversal, and
+the derivative test completely classifies EXISTENCE over preparation
+temperatures. The finite-time chi-squared section already handles equal
+leading coefficients correctly by discarding zero differences. This is a
+wording caveat, not a defect in the existence classification.
+
+3. EXACT COMMENSURATE TEST
+With x=exp(-beta Delta), scalar derivative numerator is N'Z-NZ', while the
+quadratic projector amplitude has numerator N'Z-2NZ'. Reversing the beta/x
+orientation does not change whether there is an interior derivative sign
+change. For a nonconstant scalar overlap vanishing at the bath, existence
+of such a sign change on a side is equivalent to an ordinary effect there.
+For nonnegative Q, the derivative's sign near the isolated bath zero fixes
+the ordinary direction, so an interior odd-multiplicity root is likewise
+necessary and sufficient. Even-multiplicity stationary roots alone do not
+count. Square-free counts of N count distinct strong preparations, including
+tangent zeros, while excluding the bath and the two temperature endpoints.
+
+A repeated root of a rational cubic is rational: its irreducible minimal
+polynomial would otherwise have degree at least two and occur twice,
+requiring degree at least four. Thus the rank-two slow projector and the
+rank-three reset projector are rational as claimed.
+
+4. IMPLEMENTATION AUDIT
+All declared checks use exact rational or algebraic-field operations.
+The graph test permits precisely connected positive-rate support; reversibility
+then gives irreducibility. The largest real nonzero root is the slow root.
+Adjugate columns correctly return a left eigenvector through L=M^T, and
+the code checks both its eigen equation and bath centering. In rank two,
+P=L(L-fast I)/(alpha(alpha-fast)) is the backward slow projector, so
+P D^(-1) equals the symmetric amplitude matrix H. Rank three is correct.
+
+OrderedField now consistently uses the CRootOf atom as BOTH coefficient-field
+generator and isolating-interval generator. This repairs the scaled-root
+mismatch. Exact reduction detects zero before refinement. Horner interval
+arithmetic encloses the reduced coefficient polynomial and converges to its
+nonzero value, so refinement terminates. The root atom may appear with a
+rational scale or affine offset without affecting this argument.
+
+The Sturm implementation first square-frees, removes exact endpoint factors,
+then computes sign variations at ordered rational endpoints using the chosen
+real embedding. Removing even-multiplicity derivative factors before this
+count is correct. Constant and identically zero root-count inputs are handled;
+an identically zero thermal derivative is ruled out mathematically and
+explicitly rejected. The implementation covers all three slow multiplicities.
+
+5. ADDITIONAL CHECKS EXECUTED INDEPENDENTLY
+Used Python 3 with SymPy 1.14.0, importing the public OrderedField/classify
+functions but constructing new exact expectations and test polynomials.
+All of the following passed:
+  - All 16 symbolic coefficient identities for the degenerate derivative.
+  - Ordered sign tests for alpha-1.324>0 and alpha-1.325<0, where alpha is
+    the real root of t^3-t-1, under fields initialized by alpha, 3 alpha,
+    and 5-3 alpha.
+  - P=x(x-1)(x-1/2)^2(x-1/3)^3(x-alpha/2): three distinct roots on (0,1),
+    two odd-multiplicity roots on (0,1), and zero roots on (1/3,1/2).
+  - Positive rank-one generator with bath base 1/2, shifted exponents
+    (-3,-2,-1,0), and overlap numerator (x-1/2)^3: no ordinary cooling,
+    no ordinary heating, and no nonbath strong preparation.
+  - Same construction with numerator x(x-1/2)(x-3/4): ordinary effects
+    on both sides, one strong cooling preparation and zero strong heating
+    preparations. The zero at x=0 is excluded as a strong preparation but
+    still produces an ordinary heating effect at finite temperatures.
+
+For transparency: my initial handwritten expectation for the last case
+incorrectly said no ordinary heating. The first run rejected that expectation.
+Independent analysis shows the amplitude is positive between x=0 and x=1/2
+and zero at both endpoints, so it has an interior maximum and finite heating
+witnesses. Correcting the expectation produced the stated pass; no classifier
+code was changed.
+
+Read the current supplied regression result: 16 checks pass. Read the completed
+cross-audit JSON: 100 samples, zero disagreements, zero unresolved comparisons,
+24 cooling and 16 heating cases. These results are supporting tests, not a
+substitute for the independent algebra above. The cross-audit starts with
+70-digit spectral diagonalization but converts the mode and energies to
+ordinary floating point for its geometric classifier; descriptions should not
+suggest every comparison operation retained 70 digits.
+
+6. FINITE-TIME TEST AND TRANSIENT EXAMPLE
+Orthogonality yields exactly one exponential term per distinct nonzero
+eigenvalue; equal-amplitude terms may be deleted. For three surviving terms,
+the stationary equation gives exp((b-a)t)=-bC/(aB), so BC<0 and the ratio>1
+are precisely the conditions for an interior positive time. Endpoints plus
+that value determine the infimum. A strictly negative limit implies a finite
+negative interval; a zero limit alone does not. At most two zeros counted
+with multiplicity follows from the three-exponential Chebyshev property.
+
+The initial chi-squared formula and logarithmic derivative are correct even
+when 2 beta-beta_b is negative. Distinct same-side thermal preparations have
+strict initial distance ordering. A positive eventual coefficient with a
+negative interior minimum requires two crossings and at least three distinct
+nonzero decay rates; hence at least four states. This claim is specific to
+weighted Euclidean/chi-squared distance.
+
+The transient construction's weighted projectors, transpose conversion,
+positive-rate choice of rho, exact eigenpairs, and rational coefficient tests
+are consistent. The two roots in (0,1) give finite times in the reverse order
+under -log(x)/2, as reported. The text correctly does not imply the example
+satisfies the triplet premise or lacks asymptotic anomalies for other pairs.
+
+7. MINOR EDITORIAL SYNCHRONIZATION
+  - commensurate_classification.tex says Fourteen checks; the current suite
+    records 16.
+  - universal_classification.tex says the supplied implementation currently
+    implements ordinary effects only. Identify the floating-point implementation
+    explicitly; the exact commensurate implementation also counts strong roots.
+  - finite_chi_classification.tex calls any zero minimum a tangency. If the
+    minimum occurs only at t=infinity it is a limiting equality, not a finite
+    tangency. The following proof already distinguishes these cases correctly.
+  - Defining q=pi_b locally at the beginning of the finite-time section would
+    improve readability: q is normalized in the intervening conductance section,
+    but it denotes unnormalized weights earlier in the report.
+
+No file in the requested audit set was modified. The substantive scope caveat
+and synchronization items were communicated to the parent agent.

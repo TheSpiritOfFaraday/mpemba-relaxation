@@ -1,0 +1,67 @@
+{
+  "group": "supporting physical models",
+  "complete": true,
+  "source_sha256": {
+    "research/certify_physical_nominal.py": "133efb0e665e2ad9c259a4bd24848d3f8dfd16659abe90d7c5bd0a76d49b62e6",
+    "research/thermal_collision_model.py": "72867339479fbe2ac84e6526c4e6d014a096ff9977dabc7232f1b36152b608fc",
+    "research/activated_intermediate_model.py": "c412144838bd7ac027d0066dd78f55e155b2219f447848bfea74477f4ce7b24a",
+    "research/check_activated_intermediates.py": "d51e24a639664955ddabce4cae004dc43f706c1abfa88ae110dd48a51927b50a",
+    "research/physical_rate_refined.json": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+    "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+    "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581"
+  },
+  "checks": [
+    {
+      "script": "research/certify_physical_nominal.py",
+      "command": [
+        "python3",
+        "research/certify_physical_nominal.py",
+        "research/physical_rate_refined.json"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 11.057274458,
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/certify_physical_nominal.log",
+      "log_sha256": "ffefe4bf6d8e7a7f36140b024094923f89a6dd534ad78cf8954732e39f0caa5c"
+    },
+    {
+      "script": "research/thermal_collision_model.py",
+      "command": [
+        "python3",
+        "research/thermal_collision_model.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.465667667,
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/thermal_collision_model.log",
+      "log_sha256": "55ee0a3f9ddb1ad10a006cc5938a2364c7c68141cdd0d83d3cef533bc018ccbe"
+    },
+    {
+      "script": "research/activated_intermediate_model.py",
+      "command": [
+        "python3",
+        "research/activated_intermediate_model.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.4393244999999997,
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/activated_intermediate_model.log",
+      "log_sha256": "b7eadef833bd21a1515ef28d69142b7dc40931f1800765a97b4d960aac2cd23b"
+    },
+    {
+      "script": "research/check_activated_intermediates.py",
+      "command": [
+        "python3",
+        "research/check_activated_intermediates.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 28.168590833,
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/check_activated_intermediates.log",
+      "log_sha256": "c8648b3ba7067e7bcd2e3f041f9e760f5e879032ca27b42f46bc39ad133b3647"
+    }
+  ],
+  "all_passed": true,
+  "sources_unchanged": true,
+  "scope": "Execution receipt only; numerical output and report correspondence require separate inspection."
+}

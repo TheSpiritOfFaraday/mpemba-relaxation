@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-13T02:54:44.104528+00:00",
+  "pages": {
+    "research_report": 126,
+    "focused_appendices": 81,
+    "freshman_guide": 81
+  },
+  "all_pages_nonempty": true,
+  "all_68_statement_reviews_preserved": true,
+  "local_links_resolve": true,
+  "unique_html_ids": true,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "mobile_document_width": 390,
+  "visual_review": [
+    "report87,117,122,123",
+    "appendices40,41,71,76",
+    "guide67-69"
+  ],
+  "source_diff_scope": "Only three intended fragment edits; all numbered statements retain identical hashes",
+  "sha256": {
+    "research_report.tex": "f7069ff4e20f4b1e9fdabec7071eba1c41ba0b075c51faa8333e428d2e63b1ec",
+    "focused_appendices.tex": "4c615ff3c5fd252b93a8c82fc22e82798ffb4585d4652cec7e2249cb8dbbf961",
+    "freshman_guide.html": "d49eef66e460301d101708658d289278769942d864b44c77f9c4ac9abb2fc6df",
+    "output/pdf/research_report.pdf": "4c3c51860abfe9c0fb5993bb1e1fddfb100813355ccd8c530195b74d982998f1",
+    "output/pdf/focused_appendices.pdf": "16c7718a664ba7aed684e58fe345341acc176b26e00d3f25a9470d059f666699",
+    "output/pdf/freshman_guide.pdf": "41cb067a5f49be9ffce0c0ed50535c16db64bc2ea6bfe5c8649f53ea8995f59c"
+  }
+}

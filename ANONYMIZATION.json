@@ -1,0 +1,884 @@
+{
+  "scope": "All current original research sources, manuscripts, exported papers, figures, data, formal proofs and historical research records; four later intermediate-counterexample files included.",
+  "excluded": [
+    "Downloaded third-party full text (see THIRD_PARTY_SOURCES.json)",
+    "Private correspondence and delivery records",
+    "Raw root task assignment",
+    "Original privacy exporter and previous packages",
+    "Toolchains, build caches, temporary files, operating-system metadata and Git history"
+  ],
+  "limits": "Known identifiers and technical metadata are removed, not absolute anonymity. Distinctive research, preserved historical timestamps and scientific receipt hashes can correlate with other copies. GitHub account/service records are outside this package.",
+  "historical_hashes": "Research receipts retain their historical hashes. The original-to-anonymous mapping stays private; published_sha256 values below bind only public bytes. Metadata rewrites do not constitute new scientific proof runs.",
+  "validation": {
+    "copied_research_files": 3196,
+    "pdf_pages_streams_and_geometry_unchanged": 1878,
+    "png_files_pixels_unchanged": 46,
+    "historically_audited_source_check": {
+      "matching": 282,
+      "different": [],
+      "external_omitted": [
+        "sources/1109.6075v3.txt",
+        "sources/1711.05829_latest.txt",
+        "sources/2007.11433v3.txt",
+        "sources/2308.04557_latest.txt",
+        "sources/2410.06623v2.html",
+        "sources/2410.06623v2.txt",
+        "sources/2410.06686_latest.html",
+        "sources/2410.06686_latest.txt",
+        "sources/2410.06686v2.html",
+        "sources/2410.06686v2.txt",
+        "sources/2502.01758_latest.txt",
+        "sources/2603.04567v1.html",
+        "sources/2603.04567v1.txt",
+        "sources/2609.09988v1.html",
+        "sources/2609.09988v1.txt",
+        "sources/KeilsonKester1974_landing.html",
+        "sources/LuRaz2017.html",
+        "sources/LuRaz2017.txt",
+        "sources/emmerson_2026_cardinality.txt"
+      ]
+    }
+  },
+  "transformations": [
+    {
+      "path": "output/figures/focused_overview.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "2cfd8521bf04e0ffaa2467318f0fbbdd3aa05e2cb48ae37506be7c7c8c8d2be7"
+    },
+    {
+      "path": "output/figures/focused_overview.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "fc678fb38c6c62ee45f9aa1de68a70b0dec3f6857176c7e67edceba1d81152bb"
+    },
+    {
+      "path": "output/figures/mechanism_onset.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "45aee874190afdbd0da6b134eeed166b6fb5a0cb8a85777ccfd5c687e4ca12ae"
+    },
+    {
+      "path": "output/figures/mechanism_onset.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6b6c41db49706fd1e07a05ed397e15b6da4628bf2e78fd1a8ff71b7553a74b27"
+    },
+    {
+      "path": "output/figures/physical_finite_time.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d57bc1f4237447dd292d90be9dcefbdfa4ae50f9ecce3b58d677e53dd7deee5c"
+    },
+    {
+      "path": "output/figures/physical_finite_time.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9b273be6d8f60c83f9402bf97936e5534f15317c37d7ef5d3884a264e5de5dc5"
+    },
+    {
+      "path": "output/figures/quarter_limit.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "54e866299d334b04c5dcb0fc7f14372f9eba510b21cfec6dcf18652c8e486203"
+    },
+    {
+      "path": "output/figures/quarter_limit.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "8ae7b55d81851806e81d90a7c61b9cf71339748107815bc4140fb2197e3edb6e"
+    },
+    {
+      "path": "output/figures/relaxation_crossing.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d133cf699e0093b5b56d3b5a99f245dd21cf409a9c21940f9d372dfaf64b3bb9"
+    },
+    {
+      "path": "output/figures/relaxation_crossing.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "0a0fbe6f4faecf6c833827f9fb509909726aaefcc524dfbbe0e2480c7a6d02c3"
+    },
+    {
+      "path": "output/figures/thermal_overlap.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "44fbff62b82f11f6847fd460ccffb2155b3c61d11fe6fb2386d72d1a3d5b93c6"
+    },
+    {
+      "path": "output/figures/thermal_overlap.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "ac270c03cdb07061679178a239e62ecde4d396e03854519a9f37fe00d851b81c"
+    },
+    {
+      "path": "output/pdf/classification_working_note.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "fb83749293fc62fda2d948af14df9c42b0471d5151bece3bc4e9e48c822d61fc"
+    },
+    {
+      "path": "output/pdf/focused_appendices.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "f515a73c52c6239dbb1465235e08919cede619cf8ddd3ce7ad7a44f0595de00c"
+    },
+    {
+      "path": "output/pdf/focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "6a4a306c3d337b5faed769a0b0074871db3d9411a8b5c091af08be1f07e6e14c"
+    },
+    {
+      "path": "output/pdf/freshman_guide.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "896e800b97656f1c254abe9e873ca53a233ab64fe886115c34c3afbc0366d786"
+    },
+    {
+      "path": "output/pdf/research_report.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "94eaaded6a9c6e3de50da27d6a7a9a1a1b83c789a698e4303d95ff4b3395f540"
+    },
+    {
+      "path": "output/playwright/guide-broader-mobile.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "dc50dfeb2b2536898a3f23bf846a130686216f4c9b6f64703dfba07b81a0516c"
+    },
+    {
+      "path": "output/playwright/guide-dimensions-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "c33a6b451d62192720ba3e0bc5bd3430f21aa71b282215e852ce0040cb8b7864"
+    },
+    {
+      "path": "output/playwright/guide-discovery-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6f9fab1605daa3abe10933c88bc0c2b3dff417636e848c34e398e587a75fea77"
+    },
+    {
+      "path": "output/playwright/guide-entropy-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6acc2ee06967c2f29084100ee6c56db3836911b56e9cd61c116683d746955112"
+    },
+    {
+      "path": "output/playwright/guide-expanded-final.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "bca9432aa03cd6651490702c5099e29abc8e2a4a9459755fa9d1d3c14cf09d19"
+    },
+    {
+      "path": "output/playwright/guide-expanded-mechanism.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9531a8ac8eadbc3ec8676ca33cf0befcf55769de7756c32574b46696d6d1eb78"
+    },
+    {
+      "path": "output/playwright/guide-expanded-report.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9170b3aac62339aee64a15b44af72e3781f3632a76340061ed39a8ced4d7a4f0"
+    },
+    {
+      "path": "output/playwright/guide-figure-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "de6a43dfbf2bf2050cb5fb5aaf7226f00a6d8129a632732d0a3525ad9483e730"
+    },
+    {
+      "path": "output/playwright/guide-final.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "a7eae4d2d1c8ac69969be0b667cae25a5900ce53325b07566fbd2244d22b5e8b"
+    },
+    {
+      "path": "output/playwright/guide-historical-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9792eda73f11d1e49c151227fc12a4108af87d5fcdad71d8c15d693897eada3a"
+    },
+    {
+      "path": "output/playwright/guide-interval-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "472a4d980f0a3a42be2936ded1eba4eadd0397b3af1bf5fe5e276b3660041a4b"
+    },
+    {
+      "path": "output/playwright/guide-mechanism.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "89c605b201cecc058e6e0fa18b3b17fbbde20b6695f16cbfefe0147714d16a33"
+    },
+    {
+      "path": "output/playwright/guide-mobile.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6870f63107293d5188188689998d77800bb6f73ca044d0d3afbba75f530937f7"
+    },
+    {
+      "path": "output/playwright/guide-overview.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "7bf301baf6fbdd624fb4d78e3feee89cecfbda3173631a4519f348285e5066bb"
+    },
+    {
+      "path": "output/playwright/guide-physical-support.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "c143310f89441541a41ee4392bf266b7e610f759f9766e16083845a7fa09bcc5"
+    },
+    {
+      "path": "output/playwright/guide-rebuild-review.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "e10ab617b82f58551120b61c82e6c4e5f30bbcde299af0151b68689b444ac3f1"
+    },
+    {
+      "path": "output/playwright/guide-shape-mobile.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "f47b9ad09512415d06e0be4390942912a5ee62e8f7e5f06af8622fa91d876f20"
+    },
+    {
+      "path": "output/playwright/guide-shape-proof.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "7b90409a08fed3d42c52afbbb151ae2872987b1928d6a05d38e7acaf89dbfa2f"
+    },
+    {
+      "path": "output/playwright/guide-sharpness.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "b02fb1cef450a72c0789e99e839b5a123c2f346248d1fdaf5c2f97e7f9a7e80c"
+    },
+    {
+      "path": "output/playwright/guide-source-approach.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "f1de184a995d7885df6f1570207a25360f87ef89d5159910a6ce4adbd07a068b"
+    },
+    {
+      "path": "research/archive/research_report_before_claim_scope_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "00dc599e11dd9a93b74f99ef04bbcdb4363faa3c0c59d1f51a91f1d086e43f5b"
+    },
+    {
+      "path": "research/archive/research_report_before_classification.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d1b21e9231aeac92b4b9bc046ecb0b1e517bff7d7e38b651b481a1c19a155812"
+    },
+    {
+      "path": "research/archive/research_report_before_focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9f4c73ad242971bfec5e987d677ba367dc107678d0d4b4c20b2729fccd5d7cc8"
+    },
+    {
+      "path": "research/archive/research_report_before_independent_check.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "142d7b6f68f1d7917993874383e9682560047a7a8a152205d844360b2dff6df7"
+    },
+    {
+      "path": "research/archive/research_report_before_mechanism_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "991812a9f8ff3ee844926b929a83895573a32418403da639c759f91b6f12f19a"
+    },
+    {
+      "path": "research/archive/research_report_before_novelty_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9dee57fda1aece558ea88aa67bfea0392c0129664e789061c11ae1d8a6a7238b"
+    },
+    {
+      "path": "research/archive/research_report_before_physics_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "811a9534bf5709e1897f53dc5d9676aa29b5cf39b8ccacce13a44c7d3f016565"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/focused_overview.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "2cfd8521bf04e0ffaa2467318f0fbbdd3aa05e2cb48ae37506be7c7c8c8d2be7"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/focused_overview.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "fc678fb38c6c62ee45f9aa1de68a70b0dec3f6857176c7e67edceba1d81152bb"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/mechanism_onset.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "45aee874190afdbd0da6b134eeed166b6fb5a0cb8a85777ccfd5c687e4ca12ae"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/mechanism_onset.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6b6c41db49706fd1e07a05ed397e15b6da4628bf2e78fd1a8ff71b7553a74b27"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/physical_finite_time.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d57bc1f4237447dd292d90be9dcefbdfa4ae50f9ecce3b58d677e53dd7deee5c"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/physical_finite_time.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9b273be6d8f60c83f9402bf97936e5534f15317c37d7ef5d3884a264e5de5dc5"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/quarter_limit.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "54e866299d334b04c5dcb0fc7f14372f9eba510b21cfec6dcf18652c8e486203"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/quarter_limit.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "8ae7b55d81851806e81d90a7c61b9cf71339748107815bc4140fb2197e3edb6e"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/relaxation_crossing.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d133cf699e0093b5b56d3b5a99f245dd21cf409a9c21940f9d372dfaf64b3bb9"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/relaxation_crossing.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "0a0fbe6f4faecf6c833827f9fb509909726aaefcc524dfbbe0e2480c7a6d02c3"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/thermal_overlap.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "44fbff62b82f11f6847fd460ccffb2155b3c61d11fe6fb2386d72d1a3d5b93c6"
+    },
+    {
+      "path": "research/detailed_audit/20261013T025557Z_figures/isolated/output/figures/thermal_overlap.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "ac270c03cdb07061679178a239e62ecde4d396e03854519a9f37fe00d851b81c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/focused_overview.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "2cfd8521bf04e0ffaa2467318f0fbbdd3aa05e2cb48ae37506be7c7c8c8d2be7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/focused_overview.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "fc678fb38c6c62ee45f9aa1de68a70b0dec3f6857176c7e67edceba1d81152bb"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/mechanism_onset.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "45aee874190afdbd0da6b134eeed166b6fb5a0cb8a85777ccfd5c687e4ca12ae"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/mechanism_onset.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6b6c41db49706fd1e07a05ed397e15b6da4628bf2e78fd1a8ff71b7553a74b27"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/physical_finite_time.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d57bc1f4237447dd292d90be9dcefbdfa4ae50f9ecce3b58d677e53dd7deee5c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/physical_finite_time.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9b273be6d8f60c83f9402bf97936e5534f15317c37d7ef5d3884a264e5de5dc5"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/quarter_limit.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "54e866299d334b04c5dcb0fc7f14372f9eba510b21cfec6dcf18652c8e486203"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/quarter_limit.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "8ae7b55d81851806e81d90a7c61b9cf71339748107815bc4140fb2197e3edb6e"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/relaxation_crossing.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d133cf699e0093b5b56d3b5a99f245dd21cf409a9c21940f9d372dfaf64b3bb9"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/relaxation_crossing.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "0a0fbe6f4faecf6c833827f9fb509909726aaefcc524dfbbe0e2480c7a6d02c3"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/thermal_overlap.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "44fbff62b82f11f6847fd460ccffb2155b3c61d11fe6fb2386d72d1a3d5b93c6"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/figures/thermal_overlap.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "ac270c03cdb07061679178a239e62ecde4d396e03854519a9f37fe00d851b81c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/pdf/focused_appendices.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "e907237d1534c054f0c77a8121efa62e5e6b7ad712e50c84c5af910a7211d6aa"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/pdf/focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "6a4a306c3d337b5faed769a0b0074871db3d9411a8b5c091af08be1f07e6e14c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/output/pdf/research_report.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "37065ca35143974b90d0cbde63192a568e0284d880b2b9157bfbb31ca0b93f29"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_claim_scope_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "00dc599e11dd9a93b74f99ef04bbcdb4363faa3c0c59d1f51a91f1d086e43f5b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_classification.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d1b21e9231aeac92b4b9bc046ecb0b1e517bff7d7e38b651b481a1c19a155812"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9f4c73ad242971bfec5e987d677ba367dc107678d0d4b4c20b2729fccd5d7cc8"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_independent_check.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "142d7b6f68f1d7917993874383e9682560047a7a8a152205d844360b2dff6df7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_mechanism_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "991812a9f8ff3ee844926b929a83895573a32418403da639c759f91b6f12f19a"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_novelty_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9dee57fda1aece558ea88aa67bfea0392c0129664e789061c11ae1d8a6a7238b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_document_rebuild/isolated/research/archive/research_report_before_physics_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "811a9534bf5709e1897f53dc5d9676aa29b5cf39b8ccacce13a44c7d3f016565"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/focused_overview.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "2cfd8521bf04e0ffaa2467318f0fbbdd3aa05e2cb48ae37506be7c7c8c8d2be7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/focused_overview.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "fc678fb38c6c62ee45f9aa1de68a70b0dec3f6857176c7e67edceba1d81152bb"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/mechanism_onset.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "45aee874190afdbd0da6b134eeed166b6fb5a0cb8a85777ccfd5c687e4ca12ae"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/mechanism_onset.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "6b6c41db49706fd1e07a05ed397e15b6da4628bf2e78fd1a8ff71b7553a74b27"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/physical_finite_time.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d57bc1f4237447dd292d90be9dcefbdfa4ae50f9ecce3b58d677e53dd7deee5c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/physical_finite_time.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "9b273be6d8f60c83f9402bf97936e5534f15317c37d7ef5d3884a264e5de5dc5"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/quarter_limit.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "54e866299d334b04c5dcb0fc7f14372f9eba510b21cfec6dcf18652c8e486203"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/quarter_limit.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "8ae7b55d81851806e81d90a7c61b9cf71339748107815bc4140fb2197e3edb6e"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/relaxation_crossing.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d133cf699e0093b5b56d3b5a99f245dd21cf409a9c21940f9d372dfaf64b3bb9"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/relaxation_crossing.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "0a0fbe6f4faecf6c833827f9fb509909726aaefcc524dfbbe0e2480c7a6d02c3"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/thermal_overlap.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "44fbff62b82f11f6847fd460ccffb2155b3c61d11fe6fb2386d72d1a3d5b93c6"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/figures/thermal_overlap.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "ac270c03cdb07061679178a239e62ecde4d396e03854519a9f37fe00d851b81c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/pdf/focused_appendices.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "f515a73c52c6239dbb1465235e08919cede619cf8ddd3ce7ad7a44f0595de00c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/pdf/focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "6a4a306c3d337b5faed769a0b0074871db3d9411a8b5c091af08be1f07e6e14c"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/output/pdf/research_report.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "94eaaded6a9c6e3de50da27d6a7a9a1a1b83c789a698e4303d95ff4b3395f540"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_claim_scope_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "00dc599e11dd9a93b74f99ef04bbcdb4363faa3c0c59d1f51a91f1d086e43f5b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_classification.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d1b21e9231aeac92b4b9bc046ecb0b1e517bff7d7e38b651b481a1c19a155812"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9f4c73ad242971bfec5e987d677ba367dc107678d0d4b4c20b2729fccd5d7cc8"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_independent_check.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "142d7b6f68f1d7917993874383e9682560047a7a8a152205d844360b2dff6df7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_mechanism_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "991812a9f8ff3ee844926b929a83895573a32418403da639c759f91b6f12f19a"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_novelty_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9dee57fda1aece558ea88aa67bfea0392c0129664e789061c11ae1d8a6a7238b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_scope_rebuild/isolated/research/archive/research_report_before_physics_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "811a9534bf5709e1897f53dc5d9676aa29b5cf39b8ccacce13a44c7d3f016565"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_claim_scope_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "00dc599e11dd9a93b74f99ef04bbcdb4363faa3c0c59d1f51a91f1d086e43f5b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_classification.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d1b21e9231aeac92b4b9bc046ecb0b1e517bff7d7e38b651b481a1c19a155812"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9f4c73ad242971bfec5e987d677ba367dc107678d0d4b4c20b2729fccd5d7cc8"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_independent_check.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "142d7b6f68f1d7917993874383e9682560047a7a8a152205d844360b2dff6df7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_mechanism_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "991812a9f8ff3ee844926b929a83895573a32418403da639c759f91b6f12f19a"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_novelty_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9dee57fda1aece558ea88aa67bfea0392c0129664e789061c11ae1d8a6a7238b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_historical_searches/isolated/research/archive/research_report_before_physics_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "811a9534bf5709e1897f53dc5d9676aa29b5cf39b8ccacce13a44c7d3f016565"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_claim_scope_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "00dc599e11dd9a93b74f99ef04bbcdb4363faa3c0c59d1f51a91f1d086e43f5b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_classification.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "d1b21e9231aeac92b4b9bc046ecb0b1e517bff7d7e38b651b481a1c19a155812"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_focused_paper.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9f4c73ad242971bfec5e987d677ba367dc107678d0d4b4c20b2729fccd5d7cc8"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_independent_check.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "142d7b6f68f1d7917993874383e9682560047a7a8a152205d844360b2dff6df7"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_mechanism_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "991812a9f8ff3ee844926b929a83895573a32418403da639c759f91b6f12f19a"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_novelty_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "9dee57fda1aece558ea88aa67bfea0392c0129664e789061c11ae1d8a6a7238b"
+    },
+    {
+      "path": "research/detailed_audit/20261013_remaining_checks/isolated/research/archive/research_report_before_physics_revision.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "811a9534bf5709e1897f53dc5d9676aa29b5cf39b8ccacce13a44c7d3f016565"
+    },
+    {
+      "path": "research/detailed_audit/final_delivery/guide-page1.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "3b61ff0d96fadf1822975264758e019a43ae653b2a34541b6714ab7fda40165e"
+    },
+    {
+      "path": "research/detailed_audit/final_delivery/guide-page76.png",
+      "transformations": [
+        "PNG ancillary metadata removed; decoded pixels verified unchanged"
+      ],
+      "published_sha256": "89bd2af7ab5f4091d8d21c1c799fc6242227aeb5b9da70f2f05e59ba18205c78"
+    },
+    {
+      "path": "research/detailed_audit/historical_scope_revision/focused_appendices.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "e907237d1534c054f0c77a8121efa62e5e6b7ad712e50c84c5af910a7211d6aa"
+    },
+    {
+      "path": "research/detailed_audit/historical_scope_revision/research_report.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "37065ca35143974b90d0cbde63192a568e0284d880b2b9157bfbb31ca0b93f29"
+    },
+    {
+      "path": "research/detailed_audit/pedagogical_revision/research_report_before.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "1179fc3700b8208d433b43989faff3dbae0f5ce93ad584dfd19a5c8783a3045d"
+    },
+    {
+      "path": "research/detailed_audit/typography_revision/focused_paper_before.pdf",
+      "transformations": [
+        "PDF metadata, XMP, piece metadata and document ID removed; page streams/geometry verified unchanged"
+      ],
+      "published_sha256": "376e026e36c73b4fe6bde2ff426285a7df62c6f04e87aab31ba4b7cee9a4c061"
+    }
+  ]
+}

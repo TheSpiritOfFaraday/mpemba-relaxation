@@ -1,0 +1,71 @@
+{
+  "checked_utc": "2026-10-13T02:17:55.637741+00:00",
+  "all_controls_passed": true,
+  "checks": [
+    {
+      "name": "primitives",
+      "command": [
+        "tmp/check_interval_primitives"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "checks": 295,
+        "reference_bits": 512,
+        "scope": "Primitive and entire-function boundary regression points; analytic enclosure proof remains separate"
+      },
+      "binary_sha256": "51c4769da7a549868907bcdd4a6ef27e04b726c1cb51b3bf7031b3817a5ddbd4"
+    },
+    {
+      "name": "false_claims",
+      "command": [
+        "tmp/check_threshold_constraint_logic"
+      ],
+      "exit_code": 0,
+      "result": {
+        "positive_control": true,
+        "equal_preparation_time_claim_rejected": true,
+        "equal_preparation_distance_claim_rejected": true,
+        "outside_band_control": true
+      },
+      "binary_sha256": "867fe96b116e0ccd35aa2d08fb9865c81c4ecfa9949787dd9cd6ed8259c5b777"
+    },
+    {
+      "name": "unfinished_coverage",
+      "command": [
+        "tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "0",
+        "7",
+        ".1",
+        "2"
+      ],
+      "exit_code": 2,
+      "result": {
+        "complete": false,
+        "mode": 7,
+        "radius": 0.05,
+        "start_u": [
+          0.09999999999999999,
+          0.1
+        ],
+        "end_u": [
+          2,
+          2
+        ],
+        "cells": 0,
+        "passed": 0,
+        "pending": 1,
+        "enclosure_errors": 0,
+        "seconds": 1.25e-07
+      },
+      "binary_sha256": "91fe15af817f2a09011c256890add664d7a180f90d554cecbf0d1c7599123c1b"
+    }
+  ],
+  "source_sha256": {
+    "research/check_interval_primitives.cpp": "e1d39d09b76a0a4b4ff85d817638126aadd4e8a8581a5d664674e88d198daddb",
+    "research/check_threshold_constraint_logic.cpp": "83b73d7562dfa1c3f15d33ef4d62212ab2e087cc9b95155e8ec13bd0b18ab862",
+    "research/physical_temperature_reduced_combined.cpp": "7e9435c46d11f66154b52925becbe15d42c8cfb72d4b7b001f74f012b4781cb9"
+  }
+}

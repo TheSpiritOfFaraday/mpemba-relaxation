@@ -1,0 +1,91 @@
+{
+  "scope": "continuous 8-dimensional +/-5% parameter box and KL threshold band",
+  "method": "three seeded differential-evolution searches with local polish",
+  "runs": [
+    {
+      "seed": 12102031,
+      "evaluations": 23898,
+      "saving": 0.051203534369248405,
+      "perturbation": [
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -0.9439197014747834,
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "threshold": 0.001,
+      "parameters": [
+        0.8724389151012197,
+        0.12217038676691512,
+        2.5926801108448028,
+        2.2197671162068398,
+        2.6894394736157996,
+        5.358076402997635,
+        4.012878126841613,
+        9.04848090374466
+      ],
+      "optimizer_success": false
+    },
+    {
+      "seed": 12102032,
+      "evaluations": 23888,
+      "saving": 0.05120370365466387,
+      "perturbation": [
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -0.7972387521860678,
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "threshold": 0.001,
+      "parameters": [
+        0.8724389151012197,
+        0.12217038676691512,
+        2.5926801108448028,
+        2.2197671162068398,
+        2.710140978272822,
+        5.358076402997635,
+        4.012878126841613,
+        9.04848090374466
+      ],
+      "optimizer_success": false
+    },
+    {
+      "seed": 12102033,
+      "evaluations": 23888,
+      "saving": 0.05120356589510011,
+      "perturbation": [
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -0.916357796571673,
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "threshold": 0.001,
+      "parameters": [
+        0.8724389151012197,
+        0.12217038676691512,
+        2.5926801108448028,
+        2.2197671162068398,
+        2.6933293646035175,
+        5.358076402997635,
+        4.012878126841613,
+        9.04848090374466
+      ],
+      "optimizer_success": false
+    }
+  ],
+  "elapsed_seconds": 23.431555375,
+  "smallest_saving_found": 0.051203534369248405,
+  "establishes_global_minimum": false,
+  "certified_neighborhood": false
+}

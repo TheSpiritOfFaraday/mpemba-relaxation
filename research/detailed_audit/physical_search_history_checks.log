@@ -1,0 +1,60 @@
+Checked nominal 82 saved improvements
+Checked robust_screen 71 saved improvements
+Checked refinement stage 0
+Checked refinement stage 1
+Checked refinement stage 2
+{
+  "passed": true,
+  "method": "Independent direct matrix exponential in physical time",
+  "histories": [
+    {
+      "profile": "nominal",
+      "saved_improvements_checked": 82
+    },
+    {
+      "profile": "robust_screen",
+      "saved_improvements_checked": 71
+    }
+  ],
+  "stages": [
+    {
+      "stage": 0,
+      "before_worst": 0.1380159797554652,
+      "after_worst": 0.03629913995006473,
+      "accepted": true
+    },
+    {
+      "stage": 1,
+      "before_worst": 0.03629913995006473,
+      "after_worst": -0.003651534086815733,
+      "accepted": true
+    },
+    {
+      "stage": 2,
+      "before_worst": -0.003651534086815733,
+      "after_worst": -0.003651540458716185,
+      "accepted": true
+    }
+  ],
+  "adversarial_points_checked": 3,
+  "comparisons": 166,
+  "absolute_tolerance": 2e-08,
+  "maximum_error": 7.898126597183364e-13,
+  "optimizer_success_flags": [
+    false,
+    false,
+    false
+  ],
+  "limitations": [
+    "Does not replay or authenticate historical optimizer trajectories, evaluation counts or wall times",
+    "All three adversarial optimizer runs report success=false; their points remain valid numerical candidates",
+    "No exhaustive optimum or continuous robustness proof is inferred"
+  ],
+  "input_sha256": {
+    "research/physical_rate_search.json": "eb80edff126debeb341c03eefb4d4028534bd237cbc9821569beb944d5a16ce2",
+    "research/physical_rate_search_robust_screen.json": "aff1aee46baf1807db4594b55b161fb37036be5b1e7d28893020e37391fc2ae9",
+    "research/physical_rate_refined.json": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+    "research/physical_rate_adversarial_robustness.json": "1e6f09339b1ab7f2991e664c242efaff34816944b7e9ac3a714ae32b96e8494e"
+  },
+  "checker_sha256": "cc7124823a6c90017c4e8b82cfc109e3ca8658dc8297261f9d63c43e9a811e3d"
+}

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "scope": "manifest, file inventory, SHA256, paths, known credential patterns, size limits, supplied private identifiers, PDF objects/text/metadata, image metadata and OCR",
+  "media_counts": {
+    "pdfs": 74,
+    "pdf_pages": 1878,
+    "images": 46,
+    "image_frames": 46
+  },
+  "known_private_identifiers_supplied": 6,
+  "pdf_page_streams_and_geometry_unchanged": true,
+  "image_pixels_unchanged": true,
+  "guide_links_checked": 231,
+  "guide_broken_local_links": 0,
+  "representative_pdf_first_pages_visually_checked": [
+    "output/pdf/focused_paper.pdf",
+    "output/pdf/research_report.pdf",
+    "output/pdf/freshman_guide.pdf"
+  ],
+  "publication_tool_controls_passed": 14,
+  "publication_tool_controls": [
+    "Exact inventory accepts clean package and rejects changed/missing/extra files",
+    "Symlink and credential-like content rejection",
+    "Private tokens rejected in UTF8, UTF16LE, UTF16BE, base64 and URL encoding",
+    "Metadata-free PDF accepted; author-bearing PDF rejected",
+    "Anonymous Git initialization resists inherited identity/config/signing/templates/hooks",
+    "Existing repository initialization refused"
+  ],
+  "git_history_distributed": false,
+  "published": false,
+  "archive_policy": "Only file bytes are written to ZIP; neutral timestamps and modes; no xattrs, owner IDs, resource forks, archive comments or extra fields. Local filesystem xattrs are not a public deliverable.",
+  "limits": "Does not guarantee anonymity of distinctive content, prior disclosures, account activity, or later edits. PDF image pixels are not OCR-scanned; image-only pages without extracted text are rejected.",
+  "independent_audit": "Separate read-only audit confirmed content/metadata/known-identifier checks, 31 nonpersonal source links, and inclusion of four later research files. This is not external peer review.",
+  "navigation_checks": {
+    "passed": true,
+    "relative_links_checked": 3809,
+    "heading_anchors_checked": 92,
+    "scientific_file_bytes_unchanged_from_prior_package": true
+  }
+}

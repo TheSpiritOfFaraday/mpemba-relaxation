@@ -1,0 +1,74 @@
+\section{Counterexamples in every higher dimension}\label{sec:extension}
+The failure is not restricted to exactly four states. A fast, high-energy
+state can be added without repairing any of the triplet tests.
+
+\begin{theorem}[Dimension extension]\label{thm:extension}
+Suppose an $n$-state positive reversible generator, with distinct energies
+and a positive finite bath, has a simple slow mode and a strict ordinary
+cooling witness at two finite positive initial temperatures. Suppose every
+original-rate triplet predicate fails. There is an $(n+1)$-state positive
+reversible system with the same properties, retaining every original
+off-diagonal rate. If all original $F,G$ inequalities are strict, every
+inequality in the extension is strict as well. Consequently, counterexamples
+form nonempty open sets for every state count $n\geq4$.
+\end{theorem}
+\begin{proof}
+Use units $\beta_b=1$ and unnormalized bath weights $q_i=e^{-E_i}$.
+Choose $A>0$ so large that $-nA$ lies strictly below every original nonzero
+eigenvalue. Add a new highest state of weight $\epsilon=e^{-E_{n+1}}$,
+with downward rates $a_{i,n+1}=A$ for every $i\leq n$ and reverse rates
+$a_{n+1,i}=A\epsilon/q_i$. Recompute the diagonal to conserve probability.
+All rates are positive and detailed balance holds. Original triplet tests
+are unchanged. In a new triplet $i<j<n+1$, writing
+$t=e^{-(E_j-E_i)}<1$, $u=e^{-(E_{n+1}-E_j)}>0$, and $C=a_{ij}>0$, one has
+\[
+G=A(t-1)<0,\qquad F=-(1-t)(C+Au/2)<0.
+\]
+Thus every added triplet fails strictly.
+
+As $\epsilon\downarrow0$, the full generator tends to
+\[
+\begin{pmatrix}M&A\mathbf1\\0&-nA\end{pmatrix}.
+\]
+Its spectrum is the original spectrum together with $-nA$. The original
+slow eigenvalue remains simple and separated. Its left eigenvector extends
+from $w$ to
+\[
+\left(w,\frac{A\sum_{i=1}^n w_i}{\lambda_2+nA}\right).
+\]
+The denominator is nonzero by the choice of $A$. Ordinary finite-dimensional
+perturbation theory for a simple eigenvalue now supplies a continuously
+normalized slow eigenvector for sufficiently small positive $\epsilon$,
+with a spectral gap bounded away from zero. This argument uses the generator
+directly; it does not symmetrize at the singular limiting bath weight.
+
+For either fixed initial inverse temperature $\beta>0$, the new Gibbs
+weight is $\epsilon^\beta\to0$, so its preparation converges to the old
+Gibbs vector with a zero extra coordinate. The two slow overlaps therefore
+converge to the original overlaps. Their strict inequality persists for
+sufficiently small positive $\epsilon$. Every energy is then finite and
+distinct. Induction extends the four-state counterexample to every larger
+dimension. Starting from the strict four-state example, all triplet margins,
+rate positivity, spectral simplicity and the overlap inequality are strict;
+continuity gives an open neighborhood at each finite extension in the
+energy/downward-rate parametrization of reversible systems.
+\end{proof}
+
+The construction adds rapidly emptying, initially weakly populated high-energy
+states. It establishes dimensional persistence, not an enhancement of the
+effect or a claim that the added states are experimentally useful. In
+particular, the finite positive witness temperatures must be fixed before
+taking the high-energy limit; the argument would not apply to a preparation
+at exactly infinite temperature.
+
+The standard-library checker \texttt{five\_state\_extension\_certificate.py}
+adds $E_5=9000\log10$ to the primary four-state witness, with $A=1000$.
+It verifies all ten original Boolean triplet predicates, all twenty positive
+rates, detailed balance and column conservation. Exact rational inertia
+places the new fast eigenvalue in $(-4001,-3999)$ and preserves the original
+three spectral brackets. A weighted residual estimate controls the original
+four eigenvector coordinates; the new row equation controls the fifth without
+dividing by its extremely small bath weight. The same finite preparations
+$\beta_h=1/1000$, $\beta_c=1/100$ retain a rigorously certified overlap
+advantage greater than $10^{-4}$. The fifth state's thermal weights are
+exactly $10^{-9}$ and $10^{-90}$ at those preparations.

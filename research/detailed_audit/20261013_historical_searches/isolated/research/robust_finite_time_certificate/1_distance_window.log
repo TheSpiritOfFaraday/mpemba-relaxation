@@ -1,0 +1,8 @@
+remaining_volume=0.84686279296875 u=[0.44999999999999996,0.47499999999999998] progress cells=5000 passed=2496 pending=9 enclosure_errors=0 seconds=7.7548723329999998
+remaining_volume=0.79345703125 u=[0.47499999999999998,0.5] progress cells=6000 passed=2996 pending=9 enclosure_errors=0 seconds=9.3155164169999995
+remaining_volume=0.754150390625 u=[0.47499999999999998,0.5] progress cells=7000 passed=3498 pending=5 enclosure_errors=0 seconds=10.867100292
+remaining_volume=0.62499999999999989 u=[0.55000000000000004,0.57499999999999996] progress cells=10000 passed=4999 pending=3 enclosure_errors=0 seconds=15.593043166999999
+remaining_volume=0.21887207031250014 u=[0.69999999999999996,0.72499999999999998] progress cells=19000 passed=9498 pending=5 enclosure_errors=0 seconds=29.702366708
+remaining_volume=0.16210937500000011 u=[0.72499999999999998,0.75] progress cells=20000 passed=9996 pending=9 enclosure_errors=0 seconds=31.250710167000001
+remaining_volume=0.02197265625 u=[0.77500000000000002,0.80000000000000004] progress cells=23000 passed=11498 pending=5 enclosure_errors=0 seconds=35.943773542000002
+{"complete":true,"mode":1,"radius":0.050000000000000003,"start_u":[0.099999999999999992,0.10000000000000001],"end_u":[2,2],"cells":23351,"passed":11676,"pending":0,"enclosure_errors":0,"seconds":36.489203457999999}

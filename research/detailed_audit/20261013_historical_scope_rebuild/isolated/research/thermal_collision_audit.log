@@ -1,0 +1,30 @@
+{
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "algebra": {
+    "symbolic_acceptance": "exp(-beta*(d + h))",
+    "exact_energy_and_involution_checks": 60,
+    "binary_Hamiltonian": {
+      "epsilon_x": "1661788409716609/2000000000000000",
+      "epsilon_y": "183819195647206571/50000000000000000",
+      "J": "-1424012465456923/400000000000000"
+    },
+    "theorem": "For every allowed symmetric saddle and beta>0, a_ij=nu0 exp[-beta(B_ij-E_j)].",
+    "bath_assumptions": [
+      "independent fresh canonical energy on each contact",
+      "constant density of bath energy states",
+      "independent Poisson pair-contact clocks",
+      "instantaneous idealized energy-conserving contact map"
+    ]
+  },
+  "scope": "Exact stochastic collision realization of the same four-state rates, not an autonomous Hamiltonian or identified material."
+}
+Maximum probability error: 0.0011776853825404554

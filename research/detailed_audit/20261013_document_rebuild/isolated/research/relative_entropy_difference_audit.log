@@ -1,0 +1,17 @@
+audited points 1
+audited points 51
+audited points 101
+audited points 151
+audited points 201
+audited points 251
+{
+  "precision_digits": 70,
+  "points": 281,
+  "value_enclosure_checks": 1124,
+  "derivative_enclosure_checks": 90,
+  "maximum_value_interval_width": 2.4242413632080684e-13,
+  "all_passed": true,
+  "seed": 12102044,
+  "method": "Independent direct 4x4 matrix exponentials; derivative central differences with step 1e-20",
+  "scope": "Point audit of the KL difference identity and its derivatives; not a full-box certificate"
+}

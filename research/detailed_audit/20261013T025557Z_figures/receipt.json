@@ -1,0 +1,281 @@
+{
+  "group": "isolated figure reproduction",
+  "complete": true,
+  "all_passed": true,
+  "source_sha256": {
+    "research/physics_plots.py": "a1e9a48acca3822f83ed466b6d19ab01cb96d237dc19b8c15d899d1ee5353aab",
+    "research/mechanism_plots.py": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063",
+    "research/quarter_limit_plots.py": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+    "research/physical_rate_plots.py": "d97ffa47eb580d1a20b3e5a54eb5fe5a67b95454cc9058b8e78d91ad9f6740a9",
+    "research/focused_overview.py": "1a6c47376f977fd5e6e3d270b69de13aa3198db7df329fc1dad7b69dcbede4d1",
+    "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+    "research/adversarial_certificate.json": "839c56a1478334bc902d4af08ab36d2df38bea188d982ed3e9f97ea0472de83e",
+    "research/physical_rate_refined_audit.json": "b40ddb4139d77787971941ade7db552cc6e57a576f4ca18781dcccc6cde60977"
+  },
+  "sources_unchanged": true,
+  "checks": [
+    {
+      "script": "research/physics_plots.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.143528166,
+      "log": "research/detailed_audit/20261013T025557Z_figures/physics_plots.py.log",
+      "source_sha256": "a1e9a48acca3822f83ed466b6d19ab01cb96d237dc19b8c15d899d1ee5353aab"
+    },
+    {
+      "script": "research/mechanism_plots.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.691094291,
+      "log": "research/detailed_audit/20261013T025557Z_figures/mechanism_plots.py.log",
+      "source_sha256": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063"
+    },
+    {
+      "script": "research/quarter_limit_plots.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.018582292,
+      "log": "research/detailed_audit/20261013T025557Z_figures/quarter_limit_plots.py.log",
+      "source_sha256": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6"
+    },
+    {
+      "script": "research/physical_rate_plots.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.1279937919999998,
+      "log": "research/detailed_audit/20261013T025557Z_figures/physical_rate_plots.py.log",
+      "source_sha256": "d97ffa47eb580d1a20b3e5a54eb5fe5a67b95454cc9058b8e78d91ad9f6740a9"
+    },
+    {
+      "script": "research/focused_overview.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.7534533330000004,
+      "log": "research/detailed_audit/20261013T025557Z_figures/focused_overview.py.log",
+      "source_sha256": "1a6c47376f977fd5e6e3d270b69de13aa3198db7df329fc1dad7b69dcbede4d1"
+    },
+    {
+      "script": "research/check_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/check_physical_rate_model.py",
+        "research/physical_rate_refined.json",
+        "--samples",
+        "3000"
+      ],
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T025557Z_figures/check_physical_rate_model_3000.log",
+      "exit_code": 0,
+      "seconds": 31.156494291999998,
+      "source_sha256": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+      "json_byte_identical": true
+    },
+    {
+      "script": "research/check_figure_data.py",
+      "status": "passed",
+      "command": [
+        "python3",
+        "research/check_figure_data.py"
+      ],
+      "source_sha256": "9f4587e29276f38accbf530cbc26f8e469f97d16b3948fdf32a591a13a8e9257",
+      "log": "research/detailed_audit/figure_data_checks.json",
+      "evidence_type": "structured numerical comparison receipt"
+    },
+    {
+      "script": "research/check_pedagogical_revision.py",
+      "status": "passed",
+      "command": [
+        "python3",
+        "research/check_pedagogical_revision.py"
+      ],
+      "source_sha256": "9584d61ec7576eb441b86122e036c878f759c60d19d1c6e572289e212ad5a456",
+      "log": "research/detailed_audit/pedagogical_revision/course_checks.json",
+      "evidence_type": "structured 64-check receipt; checker updated for40 lessons while retaining fixed historical baseline and pinned reviewed technical body"
+    }
+  ],
+  "output_comparisons": [
+    {
+      "file": "output/figures/focused_overview.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "63c5f9c0781879bbe4b986dae09a061d45f65c7f76dd38a8e43294b130ff4c71"
+    },
+    {
+      "file": "output/figures/focused_overview.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "32525af2c5a759c4b4f13e24fd582f8aec0d86d6ac4862d131a087782778e5aa"
+    },
+    {
+      "file": "output/figures/focused_overview_receipt.json",
+      "kind": ".json",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "d63c5b7bc14f5431d27e6de79d06cb888e63a59a646d08bf4335ec8e1a9f77b3"
+    },
+    {
+      "file": "output/figures/focused_relaxation.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "e6762772cb6e1bb1425a23e86ebc3076d3a590b685e05b897dc8a7d53b73eefd"
+    },
+    {
+      "file": "output/figures/mechanism_curves.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "d44d98c65fc4f6a5adf8b02a79f4de55fa9e05e8bc4a71c3060d5fb1e31d8a69"
+    },
+    {
+      "file": "output/figures/mechanism_onset.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "f8ad8b2a933c286209a93d5ea2cf6a9fdcc2ef4e0e3fe8815b20bfec0ac07a9b"
+    },
+    {
+      "file": "output/figures/mechanism_onset.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "e4691cf2ed00874f63b01eb6e403d97a7d4c32cbd44f9120a45227c755dcdde5"
+    },
+    {
+      "file": "output/figures/mechanism_onset.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "062e8bc129b35a8f214f90ab885c3b6d54baf4a2b04e1513fd7fe848bf69fa1b"
+    },
+    {
+      "file": "output/figures/overlap_data.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "ea176109eff76977c01729ae520937e262ab38a41f1061002095bb8609b665ac"
+    },
+    {
+      "file": "output/figures/physical_finite_time.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "95323814942420428a04b01d22a5a95788cfdeb52d94100a9eb39624dca75742"
+    },
+    {
+      "file": "output/figures/physical_finite_time.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "87cddd7f16af35ea78d78dad4bcd42efcac800992f78b47fc31195cd3e23fc68"
+    },
+    {
+      "file": "output/figures/physical_finite_time.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "fb5965ccce834093914477d46cb8347c185fb4687a14741eb3ab4642ee94165c"
+    },
+    {
+      "file": "output/figures/physical_threshold_savings.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "cfd1ce3b9fdd0cbc2eec38c876ddccf18188533e93a74b13c9be136a5c3c6302"
+    },
+    {
+      "file": "output/figures/physics_metrics.json",
+      "kind": ".json",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "b95725e75347ea4c31445b4bb171434f4015e5cb279a875bc29e03210736677b"
+    },
+    {
+      "file": "output/figures/quarter_gain_data.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "b4e862aa2ef316b168b2ea28cb45be1d5caa569e8f744d2cb4e1bf9b3b860f6c"
+    },
+    {
+      "file": "output/figures/quarter_limit.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "682ec92287472f5394a5c1ad9d6ad5044c1c86b16d3a1116d5865694df8b6ff3"
+    },
+    {
+      "file": "output/figures/quarter_limit.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "2bb49a4e2439ba6e89c151a7389c5cbd09f8b680d76f11c9a5da1e2dde41ddd0"
+    },
+    {
+      "file": "output/figures/quarter_overlap_data.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "5143064944262cdc63fb9bcb70eb89a3f3a26007076f1e7cd2a0a604902380e6"
+    },
+    {
+      "file": "output/figures/quarter_plot_receipt.json",
+      "kind": ".json",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "469746eccca7539e7a459b5c9ce2964ab787301a079b41f2b7b5ad76f8c536c6"
+    },
+    {
+      "file": "output/figures/relaxation_crossing.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "31f87effa9831898ece96aa5d4fab0c9eea0cc9aa157b218658a75cc013361c9"
+    },
+    {
+      "file": "output/figures/relaxation_crossing.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "1078e40f9c2668c5192830e8cc37249bce293daec53f6ad426e3ec26fe8f3a21"
+    },
+    {
+      "file": "output/figures/relaxation_data.csv",
+      "kind": ".csv",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "3939df4598d0ad2dbb0e1769c9773c7388acff26539ebbc4761de1aea04f3429"
+    },
+    {
+      "file": "output/figures/thermal_overlap.pdf",
+      "kind": ".pdf",
+      "exists": true,
+      "byte_identical": false,
+      "fresh_sha256": "b5ba28769cf35ce19fd7e8577911d129bab1870930bac2536e000bd0b610bd2d"
+    },
+    {
+      "file": "output/figures/thermal_overlap.png",
+      "kind": ".png",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "bb2169725ab5e0621c246809d3cf7a72d3bb5373d14bcf412c8e4e31effe0a3e"
+    },
+    {
+      "file": "research/mechanism_numeric_audit.json",
+      "kind": ".json",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "66dec38fe31f7b4ce056958d83b48bff5f9bab8d3b76a97b581772c1fffa5781"
+    },
+    {
+      "file": "research/physical_finite_time_figure.tex",
+      "kind": ".tex",
+      "exists": true,
+      "byte_identical": true,
+      "fresh_sha256": "64a903725b32504149d4348612228e156da5fabf9379b01f32d4bc34a09671b5"
+    }
+  ],
+  "scope": "Rebuild and data correspondence only; mathematical formulas and labels require separate review."
+}

@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-10-13T01:23:32.820743+00:00",
+  "scope": "Fixed-version primary-source correspondence, not exhaustive priority or correction search.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.04567v1",
+      "locations": [
+        "Eq. (1)",
+        "Eq. (3)",
+        "N-level protocol",
+        "Numerics for non-zero temperature baths",
+        "SI S11-S14",
+        "SI S20"
+      ],
+      "findings": [
+        "Destination-first column-rate convention matches.",
+        "C31=1+tu/2 and C32=1+u/2 give the manuscript F; the other sign gives G. Both kappa comparisons inclusive, both rate tests strict.",
+        "Protocol keeps original off-diagonal rates.",
+        "Finite-temperature absence inference is conjectural. Zero-temperature theorem assumes stronger C>A+B and distinct generator eigenvalues."
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2609.09988v1",
+      "locations": [
+        "Section II Eq. (3)",
+        "Section II discussion and Figure 5"
+      ],
+      "findings": [
+        "Reiterates prior necessary-condition predicate separately from exact triplet mechanisms.",
+        "The reported effects with no triplet mechanism do not logically establish failure of all necessary-condition tests."
+      ]
+    }
+  ]
+}

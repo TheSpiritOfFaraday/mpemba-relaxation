@@ -1,0 +1,124 @@
+\section{A complete finite-time test for a specified thermal pair}\label{sec:finitechi}
+The earlier classification concerns the existence of asymptotic anomalies
+as the preparation temperature varies. For weighted Euclidean distance there
+is also a particularly small finite-time test, covering every four-state
+reversible generator, all slow multiplicities, and any fixed pair of initial
+temperatures. It is an application of spectral orthogonality and classical
+exponential zero counting, rather than a new general zero-counting principle.
+
+Write $q=\pi(\beta_b)$ and $D=\operatorname{diag}(q)$. Let $P_j$ be the orthogonal projectors of the symmetric generator onto its
+distinct nonzero eigenvalues $\mu_1>\cdots>\mu_m$, where $m\leq3$.
+For the preparation farther from the bath and the nearer preparation set
+\[
+z_f=D^{-1/2}(\pi(\beta_f)-q),\quad
+z_n=D^{-1/2}(\pi(\beta_n)-q),\quad
+A_j=\|P_jz_f\|^2-\|P_jz_n\|^2.
+\]
+The difference of squared weighted Euclidean distances is exactly
+\[
+\Delta(t)=\sum_{j=1}^m A_j e^{2\mu_jt}.
+\]
+Terms with $A_j=0$ may be discarded, even if the corresponding eigenspace
+is the slowest one. This handles equal leading amplitudes without inferring
+the eventual ordering from a coefficient that vanishes.
+
+\begin{theorem}[Finite-time weighted-Euclidean classification]\label{thm:finitechi}
+For any fixed pair of distinct positive initial temperatures on the same side
+of a positive finite bath, a four-state irreducible reversible generator has
+a weighted-Euclidean Mpemba reversal if and only if the following finite test
+finds a strictly negative value. After discarding zero coefficients, factor
+the largest remaining exponential out of $\Delta$. With three terms write
+\[
+F(t)=A+B e^{-at}+C e^{-bt},\qquad0<a<b.
+\]
+Evaluate $F(0)$ and its limiting value $A$. If $BC<0$ and
+$-bC/(aB)>1$, also evaluate
+\[
+t_* =\frac{\log[-bC/(aB)]}{b-a},\qquad F(t_*).
+\]
+There is a reversal precisely when the minimum of the listed values is
+negative. For two terms only the two endpoint values are needed; one term
+cannot change ordering. There are at most two distinct finite crossing
+times, counting multiplicity. A zero minimum alone does not establish a
+reversal: it can be a finite tangency or an equality reached only in the limit.
+\end{theorem}
+\begin{proof}
+Orthogonality of the spectral projectors proves the expression for $\Delta$.
+The derivative of $F$ is
+$-aB e^{-at}-bC e^{-bt}$; it has the stated single possible positive zero.
+Thus the listed values contain the global infimum of $F$ on $[0,\infty)$.
+The exponential factored out is strictly positive. A strictly negative
+limiting value implies negative values at finite times; a zero limiting
+value alone does not. For one or two terms the same argument is immediate.
+The three exponentials form a Chebyshev system, so a nonzero difference has
+at most two zeros counting multiplicity.
+
+The farther thermal preparation is initially strictly farther in this
+distance. Indeed, writing $Z(\beta)=\sum_i e^{-\beta E_i}$,
+\[
+1+\chi^2(\pi(\beta)\Vert q)
+=\frac{Z(\beta_b)Z(2\beta-\beta_b)}{Z(\beta)^2},
+\]
+whose logarithmic derivative is
+$2[\langle E\rangle_\beta-\langle E\rangle_{2\beta-\beta_b}]$.
+The mean energy strictly decreases with inverse temperature, including when
+the auxiliary argument $2\beta-\beta_b$ is negative. Hence the initial
+distance strictly increases away from the bath on either side. In
+particular $\Delta(0)>0$, so every negative value found by the test represents
+an actual crossing from the initial ordering.
+\end{proof}
+
+If the eventual coefficient $A$ is positive, a reversal can occur only via
+an interior negative minimum and two crossings: ordinary ordering returns
+at sufficiently long times. Such a purely transient reversal in this
+distance needs at least three distinct nonzero decay rates, and therefore
+at least four states. Two- and three-state reversible systems cannot have
+this pattern. This last statement is a spectral necessity, not an existence
+claim for every four-state generator or for the triplet-constrained family.
+The result does not transfer automatically to relative entropy or total
+variation, whose finite-time expansions need not have these three terms.
+
+\paragraph{Four states suffice for a purely transient pair.}
+An exact construction shows that the state-count necessity is sharp.
+Take $q=(512,64,8,1)/585$, corresponding to energies
+$(0,3\log2,6\log2,9\log2)$ at bath inverse temperature one. Prepare
+$p_h=(1,1/2,1/4,1/8)/Z_h$ and
+$p_c=(1,1/4,1/16,1/64)/Z_c$, so $\beta_h=1/3$ and $\beta_c=2/3$.
+Let $w^{(0)}$ be the coefficient vector of
+\[
+(x-1/2)(x-1/4)(x-1/8),
+\]
+and set $w=w^{(0)}+h/1000$, where
+$h_i=(i-1)-\sum_jq_j(j-1)$. Choose a nonzero rational vector $v$ satisfying
+$q^\top v=w^\top Dv=p_h^\top v=0$, and a nonzero rational $u$ orthogonal
+to $\mathbf1,w,v$ in the $D$ inner product. All these vectors are explicitly
+computed by rational nullspace elimination in
+\texttt{transient\_only\_chi\_certificate.py}. Define
+\[
+P_z=\frac{zz^\top D}{z^\top Dz},\qquad
+C_0=(P_v+2P_u)^\top,\qquad
+\rho=1+\max\left(0,\max_{i\ne j}\frac{(C_0)_{ij}}{q_i}\right),
+\qquad M=\rho(q\mathbf1^\top-I)-C_0.
+\]
+The off-diagonal rates are strictly positive, detailed balance holds, and
+the eigenvalues are $0,-\rho,-\rho-1,-\rho-2$. The squared-distance
+difference has the form $e^{-2\rho t}(A+Bx+Cx^2)$ with $x=e^{-2t}$,
+where exact rational projection calculations give
+\[
+A\simeq1.80809\,10^{-5},\qquad B\simeq-0.0344769,\qquad C\simeq3.69493.
+\]
+The certificate proves $A>0$, $A+B+C>0$, and
+$0<-B/(2C)<1$ with $A-B^2/(4C)<0$. An exact Sturm count places both
+polynomial roots in $(0,1)$. Thus the pair has normal initial and eventual
+ordering but a strictly reversed interval between two finite crossings.
+Their approximate times are $2.36803$ and $3.74577$; the exact times are
+$-\tfrac12\log[(-B\pm\sqrt{B^2-4AC})/(2C)]$.
+
+This construction is not asserted to satisfy the triplet-failure premise.
+It proves sharpness of the four-state transient classification, not absence
+of asymptotic anomalies for other pairs in the same generator. Its common
+decay rate is large, so the crossing distances are extremely small; it is
+a mathematical separation of transient and asymptotic ordering, not a
+practical cooling protocol. The design makes both preparations almost
+orthogonal to the slow mode, puts their negative distance difference in the
+middle mode, and their initially positive difference in the fastest mode.

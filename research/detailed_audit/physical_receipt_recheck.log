@@ -1,0 +1,11 @@
+{
+  "requirements_checked": true,
+  "pages": {
+    "focused_paper": 10,
+    "research_report": 77,
+    "focused_appendices": 80
+  },
+  "proof_modes": 8,
+  "independent_value_checks": 6744,
+  "independent_gradient_checks": 360
+}

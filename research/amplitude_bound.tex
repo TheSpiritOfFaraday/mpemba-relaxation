@@ -1,0 +1,61 @@
+\section{A sharp dimension-dependent amplitude bound}\label{sec:amplitudebound}
+The contrast representation also limits the size of ordinary cooling under
+the $G$ inequalities. Unlike the quarter-limit construction, the following
+sharp bound concerns the larger family defined by $G\leq0$ alone.
+
+\begin{theorem}[Amplitude bound for the contrast cone]\label{thm:amplitudebound}
+For an $n$-state system satisfying Theorem~\ref{thm:orderedk}, with a simple
+slow mode and $0<\beta_h<\beta_c<\beta_b$,
+\[
+\frac{|b_2(\beta_c)|}{|b_2(\beta_h)|}<\frac n2.
+\]
+Thus any anomalous amplitude advantage is strictly less than $1-2/n$.
+For $n\geq3$ this bound is sharp as a supremum within the $G$-only family.
+The same bound holds whenever the contrast matrix $A$ is Metzler.
+\end{theorem}
+\begin{proof}
+Orient the slow eigenvector so that $b_2=\sum_k v_kg_k$, with $v_k\geq0$
+and not all zero. On cooling write $R_k=-g_k>0$ and $m=k+1$.
+Apart from a fixed positive factor,
+\[
+R_k(\beta)=\frac{\alpha_k-\sum_{i<m}e^{\beta(E_m-E_i)}}
+{\sum_i e^{-\beta(E_i-E_m)}},\qquad
+\alpha_k=\sum_{i<m}e^{\beta_b(E_m-E_i)}.
+\]
+The positive numerator strictly decreases with $\beta$. Put
+$A_c=\sum_{i\leq m}e^{\beta_c(E_m-E_i)}\geq m$. The denominator at
+$\beta_h$ is at most $A_c+n-m$, while the denominator at $\beta_c$ is at
+least $A_c$. Therefore
+\[
+\frac{R_k(\beta_c)}{R_k(\beta_h)}
+<1+\frac{n-m}{A_c}\leq\frac nm\leq\frac n2.
+\]
+The amplitude ratio is a weighted average of these ratios with nonnegative
+weights $v_kR_k(\beta_h)$, proving the bound.
+
+For sharpness fix $n\geq3$ and let $L\to\infty$. Take $\beta_b=1$,
+$E_1=0$, $E_2=1/L$, and $E_j=(j-2)L$ for $j\geq3$.
+Use the first contrast $w=(1,-e^{1/L},0,\ldots,0)$ and normalized bath
+weights $q$. It is realized as the simple slow mode by the established
+rank-one construction
+\[
+M=q\mathbf1^\top-I+\epsilon\frac{Dww^\top}{w^\top Dw},
+\qquad \epsilon=\frac{q_1+q_2}{2}.
+\]
+Every off-diagonal entry is positive: only the $12$ pair has a negative
+rank-one correction, reducing its reset rate by exactly one half.
+The slow eigenvalue is $-1+\epsilon$, all other nonzero eigenvalues are
+$-1$, and every $G_{ijk}=0$ because the correction has no component in a
+state $k\geq3$. With $\beta_h=L^{-2}$ and $\beta_c=L^{-1/2}$, the thermal
+numerator is
+$1-e^{(1-\beta)/L}\sim-1/L$ for both preparations, while their partition
+functions tend to $n$ and $2$, respectively. Their amplitude ratio tends
+to $n/2$. These examples do not in general satisfy the $F$ inequalities.
+\end{proof}
+
+For the larger $G$-only four-state family this gives a sharp $50\%$ supremum.
+The additional original $F$ inequalities improve it to a sharp $25\%$
+supremum, proved in Section~\ref{sec:fulltripletbound}. For any fixed simple
+mode in the $G$-only family the corresponding asymptotic time
+advance is less than $\log(n/2)/|\lambda_2|$. This is a bound in relaxation
+time units and does not require choosing a distance threshold.

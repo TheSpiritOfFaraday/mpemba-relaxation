@@ -1,0 +1,31 @@
+{
+  "reviewed_utc": "2026-10-13T03:30:01.175285+00:00",
+  "steps": [
+    "Fresh commands use the exact advertised flags and inputs. Isolated copies preserve authoritative results; a missing focused_paper.tex fixture caused one provenance-hash failure and was corrected before the successful retry.",
+    "The focused witness passed70 exact checks and10 negative controls; the independent primary witness and its10 adversarial tests passed under -I -S.",
+    "The inverse-realization example returns a feasible exact generator with positive gap under a positive slack. Infeasibility of this strengthened problem would not establish original infeasibility.",
+    "The classifier numerical audit has no errors; its exact-polynomial and differentiated Wronskian reference checks also passed. Old non-timing output fields reproduced exactly.",
+    "The ordered-conductance audit covers1000 systems and5000 state-space heating checks with no errors; it is finite floating-point evidence for the separately reviewed theorem.",
+    "The commensurate example verifies a simple slow mode with ordinary and strong effects on both sides; the rational full-premise equality example has exact endpoint sign zero and no ordinary cooling. These fixtures exercise different classifier domains.",
+    "The saved transient-heating candidate retains a positive100-digit derivative about2.166e-17; it does not become a counterexample and gives no general absence theorem.",
+    "All13 polynomial boundary regressions,6 entropy verdict controls and8 exact decimal-binding controls passed.",
+    "C++ sources compiled with the advertised no-contraction flag and MPFR/GMP;295 primitive controls and all4 final-claim logic controls passed.",
+    "The temperature cross-check independently passed6744 value and360 gradient comparisons at281 points; it is not a substitute for whole-box coverage.",
+    "The complete physical-goal audit passed on the current authoritative documents and certificates. That earlier physical objective is narrower than the ongoing all-work audit.",
+    "The full document build regenerated all3 LaTeX sources identically and all217 PDF pages with identical extracted text and decoded drawing streams.",
+    "The3 replay wrappers were reviewed against their complete12-,19-, and1-child execution receipts, with source and log hashes rechecked.",
+    "A fresh Lean build and all43 requested axiom audits passed with the pinned mathlib revision. Cache fetching is only required for first setup; no clean-machine installation claim is made.",
+    "Every one of85 RUNME command lines now has explicit execution, compositional or conditional-setup adjudication. This does not assert completion of remaining nonphysical discovery-history and literature reviews."
+  ],
+  "evidence": [
+    "research/detailed_audit/command_adjudication.json",
+    "research/detailed_audit/20261013_remaining_checks/receipt.json",
+    "research/detailed_audit/20261013_remaining_checks/output_correspondence.json",
+    "research/detailed_audit/20261013_document_rebuild/receipt.json",
+    "research/detailed_audit/20261013_document_rebuild/pdf_comparison.json",
+    "research/detailed_audit/20261013_formal_command/receipt.json",
+    "research/detailed_audit/replay_wrapper_review.json",
+    "research/detailed_audit/20261013_completion_checks/receipt.json"
+  ],
+  "step_count": 15
+}

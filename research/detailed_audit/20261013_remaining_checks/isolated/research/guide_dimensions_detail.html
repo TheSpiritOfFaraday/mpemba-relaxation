@@ -1,0 +1,47 @@
+<details class="proof-route" id="add-state-proof"><summary>Add one state without losing the counterexample</summary>
+<h3>1. Give the new state a very small bath weight</h3>
+<p>Suppose an n-state model already has a simple slow mode and a strict cooling reversal. Choose a new highest energy E<sub>new</sub>, with bath weight ε = e<sup>−Enew</sup>. Small positive ε means a large but finite energy. From the new state, allow transitions to every old state at the same positive rate A. Detailed balance determines the reverse rates:</p>
+<div class="math">new → i: A,<br>i → new: Aε/qᵢ.</div>
+<p>Here qᵢ are the old unnormalized bath weights and the bath inverse temperature is one. Keep all original off-diagonal rates. Recompute the diagonal losses because each old state now has an extra way to leave.</p>
+<h3>2. Check the new triplets directly</h3>
+<p>An old triplet is unchanged. A new triplet consists of old states i &lt; j and the highest state. Put t = qⱼ/qᵢ &lt; 1, u = ε/qⱼ &gt; 0, and C equal to the old downward j → i rate. Substitution into the original tests gives</p>
+<div class="math">G = A(t−1) &lt; 0,<br>F = −(1−t)(C+Au/2) &lt; 0.</div>
+<p>All factors have explicit signs. This is why an equal-rate connection to the new state preserves the required triplet failures.</p>
+<h3>3. Keep the new relaxation mode fast</h3>
+<p>As ε tends to zero, upward transitions disappear. The new state empties at total rate nA. Choose A large enough that its decay rate −nA is below every original nonzero eigenvalue. The limiting spectrum then contains all old rates plus one faster rate. The old slow eigenvalue stays isolated.</p>
+<p>If w is the old left slow mode with eigenvalue λ, its added coordinate in this limit is AΣᵢwᵢ/(λ+nA). This follows by writing the new-state eigenvector equation and solving for one unknown. Because the slow eigenvalue is simple, small changes in ε produce small changes in its eigenvalue and a consistently normalized eigenvector.</p>
+<h3>4. Keep the same two finite preparations</h3>
+<p>At a fixed positive inverse temperature β, the new thermal weight is ε<sup>β</sup>, which tends to zero. Each preparation therefore approaches its old probability vector, with almost no probability on the added state. The overlaps approach their old values, so a strict reversal survives for sufficiently small positive ε.</p>
+<p>The order of choices matters: fix the two positive β values first, then make ε small. At β = 0 the new weight would equal one, so this limiting argument would fail. Repeating the construction proves persistence in every larger dimension; it does not promise a larger advantage.</p>
+<h3>5. Handle an extremely rare coordinate carefully in the exact example</h3>
+<p>The finite five-state certificate uses ε = 10<sup>−9000</sup> and A = 1000. Its fifth thermal weights are exactly 10<sup>−9</sup> and 10<sup>−90</sup> at β = 1/1000 and 1/100. Exact matrix elimination brackets all four negative eigenvalues.</p>
+<p>A small weighted eigenvector error alone would poorly control the rare fifth coordinate, because dividing by √ε is enormous. The checker instead controls the four old coordinates and uses the fifth row equation to control the fifth separately. It proves a uniform overlap error below 10<sup>−6</sup> and a strict hot-minus-cold overlap difference above 10<sup>−4</sup>, with both overlaps negative. That difference uses the chosen mode normalization; it is not a percentage time saving.</p>
+<p class="small">Read the <a href="research/higher_dimension_extension.tex">extension proof</a> and <a href="research/five_state_extension_certificate.py">exact five-state checker</a>.</p>
+</details>
+
+<details class="proof-route" id="clone-advantage-proof"><summary>Why more states allow amplitude advantages approaching 100%</summary>
+<h3>1. The arithmetic idea: divide the same numerator by different state counts</h3>
+<p>In the four-state limiting family, the first three slow-mode components add to −2/15. A very hot preparation spreads its probability across all four states, giving overlap near (−2/15)/4. A less-hot preparation barely populates the highest state and effectively divides by three, giving (−2/15)/3. Their magnitude ratio tends to 3/4.</p>
+<p>Replace the highest state by m = n−3 distinct rare states. If the hotter preparation spreads across all n states while the other mainly occupies the first three, the same calculation suggests</p>
+<div class="math">b<sub>hot</sub> → −2/(15n),<br>b<sub>cold</sub> → −2/45,<br>1−|b<sub>hot</sub>|/|b<sub>cold</sub>| → 1−3/n.</div>
+<p>For n = 4, 5, and 6, the achievable limiting amplitude advantages are 25%, 40%, and 50%. For n = 30 the limit is 90%. The calculation suggests a construction; the next steps establish that its rates and triplet tests are valid.</p>
+<h3>2. Split the rare state while preserving its aggregate motion</h3>
+<p>Choose positive distinct fractions rⱼ summing to one and give clone j bath weight q₄rⱼ. Give every clone the old fourth state's rates to the first three states. Split reverse rates in proportions rⱼ. Inside the clone block, use reset rates 4rⱼ into clone j.</p>
+<p>Summing the clone probabilities exactly recovers the old four-state evolution. Differences inside the clone block decay with rate −4−Σᵢaᵢ₄, which is faster than −4. The old simple slow rate −3 remains, with a left slow mode that has the same value on every clone.</p>
+<p>Thermal preparations away from the bath need not distribute clone probabilities in the proportions rⱼ. They may excite the extra modes. Those modes are faster, so this does not invalidate the asymptotic slow-overlap calculation.</p>
+<h3>3. Repair the inequality that splitting can break</h3>
+<p>A triplet with two low states and one clone has unchanged G, but its F changes by (rⱼ−1)q₄G/(2q<sub>low</sub>). Both rⱼ−1 and G are nonpositive, so this correction can be positive. Exact aggregation alone does not preserve all the tests.</p>
+<p>The proof bounds the possible defect by (5/3)ε², using exact bounds on the original rates. It then adds 6ε² times an auxiliary reversible generator H. For the troublesome triplets, H has F ≤ −1/3. The repaired bound is therefore</p>
+<div class="math">F<sub>repaired</sub> ≤ (5/3)ε²−6ε²/3 = −ε²/3 &lt; 0.</div>
+<p>The other triplet patterns either retain negative tests or gain strict negativity. All rates remain positive. The auxiliary generator uses constant downward rates inside the clone block; replacing them with constant reduced conductances would change this calculation.</p>
+<h3>4. Prove that the repair is small in the right sense</h3>
+<p>Some reduced conductances grow as the clone weights shrink. The proof therefore bounds outgoing physical rates, then uses reversibility to bound the symmetric matrix's operator norm. For each fixed n, the perturbation is of order ε². A spectral gap initially larger than 1/3 consequently stays larger than 1/4 for sufficiently small ε.</p>
+<p>The weighted slow-vector error is of order ε². The smallest bath weight is of order ε², so conversion to a bound on individual components costs one factor 1/ε, leaving an error of order ε. Any probability-weighted average changes by at most the largest component error. Hence all thermal overlaps retain their limiting values.</p>
+<h3>5. Take the limits in the stated order</h3>
+<p>Fix n and the clone fractions. Set L = ln(1/ε), β<sub>hot</sub> = L<sup>−2</sup>, and β<sub>cold</sub> = L<sup>−1/2</sup>. As ε shrinks, every hot thermal weight tends to one. Each cold clone weight contains e<sup>−2√L</sup> and tends to zero, while the three low weights tend to one. This justifies the first calculation, with finite positive temperatures at every chosen parameter.</p>
+<p>To approach 100% amplitude advantage, first choose a sufficiently large finite n, then a sufficiently small positive ε for that n. The proof does not attain 100% in one finite model and does not establish a sharp upper bound for any fixed n &gt; 4. The corresponding leading KL advantage tends to 1−9/n² because its leading coefficient involves the squared amplitude.</p>
+<h3>6. Separate the finite example from the limiting theorem</h3>
+<p>A five-state generator at ε = 1/1000 is checked exactly for rates, triplets, and spectral separation, but is not itself the reported thermal witness. The separate witness uses ε = 10<sup>−50</sup>, β<sub>hot</sub> = 1/10000, and β<sub>cold</sub> = 1/50. Rational thermal enclosures plus an explicit eigenvector-error bound place its repaired amplitude advantage between 37.6778168708% and 37.6778168731%.</p>
+<p>These percentages describe slow-amplitude suppression. A useful finite-time cooling protocol would require its own distance, threshold, time, preparation-cost, and physical-realization analysis.</p>
+<p class="small">Sources: <a href="research/high_dimension_amplitude.tex">full cloning proof</a>, <a href="research/clone_rate_bound_certificate.py">rate and perturbation bounds</a>, <a href="research/five_state_large_advantage_certificate.py">finite thermal certificate</a>, and the <a href="research/detailed_audit/dimensional_constructions_review.json">47-step review</a>.</p>
+</details>

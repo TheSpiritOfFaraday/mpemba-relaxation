@@ -1,0 +1,111 @@
+\subsection{An exact linear-feasibility reduction for a proposed slow mode}
+\label{sec:arithmeticlp}
+The remaining arithmetic conjecture can be attacked without repeatedly
+computing eigenvectors or imposing a semidefinite constraint. This is an
+exact reduction of the unresolved question, not a proof of the inequality.
+
+\begin{proposition}[Graph-coupling feasibility for the arithmetic conjecture]
+Fix an integer $n\geq4$, positive ordered bath weights $q_1>\cdots>q_n$, normalized to sum one,
+and a strictly positive vector $x\in\mathbb R^{n-1}$. Let $H$ contain the
+unnormalized weighted Helmert columns and let
+$\eta=H^\top D H=\operatorname{diag}(\eta_1,\ldots,\eta_{n-1})$.
+For each pair of contrast coordinates introduce $\ell_{ij}=\ell_{ji}$,
+and define
+\[
+B_{ij}=\frac{\ell_{ij}}{\eta_i}\quad(i\ne j),\qquad
+B_{ii}=-\sum_{j\ne i}\frac{\ell_{ij}x_j}{\eta_i x_i},\qquad
+M^{(0)}=\bigl(HB\eta^{-1}H^\top D\bigr)^\top.
+\]
+For fixed $q,x$, every original $F,G$ evaluated on $M^{(0)}$ is linear
+in $\ell$. Consider the finite linear program
+\begin{align*}
+\text{maximize }t\quad\text{subject to }&
+\sum_{i<j}\ell_{ij}=1,\qquad \ell_{ij}\geq t,\\
+&F_{abc}(M^{(0)})\leq-t,\quad
+G_{abc}(M^{(0)})\leq-t \qquad(a<b<c).
+\end{align*}
+Its optimum is positive if and only if $Hx$ is a simple slow left mode
+of a strictly positive reversible physical generator having every
+$F,G$ strict, with that generator allowed an arbitrary reset and time scale.
+
+Consequently a counterexample to $w_1+w_2\geq2w_3$ for a simple slow mode under the full weak
+triplet premise exists in a fixed dimension if and only if some positive
+ordered $q$ and positive $x$, with
+\[
+x_2<\frac{(q_1-q_2)q_3}{2q_2(q_1+q_2+q_3)}x_1,
+\]
+give positive optimum. If such a counterexample exists, $q,x,\ell$ may
+all be chosen rational. Equivalently, for each fixed dimension its
+existence is an explicit existential formula over the real numbers
+using polynomial inequalities after positive denominators are cleared.
+\end{proposition}
+\begin{proof}
+By construction $Bx=0$ and $\eta B$ is symmetric. More explicitly,
+for every real vector $y$,
+\[
+-y^\top\eta B y=\sum_{i<j}\ell_{ij}x_ix_j
+ \left(\frac{y_i}{x_i}-\frac{y_j}{x_j}\right)^2.
+\]
+Thus $B$ is negative semidefinite in its weighted inner product, with
+kernel exactly $\operatorname{span}(x)$ when the graph is connected. With
+$X=\operatorname{diag}(x)$, the matrix $X^{-1}BX$ is a Markov backward
+generator with off-diagonal entries
+$\ell_{ij}x_j/(\eta_i x_i)$; it is reversible with weights
+$\eta_i x_i^2$. If every $\ell_{ij}>0$, its zero eigenvalue is simple
+and all others are strictly negative. Since $H^\top D\mathbf1=0$,
+$M^{(0)}$ conserves probability, is reversible at $q$, and induces exactly
+$B$ on the contrast coordinates. It need not have nonnegative rates.
+For sufficiently large $\rho>0$, however,
+\[
+M=M^{(0)}+\rho(q\mathbf1^\top-I)
+\]
+has every rate strictly positive. Reset addition annihilates all the
+linear $F,G$ tests. Its nonstationary eigenvalues are those of $B$ minus
+$\rho$, so $Hx$ is a simple slow left eigenvector with rate $-\rho$.
+This proves sufficiency of a positive LP margin.
+
+Conversely take a physical generator with strict tests and slow
+coordinates $x>0$. The ordered-conductance theorem makes its contrast
+matrix Metzler; strict $G$ makes every off-diagonal contrast entry
+positive. Subtract its slow eigenvalue times the identity in contrast
+space. The resulting matrix annihilates $x$, is symmetrizable by
+$\eta$, and therefore has exactly the displayed graph-coupling form
+with every $\ell_{ij}>0$. This shift corresponds to a reset translation,
+so does not change $F,G$. Rescale time to make $\sum\ell_{ij}=1$.
+There are finitely many strict inequalities, hence a common positive
+margin exists and the LP optimum is positive.
+
+For the global counterexample equivalence, start from a simple slow
+mode with a strict violation of the arithmetic inequality, allowing
+weak triplet failures. Add a sufficiently small generator whose every
+downward rate is one, with detailed-balance reverse rates. Its tests
+are $G=t-1<0$ and $F=(t-1)(1+u/2)<0$. The perturbed generator therefore
+has every test strict. Spectral simplicity and the strict arithmetic
+violation persist by continuity. The contrast matrix now has strictly
+positive off-diagonal entries, so its Perron coordinates are positive.
+The preceding construction applies. Conversely a positive LP margin
+and the displayed strict coordinate inequality give a physical
+counterexample by reset addition.
+
+All strict conditions are continuous in the positive variables
+$q,x,\ell$. Rational points are dense in their domains (including
+$\sum q_i=1$ and $\sum\ell_{ij}=1$), so a successful strict example
+can be replaced by rational data while keeping every strict inequality.
+The new matrix is then constructed from those rational $q,x,\ell$; its
+slow mode is exactly $Hx$. This does not assume that the original
+generator already had a rational eigenvector.
+The Helmert formulas and all tests are rational functions with positive
+denominators on this domain. Clearing those denominators gives the
+claimed finite existential polynomial system. This establishes an
+exact decision reduction, without claiming that general quantifier
+elimination is computationally practical.
+\end{proof}
+
+For a fixed prescribed mode on the weak boundary, connectivity rather
+than positivity of every $\ell$ is the exact simplicity condition.
+It can still be encoded linearly: require $\ell\geq0$, weak $F,G\leq0$,
+and a positive common lower bound on the sum of $\ell$ crossing each
+nontrivial cut of the contrast-coordinate graph. Thus the strict LP
+above is not incorrectly being used to reject all weakly realizable
+modes at a fixed $x$. Its strict formulation is sufficient and necessary
+for the global strict-violation search by the perturbation argument.

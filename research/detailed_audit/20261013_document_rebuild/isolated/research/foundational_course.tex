@@ -1,0 +1,2074 @@
+% Additive teaching material. Deliberately use unnumbered environments so
+% the retained research report keeps its theorem/equation/section numbering.
+\begin{center}
+\large A gradual course in thermal relaxation, from fractions to exact proof
+\end{center}
+\vspace{1em}
+\noindent\textbf{Begin at the beginning.} The first part develops the needed
+mathematics through 40 lessons, worked examples, and exercises with answers.
+The second part retains the complete technical research report and its
+reproducible certificates. Read them as a connected course, or use the
+linked contents and reading map to move between intuition and proof.
+\clearpage
+\section*{How to read this unusually detailed report}
+\addcontentsline{toc}{section}{How to read this unusually detailed report}
+This report has two jobs. It teaches the mathematics needed to understand a
+thermal relaxation counterexample, and it records the research arguments
+precisely enough to check them. The first job requires patience. We begin with
+fractions and probabilities, not with a matrix full of unfamiliar symbols.
+
+The central question is simple to state. Prepare two copies of the same system,
+one hotter than the other. Put both in contact with the same colder environment.
+Can the hotter copy later be closer to equilibrium? In the models studied here,
+the answer can be yes. A second question is more subtle: can every three-state
+test miss a reversal in a four-state system? A certified example in this report
+shows that this too can happen. Understanding why requires learning what the
+state of the system is, what its dynamics do, what ``closer'' means, and how a
+proof differs from a convincing numerical plot.
+
+\paragraph{Starting knowledge.}
+You need ordinary arithmetic and a willingness to read an equation one symbol
+at a time. High-school algebra helps. Calculus and linear algebra are developed
+as they become necessary. This is not a replacement for complete courses in
+those subjects: it is a carefully chosen route through the parts this research
+uses. No knowledge of Markov chains, spectral theory, statistical mechanics,
+convex order, interval arithmetic, or proof assistants is assumed at the start.
+
+\paragraph{The learning sequence.}
+Lessons 1--9 build the language: logical claims, fractions, probabilities,
+weighted averages, temperature, exponentials, Gibbs distributions, derivatives,
+and covariance. Lessons 10--17 build the dynamics: rates, matrices,
+equilibrium, eigenmodes, detailed balance, distances, and slow amplitudes.
+Lessons 18--24 work through the counterexample and the structural explanation.
+Lessons 25--30 bridge to classification, degeneracy, rigorous computation,
+finite-time physics, and formal proof. Lessons 31--32 give exercises with
+solutions and a map into the research text. Lessons 33--40 then slow down
+the bridge to continuous-time certificates and physical models, deriving
+random clocks, rigorous tails, target-time bounds and intermediate-state
+dynamics through worked examples.
+
+\paragraph{How much to read at once.}
+For a first pass, read one lesson, reproduce its small numerical example, and
+stop when the last paragraph makes sense. For a second pass, derive the displayed
+identities without looking at the intermediate lines. For a research pass,
+follow the references into Part II and inspect the associated certificates.
+Being able to recite a conclusion is different from being able to reconstruct
+its argument; the worked checks are intended to close that gap.
+
+\paragraph{What the labels mean.}
+An \emph{illustration} is chosen to make an idea easy to see. It need not exhibit
+a Mpemba reversal. An \emph{identity} follows exactly from its stated assumptions.
+A \emph{certified result} refers to the particular mathematical claim and
+verification described in the research text. A \emph{diagnostic calculation}
+provides evidence or intuition, but does not by itself certify a continuum of
+parameters. The new teaching examples do not expand the scope of the existing
+Lean formalization or turn an unfinished proof audit into a completed one.
+
+\paragraph{Keep three questions separate throughout.}
+What has been proved for an abstract finite-state model? What has been verified
+for the particular parameter choices? What has been demonstrated in a physical
+experiment? This report supplies mathematical and computational results for
+models. The physical-model study explains its idealizations explicitly.
+
+\clearpage
+\tableofcontents
+\clearpage
+\part*{Part I. From basic arithmetic to the research frontier}
+\addcontentsline{toc}{part}{Part I. From basic arithmetic to the research frontier}
+
+\section*{Lesson 1. What would count as an answer?}
+\addcontentsline{toc}{section}{1. What would count as an answer?}
+\paragraph{Start with a familiar comparison.}
+Suppose two cups of water start at different temperatures. Saying that one
+``cools faster'' is incomplete. It might mean a steeper initial temperature
+slope, a shorter time to a target temperature, or a smaller distance from the
+final state after ten minutes. Those statements are different. A curve can
+start steeply and later flatten. A system can cross one target first and a
+different target second. We therefore choose a mathematical comparison before
+trying to prove anything.
+
+Here the system has finitely many states. Its condition is described by a list
+of probabilities. Temperature is used to prepare that list; after the dynamics
+begin, the list need not correspond to any single temperature. A bath is the
+environment with fixed temperature. Both preparations evolve with the same
+rules toward the same bath equilibrium. We compare distances between their
+probability lists and that equilibrium.
+
+\paragraph{An implication is a promise with a condition.}
+Write $A\Rightarrow B$ for ``if $A$ holds, then $B$ holds.'' A proposed universal
+test says that whenever certain three-state tests fail, a four-state reversal
+cannot occur. To disprove such a statement, we must produce a system in which
+the condition $A$ is true and the promised conclusion $B$ is false. Producing a
+reversal alone is not enough: the system must also satisfy every condition of
+the claim being tested.
+
+There is an important asymmetry. One valid counterexample disproves a universal
+claim. A million examples consistent with that claim do not prove it. Sampling
+can miss a thin set, a boundary, or a region outside the sample box. Conversely,
+failure to find a counterexample is not evidence that a particular proof is
+correct. A proof must explain why every allowed case is covered.
+
+\paragraph{Read the quantifiers.}
+``There exists'' means that at least one object works. ``For every'' means that
+none of the allowed objects may fail. In symbols,
+\[
+\exists M\;\text{with a reversal}
+\qquad\hbox{and}\qquad
+\forall M\;\text{no reversal}
+\]
+make very different claims. The letter $M$ will later denote a matrix of rates.
+For now it is simply the name of the dynamical rule. A universal bound also
+needs quantifiers: a bound for four states is not automatically a bound for all
+numbers of states, and a bound for long-time amplitudes is not automatically a
+bound for target times.
+
+\paragraph{The proof obligations to remember.}
+Our counterexample must have legitimate probabilities, distinct ordered
+energies, a finite positive bath temperature, positive transition rates,
+probability-conserving dynamics, detailed balance, the stated slow-mode
+property, failure of all the prescribed triplet tests, and a strict reversal.
+Each adjective has a job. Later lessons explain how each is checked.
+
+\paragraph{Checkpoint.}
+If a three-state test succeeds but a reversal is observed, have we disproved a
+claim whose premise requires all three-state tests to fail? No. The condition
+of the implication has not been met. Checking the premise is half of checking
+a counterexample.
+
+\clearpage
+\section*{Lesson 2. Fractions, ratios, inequalities, and precision}
+\addcontentsline{toc}{section}{2. Fractions, ratios, inequalities, and precision}
+A fraction $a/b$, with $b\ne0$, means the number that becomes $a$ when multiplied
+by $b$. Fractions are useful here because they can be exact. The decimal
+$0.995$ equals $995/1000=199/200$ exactly. The displayed decimal $0.3333$ is
+usually only an approximation to $1/3$. Knowing which situation applies matters
+when a proof depends on the sign of a small difference.
+
+\paragraph{A small exact calculation.}
+The bath weights of the primary example are
+\[
+q_1=1,\qquad q_2=\frac{199}{200},\qquad
+q_3=\frac25,\qquad q_4=\frac1{400}.
+\]
+The common denominator $400$ gives
+\[
+Q=q_1+q_2+q_3+q_4
+=\frac{400+398+160+1}{400}=\frac{959}{400}.
+\]
+Dividing each weight by $Q$ therefore gives
+\[
+\left(\frac{400}{959},\frac{398}{959},
+\frac{160}{959},\frac1{959}\right).
+\]
+You can verify normalization before touching a computer: the numerators sum to
+$959$. Notice the distinction between a \emph{weight}, which is merely positive,
+and a \emph{probability}, whose whole list must sum to one.
+
+\paragraph{Ratios cancel shared scales.}
+If $q_i$ and $q_j$ are both multiplied by the same positive number, $q_j/q_i$
+does not change. Similarly, the ratio of two amplitudes is independent of a
+shared normalization. This is why some intermediate choices are conventions
+rather than physical assumptions. However, multiplying all energies by a
+number without compensating the temperature generally changes the physics;
+not every rescaling is harmless.
+
+\paragraph{Inequalities carry direction.}
+For $x<y$ and $c>0$, $cx<cy$. For $c<0$, $cx>cy$. A frequent mistake later is
+to multiply an inequality by a negative quantity and forget to reverse it.
+Another is to divide by a number before proving it is nonzero. The research
+proofs pay particular attention to zero cases for this reason.
+
+For example, $-0.094<-0.093$, but $|-0.094|>|-0.093|$. Absolute value measures
+distance from zero and discards the sign. Our slow overlaps in the primary
+cooling example are negative. A more negative overlap means a larger amplitude,
+not a smaller one. We will compare absolute values explicitly.
+
+\paragraph{Percentages need a denominator.}
+Reducing a quantity from $100$ to $75$ is a $25\%$ reduction relative to $100$:
+$(100-75)/100=1/4$. The reverse increase is $25/75=1/3$, not $25\%$. When we
+define amplitude advantage as $1-|b_h|/|b_c|$, the denominator is the colder
+preparation's amplitude. A different denominator would define a different
+percentage.
+
+\paragraph{Checkpoint.}
+If $x\in[1.001,1.002]$ and $y\in[1.005,1.006]$, then $y-x\geq0.003>0$.
+This proves an ordering even though neither value is known exactly. If the
+intervals overlap, the same argument may be inconclusive. Inconclusive does
+not mean false.
+
+\clearpage
+\section*{Lesson 3. A state is a list of probabilities}
+\addcontentsline{toc}{section}{3. A state is a list of probabilities}
+A finite-state model begins by choosing mutually exclusive alternatives. A
+single system occupies one alternative at a time. The probability $p_i$ is the
+chance of finding it in state $i$, or the limiting fraction of a large ensemble
+found there. An ensemble means many independently prepared copies. The list
+\[
+p=(p_1,\ldots,p_n)^\top,\qquad p_i\geq0,
+\qquad\sum_{i=1}^n p_i=1
+\]
+is a probability vector. The superscript $\top$ means ``transpose'': it turns a
+horizontal list into a column. The symbol $\sum$ means add the indicated terms.
+Thus $\sum_{i=1}^3p_i=p_1+p_2+p_3$.
+
+\paragraph{Why a distribution contains more information than a mean.}
+Take three energy levels $E=(0,1,2)$. The probability vectors
+\[
+p=(1/2,0,1/2)^\top,\qquad r=(0,1,0)^\top
+\]
+both have mean energy $1$. Nevertheless they are very different distributions:
+one has no systems in the middle state, while the other has all systems there.
+A statement about mean energy alone cannot in general determine a statement
+about distance between full distributions. This distinction matters when
+comparing different definitions of the Mpemba effect in the literature.
+
+\paragraph{The geometry is simple before it is high-dimensional.}
+For two states, $p_2=1-p_1$, so one number specifies the distribution. The
+allowed points form a line segment. For three states, $p_3=1-p_1-p_2$ with
+$p_1,p_2\geq0$ and $p_1+p_2\leq1$; the allowed points form a filled triangle.
+For four states they form a solid tetrahedron. In general this set is called a
+\emph{simplex}. The name is less important than its two rules: nonnegative
+entries and total mass one.
+
+\paragraph{Differences are not probabilities.}
+If $p$ and $r$ are probability vectors, $z=p-r$ has entries summing to zero.
+Its entries may be negative. For example,
+\[
+(0.6,0.4)^\top-(0.75,0.25)^\top=(-0.15,0.15)^\top.
+\]
+The negative first entry means a deficit relative to the reference, not a
+negative physical probability. Eigenvectors describing deviations from
+equilibrium likewise contain signs. Confusing a signed deviation with a
+probability vector makes much of spectral theory seem paradoxical.
+
+\paragraph{What the model leaves out.}
+A finite-state model may describe energy levels, conformations, coarse regions
+of a landscape, or another set of alternatives. Choosing these states is a
+modeling decision. Mathematical consistency of their probability evolution
+does not establish that they describe a particular experimental material.
+That additional identification requires physical evidence.
+
+\paragraph{Checkpoint.}
+Is $(0.4,0.5,0.2)$ a probability vector? No: it sums to $1.1$. Is
+$(-0.1,0.1,0)$ a possible difference of probability vectors? Yes. Its total is
+zero, and appropriate reference probabilities make both original vectors
+nonnegative.
+
+\clearpage
+\section*{Lesson 4. Averages, spread, and covariance}
+\addcontentsline{toc}{section}{4. Averages, spread, and covariance}
+An observable $f$ assigns a number $f_i$ to state $i$. Energy is one observable.
+The mean or expectation of $f$ in distribution $p$ is
+\[
+\langle f\rangle_p=\sum_i p_i f_i.
+\]
+This is a weighted average, not an unweighted average unless all probabilities
+are equal. For $p=(1/2,1/3,1/6)$ and $E=(0,1,2)$,
+\[
+\langle E\rangle_p=\tfrac12\,0+\tfrac13\,1+\tfrac16\,2=\tfrac23.
+\]
+The brackets $\langle\cdot\rangle$ are notation for an average; they do not
+represent an extra operation beyond this sum.
+
+\paragraph{Variance measures spread around the average.}
+Define
+\[
+\Var_p(f)=\sum_i p_i(f_i-\langle f\rangle_p)^2
+=\langle f^2\rangle_p-\langle f\rangle_p^2.
+\]
+To derive the second form, expand the square. The middle contribution is
+$-2\langle f\rangle_p\sum_i p_i f_i=-2\langle f\rangle_p^2$, and the last
+is $\langle f\rangle_p^2\sum_i p_i=\langle f\rangle_p^2$. Their sum gives
+the stated identity. Because the first definition is a sum of nonnegative
+terms, variance cannot be negative.
+
+In our example, $\langle E^2\rangle=1/3+4/6=1$, so
+$\Var(E)=1-(2/3)^2=5/9$. A zero variance would mean that the observable has
+one value on every state with positive probability.
+
+\paragraph{Covariance measures joint variation.}
+For observables $f$ and $g$,
+\[
+\Cov_p(f,g)=\langle fg\rangle_p-\langle f\rangle_p\langle g\rangle_p.
+\]
+Positive covariance means that larger-than-average values of one tend, in the
+weighted sum, to accompany larger-than-average values of the other. It is not
+a causal statement. The same observable paired with itself gives variance.
+A useful identity, obtained by expanding the products, is
+\[
+\Cov_p(f,g)=\frac12\sum_{i,j}p_ip_j(f_i-f_j)(g_i-g_j)
+=\sum_{i<j}p_ip_j(f_j-f_i)(g_j-g_i).
+\]
+For the first equality, the two squared-index terms contribute
+$2\langle fg\rangle$, and the two cross terms contribute
+$-2\langle f\rangle\langle g\rangle$. The factor $1/2$ removes that two.
+The second equality groups the equal $(i,j)$ and $(j,i)$ contributions.
+
+\paragraph{Why this identity will matter.}
+If $f$ and energy both increase with the state index, every pairwise product
+$(f_j-f_i)(E_j-E_i)$ is nonnegative. Their covariance is then nonnegative.
+No cancellation can change that sign. If $f$ is not ordered, different pairs
+may compete. Later the observable $f$ will be a slow eigenfunction. Its shape
+will determine whether varying the preparation temperature can reverse the
+usual amplitude order.
+
+\paragraph{Checkpoint.}
+Adding a constant $c$ to every $f_i$ leaves $\Var(f)$ and $\Cov(f,g)$ unchanged.
+This follows immediately from the difference form: $(f_j+c)-(f_i+c)=f_j-f_i$.
+Scaling $f$ by $c$ scales its covariance by $c$ and its variance by $c^2$.
+
+\clearpage
+\section*{Lesson 5. Energy, temperature, and units}
+\addcontentsline{toc}{section}{5. Energy, temperature, and units}
+Energy levels are numbers $E_i$ assigned to the states. We label them in
+increasing order,
+\[
+E_1<E_2<\cdots<E_n.
+\]
+The temperature $T$ is positive. Statistical mechanics often uses inverse
+temperature
+\[
+\beta=\frac{1}{k_B T},
+\]
+where $k_B$ is Boltzmann's constant. The product $\beta E_i$ is dimensionless.
+An exponential of an energy measured in joules would be meaningless without
+such a conversion; the number placed in an exponential must carry no unit.
+
+\paragraph{The inverse reverses the ordering.}
+Higher temperature means lower $\beta$. With a colder bath at $T_b$, two
+cooling preparations satisfy
+\[
+T_h>T_c>T_b
+\quad\Longleftrightarrow\quad
+0<\beta_h<\beta_c<\beta_b.
+\]
+The subscripts $h$ and $c$ mean hotter and colder \emph{relative to each other}.
+Both are hotter than the bath. In a heating experiment they can both be colder
+than the bath. It is worth writing the inverse-temperature ordering on paper
+before every sign argument.
+
+\paragraph{Changing the energy zero changes no probabilities.}
+Only energy differences matter for the Gibbs probabilities introduced next.
+If $E_i$ is replaced by $E_i+C$, every exponential weight is multiplied by
+$e^{-\beta C}$. That common factor cancels in normalization. We can therefore
+choose $E_1=0$. This choice does not say that the ground state has no physical
+energy; it selects a reference level.
+
+\paragraph{Choosing bath units.}
+Let $\widetilde E_i=\beta_b(E_i-E_1)$ and
+$\widetilde\beta=\beta/\beta_b$. Then
+$\widetilde\beta\widetilde E_i=\beta(E_i-E_1)$, so the probabilities are
+unchanged. In these units the bath inverse temperature is $1$. A preparation
+with $\widetilde\beta=1/10$ is at ten times the bath's absolute temperature.
+Dropping the tildes simplifies notation, but does not turn inverse temperature
+into ordinary temperature.
+
+\paragraph{Do not confuse three rescalings.}
+Shifting all energies changes their zero. Scaling energy and inverse
+temperature reciprocally changes their units. Multiplying every transition
+rate by a positive factor changes the clock. These are distinct operations.
+Setting an energy gap to one and also setting the bath inverse temperature to
+one cannot generally be done as two independent harmless choices; their
+product contains physical information.
+
+\paragraph{Checkpoint.}
+If the bath has $\beta_b=1$, then $\beta=0.01$ is a hot preparation, not a cold
+one. The limiting value $\beta=0$ represents infinite temperature. A proof at
+that endpoint alone is not yet a proof for two finite initial temperatures;
+a continuity argument or finite choices must complete it.
+
+\clearpage
+\section*{Lesson 6. Why exponentials and logarithms appear}
+\addcontentsline{toc}{section}{6. Why exponentials and logarithms appear}
+The exponential $e^x$ is the positive function with $e^0=1$ and derivative
+$e^x$. It obeys $e^{x+y}=e^xe^y$. One definition that also supports rigorous
+computation is
+\[
+e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots,
+\]
+where $m!=1\cdot2\cdots m$, with $0!=1$. For a real number $x$, the series
+converges. For negative $x$, $e^x=1/e^{-x}$ is still positive. It never becomes
+negative just because the exponent is negative.
+
+\paragraph{Repeated fractional change.}
+A quantity that loses a fixed \emph{fraction per unit time} satisfies
+$y'(t)=-k y(t)$ with $k>0$. The prime means the instantaneous rate of change; Lesson 8 defines it
+precisely. Its solution is $y(t)=y(0)e^{-kt}$. Differentiating
+checks the equation directly. At time $1/k$ the quantity is multiplied by
+$e^{-1}$, about $0.368$. The number $1/k$ is a characteristic decay time, not
+the time at which the quantity becomes exactly zero. An exponential with a
+nonzero initial value reaches zero only in the limit $t\to\infty$.
+
+\paragraph{Logarithms undo exponentials.}
+For $a>0$, $\log a$ is the real number satisfying $e^{\log a}=a$.
+We use the natural logarithm throughout. Thus $\log(ab)=\log a+\log b$ and
+$\log(a/b)=\log a-\log b$. Solving $q=e^{-E}$ gives $E=-\log q$.
+For $0<q<1$, $\log q<0$, so this energy is positive. Smaller weights correspond
+to larger energies.
+
+The primary bath weights therefore give
+\[
+E_1=0,\quad E_2=\log(200/199),\quad
+E_3=\log(5/2),\quad E_4=\log400.
+\]
+Their order follows without decimal approximations because
+$1<200/199<5/2<400$ and the logarithm is increasing.
+
+\paragraph{Real powers connect preparation to bath.}
+With $q_i=e^{-E_i}$ in bath units,
+\[
+e^{-\beta E_i}=e^{\beta\log q_i}=q_i^\beta.
+\]
+For $\beta=1/2$, this is a square root. For $\beta=1/1000$, it is a positive
+thousandth root. A rational bath weight need not produce a rational hot
+preparation weight. That does not make exact certification impossible:
+rational intervals can enclose the positive root, with their validity checked
+by integer powers.
+
+\paragraph{Checkpoint.}
+The equation $e^{-kt}=a$ with $0<a<1$ gives
+$t=-\log(a)/k>0$. Taking logarithms converts a multiplicative decay target into
+an additive time formula. This simple fact will later explain why an amplitude
+percentage and a time-saving percentage are different.
+
+\clearpage
+\section*{Lesson 7. Constructing a Gibbs distribution by hand}
+\addcontentsline{toc}{section}{7. Constructing a Gibbs distribution by hand}
+The thermal or Gibbs preparation at inverse temperature $\beta$ is
+\[
+\pi_i(\beta)=\frac{e^{-\beta E_i}}{Z(\beta)},
+\qquad Z(\beta)=\sum_j e^{-\beta E_j}.
+\]
+The symbol $Z$ is called the partition function. At this stage, its job is
+simply to normalize positive weights. Every numerator is positive and the
+numerators sum to $Z$, so the probabilities are positive and sum to one.
+
+\paragraph{Illustration with three states.}
+Use $E=(0,\log2,\log4)$ and $\beta=1$. The unnormalized weights are
+$(1,1/2,1/4)$, because $e^{-\log2}=1/2$. Their sum is $7/4$. Dividing gives
+\[
+\pi(1)=(4/7,2/7,1/7)^\top.
+\]
+At $\beta=0$, every weight is $1$, so $\pi(0)=(1/3,1/3,1/3)^\top$.
+At $\beta=2$, the weights are squared, giving $(1,1/4,1/16)$ and hence
+$\pi(2)=(16/21,4/21,1/21)^\top$. Increasing inverse temperature concentrates
+probability in the low-energy states.
+
+\paragraph{Ratios are even simpler than probabilities.}
+Normalization cancels from a probability ratio:
+\[
+\frac{\pi_j(\beta)}{\pi_i(\beta)}
+=e^{-\beta(E_j-E_i)}.
+\]
+For the example, the ratio of the third probability to the first at $\beta=1$
+is $1/4$. At $\beta=2$ it is $1/16$. This is how energy gaps control relative
+occupancy. The value of a single probability depends on every state through
+$Z$, while the ratio of two probabilities depends only on their energy gap.
+
+\paragraph{The bath and the preparation have different jobs.}
+We write $\pi_b=\pi(\beta_b)$ for the bath equilibrium. This fixed distribution
+helps determine the dynamics. We vary $\beta$ to choose initial distributions
+$p(0)=\pi(\beta)$. Once the bath is fixed, varying the preparation does not
+change the matrix of transition rates. Comparing two preparations with two
+different matrices would be a different experiment.
+
+\paragraph{What happens after time zero?}
+Although $p(0)$ lies on the Gibbs curve $\beta\mapsto\pi(\beta)$, the evolving
+probability vector usually leaves that curve. One cannot generally assign a
+single instantaneous temperature to the entire vector. The master equation
+must evolve all probabilities, rather than just a scalar temperature.
+
+\paragraph{Checkpoint.}
+In the illustration,
+$\langle E\rangle_{\pi(1)}=(4/7)\log2$, and
+$\Var_{\pi(1)}(E)=(26/49)(\log2)^2$. To check the variance, first compute
+$\langle E^2\rangle=(6/7)(\log2)^2$ and subtract the square of the mean.
+The three-state illustration is a teaching example, not the four-state
+counterexample.
+
+\clearpage
+\section*{Lesson 8. Derivatives, local change, and Taylor expansion}
+\addcontentsline{toc}{section}{8. Derivatives, local change, and Taylor expansion}
+For a function $f(x)$, the derivative is the limiting slope
+\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+\]
+A positive derivative means increasing values locally; a negative derivative
+means decreasing values locally. A zero derivative does not alone identify a
+maximum. The function $x^3$ has derivative zero at $0$ but keeps increasing
+through it. The function $x^2$ has a minimum there. One needs signs on either
+side or additional information about higher derivatives.
+
+\paragraph{The rules we use most often.}
+The product rule is $(fg)'=f'g+fg'$. The quotient rule is
+$(f/g)'=(f'g-fg')/g^2$ when $g\ne0$. The chain rule gives
+$(e^{u(x)})'=u'(x)e^{u(x)}$. These rules make the Gibbs derivative accessible.
+Let $r_i=e^{-\beta E_i}$. Then $r_i'=-E_i r_i$ and
+\[
+Z'=\sum_i r_i'=-\sum_i E_i r_i=-Z\langle E\rangle_\pi.
+\]
+Therefore
+\begin{align*}
+\pi_i'&=\frac{r_i'Z-r_iZ'}{Z^2}\\
+&=\frac{-E_i r_i Z+r_i Z\langle E\rangle_\pi}{Z^2}\\
+&=-(E_i-\langle E\rangle_\pi)\pi_i.
+\end{align*}
+Every line follows from substitution and cancellation. A state below the
+current mean energy gains probability as $\beta$ increases; a state above it
+loses probability. Summing the last line gives zero, as required because the
+total probability remains one.
+
+\paragraph{Taylor expansion is a controlled local approximation.}
+Near a point $x$, a sufficiently smooth function has
+\[
+f(x+h)=f(x)+h f'(x)+\tfrac12h^2f''(x)+\text{remainder}.
+\]
+An approximation without a remainder estimate is useful intuition, but not a
+rigorous numerical enclosure. For example,
+$\log(1+u)=u-u^2/2+O(u^3)$ as $u\to0$. Here $O(u^3)$ means that the absolute
+remainder is bounded by a constant times $|u|^3$ sufficiently near zero.
+It does not mean the remainder is literally zero.
+
+The notation $r(h)=o(h^2)$ is stronger than merely tending to zero: it means
+$r(h)/h^2\to0$. These symbols will let us separate the leading late-time term
+from faster-decaying errors. Their constants and domains matter whenever an
+asymptotic statement is turned into a finite numerical guarantee.
+
+\paragraph{Checkpoint.}
+At the three-state Gibbs distribution from Lesson 7,
+$\pi_1'=\langle E\rangle\pi_1=(16/49)\log2>0$. The ground-state population
+increases as the system is prepared colder. The derivative is with respect to
+inverse temperature, not time.
+
+\clearpage
+\section*{Lesson 9. The covariance identity that drives the mechanism}
+\addcontentsline{toc}{section}{9. The covariance identity that drives the mechanism}
+Keep an observable $f_i$ fixed while varying the Gibbs preparation. Using
+Lesson 8,
+\begin{align*}
+\frac{d}{d\beta}\langle f\rangle_\pi
+&=\sum_i f_i\pi_i'\\
+&=-\sum_i f_i E_i\pi_i+\langle E\rangle_\pi\sum_i f_i\pi_i\\
+&=-\langle fE\rangle_\pi+\langle E\rangle_\pi\langle f\rangle_\pi\\
+&=-\Cov_\pi(f,E).
+\end{align*}
+This identity translates a temperature derivative into a weighted correlation.
+It is exact, not a numerical approximation. The word ``fixed'' is essential:
+if $f$ itself depended on $\beta$, an additional term
+$\sum_i\pi_i f_i'$ would appear.
+
+\paragraph{First application: mean energy.}
+Choose $f=E$. Then
+\[
+\frac{d}{d\beta}\langle E\rangle_\pi=-\Var_\pi(E)<0
+\]
+for distinct energies and a finite Gibbs distribution. The strict sign follows
+because all probabilities are positive and not all energies are equal.
+Thus mean energy decreases when inverse temperature increases. This is the
+expected behavior of thermal preparations, derived directly from the formula.
+
+\paragraph{Second application: a shaped observable.}
+If $f_1\leq f_2\leq\cdots\leq f_n$, the pairwise covariance formula makes
+$\Cov(f,E)\geq0$. Its thermal average cannot increase with $\beta$.
+If the values of $f$ bend up and down instead, pair contributions can have
+opposite signs. Temperature changes their weights. Their competition can
+therefore change the sign of the derivative.
+
+This is the basic mathematical opening for an anomalous slow amplitude. The
+observable that matters is not simply energy; it is an eigenfunction of the
+dynamics. A hot preparation can have more average energy and nevertheless a
+smaller projection onto that particular eigenfunction. There is no
+contradiction because these are different weighted sums.
+
+\paragraph{How to use the identity without overusing it.}
+A positive covariance at one preparation gives a negative derivative there.
+It does not automatically describe every temperature. A zero covariance marks
+a stationary point of the average, but the derivative may touch zero without
+changing sign. To prove a reversal, we need either a sign change with the
+right amplitude orientation or two strictly ordered amplitude values.
+The exact counterexample uses the latter route.
+
+\paragraph{Checkpoint.}
+The bath determines the eigenfunction. Holding that bath and the generator
+fixed is precisely what allows the covariance identity to be used for the
+slow overlap. Differentiating through a family of changing baths would be a
+different calculation and would need the missing derivative terms.
+
+\clearpage
+\section*{Lesson 10. Transition rates and a complete two-state solution}
+\addcontentsline{toc}{section}{10. Transition rates and a complete two-state solution}
+A transition rate is a probability per unit time in the small-time limit.
+If the system is in state $j$, a rate $a_{ij}$ means that the probability of
+jumping to a different state $i$ during a short interval $h$ is
+$a_{ij}h+o(h)$. The rate itself need not be less than one: it has units of
+inverse time, whereas the small-time jump probability is dimensionless.
+A rate of $3$ per second is perfectly legitimate.
+
+\paragraph{Destination comes first.}
+Throughout this report $a_{ij}$ means a jump \emph{from $j$ to $i$}.
+For ordered energies, $a_{12}$ is a downward transition from state $2$ to
+state $1$. This convention is easy to reverse accidentally. Read a matrix
+column as the possible destinations from its starting state.
+
+\paragraph{A model we can solve without matrix machinery.}
+Let the upward rate from state $1$ to $2$ be $1$ and the downward rate from
+$2$ to $1$ be $3$. Incoming flow to state $2$ is $1p_1$; outgoing flow is
+$3p_2$. Thus
+\[
+p_2'=p_1-3p_2=(1-p_2)-3p_2=1-4p_2.
+\]
+The equilibrium is found by setting the derivative to zero:
+$p_{2b}=1/4$ and $p_{1b}=3/4$. Define $z=p_2-1/4$. Its derivative is
+$z'=p_2'=1-4(z+1/4)=-4z$, so Lesson 6 gives
+\[
+p_2(t)=\frac14+\left(p_2(0)-\frac14\right)e^{-4t},
+\qquad p_1(t)=1-p_2(t).
+\]
+This is a complete solution for every initial probability vector.
+
+\paragraph{Check the solution rather than trusting it.}
+At $t=0$ it gives the chosen initial value. Differentiating yields
+$-4(p_2(0)-1/4)e^{-4t}=1-4p_2(t)$, so it satisfies the equation.
+As $t\to\infty$, the exponential goes to zero and $p_2(t)\to1/4$.
+For $t\geq0$, the solution is a convex combination of $p_2(0)$ and $1/4$,
+meaning a weighted average with nonnegative weights that sum to one,
+so it remains between zero and one. Conservation, positivity, and relaxation
+have each been checked separately.
+
+\paragraph{Why this model does not exhibit the desired reversal.}
+For thermal preparations above this bath, the hotter preparation has the
+larger state-$2$ population. Its initial deviation from $1/4$ is therefore
+larger. Both deviations are multiplied by the same positive $e^{-4t}$.
+Their ordering cannot reverse. A single scalar decay leaves no room for
+competition among differently decaying components. Extra states create
+additional components, although extra states alone do not guarantee a reversal.
+
+\clearpage
+\section*{Lesson 11. Matrices are bookkeeping for many flows}
+\addcontentsline{toc}{section}{11. Matrices are bookkeeping for many flows}
+A matrix is a rectangular array of numbers. Multiplying a matrix by a column
+vector means taking one row at a time and adding entrywise products.
+Our two-state model becomes
+\[
+\frac{d}{dt}\begin{pmatrix}p_1\\p_2\end{pmatrix}
+=\underbrace{\begin{pmatrix}-1&3\\1&-3\end{pmatrix}}_{M}
+\begin{pmatrix}p_1\\p_2\end{pmatrix}.
+\]
+The first row says $p_1'=-p_1+3p_2$; the second says $p_2'=p_1-3p_2$.
+Nothing new has been assumed by writing the two equations compactly.
+
+\paragraph{The master equation for $n$ states.}
+Set $M_{ij}=a_{ij}\geq0$ for $i\ne j$, and put the negative total exit rate
+on the diagonal:
+\[
+M_{jj}=-\sum_{i\ne j}a_{ij}.
+\]
+Then $p'=Mp$ means
+\[
+p_i'=\sum_{j\ne i}a_{ij}p_j
+-\left(\sum_{j\ne i}a_{ji}\right)p_i.
+\]
+The first sum is incoming probability per time, and the second is outgoing
+probability per time. Notice the reversed indices in the outgoing rate.
+A diagonal entry is not a negative jump probability. It records the loss
+from that state.
+
+\paragraph{Conservation comes from columns.}
+Every column of $M$ sums to zero. Therefore
+\[
+\frac{d}{dt}\sum_i p_i
+=\sum_i\sum_jM_{ij}p_j
+=\sum_j\left(\sum_iM_{ij}\right)p_j=0.
+\]
+If the initial total is one, it stays one. Row sums need not vanish under
+this column-vector convention. Accidentally imposing row conservation
+would describe a transposed convention rather than the stated model.
+
+\paragraph{Why nonnegative probabilities remain nonnegative.}
+Choose $r$ at least as large as every exit rate, with $r>0$, and define
+$P=I+M/r$. Here $I$ is the identity matrix, with ones on its diagonal and
+zeros elsewhere. Every entry of $P$ is nonnegative and every column sums
+to one. Thus $P$ maps probability vectors to probability vectors. The exact
+solution can be written
+\[
+e^{Mt}=e^{-rt}\sum_{k=0}^{\infty}\frac{(rt)^k}{k!}P^k.
+\]
+The coefficients are nonnegative and sum to one. This expresses the solution
+as a weighted average of probability-preserving maps, establishing positivity.
+The matrix exponential is defined by the same power series as the scalar
+exponential, with matrix powers replacing scalar powers.
+
+\paragraph{Checkpoint.}
+An Euler step $p(t+h)\approx(I+hM)p(t)$ can give negative probabilities if
+$h$ is too large. That is a failure of the numerical step, not of the exact
+continuous-time process. The series above also becomes a useful certificate
+method because its omitted tail can be bounded explicitly.
+
+\clearpage
+\section*{Lesson 12. Equilibrium, stationarity, and detailed balance}
+\addcontentsline{toc}{section}{12. Equilibrium, stationarity, and detailed balance}
+A stationary distribution $\pi_b$ satisfies $M\pi_b=0$. Starting there gives
+$p(t)=\pi_b$ for all time. Stationarity says that total incoming and outgoing
+flow cancel at each state. A stronger condition, detailed balance, says that
+each pair balances separately:
+\[
+M_{ij}\pi_{bj}=M_{ji}\pi_{bi}\qquad(i\ne j).
+\]
+The two sides are equilibrium probability currents in opposite directions.
+Their equality makes the dynamics reversible in the probabilistic sense.
+It does not mean that a nonequilibrium preparation fails to relax.
+
+\paragraph{Detailed balance implies stationarity.}
+For a fixed state $i$,
+\begin{align*}
+(M\pi_b)_i
+&=\sum_{j\ne i}M_{ij}\pi_{bj}+M_{ii}\pi_{bi}\\
+&=\sum_{j\ne i}M_{ji}\pi_{bi}
+-\sum_{j\ne i}M_{ji}\pi_{bi}=0.
+\end{align*}
+The first equality uses matrix multiplication; the second uses detailed
+balance and the diagonal definition. Every cancellation is visible.
+
+\paragraph{Constructing reversible rates from weights.}
+Since $\pi_{bi}=q_i/Q$, detailed balance is equivalent to
+$a_{ij}q_j=a_{ji}q_i$. Choose a downward rate $a_{ij}>0$ for $i<j$ and set
+\[
+a_{ji}=a_{ij}\frac{q_j}{q_i}.
+\]
+All weights are positive, so the upward rate is positive. If $q_j<q_i$,
+the upward rate is smaller than its downward partner. Choosing the diagonal
+last ensures conservation. This construction makes the desired bath
+stationary automatically.
+
+\paragraph{An explicit check.}
+For the two-state example, take $q=(1,1/3)$ and downward rate $a_{12}=3$.
+Then $a_{21}=3(1/3)=1$, as before. Normalization gives
+$\pi_b=(3/4,1/4)$. The flow from $2$ to $1$ is $3(1/4)=3/4$;
+the flow from $1$ to $2$ is $1(3/4)=3/4$. Individual transitions continue
+at equilibrium even though the probability distribution does not change.
+
+\paragraph{Connectivity matters.}
+If every off-diagonal rate is positive, any state can reach any other.
+There is then one stationary distribution and relaxation to it. More
+sparse models can also have this property when their transition graph is
+connected appropriately. If the graph splits into disconnected components,
+there can be several stationary directions. Some proof steps survive that
+boundary and others require separate treatment; positivity assumptions are
+therefore more than decorative wording.
+
+\clearpage
+\section*{Lesson 13. Eigenvectors separate the decay patterns}
+\addcontentsline{toc}{section}{13. Eigenvectors separate the decay patterns}
+An eigenvector $v\ne0$ of $M$ satisfies $Mv=\lambda v$. The matrix changes
+it by the factor $\lambda$ while keeping it on the same line. A negative
+factor reverses its sense along that line. The number
+$\lambda$ is an eigenvalue. For the differential equation, a component in
+that direction evolves as $e^{\lambda t}v$, because
+\[
+\frac{d}{dt}(e^{\lambda t}v)=\lambda e^{\lambda t}v
+=M(e^{\lambda t}v).
+\]
+An eigenvalue is therefore a decay rate in the dynamics, not a probability.
+
+\paragraph{The two-state eigenvectors can be checked by multiplication.}
+For $M=\left(\begin{smallmatrix}-1&3\\1&-3\end{smallmatrix}\right)$,
+\[
+M\begin{pmatrix}3/4\\1/4\end{pmatrix}=0,
+\qquad
+M\begin{pmatrix}1\\-1\end{pmatrix}
+=\begin{pmatrix}-4\\4\end{pmatrix}
+=-4\begin{pmatrix}1\\-1\end{pmatrix}.
+\]
+The stationary mode has eigenvalue zero. The deviation mode has eigenvalue
+$-4$. Its entries sum to zero, so adding a small multiple to the equilibrium
+preserves total probability.
+
+\paragraph{Several modes give several clocks.}
+For a reversible connected four-state model, the eigenvalues can be ordered
+\[
+0=\lambda_1>\lambda_2\geq\lambda_3\geq\lambda_4.
+\]
+The nonzero values are negative. If $\lambda_2>\lambda_3$, the slowest
+nonstationary mode is simple, meaning one-dimensional. Its exponential
+decays less rapidly than the others: $e^{-t}$ outlasts $e^{-10t}$.
+At late times, even a small coefficient of the slower exponential can dominate.
+
+\paragraph{A two-exponential illustration.}
+Consider the positive functions
+$f_h(t)=e^{-t}+9e^{-10t}$ and $f_c(t)=2e^{-t}+e^{-10t}$.
+At $t=0$, $f_h=10>3=f_c$. Their difference is
+$-e^{-t}+8e^{-10t}$, which is zero exactly when $e^{9t}=8$.
+Thus they cross at $t=(\log8)/9$, and $f_h<f_c$ thereafter.
+This is an illustration of competing decay coefficients, not a complete
+thermal Markov counterexample. Its role is to make the mechanism imaginable:
+more initial total deviation can coexist with less slow deviation.
+
+\paragraph{Checkpoint.}
+The slow eigenvalue is the negative one closest to zero, not the most negative
+one. A very negative eigenvalue gives a very fast decay. A simple slow mode
+permits one scalar amplitude; a repeated slow eigenvalue requires a whole
+projection, discussed in Lesson 26.
+
+\clearpage
+\section*{Lesson 14. Left eigenvectors measure the mode amplitudes}
+\addcontentsline{toc}{section}{14. Left eigenvectors measure the mode amplitudes}
+A right eigenvector describes a direction of change in the probability
+vector. A left eigenvector is a row vector satisfying
+$w^\top M=\lambda w^\top$, equivalently $M^\top w=\lambda w$.
+Multiplying the state by this row gives a scalar mode coordinate. Indeed,
+\[
+\frac{d}{dt}(w^\top p)=w^\top Mp=\lambda w^\top p.
+\]
+Thus $w^\top p(t)=e^{\lambda t}w^\top p(0)$ exactly.
+
+\paragraph{Why the bath disappears from the overlap.}
+For a nonzero eigenvalue,
+\[
+0=w^\top M\pi_b=\lambda w^\top\pi_b.
+\]
+Dividing by $\lambda\ne0$ gives $w^\top\pi_b=0$. Consequently the
+coefficient can be computed as either $w^\top[p(0)-\pi_b]$ or
+$w^\top p(0)$. For a Gibbs preparation we call it
+\[
+b(\beta)=w^\top\pi(\beta)=\sum_i w_i\pi_i(\beta).
+\]
+It is a weighted average of the values of the eigenfunction $w$.
+
+\paragraph{Normalization prevents a hidden factor.}
+Choose a corresponding right eigenvector $v$ such that $w^\top v=1$.
+Then $b(\beta)v$ is the actual vector component in that mode. If $w$ is
+multiplied by $c\ne0$, $b$ is multiplied by $c$ and $v$ must be divided by
+$c$. The physical product does not change. Ratios $|b_h|/|b_c|$ are therefore
+independent of this common normalization.
+
+\paragraph{Return to the complete two-state solution.}
+Take $w=(1,-3)^\top$. Direct multiplication gives $w^\top M=-4w^\top$.
+With $v=(1,-1)^\top/4$, $w^\top v=(1+3)/4=1$. The initial overlap is
+$b=p_1-3p_2=1-4p_2$. Therefore
+\[
+p(t)=\pi_b+e^{-4t}(1-4p_2(0))\frac{(1,-1)^\top}{4}.
+\]
+Its second component equals the scalar formula of Lesson 10. The abstract
+left/right distinction has recovered the elementary answer exactly.
+
+\paragraph{Covariance now acquires its physical role.}
+Because $w$ is fixed when the preparation varies,
+\[
+b'(\beta)=-\Cov_{\pi(\beta)}(w,E).
+\]
+This is the formula derived in Lesson 9 with $f=w$. The thermal curve and the
+dynamical mode meet in a single weighted covariance. The rates choose $w$;
+the energies and preparation temperature choose the weights in the covariance.
+The effect depends on both pieces.
+
+\clearpage
+\section*{Lesson 15. Reversibility turns a difficult matrix into a symmetric one}
+\addcontentsline{toc}{section}{15. Reversibility and the symmetric representation}
+A real symmetric matrix equals its transpose. Such matrices have real
+eigenvalues and an orthonormal basis of eigenvectors: mutually perpendicular
+unit-length vectors in which every vector has a unique expansion. Our probability
+generator is generally not symmetric in the ordinary coordinates, because
+upward and downward rates differ. Detailed balance provides the right change
+of coordinates.
+
+Let $D=\diag(\pi_b)$ be the diagonal matrix of bath probabilities. Its square
+root has entries $\sqrt{\pi_{bi}}$, and its inverse square root has entries
+$1/\sqrt{\pi_{bi}}$. All are defined because the probabilities are positive.
+Set
+\[
+S=D^{-1/2}MD^{1/2}.
+\]
+Detailed balance says $MD=DM^\top$, and therefore
+\[
+S^\top=D^{1/2}M^\top D^{-1/2}
+=D^{-1/2}MD^{1/2}=S.
+\]
+This change of coordinates is called a similarity transformation. It leaves
+eigenvalues unchanged: if $Mv=\lambda v$, then
+$S(D^{-1/2}v)=\lambda(D^{-1/2}v)$.
+
+\paragraph{Why decay rates cannot be positive.}
+Define equilibrium conductances $c_{ij}=M_{ij}\pi_{bj}=c_{ji}$ for $i\ne j$.
+Writing the generator on observables as $L=M^\top$, direct expansion gives
+\[
+-f^\top DLf=\sum_{i<j}c_{ij}(f_i-f_j)^2\geq0.
+\]
+For an eigenfunction $Lf=\lambda f$, the left side equals
+$-\lambda\sum_i\pi_{bi}f_i^2$. The weighted squared length is positive
+when $f\ne0$, so $\lambda\leq0$. If all conductances are positive, equality
+requires all values $f_i$ to coincide. Only the constant observable has
+zero eigenvalue, corresponding to the unique stationary probability mode.
+
+\paragraph{The right inner product.}
+For observables use $\langle f,g\rangle_D=\sum_i\pi_{bi}f_i g_i$.
+For probability deviations use
+$\langle z,y\rangle_{D^{-1}}=\sum_i z_i y_i/\pi_{bi}$.
+These weighted inner products are the natural ones for detailed balance.
+The different weights arise because a probability deviation and an
+observable are dual objects. If $Lw=\lambda w$, then $Dw$ is a right
+eigenvector of $M$.
+
+\paragraph{Advanced consequence, in plain terms.}
+The spectral analysis is not relying on a lucky numerical property of one
+matrix. Reversibility supplies a real diagonalization throughout the stated
+domain. That removes oscillatory complex modes and nontrivial Jordan blocks
+from this problem. It does not remove the need to check whether the slow
+eigenvalue is simple or repeated.
+
+\clearpage
+\section*{Lesson 16. What does it mean to be closer to equilibrium?}
+\addcontentsline{toc}{section}{16. What does it mean to be closer to equilibrium?}
+To compare whole probability vectors we need a specified distance or
+divergence. Different choices emphasize different discrepancies. Three used
+in this project are
+\begin{align*}
+\mathrm{TV}(p,\pi_b)&=\frac12\sum_i|p_i-\pi_{bi}|,\\
+\chi^2(p\Vert\pi_b)&=\sum_i\frac{(p_i-\pi_{bi})^2}{\pi_{bi}},\\
+D_{\mathrm{KL}}(p\Vert\pi_b)&=\sum_i p_i\log\frac{p_i}{\pi_{bi}}.
+\end{align*}
+A norm assigns a length to a vector: it is positive except at zero,
+scales by the absolute value of a scalar multiplier, and obeys the triangle
+inequality $\|x+y\|\leq\|x\|+\|y\|$. Euclidean length
+$\sqrt{\sum_i x_i^2}$ is one example. A metric measures distance between
+two points and also requires symmetry and the triangle inequality.
+Total variation (TV) is a metric. Pearson chi-square and relative entropy
+(KL) are divergences; they need not satisfy every metric axiom. We use the
+word ``distance'' informally only when the specified formula is clear.
+For KL, a zero $p_i$ contributes zero by a limit. The bath entries are positive.
+
+\paragraph{A hand calculation.}
+Take $\pi_b=(3/4,1/4)$ and $p=(1/2,1/2)$. The deviations are
+$(-1/4,1/4)$, so
+\[
+\mathrm{TV}=\tfrac12(\tfrac14+\tfrac14)=\tfrac14,
+\qquad
+\chi^2=\frac{1/16}{3/4}+\frac{1/16}{1/4}=\tfrac13.
+\]
+The KL value is
+$\frac12\log(2/3)+\frac12\log2=\frac12\log(4/3)$.
+The numerical values differ because the measurements differ. Comparing a TV
+number with a KL number as though they used the same scale would be meaningless.
+
+\paragraph{Why KL is approximately quadratic near equilibrium.}
+Write $p_i=\pi_{bi}(1+u_i)$, where $\sum_i\pi_{bi}u_i=0$.
+For small $u$,
+\[
+(1+u)\log(1+u)=u+\tfrac12u^2+O(u^3).
+\]
+Multiplying by $\pi_{bi}$ and summing cancels the linear term. Hence
+\[
+D_{\mathrm{KL}}(p\Vert\pi_b)
+=\tfrac12\sum_i\pi_{bi}u_i^2+O\!\left(\sum_i\pi_{bi}|u_i|^3\right)
+=\tfrac12\chi^2(p\Vert\pi_b)+\text{higher-order terms}.
+\]
+This is a local expansion around the bath, not an identity at arbitrary
+probabilities. Rare bath states have large reciprocal weights in chi-square,
+which is one reason finite-time comparisons require care.
+
+\paragraph{Initially hotter is initially farther in KL.}
+For a Gibbs preparation,
+\[
+D_{\mathrm{KL}}(\pi(\beta)\Vert\pi_b)
+=(\beta_b-\beta)\langle E\rangle_{\pi(\beta)}
++\log Z(\beta_b)-\log Z(\beta).
+\]
+Differentiate, use $\langle E\rangle'=-\Var(E)$ and
+$(\log Z)'=-\langle E\rangle$, and the two mean-energy terms cancel:
+\[
+\frac{d}{d\beta}D_{\mathrm{KL}}=(\beta-\beta_b)\Var(E).
+\]
+On the cooling side this derivative is negative. Thus increasing $\beta$
+toward the bath decreases the initial KL divergence, and the hotter
+preparation starts farther away. This supplies the initial half of a genuine
+initial-to-eventual reversal.
+
+\clearpage
+\section*{Lesson 17. Turning a slow-overlap inequality into a reversal}
+\addcontentsline{toc}{section}{17. From a slow-overlap inequality to a reversal}
+Assume the slow nonzero eigenvalue is simple, so
+$\lambda_2>\lambda_3$. Decompose the initial deviation into eigenmodes.
+At late times,
+\[
+p(t;\beta)-\pi_b=e^{\lambda_2t}b(\beta)v_2+R(t;\beta),
+\qquad R(t;\beta)=O(e^{\lambda_3t}).
+\]
+After division by $e^{\lambda_2t}$, the remainder tends to zero because
+$e^{(\lambda_3-\lambda_2)t}\to0$. This is why the slow coefficient determines
+the eventual order.
+
+For any fixed norm, continuity and homogeneity give
+\[
+\lim_{t\to\infty}e^{-\lambda_2t}\|p(t;\beta)-\pi_b\|
+=|b(\beta)|\|v_2\|.
+\]
+If $|b_h|<|b_c|$, the two limiting values have a strictly positive gap.
+For sufficiently late finite times, the errors are smaller than a fraction
+of that gap, so the same strict ordering holds. This is an existence argument
+for a finite late-time interval, not merely an assertion at $t=\infty$.
+
+\paragraph{For KL the coefficient is squared.}
+Combining the spectral expansion with Lesson 16 gives
+\[
+D_{\mathrm{KL}}(p(t;\beta)\Vert\pi_b)
+=\frac12e^{2\lambda_2t}b(\beta)^2
+\sum_i\frac{v_{2i}^2}{\pi_{bi}}+o(e^{2\lambda_2t}).
+\]
+The positive factor involving $v_2$ is shared by both preparations.
+A smaller absolute overlap therefore gives smaller eventual KL divergence.
+Since the hotter Gibbs preparation starts farther in KL, continuity forces
+at least one crossing between the initial and eventual orderings.
+
+\paragraph{Ordinary and strong effects.}
+An ordinary effect can occur with both overlaps nonzero. A strong effect
+requires $b(\beta)=0$ at a preparation different from the bath, eliminating
+the slow mode altogether. The bath itself always has zero overlap and does
+not count as a nontrivial strong preparation. The primary counterexample
+uses two nonzero overlaps; it does not need a strong effect.
+
+\paragraph{Amplitude advantage is not time advantage.}
+Define $A=1-|b_h|/|b_c|$. If $A=1/4$, the slow amplitude ratio is $3/4$,
+and the asymptotic KL ratio is $9/16$. Neither number is automatically a
+$25\%$ reduction in target time. In a pure one-mode KL approximation with
+$\lambda_2=-r<0$, the time to a small threshold $d$ is
+\[
+t(\beta;d)\approx\frac{1}{2r}
+\log\frac{K b(\beta)^2}{d},
+\qquad
+ t_c-t_h\approx\frac1r\log\frac{|b_c|}{|b_h|}.
+\]
+The difference is approximately additive in time. Its fraction of $t_c$
+depends on the threshold and tends to zero as the threshold tends to zero
+with fixed nonzero overlaps. Finite-time claims require their own proof.
+
+\clearpage
+\section*{Lesson 18. Assemble the exact four-state witness}
+\addcontentsline{toc}{section}{18. Assemble the exact four-state witness}
+We now have the ingredients to read actual research data. The primary
+witness uses the weights from Lesson 2, bath inverse temperature $1$, and
+six downward rates
+\[
+(a_{12},a_{13},a_{14},a_{23},a_{24},a_{34})
+=\left(1,28,\frac{249}{10},\frac{1799}{8},
+\frac{4983}{200},\frac{251}{25}\right).
+\]
+These are inputs, not rounded numerical estimates. The reverse rates are
+computed from detailed balance, and the diagonal entries from conservation.
+
+\paragraph{Build one column completely.}
+The three exits from state $1$ are upward transitions:
+\begin{align*}
+a_{21}&=a_{12}\frac{q_2}{q_1}=\frac{199}{200},\\
+a_{31}&=a_{13}\frac{q_3}{q_1}=28\frac25=\frac{56}{5},\\
+a_{41}&=a_{14}\frac{q_4}{q_1}=\frac{249}{10}\frac1{400}
+=\frac{249}{4000}.
+\end{align*}
+Their sum is $(3980+44800+249)/4000=49029/4000$.
+The first column is therefore
+\[
+\left(-\frac{49029}{4000},\frac{199}{200},
+\frac{56}{5},\frac{249}{4000}\right)^\top.
+\]
+It sums to zero exactly. Repeating this operation for the other states gives
+the matrix printed in Part II. You do not have to infer its meaning from a
+wall of fractions: every positive entry is a jump rate, and every negative
+diagonal entry is the negative sum of exits.
+
+\paragraph{Check one less obvious reverse rate.}
+For the pair $2,3$,
+\[
+a_{32}=\frac{1799}{8}\frac{2/5}{199/200}
+=\frac{1799}{8}\frac{80}{199}=\frac{17990}{199}.
+\]
+It follows that $a_{23}q_3=a_{32}q_2$ exactly. Such checks expose a reversed
+ratio immediately; using $q_2/q_3$ would produce the wrong bath.
+
+\paragraph{The two preparations.}
+Take $\beta_h=1/1000$ and $\beta_c=1/100$. Both are positive and smaller
+than the bath value $1$, so both are finite cooling preparations. For each,
+\[
+\pi_i(\beta)=\frac{q_i^\beta}{\sum_jq_j^\beta}.
+\]
+The certified slow eigenfunction, normalized as in Part II, gives
+\[
+-0.0937454280<b_h<-0.0937454279,
+\qquad
+-0.0938488357<b_c<-0.0938488356.
+\]
+Therefore
+\[
+|b_c|-|b_h|>0.0938488356-0.0937454280=0.0001034076>0.
+\]
+A stricter enclosure is recorded in the certificate. The gap is small but
+strict. A small counterexample still refutes a universal implication.
+
+\paragraph{Two witnesses, two sets of data.}
+The focused paper uses a companion with rational slow eigenvalue and
+rational eigenfunction. It changes two rates. Its formal proof and its
+numerical values must not be silently substituted for the primary witness
+above. The shared mechanism makes them related examples, not identical data.
+
+\clearpage
+\section*{Lesson 19. Work through a triplet test instead of treating it as a black box}
+\addcontentsline{toc}{section}{19. Work through a triplet test}
+A four-state system has four three-state subsets: $123$, $124$, $134$, and
+$234$. For an ordered triplet $i<j<k$, define
+\[
+A=a_{ik},\quad B=a_{jk},\quad C=a_{ij},\quad
+ t=q_j/q_i,\quad u=q_k/q_j.
+\]
+The letters are local abbreviations for this triplet. They do not introduce
+new rates or fit effective ones. The original-rate predicate in Part II is
+\begin{align*}
+\kappa&=\frac{A+B}{C(1+t)},&G&=At-B,\\
+F&=A(1+tu/2)-B(1+u/2)-C(1-t),\\
+P&=(\kappa\geq1\text{ and }F>0)
+\text{ or }(\kappa\leq1\text{ and }G>0).
+\end{align*}
+A predicate is simply a statement that is either true or false for the
+specified data. The strict and non-strict inequality signs are part of the
+definition. At $\kappa=1$, both branches must be considered.
+
+\paragraph{Compute triplet $134$ by hand.}
+Here $A=249/10$, $B=251/25$, $C=28$, $t=2/5$, and $u=1/160$.
+First,
+\[
+G=\frac{249}{10}\frac25-\frac{251}{25}
+=\frac{249-251}{25}=-\frac2{25}<0.
+\]
+Next,
+\[
+\kappa=\frac{249/10+251/25}{28(1+2/5)}
+=\frac{1747/50}{196/5}=\frac{1747}{1960}<1.
+\]
+The applicable lower branch therefore fails because $G$ is negative.
+For completeness, use $tu=1/400$ to calculate
+\begin{align*}
+F&=\frac{249}{10}\frac{801}{800}
+-\frac{251}{25}\frac{321}{320}-28\frac35\\
+&=\frac{199449-80571-134400}{8000}
+=-\frac{7761}{4000}<0.
+\end{align*}
+The other three triplets are checked in the same manner in the exact table.
+One failed triplet is not enough; the premise requires all four to fail.
+
+\paragraph{Why isolated triplets are not principal submatrices.}
+If a state is removed, its outgoing transitions from the retained states
+must also be removed. The diagonal entries must be recomputed so the
+three-state columns sum to zero. Merely deleting one row and column leaves
+probability leaking to a state no longer in the model. This distinction is
+separate from the predicate's use of original off-diagonal rates.
+
+\clearpage
+\section*{Lesson 20. Simplify the branch logic, including the equality case}
+\addcontentsline{toc}{section}{20. Simplify the branch logic}
+Complicated-looking logical tests can sometimes be converted into a small
+set of inequalities. Define
+\[
+H=A+B-C(1+t),\qquad d=\frac{1-t}{1+t},
+\qquad h=\frac2{1+t}+\frac u2.
+\]
+Because energies are distinct and ordered, $0<t<1$. Thus $d>0$ and $h>0$.
+Also $C(1+t)>0$, so the sign of $\kappa-1$ is the sign of $H$.
+A direct expansion gives
+\[
+F=hG+dH.
+\]
+To verify it, the coefficients of $A$, $B$, and $C$ on the right are,
+respectively,
+\[
+\frac{2t+1-t}{1+t}+\frac{tu}{2}=1+\frac{tu}{2},
+\quad\frac{-2+1-t}{1+t}-\frac u2=-1-\frac u2,
+\quad-(1-t).
+\]
+These are exactly the coefficients in $F$.
+
+\paragraph{Now handle the three cases.}
+If $H>0$, only the upper branch can establish $P$. Its failure means
+$F\leq0$. Since $F=hG+dH$ with $dH>0$, this forces $G<0$ as well.
+If $H<0$, failure means $G\leq0$, and then $F=hG+dH<0$.
+If $H=0$, both branches are eligible, but $F=hG$ with $h>0$; the strict
+sign tests agree. Their joint failure means $F\leq0$ and $G\leq0$.
+Conversely, if both are nonpositive, neither strict branch test can succeed.
+Therefore, including equality cases,
+\[
+\neg P\quad\Longleftrightarrow\quad F\leq0\text{ and }G\leq0.
+\]
+The symbol $\neg$ means ``not.''
+
+\paragraph{The geometric payoff.}
+For fixed weights, $F$ and $G$ are linear functions of the rates. A condition
+like $F\leq0$ describes a half-space. Intersecting the eight half-spaces from
+four triplets gives a polyhedral cone: a set closed under addition and
+multiplication by nonnegative numbers. Intersect it with strictly positive
+rates to obtain the physical domain considered here. The word ``cone'' does
+not assume a three-dimensional picture; the rate space has six coordinates.
+
+This reformulation helps exact searches and structural proofs. It does not
+replace the original predicate with a convenient approximation. The equality
+above proves equivalence. Boundary cases remain part of the mathematical
+problem even when the displayed witness lies strictly inside the domain.
+
+\clearpage
+\section*{Lesson 21. Certify a spectral calculation rather than trust its decimal output}
+\addcontentsline{toc}{section}{21. Certify a spectral calculation}
+A numerical eigensolver is excellent for finding candidate eigenvalues and
+vectors. A certificate must additionally establish what those approximations
+represent. Is the selected eigenvalue truly the slow one? Is it simple? Is
+the overlap gap larger than all numerical uncertainty? The primary witness
+answers these questions with exact algebra and rational enclosures.
+
+\paragraph{The characteristic polynomial.}
+The determinant $\det(M-xI)$ is a polynomial in $x$. Its zeros are the
+eigenvalues. A determinant tests whether the columns are linearly dependent;
+if $\det(M-xI)=0$, there is a nonzero vector $v$ with $(M-xI)v=0$.
+Because $M$ is rational, its characteristic polynomial has rational
+coefficients. The stationary eigenvalue supplies a factor $x$, leaving a
+cubic. After clearing denominators, the primary witness's cubic is
+\[
+\begin{split}
+1273600000000x^3+530473008000000x^2\qquad\qquad\quad\\
+{}+35732953114072400x+510539126345027563.
+\end{split}
+\]
+Its three roots lie separately in $(-20,-19)$, $(-60,-59)$, and
+$(-337,-336)$. Exact sign checks at the endpoints establish a root in each
+interval. A cubic has only three roots counting multiplicity, so these
+three distinct intervals account for all roots and establish simplicity.
+The root in $(-20,-19)$ is the slow nonzero one.
+
+\paragraph{An eigenvector from cofactors.}
+For any square matrix $A$, its adjugate satisfies
+$A\operatorname{adj}(A)=\det(A)I$. At a simple eigenvalue $x$, a nonzero
+column of $\operatorname{adj}(M^\top-xI)$ therefore lies in the nullspace
+of $M^\top-xI$. Its entries are polynomials in $x$. The certificate verifies
+that the chosen column is nonzero and normalizes it without dividing by an
+interval containing zero. This avoids treating a rounded eigenvector as exact.
+
+\paragraph{Thermal roots can be enclosed by integer powers.}
+Suppose $r=q^{1/m}>0$, where $q$ is positive rational and $m$ is a positive
+integer. If positive rational numbers $l<u$ satisfy $l^m<q<u^m$, then
+$l<r<u$ because positive integer powers are strictly increasing. All
+comparisons can be reduced to integer arithmetic by clearing denominators.
+This is how the small preparation exponents can be handled rigorously.
+
+\paragraph{Finally propagate the enclosures.}
+Enclose the eigenvalue, evaluate the cofactor polynomials with interval
+arithmetic, enclose each Gibbs weight, normalize by a strictly positive
+partition-function interval, and sum the products. The resulting overlap
+intervals must be disjoint in the required absolute-value order. If they
+are not, increase precision or use a sharper method. A printed decimal
+gap by itself is not the certificate; the outward bounds and their checked
+construction are.
+
+\clearpage
+\section*{Lesson 22. Why three-state checks can miss four-state dynamics}
+\addcontentsline{toc}{section}{22. Why local triplet checks can miss a collective mode}
+A triplet test examines a restricted collection of rates. The slow
+eigenfunction of the full four-state generator solves a simultaneous system
+involving every state. Removing one state changes both the equations and
+the probability-conserving diagonals. There is no general reason for the
+full-system eigenfunction to be a collection of independent triplet
+eigenfunctions pasted together.
+
+\paragraph{A linear-algebra analogy.}
+Knowing several smaller blocks of a matrix does not allow one to assign the
+whole matrix's eigenvectors independently within those blocks. The
+cross-block entries couple the coordinates. Similarly, a four-state mode
+can distribute positive and negative weights among all four states so that
+thermal reweighting produces a collective cancellation absent from any
+isolated triplet. This explains why a local-to-global implication needs a
+proof; it is not automatically supplied by the small subsystems.
+
+\paragraph{What the counterexample does and does not say.}
+It demonstrates failure of the stated universal finite-temperature
+inference. It does not invalidate a distinct theorem with a zero-temperature
+bath or stronger hypotheses. It also does not say that triplet information
+is useless. The rest of the report derives substantial restrictions that
+survive all those failed triplet tests. Ordinary cooling can survive while
+strong effects and certain heating reversals remain excluded.
+
+\paragraph{Temperature changes a weighted cancellation.}
+The slow overlap is
+\[
+b(\beta)=\frac{w_1+w_2e^{-\beta E_2}
++w_3e^{-\beta E_3}+w_4e^{-\beta E_4}}{Z(\beta)}
+\]
+when $E_1=0$. The entries of $w$ need not all have the same sign, because
+its bath mean is zero. Varying $\beta$ changes both the signed numerator
+and its normalization. An intuitive story that only watches the highest
+energy population misses the redistribution among the other three states.
+The derivative is governed by the full covariance from Lesson 9.
+
+\paragraph{The controlled-family idea.}
+A single exact witness proves existence. A parameterized family is more
+informative about mechanism: vary one parameter while retaining admissible
+rates and triplet failures, then locate where the covariance criterion
+changes sign. Part II supplies such a family with an exact onset threshold.
+The family is a way to explain how the effect turns on, not a license to
+assume that every nearby matrix has the same properties without checking.
+
+\paragraph{Checkpoint.}
+The logical conclusion is narrow and strong: there exists a valid
+four-state example satisfying the full premise and violating the claimed
+conclusion. Universal claims fail that way. Claims about prevalence,
+experimental ease, or maximum possible benefit require additional work.
+
+\clearpage
+\section*{Lesson 23. Prefix contrasts, cones, and ordered dynamics}
+\addcontentsline{toc}{section}{23. Prefix contrasts, cones, and ordered dynamics}
+To understand what the triplet restrictions still control, it helps to
+change basis in the space of observables. In this lesson let $q=\pi_b$ be
+normalized; only ratios matter in the formulas. Define $Q_k=q_1+\cdots+q_k$
+and a prefix contrast
+\[
+h^{(k)}_i=\begin{cases}
+1,&i\leq k,\\
+-Q_k/q_{k+1},&i=k+1,\\
+0,&i>k+1.
+\end{cases}
+\]
+It contrasts the first $k$ states against the next state. Its weighted
+bath mean is $Q_k-q_{k+1}(Q_k/q_{k+1})=0$.
+For example, with four states,
+\[
+h^{(1)}=(1,-q_1/q_2,0,0)^\top,\quad
+h^{(2)}=(1,1,-Q_2/q_3,0)^\top.
+\]
+These are signed observables, not probability vectors.
+
+\paragraph{Why these particular vectors are useful.}
+If $j<k$, the vector $h^{(k)}$ equals one wherever $h^{(j)}$ is nonzero.
+Thus their weighted inner product is the bath mean of $h^{(j)}$, which is
+zero. They form an orthogonal basis of the bath-mean-zero observables.
+In this basis, certain rate inequalities become entrywise sign conditions
+on a smaller matrix. A matrix with nonnegative off-diagonal entries is
+called a Metzler matrix. Adding a sufficiently large scalar multiple of
+the identity turns it into a nonnegative matrix without changing its
+eigenvectors. The Perron argument then supplies a nonnegative eigenvector
+for its largest eigenvalue. Part II checks the needed hypotheses and
+boundary cases instead of assuming them from the name of the theorem.
+
+\paragraph{From the triplet inequality to conductance order.}
+Define reduced conductances $k_{ij}=M_{ij}/q_i=M_{ji}/q_j$. Then
+\[
+G_{ijk}=a_{ik}\frac{q_j}{q_i}-a_{jk}
+=q_j(k_{ik}-k_{jk}).
+\]
+Because $q_j>0$, the condition $G_{ijk}\leq0$ says exactly
+$k_{ik}\leq k_{jk}$. The contrast representation exploits this ordering.
+For a simple slow mode it allows an orientation
+$w=\sum_k x_k h^{(k)}$ with $x_k\geq0$, not all zero.
+
+\paragraph{Why this excludes a strong cooling zero.}
+Consider one prefix contrast at a hotter preparation $\beta<\beta_b$.
+For each $i\leq k$,
+\[
+\frac{\pi_i(\beta)}{\pi_{k+1}(\beta)}
+=e^{\beta(E_{k+1}-E_i)}
+<e^{\beta_b(E_{k+1}-E_i)}=\frac{q_i}{q_{k+1}}.
+\]
+Summing gives $\langle h^{(k)}\rangle_{\pi(\beta)}<0$.
+Every nonnegative combination above therefore has strictly negative
+overlap on the cooling side. It cannot cross zero there. Yet its negative
+value may first move farther from zero and later return toward the bath:
+a fixed sign does not imply monotonic magnitude. This is the space left
+for ordinary cooling reversals.
+
+\paragraph{A distinct order concept.}
+Stochastic monotonicity asks whether dynamics preserve order of increasing
+observables or cumulative probabilities. It is not the same statement as
+nonnegativity of prefix-contrast coordinates. Part II derives the
+appropriate adjacent-difference criterion for that stronger order property
+and states exactly which observables and divergences it controls.
+
+\clearpage
+\section*{Lesson 24. Derive the sharp one-quarter amplitude bound}
+\addcontentsline{toc}{section}{24. Derive the sharp one-quarter amplitude bound}
+Under the full four-state triplet premise and a simple slow mode, Part II
+proves the structural inequalities
+\[
+w_1\geq w_2,\qquad w_1+w_2\geq2w_3,\qquad w_4\leq0
+\]
+in the orientation of Lesson 23. The difficult rate-to-eigenfunction
+argument uses a reset subtraction, a nonnegative contrast matrix, and a
+Schur complement. We now derive the amplitude bound from these inequalities
+step by step. This makes clear which part is structural input and which
+part is elementary thermal averaging.
+
+\paragraph{First condition on the lower three states.}
+Let $m(\beta)$ be the Gibbs average of $w$ conditional on states $1,2,3$.
+Write their three entries as a constant plus
+\[
+u(1,-1,0)+v(1,1,-2),\qquad
+u=(w_1-w_2)/2\geq0,\quad
+v=(w_1+w_2-2w_3)/6\geq0.
+\]
+This decomposition is checked by subtracting the first two coordinates
+and by adding the first two minus twice the third. Those operations give
+$2u$ and $6v$, respectively.
+
+Set $E_1=0$, $a=E_2$, $b=E_3$, $t=e^{-\beta a}$ and $y=e^{-\beta b}$.
+The conditional probabilities are $(p_1,p_2,p_3)=(1,t,y)/(1+t+y)$.
+Quotient differentiation gives
+\[
+(p_1-p_2)'=\frac{2at+by-(b-a)ty}{(1+t+y)^2}>0.
+\]
+Indeed $b-(b-a)t\geq a>0$ for $0<t\leq1$. Also
+$(p_1+p_2-2p_3)'=-3p_3'>0$, since state $3$ has the highest energy
+in the conditional distribution. Nonnegative coefficients $u,v$ now imply
+$m'(\beta)\geq0$.
+
+\paragraph{Restore the fourth state.}
+Let $P(\beta)=\pi_1+\pi_2+\pi_3$. It increases with $\beta$, and for
+finite positive $\beta$ it lies strictly between $3/4$ and $1$.
+The lower bound follows because each of the first three Gibbs weights
+exceeds the fourth weight. The full overlap is
+\[
+b(\beta)=P(\beta)m(\beta)+(1-P(\beta))w_4.
+\]
+For $0<\beta_h<\beta_c<\beta_b$, put $r=P_c/P_h$. Then $1<r<4/3$.
+Subtracting $rb_h$ from $b_c$ cancels the common lower-state weight:
+\begin{align*}
+b_c-rb_h
+&=P_c(m_c-m_h)+(1-r)w_4\\
+&\geq0.
+\end{align*}
+Both terms are nonnegative: $m_c\geq m_h$, while both $1-r$ and $w_4$
+are nonpositive. Lesson 23 gives $b_h,b_c<0$. Replacing them by minus their
+absolute values reverses the intuitive direction, yielding
+\[
+|b_c|\leq r|b_h|<\frac43|b_h|.
+\]
+Divide by the positive $|b_c|$ and rearrange:
+\[
+\frac{|b_h|}{|b_c|}>\frac34,
+\qquad A=1-\frac{|b_h|}{|b_c|}<\frac14.
+\]
+That is the one-quarter bound. It applies to the stated amplitude measure
+under the stated full premise, not to every four-state thermal model.
+
+\paragraph{Why ``sharp supremum'' does not mean an attained maximum.}
+A supremum is the least upper bound. The numbers $1/4-1/m$ approach $1/4$
+without equaling it at any finite $m$. In the same way, the constructed
+admissible families approach $25\%$ while every finite member stays below.
+A limiting expression with a zero weight or infinite energy need not itself
+be admissible; the proof must verify a sequence of finite admissible members.
+The report supplies that verification, and distinguishes its uniformly
+gapped, strict-inequality family from the different family used in Lean.
+The corresponding asymptotic KL reduction approaches
+$1-(3/4)^2=7/16$, not $1/4$.
+
+
+\paragraph{One level deeper: what the Schur complement actually does.}
+The structural proof mentions eliminating a coordinate. Here is the algebra
+behind that phrase. Partition a three-by-three eigenvalue equation into
+two coordinates $y=(x_1,x_2)^\top$ and a third coordinate $z=x_3$:
+\[
+\begin{pmatrix}A&c\\d^\top&e\end{pmatrix}
+\begin{pmatrix}y\\z\end{pmatrix}
+=\lambda\begin{pmatrix}y\\z\end{pmatrix}.
+\]
+Here $A$ is a two-by-two matrix, $c,d$ are two-component columns, and $e$
+is a scalar. The bottom row says $d^\top y+ez=\lambda z$.
+If $\delta=\lambda-e>0$, solve it as $z=d^\top y/\delta$.
+Substituting into the top rows gives
+\[
+\left(A+\frac{cd^\top}{\delta}\right)y=\lambda y.
+\]
+Thus the effective two-by-two matrix includes the indirect coupling through
+the eliminated coordinate. The operation is exact; it is not dropping the
+third coordinate or assuming that it is small. If $c,d$ have nonnegative
+entries and $\delta>0$, the additional coupling has nonnegative entries too.
+
+Why not immediately divide? Because $\delta>0$ must first be established.
+For the symmetric version of a matrix, the largest eigenvalue is at least
+any diagonal entry: evaluate its quadratic form on the corresponding unit
+coordinate vector and compare with the largest eigenvalue. Equality is a
+special case. In the report's proof, equality would make that coordinate
+vector a top eigenvector. Simplicity would then contradict a required
+nonzero first coordinate. This supplies strictness, permitting division.
+The zero-first-coordinate case is treated separately before this step.
+
+Finally, for an effective matrix with entries $b_{ij}$, let
+$r=x_2/x_1$ when $x_1>0$. Its two eigenvalue equations are
+$b_{11}+b_{12}r=\lambda$ and $b_{21}+b_{22}r=\lambda r$.
+Eliminate $\lambda$ to obtain
+\[
+b_{21}+r(b_{22}-b_{11})-b_{12}r^2=0.
+\]
+The structural proof evaluates this polynomial at a proposed lower bound
+for $r$. Rate inequalities control its sign, and the positive-root
+structure controls which side of the root the proposed bound lies on.
+This is how a statement about rates becomes a statement about the shape
+of the slow eigenfunction. The report also treats vanishing off-diagonal
+entries, where a positive-root shortcut alone would be insufficient.
+
+\clearpage
+\section*{Lesson 25. From plotting a curve to classifying every preparation}
+\addcontentsline{toc}{section}{25. From plotting a curve to classifying every preparation}
+A plot of $b(\beta)$ suggests where extrema occur, but a finite collection
+of samples cannot rule out an extra turn between sample points. A global
+classification needs a bound on how complicated the curve can be and a
+finite list of decisive tests.
+
+\paragraph{Remove a redundant coordinate.}
+For four distinct energies with $E_1=0$, the ground-state probability has
+$\pi_1'>0$ at every finite $\beta\geq0$. Write
+\[
+g=\pi_1',\qquad u=\frac{\pi_2'}g,\qquad
+v=\frac{\pi_3'}g.
+\]
+Since the derivative probabilities sum to zero,
+$\pi_4'=-g(1+u+v)$. Consequently
+\[
+b'=g\{A+Bu+Cv\},\qquad
+A=w_1-w_4,\ B=w_2-w_4,\ C=w_3-w_4.
+\]
+Because $g>0$, the sign of $b'$ is exactly the sign of
+$\Phi=A+Bu+Cv$. Instead of looking at four derivatives separately, we
+study a planar curve $(u,v)$ and a line $A+Bu+Cv=0$.
+
+\paragraph{What the determinant calculation establishes.}
+A Wronskian is a determinant whose columns are functions and whose rows
+are successive derivatives. For two functions it is
+$W(f,g)=fg'-f'g$. For more functions the determinant records higher-order
+independence. In this problem the exact exponential structure of the
+Gibbs probabilities makes relevant Wronskians factor into quantities of
+known sign. Part II derives the factorization. Its consequences here are
+$u'<0$ and strict convexity of $v$ as a function of $u$.
+
+Strict convexity means that the curve bends consistently in one direction.
+A line can meet such a curve at at most two points in this setting, with
+multiplicity counted appropriately. More specifically, if
+$s=dv/du$, then
+\[
+\Phi'=u'(B+Cs).
+\]
+The report gives an explicit monotone formula for $s$. Thus $\Phi$ has at
+most one interior extremum unless it is a special constant case. To decide
+whether $b'$ takes both signs on a bath side, it is enough to test $\Phi$
+at that side's endpoints, its endpoint limits, and the possible single
+interior extremum. Equality cases are retained, rather than assigned a
+sign from a plotting tolerance.
+
+\paragraph{Tangency versus reversal.}
+If $\Phi$ merely touches zero and returns to the same sign, $b'$ does not
+change sign. A stationary point of $b$ has occurred without a reversal of
+monotonicity. If $b$ itself crosses zero away from the bath, that concerns
+a strong preparation instead. These are two different root problems.
+The classification separates them and uses monotone intervals to decide
+where nonbath zeros of $b$ exist.
+
+\paragraph{The advanced generalization.}
+In higher dimension, exponential functions form a system with controlled
+zero counts. The report derives a bound of $n-2$ on stationary points of a
+nonconstant thermal overlap, with multiplicities treated in the relevant
+interval, and constructs the matching number of strong preparations.
+The four-state planar picture is a low-dimensional window into that
+Chebyshev-system argument. The terminology comes after the concrete curve,
+not in place of understanding it.
+
+\clearpage
+\section*{Lesson 26. Repeated slow eigenvalues and why one overlap is no longer enough}
+\addcontentsline{toc}{section}{26. Repeated slow eigenvalues}
+Suppose the slow eigenvalue $\lambda<0$ has two independent eigenvectors.
+Every combination of them decays with the same exponential. Choosing one
+of those vectors is a coordinate choice, not a preferred physical mode.
+A preparation may have zero coefficient in one chosen direction but a
+nonzero coefficient in the other. Calling that a strong effect would be
+incorrect.
+
+\paragraph{Use the entire projection.}
+In symmetric coordinates from Lesson 15, let $P_\lambda$ be the orthogonal
+projection onto the whole slow eigenspace. For a preparation, form
+\[
+y(\beta)=D^{-1/2}(\pi(\beta)-\pi_b),
+\qquad A_\lambda(\beta)=\|P_\lambda y(\beta)\|_2^2.
+\]
+The subscript $2$ denotes ordinary Euclidean length. The leading Pearson
+chi-square divergence is
+$e^{2\lambda t}A_\lambda(\beta)$. Leading KL is one half of it. A strong
+preparation must have $P_\lambda y=0$, not merely one zero coordinate.
+For other norms, the shape of the projected vector matters, so a single
+quadratic coefficient need not decide every distance comparison.
+
+\paragraph{A reset process makes the issue visible.}
+Let
+\[
+M=r(\pi_b\mathbf1^\top-I),\qquad r>0,
+\]
+where $\mathbf1$ is the all-ones column. Since $\mathbf1^\top p=1$,
+$Mp=r(\pi_b-p)$, so
+\[
+p(t)=\pi_b+e^{-rt}(p(0)-\pi_b).
+\]
+Every zero-total deviation is an eigenvector with eigenvalue $-r$.
+There are $n-1$ independent slow directions. All deviations shrink by the
+same factor. There is no need to choose a distinguished vector inside
+this eigenspace, and doing so cannot reveal a physical effect absent from
+the full projection.
+
+\paragraph{Where the harder classification begins.}
+Part II studies repeated slow spaces and, under the full triplet premise,
+classifies the four-state boundary as a reset plus mixing on one adjacent
+pair. It then proves the appropriate all-time convex-divergence ordering.
+This is a separate structural result, not something that follows merely
+from the word ``degenerate.'' Degeneracy means repeated eigenvalues;
+it does not mean singular probabilities or an invalid generator.
+
+\paragraph{Checkpoint.}
+For a vector with two coordinates $(3,4)$, one coordinate can be made zero
+by rotating axes, while its length remains $5$. The same principle explains
+why a basis-dependent zero overlap is inadequate in a repeated eigenspace.
+The invariant object is the whole projected deviation.
+
+\clearpage
+\section*{Lesson 27. Numerical evidence, exact arithmetic, and interval proof}
+\addcontentsline{toc}{section}{27. Numerical evidence, exact arithmetic, and interval proof}
+Computers do several distinct jobs in this project. A search proposes
+parameters. A numerical solver estimates their behavior. Exact algebra
+checks identities. Interval arithmetic encloses uncertain real quantities.
+A proof assistant checks a formal argument. These jobs reinforce one
+another, but one does not automatically substitute for another.
+
+\paragraph{Floating-point arithmetic.}
+Ordinary numerical software stores finitely many binary digits. Most real
+numbers, and many simple decimal fractions, cannot be represented exactly.
+Each operation can introduce rounding. This is usually harmless for
+exploration, but the sign of a tiny difference between two nearly equal
+numbers can be sensitive. Subtracting two quantities around $1$ to obtain
+a result around $10^{-12}$ demands a much more careful error analysis
+than merely reporting twelve displayed digits.
+
+\paragraph{Exact rational arithmetic.}
+Integers and ratios of integers can be stored and manipulated exactly.
+For instance,
+$249/25-251/25=-2/25$ is an exact negative result. Exact arithmetic is ideal
+for the rate construction, polynomial coefficients, and cleared inequalities.
+It does not imply that every answer must be rational: an irrational
+polynomial root can be specified exactly by its polynomial and a rational
+isolating interval.
+
+\paragraph{Interval arithmetic.}
+Replace an unknown real number by a closed interval guaranteed to contain
+it. For $x\in[a,b]$ and $y\in[c,d]$,
+\[
+x+y\in[a+c,b+d],\qquad x-y\in[a-d,b-c].
+\]
+A product is enclosed by the minimum and maximum of the four endpoint
+products. Division requires that the denominator interval not contain zero.
+With machine arithmetic, endpoints must be rounded outward so the true
+answer cannot escape. Functions such as exponential and logarithm likewise
+require validated enclosures, not ordinary rounded evaluations casually
+wrapped in brackets.
+
+\paragraph{Dependency can make a valid enclosure too wide.}
+If $x\in[0,1]$, a naive interval evaluation of $x-x$ gives $[-1,1]$,
+although the exact expression is zero. The enclosure is valid but weak
+because the same variable appeared twice. Algebraic simplification,
+smaller boxes, or sharper bounds can restore useful precision. A failed
+interval inequality may mean only that the enclosure is too broad.
+
+\paragraph{Why random perturbations do not certify a box.}
+Testing ten thousand parameter points leaves infinitely many others
+untested. To prove an inequality on an entire box, bound it on that box;
+if the bound is inconclusive, split the box and repeat. A complete
+branch-and-bound certificate must account for every subbox, including
+ones near difficult boundaries. A pending queue, a timeout, or an enclosure
+error must remain visible. Success on most of the domain is not a proof
+on all of it.
+
+\paragraph{Negative controls are part of credibility.}
+A checker should reject intentionally corrupted data and deliberately
+false claims. Otherwise a script that always reports success could look
+impressive. The project includes such controls, alongside independent
+formulations and source-bound receipts. They improve confidence in the
+implementation without becoming external human peer review.
+
+\clearpage
+\section*{Lesson 28. From late-time asymptotics to useful finite-time questions}
+\addcontentsline{toc}{section}{28. From asymptotics to finite-time questions}
+A strict slow-amplitude reversal proves an eventual comparison. It does
+not tell us whether the crossing occurs before the deviations become
+experimentally negligible. This motivates a separate question: can a
+specified model show a substantial advantage over a stated time interval
+and at stated, nonzero distance thresholds?
+
+\paragraph{Specify the observable and the clock.}
+Let $D_x(t)=D_{\mathrm{KL}}(p_x(t)\Vert\pi_b)$ for preparation $x$.
+A distance advantage of at least $10\%$ means
+$D_h(t)\leq0.9D_c(t)$ on the specified interval. A floor
+$D_c(t)\geq10^{-3}$ prevents the claim from being supported solely by
+arbitrarily tiny distances. Neither statement is a target-time claim.
+Define a threshold time instead by
+\[
+t_x(\delta)=\inf\{t\geq0:D_x(t)\leq\delta\}.
+\]
+A time saving of at least $5\%$ means $t_h(\delta)\leq0.95t_c(\delta)$.
+Here $\delta$ is a distance threshold, not a temperature.
+
+\paragraph{Monotonicity makes threshold roots usable.}
+For the irreducible reversible dynamics studied in the physical section,
+KL decreases strictly along a nonstationary trajectory. A threshold between
+its initial value and zero has a unique crossing time. If a candidate time
+$s$ satisfies $D_h(s)\leq\delta$, then $t_h(\delta)\leq s$.
+Thus, taking $s=0.95t_c(\delta)$, a sufficient condition for the desired
+time saving is
+\[
+D_h(0.95t_c(\delta))\leq D_c(t_c(\delta))=\delta.
+\]
+The equation explains the logic; the certificate must still handle the
+unknown cold root and every allowed parameter vector.
+
+\paragraph{Normalize time carefully.}
+The physical study writes $u=t/\tau$, where
+$\tau=-1/\lambda_2$ is the relaxation time of the chosen generator.
+For a fixed parameter vector, both preparations share that same $\tau$,
+so a fractional target-time comparison is unchanged by normalization.
+Across a parameter box, however, $\tau$ itself changes. A dimensionless
+window does not automatically specify one shared number of seconds for
+all models. An attempt frequency is needed to turn the clock into seconds.
+
+\paragraph{The certified physical-model benchmarks.}
+The retained study establishes $D_h\leq0.9D_c$ and $D_c\geq10^{-3}$ for
+$0.4\leq u\leq0.8$, and $t_h(\delta)\leq0.95t_c(\delta)$ for every
+$\delta\in[10^{-3},10^{-2}]$, throughout its specified simultaneous
+$\pm5\%$ parameter box. The perturbed coordinates are three energy gaps,
+three shared barrier excesses, and two temperature excesses $T_x/T_b-1$.
+The last phrase matters: perturbing a temperature excess is not identical
+to perturbing the full temperature ratio. The eight continuous obligations
+and their reductions are recorded in Part II.
+
+\clearpage
+\section*{Lesson 29. What the physical model adds, and what remains idealized}
+\addcontentsline{toc}{section}{29. What the physical model adds}
+The exact counterexample was designed to settle a mathematical inference.
+The physical-model study asks a different question using a constrained
+thermal network. Its rate law has Arrhenius form
+\[
+a_{ij}=\nu_0\exp[-\beta_b(B_{ij}-E_j)],\qquad B_{ij}=B_{ji}.
+\]
+Here $\nu_0$ is an attempt frequency and $B_{ij}$ is a shared saddle energy.
+The exponent uses the departure energy $E_j$, consistent with the
+ destination-first index convention. A higher barrier above the departure
+state suppresses that transition.
+
+\paragraph{Detailed balance follows from the symmetric saddle.}
+Multiply the rate by the unnormalized bath weight $q_j=e^{-\beta_b E_j}$:
+\[
+a_{ij}q_j
+=\nu_0e^{-\beta_b(B_{ij}-E_j)}e^{-\beta_b E_j}
+=\nu_0e^{-\beta_b B_{ij}}
+=a_{ji}q_i.
+\]
+The departure energy cancels. This is a transparent physical construction
+of reversible rates, rather than a separate balance constraint fitted
+after the fact.
+
+\paragraph{Shared parameters reduce arbitrary freedom.}
+The study uses four ordered energies with three gaps and two interleaved
+basins, $\{1,4\}$ and $\{2,3\}$. The saddle is
+$B_{ij}=\max(E_i,E_j)+h_{ij}$, with one shared excess for each intrabasin
+edge type and one for all interbasin edges. The six edges therefore do not
+have six independently fitted barrier excesses. This geometry makes the
+model more constrained and supplies a kinetic interpretation of the
+collective relaxation.
+
+\paragraph{Do not merge the two research claims.}
+Two triplets in this physical example satisfy the original triplet test.
+It is therefore not another witness to the all-triplet-failure conjecture.
+The abstract counterexample and the robust physical example answer
+different questions. Keeping them separate prevents a compelling finite-time
+plot from being used as evidence for a premise it does not satisfy.
+
+\paragraph{A realization is not an experiment.}
+Part II gives an energy-conserving stochastic collision realization of the
+rates and examines an explicit activated-intermediate construction. These
+make assumptions more inspectable. They do not identify a particular
+material, prove that a laboratory contact process obeys the idealization,
+or include all costs of preparing a hotter initial state. A demonstrated
+reduction in the model's relaxation time is not automatically a net energy
+or engineering advantage for a device. That latter question requires an
+account of preparation, coupling, measurement, and operating constraints.
+
+\paragraph{A productive next layer of work.}
+To connect the model to an experiment, specify what each state represents,
+how rates are measured, how the bath approximation is maintained, and which
+observable supplies the stopping criterion. Then compare model predictions
+with measured uncertainty. The mathematical certificate is valuable because
+it makes one link in that chain explicit; it does not claim the other links
+have already been established.
+
+\clearpage
+\section*{Lesson 30. What a formal proof checks, and how to read its scope}
+\addcontentsline{toc}{section}{30. Formal proof and reproducibility}
+A proof assistant checks a mathematical argument written in a formal
+language against explicit definitions and inference rules. The central
+question becomes: what exact proposition was checked? A successful build
+of one theorem does not imply that every sentence in a surrounding report
+has been formalized.
+
+\paragraph{Start with the definitions.}
+For this project, a formal counterexample must define the actual generator,
+its bath weights, the preparation distributions, the triplet predicate,
+and the chosen distance. If any of these definitions differs from the
+informal claim, a formally correct theorem could still answer the wrong
+question. Source-to-statement correspondence is therefore a separate
+review obligation. The same applies to exact computational certificates.
+
+\paragraph{The covered results.}
+The Lean companion verifies the rational-mode counterexample, an
+initial-to-eventual Pearson chi-square reversal under its master equation,
+and the sharp four-state amplitude supremum. It uses a particular sharpness
+family. The report's stronger all-strict, uniformly gapped family has a
+separate analytic and computational justification; it is not made formal
+merely because a related family is formalized. The physical interval
+certificates are also a distinct verification route.
+
+\paragraph{What reproducibility should expose.}
+A useful reproduction record identifies the inputs, source version, command,
+output, and interpretation. A cryptographic hash is a compact identifier
+of file contents. Matching hashes tie an old result to the same bytes;
+they do not prove those bytes implement the intended mathematics. A changed
+source invalidates that simple correspondence until the change has been
+reviewed. This is why the accompanying guide tracks source-bound proof
+reviews separately from passing replay logs.
+
+\paragraph{A practical reading order for a theorem.}
+First read its hypotheses, including positivity, simplicity, temperature
+range, and chosen distance. Then read the conclusion literally: existence,
+all-time ordering, eventual ordering, or a quantitative bound. Next identify
+which definitions give those words mathematical content. Finally inspect
+the proof and its dependencies. Running the command comes after knowing
+what a successful command is meant to establish.
+
+\paragraph{How much confidence is justified?}
+Independent exact arithmetic, alternate spectral arguments, negative
+controls, interval bounds, and formal checking each address different
+failure modes. Their agreement is useful evidence. None should be
+represented as external peer review or experimental confirmation. The
+report preserves those distinctions so that another researcher can decide
+what to reuse and what to check independently.
+
+\clearpage
+\section*{Lesson 31. Exercises with complete worked answers}
+\addcontentsline{toc}{section}{31. Exercises with complete worked answers}
+These problems revisit the dependency chain. Try each calculation before
+reading its answer. Their purpose is to reveal whether a symbol has acquired
+a concrete meaning, not to test speed.
+
+\paragraph{Exercise 1: normalize and compare.}
+Given weights $(1,1/2,1/8)$, find the probabilities and the ratio of the
+third to the first. \emph{Answer:} the sum is $13/8$, so the probabilities
+are $(8/13,4/13,1/13)$. Their ratio is $(1/13)/(8/13)=1/8$, equal to the
+ratio of the original weights. Normalization changes entries but cancels
+from pair ratios.
+
+\paragraph{Exercise 2: translate a temperature ordering.}
+If $T_h=4T_b$ and $T_c=2T_b$, find the inverse temperatures in bath units.
+\emph{Answer:} $\beta_h=1/4$, $\beta_c=1/2$, and $\beta_b=1$.
+Both preparations lie on the cooling side, with $0<1/4<1/2<1$.
+The preparation called ``cold'' is still hotter than the bath.
+
+\paragraph{Exercise 3: construct both directions.}
+Let $q=(1,1/4)$ and choose downward rate $a_{12}=2$. Find the upward rate,
+generator, equilibrium, and nonzero eigenvalue. \emph{Answer:}
+$a_{21}=2(1/4)=1/2$, so
+\[
+M=\begin{pmatrix}-1/2&2\\1/2&-2\end{pmatrix},
+\qquad \pi_b=(4/5,1/5)^\top.
+\]
+The columns sum to zero, and the equilibrium flows are
+$2(1/5)=(1/2)(4/5)=2/5$. One eigenvalue is zero; their sum is the trace
+$-1/2-2=-5/2$, so the other is $-5/2$. Direct multiplication by $(1,-1)^\top$
+checks the nonzero mode independently.
+
+\paragraph{Exercise 4: verify a covariance sign.}
+Use $p=(1/2,1/2)$, $E=(0,2)$, and $w=(1,-1)$.
+\emph{Answer:} $\langle E\rangle=1$, $\langle w\rangle=0$, and
+$\langle wE\rangle=-1$, so $\Cov(w,E)=-1$. For a fixed observable in a
+Gibbs family passing through these probabilities, $b'=1$ there. The
+pairwise form gives $(1/2)(1/2)(-2)(2)=-1$ as a second check.
+
+\paragraph{Exercise 5: distinguish sign and magnitude.}
+Suppose certified intervals give $b_h\in[-0.21,-0.20]$ and
+$b_c\in[-0.24,-0.23]$. Prove a strict magnitude advantage and bound its
+fraction conservatively. \emph{Answer:} $|b_h|\leq0.21<0.23\leq|b_c|$.
+Thus $1-|b_h|/|b_c|\geq1-0.21/0.23=2/23$, about $8.7\%$.
+Using interval midpoints would give an estimate, not this guaranteed bound.
+
+\paragraph{Exercise 6: calculate the two-exponential crossing.}
+For $f_h=e^{-t}+9e^{-10t}$ and $f_c=2e^{-t}+e^{-10t}$, determine their
+ordering. \emph{Answer:} $f_h-f_c=e^{-10t}(8-e^{9t})$.
+The prefactor is positive, so the difference is positive before
+$t=\log8/9$, zero there, and negative after it. This is a complete sign
+argument, with no plotting or root-finding tolerance.
+
+\paragraph{Exercise 7: separate amplitude, divergence, and time.}
+If a one-mode amplitude ratio is $0.8$, what is the late-time KL ratio?
+\emph{Answer:} $0.8^2=0.64$, giving a $36\%$ asymptotic KL reduction.
+With slow decay rate $r$, the leading target-time advance is
+$\log(1/0.8)/r$. Its percentage depends on the reference target time.
+No universal percentage time saving follows from the amplitude ratio alone.
+
+\paragraph{Exercise 8: find the missing logical check.}
+A program finds a four-state reversal, but checks only three of the four
+triplets. Does it certify the counterexample? \emph{Answer:} no. The
+antecedent requires all four predicates to fail. A single omitted triplet
+could satisfy the test and invalidate the proposed contradiction even if
+the reversal itself is real.
+
+\paragraph{Exercise 9: understand a strict supremum.}
+Every allowed model has $A<1/4$, while a sequence of allowed models has
+$A_m\to1/4$. Can one claim an allowed model attains $25\%$?
+\emph{Answer:} no. The two facts establish the supremum exactly, but the
+strict bound rules out attainment. A limit outside the allowed domain
+does not supply a missing maximizer.
+
+\paragraph{Exercise 10: identify insufficient robustness evidence.}
+A numerical study samples a parameter box, finds no violations, and reports
+a $5\%$ guarantee everywhere. What is missing? \emph{Answer:} a proof
+covering every point between samples and numerical error in the evaluated
+quantities. A complete interval cover can provide such a proof if every
+subbox is successfully certified and the implementation bounds are valid.
+Random sample count alone cannot provide it.
+
+
+\paragraph{Exercise 11: verify a prefix contrast.}
+Use normalized weights $q=(4/10,3/10,2/10,1/10)$.
+Find $h^{(2)}$ and its squared weighted length.
+\emph{Answer:} $Q_2=7/10$ and $Q_2/q_3=7/2$, so
+$h^{(2)}=(1,1,-7/2,0)$. Its weighted mean is
+$4/10+3/10-(2/10)(7/2)=0$. Its squared length is
+$4/10+3/10+(2/10)(49/4)=63/20$. A signed contrast can have length larger
+than one; it is not a probability vector.
+
+\paragraph{Exercise 12: test a Schur elimination by substitution.}
+Suppose an eigenvalue equation has $e=-5$, $\lambda=-2$,
+$c=(1,2)^\top$, and $d=(3,4)^\top$. Find the correction to $A$.
+\emph{Answer:} $\delta=3$ and
+\[
+\frac{cd^\top}{\delta}
+=\frac13\begin{pmatrix}3&4\\6&8\end{pmatrix}.
+\]
+The bottom equation gives $z=(3x_1+4x_2)/3$.
+Substituting $cz$ into the top equation yields exactly this correction.
+This example checks the elimination algebra; no claim is made that an
+arbitrary choice of $A$ gives a Markov generator or the proposed eigenvalue.
+
+\paragraph{Exercise 13: detect an illegal division.}
+An interval algorithm encloses a denominator by $[-0.01,0.02]$ and then
+reports the quotient using the reciprocals of the endpoints.
+\emph{Answer:} the step is invalid because the interval includes zero.
+The reciprocal is unbounded near zero. One must establish a narrower
+nonzero enclosure, split and analyze the domain with the singularity
+handled, or reformulate the comparison without that division. A small
+interval is not enough; its position relative to zero matters.
+
+\paragraph{Exercise 14: turn a distance bound into a time bound.}
+Assume a strictly decreasing $D_h(t)$, and let $D_c(t_c)=\delta$.
+If $D_h(0.95t_c)\leq\delta$, show the time saving.
+\emph{Answer:} by time $0.95t_c$ the hot trajectory has already reached
+the threshold. Its first crossing therefore satisfies
+$t_h\leq0.95t_c$. Subtracting from $t_c$ gives
+$t_c-t_h\geq0.05t_c$, a saving of at least $5\%$ relative to $t_c$.
+A pointwise comparison $D_h(t_c)<D_c(t_c)$ alone would establish only
+$t_h<t_c$, without the quantitative $5\%$ margin.
+
+\clearpage
+\section*{Lesson 32. Map the foundations into the advanced report}
+\addcontentsline{toc}{section}{32. Map the foundations into the advanced report}
+The next part preserves the technical research exposition. It uses the
+language now developed, but it is intentionally denser. Use the following
+routes to move between explanation and proof rather than trying to absorb
+every theorem in one uninterrupted reading.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule Question & Route through the report\\\midrule
+\endhead
+What exactly was contradicted? & Read the source predicate and
+Section~\ref{sec:claimscope}; match each hypothesis to its witness before
+reading the eigenvalue calculation. Revisit Lessons 1, 19, and 20.\\[5pt]
+Why does the overlap imply relaxation reversal? & Read
+Section~\ref{sec:cooling} with Lessons 14, 16, and 17. Track the remainder
+and the simple-slow-mode assumption.\\[5pt]
+Can I check the original witness independently? & Read
+Theorem~\ref{thm:counterexample}, the cofactor appendix, and
+Section~\ref{sec:separatecheck}. Reconstruct the rates as in Lesson 18 and
+understand the enclosures as in Lesson 21.\\[5pt]
+What creates the effect? & Read Section~\ref{sec:mechanism}, then the
+contrast argument in Section~\ref{sec:orderedconductances}. Revisit the
+covariance identity and prefix contrasts.\\[5pt]
+Why is the amplitude bound exactly one quarter? & Read
+Section~\ref{sec:fulltripletbound} after Lesson 24. Separate the structural
+lemma, the conditional-average bound, and the construction proving
+sharpness. They are three different proof obligations.\\[5pt]
+What changes without the triplet premise? & Read
+Section~\ref{sec:universal} for the four-state classification and
+Section~\ref{sec:degenerateextension} for repeated slow spaces.
+Lessons 25--26 explain the geometry and the invariant projection.\\[5pt]
+How do exact algorithms decide a case? & Read
+Section~\ref{sec:exactclassifier} and the later rational-input classifier.
+Watch assumptions on energies, exact root isolation, equality handling,
+and failure reporting.\\[5pt]
+What survives at finite time? & Read Section~\ref{sec:finitechi} for a
+specified pair and the finite-time order sections for their precise
+hypotheses. Eventual order alone is not their proof.\\[5pt]
+What is physically demonstrated by the model? & Read
+Sections~\ref{sec:physicalresults}, \ref{sec:physicalboxcertificate}, and
+\ref{sec:thermalcollision}. Keep the two experiments of Lessons 18 and
+29 separate.\\[5pt]
+What has been formalized? & Read Section~\ref{sec:lean} with Lesson 30.
+Match named theorems to the stated definitions and scope.\\
+\bottomrule
+\end{longtable}
+
+\paragraph{A compact symbol dictionary.}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.68\textwidth}}
+\toprule Symbol & Meaning and common trap\\\midrule
+\endhead
+$i,j,k,n$ & State indices and number of states; an index is a label, not a time.\\
+$E_i$ & Energy of state $i$; only energy differences affect Gibbs probabilities.\\
+$T,\beta$ & Temperature and inverse temperature; their orderings are opposite.\\
+$\beta_b,\pi_b$ & Fixed bath inverse temperature and its Gibbs distribution.\\
+$q_i,Q$ & Positive bath weights and their sum; some advanced sections explicitly
+use normalized $q=\pi_b$ instead. Read the local definition.\\
+$\pi(\beta),Z(\beta)$ & Gibbs preparation and its partition function.\\
+$p(t)$ & Evolving probability vector; generally not itself a Gibbs preparation.\\
+$a_{ij},M_{ij}$ & Off-diagonal rate from $j$ to $i$; columns, not rows,
+conserve probability in this convention.\\
+$M,L$ & Probability generator and observable generator $L=M^\top$.\\
+$D,S$ & Diagonal bath-probability matrix and symmetric transform
+$S=D^{-1/2}MD^{1/2}$.\\
+$\lambda_2,v_2,w_2$ & Slow nonzero eigenvalue, right eigenvector, and left
+eigenfunction; simplicity must be checked.\\
+$b(\beta)$ & Slow overlap $w_2^\top\pi(\beta)$, with a fixed normalization.\\
+$\Cov,\Var$ & Covariance and variance under the indicated probability distribution.\\
+$F,G,\kappa,P_{ijk}$ & Exact triplet expressions and predicate; $P_{ijk}$
+is a logical statement, not a transition matrix.\\
+$\tau,u$ & Relaxation time and normalized time $u=t/\tau$ in the physical study;
+the letter $u$ has different explicitly defined local uses elsewhere.\\
+$\delta,t_x(\delta)$ & A distance threshold and its crossing time.\\
+$O(\cdot),o(\cdot)$ & Controlled order of a remainder and a relatively vanishing
+remainder, respectively; neither is a blanket finite-error certificate.\\
+\bottomrule
+\end{longtable}
+
+\paragraph{The habit to carry forward.}
+For every advanced statement, ask what varies and what stays fixed; which
+quantity is ordered; whether the comparison is finite-time or asymptotic;
+where strictness enters; and how equality or degeneracy is handled.
+Those questions are often more useful than memorizing a long formula.
+The technical part that follows supplies the proofs, exact data, source
+correspondence, implementation details, and explicitly stated open problems.
+
+% PHYSICAL_TEACHING_BRIDGE
+
+\clearpage
+\part*{Part II. Technical research report and exact certificates}
+\addcontentsline{toc}{part}{Part II. Technical research report and exact certificates}
+\noindent The abstract below summarizes the research results in their technical
+language. All original numbered sections, theorems, equations, and proof text
+are retained after this teaching part; the foundational examples above use
+unnumbered displays so that those references keep their original numbering.
+\par\bigskip

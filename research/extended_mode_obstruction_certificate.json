@@ -1,0 +1,50 @@
+{
+  "q": [
+    "5",
+    "4",
+    "2",
+    "1"
+  ],
+  "w": [
+    "162",
+    "-18",
+    "71",
+    "-880"
+  ],
+  "helmert_coefficients": [
+    "80",
+    "2",
+    "80"
+  ],
+  "U": [
+    [
+      "-89/450",
+      "431/450"
+    ],
+    [
+      "-91/360",
+      "-521/360"
+    ],
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "dual_constraints": [
+    "F123",
+    "F124",
+    "G234"
+  ],
+  "dual_weights": [
+    "482571629/11676414",
+    "496382581/11676414",
+    "16620682809/77842760"
+  ],
+  "identity": "positive weighted sum of F123,F124,G234 equals trace(B)",
+  "verified": true,
+  "conclusion": "No full-triplet simple slow realization; strict necessary cone is not sufficient"
+}

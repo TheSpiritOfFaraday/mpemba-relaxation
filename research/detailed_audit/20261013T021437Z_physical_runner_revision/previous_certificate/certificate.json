@@ -1,0 +1,305 @@
+{
+  "complete": true,
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "relative_radius": 0.05,
+  "parameter_coordinates": [
+    "g1",
+    "g2",
+    "g3",
+    "hA",
+    "hB",
+    "hX",
+    "Tc-1",
+    "Th-1"
+  ],
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.4.4.1)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "input_sha256": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+  "runner_sha256": "66cb119f1fea307507f23e547c5d3bb72ce21783556075e8e30136f143ff0079",
+  "builds": {
+    "physical_temperature_reduction": {
+      "source_sha256": "121561f78fd5f0b23eb986678d5c289ff60e180f0f1166af197da3eaf04c917c",
+      "binary_sha256": "25574b1baded716c7dde623ed9ac3be0350787d7f423214bf472b1ee7cbfa74f",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "./research/physical_temperature_reduction.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "./tmp/final_physical_temperature_reduction"
+      ]
+    },
+    "physical_temperature_reduced_combined": {
+      "source_sha256": "7e9435c46d11f66154b52925becbe15d42c8cfb72d4b7b001f74f012b4781cb9",
+      "binary_sha256": "91fe15af817f2a09011c256890add664d7a180f90d554cecbf0d1c7599123c1b",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "./research/physical_temperature_reduced_combined.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "./tmp/final_physical_temperature_reduced_combined"
+      ]
+    }
+  },
+  "obligations": {
+    "4": {
+      "complete": true,
+      "mode": 4,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 135721,
+      "passed": 67861,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 174.182633208,
+      "source": "physical_temperature_reduction",
+      "command": [
+        "./tmp/final_physical_temperature_reduction",
+        "cover",
+        ".05",
+        "1000000",
+        "4",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "13f76434a8b0cff42f32ee612a7a2ca1f5ab26331ef6cd19bf7333047c56a525"
+    },
+    "5": {
+      "complete": true,
+      "mode": 5,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 52785,
+      "passed": 26393,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 63.256117041,
+      "source": "physical_temperature_reduction",
+      "command": [
+        "./tmp/final_physical_temperature_reduction",
+        "cover",
+        ".05",
+        "1000000",
+        "5",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "f41afa336a5a89cfcec00de06346dfe5c79615a433e3c29aaefac25566b4ac44"
+    },
+    "7": {
+      "complete": true,
+      "mode": 7,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 54425,
+      "passed": 27213,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 144.905234542,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "7",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "a7bdc0d23147a1b1ccfda3adc8fab6e69399ccd2c476f84d4381cb6c571be11f"
+    },
+    "8": {
+      "complete": true,
+      "mode": 8,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 65045,
+      "passed": 32523,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 161.4166255,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "8",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "66ac7e7071627f5880ac0660cc4edba29da7cfd7543270d8a0462be47f54a66d"
+    },
+    "1": {
+      "complete": true,
+      "mode": 1,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 23351,
+      "passed": 11676,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 34.573860708,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "1",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "ff2c44d096a1ec07304a25048b4bd1bbc6d4b3be8589b7c9629abb2f3a78e1f9"
+    },
+    "2": {
+      "complete": true,
+      "mode": 2,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 105,
+      "passed": 53,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.142262333,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "2",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "4b4fa339556f7e3555bff58b3a561c040aa2445a73381b4e1cf211cd661b084e"
+    },
+    "3": {
+      "complete": true,
+      "mode": 3,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001467375,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "3",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "9476df6337908a0a0cb8ccd7aa0ae33b230f7dbc0d08e37abb933ff11816e54b"
+    },
+    "6": {
+      "complete": true,
+      "mode": 6,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001453916,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "6",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "2079110078fd06d38f447d1de2b5895cef347aad342a0b1f3b03efcb1ee15de6"
+    }
+  },
+  "conclusion": {
+    "distance": "Dh <= 0.9 Dc and Dc >= 0.001 throughout u in [0.4,0.8]",
+    "time": "th(delta) <= 0.95 tc(delta) for every delta in [0.001,0.01]",
+    "domain": "entire simultaneous independent +/-5% box in the eight listed coordinates",
+    "reduction": "Cold KL concavity makes the earliest cold threshold time occur at a temperature endpoint. Hot KL temperature derivative at threshold roots is nonpositive, making the lowest hot temperature worst. Modes 7 and 8 certify both remaining cases.",
+    "scope": "Executable interval proof with analytic dependencies; not Lean or external peer review."
+  }
+}

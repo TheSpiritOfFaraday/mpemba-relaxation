@@ -1,0 +1,13 @@
+{
+  "pid": 50889,
+  "status": "finished",
+  "systems": 5395561,
+  "evaluations": 2697780500,
+  "best": {
+    "TV": 9.397360703503832e-09,
+    "Hellinger": 1.159728320922601e-09,
+    "hinge": 2.412761180805338e-13
+  },
+  "hits": [],
+  "elapsed_seconds": 600.0210230350494
+}

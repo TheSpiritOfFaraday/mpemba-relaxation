@@ -1,0 +1,102 @@
+{
+  "reviewed_utc": "2026-10-13T01:29:40.098550+00:00",
+  "status": "complete for listed numbered statements; project audit remains incomplete",
+  "source_hashes": {
+    "focused_paper.tex": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "research_report.tex": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "focused_appendices.tex": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "research/quarter_limit_family.tex": "b8555a8a186536b2ba35a377782e393a0562219133fc7e10a0104602aade7877",
+    "research/finite_span_amplitude.tex": "1737f5ea2d720ed0c8232b8c4cde4aa79a3c80155bb1c2bb63e4731d70861a0e",
+    "formal/Mpemba/SharpFamily.lean": "77f3d65c705b77e9ceb081e4ffdf799936538026089d4ac9c21119ef1518d69b",
+    "formal/Mpemba/PositiveMode.lean": "1494677cb93a158a150f92d6167ce5f84b3f5494fed83658ce4cf600b7187f7e",
+    "formal/Mpemba/SharpThermal.lean": "0964da8299b2d800a1e658c988f8ac5a575507fb83503b2b8180dd359597a92c",
+    "formal/Mpemba/SharpQuarter.lean": "a921878e866b44d355c32a3d215a022e376f2aa43221a74f4444ee0c779af3fa",
+    "research/check_sharpness_correspondence.py": "b3e39009b7ff3ed176a2a7ce00c71e77d7dd17e3733360ae72daa7f1fca5fe77",
+    "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+  },
+  "matching_prior_replays": [
+    {
+      "script": "research/quarter_limit_certificate.py",
+      "source_sha256": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492",
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_certificate.log",
+      "log_sha256": "25997349d2bc2c961fc867715314c06039c8b3ef396b26333ba729513f8ecbd5"
+    },
+    {
+      "script": "research/quarter_limit_thermal_certificate.py",
+      "source_sha256": "79e0f177831cf0761f98cf79b04308cef22a2452a2337dc816a1b42a3b4d436f",
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_thermal_certificate.log",
+      "log_sha256": "573d18c4a89c82c89df5d2b6a9b8156caf6a70c25bdbafd5200961e1c6b9b165"
+    }
+  ],
+  "lean_support": {
+    "log": "research/detailed_audit/lean_recheck.log",
+    "sha256": "fa726622d2ceaf58a4e4bbb99544b72f1817c9e3fc87dbbd57c158e8d59410af",
+    "scope": "Earlier successful build in this audit session; no Lean files were changed during these reviews. Formalized sharpness concerns the simpler family, not the uniform-gap perturbation."
+  },
+  "document_correspondence": [
+    {
+      "fragment": "research/quarter_limit_family.tex",
+      "report_and_appendix_exact_inclusion": true
+    },
+    {
+      "fragment": "research/finite_span_amplitude.tex",
+      "report_and_appendix_exact_inclusion": true
+    }
+  ],
+  "reviews": {
+    "formal_family": [
+      "Transcribed all three denominator polynomials and six rate formulas from SharpFamily.lean and matched the formal sharpness appendix term by term. The correspondence checker independently verifies exact eigen-equations, detailed balance, conservation, and all six rate limits.",
+      "Bath weights are strictly decreasing and positive for 0<epsilon<1/30. The mode has first component one and exact zero bath mean. Denominators P,-R,S have positive values at zero.",
+      "All thirteen continuity functions are rational with nonzero denominators at zero; their values are 68,12,21,3/2,20/17,15/7,20/17,12/17,9/14,117/70,66/425,276/595,1/17. A finite intersection of neighborhoods supplies simultaneous strict positivity for sufficiently small positive epsilon.",
+      "F124 and G234 vanish identically. The factorization e_rate-c_rate*t=epsilon*positive_function gives strict G124; G234 equality then gives strict G134. The remaining three F and G123 signs are among the thirteen checks. Positive clearing factors preserve original F signs.",
+      "Reconstructed all three positive contrast coordinates: the first uses w1-w2>0, the last uses w4<0, and the middle is the sum of positive multiples of -w3 and -w4. w3<0 for 0<epsilon<1/30.",
+      "Two strict G margins give strictly positive contrast edges connecting coordinate one to coordinates two and three. Other off-diagonals are nonnegative.",
+      "PositiveMode.lean proves the weighted-defect quadratic identity as a sum of nonnegative squared ratios. It proves maximal eigenvalue ordering and shows the kernel is one-dimensional from the two connecting edges. No assumed uniform gap or numerical eigenvalue is substituted.",
+      "The bridge reconstructs the full mode and transfers the positive-coordinate eigen-equation, variational ordering and one-dimensional eigenspace to SimpleSlowMode of the full generator.",
+      "SharpThermal.lean uses epsilon=exp(-L^2), hot=L^(-3), cold=L^(-1). For finite L>1 the temperatures are strictly ordered in (0,1). Epsilon is positive and eventually inside the admissibility interval.",
+      "Exact highest-state weights are exp(-2/L) and exp(-2L); their limits are one and zero. The other weights tend to one by continuity of real powers at positive limiting bases. The mode tends to (1,-4/5,-1/3,0).",
+      "The nonzero overlap limits -1/30 and -2/45 imply strict magnitude reversal eventually. The absolute-value ratio has limit 3/4, giving advantage 1/4.",
+      "SharpQuarter.lean defines attainability using actual positive rates, valid ordered weights, all original failures, SimpleSlowMode, finite strict cooling order and strict overlap reversal. Eventually_family_attainable joins the admissibility and limit facts. The strict upper bound plus this family establishes the least upper bound, nonattainment, and arbitrarily close attained advantages."
+    ],
+    "uniform_gap_family_and_strict_perturbation": [
+      "Checked the printed fast-space basis against the certificate output exactly. Its columns have zero bath mean, are orthogonal to w in the weighted product, and are independent because the last two rows are the identity matrix.",
+      "The two equations for B are formed directly from original F124 and G234 expressions. Their coefficient determinant has a continuous nonzero sign certificate, ensuring the rational solution is well-defined on 0<epsilon<=1/30.",
+      "The positive-sign routine removes powers of epsilon from numerator and denominator, substitutes epsilon=t/30, and uses exact Bernstein coefficients. Powers of epsilon preserve positivity on the open-left domain even with negative exponent. Strict positive coefficients include t=1; no finite mesh is accepted.",
+      "Thirty certificates cover B11, detB, the linear-system determinant, twelve off-diagonal rates, six strict original F/G signs, one spectral-gap inequality, and eight strict H signs. The remaining two triplet expressions vanish identically; their identities and all conservation, reversibility and eigen-equations are checked symbolically.",
+      "B11>0 and detB>0 imply positive definite symmetric B. J=Utranspose D U is positive definite because U has full column rank and D>0. BJ is similar to a symmetric positive definite matrix, so both fast increments are positive real numbers.",
+      "On the fast basis L acts as -3I-BJ/epsilon^2; w has eigenvalue -3, and the constant vector has eigenvalue zero. The four independent directions exhaust the space.",
+      "For positive increments a,b, ab/(a+b)<min(a,b). The certificate proves det(BJ/epsilon^2)/trace(BJ/epsilon^2)>1/3. This gives the claimed uniform separation and simple slow mode.",
+      "For this construction set L=log(1/epsilon), hot=L^-2, cold=L^-1/2. Since epsilon<=1/30, L>1 and finite preparations are ordered. The top weight tends to one for hot and zero for cold; other weights tend to one, giving the same two nonzero overlap limits.",
+      "H uses normalized bath weights and reduced conductances at most 100. Its negative weighted quadratic form is at most 100 times the bath variance. Therefore the perturbation operator norm is at most 100epsilon^4 on the nonstationary symmetric space.",
+      "Weyl perturbation bounds give gap greater than 1/3-200epsilon^4>1/4. Original positivity and positive H rates preserve all transition-rate positivity, and linearity makes all eight F/G inequalities strict.",
+      "Resolve the perturbed unit slow vector into old slow and fast components. The old fast resolvent has norm at most 1/(1/3-100epsilon^4), so the orthogonal component is bounded by 100epsilon^4 divided by that denominator.",
+      "After sign alignment the distance of unit vectors is at most sqrt(2) times the orthogonal component. Scaling to norm ||w||q<=1 gives less than 500epsilon^4. The correspondence checker verifies the worst-case rational constant inequality at epsilon=1/30.",
+      "Each normalized q_i>=epsilon^2/3 because sum(raw q)<3 and the minimum raw weight is epsilon^2. Hence coordinate errors are below 500sqrt(3)epsilon^3<1000epsilon^3; all thermal averages have at most that error, uniformly in preparation.",
+      "The perturbation error vanishes, so nonzero limiting overlaps and strict reversal eventually persist. The strict perturbation does not claim its slow eigenvalue stays exactly -3.",
+      "The finite example uses integer-power bisection from standalone_primary_check.py, whose domain, bracket invariant and explicit final inequality were inspected. The four quotient corners correctly enclose the signed average. Hot/cold gain endpoints and perturbation expansion use the worst signs correctly.",
+      "The 21-check correspondence run proves the manuscript decimal endpoints enclose the exact gain rationals and the strict perturbed lower bound exceeds 22 percent. The example remains separate from experimental feasibility and from the asymptotic approach-rate expansion."
+    ],
+    "sharp_upper_bound": [
+      "Reviewed earlier first-three shape lemma supplies the mode inequalities; the ordered-conductance theorem supplies negative nonzero cooling overlaps.",
+      "Conditional mean on first three states is a constant plus nonnegative multiples of averages of (1,-1,0) and (1,1,-2). Both derivatives are positive for ordered energies at beta>=0, so the conditional mean is nondecreasing.",
+      "First-three mass P strictly increases and obeys 3/4<P<1 at finite beta>0. Thus r=P_c/P_h is greater than one and strictly below 4/3.",
+      "The identity b_c-r b_h=P_c(m_c-m_h)+(1-r)w4 has two nonnegative terms. Since both overlaps are negative, the absolute ratio is at most r<4/3. Equality is impossible at finite admissible parameters.",
+      "Both sharpness constructions approach ratio 4/3 for actual admissible finite preparations. Hence the bound is the sharp supremum. The KL leading quadratic coefficient gives advantage 1-(3/4)^2=7/16. The asymptotic threshold-time shift is log(|b_c|/|b_h|)/|lambda2|<log(4/3)/|lambda2|; this is not a finite-threshold universal time-saving statement."
+    ],
+    "finite_span_corollary": [
+      "Invert the positive nonzero overlap ratio bound to obtain advantage<=1-P_h/P_c, with no assumption that the advantage is positive.",
+      "Shift E1 to zero. Z3(beta_c)<=Z3(beta_h) and the top unnormalized weight falls by exp(-d). Therefore pi4_c/P_c>=exp(-d)*pi4_h/P_h.",
+      "Multiplication and P_c+pi4_c=1 give P_h/P_c>=P_h+exp(-d)pi4_h, proving advantage<=pi4_h(1-exp(-d)).",
+      "The strict pi4_h<1/4 and beta_c-beta_h<beta_b produce both remaining strict upper bounds. Solving g<(1-exp(-d))/4 gives d>-log(1-4g); the positive factor below one gives pi4_h>g.",
+      "Checked the example targets 1/10,1/5,6/25 give log(5/3),log(5),log(25). These are necessary conditions only, with no new sufficiency or sharpness claim."
+    ]
+  },
+  "new_exact_comparisons": "research/detailed_audit/sharpness_correspondence.json",
+  "limitations": [
+    "The large-energy approach-rate expansion, plotted maxima and other figure values remain separate unnumbered review obligations.",
+    "Finite-time physical robustness and all remaining numbered claims are not signed off by this record.",
+    "The earlier witness, triplet-logic and first-three proof reviews remain dependencies; see claim_reviews.json."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-13T02:04:23.002724+00:00",
+  "guide_pages": 60,
+  "claim_instances": {
+    "reviewed": 64,
+    "total": 68
+  },
+  "new_details": 3,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "print_pages_visually_reviewed": [
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "last_change": "Removed stale 77-page reference; verified corrected PDF text and unchanged page count",
+  "new_local_links_checked": 7,
+  "artifact_sha256": {
+    "freshman_guide.html": "ee80dbfd41d46451c8da1d1eb83a0ecdaf74a661424d412ead1ccd5f9fce66b8",
+    "output/pdf/freshman_guide.pdf": "b3a39ab4074d06de1ea1f3fe3aff8051120de8b3c4a1abe1ce558d24c31cf892",
+    "output/playwright/guide-entropy-review.png": "1e09ec5aabd3dcd9b1e760f100420867fd80008c06028ccf71a15bc46b2b4851"
+  }
+}

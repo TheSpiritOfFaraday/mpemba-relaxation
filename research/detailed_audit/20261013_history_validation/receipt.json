@@ -1,0 +1,58 @@
+{
+  "group": "Historical rejected physical candidate validation",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/check_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/check_physical_rate_model.py",
+        "research/physical_rate_search.json",
+        "--samples",
+        "1000"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 16.023089291999998,
+      "output_byte_identical": false,
+      "log": "research/detailed_audit/20261013_history_validation/physical_rate_search.log",
+      "source_sha256": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+      "log_sha256": "5c6110e1296ff2e2ecd777f0839347e7da31d21b56b7e8664424d83440dcba97",
+      "historical_fields_exactly_reproduced": true,
+      "added_current_output_fields": [
+        "/robustness/thresholds",
+        "/robustness/time_saving_envelope_low",
+        "/robustness/time_saving_envelope_high"
+      ],
+      "failing_cases": 441,
+      "sample_size": 1256
+    },
+    {
+      "script": "research/check_physical_rate_model.py",
+      "command": [
+        "python3",
+        "research/check_physical_rate_model.py",
+        "research/physical_rate_search_robust_screen.json",
+        "--samples",
+        "1000"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 15.690500749999998,
+      "output_byte_identical": false,
+      "log": "research/detailed_audit/20261013_history_validation/physical_rate_search_robust_screen.log",
+      "source_sha256": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+      "log_sha256": "28b0630d9b9196ddcaa0ec6995eab51949c48e3a021ee99c36e5a2727c8d61a3",
+      "historical_fields_exactly_reproduced": true,
+      "added_current_output_fields": [
+        "/robustness/thresholds",
+        "/robustness/time_saving_envelope_low",
+        "/robustness/time_saving_envelope_high"
+      ],
+      "failing_cases": 50,
+      "sample_size": 1256
+    }
+  ],
+  "note": "Byte comparison differs because the current checker adds threshold/envelope arrays. Every original field, including all independent high-precision values and rejection counters, matches exactly. New arrays are supplementary."
+}

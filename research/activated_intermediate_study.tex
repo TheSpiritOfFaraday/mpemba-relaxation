@@ -1,0 +1,99 @@
+\subsection{An explicit activated-intermediate check of the physical clock}
+\label{sec:activatedintermediates}
+The four-well study can be extended to retain time spent in transition
+regions. This gives a mesoscopic check of one coarse-graining assumption,
+not a derivation from a continuum potential or an experimental system.
+For each of the six well pairs $ij$, add an intermediate $s_{ij}$ with
+energy $B_{ij}$ and phase-space weight $\eta>0$. Well weights are one.
+At the bath temperature, in the same dimensionless energy convention,
+set
+\[
+ Q_{s_{ij},j}=2\nu_0 e^{-(B_{ij}-E_j)},\qquad
+ Q_{j,s_{ij}}=2\nu_0/\eta,
+\]
+and use the corresponding pair of rates at endpoint $i$. All other
+off-diagonal rates vanish. The diagonal entries conserve probability.
+The stationary weights are $g_a e^{-E_a}$, where $g_j=1$ and
+$g_{s_{ij}}=\eta$. Each edge obeys detailed balance because its equilibrium
+flux in either direction is proportional to $2\nu_0 e^{-B_{ij}}$.
+
+An intermediate has total escape rate $4\nu_0/\eta$ and mean residence
+time $\eta/(4\nu_0)$. Partitioning $Q$ into well and intermediate blocks
+gives the exact identity
+\[
+ Q_{ww}-Q_{ws}Q_{ss}^{-1}Q_{sw}=M.
+\]
+Indeed, each entrance rate is twice the original well-to-well rate,
+and the next exit chooses either endpoint with probability $1/2$.
+Thus the original generator is the exact trace generator when time in
+intermediates is deleted. The following calculation instead evolves the
+full ten-state generator in physical time, including those residence
+times. Both preparations are full weighted Gibbs distributions
+$p_a(T)\propto g_a e^{-E_a/T}$, including the intermediate populations.
+Distances are KL divergences from the full ten-state bath distribution.
+
+\paragraph{Numerical results and independent checks.}
+For each displayed $\eta$, the nominal parameters are unchanged from
+Section~\ref{sec:physicalresults}. The threshold grid contains 41
+logarithmically spaced values in $[10^{-3},10^{-2}]$. The perturbation
+sample contains all 256 corners of the eight-parameter $\pm5\%$ box
+and 500 seeded interior points for each fixed $\eta$.
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$\eta$ & Nominal minimum time saving & Sampled worst time saving\\
+\midrule
+$0.025$ & $9.5759\%$ & $5.2719\%$\\
+$0.050$ & $9.7883\%$ & $5.4207\%$\\
+$0.100$ & $10.2036\%$ & $5.7115\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All 2,268 parameter samples passed the sampled finite-time benchmarks.
+The shortest sampled window with at least a $10\%$ distance advantage
+was approximately $1.0889\tau$, with the cold distance at least $10^{-3}$
+and times below $5\tau$; here $\tau$ is the full model's slow time.
+These are finite grids in parameters, thresholds and time, not certificates
+over their continuous ranges or over an interval of $\eta$ values.
+
+At $\eta=0.05$, the cold and hot preparations have respectively about
+$1.90\%$ and $4.07\%$ probability in intermediates. Independently
+constructed 70-digit direct matrix exponentials agree with the spectral
+calculation to within $6.55\times10^{-13}$ in KL distance at five checked
+times. Independent numerical root solves give cold/hot arrival times
+$210.67249/190.05131$ at threshold $10^{-3}$ and
+$40.83628/27.51015$ at $10^{-2}$, in $\nu_0^{-1}$ units.
+These correspond to $9.78826\%$ and $32.63307\%$ time savings.
+The finite-time benefit therefore survives this explicit extension at
+the tested points; it is not an artifact of deleting intermediate
+residence times in this model.
+
+\paragraph{Scope and remaining work.}
+The original moderate bounds still describe the four well energies and
+their effective rates. They do \emph{not} describe every state and rate
+of the expanded model: its highest transition-state energy is about
+$9.32\,k_BT_b$, and its fast intermediate exits make the full directed
+rate ratio exceed the original $10^3$ cap. This extension is a separate
+test of the physical approximation, not a replacement candidate claimed
+to satisfy the original all-state bounds. The phase-space weight is a
+transition-region volume parameter, not an integer degeneracy.
+No continuum-potential derivation, material identification or absolute
+time calibration has been established.
+
+Both finite-time benchmarks throughout the original four-state $\pm5\%$
+uncertainty box are now certified in Section~\ref{sec:physicalboxcertificate}.
+Earlier interval methods that could not close that box remain historical
+incomplete attempts; their enclosure overestimation was not evidence of
+negative probabilities or a failed physical benchmark. The completed
+spectral and temperature-reduction proof concerns the four-state model.
+It does not turn the ten-state numerical checks into a continuous
+robustness theorem. The exact stochastic bath realization of
+Section~\ref{sec:thermalcollision} supplies an independent interpretation
+of the original rates. A specified material or continuum system would
+still require its own rate and preparation-weight validation.
+
+The model and nominal scan are in
+\path{research/activated_intermediate_model.py}; the independent audit is
+\path{research/check_activated_intermediates.py}. Machine-readable results
+are \path{research/activated_intermediate_results.json} and
+\path{research/activated_intermediate_audit.json}.

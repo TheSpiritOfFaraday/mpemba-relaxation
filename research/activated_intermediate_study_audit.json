@@ -1,0 +1,33 @@
+{
+  "goal_status": "active",
+  "completed_this_turn": [
+    "Explicit ten-state activated-intermediate model and exact trace identity",
+    "Independent 70-digit direct exponential checks",
+    "2268 sampled parameter perturbations at three fixed intermediate weights",
+    "Report and companion appendices rebuilt and changed pages visually reviewed"
+  ],
+  "remaining": [
+    "Continuous performance certificate across original uncertainty box",
+    "Microscopic derivation and validation for a specified physical system"
+  ],
+  "scope": "Expanded model exceeds original all-state energy/rate caps; numerical checks do not certify continuous robustness.",
+  "interval_attempt": "Full-box enclosure unresolved; not a negative physical result.",
+  "preservation": {
+    "focused_paper.tex": true,
+    "output/pdf/focused_paper.pdf": true,
+    "research/archive/research_report_before_focused_paper.tex": true,
+    "research/archive/research_report_before_focused_paper.pdf": true
+  },
+  "sha256": {
+    "research/activated_intermediate_model.py": "c412144838bd7ac027d0066dd78f55e155b2219f447848bfea74477f4ce7b24a",
+    "research/check_activated_intermediates.py": "d51e24a639664955ddabce4cae004dc43f706c1abfa88ae110dd48a51927b50a",
+    "research/activated_intermediate_results.json": "df2bfd8666db7698baf49dd9a4af43b05ce466a540073997126738eae3f6125c",
+    "research/activated_intermediate_audit.json": "703b552fa615921c65771d96eb2b6e020ae6db8bcc32950c0fcea2bcfd0d0cd6",
+    "research/activated_intermediate_study.tex": "fd613f510a289d5172b0b9ffe1385e50ad8003c14c61689f334d85df788037a5",
+    "research/physical_box_interval.cpp": "ca489da3d8d8d3756e7cc5c46aeaf87f763aa8775f2aec8256a7a1f16eaccbd8",
+    "research_report.tex": "0a4f79dfbf01d7a1544c4a647d26cf8b5ba2c7aa41a9ae009f244f608a188815",
+    "focused_appendices.tex": "c82b0debeb8049e4ce6c8ef34cd67a8c176647dc584a2637a816c4f193c76748",
+    "output/pdf/research_report.pdf": "2192cc274574860f79de4983e040a48f8f3d10126dd127d0c1e00a14f1daf71f",
+    "output/pdf/focused_appendices.pdf": "bd15e0d941416266702b63b6cb2f624a487d68960dc04c21082aeb8aca393b37"
+  }
+}

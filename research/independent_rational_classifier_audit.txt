@@ -1,0 +1,77 @@
+INDEPENDENT RATIONAL CLASSIFIER AUDIT -- 2026-10-11
+
+Reviewed research/exact_rational_triplet_classifier.py against
+research/rate_endpoint_criterion.tex and research/rational_log_endpoint.tex.
+No correctness defect found; parent implementation was not modified.
+
+SIGN AND MODEL CHECK
+The code centers prime valuations, divides by four, and therefore computes
+pi'(0), not its negative. Normalized bath weights define D and h. Using the
+unnormalized supplied weights in the logarithms is valid because the centering
+operator kills every common energy shift. The scalar evaluated at the largest
+nonzero root equals p'(r)b(0)b'(0)/(w^T D w). Here p'(r)>0, and the full-premise
+orientation has b(0)<0, so a positive scalar correctly means cooling.
+The polynomial projector is used only on zero-sum d. The faster roots may
+coincide; this does not invalidate the simple-slow projector formula.
+
+ALGEBRAIC AND TRANSCENDENTAL CHECK
+OrderedField uses the isolated CRootOf atom as its field generator, including
+when the requested eigenvalue is a rational multiple of that atom. The
+coefficient enclosure uses the same generator interval and Horner arithmetic.
+It does not mistake the sign of an algebraic polynomial's leading coefficient
+for the sign at the selected real embedding.
+The logarithm routine reduces a prime to 2^e times a rational in [1,2), and
+uses a valid positive atanh-series tail bound. All acceptance arithmetic is
+rational or algebraic; floating computation appears only in independent audit
+checks and in construction of deliberately difficult test inputs.
+
+Baker's stated hypothesis was independently checked in the opening extract of
+his 1967 primary paper, Linear forms in the logarithms of algebraic numbers (II):
+https://www.cambridge.org/core/journals/mathematika/article/abs/linear-forms-in-the-logarithms-of-algebraic-numbers-ii/123780AC339E1DAD5460D936F2C863CE
+The extract supports precisely the implication used: rational independence of
+the logarithms together with 2 pi i gives algebraic-coefficient independence
+of the logarithms. Distinct positive-prime real logarithms meet the hypothesis
+by unique factorization and separation of real and imaginary parts. Hence
+coefficientwise zero is a valid exact equality test, and otherwise converging
+intervals must eventually decide the nonzero scalar's sign. This is linear
+independence, not algebraic independence. The DOI redirected to an inaccessible
+Wiley page in this check; the publisher-hosted Cambridge extract was accessible.
+
+EXECUTED TESTS
+1. independent_rational_classifier_audit.py / .json / .log:
+   33 test groups, including 20 exact comparisons with the independent existing
+   commensurate Sturm classifier. Includes the certified original rational
+   counterexample; three common-weight scales and three positive rate/time
+   scales; reset and all three accelerated adjacent pairs at two energy spectra;
+   simple no-effect examples; arbitrary small rational perturbations yielding
+   algebraic slow roots; and simple-slow examples with coincident faster roots.
+   Common-weight scaling gave exactly identical nonzero prime-log coefficients.
+   Additional tests cover all three real embeddings of one irreducible cubic,
+   scaled algebraic generators, nested rational bounds for six prime logs
+   independently checked at 90 decimal digits, and rejection of invalid inputs.
+
+2. independent_classifier_nearzero_audit.py / .json / .log:
+   Interpolate the primary example with all-downward-one rates at fixed weights.
+   The entire interpolation keeps positivity and all F/G <= 0. Numerical
+   bisection was used only to construct two rational inputs within 2^-100 of
+   each other on opposite sides of the endpoint boundary. For BOTH inputs,
+   max_rounds=1 returned verified=False, ordinary_cooling=None, endpoint_sign=None.
+   Unrestricted exact interval classification resolved both in two rounds,
+   returning absence below the boundary and cooling above it. Runtime 3.28 s.
+   This directly checks that insufficient precision is not labeled absence.
+
+3. independent_rational_classifier_equality_result.json / .log:
+   Ran the classifier on the parent's exact equality input
+   research/rational_triplet_equality_example.json, with base 99/100 and energy
+   exponents 0,1,100,600. Despite large rational rates it completed successfully.
+   Returned verified=True, slow_multiplicity=1, endpoint_sign=0,
+   ordinary_cooling=False, and an empty nonzero-prime-log coefficient dictionary.
+   Thus the equality path was executed, not merely inferred from the proof.
+
+LIMITS
+This is an independent implementation and mathematical argument audit, not a
+formal proof of SymPy's algebraic routines. It relies on the previously proved
+full-triplet endpoint and degenerate-boundary theorems. The test inputs do not
+establish performance bounds: integer factorization and near-zero forms can
+be costly. General unconstrained generators, arbitrary real input, and transient
+finite-time crossings remain outside the classifier's declared scope.

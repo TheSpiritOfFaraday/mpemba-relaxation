@@ -1,0 +1,61 @@
+<details class="proof-route" id="convex-heating-proof"><summary>Why an ordered chain of contrasts preserves every convex heating distance</summary>
+<h3>1. Start with an average that cannot be negative</h3>
+<p>If two quantities increase together, their covariance is nonnegative. For values aᵢ and an increasing function g, with positive weights pᵢ summing to one, expand the two sides to check</p>
+<div class="math">Cov(a,g(a)) = ½ ΣᵢΣⱼ pᵢpⱼ(aᵢ−aⱼ)(g(aᵢ)−g(aⱼ)) ≥ 0.</div>
+<p>Each product is nonnegative because its two factors have the same sign. For a convex differentiable function Φ, the slope Φ′ is increasing, so we can use g = Φ′. Strict convexity makes the covariance positive whenever at least two a values differ.</p>
+<h3>2. Apply that fact to a prefix of physical states</h3>
+<p>Write the density ratio rᵢ = pᵢ/qᵢ as r = 1+Hx, where H contains the unnormalized prefix contrasts. On heating, all x coordinates are positive. Put gₖ = ΣᵢqᵢHᵢₖΦ′(rᵢ); this is the derivative of the divergence with respect to coordinate xₖ. Individual gₖ need not be positive. Instead look at cumulative sums Sₖ = Σⱼ≤ₖ xⱼgⱼ.</p>
+<p>Higher contrasts are constant on states 1 through k+1. Their combined contribution there is cₖ = 1+Σⱼ&gt;ₖxⱼ. The lower contrasts have zero weighted mean on that prefix. Therefore</p>
+<div class="math">Sₖ = Σᵢ≤ₖ₊₁ qᵢ(rᵢ−cₖ)Φ′(rᵢ) ≥ 0.</div>
+<p>This is exactly prefix mass times the covariance just derived. Notice the distinction: cumulative sums are positive even when individual terms can be negative.</p>
+<h3>3. Learn the small summation trick that uses those prefixes</h3>
+<p>Let y = ∂x/∂β and Rₖ = yₖ/xₖ. If R₁ ≥ R₂ ≥ … &gt; 0, then collecting the coefficient of each xₖgₖ gives</p>
+<div class="math">ΣₖRₖxₖgₖ = R<sub>n−1</sub>S<sub>n−1</sub> + Σₖ&lt;ₙ₋₁(Rₖ−Rₖ₊₁)Sₖ ≥ 0.</div>
+<p>This is summation by parts. For three terms, expand R₃S₃+(R₂−R₃)S₂+(R₁−R₂)S₁ to recover the original sum. The identity turns information about partial sums into information about the weighted total.</p>
+<h3>4. Explain why the ratios keep their order</h3>
+<p>Initially each xₖ is proportional to δ times an integral of Q(s)e<sup>−δs</sup>, truncated at Eₖ₊₁ and divided by the relative partition function. Here δ = β−β<sub>b</sub> &gt; 0 and Q(s) is the bath mass below energy s. Differentiating its logarithm gives a common term minus the mean s in that truncated integral. Extending the upper endpoint increases that mean, so Rₖ decreases with k.</p>
+<p>A tridiagonal Metzler contrast generator only couples neighboring contrast coordinates, with nonnegative off-diagonal entries. Its exponential has nonnegative ordered 2×2 determinants. The determinant expansion then preserves decreasing yₖ/xₖ ratios. One can prove the determinant claim by differentiating those determinants: their evolution again has nonnegative off-diagonal coefficients because a neighboring index cannot cross another occupied index.</p>
+<p>This condition concerns <em>contrast coordinates</em>, not neighboring physical energy states. It is also a real restriction: a general G-admissible generator can destroy the ratio order. The resulting proof-route failure is not itself a KL reversal.</p>
+<h3>5. Keep track of strictness and nonsmooth distances</h3>
+<p>At finite time a distinct initial state cannot become exactly equilibrium, because a matrix exponential is invertible. Thus the full covariance is positive for strictly convex Φ, and the last R is positive. Integrating the positive thermal derivative proves strict heating order. For nonsmooth convex functions, ordered subgradients replace Φ′ almost everywhere; local Lipschitz continuity permits integration. Non-strict convexity gives the non-strict conclusion.</p>
+<p class="small">See the <a href="research/tridiagonal_contrast_entropy.tex">full argument</a> and the classical determinant result in <a href="https://msp.org/pjm/1970/32-1/pjm-v32-n1-p20-p.pdf">Schwarz (1970), Theorem 2</a>. The argument above explains the project’s application; the determinant theorem is established mathematics.</p>
+</details>
+
+<details class="proof-route" id="near-bath-proof"><summary>A guaranteed KL window: turn temperature distance into an angle estimate</summary>
+<h3>1. Form a dimensionless measure of how far you start from the bath</h3>
+<p>Let δ = |β−β<sub>b</sub>| and c = E<sub>max</sub>−E<sub>min</sub>. The product z = δc is dimensionless: inverse temperature times energy. Small z means the Gibbs weights have not spread very far relative to the bath. The result guarantees ordinary KL ordering on either side whenever z ≤ 2/√5, approximately 0.8944. Cooling still requires positive initial β.</p>
+<h3>2. Compare a vector with the direction in which it is growing</h3>
+<p>After choosing the outward sign, write the positive contrast coordinates as x and their outward thermal derivative as y. Integral formulas for the initial Gibbs weights give, coordinate by coordinate,</p>
+<div class="math">(1/δ−c)x ≤ y ≤ (1/δ+c)x.</div>
+<p>The nonnegative contrast semigroup preserves both inequalities at every time. Thus y points broadly in the same direction as x. More precisely, if a = 1/δ−c and b = 1/δ+c, the cosine of their angle is at least 2√(ab)/(a+b) = √(1−z²), provided z &lt; 1.</p>
+<p>To derive this without guessing an angle, put vᵢ = yᵢ/xᵢ and assign weight xᵢ²/‖x‖². Since a ≤ vᵢ ≤ b, the inequality (vᵢ−a)(vᵢ−b) ≤ 0 gives E[v²] ≤ (a+b)E[v]−ab. The squared cosine is E[v]²/E[v²]. Its lower bound reduces to the nonnegative square ((a+b)E[v]−2ab)².</p>
+<h3>3. A positive matrix can change the angle, but only by a bounded amount</h3>
+<p>KL is curved, rather than exactly a squared Euclidean distance. Its Hessian describes that curvature. Along the straight line from equilibrium to the evolved density r, the integrated Hessian T has all eigenvalues between m = 1/r<sub>max</sub> and M = 1/r<sub>min</sub>. The initial density range has r<sub>max</sub>/r<sub>min</sub> = e<sup>z</sup>, and Markov averaging keeps the evolved density inside that range.</p>
+<p>The outward KL derivative is yᵀTx. Split T into its scalar center (M+m)I/2 and a remainder of norm at most (M−m)/2. The scalar part rewards alignment; the remainder can reduce the result only by its norm times ‖x‖‖y‖. Hence</p>
+<div class="math">∂D<sub>KL</sub>/∂δ ≥ ½(M+m)[√(1−z²)−tanh(z/2)]‖x‖‖y‖.</div>
+<h3>4. Check the advertised endpoint, rather than assuming a small-parameter approximation</h3>
+<p>For 0 &lt; z ≤ 2/√5, squaring the nonnegative sides gives √(1−z²) ≥ z/2. Also tanh(u) &lt; u for positive u, so the bracket is strictly positive even at the upper endpoint. Both vectors remain nonzero at every finite time. The bath endpoint itself has zero KL; it does not require substituting δ = 0 into 1/δ.</p>
+<p>This is an exact sufficient bound, uniform in time, rather than a truncated Taylor expansion. Repeated eigenvalues do not invalidate it. Beyond this window the proof becomes inconclusive; it does not predict a reversal. The numerical audit supports the proof on sampled cases, but its finite samples cannot establish the universal theorem.</p>
+<p class="small">Read the <a href="research/near_bath_entropy_window.tex">full theorem</a>, <a href="research/detailed_audit/entropy_reduction_identities.json">exact algebra checks</a>, and <a href="research/finite_time_entropy_independent_audit.json">sampling results with exclusions</a>.</p>
+</details>
+
+<details class="proof-route" id="dimension-reduction-proof"><summary>What is proved about higher dimensions, and what remains a conjecture?</summary>
+<h3>1. Combine contributions only after checking their signs</h3>
+<p>The contrast theorem writes the oriented slow mode as a nonnegative combination of prefix contrasts. Group its first two contrasts into f, supported on the first three states. If the additional inequality w₁+w₂ ≥ 2w₃ holds, f has a conditional thermal average that strictly increases toward its bath value zero. On cooling that average is negative.</p>
+<p>Its full overlap is the conditional mean times the probability P₃ of being in the first three states. At finite positive β, 3/n &lt; P₃ &lt; 1. Therefore its cold-to-hot magnitude ratio is less than n/3: the conditional magnitude shrinks and the probability factor grows by less than n/3.</p>
+<p>Each later contrast similarly has a ratio less than n/(k+1), hence at most the stronger threshold n/4. All nonzero components are negative on cooling, so no cancellation occurs. The ratio of their sum is a weighted average of their ratios, with hot magnitudes as positive weights. It is consequently below n/3.</p>
+<div class="math">Additional arithmetic inequality ⇒ amplitude advantage &lt; 1−3/n.<br>For n &gt; 4, the full triplet premise has not yet been proved to imply that additional inequality.</div>
+<h3>2. One special tail can be compressed exactly for this purpose</h3>
+<p>Suppose the slow mode takes one constant value on states 4 through n. Let Q<sub>T</sub> be their total bath probability, and require Q<sub>T</sub> &lt; q₃. Average the rates out of this tail using its conditional bath probabilities, and sum the reverse rates. This gives a four-state reversible compression with ordered weights (q₁,q₂,q₃,Q<sub>T</sub>).</p>
+<p>The constant-tail eigenfunction survives the compression. The variational bound on eigenvalues keeps it simple and slow. Direct rate identities preserve every F and G inequality: the new F is an average of old F values plus nonnegative multiples of old nonpositive G values. The established four-state theorem then supplies the missing arithmetic inequality.</p>
+<p>Full dynamic lumpability is unnecessary because only this eigenfunction is being retained. But a constant tail and a sufficiently small <em>total</em> tail weight are essential assumptions. This averaging is different from eliminating a state through a Schur complement.</p>
+<h3>3. Convert a proposed mode into a graph construction</h3>
+<p>Fix positive contrast coordinates x. Connect contrast coordinates i and j with symmetric nonnegative weights ℓᵢⱼ. Choose the diagonal of B to make Bx = 0. The central identity is</p>
+<div class="math">−yᵀηBy = Σᵢ&lt;ⱼ ℓᵢⱼxᵢxⱼ(yᵢ/xᵢ−yⱼ/xⱼ)² ≥ 0.</div>
+<p>Here η records the squared lengths of the unnormalized contrast columns. The right side resembles a network’s energy: it vanishes exactly when yᵢ/xᵢ is constant on each connected component. For a connected graph, the kernel therefore has only the one direction x. All other directions decay.</p>
+<p>Transform B back to physical coordinates. Some rates may initially be negative. Adding a sufficiently large reset makes them positive, shifts every nonstationary eigenvalue equally, and leaves every F and G test unchanged. For fixed bath weights and x, the triplet tests are linear in ℓ, so a linear program can ask whether all graph edges and test margins can be strictly positive together.</p>
+<h3>4. Understand the exact scope of this decision reduction</h3>
+<p>A positive optimum realizes the prescribed mode under strict tests. A failed strict program does not reject every fixed mode on a weak boundary: there connectivity, rather than positivity of every edge, is the right condition. A global strict violation of the arithmetic inequality could be perturbed into the strict case and represented by rational construction data.</p>
+<p>This turns the open question into a precise feasibility problem. It does not solve that problem for all inputs. Nor would an arithmetic counterexample alone establish a larger thermal advantage; actual Gibbs overlaps would still have to violate the proposed bound.</p>
+<p class="small">Sources: <a href="research/high_dimension_bound_reduction.tex">conditional and rare-tail reductions</a>, <a href="research/general_n_arithmetic_lp.tex">graph feasibility theorem</a>, and the <a href="research/detailed_audit/entropy_dimensional_review.json">66-step review</a>.</p>
+</details>

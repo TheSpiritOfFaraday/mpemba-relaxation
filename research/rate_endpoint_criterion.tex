@@ -1,0 +1,67 @@
+\subsection{A scalar rate test without computing a slow eigenvector}
+\label{sec:rateendpoint}
+The endpoint criterion can be evaluated from the generator and one root
+of a cubic. This uses the classical polynomial formula for a spectral
+projector; the point is an explicit implementation of the preceding
+problem-specific criterion, not a new projector construction.
+
+Let $q=\pi(\beta_b)$, $D=\operatorname{diag}(q)$, and put
+\[
+a=\tfrac14\mathbf1-q,\qquad
+d=-\tfrac14(E-\bar E\mathbf1),\qquad
+\bar E=\tfrac14\sum_i E_i,\qquad h=D^{-1}a.
+\]
+Thus $a$ is the infinite-temperature displacement and $d=\pi'(0)$.
+Define $\tau=\operatorname{tr}M$,
+$\sigma=[(\operatorname{tr}M)^2-\operatorname{tr}(M^2)]/2$ and
+$A_j=h^\top M^j d$ for $j=0,1,2$. The scalar polynomial
+\[
+\mathcal R(x)=A_0x^2+(A_1-\tau A_0)x
+                  +A_2-\tau A_1+\sigma A_0
+\]
+has degree at most two. Let
+$p(x)=\det(xI-M)/x$ and let $r$ be its largest root.
+
+\begin{corollary}[Rate evaluation of the triplet endpoint test]
+\label{cor:rateendpoint}
+For a positive reversible four-state generator satisfying all original
+triplet failures, if $r$ is simple, ordinary asymptotic cooling occurs
+if and only if $\mathcal R(r)>0$. Equality means absence.
+If the largest nonzero root is repeated, cooling is absent by
+Theorem~\ref{thm:tripletdegenerate}. Thus the full-premise decision
+requires a cubic root and a scalar quadratic evaluation, with no
+choice or numerical normalization of a slow eigenvector.
+\end{corollary}
+\begin{proof}
+Write the other two roots as $s,t$, permitting $s=t<r$.
+On the invariant zero-sum subspace the spectral projector onto $r$ is
+\[
+P_r=\frac{(M-sI)(M-tI)}{(r-s)(r-t)}
+=\frac{M^2-(\tau-r)M+(\sigma-\tau r+r^2)I}{p'(r)}.
+\]
+This identity is asserted on that subspace, not on the stationary
+direction. Reversibility ensures diagonalizability even if $s=t$.
+Since $d$ has zero sum, it follows that
+$h^\top P_r d=\mathcal R(r)/p'(r)$.
+For any nonzero left slow eigenvector $w$, detailed balance gives
+\[
+P_r=\frac{Dw w^\top}{w^\top Dw},\qquad
+\frac{\mathcal R(r)}{p'(r)}
+=\frac{(w^\top a)(w^\top d)}{w^\top Dw}
+=\frac{b(0)b'(0)}{w^\top Dw}.
+\]
+Here $w^\top q=0$, so $b(0)=w^\top a$. Orienting the mode by
+the contrast theorem makes $b(0)<0$. Corollary~\ref{cor:tripletendpoint}
+therefore makes the product positive exactly when cooling occurs.
+Finally $p'(r)=(r-s)(r-t)>0$, proving the sign rule, including equality.
+\end{proof}
+
+All quantities except the single cubic root are explicit matrix products
+of the original rates, bath weights, and energies. The test still uses
+global spectral information through $r$; it is not a new local triplet
+test. For rational bath weights and commensurate energies, the common
+positive energy unit can be removed and the remaining sign can be
+decided by ordered algebraic arithmetic. For arbitrary real energies,
+floating evaluation near zero does not settle exact equality. This
+corollary concerns existence of an asymptotic effect, not every transient
+crossing for a specified distance.

@@ -1,0 +1,56 @@
+{
+  "group": "entropy and dimensional reductions",
+  "complete": true,
+  "source_sha256": {
+    "research/check_entropy_reductions.py": "9299f13d5d3c80843d8531727a7d58eb2e09a6b060d00306cfac59522a63323a",
+    "research/finite_time_entropy_independent_audit.py": "03f2ddc60b33f53eb4119d0e6cb7222a9d615860d9cd9a88c7750982bc54b9af",
+    "research/thermal_ratio_obstruction_certificate.py": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533",
+    "research/reset_trace_obstruction.py": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c",
+    "research/reset_trace_independent_audit.py": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917",
+    "research/general_n_arithmetic_search.py": "9d49665252f2070a2fba651dc6ad27b3551011e86750a348951f586d4055497d"
+  },
+  "checks": [
+    {
+      "script": "research/check_entropy_reductions.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.264127375,
+      "log": "research/detailed_audit/20261013T015615Z_entropy/check_entropy_reductions.log",
+      "log_sha256": "def16d3cf3e65c5b500f1e69db8e8e5c225d2dd152eede0d260a682598b2c5d6"
+    },
+    {
+      "script": "research/finite_time_entropy_independent_audit.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.359005958,
+      "log": "research/detailed_audit/20261013T015615Z_entropy/finite_time_entropy_independent_audit.log",
+      "log_sha256": "3da249b78fc11a95b9fdb6dd0c02bb9d6411859c88f6e8ab60f0feda4ac0b4d1"
+    },
+    {
+      "script": "research/thermal_ratio_obstruction_certificate.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.19137879199999985,
+      "log": "research/detailed_audit/20261013T015615Z_entropy/thermal_ratio_obstruction_certificate.log",
+      "log_sha256": "4fe596a01f1a1d8f16b21b718a746e94f7f9c8012f0bca50a95e35656c0690cf"
+    },
+    {
+      "script": "research/reset_trace_obstruction.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.1399775000000001,
+      "log": "research/detailed_audit/20261013T015615Z_entropy/reset_trace_obstruction.log",
+      "log_sha256": "04e7d2694c1a2cb98a47adbec615f890b044f6528e4e38b9c3282f50270686f5"
+    },
+    {
+      "script": "research/reset_trace_independent_audit.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.13807779099999995,
+      "log": "research/detailed_audit/20261013T015615Z_entropy/reset_trace_independent_audit.log",
+      "log_sha256": "f1eed0f1b65e5e5cc81ba75ccb49b4f3c3613f0e6e8107ff5e4fdfc38b44e6d4"
+    }
+  ],
+  "all_passed": true,
+  "sources_unchanged": true
+}

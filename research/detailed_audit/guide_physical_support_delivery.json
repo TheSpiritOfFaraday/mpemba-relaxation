@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-10-13T02:43:03.925337+00:00",
+  "pages": {
+    "output/pdf/research_report.pdf": 125,
+    "output/pdf/freshman_guide.pdf": 79
+  },
+  "lessons_in_report": 40,
+  "new_html_walkthroughs": 8,
+  "mobile_width": 390,
+  "document_width_at_mobile": 390,
+  "native_mathml_elements": 232,
+  "report_render_review": "Pages42-49 visually inspected; technical part byte-identical",
+  "guide_render_review": "Pages57-66 visually inspected after repairing print CSS that changed inline MathML display",
+  "all_pages_nonempty": true,
+  "all_68_statement_reviews_retained": true,
+  "artifact_sha256": {
+    "output/pdf/research_report.pdf": "501d0721fafb83b8bb917db3c85f6d4c1789d6709366fa29f0dfeab4ed50a98f",
+    "output/pdf/freshman_guide.pdf": "3138c6b5283720cf216059efb69353225434d3f7516aa15a760026953f76cb7d",
+    "freshman_guide.html": "956ae0c7a6a5e115125ba2bf3317b92eb2c2820017c2f880bd9d8301fa5c4800",
+    "research/physical_teaching_bridge.tex": "c121bae809e0ce1478d3d7ac69f414a8d8d04502d66ef3850edab4f68b31226f",
+    "output/playwright/guide-physical-support.png": "854fac6ab5fe8350a01f5d22f12b594843c05209795ce132b0d0110b43f08b2d"
+  }
+}

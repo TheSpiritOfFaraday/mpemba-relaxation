@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-11",
+  "objective": "Address criticism: isolated example needs controlled parameter family and predictive onset mechanism",
+  "requirements": [
+    {
+      "requirement": "Explicit conditions that force the geometry",
+      "status": "verified",
+      "evidence": "Exact two-rate formulas, bath-orthogonal w(z), symbolic Lw=lambda w identity and min-max identification of its slow eigenvalue."
+    },
+    {
+      "requirement": "A controlled family rather than an isolated example or reset shift",
+      "status": "verified",
+      "evidence": "z in [-3/100,-1/250], fixed q, two varying rational rates, varying eigenvector; reproduces rational companion at upper endpoint."
+    },
+    {
+      "requirement": "Respect the original four-triplet premise throughout",
+      "status": "verified",
+      "evidence": "37 rational Bernstein sign certificates cover positive rates, strict F/G bounds and branches, geometry, eigenvalue interval and independent fast-quadratic conditions."
+    },
+    {
+      "requirement": "A predictive inequality for onset, including non-effect side",
+      "status": "verified",
+      "evidence": "Single-turn lemma proves cooling iff D0<0; family D0=U-Vz with V>0; rational log bounds locate z*=U/V strictly inside interval. Equality case and all positive cooling temperatures covered."
+    },
+    {
+      "requirement": "Finite positive-temperature witnesses",
+      "status": "verified",
+      "evidence": "Proof selects 0<beta_h<beta_c<beta_m; separate exact algebraic threshold certifies the fixed pair 1/1000 and 1/100; beta=0 used only as analytic limit."
+    },
+    {
+      "requirement": "Explain the mechanism beyond an eigenvector interpretation",
+      "status": "verified",
+      "evidence": "Rate design enforces neutral top component, spectral comparison makes it dominant, monotone exponential derivative proves unique maximum; implicit-function/Taylor argument yields linear window and quadratic amplitude onset."
+    },
+    {
+      "requirement": "Reproducible exact and independent numerical verification",
+      "status": "verified",
+      "evidence": "mechanism_certificate.py passed in normal and optimized Python; 65-digit symmetric diagonalization and differentiated-overlap comparisons passed at eight parameter values."
+    },
+    {
+      "requirement": "Deliver a complete integrated report and usable artifacts",
+      "status": "verified",
+      "evidence": "Section4.2, theorem and lemma, inline figure, exact receipt, plotting script and RUNME present; regeneration idempotent; built-in compiler and Tectonic success; 22-page PDF rendered, contact sheet and revised pages7-10 visually inspected, figure overlap corrected."
+    },
+    {
+      "requirement": "Preserve prior results and identify limits",
+      "status": "verified",
+      "evidence": "Nine earlier core certificate/data artifacts hash-match previous manifest; report limits the classification to the family/specified geometry and asymptotic ordering; no exhaustive novelty or external review claim."
+    }
+  ],
+  "results": {
+    "z_interval": [
+      "-3/100",
+      "-1/250"
+    ],
+    "onset_rounded": -0.017940111223364898,
+    "fixed_pair_threshold_rounded": -0.014800247983140107,
+    "spectral_gap_lower_bound": 30,
+    "bernstein_sign_certificates": 37
+  },
+  "outstanding_required_work": [],
+  "remaining_limits": [
+    "Restricted family and eigenvector geometry, not all four-state generators",
+    "No general finite-time transient classification",
+    "No external human peer review or exhaustive priority determination",
+    "Near-onset coefficients use fixed left-mode normalization w1=1"
+  ]
+}

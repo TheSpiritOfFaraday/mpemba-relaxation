@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-13T02:24:38.208856+00:00",
+  "guide_pages": 69,
+  "new_details": 2,
+  "new_local_links_checked": 5,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "print_review": "New pages53-57 visually inspected; lesson-marker orphan repaired and page59 re-rendered; all69 pages nonempty",
+  "artifact_sha256": {
+    "freshman_guide.html": "f43f6bdc3d4e8f30952c720016bf78a55f63c71af57fa076e2bdfd631051a53e",
+    "output/pdf/freshman_guide.pdf": "6de3bd9c9b5de33ec02e5076e4dbb5b617448e44274ab481fad4b3a4537cfaa2",
+    "output/playwright/guide-interval-review.png": "5d26c02c509589ff14e8e775d7412af0410d8e0b60c8a1f73bce0f453954289e"
+  }
+}

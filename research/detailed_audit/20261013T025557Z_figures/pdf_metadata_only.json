@@ -1,0 +1,26 @@
+[
+  {
+    "file": "output/figures/thermal_overlap.pdf",
+    "equal_after_creationdate_removed": true
+  },
+  {
+    "file": "output/figures/relaxation_crossing.pdf",
+    "equal_after_creationdate_removed": true
+  },
+  {
+    "file": "output/figures/mechanism_onset.pdf",
+    "equal_after_creationdate_removed": true
+  },
+  {
+    "file": "output/figures/quarter_limit.pdf",
+    "equal_after_creationdate_removed": true
+  },
+  {
+    "file": "output/figures/physical_finite_time.pdf",
+    "equal_after_creationdate_removed": true
+  },
+  {
+    "file": "output/figures/focused_overview.pdf",
+    "equal_after_creationdate_removed": true
+  }
+]

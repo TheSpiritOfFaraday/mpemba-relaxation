@@ -1,0 +1,77 @@
+{
+  "verified": true,
+  "bath_weights": [
+    "151/500",
+    "3/10",
+    "1/5",
+    "99/500"
+  ],
+  "reduced_conductances": [
+    "309551/302000",
+    "122619751/60702000",
+    "7551/302000",
+    "607501/300000",
+    "7501/300000",
+    "405001/200000"
+  ],
+  "downward_rates": [
+    "309551/1000000",
+    "122619751/201000000",
+    "7551/1000000",
+    "607501/1000000",
+    "7501/1000000",
+    "405001/1000000"
+  ],
+  "original_tests": [
+    {
+      "triplet": [
+        1,
+        2,
+        3
+      ],
+      "F": "-1/113250000",
+      "G": "-15100067/10117000000"
+    },
+    {
+      "triplet": [
+        1,
+        2,
+        4
+      ],
+      "F": "-30200133/15100000000",
+      "G": "-1/151000000"
+    },
+    {
+      "triplet": [
+        1,
+        3,
+        4
+      ],
+      "F": "-1621741021683/2023400000000",
+      "G": "-60400051/151000000"
+    },
+    {
+      "triplet": [
+        2,
+        3,
+        4
+      ],
+      "F": "-478800299/600000000",
+      "G": "-1200001/3000000"
+    }
+  ],
+  "trace_tests": [
+    {
+      "triplet": [
+        1,
+        2,
+        3
+      ],
+      "F": "896731145953/19028400900000000",
+      "G": "-634285530726733/424967620100000000"
+    }
+  ],
+  "trace_F_float": 4.7125933002231416e-05,
+  "construction": "k=(1+d,401/201+d,d,2+d,d,2+d), d=1/40, plus constant-downward1 generator times1/10^6",
+  "scope": "Elimination of highest state before subtracting minimal reset does not preserve all F, even for strict original failure. No assertion about the reset-subtracted trace."
+}

@@ -1,0 +1,49 @@
+{
+  "group": "higher-dimensional construction review",
+  "complete": true,
+  "source_sha256": {
+    "research/five_state_extension_certificate.py": "29f4d7b66fb5f50e73e55aa5fe4179dca3279c4d33ea231ca5db89353f54a839",
+    "research/high_dimension_amplitude_certificate.py": "23ad4a43deb1a04510b5827656b17c10ce92e164c7e2555f4745604eb36482ce",
+    "research/clone_rate_bound_certificate.py": "cb98f4226d6a21a3c4d28e46d9c651c361b4eb98099286dfe1fe66cbf7cedcda",
+    "research/five_state_large_advantage_certificate.py": "a95eae450502909285c4a48a340077ebdf71c1835c7d4a78d8cf8c5b4496d297",
+    "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540",
+    "research/quarter_limit_certificate.json": "786cfa2466be3fe5bdb555aaaefe6462a7e7a851712b82ec5b6d0a5a46addefe",
+    "research/quarter_limit_certificate.py": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492"
+  },
+  "checks": [
+    {
+      "script": "research/five_state_extension_certificate.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.834513916,
+      "log": "research/detailed_audit/20261013T020537Z_dimension/five_state_extension_certificate.log",
+      "log_sha256": "dd5347413417ebeb1f0345003338297d2aec7c7694ec19a25419942cb2c83b34"
+    },
+    {
+      "script": "research/high_dimension_amplitude_certificate.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.39821425000000055,
+      "log": "research/detailed_audit/20261013T020537Z_dimension/high_dimension_amplitude_certificate.log",
+      "log_sha256": "af05b7fc5cf797da3d6373e7f9d50e8cef361597eb7a973a53559b89b7265d7e"
+    },
+    {
+      "script": "research/clone_rate_bound_certificate.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.23796754099999973,
+      "log": "research/detailed_audit/20261013T020537Z_dimension/clone_rate_bound_certificate.log",
+      "log_sha256": "c5291966f74f4587a6841755d7d148a4507761afa007ce6ad72bfc0a512340ad"
+    },
+    {
+      "script": "research/five_state_large_advantage_certificate.py",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.111523708,
+      "log": "research/detailed_audit/20261013T020537Z_dimension/five_state_large_advantage_certificate.log",
+      "log_sha256": "4db08585927f8e29bbfb475024e0366414d152cafb2ea789b03094b91d86a701"
+    }
+  ],
+  "all_passed": true,
+  "sources_unchanged": true
+}

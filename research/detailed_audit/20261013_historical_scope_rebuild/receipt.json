@@ -1,0 +1,46 @@
+{
+  "group": "historical-scope revised document rebuild",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/build_papers.sh",
+      "command": [
+        "sh",
+        "research/build_papers.sh"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.79430475,
+      "source_sha256": "601a74496f93af186d075b20d761a271cec6d99dcb2927080355b7243c144884",
+      "log": "research/detailed_audit/20261013_historical_scope_rebuild/build.log",
+      "log_sha256": "2f27436bf2e461c3906d05670299bc45289fedeec54d7660e199a833c01e15cb"
+    }
+  ],
+  "comparisons": {
+    "research_report": {
+      "source_equal": true,
+      "page_counts": [
+        126,
+        126
+      ],
+      "page_streams_equal": true
+    },
+    "focused_appendices": {
+      "source_equal": true,
+      "page_counts": [
+        81,
+        81
+      ],
+      "page_streams_equal": true
+    },
+    "focused_paper": {
+      "source_equal": true,
+      "page_counts": [
+        10,
+        10
+      ],
+      "page_streams_equal": true
+    }
+  }
+}

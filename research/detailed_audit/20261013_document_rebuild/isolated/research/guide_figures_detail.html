@@ -1,0 +1,24 @@
+<details class="proof-route" id="figure-reading-audit"><summary>Read a figure without confusing its model, units, or evidence</summary>
+<h3>1. Name the experiment before reading the curve</h3>
+<p>Several figures appear in this project, but they do not all describe the same system. The primary counterexample and the rational companion share their energy weights but have different rates. The controlled mechanism changes a mode parameter. The quarter-limit family changes its energy separation. The Arrhenius study is a separate physical model.</p>
+<div class="table-wrap"><table><thead><tr><th>Figure</th><th>What varies?</th><th>What is measured?</th></tr></thead><tbody>
+<tr><td>Primary thermal overlap</td><td>Preparation inverse temperature</td><td>Absolute slow-mode amplitude</td></tr>
+<tr><td>Primary relaxation</td><td>Elapsed time under one fixed generator</td><td>KL distance and the hot/cold ratio</td></tr>
+<tr><td>Controlled onset</td><td>Mode component z and preparation</td><td>The location of the amplitude maximum</td></tr>
+<tr><td>Quarter-limit family</td><td>Energy separation and preparation</td><td>Amplitude advantage with finite hot temperature</td></tr>
+<tr><td>Physical-model study</td><td>Time or a common KL target</td><td>KL distance or percentage of time saved</td></tr>
+<tr><td>Focused overview, panel A</td><td>Time for the rational companion</td><td>A quadratic distance, D<sub>q</sub></td></tr>
+</tbody></table></div>
+<h3>2. Check the denominator in a percentage</h3>
+<p>If the hot amplitude is 99 and the cold amplitude is 100, the reduction relative to cold is 1%. The increase relative to hot is 100/99−1, or approximately 1.0101%. Both calculations are correct, but they answer different questions. The primary overlap enlargement uses the hot reference; the stated amplitude advantage uses the cold reference.</p>
+<p>A relative-distance ordinate 100(D<sub>h</sub>/D<sub>c</sub>−1) becomes negative when the hot preparation is closer. A time-saving ordinate 100(1−t<sub>h</sub>/t<sub>c</sub>) becomes positive when the hot preparation arrives earlier. Always read the actual formula before interpreting the sign.</p>
+<h3>3. Check the clock and distance normalization</h3>
+<p>The primary and rational examples measure time in units set by a particular transition rate. The physical figure uses t/τ, where τ is its own slow relaxation time. Equal horizontal coordinates on these plots do not mean equal seconds.</p>
+<p>The rational overview uses D<sub>q</sub> = Σ(pᵢ−πᵢ)²/qᵢ with unnormalized weights q. Standard Pearson chi-square instead divides by πᵢ = qᵢ/Q, so it equals Q·D<sub>q</sub>. The multiplier cancels in a hot/cold ratio for this fixed model, but the two raw distance values differ.</p>
+<h3>4. A shaded region needs a definition</h3>
+<p>The physical time-window shading identifies the interval covered by the separate certificate. The threshold-panel shading instead shows the lowest and highest values observed in a finite parameter sample. Connecting sampled extrema does not enclose all unsampled parameters or thresholds. The certified 5% floor comes from the interval proof, not from the shaded envelope.</p>
+<h3>5. Reproduce first, then cross-check independently</h3>
+<p>The figure audit rebuilt all five plotting programs in an isolated directory. Their CSVs and PNGs matched the saved outputs exactly; PDF differences were confined to creation dates. A second checker then used direct matrix exponentials and independently differentiated thermal sums to check the numerical data.</p>
+<p>Across all nine figure CSV files, <a href="research/check_figure_data.py">the independent checker</a> passed 6,238 comparisons. The separate 3,256-point physical parameter scan also reproduced its complete saved result. These checks establish numerical correspondence. The exact and interval certificates remain the evidence for the mathematical claims.</p>
+<p class="small">Inspect the <a href="research/detailed_audit/figure_data_checks.json">comparison errors</a>, <a href="research/detailed_audit/20261013T025557Z_figures/receipt.json">isolated reproduction receipt</a>, and <a href="research/detailed_audit/figure_interpretation_review.json">formula and caption review</a>.</p>
+</details>

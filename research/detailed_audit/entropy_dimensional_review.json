@@ -1,0 +1,113 @@
+{
+  "reviewed_utc": "2026-10-13T01:59:16.871991+00:00",
+  "groups": {
+    "contrast_chain": [
+      "Positive diagonal changes between normalized and unnormalized Helmert bases preserve tridiagonality, Metzler signs and y_k/x_k ratios.",
+      "Heating coordinates and their beta derivatives are strictly positive by the previously reviewed prefix-Gibbs calculation; this does not require irreducibility of the contrast matrix.",
+      "After shifting E1=0, integrate each difference of exponentials to obtain delta times the integral of Q(s) exp(-delta s) up to E_(k+1). Constants depending on k cancel from its logarithmic derivative.",
+      "Increasing the truncation endpoint adds strictly positive mass at s greater than all preceding s, so the integral mean strictly increases and initial logarithmic slopes decrease in k.",
+      "The exterior-square differential equation follows by differentiating each 2-by-2 minor. Tridiagonal transitions cannot cross the other occupied index; all off-diagonal compound entries are nonnegative. An exact symbolic three-coordinate check verifies the otherwise dangerous minus signs.",
+      "A diagonal shift and exponential power series make the compound semigroup nonnegative. Its entries are the ordered minors of exp(tB), including zero-coupling and t=0 cases.",
+      "Pairing columns k<l in the determinant expansion gives the stated nonnegative sum because y_k x_l-y_l x_k>=0. Positive exponential diagonal ensures evolved x and y remain strictly positive.",
+      "On physical prefix 1 through k+1 all higher unnormalized contrasts equal one and lower contrasts have zero weighted prefix mean. This establishes both the stated c_k and the exact prefix-gradient identity.",
+      "The prefix-gradient sum is prefix mass times Cov(r,Phi-prime(r)); the pairwise covariance formula has nonnegative summands for convex Phi.",
+      "Abel summation uses nonnegative successive differences of the evolved ratios and nonnegative prefix sums. The last ratio is strictly positive.",
+      "Strict convexity makes the full covariance positive unless all density ratios coincide; finite-time invertibility of exp(tM) prevents a nonequilibrium preparation from becoming equilibrium exactly.",
+      "For a finite nonsmooth convex function, subgradients are ordered, strictly ordered at distinct arguments under strict convexity. Composition with the smooth thermal curve is locally Lipschitz on a compact positive density range; the chain rule holds almost everywhere, also on level sets at kinks. Integration preserves strictness.",
+      "Schwarz 1970 Theorem 2 matches the tridiagonal/nonnegative-off-diagonal condition; its older terminology totally positive permits zero minors. The report uses only order-two nonnegativity, not strict total positivity.",
+      "The exact three-state example has physical adjacent-difference -14/27 but G=-2/9 and tridiagonal contrast dimension two. The theorem is therefore not being justified by an inapplicable physical stochastic-order assumption."
+    ],
+    "near_bath": [
+      "For either bath side use outward delta>0 and sigma times positive contrast coordinates. Heating uses exp(-delta s); cooling uses exp(+delta s) with the numerator reversed.",
+      "After extracting the leading delta, the numerator and partition logarithmic derivatives are averages in the same signed interval of width c. Their difference is bounded by c, not 2c.",
+      "Coordinate inequalities (1/delta-c)x0<=y0<=(1/delta+c)x0 have positive endpoints when z=delta c<1. The nonnegative contrast semigroup preserves both inequalities.",
+      "With weights proportional to x_i squared, ratios v_i=y_i/x_i in [a,b] satisfy E[v^2]<=(a+b)E[v]-ab. The lower bound on squared cosine is 4ab/(a+b)^2; subtracting this bound reduces exactly to a square.",
+      "The initial density interval contains one by its q-weighted mean and has endpoint ratio exp(z). The reversible backward Markov semigroup preserves that interval by averaging.",
+      "The straight line between one and the evolved density remains in the same interval. D-orthonormal Helmert columns yield the stated Hessian bounds mI<=T_s<=MI.",
+      "The gradient at equilibrium is zero because every contrast has zero weighted mean. Hessian integration contributes sigma once and outward differentiation contributes sigma again, leaving y transpose T x on either side.",
+      "The symmetric operator center-radius bound gives the cosine-minus-(M-m)/(M+m) inequality; the latter ratio equals tanh(z/2).",
+      "At z<=2/sqrt(5), sqrt(1-z^2)>=z/2 and z/2>tanh(z/2) for positive z. Thus the advertised closed upper endpoint still has strict positive derivative.",
+      "Finite-time positive coordinates are nonzero, so the derivative bound is strict even with repeated eigenvalues. The bath endpoint itself is handled by zero KL and injectivity, not the singular 1/delta expression.",
+      "Cooling additionally requires beta>0. Neither the sufficient constant nor the larger transcendental range is claimed optimal.",
+      "The arbitrary-heating sufficient condition uses preserved initial ratio bounds a,b and the evolved density condition number; the evolved interval contains one and gives the same Hessian estimate. Convergence of that condition number to one does not establish earlier-time signs."
+    ],
+    "conditional_bound": [
+      "G-only positivity provides nonnegative slow contrast coordinates after orientation and simplicity. Isolate the first two contrasts as a function f supported on the first three states.",
+      "All remaining contrasts are constant on those first three states, so they cancel from both f1-f2 and f1+f2-2f3. The extra arithmetic inequality is a separate hypothesis.",
+      "The decomposition into a constant plus u(1,-1,0)+v(1,1,-2) has u=(f1-f2)/2 and v=(f1+f2-2f3)/6, hence both nonnegative.",
+      "The two conditional Gibbs derivatives are strictly positive for beta>=0: 2at+by-(b-a)ty>0 because t<=1 and b-(b-a)t>=a. The highest conditional probability strictly decreases.",
+      "If f is nonzero, zero bath mean prevents a constant first-three vector, so its conditional mean is strictly increasing and negative before the bath. If f=0 the ratio involving f is omitted.",
+      "For j<n and finite beta>0 the first-j Gibbs mass is strictly between j/n and one; conditional mean magnitudes shrink toward the bath. Factoring the f overlap gives a ratio strictly below n/3.",
+      "Every later contrast has a strictly increasing conditional mean that vanishes at the bath. Its overlap ratio is below n/(k+1). For full support the mass equals one and strictness comes solely from the conditional mean.",
+      "All nonzero cooling components have the same negative sign, preventing cancellation. The total magnitude ratio is a convex average weighted by hot magnitudes, proving the strict n/3 bound.",
+      "The bound on each finite pair gives only a non-strict bound on the supremum. Failure of the proposed arithmetic implication alone would not prove a thermal-amplitude violation."
+    ],
+    "rare_tail": [
+      "Weighted orthogonal projection onto tail-constant functions gives the displayed averaged downward and summed upward rates, conserving probability and detailed balance. This is compression, not Schur elimination.",
+      "The given tail-constant slow eigenfunction belongs to the subspace and remains an eigenfunction of the compressed operator even when the full dynamics do not preserve that subspace.",
+      "On the mean-zero compressed subspace Rayleigh quotients are at most the full slow eigenvalue. Equality can occur only in its one-dimensional full eigenspace, establishing the compressed slow ordering and simplicity.",
+      "For each low pair, substitution into G gives the tail-weighted average of original G. Substitution into F adds the displayed correction with coefficients q_k(Q_T-q_k)/(2Q_T q_j). Symbolic two-tail checks independently verify all three low pairs.",
+      "Every correction coefficient is nonnegative and all original G<=0, so compressed F and G remain nonpositive.",
+      "The condition Q_T<q3 is essential to obtain four strictly ordered compressed weights. It is not implied merely by individually small tail weights.",
+      "The first two contrast coefficients are unchanged. The third compressed coefficient is -(Q_T/Q3) times the common tail value; the oriented last contrast makes that tail value nonpositive, fixing consistent orientation.",
+      "The four-state arithmetic theorem now applies and the conditional n/3 theorem finishes the claim. No lumpability of arbitrary states or aggregate weight outside the stated condition is inferred."
+    ],
+    "graph_lp": [
+      "For fixed q and positive x, eta is positive diagonal. The displayed off-diagonal and diagonal graph formulas give Bx=0 and eta B symmetric.",
+      "Expanding the quadratic form edge by edge yields ell_ij x_i x_j (y_i/x_i-y_j/x_j)^2. For nonnegative couplings the kernel consists of constants on each connected component in the y/x coordinates.",
+      "Positive all-pair couplings imply a simple zero eigenvalue. X inverse B X is a reversible backward generator with weights eta_i x_i squared, confirming signs and similarity.",
+      "L0=H B eta inverse H transpose D kills one and maps H to H B. Symmetry of eta B implies symmetry of B eta inverse and weighted self-adjointness of L0; transposing gives the column convention and detailed balance.",
+      "L0 may have signed off-diagonals. Since every bath weight is positive, a sufficiently large reset makes every physical rate positive while shifting every nonstationary eigenvalue by the same negative rho.",
+      "Original F and G are linear in the physical rates and invariant under reset addition. Hence positive graph/test margin suffices for a strictly admissible physical realization of the exact mode Hx.",
+      "Conversely strict G makes every off-diagonal contrast entry positive by the reviewed Helmert identity. Subtracting the simple slow eigenvalue from the contrast diagonal gives a kernel x and the exact graph representation.",
+      "Positive time scaling normalizes the finite positive sum of couplings to one; a finite minimum of strict coupling and test margins is positive. The LP objective is bounded above by one divided by the number of edges.",
+      "The strict LP is about strict tests at the prescribed positive mode. It is not an equivalence for every fixed weak-boundary mode.",
+      "For a global strict arithmetic violation under weak tests, adding a sufficiently small constant-downward generator strictifies every test while preserving the strict violation and simple eigenvalue by continuity.",
+      "Strict contrast positivity gives strictly positive Perron coordinates. Direct expansion of w1+w2-2w3 yields the displayed x2 threshold; later coordinates cancel.",
+      "Rational approximation is applied to the open construction variables q,x,ell in their normalized affine domains, then the mode and generator are reconstructed exactly. It does not assume arbitrary eigenvectors can be rounded while preserving eigenvector equations.",
+      "All denominators are positive on the domain, so clearing them gives polynomial inequalities and a finite existential real formula at each fixed n. No practical quantifier-elimination bound or resolution of the conjecture follows.",
+      "For fixed weak data, nonnegative couplings plus positive total coupling across every nontrivial cut encode graph connectivity. These are finite linear constraints; they replace the unnecessarily strong all-edges-positive requirement."
+    ],
+    "supporting_obstructions": [
+      "Thermal-ratio obstruction: the exact F/G table and strictifying constant-downward terms were replayed. The difference d4-d3 stays one because both receive the same additive change.",
+      "At large heating beta the kth contrast first deviates from its ground-state limit at energy E_(k+1); hence derivative ratios relative to the first tend to zero for k>1.",
+      "The evolved-ratio limiting function has zero off-diagonal numerators at t=0, so denominator derivatives do not contribute there. The exact positive initial derivative is q1 Q3/sqrt(eta1).",
+      "Choose a fixed sufficiently small positive time first, then a sufficiently large finite beta. This establishes reachable contrast-ratio failure, not KL reversal.",
+      "Reset-trace obstruction was reconstructed with independent direct block-Schur inversion rather than the same iterative reduced-conductance update. Conservation, reversibility, original strict tests, minimum-reset subtraction and positive traced F agree exactly.",
+      "The equality between the physical block trace and the Helmert zero-energy Schur matrix was checked. It only refutes that proof route and does not determine the actual slow-eigenvalue arithmetic.",
+      "The fixed-seed entropy sampler covers 240 generators per family, dimensions 3 through 8. Direct expm and finite-difference spot checks compare separate computational routes.",
+      "Numerical near-bath KL samples: 20160 accepted with no negative derivative. Tridiagonal samples: 10080 per divergence, with 320 tiny quartic cases excluded; accepted samples have no negative derivatives. General-G ratio failures are expected and do not refute the near-bath result.",
+      "The sampler previously recorded contradictions without failing its exit status. Added explicit passed/failures fields and nonzero exit on negative derivative counts or tridiagonal ratio-order failures; numerical exclusions and tolerance scope remain explicit."
+    ]
+  },
+  "step_count": 66,
+  "sources": {
+    "research_report.tex": "a4d2f296bdd7301a52688b475ba7cdd2295b5a99571b2381237312b398bf0187",
+    "focused_appendices.tex": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "research/tridiagonal_contrast_entropy.tex": "398b0b7af6b4130f579d63b867e9be32c4ef13ed4fb2f472c7fd238887ff5c5c",
+    "research/near_bath_entropy_window.tex": "514becca30204e0ed52b660f233b4db89abfdc182ff0c748c44937210b5f55a7",
+    "research/high_dimension_bound_reduction.tex": "562fcdf2b68981f64bb83a412b3b1d6641f034686671c033346885c553fc65df",
+    "research/general_n_arithmetic_lp.tex": "f99487d3ec1c52c2c3157f5de637b696b7849a8fbd4e3fb820e05377193ddc09",
+    "research/check_entropy_reductions.py": "9299f13d5d3c80843d8531727a7d58eb2e09a6b060d00306cfac59522a63323a",
+    "research/finite_time_entropy_independent_audit.py": "d5d20c1456b2c67262d37c08e9e7f5310ea9d035efb53e0946ac6ac8de7edbf2",
+    "research/general_n_arithmetic_search.py": "9d49665252f2070a2fba651dc6ad27b3551011e86750a348951f586d4055497d",
+    "research/thermal_ratio_obstruction_certificate.py": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533",
+    "research/reset_trace_obstruction.py": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c",
+    "research/reset_trace_independent_audit.py": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917",
+    "research/test_entropy_audit_verdict.py": "494b1bdd371ea0486bccf753cbdabd13cd808c73952d29185015fe8aa76c6a54",
+    "research/guide_entropy_detail.html": "a2e7353476cd7d6578ad093ca490098907300b89074ba8195ba0737c18c2d07b"
+  },
+  "primary_source_check": {
+    "url": "https://msp.org/pjm/1970/32-1/pjm-v32-n1-p20-p.pdf",
+    "finding": "Schwarz 1970 Theorem 2: nonnegative minors of the fundamental matrix for tridiagonal coefficients with nonnegative off-diagonals; strict irreducibility not required."
+  },
+  "scope": "Analytic and supporting implementation review of five numbered results and stated obstructions. Numerical sampling is not universal proof; remaining dimensional constructions and physical interval internals stay open.",
+  "evidence_sha256": {
+    "research/detailed_audit/entropy_reduction_identities.json": "def16d3cf3e65c5b500f1e69db8e8e5c225d2dd152eede0d260a682598b2c5d6",
+    "research/detailed_audit/entropy_audit_verdict_regressions.json": "93b56cbadb1dccd9f319a45fca20def16d08efee845fcde87232cd3a73775f43",
+    "research/detailed_audit/20261013T015615Z_entropy/receipt.json": "f91e7d247ca4f09d89f70e383bd5b08b524c423f195fff0f0d04c6b60ff976d9",
+    "research/detailed_audit/20261013T015719Z_entropy_verdict/receipt.json": "69adb7ebd96c47c4d5f24e6eb9a8b344935f6f85afb4819862508298a01829bd",
+    "research/finite_time_entropy_independent_audit.json": "4725e07a872ce864c60c2f02c6c2620117d2d0ccf8e7096bfcd8a2fcbcead388",
+    "research/reset_trace_independent_audit.json": "f1eed0f1b65e5e5cc81ba75ccb49b4f3c3613f0e6e8107ff5e4fdfc38b44e6d4"
+  }
+}

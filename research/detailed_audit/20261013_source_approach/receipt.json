@@ -1,0 +1,45 @@
+{
+  "group": "physical source correspondence and approach-rate derivation",
+  "checked_utc": "2026-10-13T02:52:04.793538+00:00",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/check_quarter_approach.py",
+      "status": "passed",
+      "log": "research/detailed_audit/quarter_approach_checks.json",
+      "evidence_type": "current structured checker receipt",
+      "command": [
+        "python3",
+        "research/check_quarter_approach.py"
+      ],
+      "source_sha256": "53977a6d01cd764aecd9c65ae95f028466c441da7c025d271ccbfe8db380e399",
+      "receipt_sha256": "4427c94ab0abc32e832eb1b1fd155077adba18b78157e3be40aca50099b1f9b1"
+    },
+    {
+      "script": "research/check_publication_consistency.py",
+      "status": "passed",
+      "log": "research/detailed_audit/publication_consistency.json",
+      "evidence_type": "current structured checker receipt",
+      "command": [
+        "python3",
+        "research/check_publication_consistency.py"
+      ],
+      "source_sha256": "1100bf4cc121a71b8c09f0cc9cd093721a525dff95fec3e03c1fc4ce8c5a82f5",
+      "receipt_sha256": "8c07b34ec08619dd126977325a30f044d4ecb1fe5a8f19968a84fe1402972978"
+    },
+    {
+      "script": "research/check_sharpness_correspondence.py",
+      "status": "passed",
+      "log": "research/detailed_audit/sharpness_correspondence.json",
+      "evidence_type": "current structured checker receipt",
+      "command": [
+        "python3",
+        "research/check_sharpness_correspondence.py"
+      ],
+      "source_sha256": "b3e39009b7ff3ed176a2a7ce00c71e77d7dd17e3733360ae72daa7f1fca5fe77",
+      "receipt_sha256": "9140bb0570cfbdd37097d099c3c2b71871cf8b265c8f232a66da017413a1513d"
+    }
+  ],
+  "scope": "Three bounded checkers passed; source full-text and analytic reviews are recorded separately. Overall project audit remains incomplete."
+}

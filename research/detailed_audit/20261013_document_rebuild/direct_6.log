@@ -1,0 +1,22 @@
+completed 10 elapsed 7.93
+completed 20 elapsed 15.39
+completed 30 elapsed 22.23
+completed 40 elapsed 29.75
+completed 50 elapsed 36.97
+completed 60 elapsed 37.3
+completed 70 elapsed 37.63
+completed 80 elapsed 37.96
+completed 90 elapsed 38.3
+completed 100 elapsed 38.64
+{
+  "status": "finished",
+  "seed": 202610112133,
+  "precision_digits": 70,
+  "samples_completed": 100,
+  "verified": true,
+  "elapsed_seconds": 38.63642120361328,
+  "disagreements": 0,
+  "unresolved_comparisons": 0,
+  "cooling_cases": 24,
+  "heating_cases": 16
+}

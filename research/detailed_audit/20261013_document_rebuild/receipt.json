@@ -1,0 +1,116 @@
+{
+  "group": "isolated full document rebuild",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/build_papers.sh",
+      "command": [
+        "sh",
+        "research/build_papers.sh"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 10.057239041,
+      "source_sha256": "601a74496f93af186d075b20d761a271cec6d99dcb2927080355b7243c144884",
+      "log": "research/detailed_audit/20261013_document_rebuild/build.log",
+      "log_sha256": "2f27436bf2e461c3906d05670299bc45289fedeec54d7660e199a833c01e15cb"
+    },
+    {
+      "script": "research/physics_plots.py",
+      "command": [
+        "python3",
+        "research/physics_plots.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.074928292,
+      "source_sha256": "a1e9a48acca3822f83ed466b6d19ab01cb96d237dc19b8c15d899d1ee5353aab",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_0.log",
+      "log_sha256": "1c27d6cebf1821f45edecd9415eabea5b731059cfe1600b14403140277970dd8"
+    },
+    {
+      "script": "research/mechanism_plots.py",
+      "command": [
+        "python3",
+        "research/mechanism_plots.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.5662335830000003,
+      "source_sha256": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_1.log",
+      "log_sha256": "a0d6ed0473c3dc6da04bf8b605053ce5d8bf1661603d04497ea1597b946f099f"
+    },
+    {
+      "script": "research/quarter_limit_plots.py",
+      "command": [
+        "python3",
+        "research/quarter_limit_plots.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.938572791,
+      "source_sha256": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_2.log",
+      "log_sha256": "469746eccca7539e7a459b5c9ce2964ab787301a079b41f2b7b5ad76f8c536c6"
+    },
+    {
+      "script": "research/physical_rate_plots.py",
+      "command": [
+        "python3",
+        "research/physical_rate_plots.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.9382582500000005,
+      "source_sha256": "d97ffa47eb580d1a20b3e5a54eb5fe5a67b95454cc9058b8e78d91ad9f6740a9",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_3.log",
+      "log_sha256": "f2149ec91cef612a929ddc983a06e0ac5c53902b36ab6de129d865cd830a9093"
+    },
+    {
+      "script": "research/focused_overview.py",
+      "command": [
+        "python3",
+        "research/focused_overview.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.8082013750000003,
+      "source_sha256": "1a6c47376f977fd5e6e3d270b69de13aa3198db7df329fc1dad7b69dcbede4d1",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_4.log",
+      "log_sha256": "d63c5b7bc14f5431d27e6de79d06cb888e63a59a646d08bf4335ec8e1a9f77b3"
+    },
+    {
+      "script": "research/revise_report.py",
+      "command": [
+        "python3",
+        "research/revise_report.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.03700849999999978,
+      "source_sha256": "836a3fec6c38747b72ba60a3ae20d3f79b57e3b683e1377906350df06d8e1751",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_5.log",
+      "log_sha256": "f741df2ec7a465c67276a8ec122cf6212afd09bb6a6e7f0be507210822bc0426"
+    },
+    {
+      "script": "research/exact_classifier_cross_audit.py",
+      "command": [
+        "python3",
+        "research/exact_classifier_cross_audit.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 39.029838166,
+      "source_sha256": "300a636d1f0293dde0e27a539d584b07b60b3d381886af22267c71a60cf6fed3",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_6.log",
+      "log_sha256": "8211361e20fe6755efe8a14cbbc0887037d30fa10f5b7f3cd02299b642ea0fe4"
+    }
+  ],
+  "source_byte_identical": {
+    "research_report.tex": true,
+    "focused_appendices.tex": true,
+    "focused_paper.tex": true
+  }
+}

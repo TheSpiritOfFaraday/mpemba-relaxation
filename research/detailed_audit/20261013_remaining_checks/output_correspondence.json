@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "file": "research/exact_mode_realizability.json",
+      "all_non_timing_fields_identical": true
+    },
+    {
+      "file": "research/classifier_audit.json",
+      "all_non_timing_fields_identical": true
+    },
+    {
+      "file": "research/ordered_conductance_numeric_audit.json",
+      "all_non_timing_fields_identical": true
+    },
+    {
+      "file": "research/transient_heating_final_high_precision.json",
+      "all_non_timing_fields_identical": true
+    },
+    {
+      "file": "research/temperature_reduction_independent_audit.json",
+      "all_non_timing_fields_identical": true
+    }
+  ],
+  "classifier_errors": [],
+  "classifier_counts": {
+    "random": 20000,
+    "strict_results": 20000,
+    "boundary_or_uncertain": 0,
+    "grid_missed_classified_effect": 0
+  },
+  "exact_polynomial_side_checks": 600,
+  "wronskian_checks": 40,
+  "commensurate_result": {
+    "verified": true,
+    "method": "ordered algebraic field and exact Sturm root counts",
+    "base": "1/2",
+    "energy_exponents": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "downward_rates": [
+      "76301/143250",
+      "38308/71625",
+      "38128/71625",
+      "18704/71625",
+      "19364/71625",
+      "9262/71625"
+    ],
+    "slow_eigenvalue": "-99/100",
+    "slow_multiplicity": 1,
+    "nonzero_characteristic_polynomial": "lambda**3 + 299*lambda**2/100 + 149*lambda/50 + 99/100",
+    "ordinary_cooling": true,
+    "ordinary_heating": true,
+    "strong_cooling_count": 1,
+    "strong_heating_count": 1,
+    "cooling_sign_changing_stationary_points": 1,
+    "heating_sign_changing_stationary_points": 1,
+    "thermal_numerator": "-297*x**3/29843750 + 891*x**2/59687500 - 3267*x/477500000 + 891/955000000",
+    "partition_power": 1,
+    "derivative_numerator": "-297*x**4/11937500 - 297*x**3/47750000 - 2079*x**2/191000000 + 2673*x/95500000 - 297/38200000",
+    "algebraic_sign_refinements": 0,
+    "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+  },
+  "rational_equality_result": {
+    "ordinary_cooling": false,
+    "endpoint_sign": 0
+  },
+  "scope": "Saved-output correspondence plus explicit check of successful result contents; mathematical proof reviews remain separate."
+}

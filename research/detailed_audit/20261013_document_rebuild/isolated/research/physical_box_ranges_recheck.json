@@ -1,0 +1,21 @@
+{
+  "scope": "entire independent +/-5% parameter box",
+  "energy_span_upper": 3.8602031085913384,
+  "min_adjacent_gap_lower": 0.1105351118367327,
+  "barrier_excess_range": [
+    2.0083607241871397,
+    5.922084445418439
+  ],
+  "rate_ratio_upper": 993.7522347006822,
+  "preparation_ranges": [
+    [
+      3.7259373528566972,
+      4.012878126841613
+    ],
+    [
+      9.048480903744657,
+      9.89568941992831
+    ]
+  ],
+  "performance_certified": false
+}

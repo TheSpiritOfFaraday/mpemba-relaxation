@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-11",
+  "objective": "revise to address 3",
+  "requirements": [
+    {
+      "requirement": "Broader primary-source novelty assessment beyond OHI",
+      "status": "verified",
+      "evidence": "Section 4.5 and novelty_search_audit.json document Fill-Kahn Proposition 3.2/Corollary 3.3/eq3.2, Baake-Sumner Fact3.1/Proposition3.11/section2.1, Vu-Hayakawa Lorenz characterization and Result4; local full-text copies inspected."
+    },
+    {
+      "requirement": "Separate established tools and applications from central contribution",
+      "status": "verified",
+      "evidence": "Abstract, section4 heading, theorem/corollary titles and contribution classification explicitly center counterexample and disclaim independent novelty for supporting applications."
+    },
+    {
+      "requirement": "Assess convex-divergence corollary with substantive mathematical comparison",
+      "status": "verified",
+      "evidence": "Section4.5 derives common-knot Lorenz ordering for cooling/heating from stochastic and density-ratio order; retains direct subgradient proof."
+    },
+    {
+      "requirement": "Assess rate-based sufficient conditions and reset argument",
+      "status": "verified",
+      "evidence": "Report maps T inverse L T to K, identifies equal-input reset precedent; labels all-lower-kappa, gap-law and added-rate inequalities applications with priority unestablished."
+    },
+    {
+      "requirement": "Bound search and priority claims honestly",
+      "status": "verified",
+      "evidence": "Report explicitly distinguishes failure to locate an identical theorem from proof of novelty; audit lists source versions, scopes and limitations."
+    },
+    {
+      "requirement": "Deliver regenerated usable report and reproducible build",
+      "status": "verified",
+      "evidence": "Built-in LaTeX compiler success; native Tectonic export success; 18 rendered pages reviewed as contact sheet and new pages10-12 inspected individually; no overfull boxes or unresolved-reference warnings; regeneration idempotent."
+    },
+    {
+      "requirement": "Preserve established mathematical certificates",
+      "status": "verified",
+      "evidence": "SHA256 comparisons against previous manifest confirm nine primary/companion/finite-time checker and data artifacts unchanged. No new empirical computation is claimed."
+    }
+  ],
+  "outstanding_required_work": [],
+  "limitations": [
+    "Bounded novelty review does not guarantee publication priority",
+    "No external human referee review obtained"
+  ],
+  "files": [
+    "research_report.tex",
+    "output/pdf/research_report.pdf",
+    "research/novelty_assessment.tex",
+    "research/novelty_search_audit.json",
+    "research/monotonicity_literature_comparison.md",
+    "RUNME.txt"
+  ]
+}

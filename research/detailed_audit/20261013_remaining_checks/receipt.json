@@ -1,0 +1,304 @@
+{
+  "group": "remaining advertised verification commands",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/check_freshman_walkthrough.py",
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "research/check_freshman_walkthrough.py"
+      ],
+      "status": "setup failure; corrected retry passed",
+      "exit_code": 1,
+      "seconds": 0.05886616699999997,
+      "source_sha256": "3b98a3ef0626fb63338cb62757ebff02522de419429f16ad3177135f934d5ca8",
+      "log": "research/detailed_audit/20261013_remaining_checks/0_check_freshman_walkthrough.log",
+      "log_sha256": "1a0beedff40e33480c770c804161f2af4d584b602b8113e94aceb40ac74c686e",
+      "superseded_by": "followup_0.log after isolated fixture setup correction"
+    },
+    {
+      "script": "research/test_freshman_walkthrough.py",
+      "command": [
+        "python3",
+        "research/test_freshman_walkthrough.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.30475883400000003,
+      "source_sha256": "bc2a25aee16e56e6d870031ac7d53fb792fb9b482a24372ad9a27fd15bf8dc8d",
+      "log": "research/detailed_audit/20261013_remaining_checks/1_test_freshman_walkthrough.log",
+      "log_sha256": "41921f27de24c788cad400216b7018c46eedc6a26ee17855baf73fa51f18d44d"
+    },
+    {
+      "script": "research/exact_mode_realizability.py",
+      "command": [
+        "python3",
+        "research/exact_mode_realizability.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.20238129100000002,
+      "source_sha256": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8",
+      "log": "research/detailed_audit/20261013_remaining_checks/2_exact_mode_realizability.log",
+      "log_sha256": "308e28a00f0e385c1d0b0cdbf87e2a410d57cabca3deb6228cac8d303a76c9d3"
+    },
+    {
+      "script": "research/classifier_audit.py",
+      "command": [
+        "python3",
+        "research/classifier_audit.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 3.4699355,
+      "source_sha256": "2c55f4831fa1aa0f22cc4790e8f56e215d37d187654bbcd45fc61dcdcad92069",
+      "log": "research/detailed_audit/20261013_remaining_checks/3_classifier_audit.log",
+      "log_sha256": "fe4a8fcca0565257c4b101bee94f09f46263383aa27104f0e01daeb1e474c42a"
+    },
+    {
+      "script": "research/ordered_conductance_numeric_audit.py",
+      "command": [
+        "python3",
+        "research/ordered_conductance_numeric_audit.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.34281766700000027,
+      "source_sha256": "2965415ac96847b5ad588d78d00882c64a96259c855d870b1a5de4a0e2f516c5",
+      "log": "research/detailed_audit/20261013_remaining_checks/4_ordered_conductance_numeric_audit.log",
+      "log_sha256": "c65ba49acfc39d745d6fbf226eaf535065eef970a0715239dcc9f32db06c396b"
+    },
+    {
+      "script": "research/exact_commensurate_classifier.py",
+      "command": [
+        "python3",
+        "research/exact_commensurate_classifier.py",
+        "research/commensurate_example.json"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.18347275000000085,
+      "source_sha256": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+      "log": "research/detailed_audit/20261013_remaining_checks/5_exact_commensurate_classifier.log",
+      "log_sha256": "1b1a4ad6ac267b5435401d3b8791486f27c25192f0499bdf50f7bcdc9391d5b2"
+    },
+    {
+      "script": "research/exact_rational_triplet_classifier.py",
+      "command": [
+        "python3",
+        "research/exact_rational_triplet_classifier.py",
+        "research/rational_triplet_compact_equality.json"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.17614258299999985,
+      "source_sha256": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+      "log": "research/detailed_audit/20261013_remaining_checks/6_exact_rational_triplet_classifier.log",
+      "log_sha256": "4398559bb4730cd9cf7a05d6ac6d04a1810338464a230073af88427fafc9793a"
+    },
+    {
+      "script": "research/check_transient_heating_candidate.py",
+      "command": [
+        "python3",
+        "research/check_transient_heating_candidate.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.0345912910000008,
+      "source_sha256": "f41007c8416c5dc6e2f9c6f9bf6757db6d4b5a4ec8c306f29b1ce04da3be3c67",
+      "log": "research/detailed_audit/20261013_remaining_checks/7_check_transient_heating_candidate.log",
+      "log_sha256": "95e568eed1909788277cbfc79cc513a7a9db5b9ef67c9b603e7a4183fc3f8d34"
+    },
+    {
+      "script": "research/test_polynomial_reference.py",
+      "command": [
+        "python3",
+        "research/test_polynomial_reference.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.44315995899999994,
+      "source_sha256": "30ac65f98873feb5327e95c533d7eaa71c1c7f0f489eea2d422ddbe07e0aeac4",
+      "log": "research/detailed_audit/20261013_remaining_checks/8_test_polynomial_reference.log",
+      "log_sha256": "6d3d3339144c85846a41d603f13a29220ebab8ae028539b105966031972ec5be"
+    },
+    {
+      "script": "research/test_entropy_audit_verdict.py",
+      "command": [
+        "python3",
+        "research/test_entropy_audit_verdict.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.02193912500000028,
+      "source_sha256": "494b1bdd371ea0486bccf753cbdabd13cd808c73952d29185015fe8aa76c6a54",
+      "log": "research/detailed_audit/20261013_remaining_checks/9_test_entropy_audit_verdict.log",
+      "log_sha256": "93b56cbadb1dccd9f319a45fca20def16d08efee845fcde87232cd3a73775f43"
+    },
+    {
+      "script": "research/test_robust_runner_inputs.py",
+      "command": [
+        "python3",
+        "research/test_robust_runner_inputs.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.028435874999999555,
+      "source_sha256": "01ba5b6037e03db7937d59ac28499088cdb0491e8808e584984e0e068fdcbac8",
+      "log": "research/detailed_audit/20261013_remaining_checks/10_test_robust_runner_inputs.log",
+      "log_sha256": "2f97d705adb851646d7aed5daec44ce0292b805751d45ff363016a91ae0eb453"
+    },
+    {
+      "script": "research/check_freshman_walkthrough.py",
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "research/check_freshman_walkthrough.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.057528209000000004,
+      "source_sha256": "3b98a3ef0626fb63338cb62757ebff02522de419429f16ad3177135f934d5ca8",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_0.log",
+      "log_sha256": "feeaec897ee68723862ec154267b336c6a3b660ee1beec8ac4c4c060bba48ba3"
+    },
+    {
+      "script": "research/standalone_primary_check.py",
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "research/standalone_primary_check.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.035466042,
+      "source_sha256": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_1.log",
+      "log_sha256": "8d2a712ab7816dbea845c2e469ad5222c193d8f8b68d27fc246b1094dbcc7bb3"
+    },
+    {
+      "script": "research/test_standalone_primary_check.py",
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "research/test_standalone_primary_check.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.113452833,
+      "source_sha256": "407753f2eea005d84bb12fdb75701bf15596638e6564f74ad084ed33c6c6068b",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_2.log",
+      "log_sha256": "bfb50fc4a31f73a7b34a058b6de93f57897fbdc0c08d96951418a9c0e65d87aa"
+    },
+    {
+      "script": "research/check_temperature_reduction.cpp",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "research/check_temperature_reduction.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "tmp/check_temperature_reduction"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.991591541,
+      "source_sha256": "e144f8851c9a4ad2e2f72949d2417f05b79f64ddcf37900459f1bcb522bff697",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "research/check_temperature_reduction.py",
+      "command": [
+        "python3",
+        "research/check_temperature_reduction.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 52.760424667,
+      "source_sha256": "5dfe98b5337e8294965d7474cfac8246f8aef1030ab3fb887dd0dfbe1c44c1eb",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_4.log",
+      "log_sha256": "995395e7fb5de761b07a942785cc971ba4fa044a735329f78531cd9ebad330dd"
+    },
+    {
+      "script": "research/check_threshold_constraint_logic.cpp",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "research/check_threshold_constraint_logic.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "tmp/check_threshold_constraint_logic"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.6987404580000032,
+      "source_sha256": "83b73d7562dfa1c3f15d33ef4d62212ab2e087cc9b95155e8ec13bd0b18ab862",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_5.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "./tmp/check_threshold_constraint_logic",
+      "command": [
+        "./tmp/check_threshold_constraint_logic"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.23770929199999813,
+      "source_sha256": "867fe96b116e0ccd35aa2d08fb9865c81c4ecfa9949787dd9cd6ed8259c5b777",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_6.log",
+      "log_sha256": "119005f86f5c50e22d82be938e6d194bb985883d7d49994c549e62b051423214"
+    },
+    {
+      "script": "research/check_interval_primitives.cpp",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "research/check_interval_primitives.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "tmp/check_interval_primitives"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.6786802499999993,
+      "source_sha256": "e1d39d09b76a0a4b4ff85d817638126aadd4e8a8581a5d664674e88d198daddb",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_7.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "./tmp/check_interval_primitives",
+      "command": [
+        "./tmp/check_interval_primitives"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.07217129200000016,
+      "source_sha256": "51c4769da7a549868907bcdd4a6ef27e04b726c1cb51b3bf7031b3817a5ddbd4",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_8.log",
+      "log_sha256": "77a24e3d8a1a24fb0ef199c009d0a21433ca9e61d6fd14c3f85b16bf88bea521"
+    }
+  ],
+  "setup_correction": "Initial isolated freshman check omitted focused_paper.tex, which is hashed as a provenance dependency. Original failure retained; missing file supplied and command retried."
+}

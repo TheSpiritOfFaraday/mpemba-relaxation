@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-13T03:10:23.802608+00:00",
+  "pages": {
+    "research_report": 126,
+    "focused_appendices": 81,
+    "freshman_guide": 83
+  },
+  "all_pages_nonempty": true,
+  "all_68_statement_reviews_preserved": true,
+  "local_links_resolve": true,
+  "unique_html_ids": true,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "mobile_document_width": 390,
+  "visual_review": [
+    "guide pages 69 and 70",
+    "six standalone figures contact sheet",
+    "desktop and mobile figure lesson"
+  ],
+  "screenshot": "output/playwright/guide-figure-review.png",
+  "independent_figure_comparisons": 6238,
+  "physical_sample_points_reproduced": 3256,
+  "course_checks": 64,
+  "sha256": {
+    "research_report.tex": "f7069ff4e20f4b1e9fdabec7071eba1c41ba0b075c51faa8333e428d2e63b1ec",
+    "focused_appendices.tex": "4c615ff3c5fd252b93a8c82fc22e82798ffb4585d4652cec7e2249cb8dbbf961",
+    "freshman_guide.html": "57a7d9b913f78115589a72a73af8392e66bb570d920027c07d3caafac90b508c",
+    "output/pdf/research_report.pdf": "4c3c51860abfe9c0fb5993bb1e1fddfb100813355ccd8c530195b74d982998f1",
+    "output/pdf/focused_appendices.pdf": "16c7718a664ba7aed684e58fe345341acc176b26e00d3f25a9470d059f666699",
+    "output/pdf/freshman_guide.pdf": "591f612020ec471b6f5174718d3c555e74983813eb9acebd44abcc477c09fcc5"
+  }
+}

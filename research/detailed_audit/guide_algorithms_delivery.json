@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-13T01:53:37.658241+00:00",
+  "report_pages": 117,
+  "guide_pages": 55,
+  "new_details": 6,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "print_pages_visually_reviewed": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "artifacts": {
+    "freshman_guide.html": "c2152d6c6f89106f5687f6c1674b772bbb6cbca953288f4400b9bb9453338627",
+    "output/pdf/freshman_guide.pdf": "1f54d7bbffdc37a92ecf7271ff30e6237321ebf3a4846300438380a50d3f876e",
+    "output/pdf/research_report.pdf": "bdf2a52b944f945076dc06da7fdb0d05fdb5fbc5277c68890f3dbeae81f238a1"
+  }
+}

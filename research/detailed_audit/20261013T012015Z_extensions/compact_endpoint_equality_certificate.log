@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "base": "3/4",
+  "energy_exponents": [
+    0,
+    1,
+    4,
+    40
+  ],
+  "fixture_bytes": 3215,
+  "checks": [
+    "commensurate rational bath weights",
+    "zero bath mean",
+    "exact zero uniform energy covariance",
+    "exact left eigenpair",
+    "slow multiplicity one",
+    "all full original triplet failures",
+    "classifier recognizes exact prime-log cancellation"
+  ],
+  "classification": "no ordinary cooling; zero endpoint derivative; strict monotonicity for finite positive beta by proved theorem"
+}

@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "exact_checks": [
+    "weighted Helmert normalization",
+    "first Schur cross factor is nonnegative by G",
+    "eigenvalue-free Schur expression factorization",
+    "Schur quadratic at candidate ratio",
+    "face a14=0 positivity decomposition",
+    "face a12=0 positivity decomposition",
+    "face a13=0 numerator identity",
+    "face a13=0 coefficient controlled by F124",
+    "face a13=0 total decomposition",
+    "J nonnegative whenever c<=e",
+    "reset invariance F123",
+    "reset invariance F124",
+    "reset invariance G123",
+    "reset invariance G124",
+    "reset invariance G134",
+    "reset invariance G234",
+    "reset shift of contrast generator",
+    "conditional first contrast derivative",
+    "conditional derivative positive decomposition"
+  ],
+  "elapsed_seconds": 2.085623025894165,
+  "assumptions": "p>q>r>h>0; shifted rates nonnegative; all G<=0; F123,F124<=0; at least one of a,b,c=0",
+  "scope": "Exact symbolic identities and manifest-sign decompositions; spectral Schur arguments and sharpness are proved in full_triplet_amplitude_bound.tex",
+  "additional_F_needed": [
+    "F123",
+    "F124"
+  ],
+  "amplitude_ratio_bound": "strictly less than 4/3",
+  "amplitude_advantage_supremum": "1/4"
+}

@@ -1,0 +1,32 @@
+Scope boundary for the one-fast-mode theorem
+==========================================
+
+A general repeated slow eigenspace in five states need not force stochastic
+monotonicity, even under every original F/G failure. This is not a claimed
+Mpemba counterexample.
+
+At beta_b=1 take q=(24,12,4,2,1)/43 and E_i=-log(q_i). Let
+r=(3/5,3/10,1/10), z=(1,2,-12), D3=diag(r), and
+J3=r 1^T-I-D3 z z^T/(z^T D3 z).
+Embed J3 on states1,2,3 with all other entries zero, obtaining J. Set
+M=q 1^T-I+J.
+
+J3 is a strictly positive-rate three-state reversible generator with
+spectrum0,-1,-2; its single F test is0 and G test is-2/9. Since q restricted
+to the first three states is proportional to r, J is reversible at q.
+The full reset commutes with J and gives spectrum0,-1,-1,-2,-3.
+All full rates are strictly positive. Original triplets inside the block
+retain their F/G values. For a triplet with the first two states in the
+block and third outside, the added F is -a_ij(J3)(1-qj/qi)<=0 and G=0.
+All remaining triplets are zero. Thus all ten original tests fail.
+
+However the adjacent-difference generator entry K21=a12-a13=-14/27<0.
+Hence M is not stochastically monotone. This shows why the all-time
+stochastic-order conclusion of the one-fast theorem must not be extended
+merely from slow multiplicity2 when n=5. The construction remains reset
+plus a contiguous three-state block, so it does not rule out a broader
+contiguous-block classification.
+
+Exact matrix, test table, conservation, detailed balance, spectrum,
+positivity and negative K entry were executed and checked by
+five_state_degenerate_nonmonotone.py; its JSON is the durable certificate.

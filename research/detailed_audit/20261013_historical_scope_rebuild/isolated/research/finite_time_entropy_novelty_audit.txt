@@ -1,0 +1,102 @@
+Bounded primary-source audit: finite-time entropy additions
+Checked 11 October 2026. This is a targeted comparison, not an exhaustive
+priority search. No claim of first discovery is warranted by this audit.
+
+Results compared
+1. G-only, reversible finite-state Gibbs relaxation: the sufficient,
+time-uniform KL ordering window |beta-beta_b|(E_n-E_1)<=2/sqrt(5).
+2. G-only plus tridiagonal weighted-Helmert contrast generator: all-time
+heating ordering for every convex f-divergence, without spectral simplicity.
+
+Established tools, and what they do not alone prove
+A. Binyamin Schwarz, Totally positive differential systems, Pacific J.
+Math. 32 (1970), 203--229, Theorem 2 and introductory statement, pp.203--205.
+Primary publisher text inspected:
+https://msp.org/pjm/1970/32-1/pjm-v32-n1-p20-p.pdf
+Schwarz proves that a continuous linear system has totally nonnegative
+transition matrices exactly when its coefficient matrices are tridiagonal
+with nonnegative off-diagonal entries. His older terminology calls this
+"TP"; modern terminology is TN. He expressly credits Loewner for this
+characterization. This subsumes our tridiagonal-exponential/compound-matrix
+step entirely, including reducible nonnegative boundaries. It does not
+state a Gibbs-preparation or entropy comparison. The retained application
+requires the thermal derivative-ratio ordering and Helmert-prefix convex
+covariance identity before Abel summation. Cite Schwarz (and, optionally,
+Margaliot--Sontag's modern exposition, arXiv:1802.09590) for the standard
+semigroup tool, not for the full thermal theorem.
+
+B. Fill--Kahn, Comparison inequalities and fastest-mixing Markov chains,
+arXiv:1109.6075v3 (local full text), Section 3, Proposition 3.2 and Corollary
+3.3; Section 3.3 treats additional discrepancies through majorization.
+https://arxiv.org/abs/1109.6075
+Their comparison uses stochastically monotone reversible kernels and a
+common initial distribution with monotone density ratio, comparing two
+kernels. Our contrast-tridiagonal theorem compares Gibbs preparations
+under one kernel and permits failure of physical-state stochastic
+monotonicity (the exact three-state example in the fragment has negative
+adjacent-difference K_21). Therefore the displayed theorem is not a direct
+substitution into Proposition 3.2. The methods of positive-semigroup order,
+density-ratio comparison, and convex-divergence ordering are established.
+
+C. Ohga--Hayakawa--Ito, arXiv:2410.06623v2, previously inspected primary
+full text (sources/2410.06623v2.txt), Result 2 and SI D2; SI B concerns the
+KL counterpart of Result 1.
+https://arxiv.org/html/2410.06623v2
+The stochastic-monotonicity no-Mpemba framework is relevant precedent.
+Our physical-state order theorem is an application of that established
+framework and related Markov comparison methods. Neither new fragment
+should be advertised as discovering monotonicity-based no-Mpemba arguments.
+The contrast-tridiagonal example failing physical monotonicity explains
+why the present hypotheses require a separate argument. No direct theorem
+with either exact new hypothesis/conclusion pair was located in this text.
+
+Other superficially close primary results checked
+D. P. Ben-Abdallah, Mpemba Effect in Many-Body Systems Near Equilibrium,
+arXiv:2603.11707v3, June 4 2026 version; primary HTML checked:
+https://arxiv.org/html/2603.11707v3
+Sections II--III study arbitrary small deviation vectors, linear relaxation
+operators, and Euclidean global distances/componentwise ordering. This is
+not a theorem for the one-parameter Gibbs curve, relative entropy, or a
+rate-independent inverse-temperature window. Its positivity discussion is
+an established ingredient shared with our argument, not a substitute for
+the nonlinear KL Hessian bound. The HTML also prints an August 24 date;
+the version header identifies v3 as June 4. No inference relies on resolving
+that internal date discrepancy.
+
+E. Alyuruk et al., Thermodynamic limits of the Mpemba effect: A unified
+resource theory analysis, arXiv:2502.00123v2, primary HTML checked:
+https://arxiv.org/html/2502.00123v2
+Results 1--3 and the thermal-operation discussion compare correlated local
+thermal preparations and possible conversion pathways using
+thermomajorization. The reported temperature windows concern correlations
+and available thermal operations. They do not give same-fixed-generator
+KL derivative ordering for uncorrelated global Gibbs preparations under
+the original G inequalities. Thus their use of "temperature window" should
+be acknowledged as different in hypotheses and meaning, not treated as
+establishing or contradicting our explicit sufficient constant.
+
+Bounded search scope and limitations
+Searches included Mpemba/relative entropy/total positivity; Mpemba/Helmert;
+Mpemba/tridiagonal/entropy; Mpemba/near equilibrium/Markov/absence; and
+temperature-window/resource-theory combinations. Original Schwarz text,
+the two arXiv papers above, and existing local primary comparison texts
+were inspected. Lu--Raz's PMC full-text endpoint returned a CAPTCHA during
+this pass; no new claim about its exact linear-response statement is made.
+A modern TP tutorial HTML endpoint failed, but the original Schwarz
+publisher PDF was accessible. Search results and nonappearance of an exact
+match do not establish novelty or a complete literature census.
+
+Recommended manuscript characterization
+"The following are problem-specific applications and quantitative
+extensions of classical positivity, total-positivity, and convexity tools.
+We give complete proofs; the bounded literature comparison did not locate
+these exact statements, but we make no priority claim. The numerical
+constant is a sufficient bound and is not asserted to be sharp."
+
+The specific contribution that survives this comparison is the exact
+Gibbs/Helmert-to-entropy bridge and, separately, its uniform quantitative
+Hessian/angle estimate. TP2 propagation, positive-semigroup comparison,
+convex covariance, and general near-equilibrium quadratic approximation
+must remain identified as established tools. The full finite-time KL
+heating question for unrestricted G-only generators remains unresolved;
+neither these sources nor our restricted results settle it.

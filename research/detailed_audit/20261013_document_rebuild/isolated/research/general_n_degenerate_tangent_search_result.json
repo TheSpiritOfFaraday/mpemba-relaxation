@@ -1,0 +1,14 @@
+{
+  "candidate": false,
+  "counts": {
+    "baths": 9116,
+    "boundaries": 40959,
+    "lp": 409590,
+    "modes": 1638360,
+    "retained": 1637597
+  },
+  "best_relative_margin": 5.6093296904236073e-05,
+  "seed": 914728,
+  "elapsed": 120.00685620307922,
+  "scope": "Leading simple-slow branch obtained by splitting repeated slow boundary of reset plus one adjacent fast pair; perturbations obey all active original F/G inequalities."
+}

@@ -1,0 +1,136 @@
+GENERAL-n FIRST-THREE ARITHMETIC SEARCH AUDIT -- 2026-10-11
+
+QUESTION
+For n=5 or 6, do all original F_ijk,G_ijk<=0 force the simple slow mode,
+oriented by nonnegative weighted Helmert coordinates, to satisfy
+w1+w2-2w3>=0? A counterexample would block the proposed general sharp 1-3/n
+amplitude bound. No accepted counterexample was found in the searches below.
+This is a numerical search result, not a proof of the inequality.
+
+BROAD CONE SEARCH (EXECUTED)
+research/general_n_arithmetic_search.py, seed917352, 300 seconds:
+50,631 bath spectra; 1,012,620 successful LP solves; 5,063,100 eigensystems;
+4,029,187 retained by numerical gap, orientation and nontrivial-coordinate
+filters. Full counts and the most negative numerical ratio are in
+research/general_n_arithmetic_search_result.json; progress is in its .log.
+Bath gaps were sampled on several logarithmic scales, including nearly equal
+low energies, nearly equal tail energies, an isolated high-energy gap up to40,
+and a large first gap. Exact ranges/regime assignment are in the script.
+
+The LP parameterization uses symmetric reduced conductances k_ij=a_ij/q_i.
+All original F and G are linear homogeneous inequalities. Reset is their common
+lineality, so k12=0 fixes that direction; remaining k lie in[-1,1]. LP extrema
+and broad logarithmic mixtures were sampled. Adding a large positive reset
+restores strictly positive rates without changing eigenvectors, spectral gaps,
+or any F/G value. Eigensystems were computed in an orthonormal weighted Helmert
+basis. The arithmetic test there is
+  v2 >= d v1, d=(q1-q2)sqrt(q3)/(2sqrt(q1 q2(q1+q2+q3))).
+Numerical LP acceptance is not an exact certificate. No candidate passed the
+combined substantial-negative-margin and gap requirements.
+
+REJECTED NUMERICAL ANOMALIES
+1. The first raw output had v1,v2 around10^-17 and a pure tail contrast; its
+relative margin spuriously read-1. It was rejected and the filter was tightened.
+The retained receipt is general_n_arithmetic_rejected_roundoff.json.
+2. The worst retained broad-search ratio also read-1, at a narrow but simple
+six-state spectral gap. Exact rational reconstruction from the stored decimal
+weights/rates obeys every F/G<=0. Independent100-digit recomputation gives the
+arithmetic margin approximately3.0e-98, consistent with the exactly constant
+first-four components of this tail mode, not a violation. Adding an exactly
+specified all-downward-one repair10^-30 makes all F/G strict; the recomputed
+margin is POSITIVE4.4625115191771e-17, with gap1.3973167123667e-9. This is a
+high-precision rejection, not an interval-certified new theorem. Scripts and
+receipts: general_n_arithmetic_highprecision.py/.json/.log.
+3. A distinct backward-mode PSD search prescribed an arithmetic-violating
+Helmert mode and sought a positive definite fast-space matrix. It examined80
+modes:77 numerical trace duals,3 failures of that dual LP, and3 primal attempts.
+A floating solver returned a putative feasible case with a~10^-9 residual.
+It was NOT accepted. Exact rational projection onto the intended fast space
+kept the mode and positive definiteness but violated seven original tests,
+including F234 about1.30e-7. Therefore numerical feasibility did not establish
+a counterexample. Files: general_n_inverse_obstruction_search.py,
+general_n_inverse_candidate.json, general_n_inverse_candidate_recheck.py/.json.
+
+EXACT FIXED-MODE OBSTRUCTION (PROVED, LIMITED SCOPE)
+For q=(16,8,4,2,1)/31 and w=(85/28,1/28,25/14,-13,-30), the arithmetic margin
+is-1/2 and the weighted Helmert coefficients are(1,1/28,1,1)>0. With U any
+specified rational basis orthogonal to1,w under q and Mcore=-D U B U^T,
+the checker constructs a positive rational combination of six original F/G
+functionals equal to trace(B). Thus no positive definite B realizes this
+particular mode as a simple slow mode under the premise. This is an exact
+single-mode exclusion, not a general necessary-and-sufficient classification.
+Code and exact coefficients: general_n_inverse_dual_search.py/.json.
+
+EXACT OBSTRUCTION TO A PROOF ROUTE
+Eliminating the highest state need not preserve F, even when every original
+triplet test fails STRICTLY. An explicit four-state example has
+q=(151,150,100,99)/500 and reduced conductances
+  (1+d,401/201+d,d,2+d,d,2+d), d=1/40,
+plus the generator with all downward rates1, multiplied by10^-6.
+All original F/G are strictly negative, but after tracing out state4,
+  F123 =896731145953/19028400900000000 >0.
+Exact certificate: four_trace_closure_certificate.py/.json.
+
+A separate reset-subtracted five-state numerical trace search found a positive
+F123 after tracing out both higher states at trial84. The theorem agent supplied
+the simpler exact explanation: attach a fifth state only to state4 of the
+four-state example, so the global minimum reduced conductance is zero; tracing
+out that dangling state first recovers the same four-state obstruction. This
+rules out the proposed trace-at-zero sufficient lemma even after subtracting
+the globally minimal reset. It does not refute the slow-eigenvector arithmetic
+inequality. Our numerical trace receipts are general_n_reset_trace_search.py
+and general_n_reset_trace_candidate.json; use the theorem agent's separate
+exact extension certificate for the stronger mathematical claim.
+
+TARGETED NEXT CALCULATION
+The viable direct route is a fast-space PSD alternative: for an arbitrary
+prescribed Perron-cone mode with w1+w2-2w3<0, seek a nonnegative combination of
+original F/G matrices that is nonzero positive semidefinite on the(q,w)-orthogonal
+fast space. Such a dual certificate excludes every positive definite fast
+matrix and directly proves the missing arithmetic implication. Merely testing
+Schur trace at spectral parameter zero is insufficient, as shown above.
+One promising structural restriction is the tangent cone at reset plus one
+accelerated adjacent pair, where several slow rates coincide. Project a
+premise-preserving perturbation onto that repeated eigenspace and classify its
+largest eigenvector. This removes the irrelevant original fast direction and
+can expose a limiting arithmetic violation without ill-conditioned subtraction.
+A targeted numerical implementation is general_n_degenerate_tangent_search.py;
+its completed counts are recorded separately below when available.
+
+TARGETED DEGENERATE-BOUNDARY SEARCH (COMPLETED)
+Seed914728,120.0069seconds:9,116 bath spectra;40,959 boundaries with one
+accelerated adjacent pair;409,590 LPs;1,638,360 projected eigensystems;
+1,637,597 retained. No arithmetic violation was found; the smallest retained
+relative margin was+5.6093296904e-5. The effective eigenproblem is the leading
+splitting of the repeated slow eigenspace, not an uncontrolled full-matrix
+eigenvector near a tiny gap. All inequalities active at the boundary are
+imposed on each perturbation. This remains numerical evidence only.
+Receipt: general_n_degenerate_tangent_search_result.json.
+
+PROVED RESTRICTED COMPRESSION LEMMA
+Suppose the full n-state system satisfies the premise and has a simple slow
+left mode w whose components on states4,...,n all equal one constant c.
+Put Q=sum_{k=4}^n q_k. If Q<q3, then w1+w2>=2w3 follows from the established
+four-state theorem, without any assumption that the full chain is lumpable.
+
+Indeed compress functions onto those constant on the tail block, using the
+q-weighted orthogonal projection. The resulting four-state generator keeps
+all low-low rates and has
+  a_(i,T) = sum_k(q_k/Q) a_(i,k),
+  a_(T,i) = sum_k a_(k,i) = (Q/q_i) a_(i,T).
+It is positive and reversible with bath weights(q1,q2,q3,Q). The full slow
+mode belongs to this compression subspace, so it remains an eigenvector.
+Rayleigh-Ritz shows no compressed nonstationary eigenvalue exceeds the full
+lambda2, and simplicity of the full eigenvalue implies simplicity after
+compression. Hence it is the compressed slow mode.
+For i<j<=3, direct substitution into the ORIGINAL predicates gives
+  G_(ijT) = sum_k (q_k/Q) G_(ijk),
+  F_(ijT) = sum_k (q_k/Q) F_(ijk)
+             +sum_k q_k(Q-q_k)/(2Q q_j) G_(ijk).
+All added coefficients are nonnegative, so every compressed triplet fails;
+triplet123 is unchanged. The condition Q<q3 ensures the four compressed bath
+weights remain strictly energy-ordered. The proved four-state arithmetic
+lemma now applies. This restriction covers a well-separated rare tail block
+with constant slow components, including the unperturbed cloning construction.
+It does not settle unequal tail components, and aggregation can reorder the
+energies when Q>=q3. That is a concrete remaining case for a compression proof.

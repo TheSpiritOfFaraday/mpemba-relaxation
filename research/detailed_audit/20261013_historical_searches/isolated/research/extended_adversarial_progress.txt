@@ -1,0 +1,220 @@
+EXTENDED ADVERSARIAL RESULT: SHARP QUARTER BOUND VIA AN INDEPENDENT STRUCTURAL LEMMA
+
+Status: mathematical proof below; exact symbolic identities checked by
+research/extended_arithmetic_certificate.py. This is not a claim resting on the
+preceding numerical search. The parent has an independent Schur-complement proof.
+
+1. Statement and scope
+
+Let q1>q2>q3>q4>0 be (possibly unnormalized) bath weights. Let M be a reversible
+four-state generator, with a simple slow nonstationary eigenvalue and all original
+triplet predicates failing. The established branch-equivalence lemma means all
+F_ijk<=0 and G_ijk<=0. Orient its slow left eigenvector w by the nonnegative
+weighted-Helmert coordinates of the established G/Metzler theorem. Then
+
+    w1 >= w2,    w1+w2 >= 2*w3,    w4 <= 0.
+
+Only the middle inequality is new here. It implies that the conditional Gibbs
+expectation on the first three states increases with beta>=0. Together with the
+parent's decomposition, it proves that every finite cooling amplitude advantage
+is strictly below 25%. The quarter-limit construction therefore proves sharpness
+as a supremum for the full original predicate premise.
+
+2. Reduction to strictly positive Helmert coordinates
+
+It suffices first to prove the middle inequality when all G inequalities are
+strict. Under this hypothesis all off-diagonal entries of the symmetric
+weighted-Helmert matrix A are positive, by the established formula in
+ordered_conductance_theorem.tex. Perron theory then gives strictly positive slow
+coordinates. Normalize the coefficient of the first unnormalized contrast to 1,
+and write
+
+    w = h1 + b*h2 + c*h3,    b,c>0.
+
+For arbitrary weak F/G, add delta times the reversible generator H whose six
+original downward rates all equal 1. Each triplet has
+
+    F(H)=-(1-t)*(1+u/2)<0,    G(H)=t-1<0.
+
+The perturbed generator retains positivity and reversibility, all its F/G are
+strict, and its slow eigenvalue stays simple for sufficiently small delta>0.
+Orient and normalize slow eigenvectors continuously using positive weighted norm
+and positive overlap with the original oriented eigenvector. Passing delta->0
+preserves the non-strict arithmetic inequality. This handles zero Helmert
+coordinates without division by them. It does not claim a unique mode for a
+degenerate slow eigenspace.
+
+3. Three nonnegative coupling parameters
+
+Write q=(p,q,r,h), where p>q>r>h>0, and Q2=p+q, Q3=p+q+r,
+Q4=p+q+r+h. These q-symbols are bath weights, not transition rates.
+
+The unnormalized Helmert contrast matrix is
+
+    H = [[1,       1,           1],
+         [-p/q,    1,           1],
+         [0,      -Q2/r,        1],
+         [0,       0,          -Q3/h]].
+
+Its weighted Gram matrix is N=diag(eta1,eta2,eta3), with
+eta1=p*Q2/q, eta2=Q2*Q3/r, eta3=Q3*Q4/h.
+
+Subtract the slow eigenvalue from the nonstationary generator by a reset shift.
+This preserves every F and G, leaves off-diagonal Helmert entries unchanged, and
+makes v=(1,b,c) a zero eigenvector of its Helmert coefficient matrix K. Weighted
+self-adjointness and strict Metzler positivity give
+
+    K_ij = ell_ij/eta_i,   ell_ij=ell_ji>0,
+    K_ii = -sum_{j!=i} ell_ij*v_j/(eta_i*v_i).
+
+Conversely these formulas reconstruct the shifted function generator as
+L=H*K*N^{-1}*H^T*diag(q), with M=L^T. No sign assumption on the shifted physical
+rates is needed; all triplet expressions are still the original linear F/G.
+
+Direct substitution gives
+
+    G123 = q/(p*Q3)*[-ell12+(h/Q4)*ell13],
+    G124 = -q/(p*Q4)*ell13,
+    G134 = -r/(Q2*Q4)*[(q/p)*ell13+ell23],
+    G234 = r/(Q2*Q4)*[ell13-ell23].
+
+Consequently write
+
+    ell12 = u+(h/Q4)*m,  ell13=m,  ell23=v0+m,
+    u>=0, v0>=0, m>0.
+
+The symbol v0 here is a scalar coupling remainder, not the mode vector v.
+
+4. Contradiction if the arithmetic contrast were negative
+
+The desired arithmetic inequality is
+
+    w1+w2-2*w3 = -(p-q)/q + 2*b*Q3/r >=0.
+
+Suppose instead 0<b<s, where s=(p-q)*r/(2*q*Q3).
+The exact original F123 expression becomes
+
+    F123 = A*u+B*m+C*v0,
+
+where
+
+ A = -[b*(p-q)+2*p]*[2*b*q*Q3-(p-q)*r]/[2*b*p*Q2^2*Q3],
+ B = -(p-q)*[b*q*Q3-p*r]*[b*h+c*Q4+h]/[b*p*Q2^2*Q3*Q4],
+ C = (p-q)*[c*r*Q4-b*h*Q2]/[b*Q2^2*Q3*Q4].
+
+Because b<s, A>0 and B>0. Since m>0 and F123<=0, necessarily v0>0 and C<0.
+Thus
+
+    0<c<cmax=b*h*Q2/(r*Q4).
+
+In particular b*Q2-c*r>0. Set k=(b*Q2-c*r)/(c*Q3)>0. The coefficient of v0
+in F124 equals -k*C, and its coefficient of u is
+
+ D = -(p-q)*[b*Q3+r]*[b*q*Q3-p*r]/[b*p*Q2^2*Q3^2]>0.
+
+Therefore the nonpositive combination F124+k*F123 has the form
+
+    F124+k*F123 = (D+k*A)*u + [N(c)/(2*c*p*Q2*Q3*Q4)]*m.
+
+It suffices to prove N(c)>0 on the indicated domain. The identity checker forms
+N directly from the original generator and proves the following exact formulas:
+
+    coefficient of c^2 in N(c) = -2*q*(p-q)*Q4 <0,
+    N(0)=2*h*(b+1)*(p-q)*(p-b*q)>0.
+
+The remaining endpoint N(cmax), as a function of b, is also a concave quadratic:
+
+    coefficient of b^2 =
+      -2*h*q*(h+r)*(p-q)*Q3^2/[r^2*Q4] <0,
+    N(cmax)|_{b=0} = 2*h*p*(p-q)>0,
+    N(cmax)|_{b=s} = h*r*(p-q)*Q2^2/[2*q*Q4]>0.
+
+A concave function on a compact interval is at least the smaller endpoint
+value. Hence N(cmax)>0 for 0<=b<=s, then N(c)>0 for 0<=c<=cmax. The displayed
+combination is strictly positive because m>0, contradicting F124<=0 and F123<=0.
+This proves the arithmetic lemma in the strict-G case, and Section 2 extends it
+to weak inequalities.
+
+5. From the arithmetic lemma to the sharp amplitude bound
+
+Let w1=A, w2=B, w3=C. Then A>=B and C<=(A+B)/2. For any ordered three energies,
+the conditional covariance Cov_beta(w,E) is nonpositive for beta>=0. One direct
+proof sets energies to (0,a,b), 0<a<b. If B>=C every pair difference has the
+required sign. Otherwise B<C<=A, and after multiplying the pairwise covariance
+by the positive factor Z3^2*exp(beta*b), its negative is
+
+  a*(A-B)*exp(beta*(b-a))
+  + b*(A-C)
+  - (b-a)*(C-B)*exp(-beta*a).
+
+This expression is increasing with beta, and at beta=0 equals
+
+  a*(A-B) + b*(A-C) - (b-a)*(C-B)
+  = (3*a/2)*(A-B)+(b-a/2)*(A+B-2*C) >=0.
+
+[The identity is exact.] Thus the conditional mean m(beta) is nondecreasing.
+
+Let P(beta) be the Gibbs probability of the first three states; it is increasing,
+with P(beta)>3/4 for beta>0. The full overlap is
+b(beta)=P(beta)*m(beta)+(1-P(beta))*w4. The G theorem gives b(beta)<0 on cooling
+and w4<=0. For 0<beta_h<beta_c<1 and r0=P(beta_c)/P(beta_h),
+
+ b_c-r0*b_h = P_c*(m_c-m_h)+(1-r0)*w4 >=0.
+
+Consequently |b_c|/|b_h|<=r0<4/3 and 1-|b_h|/|b_c|<1/4 whenever there is an
+anomalous amplitude ordering. The existing quarter-limit family attains this
+bound as a supremum.
+
+6. Executed numerical exploration (discovery support only)
+
+research/extended_prefix_search.py: seed742908, 30,000,000 signed-rate draws,
+1,731,482 accepted by all F/G. Tested conditional first-three derivative at
+beta={0,.001,.01,.1,.25,.5,.75,.9,1}; no negative derivative passed the numerical
+margin and spectral-gap filters. research/extended_prefix_result.json records
+counts. The sample repeats the earlier signed-rate sampling distribution:
+energy gaps10^uniform(-3,.7), signed rates normal*10^uniform(-3,3), alternating
+multiplication by lower bath weights, bath-perpendicular Householder eigensolve.
+
+research/extended_arithmetic_search.py repeated the same draws and found no
+w1+w2-2w3<-1e-7 with its spectral-gap filter. Its JSON/log record the same count.
+These finite searches suggested the lemma; they do not prove it. The preceding
+argument and exact symbolic identities supply the proof.
+
+7. Rejected route
+
+The mixed-coordinate cone using w1-w2, w1+w2-2w3, and the weighted prefix-three
+contrast is not preserved by a general allowed generator: a transformed
+lower-left entry contains a negative multiple of a34. A direct Metzler
+invariance argument in those three coordinates therefore does not work.
+The successful proof instead prescribes the Perron mode, uses three nonnegative
+couplings, and eliminates one coupling using F123 and F124.
+
+8. Further exact result: the new mode inequalities are NOT sufficient
+
+Take unnormalized q=(5,4,2,1) and w=(162,-18,71,-880). Then q dot w=0,
+w1>w2, w1+w2-2*w3=2>0 and w4<0. Its unnormalized Helmert coefficients
+are (80,2,80), all strictly positive. Nevertheless this direction cannot be a
+simple slow mode under the full original triplet premise.
+
+An independent rational Farkas certificate is in
+research/extended_mode_obstruction_certificate.py and its JSON/log. Let
+
+ U = [[-89/450,   431/450],
+      [-91/360,  -521/360],
+      [1,          0],
+      [0,          1]],
+ M0 = -diag(q)*U*B*U^T.
+
+The inverse-realizability theorem says a simple slow realization requires
+B positive definite. Exact substitution proves
+
+ (482571629/11676414)*F123(M0)
+ +(496382581/11676414)*F124(M0)
+ +(16620682809/77842760)*G234(M0) = trace(B).
+
+All three coefficients are strictly positive. The triplet inequalities would
+therefore imply trace(B)<=0, contradicting positive definiteness. The certificate
+checks the identity, null vectors, bath mean, all strict necessary-mode
+inequalities, and the positive Helmert coefficient decomposition using rational
+arithmetic only. Thus the arithmetic structural lemma sharpens the feasible
+mode region but does not replace the exact disk/half-plane characterization.

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "Clean counters accepted",
+    "One near-bath KL contradiction rejected",
+    "Contradiction in any sampled convex divergence rejected",
+    "One tridiagonal ratio-order contradiction rejected",
+    "General G-only ratio failures correctly permitted",
+    "Declared tiny-value exclusions retained without pretending they passed"
+  ],
+  "count": 6,
+  "sampler_source_sha256": "d5d20c1456b2c67262d37c08e9e7f5310ea9d035efb53e0946ac6ac8de7edbf2",
+  "scope": "Exercise the audit's actual final verdict code with injected result counters.\nAvoid importing the sampler, whose top level runs the full numerical experiment."
+}

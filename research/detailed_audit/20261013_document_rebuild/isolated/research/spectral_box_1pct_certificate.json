@@ -1,0 +1,135 @@
+{
+  "complete": true,
+  "relative_radius": ".01",
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "source_sha256": "c6256f88a577d884416e79987113a7508482a355e6a89699a51efcbcde4e16f6",
+  "binary_sha256": "10736ae6a031b08aa9a0bbacf9bce25ec053b43558fb382a64c29cd082bbaadc",
+  "inputs_sha256": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+  "compile_command": [
+    "clang++",
+    "-O2",
+    "-std=c++17",
+    "-ffp-contract=off",
+    "-I/opt/homebrew/include",
+    "./research/physical_box_spectral.cpp",
+    "-L/opt/homebrew/lib",
+    "-lmpfr",
+    "-lgmp",
+    "-o",
+    "./tmp/physical_box_certificate_runner"
+  ],
+  "checks": [
+    {
+      "complete": true,
+      "mode": 2,
+      "radius": 0.01,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001229167,
+      "exit_code": 0,
+      "log": "research/spectral_box_1pct_mode2.log",
+      "log_sha256": "98d8f1a74f922b152db3a49bc57bc2e78b23e02725885a2d5ca72422532e1410"
+    },
+    {
+      "complete": true,
+      "mode": 3,
+      "radius": 0.01,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001236208,
+      "exit_code": 0,
+      "log": "research/spectral_box_1pct_mode3.log",
+      "log_sha256": "b0a771ef879944afd1b0958ffed913c165a8493491b73888a41b5d03a4f87d95"
+    },
+    {
+      "complete": true,
+      "mode": 1,
+      "radius": 0.01,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 31,
+      "passed": 16,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.018584791,
+      "exit_code": 0,
+      "log": "research/spectral_box_1pct_mode1.log",
+      "log_sha256": "b7d2947dcc8bd97e883099ac3088b9ada5ba9ce257bab5c97b3ba613ab818366"
+    },
+    {
+      "complete": true,
+      "mode": 0,
+      "radius": 0.01,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 133,
+      "passed": 67,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.092440416,
+      "exit_code": 0,
+      "log": "research/spectral_box_1pct_mode0.log",
+      "log_sha256": "bef04deb5fa73e227237205e198e73b6f9e21cee0e9724a78b3867dae6f72db7"
+    }
+  ],
+  "claims": {
+    "KL_distance_advantage_at_least": 0.1,
+    "normalized_distance_window": [
+      0.4,
+      0.8
+    ],
+    "cold_KL_floor": 0.001,
+    "time_saving_at_least": 0.05,
+    "all_KL_thresholds": [
+      0.001,
+      0.01
+    ],
+    "threshold_crossing_window_tau": [
+      0.1,
+      2
+    ]
+  },
+  "scope": "four-state phenomenological Arrhenius rate model; no continuum or experimental claim",
+  "mathematical_dependencies": "See physical_robustness_certificate.tex; executable interval certificate, not Lean"
+}

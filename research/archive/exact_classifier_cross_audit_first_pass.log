@@ -1,0 +1,9 @@
+completed 10 elapsed 9.52
+Traceback (most recent call last):
+  File "./research/exact_classifier_cross_audit.py", line 45, in <module>
+    exact = classify(base,m,rates)
+  File "./research/exact_commensurate_classifier.py", line 86, in classify
+    alpha=roots[-1];r=sum(z==alpha for z in roots);field=OrderedField(alpha);K=field.K
+  File "./research/exact_commensurate_classifier.py", line 26, in __init__
+    self.interval=None if self.rational else alpha._get_interval()
+AttributeError: 'Mul' object has no attribute '_get_interval'

@@ -1,0 +1,78 @@
+{
+  "group": "classifier source-and-dependency review",
+  "reason": "Current implementation review and fresh dependency-bound replay; cross-audit command not included in prior extension replay.",
+  "complete": true,
+  "source_sha256": {
+    "research/test_exact_commensurate_classifier.py": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15",
+    "research/inverse_realizability_audit.py": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+    "research/five_state_degenerate_nonmonotone.py": "c47bb249e6363f3625d58f9406a5bfddb7096109ca0a0ea91faebc6b429bea5b",
+    "research/extended_mode_obstruction_certificate.py": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac",
+    "research/independent_rational_classifier_audit.py": "e125624254177eca9f992248a3c24a81e575fe63224e5b0b0ccaaba98cdc1b8f",
+    "research/independent_classifier_nearzero_audit.py": "7c0e0dd8ac24b3ac507f2f73d587bc15887de6f8b72e7a56427356c8f07bdc9a",
+    "research/exact_classifier_cross_audit.py": "300a636d1f0293dde0e27a539d584b07b60b3d381886af22267c71a60cf6fed3",
+    "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+    "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+    "research/exact_mode_realizability.py": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8",
+    "research/four_state_classifier.py": "6f45a8838e1f18ec880255f87864615e90464e015c6947b2fd7712628e5a5d0c",
+    "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+  },
+  "checks": [
+    {
+      "script": "research/test_exact_commensurate_classifier.py",
+      "exit_code": 0,
+      "seconds": 1.958828917,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/test_exact_commensurate_classifier.log",
+      "log_sha256": "3e5dfdd4e178754bd24fb2b2aaf5a6b3ddf4db9cdf0e32ebf3d679dac46bfc05",
+      "status": "passed"
+    },
+    {
+      "script": "research/inverse_realizability_audit.py",
+      "exit_code": 0,
+      "seconds": 0.16611991599999998,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/inverse_realizability_audit.log",
+      "log_sha256": "a56a5d673bb01d2422d4b00e329338ca1da377523c8fc41d74237e55649ceb40",
+      "status": "passed"
+    },
+    {
+      "script": "research/five_state_degenerate_nonmonotone.py",
+      "exit_code": 0,
+      "seconds": 0.14988187499999972,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/five_state_degenerate_nonmonotone.log",
+      "log_sha256": "3e87bbf79105d63bad6b2e9e30e47a7eb1a89171f8d8bf8f61790062c8780acd",
+      "status": "passed"
+    },
+    {
+      "script": "research/extended_mode_obstruction_certificate.py",
+      "exit_code": 0,
+      "seconds": 0.1708449999999999,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/extended_mode_obstruction_certificate.log",
+      "log_sha256": "a39ba06fca681cd19628957021f5d348f585554881330a57c47f38ea206aecbb",
+      "status": "passed"
+    },
+    {
+      "script": "research/independent_rational_classifier_audit.py",
+      "exit_code": 0,
+      "seconds": 8.684849208,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/independent_rational_classifier_audit.log",
+      "log_sha256": "6241a35c4aaca15ff1cf11b96ab47f0da239d416743a5669db14e79edfda536e",
+      "status": "passed"
+    },
+    {
+      "script": "research/independent_classifier_nearzero_audit.py",
+      "exit_code": 0,
+      "seconds": 3.5901221250000006,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/independent_classifier_nearzero_audit.log",
+      "log_sha256": "87eb23198d7a74078025a53594c88f166ada462e4d856f29dbceb9f2aeb36a83",
+      "status": "passed"
+    },
+    {
+      "script": "research/exact_classifier_cross_audit.py",
+      "exit_code": 0,
+      "seconds": 39.279105208,
+      "log": "research/detailed_audit/20261013T014313Z_classifiers/exact_classifier_cross_audit.log",
+      "log_sha256": "bbde01c9e261842d7500409e60a44df20da6cb45b7ecc02cb2c2468f79f3be59",
+      "status": "passed"
+    }
+  ],
+  "all_passed": true
+}

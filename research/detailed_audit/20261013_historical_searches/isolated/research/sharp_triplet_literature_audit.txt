@@ -1,0 +1,119 @@
+BOUNDED PRIMARY-SOURCE NOVELTY AUDIT
+Checked 2026-10-11, completed about 22:03 UTC.
+Scope: sharp full-triplet cooling-amplitude bound, endpoint covariance criterion,
+and classification of the repeated-slow four-state boundary.
+
+RESULT AND RECOMMENDED CLAIM
+The primary sources inspected do not state the exact sharp 25% amplitude bound
+or the full-triplet four-state endpoint criterion proved in this project. This
+is a bounded negative search result, not proof of publication priority.
+The repeated-slow theorem needs a narrower novelty claim: its explicit family
+already belongs to the September 2026 paper's single-pair deviation construction.
+The additional result here is necessity: every reversible four-state generator
+with all original triplet failures and exactly one faster nonzero mode must be
+reset plus an accelerated adjacent pair. The all-time divergence conclusion is
+also an additional argument, not a claim that reset or pair perturbations are new.
+
+PRECISE PROJECT RESULTS BEING COMPARED
+A. Four distinct energies, positive finite bath inverse temperature, positive
+reversible rates, simple slow mode, and all original triplet predicates false:
+for any anomalous finite cooling pair, the relative slow-amplitude gain
+  1 - |b(beta_h)|/|b(beta_c)|
+is strictly below 1/4; its supremum over the family is 1/4. Equivalently the
+reverse amplitude ratio is below 4/3. This is not a 25% relaxation-time bound.
+B. In the same family, orient the left slow eigenvector to make b negative on
+cooling. Ordinary asymptotic cooling exists iff Cov_uniform(w,E)>0, equivalently
+b'(0)<0. There is then exactly one positive turning point, before the bath.
+The analytic beta=0 endpoint is not itself a permitted finite-temperature witness.
+C. If the slow eigenvalue has multiplicity two, the full premise forces
+  M = rho R + delta J^(k),  rho,delta>0, k=1,2,3,
+where R=q 1^T-I and J^(k) exchanges only adjacent states k,k+1 with equilibrium
+weights q. Triple degeneracy gives pure reset. These generators preserve order
+and yield all-time ordering of convex divergences for Gibbs preparations.
+
+PRIMARY SOURCES AND WHAT THEY DO / DO NOT ESTABLISH
+1. Ido Avitan, Roee Factor, David Gelbwaser-Klimovsky,
+   Necessary conditions for the Markovian Mpemba effect.
+   https://arxiv.org/abs/2603.04567
+   https://arxiv.org/html/2603.04567v1
+   Live submission history: v1 only, 2026-03-04 19:54:17 UTC.
+   Inspected Eq. (3), N-level extension, and supporting material. This is the
+   source of the precise original-rate predicate. No sharp four-state amplitude
+   bound or endpoint covariance equivalence was located. No newer version or
+   correction appears in the checked arXiv history. That last statement is
+   limited to that history, not every possible publication venue.
+
+2. David Gelbwaser-Klimovsky,
+   Efficient protocol for the Markovian Mpemba effect in N-level systems.
+   https://arxiv.org/abs/2609.09988
+   https://arxiv.org/html/2609.09988v1
+   Live submission history: v1 only, 2026-09-09 10:15:30 UTC.
+   Section II gives the reset singular point and the single-pair states deviation
+   (SPSD): multiply one forward/reverse rate pair by 1+Delta. Its triplet analysis
+   implies that a positive deviation on an adjacent pair keeps all triplets
+   failing. It continues to assert the N-level triplet necessity. No exhaustive
+   characterization of all repeated-slow four-state generators, sharp 25% bound,
+   or four-state uniform-covariance equivalence was located.
+   Exact comparison (our algebra): with normalized q and reset rate rho, its
+   adjacent-pair SPSD is rho R + delta J^(k), where
+     delta = rho Delta (q_k+q_(k+1)).
+   Thus the constructed family itself must be credited to this prior work;
+   exhaustiveness under full F/G is the separate project theorem.
+
+3. Israel Klich, Oren Raz, Ori Hirschberg, Marija Vucelja,
+   The Mpemba index and anomalous relaxation.
+   https://arxiv.org/abs/1711.05829v3
+   https://doi.org/10.1103/PhysRevX.9.021060
+   Checked v3, 2018-12-18; journal reference Phys. Rev. X 9, 021060 (2019).
+   Section III and Eqs. (14)-(15), (35)-(39) give endpoint/parity machinery for
+   strong-Mpemba zeros. Appendix VIII, Eq. (67), supplies spectral engineering
+   by a rank-one perturbation of equal nonzero eigenvalues. Both are relevant
+   precedents. Neither is the present ordinary-cooling iff criterion restricted
+   by the four original triplets. Do not claim that endpoint tests, rank-one
+   constructions, or arbitrary slow-mode design are new mathematical ideas.
+
+4. Zhiyue Lu, Oren Raz,
+   Nonequilibrium thermodynamics of the Markovian Mpemba effect and its inverse.
+   https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/
+   https://doi.org/10.1073/pnas.1701264114
+   PNAS 114(20), 5083-5088 (2017), online 2017-05-01.
+   The slow-mode overlap criterion and its nonmonotonic thermal dependence are
+   established foundations. The present statements add consequences of the
+   specific 2026 triplet constraints; they do not introduce the overlap criterion.
+
+5. Michael Baake, Jeremy Sumner,
+   On equal-input and monotone Markov matrices.
+   https://arxiv.org/abs/2007.11433v3
+   https://doi.org/10.1017/apr.2021.39
+   Checked v3, 2022-09-25. Section 2.1 treats equal-input generator algebra;
+   Fact 3.1 / Proposition 3.11 give monotonicity background. Reset matrices,
+   their degenerate spectrum, and cone/order-preservation tools are established.
+   No problem-specific 2026 F/G classification is claimed to occur there.
+
+SEARCH SCOPE AND LIMITS
+Executed web searches combined Mpemba with: four-state/triplet bounds;
+covariance plus uniform or infinite temperature; endpoint criteria; amplitude
+ratios/upper bounds/25%/quarter/4/3; rank-one or one-fast-mode generators;
+degeneracy and adjacent single-pair deviations; and the exact arXiv identifier
+2603.04567 with correction/counterexample. Twenty-two query strings were run
+in this focused pass, in addition to opening the above primary papers and
+rereading their locally cached full texts. Search results about unrelated
+quantum, non-Markovian, or empirical Mpemba effects were not treated as evidence
+for this finite reversible original-rate problem. Secondary summaries were not
+used to establish a literature claim.
+
+The search was not a complete citation-graph crawl, an exhaustive journal
+erratum search, or a check of unpublished manuscripts. Search-engine absence
+cannot establish priority. The most defensible report wording is:
+  "The primary sources checked on 11 October 2026 do not state these precise
+  sharp-bound and endpoint theorems. We prove them here under the original
+  triplet premise; publication priority remains unverified. The reset plus
+  adjacent-pair family is a special case of the prior SPSD construction; our
+  repeated-slow result proves its necessity under that premise."
+
+LOCAL EVIDENCE
+Full texts: sources/2603.04567v1.txt; sources/2609.09988v1.txt;
+sources/1711.05829_latest.txt (v3); sources/LuRaz2017.txt;
+sources/2007.11433v3.txt.
+Project theorem texts: research/full_triplet_amplitude_bound.tex;
+research/full_triplet_endpoint_criterion.tex; research/full_triplet_degenerate.tex.

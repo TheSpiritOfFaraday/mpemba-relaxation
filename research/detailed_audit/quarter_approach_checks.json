@@ -1,0 +1,123 @@
+{
+  "checks": [
+    "stationarity numerator identity",
+    "reference amplitude",
+    "relative beta Taylor coefficient",
+    "relative tail Taylor coefficient",
+    "infinite temperature ratio",
+    "gain expansion coefficient",
+    "endpoint signs L=10.0",
+    "endpoint signs L=30.0",
+    "endpoint signs L=100.0",
+    "endpoint signs L=300.0",
+    "endpoint signs L=1000.0",
+    "endpoint signs L=3000.0",
+    "endpoint signs L=10000.0",
+    "endpoint signs L=6.9077553",
+    "independent plotted maximum row 0",
+    "endpoint signs L=33.96313",
+    "independent plotted maximum row 25",
+    "endpoint signs L=61.018505",
+    "independent plotted maximum row 50",
+    "endpoint signs L=88.07388",
+    "independent plotted maximum row 75",
+    "endpoint signs L=115.12925",
+    "independent plotted maximum row 100"
+  ],
+  "symbolic_identity_count": 6,
+  "numerical_precision_digits": 100,
+  "asymptotic_diagnostics": [
+    {
+      "L": "10.0",
+      "peak_beta": "0.082836639202844724450862022625381111",
+      "gain_infinite_hot_reference": "0.12145881154846072682252087421680647",
+      "beta_leading": "0.089782854437226080108728849517919904",
+      "gain_leading": "0.1339674213092591272319622855772649",
+      "scaled_beta_error": "-0.30167029464041258172227614812417608",
+      "scaled_gain_error": "-0.23592701142402244845122632091342437"
+    },
+    {
+      "L": "30.0",
+      "peak_beta": "0.047243327178871691095032010243812237",
+      "gain_infinite_hot_reference": "0.19318058309056151239415504503810275",
+      "beta_leading": "0.048237822956877188226163703788015397",
+      "gain_leading": "0.19612332585461490332339525118227194",
+      "scaled_beta_error": "-0.26315620640856218552161101187966241",
+      "scaled_gain_error": "-0.22894498655798228543385262696733651"
+    },
+    {
+      "L": "100.0",
+      "peak_beta": "0.020379561125912693176941894895123231",
+      "gain_infinite_hot_reference": "0.22836655599470052517954928804094133",
+      "beta_leading": "0.020491210908692836430962842225213811",
+      "gain_leading": "0.22883995896640190293910009881810031",
+      "scaled_beta_error": "-0.24244442283556460981847209862539227",
+      "scaled_gain_error": "-0.22322334465734476268198824867701824"
+    },
+    {
+      "L": "300.0",
+      "peak_beta": "0.0086467453962185706977392928027943307",
+      "gain_infinite_hot_reference": "0.24134717504412464113206870883744373",
+      "beta_leading": "0.00866142411734446162931302280327548",
+      "gain_leading": "0.24142673819728682040430748187168513",
+      "scaled_beta_error": "-0.23161558267696964260181766366346795",
+      "scaled_gain_error": "-0.2201043302664638255462136503409123"
+    },
+    {
+      "L": "1000.0",
+      "peak_beta": "0.0031988654281954839457812808043358618",
+      "gain_infinite_hot_reference": "0.24691790334790651029137126461700235",
+      "beta_leading": "0.0032004136373663064851052799498635633",
+      "gain_leading": "0.24692831758018778931550039690784741",
+      "scaled_beta_error": "-0.22412623324007927398333241741086962",
+      "scaled_gain_error": "-0.2182495581827964697882882561388237"
+    },
+    {
+      "L": "3000.0",
+      "peak_beta": "0.0012497113584937567557995247551477577",
+      "gain_infinite_hot_reference": "0.24882256679925867732889818127122431",
+      "beta_leading": "0.001249906593900120443600967522774942",
+      "gain_leading": "0.24882411438091121504762754386251431",
+      "scaled_beta_error": "-0.21946514976065221588801048668094188",
+      "scaled_gain_error": "-0.21728264175290571330268185922963386"
+    },
+    {
+      "L": "10000.0",
+      "peak_beta": "0.00043515074846407569265150585281308839",
+      "gain_infinite_hot_reference": "0.24959708018281155395886218923064429",
+      "beta_leading": "0.00043517061838633293271142756772057454",
+      "gain_leading": "0.24959726392637353883370907839338848",
+      "scaled_beta_error": "-0.21573493980414909775620013692127856",
+      "scaled_gain_error": "-0.21660115650578698704934986270114534"
+    }
+  ],
+  "plot_comparisons": [
+    {
+      "row": 0,
+      "max_decimal_difference": "5.1656201066362093692e-16"
+    },
+    {
+      "row": 25,
+      "max_decimal_difference": "2.3214692520868112559e-15"
+    },
+    {
+      "row": 50,
+      "max_decimal_difference": "8.747046452901728697e-15"
+    },
+    {
+      "row": 75,
+      "max_decimal_difference": "5.1726236537166461381e-15"
+    },
+    {
+      "row": 100,
+      "max_decimal_difference": "1.1598200854531563579e-14"
+    }
+  ],
+  "scope": "Six exact algebra identities; finite numerical diagnostics and five independently recomputed plotted maxima. Analytic remainder and uniqueness arguments reviewed separately.",
+  "source_sha256": {
+    "research/quarter_limit_family.tex": "5fa4a4276dae32230948dbb1ad290fafcf114e0b0c812d4847a9bb9037a07931",
+    "research/quarter_limit_plots.py": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+    "research/check_quarter_approach.py": "53977a6d01cd764aecd9c65ae95f028466c441da7c025d271ccbfe8db380e399",
+    "output/figures/quarter_gain_data.csv": "b4e862aa2ef316b168b2ea28cb45be1d5caa569e8f744d2cb4e1bf9b3b860f6c"
+  }
+}

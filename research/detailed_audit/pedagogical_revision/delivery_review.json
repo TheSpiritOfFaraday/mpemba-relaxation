@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-10-13T01:37:12.185686+00:00",
+  "report_pages": 117,
+  "guide_print_pages": 48,
+  "lessons": 32,
+  "worked_exercises": 14,
+  "additional_words_approximate": 13246,
+  "algebra_and_correspondence_checks": 41,
+  "reviewed_numbered_instances": 38,
+  "total_numbered_instances": 68,
+  "report_render_review": "All inserted pages inspected in contact sheets, with full-size inspections of cover, spectral explanation, symmetric representation, distances, sharpness/Schur explanation, exercises, reading map and glossary. Final edited pages were re-rendered. No clipping or unresolved references observed. Retained research text preserved byte-for-byte by additive reconstruction.",
+  "guide_review": "New details keyboard-tested; 390px and 1280px layouts checked with no document overflow. Print includes all four new explanations, closed details included, screen state restored. New print pages31-36 inspected; generator-constant wording subsequently corrected and final print text rechecked.",
+  "limits": "The new instructional expansion does not imply completion of the full proof/implementation audit. Detailed review remains open for 30 numbered instances and other listed obligations.",
+  "artifacts": {
+    "research_report.tex": "a4d2f296bdd7301a52688b475ba7cdd2295b5a99571b2381237312b398bf0187",
+    "research/foundational_course.tex": "319c8e2c6409956648c2567edb2ebdfd5166794ae05e3b51eef4d0acffa65506",
+    "output/pdf/research_report.pdf": "bdf2a52b944f945076dc06da7fdb0d05fdb5fbc5277c68890f3dbeae81f238a1",
+    "freshman_guide.html": "3d173d6274009d88d7abc92bf22885be2c0b2941ee39cd6e9255ca9be5666fa1",
+    "output/playwright/guide-expanded-report.png": "d3248f826d7f6d29522860f2d5910ffebddfecb2e666fc50aceebdfd62bd5892",
+    "output/playwright/guide-broader-mobile.png": "1b04f1170f771166f7d21dbe08cf5dc2c2ed35b632533275431580a60db9d6d4",
+    "tmp/pdfs/guide-broader-print.pdf": "820c40339eaa024b3299069b7638cc6b5ce0eb18ffbede5e8fa78c6003a01f24"
+  }
+}

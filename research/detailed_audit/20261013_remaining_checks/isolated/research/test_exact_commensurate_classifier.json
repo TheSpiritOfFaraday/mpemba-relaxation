@@ -1,0 +1,434 @@
+{
+  "verified": true,
+  "test_count": 16,
+  "tests": [
+    {
+      "name": "both strong directions",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "30581/57525",
+          "30896/57525",
+          "30536/57525",
+          "14548/57525",
+          "15868/57525",
+          "7094/57525"
+        ],
+        "slow_eigenvalue": "-7479/7670",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 22819*lambda**2/7670 + 11314*lambda/3835 + 7479/7670",
+        "ordinary_cooling": true,
+        "ordinary_heating": true,
+        "strong_cooling_count": 1,
+        "strong_heating_count": 1,
+        "cooling_sign_changing_stationary_points": 1,
+        "heating_sign_changing_stationary_points": 1,
+        "thermal_numerator": "-17141868*x**3/282011039375 + 25712802*x**2/282011039375 - 47140137*x/1128044157500 + 12856401/2256088315000",
+        "partition_power": 1,
+        "derivative_numerator": "-8570934*x**4/56402207875 - 4285467*x**3/112804415750 - 29998269*x**2/451217663000 + 38569203*x/225608831500 - 4285467/90243532600",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "tangent strong root",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "2099/3975",
+          "2152/3975",
+          "2104/3975",
+          "2956/11925",
+          "3292/11925",
+          "4514/35775"
+        ],
+        "slow_eigenvalue": "-1543/1590",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 4723*lambda**2/1590 + 2338*lambda/795 + 1543/1590",
+        "ordinary_cooling": true,
+        "ordinary_heating": false,
+        "strong_cooling_count": 1,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 2,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "-290084*x**3/2512299375 + 580168*x**2/2512299375 - 507647*x/3349732500 + 72521/2233155000",
+        "partition_power": 1,
+        "derivative_numerator": "-290084*x**4/837433125 + 72521*x**3/1004919750 - 1232857*x**2/20098395000 + 797731*x/2009839500 - 1232857/6699465000",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "infinite-temperature root excluded",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "1553/2925",
+          "1574/2925",
+          "1552/2925",
+          "731/2925",
+          "808/2925",
+          "362/2925"
+        ],
+        "slow_eigenvalue": "-379/390",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 1159*lambda**2/390 + 574*lambda/195 + 379/390",
+        "ordinary_cooling": true,
+        "ordinary_heating": true,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 1,
+        "cooling_sign_changing_stationary_points": 1,
+        "heating_sign_changing_stationary_points": 1,
+        "thermal_numerator": "-8338*x**3/111223125 + 29183*x**2/222446250 - 29183*x/444892500 + 4169/444892500",
+        "partition_power": 1,
+        "derivative_numerator": "-45859*x**4/222446250 - 4169*x**3/222446250 - 4169*x**2/74148750 + 4169*x/17111250 - 8338/111223125",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "stationary tangency is not an effect",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "24548002/46633425",
+          "25298332/46633425",
+          "24679012/46633425",
+          "11559716/46633425",
+          "12829556/46633425",
+          "5957398/46633425"
+        ],
+        "slow_eigenvalue": "-6033943/6217790",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 18469523*lambda**2/6217790 + 9142838*lambda/3108895 + 6033943/6217790",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "-53288516224400677*x**3/450722690689710260625 + 118467858383171753*x**2/450722690689710260625 - 179243190936620459*x/901445381379420521250 + 174839181331298089/3605781525517682085000",
+        "partition_power": 1,
+        "derivative_numerator": "-11450424973838162*x**4/30048179379314017375 + 4844410565854607*x**3/30048179379314017375 - 9248420171176977*x**2/240385435034512139000 + 51526912382271729*x/120192717517256069500 - 11890825934370399/48077087006902427800",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "bath threshold equality",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/3",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "243/380",
+          "27/40",
+          "27/40",
+          "9/40",
+          "9/40",
+          "3/40"
+        ],
+        "slow_eigenvalue": "-181/190",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 561*lambda**2/190 + 276*lambda/95 + 181/190",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "14661/27436000 - 43983*x/27436000",
+        "partition_power": 1,
+        "derivative_numerator": "43983*x**3/13718000 - 14661*x/13718000 - 14661/6859000",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "double slow mode",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "253757/476250",
+          "50791/95250",
+          "127126/238125",
+          "253727/952500",
+          "2537/9525",
+          "31609/238125"
+        ],
+        "slow_eigenvalue": "-999/1000",
+        "slow_multiplicity": 2,
+        "nonzero_characteristic_polynomial": "lambda**3 + 1499*lambda**2/500 + 2996001*lambda/1000000 + 998001/1000000",
+        "ordinary_cooling": true,
+        "ordinary_heating": false,
+        "strong_cooling_count": 1,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 2,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "720*x**6/127 - 1128*x**5/127 + 345*x**4/127 - 21*x**3/127 + 1215*x**2/508 - 243*x/127 + 405/1016",
+        "partition_power": 2,
+        "derivative_numerator": "2568*x**7/127 + 1062*x**6/127 + 999*x**5/127 - 6144*x**4/127 + 3933*x**3/254 + 1449*x**2/508 + 648*x/127 - 1377/508",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "triple slow reset",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "8/15",
+          "8/15",
+          "8/15",
+          "4/15",
+          "4/15",
+          "2/15"
+        ],
+        "slow_eigenvalue": "-1",
+        "slow_multiplicity": 3,
+        "nonzero_characteristic_polynomial": "lambda**3 + 3*lambda**2 + 3*lambda + 1",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "14*x**6 - 2*x**5 + 9*x**4/2 - 4*x**3 + 3*x**2/4 - 2*x + 7/8",
+        "partition_power": 2,
+        "derivative_numerator": "30*x**7 + 45*x**6 + 90*x**5 + 45*x**3/2 - 45*x**2/4 - 15/4",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "irrational cubic slow mode",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "slow_eigenvalue": "CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 229*lambda**2/8 + 7243*lambda/32 + 13845/32",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "x**3*(-923/4 - 3*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2 - 227*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/4) + x**2*(-923/4 - 2*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2 - 99*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/2) + x*(-923/4 - CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2 - 123*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/4) + 1115*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/32 + 11*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2/8 + 6461/32",
+        "partition_power": 1,
+        "derivative_numerator": "x**4*(-CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2 - 29*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/4) + x**3*(-4*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2 - 52*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)) + x**2*(-41535/32 - 113*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2/8 - 9393*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/32) + x*(-13845/16 - 27*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2/4 - 2699*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/16) - 13845/32 - 19*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)**2/8 - 2099*CRootOf(32*x**3 + 916*x**2 + 7243*x + 13845, 2)/32",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "zero rates connected chain",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "downward_rates": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "slow_eigenvalue": "-1/2",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 9*lambda**2/2 + 23*lambda/4 + 15/8",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "-x**3 - x**2/2 + 1/4",
+        "partition_power": 1,
+        "derivative_numerator": "-x**4/2 - 2*x**3 - 17*x**2/4 - 3*x/2 - 1/4",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "nonuniform commensurate spacing",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          1,
+          3,
+          7
+        ],
+        "downward_rates": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "slow_eigenvalue": "CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 2973*lambda**2/128 + 1157095*lambda/8192 + 12686509/65536",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "x**7*(-60701/512 - 3*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 2711*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/64) + x**3*(-60701/512 - 2*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 1193*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/32) + x*(-60701/512 - CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 1447*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/64) + 133495*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/8192 + 99*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2/128 + 4916781/65536",
+        "partition_power": 1,
+        "derivative_numerator": "x**9*(-4*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 325*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/16) + x**7*(-12*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 237*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/2) + x**6*(-88805563/65536 - 3381*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2/128 - 3363521*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/8192) + x**3*(-2*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2 - 939*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/32) + x**2*(-38059527/65536 - 1065*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2/128 - 1316709*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/8192) - 12686509/65536 - 227*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)**2/128 - 318711*CRootOf(65536*x**3 + 1522176*x**2 + 9256760*x + 12686509, 2)/8192",
+        "algebraic_sign_refinements": 1,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "scaled algebraic slow root",
+      "passed": true,
+      "result": {
+        "verified": true,
+        "method": "ordered algebraic field and exact Sturm root counts",
+        "base": "1/2",
+        "energy_exponents": [
+          0,
+          3,
+          5,
+          8
+        ],
+        "downward_rates": [
+          "49/5",
+          "3/4",
+          "89/100",
+          "61/10",
+          "37/5",
+          "82"
+        ],
+        "slow_eigenvalue": "3*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)",
+        "slow_multiplicity": 1,
+        "nonzero_characteristic_polynomial": "lambda**3 + 3077073*lambda**2/25600 + 1696035429*lambda/819200 + 13360381947/1638400",
+        "ordinary_cooling": false,
+        "ordinary_heating": false,
+        "strong_cooling_count": 0,
+        "strong_heating_count": 0,
+        "cooling_sign_changing_stationary_points": 0,
+        "heating_sign_changing_stationary_points": 0,
+        "thermal_numerator": "x**8*(-44984451/6400 - 801*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/100 - 1531431*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/3200) + x**5*(-44984451/6400 - 27*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/4 - 1394757*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/3200) + x**3*(-44984451/6400 - 441*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/5 - 10116207*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/3200) + 336408111*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/819200 + 288441*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/25600 + 1844362491/1638400",
+        "partition_power": 1,
+        "derivative_numerator": "x**12*(-189*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/50 - 205011*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/1600) + x**10*(1073097*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/80 + 8019*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/20) + x**7*(-13360381947/204800 + 27783*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/3200 - 170281647*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/102400) + x**4*(-13360381947/327680 - 461241*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/5120 - 693465903*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/163840) + x**2*(-40081145841/1638400 - 7639083*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)**2/25600 - 8778471309*CRootOf(1638400*x**3 + 65644224*x**2 + 376896762*x + 494828961, 2)/819200)",
+        "algebraic_sign_refinements": 0,
+        "scope": "Exact for rational rates and commensurate integer energy gaps; asymptotic KL and chi-squared for all multiplicities, any fixed norm for simple modes. No transient classification."
+      }
+    },
+    {
+      "name": "ordered algebraic embedding regression",
+      "passed": true
+    },
+    {
+      "name": "scaled algebraic embedding regression",
+      "passed": true
+    },
+    {
+      "name": "noninteger exponent",
+      "passed": true
+    },
+    {
+      "name": "disconnected",
+      "passed": true
+    },
+    {
+      "name": "equal energies",
+      "passed": true
+    }
+  ],
+  "elapsed_seconds": 1.8152987957000732
+}

@@ -1,0 +1,75 @@
+{
+  "verified": true,
+  "checks": [
+    {
+      "test": "original",
+      "passed": true
+    },
+    {
+      "test": "scaled",
+      "passed": true
+    },
+    {
+      "test": "translated",
+      "passed": true
+    },
+    {
+      "test": "strong direction excluded",
+      "passed": true,
+      "receipt": {
+        "feasible": false,
+        "reason": "empty half-plane intersection",
+        "candidate_count": 35,
+        "slack": "0",
+        "feasibility_domain": "original triplet inequalities",
+        "infeasibility_excludes_original": true,
+        "scope": "Complete exact rational feasibility for the original premise"
+      }
+    },
+    {
+      "test": "first contrast excluded",
+      "passed": true,
+      "receipt": {
+        "feasible": false,
+        "reason": "closest point outside open disk",
+        "min_radius_squared": "1",
+        "candidate_count": 14,
+        "slack": "0",
+        "feasibility_domain": "original triplet inequalities",
+        "infeasibility_excludes_original": true,
+        "scope": "Complete exact rational feasibility for the original premise"
+      }
+    },
+    {
+      "test": "strengthened rejection scope",
+      "passed": true,
+      "receipt": {
+        "feasible": false,
+        "reason": "empty half-plane intersection",
+        "candidate_count": 37,
+        "slack": "2",
+        "feasibility_domain": "strengthened half-planes",
+        "infeasibility_excludes_original": false,
+        "scope": "Exact strengthened feasibility; failure does not exclude the original premise"
+      }
+    },
+    {
+      "test": "negative slack rejected",
+      "passed": true
+    },
+    {
+      "test": "equal energies",
+      "passed": true
+    },
+    {
+      "test": "zero bath weight",
+      "passed": true
+    },
+    {
+      "test": "constant mode",
+      "passed": true
+    }
+  ],
+  "elapsed_seconds": 0.032434940338134766,
+  "scope": "Adversarial inputs, affine invariance, and independent rational inertia of accepted constructions"
+}

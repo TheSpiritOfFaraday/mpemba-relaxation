@@ -1,0 +1,146 @@
+\subsection{Exact rational-input classification without commensurate energies}
+\label{sec:rationallogendpoint}
+Within the full triplet-failure family, the endpoint criterion admits a
+terminating exact decision procedure even when the energy gaps are
+incommensurate. The additional ingredient is Baker's linear-independence
+theorem for logarithms, rather than a polynomial substitution for the whole
+Gibbs curve. This is a consequence of an established transcendence theorem;
+no new number-theoretic independence claim is made.
+
+\begin{theorem}[Rational-input endpoint decision]
+\label{thm:rationallogendpoint}
+Consider a positive reversible four-state generator with rational entries,
+distinct ordered Gibbs bath weights and positive finite bath temperature.
+Suppose all original triplet predicates fail. Ordinary asymptotic cooling
+in relative entropy or weighted Euclidean distance can be decided by a
+terminating exact procedure using rational arithmetic,
+integer factorization, real algebraic root isolation and rational logarithm
+enclosures. Commensurate energy gaps are not required. A repeated slow
+eigenvalue is handled by the preceding degenerate-boundary classification,
+which excludes an effect in these distances. When the slow mode is simple,
+the same decision applies asymptotically to every fixed norm.
+The procedure concerns this full-triplet family;
+it is not a classifier for arbitrary unconstrained rational generators or
+for transient distance crossings.
+\end{theorem}
+\begin{proof}
+The unique normalized stationary law $q$ is rational, since it solves a
+rational linear system. Equivalently one may supply rational ordered bath
+weights and rational downward rates, construct the reverse rates by detailed
+balance, and check the hypotheses exactly. In bath energy units take
+$E_i=-\log q_i$; an additive energy shift does not affect the criterion.
+All logarithms below are the real logarithms of positive numbers.
+
+Let $r$ be the largest root of the rational nonzero characteristic cubic
+$p(x)=\det(xI-M)/x$. Determine its multiplicity exactly. If it is repeated,
+the full-triplet degeneracy theorem returns absence of an effect. Otherwise
+write
+\[
+\tau=\operatorname{tr}M,\qquad
+\sigma=\frac{\tau^2-\operatorname{tr}(M^2)}2,\qquad
+K_r=M^2-(\tau-r)M+(\sigma-\tau r+r^2)I.
+\]
+Define the rational vectors and matrix
+\[
+a=\tfrac14\mathbf1-q,\qquad h=D^{-1}a,\qquad
+T=I-\tfrac14\mathbf1\mathbf1^\top,
+\quad D=\operatorname{diag}(q),
+\]
+and the row vector
+\[
+c^\top=\tfrac14 h^\top K_r T\in\mathbb Q(r)^{1\times4}.
+\]
+The endpoint scalar from the spectral-projector test is
+\begin{equation}\label{eq:rationalprimelog}
+\mathcal R(r)=\sum_{i=1}^4c_i\log q_i.
+\end{equation}
+Indeed $\pi'(0)=\tfrac14T(\log q_i)_i$, and on the zero-sum probability
+subspace the slow spectral projector is $K_r/p'(r)$. Since $\pi'(0)$
+has zero sum, this suffices even though the polynomial need not annihilate
+the stationary direction on the full space. For an oriented slow left mode
+$w$, the projector identity gives
+\[
+\frac{\mathcal R(r)}{p'(r)}
+=\frac{(w^\top a)(w^\top\pi'(0))}{w^\top Dw}.
+\]
+Here $p'(r)>0$ for a simple largest nonzero root, including when the two
+faster roots coincide, and $w^\top a=b_2(0)<0$ by the contrast theorem.
+Thus the single-endpoint criterion says cooling occurs exactly when
+$\mathcal R(r)>0$; equality means absence, not an undecided threshold.
+
+Factor the numerators and denominators of the four positive rationals $q_i$.
+Let $\mathcal P$ be the resulting finite set of primes and write
+\[
+q_i=\prod_{\ell\in\mathcal P}\ell^{v_{\ell i}},
+\qquad v_{\ell i}\in\mathbb Z.
+\]
+Then
+\[
+\mathcal R(r)=\sum_{\ell\in\mathcal P}\gamma_\ell\log\ell,
+\qquad
+\gamma_\ell=\sum_i v_{\ell i}c_i\in\mathbb Q(r).
+\]
+Each $\gamma_\ell$ has an exact zero test in the real algebraic field
+specified by the isolated root $r$.
+
+The precise external theorem needed is the following form of Baker's result:
+if logarithms of nonzero algebraic numbers, together with $2\pi i$, are
+linearly independent over $\mathbb Q$, those logarithms are linearly
+independent over $\overline{\mathbb Q}$.
+This is stated in the opening paragraph of
+\href{https://doi.org/10.1112/S0025579300008068}{A.~Baker,
+\emph{Linear forms in the logarithms of algebraic numbers (II)},
+Mathematika 14 (1967), 102--107}, referring to the original
+\href{https://doi.org/10.1112/S0025579300003971}{1966 paper,
+Mathematika 13, 204--216}.
+For distinct positive primes, rational independence of their real logarithms
+follows from unique prime factorization: clear the denominators of a rational
+relation and exponentiate. Adjoining $2\pi i$ preserves that independence
+because all the prime logarithms are real. Baker's theorem therefore gives
+\[
+\mathcal R(r)=0\quad\Longleftrightarrow\quad
+\gamma_\ell=0\ \text{for every }\ell\in\mathcal P.
+\]
+This is linear independence over algebraic coefficients, not algebraic
+independence of the logarithms. There is no branch ambiguity: only real
+logs of primes greater than one are used. A rational factor equal to one
+has empty factorization and contributes zero, so $\log1$ is never included
+in the independent set.
+
+If every coefficient vanishes, return equality and absence. Otherwise the
+sum is a nonzero real number. Refine the rational isolating interval for
+$r$, evaluate the algebraic coefficients by directed rational interval
+arithmetic, and enclose each logarithm by a convergent rational series.
+For example, for a prime $\ell$ put $z=(\ell-1)/(\ell+1)\in(0,1)$.
+The partial sum and a valid tail bound are
+\[
+L_N=2\sum_{j=0}^{N}\frac{z^{2j+1}}{2j+1},\qquad
+0<\log\ell-L_N\leq
+\frac{2z^{2N+3}}{(2N+3)(1-z^2)}.
+\]
+All quantities on the right are rational and the bound tends to zero.
+Refining all intervals produces an enclosure of $\mathcal R(r)$ whose
+width tends to zero. Its nonvanishing guarantees that eventually the
+enclosure excludes zero, deciding its sign. No unproved transcendental
+equality oracle or floating-point tolerance enters the decision.
+\end{proof}
+
+The theorem establishes termination, not a practical complexity bound.
+Integer factorization and very small nonzero logarithmic forms can be
+expensive; no uniform precision or runtime promise is made. It also does
+not remove the full-generator spectral dependence: isolating the one slow
+cubic root remains necessary, although a full slow eigenvector and a scan
+of initial temperatures are avoided. For arbitrary nonrational input data,
+the analytic scalar criterion remains valid but this rational-input
+termination argument does not apply.
+
+The implementation is \path{research/exact_rational_triplet_classifier.py}.
+It checks the full premise exactly, factors the supplied rational weights,
+and uses the selected real algebraic embedding throughout. Range reduction
+to logarithms of numbers between one and two accelerates the rational
+series. An optional resource limit returns an unresolved result, never
+absence. With no such limit the theorem gives termination. The original
+counterexample, whose energy gaps are not all commensurate, is classified
+as cooling by an exact positive endpoint enclosure. An independent
+implementation audit includes commensurate comparisons with the Sturm
+classifier, scale invariance, degenerate cases and invalid-input rejection.

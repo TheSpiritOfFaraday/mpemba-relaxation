@@ -1,0 +1,57 @@
+{
+  "precision_digits": 65,
+  "comparison_tolerance": "1e-55",
+  "checks": "8 symmetric eigensystem and differentiated-overlap comparisons passed",
+  "onset": "-0.017940111223364896914860757410555502488096610469178236066168954449",
+  "sample_points": [
+    {
+      "z": "-.03",
+      "peak_beta": null,
+      "gain_over_infinite_temperature_limit": "0.0",
+      "slow_eigenvalue": "-19.8664825"
+    },
+    {
+      "z": "-.025",
+      "peak_beta": null,
+      "gain_over_infinite_temperature_limit": "0.0",
+      "slow_eigenvalue": "-19.86652125"
+    },
+    {
+      "z": "-.02",
+      "peak_beta": null,
+      "gain_over_infinite_temperature_limit": "0.0",
+      "slow_eigenvalue": "-19.86656"
+    },
+    {
+      "z": "-.018",
+      "peak_beta": null,
+      "gain_over_infinite_temperature_limit": "0.0",
+      "slow_eigenvalue": "-19.8665755"
+    },
+    {
+      "z": "-.017",
+      "peak_beta": "0.0016573942007599669918563325642794799386694715622785533876295504858",
+      "gain_over_infinite_temperature_limit": "0.00000083093675664866337670996662725903848405320504031015158811957106034",
+      "slow_eigenvalue": "-19.86658325"
+    },
+    {
+      "z": "-.015",
+      "peak_beta": "0.0051478728289729396659169205253038778781939933916084886463064162083",
+      "gain_over_infinite_temperature_limit": "0.0000080632937744129760012733657874228166623313905295955362647125579371",
+      "slow_eigenvalue": "-19.86659875"
+    },
+    {
+      "z": "-.01",
+      "peak_beta": "0.013669016671863857654088319294727286270061902472773388555308036587",
+      "gain_over_infinite_temperature_limit": "0.000057672516458466132706555472525458487171975814674287163330932511452",
+      "slow_eigenvalue": "-19.8666375"
+    },
+    {
+      "z": "-.004",
+      "peak_beta": "0.023525709479165624000854193685050499264279702087342667057078245779",
+      "gain_over_infinite_temperature_limit": "0.00017372327956973402573511855185062018056406328599092560831871845376",
+      "slow_eigenvalue": "-19.866684"
+    }
+  ],
+  "scope": "Numerical cross-checks and illustrative plots; not the continuous-parameter proof"
+}

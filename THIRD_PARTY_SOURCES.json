@@ -1,0 +1,191 @@
+{
+  "scope": "Bibliographic retrieval links; third-party full text is not bundled or relicensed. Links are from existing research records; not a new literature review.",
+  "files": [
+    {
+      "former_path": "research/detailed_audit/physical_sources/biswas2023.pdf",
+      "source_url": "https://arxiv.org/abs/2304.06420v2",
+      "reference_copy_sha256": "b21feb3c47bdb49244057f13309a5490eec220cb1545dae3b384ba618a947e0a",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "research/detailed_audit/physical_sources/biswas2023.txt",
+      "source_url": "https://arxiv.org/abs/2304.06420v2",
+      "reference_copy_sha256": "1cbcbb561726eefcc0b64b1c7e8a46f9d00ac245874c21fefc8a9077c15fb61c",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "research/detailed_audit/physical_sources/creutz1983.pdf",
+      "source_url": "https://doi.org/10.1103/PhysRevLett.50.1411",
+      "reference_copy_sha256": "ef0d33bfac11096d5e5a9334757697d2e2b14ffb451e6677b12fa644bd3ba469",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "research/detailed_audit/physical_sources/creutz1983.txt",
+      "source_url": "https://doi.org/10.1103/PhysRevLett.50.1411",
+      "reference_copy_sha256": "009391559b2777d7003b4a8f2ac076416b66eee634361c208c85dae6d174cda0",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "research/detailed_audit/physical_sources/metropolis1953.pdf",
+      "source_url": "https://doi.org/10.1063/1.1699114",
+      "reference_copy_sha256": "4927ad0be042d70899d178b04d984775d18a7b01b41968ecba19fa74e38091bf",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "research/detailed_audit/physical_sources/metropolis1953.txt",
+      "source_url": "https://doi.org/10.1063/1.1699114",
+      "reference_copy_sha256": "fc2cd5ab0b973f4e54ccb69e9795ac163228e4505a9ff45af1390ba7d548a01b",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/1109.6075v3.pdf",
+      "source_url": "https://arxiv.org/abs/1109.6075v3",
+      "reference_copy_sha256": "0dd8853d9ab0787dfdc0d5dd30e0d275790819ff952dd7ab135312e944525103",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/1109.6075v3.txt",
+      "source_url": "https://arxiv.org/abs/1109.6075v3",
+      "reference_copy_sha256": "c567cbee866fc5f615e3582ac69bd7ce2cc421b915ebc8a5eccb5a175415cf1b",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/1711.05829_latest.pdf",
+      "source_url": "https://arxiv.org/abs/1711.05829",
+      "reference_copy_sha256": "aafec8ae1e8cdbf9c983a599b63af28a543132cd4a44e60d6d2147b76cd525ba",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/1711.05829_latest.txt",
+      "source_url": "https://arxiv.org/abs/1711.05829",
+      "reference_copy_sha256": "41504a9d428b5e2dcd71c433d674e611bf4bd02162f9e1e9a13276d6fe4cbf74",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2007.11433v3.pdf",
+      "source_url": "https://arxiv.org/abs/2007.11433v3",
+      "reference_copy_sha256": "13cbca426a4f21c9af6e5287fbe7a12387fd6e886175960a9fb675484a988a86",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2007.11433v3.txt",
+      "source_url": "https://arxiv.org/abs/2007.11433v3",
+      "reference_copy_sha256": "9656265a769ac6ac04956d7c5304d94ae16265d44d7340ad8f1d987a3f6d01cf",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2308.04557_latest.pdf",
+      "source_url": "https://arxiv.org/abs/2308.04557",
+      "reference_copy_sha256": "cabbbc8b590c96d61bdbf977d6e1ac06c815f291eb38a1e177f8b5ea51ed5549",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2308.04557_latest.txt",
+      "source_url": "https://arxiv.org/abs/2308.04557",
+      "reference_copy_sha256": "b124d137810585e92de873311fb73cfaf9ed9e5e4ebd50d21a82438f7f839b01",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06623v2.html",
+      "source_url": "https://arxiv.org/abs/2410.06623v2",
+      "reference_copy_sha256": "a79e7febc00911e5561891cfcb09a10a9c3fd146d6d2b330cb66d7d37a2a4a47",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06623v2.txt",
+      "source_url": "https://arxiv.org/abs/2410.06623v2",
+      "reference_copy_sha256": "742efddeb94378df235da2e7c487b5b373af80373e728182ba804449e33de9b8",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06686_latest.html",
+      "source_url": "https://arxiv.org/abs/2410.06686",
+      "reference_copy_sha256": "ddb6ca411753eb379743abb183d93e091026b5d09198e63213d88ad74b7c6915",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06686_latest.txt",
+      "source_url": "https://arxiv.org/abs/2410.06686",
+      "reference_copy_sha256": "4da500dfd07821293f9f13192bd89e1cbc097b0dd1398183a9fab7f713b8e683",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06686v2.html",
+      "source_url": "https://arxiv.org/abs/2410.06686v2",
+      "reference_copy_sha256": "ddb6ca411753eb379743abb183d93e091026b5d09198e63213d88ad74b7c6915",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2410.06686v2.txt",
+      "source_url": "https://arxiv.org/abs/2410.06686v2",
+      "reference_copy_sha256": "4da500dfd07821293f9f13192bd89e1cbc097b0dd1398183a9fab7f713b8e683",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2502.01758_latest.pdf",
+      "source_url": "https://arxiv.org/abs/2502.01758",
+      "reference_copy_sha256": "e4443157b3e9ddcda4fb6fa6598e26cb0c8ada2fb22da16311d07ebd1d6561ab",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2502.01758_latest.txt",
+      "source_url": "https://arxiv.org/abs/2502.01758",
+      "reference_copy_sha256": "aebe020a8fac739f9d93376f3c759afb525607445d2ea303311ab29cc7e9948a",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2603.04567v1.html",
+      "source_url": "https://arxiv.org/abs/2603.04567v1",
+      "reference_copy_sha256": "4b45771f1bd8d8e358c9e4da13e84511062820e8998b3a9ebc87b98768b1b6f3",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2603.04567v1.txt",
+      "source_url": "https://arxiv.org/abs/2603.04567v1",
+      "reference_copy_sha256": "cca8b5af63039dfc6be2d330187a54580261af5828b1e94327ce8c6bee70fd7a",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2609.09988v1.html",
+      "source_url": "https://arxiv.org/abs/2609.09988v1",
+      "reference_copy_sha256": "1e02d9b42e7146b5846725bb327bdcd572962533ac1c342279510ee73e4f614c",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/2609.09988v1.txt",
+      "source_url": "https://arxiv.org/abs/2609.09988v1",
+      "reference_copy_sha256": "07c72511150920831a24c957e740b41db31b877bb75ef2a47b06fb9570bad19c",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/KeilsonKester1974_landing.html",
+      "source_url": "https://purl.stanford.edu/gz428ms8977",
+      "reference_copy_sha256": "eba8f49e5209901d42e96d583b847d82279e1f07dcd458fffd2889f192ddc8a3",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/LuRaz2017.html",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/",
+      "reference_copy_sha256": "0a8a89295e0038601b77d4d01051d9bf144ecfb74cf8408b96d0d979bdade3c7",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/LuRaz2017.txt",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/",
+      "reference_copy_sha256": "125d5d76a2b829c005887ff19d390c33c1dc7a2f818006fc20a907f18e7b58c9",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/emmerson_2026_cardinality.pdf",
+      "source_url": "https://doi.org/10.5281/zenodo.21298061",
+      "reference_copy_sha256": "652ab8413de300ae8a117d10e918a6153ca0269a7271e6801554f89c2e17dd5d",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    },
+    {
+      "former_path": "sources/emmerson_2026_cardinality.txt",
+      "source_url": "https://doi.org/10.5281/zenodo.21298061",
+      "reference_copy_sha256": "bb13fd4364ffbd98c16cf59f3703676f6e9280429300bf77c53c240daa822996",
+      "status": "Downloaded third-party full text omitted; attribution retained in manuscripts."
+    }
+  ]
+}

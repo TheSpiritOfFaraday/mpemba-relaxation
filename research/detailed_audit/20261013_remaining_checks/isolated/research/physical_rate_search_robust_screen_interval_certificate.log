@@ -1,0 +1,35 @@
+{
+  "parameters": [
+    0.7915412827160545,
+    0.1422459853295846,
+    2.8033305806707625,
+    2.1187260388215017,
+    4.807022412019133,
+    5.544275937064256,
+    3.522700924837319,
+    9.496166883356667
+  ],
+  "arithmetic": "mpmath.iv, 60 decimal digits",
+  "uniformization_rate": ".5",
+  "max_terms": 259,
+  "max_tail": 9.906053122366757e-46,
+  "time_interval_attempt_units": [
+    53.085400162328234,
+    106.17080032465647
+  ],
+  "time_interval_nominal_tau_units": [
+    0.4,
+    0.8
+  ],
+  "distance_cell_count": 80,
+  "minimum_KL_inequality_margin": 0.0005402444269749706,
+  "cold_distance_floor_lower": 0.003237856202619446,
+  "threshold_band": [
+    0.001,
+    0.01
+  ],
+  "threshold_cells": 60,
+  "certified_min_time_saving_lower": 0.10435132199259196,
+  "parameter_neighborhood_certified": false,
+  "scope": "fixed decimal model; whole time interval and whole threshold band"
+}

@@ -1,0 +1,178 @@
+{
+  "group": "core",
+  "started_utc": "20261013T011946Z",
+  "complete": true,
+  "scope": "Executable replay only; analytic argument review remains separate.",
+  "python": "3.9.13 (main, Oct 27 2024, 16:26:11) \n[Clang 16.0.0 (clang-1600.0.26.3)]",
+  "checks": [
+    {
+      "script": "research/standalone_primary_check.py",
+      "command": [
+        "python3",
+        "./research/standalone_primary_check.py"
+      ],
+      "source_sha256_before": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/standalone_primary_check.log",
+      "exit_code": 0,
+      "seconds": 0.037567583,
+      "source_sha256_after": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540",
+      "log_sha256": "8d2a712ab7816dbea845c2e469ad5222c193d8f8b68d27fc246b1094dbcc7bb3"
+    },
+    {
+      "script": "research/test_standalone_primary_check.py",
+      "command": [
+        "python3",
+        "./research/test_standalone_primary_check.py"
+      ],
+      "source_sha256_before": "407753f2eea005d84bb12fdb75701bf15596638e6564f74ad084ed33c6c6068b",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/test_standalone_primary_check.log",
+      "exit_code": 0,
+      "seconds": 0.10503470799999999,
+      "source_sha256_after": "407753f2eea005d84bb12fdb75701bf15596638e6564f74ad084ed33c6c6068b",
+      "log_sha256": "12d3608abc1254c4525d8cd6ebad5c9d300189e4c9af207d777ec0bd3c8a5faf"
+    },
+    {
+      "script": "research/adversarial_certificate.py",
+      "command": [
+        "python3",
+        "./research/adversarial_certificate.py"
+      ],
+      "source_sha256_before": "a65767fdc8ade269e7e8baf805107d7174b6a76145e40145449baab85252e6ba",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/adversarial_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.282473833,
+      "source_sha256_after": "a65767fdc8ade269e7e8baf805107d7174b6a76145e40145449baab85252e6ba",
+      "log_sha256": "9204c9dfab0b90fd8705b0331f894101d1953945dcf620c77cccd39f9b3554d0"
+    },
+    {
+      "script": "research/adversarial_rational_mode_certificate.py",
+      "command": [
+        "python3",
+        "./research/adversarial_rational_mode_certificate.py"
+      ],
+      "source_sha256_before": "9a4da43fc3d0213b704acdcfa56d473bcc40047bb88110e5237fd7413141b4aa",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/adversarial_rational_mode_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.18780183399999995,
+      "source_sha256_after": "9a4da43fc3d0213b704acdcfa56d473bcc40047bb88110e5237fd7413141b4aa",
+      "log_sha256": "91e87f35bf45e6606e090aa4b36551dbd443d77163f4c9ed2344fc1ffad089f2"
+    },
+    {
+      "script": "research/independent_mode_audit.py",
+      "command": [
+        "python3",
+        "./research/independent_mode_audit.py"
+      ],
+      "source_sha256_before": "796e12b01f85f6235402e92a35a57ffb1c13be79411178da4fe17c29770d2c77",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/independent_mode_audit.log",
+      "exit_code": 0,
+      "seconds": 0.14456087500000003,
+      "source_sha256_after": "796e12b01f85f6235402e92a35a57ffb1c13be79411178da4fe17c29770d2c77",
+      "log_sha256": "7af71f7b8682179bf10bc90eadf37b3b8c1ed047478303282a41fe0604dad5b3"
+    },
+    {
+      "script": "research/finite_time_certificate.py",
+      "command": [
+        "python3",
+        "./research/finite_time_certificate.py"
+      ],
+      "source_sha256_before": "557ca5b7eeabce02a16068e7efcc0aaa2ce13586d56507391f1609793a22b258",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/finite_time_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.9450362910000001,
+      "source_sha256_after": "557ca5b7eeabce02a16068e7efcc0aaa2ce13586d56507391f1609793a22b258",
+      "log_sha256": "f2d04eeaf36ed7e49b53b9e1f436be20240ea60ab1c63f89ae1893e4c8f26c33"
+    },
+    {
+      "script": "research/mechanism_certificate.py",
+      "command": [
+        "python3",
+        "./research/mechanism_certificate.py"
+      ],
+      "source_sha256_before": "ebc8863f80a0ad5de2fd49fd19032fb4e0aeca4fd4d21d9e7e75b8734ae8aee9",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/mechanism_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.636159125,
+      "source_sha256_after": "ebc8863f80a0ad5de2fd49fd19032fb4e0aeca4fd4d21d9e7e75b8734ae8aee9",
+      "log_sha256": "1eaf3dceeec1dc04e100e598c78c088018e5f341e14c10ae6d462601a40cf5ee"
+    },
+    {
+      "script": "research/full_triplet_amplitude_certificate.py",
+      "command": [
+        "python3",
+        "./research/full_triplet_amplitude_certificate.py"
+      ],
+      "source_sha256_before": "cb4171e23b9561ff8287923517415eaa277b3c2b770cf93d523b3cb2c3887804",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/full_triplet_amplitude_certificate.log",
+      "exit_code": 0,
+      "seconds": 2.23652375,
+      "source_sha256_after": "cb4171e23b9561ff8287923517415eaa277b3c2b770cf93d523b3cb2c3887804",
+      "log_sha256": "52ff4a4c19f0a83bdbd06d2e70dd937828c464f25aebb991ed51eecb01659b83"
+    },
+    {
+      "script": "research/extended_arithmetic_certificate.py",
+      "command": [
+        "python3",
+        "./research/extended_arithmetic_certificate.py"
+      ],
+      "source_sha256_before": "bc975e610b3b0f379061c24d8eb15bb9fda53a07aee3f980b6157e33ee155e1e",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/extended_arithmetic_certificate.log",
+      "exit_code": 0,
+      "seconds": 16.808901167000002,
+      "source_sha256_after": "bc975e610b3b0f379061c24d8eb15bb9fda53a07aee3f980b6157e33ee155e1e",
+      "log_sha256": "b0ff009a0470601d17fe83655bc09ac941a251320390cc1bb393e395543cdbdf"
+    },
+    {
+      "script": "research/extended_mode_obstruction_certificate.py",
+      "command": [
+        "python3",
+        "./research/extended_mode_obstruction_certificate.py"
+      ],
+      "source_sha256_before": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/extended_mode_obstruction_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.1769804170000029,
+      "source_sha256_after": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac",
+      "log_sha256": "a39ba06fca681cd19628957021f5d348f585554881330a57c47f38ea206aecbb"
+    },
+    {
+      "script": "research/quarter_limit_certificate.py",
+      "command": [
+        "python3",
+        "./research/quarter_limit_certificate.py"
+      ],
+      "source_sha256_before": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_certificate.log",
+      "exit_code": 0,
+      "seconds": 5.745740208000001,
+      "source_sha256_after": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492",
+      "log_sha256": "25997349d2bc2c961fc867715314c06039c8b3ef396b26333ba729513f8ecbd5"
+    },
+    {
+      "script": "research/quarter_limit_thermal_certificate.py",
+      "command": [
+        "python3",
+        "./research/quarter_limit_thermal_certificate.py"
+      ],
+      "source_sha256_before": "79e0f177831cf0761f98cf79b04308cef22a2452a2337dc816a1b42a3b4d436f",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_thermal_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.9037564170000003,
+      "source_sha256_after": "79e0f177831cf0761f98cf79b04308cef22a2452a2337dc816a1b42a3b4d436f",
+      "log_sha256": "573d18c4a89c82c89df5d2b6a9b8156caf6a70c25bdbafd5200961e1c6b9b165"
+    }
+  ],
+  "all_passed": true
+}

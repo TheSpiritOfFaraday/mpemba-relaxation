@@ -1,0 +1,68 @@
+{
+  "checked_utc": "2026-10-13T01:30:13.915514+00:00",
+  "template_sha256": "17f3ccbf1b43d1ee68b5e776cc12b45b4b252f0212044a018c701bca068fe648",
+  "fragment_sha256": {
+    "research/guide_sharpness_detail.html": "c36b72789442140d55ae2a42745d39a31451d0b25d35d3d4c2b8c85ca495593c",
+    "research/guide_contrast_detail.html": "9a060ae11aed182a99b4400682e3f9815d0567327c6e2fddd541ec926d1674a9",
+    "research/guide_shape_detail.html": "460c434fe19b9b96e20cb2d188cab801d10cd3d34695d324513080613fb0c196",
+    "research/guide_mechanism_detail.html": "81e69d2ee9b38bde385a24836fa207e2c2c2b759df74d55f34c2ae60c6b5eab5"
+  },
+  "static_checks": {
+    "unique_ids": 41,
+    "links_checked": 77,
+    "missing_local_targets": []
+  },
+  "browser_checks": {
+    "viewports": [
+      {
+        "width": 1280,
+        "body_scroll_width": 1280
+      },
+      {
+        "width": 390,
+        "body_scroll_width": 390
+      }
+    ],
+    "keyboard_expansion": "Enter opens all new details",
+    "errors_observed": [],
+    "reviewed_rows": 20,
+    "print_state_restoration": {
+      "before": {
+        "open_detail_ids": [
+          "contrast-proof"
+        ],
+        "visible_audit_rows": 3
+      },
+      "after": {
+        "open_detail_ids": [
+          "contrast-proof"
+        ],
+        "visible_audit_rows": 3
+      }
+    },
+    "reduced_motion_anchor": "s15 reached at top=23.53125px; temporary emulation reset before handoff"
+  },
+  "print_checks": {
+    "file": "tmp/pdfs/guide-print-final.pdf",
+    "pages": 42,
+    "reviewed_status_instances": 20,
+    "all_new_explanations_in_text": true,
+    "all_pdf_words_within_page_bounds": true,
+    "visually_inspected_final_pages": [
+      24,
+      35
+    ],
+    "earlier_pre_sharpness_pages_inspected": [
+      15,
+      22,
+      34
+    ],
+    "scope": "Sampled visual layout plus whole-document text-boundary check, not a claim that every printed page received visual inspection."
+  },
+  "screenshots": [
+    "output/playwright/guide-shape-proof.png",
+    "output/playwright/guide-shape-mobile.png",
+    "output/playwright/guide-sharpness.png"
+  ],
+  "scope": "Guide QA, not mathematical proof evidence."
+}

@@ -1,0 +1,28 @@
+{
+  "feasible_dual": true,
+  "q": [
+    "16/31",
+    "8/31",
+    "4/31",
+    "2/31",
+    "1/31"
+  ],
+  "w": [
+    "85/28",
+    "1/28",
+    "25/14",
+    "-13",
+    "-30"
+  ],
+  "arithmetic_margin": "-1/2",
+  "verified": true,
+  "dual": {
+    "F123": "170355977/1354458",
+    "F124": "1877315795/14899038",
+    "G135": "37013921771/119192304",
+    "F234": "5859700739/49663460",
+    "G234": "716150197923/1390576880",
+    "G235": "128460235367/278115376"
+  },
+  "meaning": "Positive combination of original F/G constraints equals trace(B); full premise incompatible with B positive definite for this mode."
+}

@@ -1,0 +1,41 @@
+{
+  "checked_utc": "2026-10-13T01:24:03.771862+00:00",
+  "scope": "Initial desktop/narrow-screen browser QA plus corrected PDF page; not full accessibility certification.",
+  "guide_checks": {
+    "20_lessons": true,
+    "hot_cold_bath_presets_match_calculation": true,
+    "reading_progress_persists_after_reload": true,
+    "reset_clears_progress": true,
+    "audit_filter": true,
+    "internal_anchors_valid": true,
+    "local_evidence_links_exist": true,
+    "no_duplicate_ids": true,
+    "no_console_errors_observed": true,
+    "all_inputs_labeled": true,
+    "no_document_overflow_at_widths": [
+      390,
+      1280
+    ]
+  },
+  "viewed_screenshots": [
+    "output/playwright/guide-overview.png",
+    "output/playwright/guide-mechanism.png",
+    "output/playwright/guide-mobile.png"
+  ],
+  "pdf": {
+    "path": "output/pdf/focused_paper.pdf",
+    "sha256": "338083e5d49de4466111e307586d41ca530e2fe2893e48c454c16bdf27e652fb",
+    "pages": 10,
+    "page_visually_inspected": 6,
+    "image": "tmp/pdfs/step_by_step_page6.png",
+    "finding": "Corrected equation 15 and surrounding content readable; no overlap or clipping observed."
+  },
+  "not_checked": [
+    "Full keyboard-only reading flow",
+    "Screen-reader pronunciation of mathematical notation",
+    "Print output for every lesson",
+    "Detailed visual review of every unchanged manuscript page"
+  ],
+  "guide_template_sha256_at_initial_QA": "cc84e1d2fffd1ebe9eaa5e81a4c72c959bdd1facb847c06dfd06b162791887e4",
+  "later_content_additions": "Additional collapsible calculus explanations added after initial full interaction checks; no interaction code changed."
+}

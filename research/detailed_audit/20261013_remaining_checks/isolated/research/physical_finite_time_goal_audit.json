@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-12",
+  "scope": "Added planned physical finite-time research priority; no new physical result claimed",
+  "goal_status": "active",
+  "report_section": 22,
+  "report_priority_pages": [
+    66,
+    67,
+    68
+  ],
+  "pdf_pages": {
+    "focused_paper": 10,
+    "research_report": 69,
+    "focused_appendices": 71
+  },
+  "preservation": "Original archive and focused main source/PDF unchanged; all original report labels retained",
+  "compilation": "Desktop compiler succeeded for report; Tectonic exported report and appendices",
+  "layout": "New report pages 66-68 and mirrored appendix pages 68-70 visually checked; no overfull boxes, unresolved references or missing characters",
+  "sha256": {
+    "research/physical_finite_time_goal.tex": "1120cd0c85bbf24bdf3b14b3ae41aac13d0c8dbc1f7d354d0f2f91fb43f42b0d",
+    "research/revise_report.py": "dc8b89befcbfc1b5573588ad96f57f53af4db259a702fa56d3352e9f71e3741b",
+    "research_report.tex": "4fbd03164118988f7fdcd258ccfeb3258bd5c280efac20e916f41ae96bd12154",
+    "focused_appendices.tex": "9a6cc58210403a735560b31fa9527b3c1b880e9e3b6f64741c84de8b3ebca9d7",
+    "output/pdf/research_report.pdf": "ff1a2f013a37eee976bf397b908332e6db78c6af5b8a10b03f49f2376bec0884",
+    "output/pdf/focused_appendices.pdf": "5eda4649620d32bffea2e9e58d76aa827a93bb3e8426c6fe12f3e5377a3f4984",
+    "focused_paper.tex": "f49ed22fa5394bdf1f1bb455dbdc8ed1b0c5643f7c334b17ef569c025293bb1e",
+    "output/pdf/focused_paper.pdf": "d32fbbc7aaf947f764dccc8ae1cfe204568812178ba06bbf31e43f4d83105c75",
+    "research/archive/research_report_before_focused_paper.tex": "346bceb86c912d45af05a5dbcb0216510988adb140306ca873bac5c701a29569",
+    "research/archive/research_report_before_focused_paper.pdf": "d8052d5049348c30197b3d2092cc8a5c895bf2326ee1d53dbdb4a30d2617719c"
+  }
+}

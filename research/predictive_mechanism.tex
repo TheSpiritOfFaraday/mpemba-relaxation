@@ -1,0 +1,123 @@
+\subsection{A predictive mechanism and an exact onset threshold}\label{sec:mechanism}
+The following construction controls the eigenvector rather than interpreting it after diagonalization. It extends the rational-mode companion in Appendix B, not merely the reset direction: two rates and the slow eigenvector change with a parameter. Throughout the entire parameter interval, the four triplet predicates fail. Nevertheless, the family crosses a sharp boundary between ordinary and anomalous asymptotic cooling.
+
+\begin{lemma}[A single-turn criterion for a nearly neutral top state]\label{lem:singleturn}
+Let $E_1=0<E_2<E_3<E_4$, $\beta_b=1$, and suppose the simple slow left mode, normalized with $w_1=1$, is
+\[
+w=(1,-p,-r,z),\qquad p>r>-z>0,\qquad \sum_iw_i e^{-E_i}=0.
+\]
+Assume also
+\[
+E_4>E_2+E_3,\qquad (1+r)E_3>(p-r)(E_3-E_2).
+\]
+Write $E_\Sigma=E_2+E_3+E_4$ and
+\[
+D_0=(1-p-r+z)E_\Sigma+4(pE_2+rE_3-zE_4).
+\]
+There is an ordinary asymptotic cooling Mpemba effect at finite positive initial temperatures if and only if $D_0<0$. In that case $|b_2(\beta)|$ has exactly one maximum on $0<\beta<1$. If $D_0\geq0$, it strictly decreases throughout that interval. There is no asymptotic heating reversal for $\beta>1$ under these hypotheses.
+\end{lemma}
+\begin{proof}
+Let $N(\beta)=\sum_iw_i e^{-\beta E_i}$ and $Z(\beta)=\sum_i e^{-\beta E_i}$, so $b_2=N/Z$. All three excited-state coefficients are negative, hence $N'(\beta)>0$. Since $N(1)=0$, $b_2<0$ for $0\leq\beta<1$ and $b_2>0$ for $\beta>1$.
+
+Define $D(\beta)=Z(\beta)^2b_2'(\beta)$. Its pair expansion has three positive and three negative terms:
+\begin{align*}
+D(\beta)={}&c_{12}e^{-\beta E_2}+c_{13}e^{-\beta E_3}+c_{14}e^{-\beta E_4}\\
+&-c_{23}e^{-\beta(E_2+E_3)}-c_{24}e^{-\beta(E_2+E_4)}-c_{34}e^{-\beta(E_3+E_4)},
+\end{align*}
+where $c_{1j}=(w_1-w_j)E_j>0$ and $c_{ij}=(w_j-w_i)(E_j-E_i)>0$ for $2\leq i<j\leq4$. In particular $c_{13}>c_{23}$. Multiplying by a positive exponential gives
+\begin{align*}
+J(\beta):=e^{\beta E_4}D(\beta)
+={}&c_{12}e^{\beta(E_4-E_2)}
++e^{\beta(E_4-E_2-E_3)}(c_{13}e^{\beta E_2}-c_{23})\\
+&+c_{14}-c_{24}e^{-\beta E_2}-c_{34}e^{-\beta E_3}.
+\end{align*}
+Every nonconstant summand is strictly increasing for $\beta\geq0$; the second is a product of positive increasing functions. Thus $J'>0$. Also $J(1)>0$ because $N'(1)>0$ and $N(1)=0$. Direct evaluation gives $J(0)=D_0$. If $D_0<0$, there is exactly one zero $\beta_m\in(0,1)$, with $b_2'<0$ before it and $b_2'>0$ afterwards. As $b_2<0$, this is exactly a maximum of its absolute value. Two finite $0<\beta_h<\beta_c<\beta_m$ give a strict cooling witness. If $D_0\geq0$, then $J(\beta)>0$ for every $\beta>0$, excluding any such reversal. Finally $J>0$ and $b_2>0$ for $\beta>1$, giving ordinary heating ordering.
+\end{proof}
+The condition uses $\beta=0$ only as an analytic endpoint. Infinite initial temperature is not required for any witness. The single-turn proof is essential: the sign of an endpoint derivative alone would not generally exclude a maximum elsewhere.
+
+\paragraph{Rates that force this geometry while every triplet fails.}
+Keep $q=(1,199/200,2/5,1/400)$ and set
+\[
+p=\frac{759}{1000},\quad r_0=\frac{48959}{80000},\quad
+\eta=\frac1{160},\quad -\frac3{100}\leq z\leq-\frac1{250}.
+\]
+Use $w(z)=(1,-p,-r_0-\eta z,z)$. The small compensation $\eta z$ makes $q^\top w(z)=0$ exactly. Define the downward rates by
+\[
+a_{12}=1,\qquad a_{13}=28,\qquad a_{14}=249/10,\qquad a_{24}=4983/200,
+\]
+\begin{align*}
+a_{23}(z)&=\frac{528238451563-2257386450z}{200000(11761-500z)},\\
+a_{34}(z)&=\frac{2(1550z^2-5989657z+1197903)}{5(80500z+48959)}.
+\end{align*}
+As before, $a_{ji}=a_{ij}q_j/q_i$ and the diagonal enforces column conservation. These formulas arise by taking the first component of $Lw=\lambda w$ to define
+\[
+\lambda(z)=-\frac{1550z+3973343}{200000},
+\]
+then solving its second and fourth components for $a_{23}$ and $a_{34}$. The third follows from bath orthogonality and stationarity; direct substitution checks all four. This is a rate-level design prescription. At $z=-1/250$ it reproduces Appendix B exactly.
+
+\begin{theorem}[A controlled triplet-failing family with a sharp cooling threshold]\label{thm:family}
+Every generator just defined is strictly positive and reversible, fails all four original triplet tests strictly, and has the displayed $w(z)$ as its simple slow mode. Put
+\begin{align*}
+U&=(1-p-r_0)E_\Sigma+4(pE_2+r_0E_3),\\
+V&=(3+\eta)E_4-(1-\eta)E_2-(1+3\eta)E_3>0,\qquad z_*=U/V.
+\end{align*}
+Within the stated closed parameter interval, an ordinary asymptotic cooling effect occurs exactly when
+\[
+\boxed{z>z_*,\qquad -0.017940112<z_*<-0.017940111.}
+\]
+For $z\leq z_*$ there is no asymptotic cooling effect. For $z>z_*$ the cooling amplitude has a unique maximum; the family has no asymptotic heating effect.
+\end{theorem}
+\begin{proof}
+Both rate denominators stay positive. Exact polynomial bounds throughout the interval give $224<a_{23}<225$, $10<a_{34}<12$, and the following uniform bounds:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule Triplet&Upper bound on $F$&Upper bound on $G$\\\midrule
+123&$-230$&$-196$\\
+124&$-1/50$&$-13/100$\\
+134&$-19/10$&$-2/25$\\
+234&$-118$&$-3/100$\\\bottomrule
+\end{tabular}
+\end{center}
+Every comparison is strict; $123,124$ stay in the upper $\kappa$ branch and $134,234$ in the lower branch.
+
+To identify the slow mode uniformly, let $M_0$ use the four fixed rates above and $a_{23}=224$, $a_{34}=10$. An exact $LDL^\top$ congruence of $\diag(q)(M_0^\top+50I)$ has successive pivots
+\[
+\frac{150971}{4000},\quad
+-\frac{494381936093}{12077680000},\quad
+\frac{2188881388080131}{19775277443720},\quad
+-\frac{432951459178371}{17511051104641048}.
+\]
+There are two negative pivots, so $M_0$ has exactly two eigenvalues below $-50$. Increasing conductances increases the reversible Dirichlet form. The min--max principle therefore puts two eigenvalues of every $M(z)$ below $-50$ as well. The explicit eigenvalue satisfies $-20<\lambda(z)<-19$; the remaining eigenvalue is the simple stationary zero. Consequently $\lambda(z)$ is the simple slow nonzero eigenvalue, with separation exceeding 30. This rules out realizing the desired geometry in a faster mode by mistake.
+
+The hypotheses of Lemma~\ref{lem:singleturn} hold uniformly, and substitution of $r=r_0+\eta z$ gives $D_0=U-Vz$. The exact logarithm enclosures described below prove $V>0$ and the displayed bracket for $z_*$. Apply the lemma, including its equality case.
+\end{proof}
+
+\paragraph{Predictions for finite preparations and for onset.}
+The pair $\beta_h=1/1000$, $\beta_c=1/100$ has its own exact threshold. Write
+\[
+u(\beta)=\frac{1-pq_2^\beta-r_0q_3^\beta}{Z(\beta)},\qquad
+v(\beta)=\frac{q_4^\beta-\eta q_3^\beta}{Z(\beta)},\qquad b_z=u+zv.
+\]
+Since both overlaps are negative, this pair reverses if and only if
+\[
+z>z_{\rm pair}:=-\frac{u(1/1000)-u(1/100)}{v(1/1000)-v(1/100)}
+\simeq-0.01480024798314.
+\]
+The denominator is certified positive by integer-power enclosures. For $z_*<z\leq z_{\rm pair}$ other, sufficiently high but finite temperatures witness the effect; this particular pair does not. This distinguishes existence of the effect from success of a chosen temperature grid.
+
+Let $d_*=\partial_\beta D(0,z_*)>0$ and $\delta=z-z_*$. Analyticity and the implicit function theorem give, as $\delta\downarrow0$,
+\begin{align*}
+\beta_m(z)&=\frac{V}{d_*}\delta+O(\delta^2),\\
+|b_z(\beta_m)|-|b_z(0)|&=\frac{V^2}{32d_*}\delta^2+O(\delta^3).
+\end{align*}
+Here $V/d_*\simeq1.76871$ and $V^2/(32d_*)\simeq0.943684$ in the fixed normalization $w_1=1$. The factors follow from $Z(0)=4$, $b_z'(0)=-V\delta/16$ and $b_{z_*}''(0)=d_*/16$. The peak is born at the high-temperature endpoint with a linearly opening inverse-temperature window and a quadratically small advantage. Figure~\ref{fig:mechanism} illustrates this prediction.
+
+MECHANISM_FIGURE
+
+This makes the neutral-state explanation predictive. Raising $z$ toward zero decreases the negative slow-mode weight carried by state 4, while its small bath weight requires only the weak adjustment $\eta z$ in state 3. The two rate formulas enforce that geometry, the spectral comparison makes it dynamically dominant, and $U-Vz<0$ quantifies when high-temperature occupation of state 4 reverses thermal ordering. The theorem classifies this controlled family and the stated single-turn geometry; it does not classify every four-state counterexample or every finite-time transient crossing. The covariance and spectral tools are established; no exhaustive priority claim is made for this particular construction or lemma.
+
+\paragraph{Continuous-parameter verification.}
+Run \path{research/mechanism_certificate.py}. It checks the rational eigenvector identities, all original triplet inequalities and the two branches on the entire interval. For each rational inequality, it clears the nonvanishing denominator, substitutes $z=-3/100+(13/500)t$, and verifies positive Bernstein coefficients on $0\leq t\leq1$. Since the Bernstein basis is nonnegative and sums to one, these are certificates over a continuum, not sampled evidence. The script records every coefficient and the baseline inertia pivots; a second spectral check bounds the remaining quadratic using its value at $-50$ and the mean of its two real roots.
+
+Logarithms are reduced to arguments in $[1,2]$. With $x=(a-1)/(a+1)$, the positive series $2\sum_{k=0}^{m-1}x^{2k+1}/(2k+1)$ bounds $\log a$ from below, and its remainder is at most $2x^{2m+1}/[(2m+1)(1-x^2)]$. Rational bounds with $m=45$ certify the onset bracket and coefficient signs. Integer bisection bounds the algebraic Gibbs weights for the finite-pair threshold. Separately, \path{research/mechanism_plots.py} checks eight family members against symmetric diagonalization and numerical differentiation at 65-digit precision. Those checks and the plotted curves are illustrative cross-checks, not the continuous proof.
+

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-12",
+  "pdf_page_counts": {
+    "focused_paper": 10,
+    "focused_appendices": 70,
+    "research_report": 67
+  },
+  "original_report_change": "Title label only; entire remaining source byte-identical to preserved snapshot",
+  "technical_labels_retained": 77,
+  "main_figure_count": 1,
+  "internal_references_resolved": true,
+  "no_overfull_boxes_or_missing_glyphs": true,
+  "rational_witness_certificate": "Fresh run passed; all main-table sign bounds checked exactly",
+  "sha256": {
+    "focused_paper.tex": "f49ed22fa5394bdf1f1bb455dbdc8ed1b0c5643f7c334b17ef569c025293bb1e",
+    "focused_appendices.tex": "9674da202e1009d3cbcab68a09c6fe4ed0376a4e1f57effb36d2ddd18356c7b2",
+    "research_report.tex": "4460410b765996f06b971c1d80578797647f58921a91a5010bc9f820ee987cc3",
+    "output/pdf/focused_paper.pdf": "d32fbbc7aaf947f764dccc8ae1cfe204568812178ba06bbf31e43f4d83105c75",
+    "output/pdf/focused_appendices.pdf": "ef2afcebadb3a701eeddba24240cf7eb35682da55fc59be6c17c891e0b710075",
+    "output/pdf/research_report.pdf": "cc1352e464615a4f60170cff8de6556df267a92d62bf24d20a1a091dfc168231",
+    "research/archive/research_report_before_focused_paper.tex": "346bceb86c912d45af05a5dbcb0216510988adb140306ca873bac5c701a29569",
+    "research/archive/research_report_before_focused_paper.pdf": "d8052d5049348c30197b3d2092cc8a5c895bf2326ee1d53dbdb4a30d2617719c",
+    "output/figures/focused_overview.pdf": "ab658342fb23f63e8d6d2eb63c6f69d2064490fb9d5eb08dff25a36618b5c5f6"
+  },
+  "visual_review": "Main-paper pages reviewed; all appendix pages scanned; cover, contents, overview figure and new appendix inspected at readable resolution.",
+  "rebuild_command": "sh research/build_papers.sh",
+  "main_paper_source": "focused_paper.tex"
+}

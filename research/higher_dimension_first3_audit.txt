@@ -1,0 +1,41 @@
+SKEPTICAL AUDIT: FIRST-THREE ARITHMETIC RESTRICTION IN HIGHER DIMENSION
+
+Status: numerical adversarial search only; no proof and no counterexample.
+The four-state proof must not be promoted to all n on this evidence.
+
+We tested whether the full original F/G premise can coexist with a simple
+Perron slow eigenfunction satisfying w1+w2<2w3. In weighted Helmert coordinates
+w=Hx, this is x2<s*x1, s=(q1-q2)q3/(2q2(q1+q2+q3)).
+
+For each fixed ordered positive q and strictly positive offending x, construct
+K_ij=ell_ij/eta_i (i!=j),
+K_ii=-sum_{j!=i}ell_ij*x_j/(eta_i*x_i), with ell_ij=ell_ji>=0.
+Then Kx=0, K is diagonally symmetrizable Metzler, and with connected positive
+edges its zero Perron eigenvalue is simple. Reconstruct the shifted physical
+matrix M=(H K eta^{-1} H^T diag(q))^T. Every original F/G is linear in ell.
+A sufficiently large positive reset addition makes every physical rate positive,
+while preserving all F/G, the eigenfunction, and its simple slow ordering.
+Thus a strictly feasible LP would be a genuine route to a counterexample.
+
+The LP maximized a common scaled strict margin for all F/G and every graph edge,
+with sum ell=1. The executed search used seed723401, 20,000 n=5 attempts and
+10,000 n=6 attempts, varied ordered bath gaps, x2/s in (.05,.999), and independent
+positive tail coordinates across multiple logarithmic scales. No strictly
+feasible candidate survived independent checks of original LP residuals and
+variable bounds. The retained script fully specifies distributions and settings:
+  research/higher_dimension_first3_search.py
+  research/higher_dimension_first3_search.log
+
+A preliminary apparent LP success was rejected: HiGHS default tolerance allowed
+a negative graph coupling of about -3.855e-8, destroying the Metzler hypothesis.
+That record is retained as higher_dimension_first3_rejected_lp_tolerance.json.
+The final search tightened primal/dual tolerances to1e-10 and required both
+all edge values and all F/G residual margins to exceed90% of the claimed margin.
+No mathematical conclusion rests on solver infeasibility or tiny residuals.
+
+Potential proof avenue, not established: in this shifted graph representation,
+edges entirely among tail Helmert coordinates act proportionally to a reset on
+states1,2,3 and cancel from F123. A positive linear combination of F123 and
+F12k may generalize the four-state graph dual proof, but the signs of remaining
+tail-tail contributions need a new argument. The existing scalar Schur formula
+cannot simply replace the tail inverse by a scalar when n>4.

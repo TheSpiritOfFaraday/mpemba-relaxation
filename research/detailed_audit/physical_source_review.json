@@ -1,0 +1,53 @@
+{
+  "checked_utc": "2026-10-13T02:50:02.419150+00:00",
+  "status": "three physical citations verified against primary full text",
+  "sources": [
+    {
+      "title": "Metropolis et al., Equation of State Calculations by Fast Computing Machines",
+      "url": "https://www.osti.gov/servlets/purl/4390578",
+      "local": "metropolis1953.pdf",
+      "locations": [
+        "Section II, printed pages5-6",
+        "Acceptance and rejection discussion"
+      ],
+      "verified": [
+        "Downhill proposals accepted; uphill proposals accepted with exp(-DeltaE/kT).",
+        "Rejected proposals still enter configuration averages."
+      ],
+      "limit": "Equilibrium sampling rule does not alone define the report Poisson pair clock.",
+      "download_sha256": "4927ad0be042d70899d178b04d984775d18a7b01b41968ecba19fa74e38091bf"
+    },
+    {
+      "title": "Creutz, Microcanonical Monte Carlo Simulation (1983)",
+      "url": "https://www.latticeguy.net/mypubs/pub070.pdf",
+      "local": "creutz1983.pdf",
+      "locations": [
+        "Printed page1411, Eq4",
+        "Printed page1412, Eqs6-9 and thermal-refresh discussion"
+      ],
+      "verified": [
+        "Retained demon exchanges energy with the system while conserving combined energy.",
+        "Author explicitly considers replacing demon energy by a fresh Boltzmann draw before visits, recovering Metropolis."
+      ],
+      "limit": "Fresh thermal auxiliary energy itself is established prior art; specified barrier gates and pair clocks need their own rate derivation.",
+      "download_sha256": "ef0d33bfac11096d5e5a9334757697d2e2b14ffb451e6677b12fa644bd3ba469"
+    },
+    {
+      "title": "Biswas, Rajesh and Pal, arXiv:2304.06420v2 (23 April2023)",
+      "url": "https://arxiv.org/abs/2304.06420v2",
+      "local": "biswas2023.pdf",
+      "locations": [
+        "Section IV and Figure2",
+        "Section VI and Figure8",
+        "Abstract and conclusions"
+      ],
+      "verified": [
+        "Piecewise-linear Langevin model connects preparation populations and relaxation.",
+        "Examples without a metastable minimum show that metastability is not a general necessary condition."
+      ],
+      "limit": "Mechanism precedent does not derive the four-state rates, exact lumpability, or whole-box certificate.",
+      "download_sha256": "b21feb3c47bdb49244057f13309a5490eec220cb1545dae3b384ba618a947e0a"
+    }
+  ],
+  "scope": "Fixed source correspondence, not exhaustive novelty review. Creutz pages1-2 visually inspected; Metropolis SectionII and Biswas SectionsIV/VI inspected in extracted full text."
+}

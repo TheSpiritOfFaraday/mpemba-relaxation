@@ -1,0 +1,156 @@
+{
+  "reviewed_utc": "2026-10-13T01:46:07.105915+00:00",
+  "groups": {
+    "strongdimension": [
+      "In symmetric coordinates P is an orthogonal projector and H=D^-1/2 P D^-1/2 is positive semidefinite with H q=0; Q equals the squared length of the full slow projection.",
+      "Spectral orthogonality gives exact leading chi-square coefficient Q for any slow multiplicity; KL has half that coefficient. Equal leading coefficients for a specified pair do not settle subleading order.",
+      "Independent exponential zero-count proof: divide a k-term combination by one exponential and differentiate; induction and Rolle give at most k-1 distinct zeros. A k-by-k evaluation matrix at k distinct beta values is therefore nonsingular.",
+      "Positive partition normalizations and invertible D^-1/2 preserve linear independence of up to n Gibbs vectors.",
+      "The kernel of an r-dimensional orthogonal projector has dimension n-r and already contains the transformed bath, leaving at most n-r-1 distinct other Gibbs vectors.",
+      "For attainment, the bath and prescribed preparations span dimension n-r; projection onto the orthogonal complement has rank r and annihilates precisely the desired vectors among the Gibbs curve by the preceding bound.",
+      "S=-I+ss^T+epsilon P is symmetric, kills s, has slow rate -1+epsilon on range P and fast rate -1 on the remaining mean-zero space. Choose 0<epsilon<1 and smaller than all finitely many adverse off-diagonal ratios to retain strictly positive rates.",
+      "Conjugation back to M preserves column conservation and detailed balance; multiplicities are r and n-r-1, including the pure-reset case r=n-1.",
+      "For the unnumbered r=2 finite prescription, independently expanded R=(f^T H f)prime Z-2(f^T H f)Zprime: four pure cubes cancel, twelve double-index and four distinct-index monomials remain.",
+      "Combining coincident exponent sums can only lower the sixteen-term bound. R identically zero would force Q constant zero and P to annihilate a spanning Gibbs family, impossible for positive rank.",
+      "At most fifteen zeros follows by the same exponential Rolle argument. Local positivity away from the isolated bath zero determines the normal derivative sign; a positive cooling or negative heating interval is precisely a magnitude reversal.",
+      "Transcendental root isolation is expressly a finite mathematical prescription, not a general arbitrary-real terminating implementation. The executable rational subclass is reviewed separately."
+    ],
+    "finitechi": [
+      "Weighted Euclidean deviation becomes ordinary Euclidean length after D^-1/2. Orthogonal spectral projectors remove every cross term from its square.",
+      "Grouping repeated eigenvalues leaves at most three distinct nonzero exponentials; subtracting preparations gives signed coefficients A_j. Discard exact zero differences before selecting the leading rate.",
+      "After factoring the largest remaining exponential, F=A+B exp(-at)+C exp(-bt), with 0<a<b. Solving Fprime=0 gives exp((b-a)t)=-bC/(aB).",
+      "The sole candidate is real only for BC<0 and strictly positive only for the ratio greater than one. Equality is the t=0 endpoint, not an interior point.",
+      "Endpoints and the possible critical point contain the global infimum. A negative limiting constant implies negative finite values; zero limits or tangencies alone do not.",
+      "Two exponentials give a monotone factored function, so a purely transient reversal with normal late order needs three distinct nonzero rates. Nonzero three-term combinations have at most two zeros counting multiplicity.",
+      "Initial chi-square identity equals Z(beta_b) Z(2 beta-beta_b)/Z(beta)^2 minus one. Differentiate its logarithm to obtain 2(U_beta-U_(2 beta-beta_b)); strict decrease of U gives strict initial ordering away from the bath on both sides.",
+      "The auxiliary partition argument may be negative, but a finite-level Gibbs sum is defined there and its variance remains positive.",
+      "Transient construction uses exact mutually D-orthogonal rational w,v,u and their weighted projections. Reset minus the middle projector minus twice the fast projector gives the stated ordered rates.",
+      "Choosing rho one above the maximum positive off-diagonal correction ratio makes every transition strictly positive. Rational A>0, B<0, C>0, F(1)>0 and F(-B/(2C))<0 establish two crossings in x in (0,1); exact Sturm count confirms them.",
+      "The construction does not claim triplet failures or useful crossing distances, and the finite-time theorem does not transfer automatically to KL or total variation."
+    ],
+    "inversefeasibility": [
+      "The bath-mean-zero subspace perpendicular to w in the D inner product has dimension two. Rational Gaussian elimination produces U when inputs are rational.",
+      "Signed core M0=-D U B U^T has zero column sums, detailed balance, and null left vectors 1,w. Its symmetric form is -(D^1/2 U) B (D^1/2 U)^T.",
+      "For B positive definite this form has rank two and exactly the stationary and proposed slow directions in its kernel; two complementary eigenvalues are strictly negative.",
+      "Adding rho(q 1^T-I) shifts every nonstationary rate by -rho and permits strictly positive off-diagonal rates for sufficiently large rho. It leaves all F,G unchanged.",
+      "Conversely M+lambda2(q 1^T-I) removes the simple slow eigenvalue and is strictly negative on its two-dimensional complement. A full-rank basis U therefore gives a positive definite B by congruence.",
+      "Trace scaling preserves homogeneous F,G constraints. For B=[[1+x,y],[y,1-x]]/2, eigenvalues are (1 +/- sqrt(x^2+y^2))/2, so positive definiteness requires the open unit disk, not its boundary.",
+      "The minimum-norm point of any nonempty closed half-plane intersection is the origin, a projection to one active boundary line, or an intersection of two independent active lines. This also covers lines, rays, points, and unbounded polyhedra.",
+      "The exact constructor enumerates all those rational candidates, rejects infeasible candidates and radius >=1, and treats inconsistent constant constraints separately.",
+      "Its reported gap det(B)det(U^T D U)/trace(B U^T D U) equals nu1 nu2/(nu1+nu2), a positive lower bound smaller than each fast gap. Rho=max(core_ij,0)+gap/100 guarantees strict rates.",
+      "Positive slack strengthens the half-planes, so infeasibility there cannot exclude the original problem. The return data and regression checks preserve this scope.",
+      "The existing first-contrast regression attains exact minimum squared radius one and is correctly rejected. Independent rational LDL inertia brackets the accepted slow eigenvalue.",
+      "The Farkas obstruction has positive multipliers of F123,F124,G234 summing identically to trace B; full failures imply trace B<=0, contradicting B positive definite. Necessary mode-shape inequalities alone are insufficient."
+    ],
+    "endpoint": [
+      "Under the contrast orientation b is strictly negative throughout cooling, including beta=0, and each prefix overlap has a strictly positive derivative at the bath, so bprime(beta_b)>0.",
+      "For C=w3-w4>=0, the first-three arithmetic restriction makes the conditional mean at zero at least w3>=w4. Its monotonicity gives bprime=P mprime+Pprime(m-w4)>0.",
+      "Strictness holds because either the first-three contrast decomposition is nonconstant and mprime>0, or those three entries coincide and bath mean zero with a nonconstant full mode gives m>w4.",
+      "For C<0, the derivative-curve representation Phi=A+B u+C v(u) is strictly concave, since v is strictly convex. Its left endpoint is w1-w2>=0 and its bath value is positive.",
+      "If the zero-temperature-parameter endpoint Phi(u(0)) is nonnegative, strict concavity places every interior value above the nonnegative endpoint chord, so derivative is strictly positive for every finite beta>0, including endpoint equality.",
+      "If Phi(u(0))<0, concavity and the positive bath value give exactly one right-hand crossing, with no additional left-hand interior zero. Since u decreases with beta, derivative is negative before the turn and positive afterward.",
+      "The turn lies strictly between zero and bath. Because b<0 on cooling, absolute magnitude has its unique maximum there; negative endpoint derivative persists at small finite positive beta and gives admissible witnesses.",
+      "Covariance identity at uniform beta=0 gives the stated sign test. It concerns existence of an asymptotic anomaly and does not decide all transient crossings."
+    ],
+    "onefast": [
+      "Spectral resolution with slow multiplicity n-2 gives M=rho R-delta D z z^T/N, rho=-lambda2>0, delta=lambda2-lambda_n>0, bath mean z zero. Generic substitution gives the printed exact F and G identities.",
+      "Let m be the largest nonzero index and orient z_m>0. Mean zero excludes m=1. For m>=4, all G_ijm order the prefix nonincreasingly.",
+      "Any strict inequality among indices at most m-2 forces z_(m-1)>=0 through G_ij,m-1, hence all preceding entries nonnegative, contradicting weighted mean zero. Thus the first m-2 entries equal a.",
+      "F_12m gives a(a-z_m)<=0 and hence 0<=a<=z_m. Mean zero forces z_(m-1)<0; F_12,m-1 then forces a=0. Support is exactly the adjacent pair (m-1,m).",
+      "For m=3, n>=4 supplies z4=0. G123 orders z1>=z2 and mean zero makes z2<0. F124 forces z1>=0, whereas F134 forces z1<=0. Thus support is (2,3). The m=2 case follows directly from mean zero.",
+      "Normalize the two surviving components to -1/q_k and 1/q_(k+1). The normalized rank-one matrix equals the displayed adjacent-pair generator J with nonzero eigenvalue -1.",
+      "Converse F/G formulas are strictly negative only for triplets containing both pair members; all omitted cases cancel exactly. Positive reset makes all final transition rates strictly positive.",
+      "R acts as -I on zero-total deviations and J is a rank-one negative projection there. The stated multiplicities and the pure-reset case follow without selecting a scalar vector in a repeated slow space.",
+      "Adjacent differences of functions evolve under a Metzler matrix: reset contributes -rho I, and pair mixing adds a diagonal -delta and nonnegative neighboring entries in one column.",
+      "Previously reviewed stochastic-order and likelihood-ratio argument yields all-time convex-divergence ordering. Strict convexity and finite-time invertibility make distinct evolved preparations strictly ordered in divergence.",
+      "For four states, these two spectral multiplicities exhaust degeneracy; several F,G equalities remain in each class, so strict failure of all eight tests forces a simple slow mode.",
+      "The n=3 caveat genuinely uses all three fast-vector components and has positive rates, spectrum 0,-1,-2, F=0 and G=-2/9. The support proof therefore needs n>=4.",
+      "The five-state example has two faster rates, spectrum 0,-1,-1,-2,-3 and K21=-14/27 despite all F,G<=0. It refutes extension of stochastic monotonicity to every repeated slow space, not a thermal no-effect theorem.",
+      "Primary SPSD source Section II explicitly uses a single-pair factor 1+Delta. The correspondence is Delta=delta/[rho(q_k+q_(k+1))]; the report correctly attributes the construction while distinguishing its converse classification."
+    ],
+    "rateendpoint": [
+      "a=uniform-q and d=pi_prime(0) are zero-sum displacements; h=D^-1 a supplies the weighted inner product.",
+      "For simple largest nonzero root r and other roots s,t, polynomial (M-sI)(M-tI)/((r-s)(r-t)) projects onto r on the zero-sum invariant subspace, even if s=t, because reversibility removes Jordan blocks.",
+      "Trace identities s+t=tau-r and st=sigma-tau r+r^2 give exactly the printed scalar quadratic in r after multiplication by h^T and d.",
+      "This quadratic projector need not kill the stationary vector, but d has zero sum, so no missing stationary correction enters the calculation.",
+      "Detailed balance gives the full slow projector D w w^T/(w^T D w), hence the scalar equals pprime(r) b(0)bprime(0)/(w^T D w).",
+      "pprime(r)=(r-s)(r-t)>0 and oriented b(0)<0, so a positive scalar is precisely bprime(0)<0. Exact zero means absence by the preceding endpoint theorem, not ambiguity.",
+      "A repeated largest root is handled by the degenerate-boundary theorem, not by dividing by zero in pprime(r)."
+    ],
+    "rationallog": [
+      "A unique stationary distribution of a rational irreducible generator is rational by exact linear algebra. Detailed balance and ordered positive weights remain explicit hypotheses.",
+      "In bath energy units E=-log q and d=pi_prime(0)=T log(q)/4 with T=I-11^T/4. Applying the rate-projector quadratic gives R(r)=sum c_i log q_i with algebraic coefficients.",
+      "Factoring positive rational weights into prime powers rewrites the scalar as a finite algebraic linear combination of real logarithms of distinct primes. Common weight scaling contributes only a constant vector annihilated by T.",
+      "Unique prime factorization proves rational independence of the distinct prime logarithms; adding 2 pi i preserves independence because their logarithms are real.",
+      "The precise Baker theorem in the cited 1967 primary-source opening statement promotes that rational independence to linear independence over algebraic numbers. This is not a claim of algebraic independence.",
+      "Therefore equality holds iff every prime coefficient is exactly zero in the selected real algebraic field. Nonzero coefficients guarantee a nonzero real sum.",
+      "The positive atanh series and geometric remainder bound enclose every prime logarithm with rational endpoints converging to the true value. Coefficient intervals shrink under algebraic root refinement.",
+      "Finite sums of interval products converge; a nonzero target is eventually separated from zero. This proves termination without a uniform complexity bound. Exact cancellation returns equality before refinement.",
+      "Implementation range-reduces each prime to 2^k times a rational in [1,2), uses terms indexed consistently with remainder 2*z^(2*terms+1)/((2*terms+1)*(1-z^2)), and refines the correct CRootOf atom for scaled algebraic expressions.",
+      "Input checking rejects floats, nonrational data, unordered weights, nonpositive rates and violated triplet premise. Limited refinement returns verified=false and ordinary_cooling=null, never false absence.",
+      "Independent audits cover repeated slow and repeated fast roots, weight/time scaling, all three real embeddings, nested logarithm bounds, exact equality, and opposite near-zero signs that are unresolved under a one-round cap."
+    ],
+    "commensurate_implementation": [
+      "Shifting integer exponents preserves probabilities and leaves nonnegative exponents, so Z and N are genuine polynomials; x=exp(-beta Delta) reverses temperature-coordinate orientation but does not change whether an interior derivative changes sign.",
+      "All-roots ordering selects the largest real nonzero eigenvalue. Connected nonnegative edge input guarantees stationary simplicity; detailed balance gives real diagonalizability.",
+      "Simple-mode adjugate columns are reduced in the exact algebraic field and a nonzero column is selected. The exact eigenpair and bath mean are checked explicitly.",
+      "A repeated root of a rational cubic must be rational: an irrational minimal polynomial of degree at least two repeated twice would require degree at least four. The remaining root is rational too.",
+      "For rank two, P=L(L-fast I)/(alpha(alpha-fast)) is the observable slow projector. H=P D^-1 equals the required symmetric probability amplitude form; reset uses I-1q^T.",
+      "Square-free factorization retains odd derivative-root multiplicities only; these are exactly sign changes. A fixed derivative sign together with the bath zero precludes a magnitude reversal; any nonmonotonic magnitude forces a derivative sign change.",
+      "Strong preparations are counted from the square-free thermal numerator with all multiplicities counted once, including even roots. The nonnegative rank-two numerator is handled the same way.",
+      "Endpoint factors are divided out exactly before open-interval Sturm counts. Zero, one, and bath roots cannot enter the finite nonbath count.",
+      "Sturm remainder construction in the installed SymPy implementation uses field arithmetic and exact remainders, not an assumed algebraic ordering. All sequence endpoint signs are then determined with the explicit real embedding.",
+      "OrderedField first detects exact algebraic zero, then uses rational Horner interval refinement for nonzero signs. A nonzero value is eventually separated from zero, and a rational multiple of CRootOf uses its root atom consistently.",
+      "The 16-case suite covers all multiplicities, endpoint equality, tangencies, nonuniform spacing, scaled roots and connected zero-rate graphs. The inverse audit separately includes exact radius-one rejection.",
+      "Found and repaired a supporting audit bug: classifier_audit.py could discard a truly interior derivative root when its finite isolating interval touched the bath endpoint. The production exact classifier did not use this shortcut.",
+      "A rational thermal numerator N=x+(-8/17+10^-30)x^3 reproduces the missed-root case: derivative has positive sign at x=1/2 and negative at1, but the old midpoint reference saw only negative. The new rational odd-factor counter returns one sign change.",
+      "Thirteen dedicated boundary tests include that regression, exact endpoint exclusion, odd/even multiplicities, near-zero and near-one roots, and agreement with the production ordered algebraic counter."
+    ]
+  },
+  "step_count": 89,
+  "sources": {
+    "research/degenerate_extension.tex": "9cff2a2a77b4443d5e8a7255c0f6fffcdfd2e7fb21bed3b67963ae4b94e9f84c",
+    "research/finite_chi_classification.tex": "bc62c3a833ec36a3b62df2dcdd0298dbc09563be9413b4974d3bbcfc6accf399",
+    "research/mode_realizability.tex": "78087d899fc99fa8aec4020ae31c34113448e3d76efa68e610ca01d8f9dc1e05",
+    "research/commensurate_classification.tex": "0ee89e2de71d8e82e1e2e5d259369120554f43374bdc2bf2b15ac5509909fa8c",
+    "research/full_triplet_endpoint_criterion.tex": "2491de3fa29892cc94601a10745c54c03c1d18e991113951742f31e5f20ea9b9",
+    "research/one_fast_mode_classification.tex": "9f1df47cfb1fd7be728d9c02ec1ec01dc8312f31d7f6784b7553189d0f8f5ac6",
+    "research/rate_endpoint_criterion.tex": "1f178def829e78c6aad30465db140877e18921507992c613242c08b56b3b4c98",
+    "research/rational_log_endpoint.tex": "670b86eb3e00b8cf2cc7de6b44f5ec6e9b793f39b7b9af366b9ecba16b6a6fbe",
+    "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+    "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+    "research/exact_mode_realizability.py": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8",
+    "research/test_exact_commensurate_classifier.py": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15",
+    "research/inverse_realizability_audit.py": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+    "research/transient_only_chi_certificate.py": "96efa7d783341df805e08063891fe8ffa8b6237f86477a57e16d753b167cf10a",
+    "research/degenerate_exact_certificate.py": "9615b774d71bbfc8e5ca4715468ea5db35e8d5f26fe72b691594ed65a6fe5011",
+    "research/one_fast_mode_certificate.py": "38c44b81268b75299fea66c12440b71521114ac193453211eac1c16334de55be",
+    "research/extended_mode_obstruction_certificate.py": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac",
+    "research/five_state_degenerate_nonmonotone.py": "c47bb249e6363f3625d58f9406a5bfddb7096109ca0a0ea91faebc6b429bea5b",
+    "research/classifier_audit.py": "2c55f4831fa1aa0f22cc4790e8f56e215d37d187654bbcd45fc61dcdcad92069",
+    "research/exact_polynomial_reference.py": "a23e0e78f64f4e9201e4b296e535435190f97a274fe218d70d8e00afc6c801d1",
+    "research/test_polynomial_reference.py": "30ac65f98873feb5327e95c533d7eaa71c1c7f0f489eea2d422ddbe07e0aeac4"
+  },
+  "primary_source_checks": [
+    {
+      "url": "https://arxiv.org/html/2609.09988v1",
+      "location": "Section II, lines115-119",
+      "finding": "Single-pair factor and positive/negative deviation cases match the report mapping."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/mathematika/article/abs/linear-forms-in-the-logarithms-of-algebraic-numbers-ii/123780AC339E1DAD5460D936F2C863CE",
+      "location": "Opening extract, publication June1967, pp102-107",
+      "finding": "States the rational-independence plus2pii hypothesis and algebraic-linear-independence conclusion used in the exact endpoint equality argument."
+    }
+  ],
+  "scope": "Analytic proof and implementation review of listed sections; does not certify all remaining project claims, all dependencies, or empirical physical validity. External source theorem is applied, not re-proved here.",
+  "repair_and_replay_evidence": {
+    "research/classifier_audit.py": "2c55f4831fa1aa0f22cc4790e8f56e215d37d187654bbcd45fc61dcdcad92069",
+    "research/exact_polynomial_reference.py": "a23e0e78f64f4e9201e4b296e535435190f97a274fe218d70d8e00afc6c801d1",
+    "research/test_polynomial_reference.py": "30ac65f98873feb5327e95c533d7eaa71c1c7f0f489eea2d422ddbe07e0aeac4",
+    "research/detailed_audit/polynomial_reference_repair.json": "85653f0bfecde9226ac23453246b9b036d1d677ecb88325c6d1a7324c0970fe3",
+    "research/detailed_audit/classifier_reference_repaired.log": "7c4a6ecbc2d41f2156f953705e1ccc3ca5910bb7ff1600190b5f449222f51501",
+    "research/detailed_audit/20261013T014313Z_classifiers/receipt.json": "7a3d290f0101ed2a98486c34d7e28d92a267de44efcca6749e44408be39edb05"
+  },
+  "repair_replay_scope": "Supporting polynomial reference fixed; regression result and completed replay log pinned. Production exact classifier unchanged. Source review and replay are not a proof of all project claims."
+}

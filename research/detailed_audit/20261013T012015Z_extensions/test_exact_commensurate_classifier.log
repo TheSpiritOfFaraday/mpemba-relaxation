@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "test_count": 16,
+  "names": [
+    "both strong directions",
+    "tangent strong root",
+    "infinite-temperature root excluded",
+    "stationary tangency is not an effect",
+    "bath threshold equality",
+    "double slow mode",
+    "triple slow reset",
+    "irrational cubic slow mode",
+    "zero rates connected chain",
+    "nonuniform commensurate spacing",
+    "scaled algebraic slow root",
+    "ordered algebraic embedding regression",
+    "scaled algebraic embedding regression",
+    "noninteger exponent",
+    "disconnected",
+    "equal energies"
+  ],
+  "elapsed_seconds": 1.901947021484375
+}

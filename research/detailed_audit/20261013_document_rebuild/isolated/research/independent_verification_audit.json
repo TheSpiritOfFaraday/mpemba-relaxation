@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-11",
+  "objective": "Address criticism 2: exact arithmetic alone does not rule out conceptual or implementation errors",
+  "approach": "Separate implementation of a mathematically different proof for the same primary counterexample, plus explicit auditable derivation",
+  "requirements": [
+    {
+      "requirement": "Rebuild and check the intended primary model without importing certificate data",
+      "status": "verified",
+      "evidence": "standalone_primary_check.py hardcodes only printed q/rates and rational trial values; its emitted generator and inputs match the main certificate exactly; separate isolated execution succeeds"
+    },
+    {
+      "requirement": "Check original predicates without depending on the cone-equivalence lemma",
+      "status": "verified",
+      "evidence": "Direct upper/lower branch disjunction evaluated on all four original-rate triplets; adversarial rate perturbation rejected"
+    },
+    {
+      "requirement": "Certify the correct slow mode by a different route",
+      "status": "verified",
+      "evidence": "Exact LDL congruence counts at six rational shifts establish three simple negative eigenvalue brackets; weighted residual bound excludes contamination by faster modes"
+    },
+    {
+      "requirement": "Prove the strict thermal comparison with rigorous error bounds",
+      "status": "verified",
+      "evidence": "Integer-only nth-root bisection and signed numerator/positive denominator enclosures; mode error1/195000000; normalized advantage strictly exceeds1/10000"
+    },
+    {
+      "requirement": "Provide a mathematical argument a reviewer can inspect",
+      "status": "verified",
+      "evidence": "Report section6.2 derives congruence counts, spectral residual projection bound, uniform overlap error, Gibbs enclosures and normalization; rendered pages12-14 inspected"
+    },
+    {
+      "requirement": "Exercise failure paths and demonstrate runtime independence",
+      "status": "verified",
+      "evidence": "Ten tests pass in normal and optimized Python; copied checker runs alone in a temporary directory with -I -S; wrong mode/vector, transposition, predicate and temperatures rejected; known-spectrum and root arithmetic checked"
+    },
+    {
+      "requirement": "Calibrate claims of independent verification",
+      "status": "verified",
+      "evidence": "Report and RUNME distinguish algorithmic independence from external authorship, human peer review or proof-assistant verification; trusted arithmetic stated; finite-time certificate scope kept separate"
+    },
+    {
+      "requirement": "Deliver usable revised report and reproduction commands",
+      "status": "verified",
+      "evidence": "RUNME updated; generated standalone TeX compiles; Tectonic export has no overfull boxes or unresolved references; complete17-page layout reviewed"
+    }
+  ],
+  "imports": [
+    "fractions",
+    "itertools",
+    "json",
+    "sys"
+  ],
+  "new_checker_result": {
+    "verified": true,
+    "normalized_margin_lower_bound": "32981589695976893251877853551567703/318978998817940547330819958835051250000"
+  },
+  "outstanding_required_work": [],
+  "remaining_limits": [
+    "No external human peer review obtained",
+    "Not a formally verified checker",
+    "Python exact arithmetic implementation remains trusted",
+    "Alternative checker does not independently verify finite-time crossing intervals"
+  ]
+}

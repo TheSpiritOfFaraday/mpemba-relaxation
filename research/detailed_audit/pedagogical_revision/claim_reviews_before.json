@@ -1,0 +1,918 @@
+{
+  "focused_paper.tex:1": {
+    "statement_sha256": "27a04cfb50eae86938a8402c3667901ec17ddd0050e77d26b5a8b1d826588928",
+    "source_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/review_notes.json",
+      "research/detailed_audit/source_correspondence.json"
+    ],
+    "steps": [
+      "C(1+t)>0, so the kappa branch is the sign of H.",
+      "Expand F=hG+dH; h,d positive from ordered positive weights.",
+      "H positive: failure F<=0 implies G<0.",
+      "H negative: failure G<=0 implies F<0.",
+      "H zero: both inclusive branches apply and F=hG.",
+      "Converse: neither strict sign test can pass if both F,G are nonpositive.",
+      "Fixed weights make each F,G linear; equality faces retained."
+    ],
+    "limitations": "No conclusion about the other numbered statements is inferred from this sign-off."
+  },
+  "focused_paper.tex:2": {
+    "statement_sha256": "cab13b8cebad7df00ce8a01407299b5b451e9d06c17b79db4cb9fb74f55d3adf",
+    "source_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/freshman_arithmetic.json",
+      "research/detailed_audit/lean_recheck.log",
+      "research/detailed_audit/publication_consistency.json"
+    ],
+    "steps": [
+      "Exact positive rates, conservation and detailed balance reconstructed.",
+      "Original triplet predicates fail with all printed strict margins.",
+      "Characteristic polynomial completely factors with fast roots in disjoint intervals.",
+      "Nonzero finite thermal overlaps have reversed absolute ordering.",
+      "Initial Dq cold<24<hot checked by rational enclosures.",
+      "Lean theorem statement and Gibbs/distance definitions inspected, with literal matrix correspondence.",
+      "Fresh Lean compilation and standard-axiom audit establish initial-to-eventual reversal."
+    ],
+    "limitations": "No conclusion about the other numbered statements is inferred from this sign-off."
+  },
+  "research_report.tex:1": {
+    "statement_sha256": "739e28723c73d816d4fbf978c84b6d05ecdf553498d3b55e4ec21e0977a9a907",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/review_notes.json",
+      "research/detailed_audit/source_correspondence.json"
+    ],
+    "steps": [
+      "C(1+t)>0, so the kappa branch is the sign of H.",
+      "Expand F=hG+dH; h,d positive from ordered positive weights.",
+      "H positive: failure F<=0 implies G<0.",
+      "H negative: failure G<=0 implies F<0.",
+      "H zero: both inclusive branches apply and F=hG.",
+      "Converse: neither strict sign test can pass if both F,G are nonpositive.",
+      "Fixed weights make each F,G linear; equality faces retained."
+    ],
+    "limitations": "No conclusion about the other numbered statements is inferred from this sign-off."
+  },
+  "focused_appendices.tex:1": {
+    "statement_sha256": "739e28723c73d816d4fbf978c84b6d05ecdf553498d3b55e4ec21e0977a9a907",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/review_notes.json",
+      "research/detailed_audit/source_correspondence.json"
+    ],
+    "steps": [
+      "C(1+t)>0, so the kappa branch is the sign of H.",
+      "Expand F=hG+dH; h,d positive from ordered positive weights.",
+      "H positive: failure F<=0 implies G<0.",
+      "H negative: failure G<=0 implies F<0.",
+      "H zero: both inclusive branches apply and F=hG.",
+      "Converse: neither strict sign test can pass if both F,G are nonpositive.",
+      "Fixed weights make each F,G linear; equality faces retained."
+    ],
+    "limitations": "No conclusion about the other numbered statements is inferred from this sign-off."
+  },
+  "focused_paper.tex:4": {
+    "statement_sha256": "95445904cb9575e4124139323cb95fb9fc0160a0e0ed1e56678c0fe1ddb8f501",
+    "source_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "B is positively diagonally similar to symmetric Metzler A; choose nonnegative top eigenvector x. Expanding Hx gives both easy inequalities and w1+w2-2w3=(2Q3/q3)(x2-sx1).",
+      "G puts a minimum reduced conductance in the first row. Subtracting k*(q 1transpose-Q4 I) leaves nonnegative reversible conservative rates with at least one of a12,a13,a14 zero.",
+      "Reset contributions cancel in F and G. Contrast B shifts by k*Q4 I, preserving eigenvectors, ordering and simple multiplicity. Dirichlet form gives shifted lambda<=0 even when reducible.",
+      "If x1=0 the desired inequality is immediate. Otherwise symmetric Rayleigh quotient gives lambda>=B33.",
+      "If equality held, positive semidefiniteness of lambda I-A forces its third row to vanish, by principal two-by-two minors. Then e3 is a top eigenvector; simplicity implies x1=0, contradiction. Thus delta=lambda-B33>0, including lambda=0.",
+      "Eliminating x3 gives Eij=Bij+Bi3 B3j/delta. Positive-pivot Schur complement preserves semidefiniteness and nullity one, so lambda is its simple top eigenvalue. Off-diagonals remain nonnegative.",
+      "For positive off-diagonals, r=x2/x1 is the unique positive zero of E21+r(E22-E11)-r^2 E12. Nonnegative value at s>0 implies s<=r.",
+      "If one off-diagonal vanishes, diagonal symmetrizability makes both vanish. Simple top eigenvalue and x1>0 force x2=0 and E11>E22, making the polynomial strictly negative at s>0. Nonnegativity excludes this boundary case.",
+      "Verified delta times the ratio polynomial equals delta C+D*. G gives B31,B32>=0; G134 and G234 bound the two negative terms in B23-s B13. Thus D*>=0.",
+      "For C>=0 the sign follows immediately. For C<0, lambda<=0 gives delta C+D*>=-B33 C+D*, with the correct inequality direction.",
+      "Verified the positive prefactor times T=(c+e+f)N+q4(2ceq3(q1-q2)+fJ), where N=-2q1q2q3 F123>=0.",
+      "Face c=0 gives J>=0. Face a=0 writes J as (2q1+q3)/(2q1+q4) times -2q1q2 F124 plus 2e q1(q1-q2)(q3-q4)/(2q1+q4). Both terms are nonnegative without dividing by c or e.",
+      "For b=0, N=2a q2q3(q1-q2)+d q1q3(2q2+q3). If c<=e, J=(e-c)q1(2q2+q3)+c q3(q1-q2)>=0.",
+      "For b=0,c>e, N+q4J=2q1q2(q3-q4)(c-e)+d q1q3(2q2+q3)-2q1q2q3 F124>=0. Rewrite T=(c+e)N+f(N+q4J)+2ceq3q4(q1-q2).",
+      "The three zero-rate faces are exhaustive after reset and allow overlaps. No irreducibility of the shifted generator is assumed. This completes x2>=s x1, hence the stated first-three inequalities.",
+      "The focused lemma also asserts negative overlap on cooling, supplied by the separately reviewed contrast-sign theorem.",
+      "Combining the structural lemma with the previously checked conditional-average argument proves the strict finite-parameter upper bound. Full family admissibility for sharpness remains separate; neither sharp-bound theorem is marked fully reviewed."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "research_report.tex:3": {
+    "statement_sha256": "0fa0dbc9082fdd87600c63a0ac54913538c2d7fa944d2561b28f00c012e76938",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "All excited-state coefficients in N are negative, so Nprime>0. N(1)=0 then gives strict overlap signs on both sides, including beta=0.",
+      "Expanded Nprime Z-N Zprime into (w_i-w_j)(E_j-E_i)exp(-beta(E_i+E_j)); checked all six signs and c13>c23.",
+      "Regrouped J=exp(beta E4)D exactly. E4>E2+E3 makes the exponents positive; c13>c23 makes the inner factor positive. Every nonconstant summand strictly increases.",
+      "J(1)>0 follows from Nprime(1)Z(1)>0. J(0)<0 gives exactly one root in (0,1); J(0)>=0 gives none for beta>0, including equality.",
+      "Since b<0 on cooling, the unique derivative sign change is a magnitude maximum. Two positive beta values before it give finite preparations; no infinite-temperature witness is required.",
+      "On heating beta>1, J and b are positive, so the overlap magnitude has ordinary ordering.",
+      "Checked exact family bath orthogonality, conservation, detailed balance, and all four eigenvector equations. First equation gives lambda; second and fourth determine the varying rates.",
+      "Reviewed Bernstein conversion on z=lo+(hi-lo)t: coefficient k is sum_j<=k power_j binomial(k,j)/binomial(n,j). Positive coefficients and positive denominators certify every point of the interval.",
+      "Reviewed continuous checks of both varying-rate bounds, all eight strict F/G margins, branch signs, eigenvalue interval and mode hypotheses; rational inequalities do not accept floating samples.",
+      "Baseline symmetric form diag(q)(M0 transpose+50I) has nonzero LDL pivots with signs +,-,+,-. Congruence inertia gives exactly two eigenvalues below -50.",
+      "Increasing reversible rates increases the nonnegative Dirichlet form. Min-max preserves two eigenvalues below -50. Explicit lambda lies in (-20,-19); zero is simple by positivity. Four eigenvalues are exhausted, so the constructed mode is simple and slowest.",
+      "Second spectral check uses trace and trace-square to determine the residual quadratic. Reversibility gives real roots; positive value at -50 and mean below -50 place both below -50.",
+      "Substituting r=r0+eta z gives D0=U-Vz. Rational log enclosures establish V>0 and the strict printed bracket for U/V.",
+      "Log implementation reduces arguments to [1,2], uses t=(a-1)/(a+1) and the positive series; its remainder is at most 2t^(2m+1)/((2m+1)(1-t^2)). Checked endpoints and rounding direction.",
+      "Fixed-pair overlaps have affine form u+zv and are both negative. Positive v_h-v_c makes reversal equivalent to z>-(u_h-u_c)/(v_h-v_c). Integer-power bisection encloses each rational power.",
+      "At onset Jprime>0 and D=0 imply d*>0. D0=-V delta and Z0=4 give bprime(0)=-V delta/16 and bdoubleprime(0,z*)=d*/16. Taylor expansion gives beta_m=V delta/d*+O(delta^2) and magnitude gain V^2 delta^2/(32d*)+O(delta^3)."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "research_report.tex:4": {
+    "statement_sha256": "538e56dd02ca2df982a0959cd5fffd816f558eedc4439039d2d41b3c93fbf3f9",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "All excited-state coefficients in N are negative, so Nprime>0. N(1)=0 then gives strict overlap signs on both sides, including beta=0.",
+      "Expanded Nprime Z-N Zprime into (w_i-w_j)(E_j-E_i)exp(-beta(E_i+E_j)); checked all six signs and c13>c23.",
+      "Regrouped J=exp(beta E4)D exactly. E4>E2+E3 makes the exponents positive; c13>c23 makes the inner factor positive. Every nonconstant summand strictly increases.",
+      "J(1)>0 follows from Nprime(1)Z(1)>0. J(0)<0 gives exactly one root in (0,1); J(0)>=0 gives none for beta>0, including equality.",
+      "Since b<0 on cooling, the unique derivative sign change is a magnitude maximum. Two positive beta values before it give finite preparations; no infinite-temperature witness is required.",
+      "On heating beta>1, J and b are positive, so the overlap magnitude has ordinary ordering.",
+      "Checked exact family bath orthogonality, conservation, detailed balance, and all four eigenvector equations. First equation gives lambda; second and fourth determine the varying rates.",
+      "Reviewed Bernstein conversion on z=lo+(hi-lo)t: coefficient k is sum_j<=k power_j binomial(k,j)/binomial(n,j). Positive coefficients and positive denominators certify every point of the interval.",
+      "Reviewed continuous checks of both varying-rate bounds, all eight strict F/G margins, branch signs, eigenvalue interval and mode hypotheses; rational inequalities do not accept floating samples.",
+      "Baseline symmetric form diag(q)(M0 transpose+50I) has nonzero LDL pivots with signs +,-,+,-. Congruence inertia gives exactly two eigenvalues below -50.",
+      "Increasing reversible rates increases the nonnegative Dirichlet form. Min-max preserves two eigenvalues below -50. Explicit lambda lies in (-20,-19); zero is simple by positivity. Four eigenvalues are exhausted, so the constructed mode is simple and slowest.",
+      "Second spectral check uses trace and trace-square to determine the residual quadratic. Reversibility gives real roots; positive value at -50 and mean below -50 place both below -50.",
+      "Substituting r=r0+eta z gives D0=U-Vz. Rational log enclosures establish V>0 and the strict printed bracket for U/V.",
+      "Log implementation reduces arguments to [1,2], uses t=(a-1)/(a+1) and the positive series; its remainder is at most 2t^(2m+1)/((2m+1)(1-t^2)). Checked endpoints and rounding direction.",
+      "Fixed-pair overlaps have affine form u+zv and are both negative. Positive v_h-v_c makes reversal equivalent to z>-(u_h-u_c)/(v_h-v_c). Integer-power bisection encloses each rational power.",
+      "At onset Jprime>0 and D=0 imply d*>0. D0=-V delta and Z0=4 give bprime(0)=-V delta/16 and bdoubleprime(0,z*)=d*/16. Taylor expansion gives beta_m=V delta/d*+O(delta^2) and magnitude gain V^2 delta^2/(32d*)+O(delta^3)."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "research_report.tex:8": {
+    "statement_sha256": "9c1fbf802b6f1b517a2aaa005ca1262472cf4166ee2ead4e7c5826e3ed1b3b7c",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "G_ijk=q_j(k_ik-k_jk), with q_j positive, establishes exact equivalence to ordered reduced conductances.",
+      "Every prefix contrast has q-mean zero. Its product with a longer contrast sums to zero; norm squared is Q_k Q_(k+1)/q_(k+1). The n-1 nonzero orthogonal vectors span the mean-zero space.",
+      "Detailed balance makes normalized contrast generator A symmetric. Derived Lh_l for i<=k+1<=l, then subtracted the k+1 value to obtain the printed off-diagonal identity with nonnegative differences.",
+      "Shifting A by cI makes every entry nonnegative. The exponential series then proves exp(tA)>=0 with strictly positive diagonal at finite t>=0.",
+      "Derived Gibbs contrast numerator using Q_k/q_(k+1)=sum exp(beta_b(E_(k+1)-E_i)). Positive gaps give the same strict sign in every coordinate on either side of the bath.",
+      "On heating N,T>0; Nprime/N>-E_(k+1) and Tprime/T<=-E_(k+1). The quotient derivative is strictly positive.",
+      "Likelihood ratio has constant coefficient one and contrast coordinates g; reversibility evolves them by exp(tA). Its positive diagonal preserves strict positive coordinate differences.",
+      "Orthonormality equates weighted squared distance with squared coordinate norm, proving the strict all-time heating inequality for that distance.",
+      "Spectral expansion gives Pi2=lim exp(-lambda2 t)exp(tA), nonnegative and nonzero. A vector with all entries of the same strict sign cannot be annihilated, including degenerate slow eigenspaces.",
+      "Nonzero orthogonal projection has a positive diagonal entry. With g,gprime>0, this gives 2(Pi2 g) dot (Pi2 gprime)>0. The local KL expansion has the same leading squared norm.",
+      "For simple slow mode, maximizing the symmetric quadratic form over the sphere and replacing coordinates by absolute values gives a nonnegative top eigenvector. Its dot product with g gives the stated strict overlap signs and heating monotonicity.",
+      "Specialized the off-diagonal formula to the three printed aggregate inequalities for four states. The subsequent single-cooling-interval paragraph still depends on the separately unreviewed global stationary-point bound."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "research_report.tex:20": {
+    "statement_sha256": "001c75dc0a2fb19e3135ea3e48a762bddbbe46287350697c9c2fc86ca059a181",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "B is positively diagonally similar to symmetric Metzler A; choose nonnegative top eigenvector x. Expanding Hx gives both easy inequalities and w1+w2-2w3=(2Q3/q3)(x2-sx1).",
+      "G puts a minimum reduced conductance in the first row. Subtracting k*(q 1transpose-Q4 I) leaves nonnegative reversible conservative rates with at least one of a12,a13,a14 zero.",
+      "Reset contributions cancel in F and G. Contrast B shifts by k*Q4 I, preserving eigenvectors, ordering and simple multiplicity. Dirichlet form gives shifted lambda<=0 even when reducible.",
+      "If x1=0 the desired inequality is immediate. Otherwise symmetric Rayleigh quotient gives lambda>=B33.",
+      "If equality held, positive semidefiniteness of lambda I-A forces its third row to vanish, by principal two-by-two minors. Then e3 is a top eigenvector; simplicity implies x1=0, contradiction. Thus delta=lambda-B33>0, including lambda=0.",
+      "Eliminating x3 gives Eij=Bij+Bi3 B3j/delta. Positive-pivot Schur complement preserves semidefiniteness and nullity one, so lambda is its simple top eigenvalue. Off-diagonals remain nonnegative.",
+      "For positive off-diagonals, r=x2/x1 is the unique positive zero of E21+r(E22-E11)-r^2 E12. Nonnegative value at s>0 implies s<=r.",
+      "If one off-diagonal vanishes, diagonal symmetrizability makes both vanish. Simple top eigenvalue and x1>0 force x2=0 and E11>E22, making the polynomial strictly negative at s>0. Nonnegativity excludes this boundary case.",
+      "Verified delta times the ratio polynomial equals delta C+D*. G gives B31,B32>=0; G134 and G234 bound the two negative terms in B23-s B13. Thus D*>=0.",
+      "For C>=0 the sign follows immediately. For C<0, lambda<=0 gives delta C+D*>=-B33 C+D*, with the correct inequality direction.",
+      "Verified the positive prefactor times T=(c+e+f)N+q4(2ceq3(q1-q2)+fJ), where N=-2q1q2q3 F123>=0.",
+      "Face c=0 gives J>=0. Face a=0 writes J as (2q1+q3)/(2q1+q4) times -2q1q2 F124 plus 2e q1(q1-q2)(q3-q4)/(2q1+q4). Both terms are nonnegative without dividing by c or e.",
+      "For b=0, N=2a q2q3(q1-q2)+d q1q3(2q2+q3). If c<=e, J=(e-c)q1(2q2+q3)+c q3(q1-q2)>=0.",
+      "For b=0,c>e, N+q4J=2q1q2(q3-q4)(c-e)+d q1q3(2q2+q3)-2q1q2q3 F124>=0. Rewrite T=(c+e)N+f(N+q4J)+2ceq3q4(q1-q2).",
+      "The three zero-rate faces are exhaustive after reset and allow overlaps. No irreducibility of the shifted generator is assumed. This completes x2>=s x1, hence the stated first-three inequalities.",
+      "The focused lemma also asserts negative overlap on cooling, supplied by the separately reviewed contrast-sign theorem.",
+      "Combining the structural lemma with the previously checked conditional-average argument proves the strict finite-parameter upper bound. Full family admissibility for sharpness remains separate; neither sharp-bound theorem is marked fully reviewed."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "focused_appendices.tex:3": {
+    "statement_sha256": "0fa0dbc9082fdd87600c63a0ac54913538c2d7fa944d2561b28f00c012e76938",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "All excited-state coefficients in N are negative, so Nprime>0. N(1)=0 then gives strict overlap signs on both sides, including beta=0.",
+      "Expanded Nprime Z-N Zprime into (w_i-w_j)(E_j-E_i)exp(-beta(E_i+E_j)); checked all six signs and c13>c23.",
+      "Regrouped J=exp(beta E4)D exactly. E4>E2+E3 makes the exponents positive; c13>c23 makes the inner factor positive. Every nonconstant summand strictly increases.",
+      "J(1)>0 follows from Nprime(1)Z(1)>0. J(0)<0 gives exactly one root in (0,1); J(0)>=0 gives none for beta>0, including equality.",
+      "Since b<0 on cooling, the unique derivative sign change is a magnitude maximum. Two positive beta values before it give finite preparations; no infinite-temperature witness is required.",
+      "On heating beta>1, J and b are positive, so the overlap magnitude has ordinary ordering.",
+      "Checked exact family bath orthogonality, conservation, detailed balance, and all four eigenvector equations. First equation gives lambda; second and fourth determine the varying rates.",
+      "Reviewed Bernstein conversion on z=lo+(hi-lo)t: coefficient k is sum_j<=k power_j binomial(k,j)/binomial(n,j). Positive coefficients and positive denominators certify every point of the interval.",
+      "Reviewed continuous checks of both varying-rate bounds, all eight strict F/G margins, branch signs, eigenvalue interval and mode hypotheses; rational inequalities do not accept floating samples.",
+      "Baseline symmetric form diag(q)(M0 transpose+50I) has nonzero LDL pivots with signs +,-,+,-. Congruence inertia gives exactly two eigenvalues below -50.",
+      "Increasing reversible rates increases the nonnegative Dirichlet form. Min-max preserves two eigenvalues below -50. Explicit lambda lies in (-20,-19); zero is simple by positivity. Four eigenvalues are exhausted, so the constructed mode is simple and slowest.",
+      "Second spectral check uses trace and trace-square to determine the residual quadratic. Reversibility gives real roots; positive value at -50 and mean below -50 place both below -50.",
+      "Substituting r=r0+eta z gives D0=U-Vz. Rational log enclosures establish V>0 and the strict printed bracket for U/V.",
+      "Log implementation reduces arguments to [1,2], uses t=(a-1)/(a+1) and the positive series; its remainder is at most 2t^(2m+1)/((2m+1)(1-t^2)). Checked endpoints and rounding direction.",
+      "Fixed-pair overlaps have affine form u+zv and are both negative. Positive v_h-v_c makes reversal equivalent to z>-(u_h-u_c)/(v_h-v_c). Integer-power bisection encloses each rational power.",
+      "At onset Jprime>0 and D=0 imply d*>0. D0=-V delta and Z0=4 give bprime(0)=-V delta/16 and bdoubleprime(0,z*)=d*/16. Taylor expansion gives beta_m=V delta/d*+O(delta^2) and magnitude gain V^2 delta^2/(32d*)+O(delta^3)."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "focused_appendices.tex:4": {
+    "statement_sha256": "538e56dd02ca2df982a0959cd5fffd816f558eedc4439039d2d41b3c93fbf3f9",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "All excited-state coefficients in N are negative, so Nprime>0. N(1)=0 then gives strict overlap signs on both sides, including beta=0.",
+      "Expanded Nprime Z-N Zprime into (w_i-w_j)(E_j-E_i)exp(-beta(E_i+E_j)); checked all six signs and c13>c23.",
+      "Regrouped J=exp(beta E4)D exactly. E4>E2+E3 makes the exponents positive; c13>c23 makes the inner factor positive. Every nonconstant summand strictly increases.",
+      "J(1)>0 follows from Nprime(1)Z(1)>0. J(0)<0 gives exactly one root in (0,1); J(0)>=0 gives none for beta>0, including equality.",
+      "Since b<0 on cooling, the unique derivative sign change is a magnitude maximum. Two positive beta values before it give finite preparations; no infinite-temperature witness is required.",
+      "On heating beta>1, J and b are positive, so the overlap magnitude has ordinary ordering.",
+      "Checked exact family bath orthogonality, conservation, detailed balance, and all four eigenvector equations. First equation gives lambda; second and fourth determine the varying rates.",
+      "Reviewed Bernstein conversion on z=lo+(hi-lo)t: coefficient k is sum_j<=k power_j binomial(k,j)/binomial(n,j). Positive coefficients and positive denominators certify every point of the interval.",
+      "Reviewed continuous checks of both varying-rate bounds, all eight strict F/G margins, branch signs, eigenvalue interval and mode hypotheses; rational inequalities do not accept floating samples.",
+      "Baseline symmetric form diag(q)(M0 transpose+50I) has nonzero LDL pivots with signs +,-,+,-. Congruence inertia gives exactly two eigenvalues below -50.",
+      "Increasing reversible rates increases the nonnegative Dirichlet form. Min-max preserves two eigenvalues below -50. Explicit lambda lies in (-20,-19); zero is simple by positivity. Four eigenvalues are exhausted, so the constructed mode is simple and slowest.",
+      "Second spectral check uses trace and trace-square to determine the residual quadratic. Reversibility gives real roots; positive value at -50 and mean below -50 place both below -50.",
+      "Substituting r=r0+eta z gives D0=U-Vz. Rational log enclosures establish V>0 and the strict printed bracket for U/V.",
+      "Log implementation reduces arguments to [1,2], uses t=(a-1)/(a+1) and the positive series; its remainder is at most 2t^(2m+1)/((2m+1)(1-t^2)). Checked endpoints and rounding direction.",
+      "Fixed-pair overlaps have affine form u+zv and are both negative. Positive v_h-v_c makes reversal equivalent to z>-(u_h-u_c)/(v_h-v_c). Integer-power bisection encloses each rational power.",
+      "At onset Jprime>0 and D=0 imply d*>0. D0=-V delta and Z0=4 give bprime(0)=-V delta/16 and bdoubleprime(0,z*)=d*/16. Taylor expansion gives beta_m=V delta/d*+O(delta^2) and magnitude gain V^2 delta^2/(32d*)+O(delta^3)."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "focused_appendices.tex:8": {
+    "statement_sha256": "9c1fbf802b6f1b517a2aaa005ca1262472cf4166ee2ead4e7c5826e3ed1b3b7c",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "G_ijk=q_j(k_ik-k_jk), with q_j positive, establishes exact equivalence to ordered reduced conductances.",
+      "Every prefix contrast has q-mean zero. Its product with a longer contrast sums to zero; norm squared is Q_k Q_(k+1)/q_(k+1). The n-1 nonzero orthogonal vectors span the mean-zero space.",
+      "Detailed balance makes normalized contrast generator A symmetric. Derived Lh_l for i<=k+1<=l, then subtracted the k+1 value to obtain the printed off-diagonal identity with nonnegative differences.",
+      "Shifting A by cI makes every entry nonnegative. The exponential series then proves exp(tA)>=0 with strictly positive diagonal at finite t>=0.",
+      "Derived Gibbs contrast numerator using Q_k/q_(k+1)=sum exp(beta_b(E_(k+1)-E_i)). Positive gaps give the same strict sign in every coordinate on either side of the bath.",
+      "On heating N,T>0; Nprime/N>-E_(k+1) and Tprime/T<=-E_(k+1). The quotient derivative is strictly positive.",
+      "Likelihood ratio has constant coefficient one and contrast coordinates g; reversibility evolves them by exp(tA). Its positive diagonal preserves strict positive coordinate differences.",
+      "Orthonormality equates weighted squared distance with squared coordinate norm, proving the strict all-time heating inequality for that distance.",
+      "Spectral expansion gives Pi2=lim exp(-lambda2 t)exp(tA), nonnegative and nonzero. A vector with all entries of the same strict sign cannot be annihilated, including degenerate slow eigenspaces.",
+      "Nonzero orthogonal projection has a positive diagonal entry. With g,gprime>0, this gives 2(Pi2 g) dot (Pi2 gprime)>0. The local KL expansion has the same leading squared norm.",
+      "For simple slow mode, maximizing the symmetric quadratic form over the sphere and replacing coordinates by absolute values gives a nonnegative top eigenvector. Its dot product with g gives the stated strict overlap signs and heating monotonicity.",
+      "Specialized the off-diagonal formula to the three printed aggregate inequalities for four states. The subsequent single-cooling-interval paragraph still depends on the separately unreviewed global stationary-point bound."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "focused_appendices.tex:20": {
+    "statement_sha256": "001c75dc0a2fb19e3135ea3e48a762bddbbe46287350697c9c2fc86ca059a181",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/mechanism_and_shape_review.json"
+    ],
+    "steps": [
+      "B is positively diagonally similar to symmetric Metzler A; choose nonnegative top eigenvector x. Expanding Hx gives both easy inequalities and w1+w2-2w3=(2Q3/q3)(x2-sx1).",
+      "G puts a minimum reduced conductance in the first row. Subtracting k*(q 1transpose-Q4 I) leaves nonnegative reversible conservative rates with at least one of a12,a13,a14 zero.",
+      "Reset contributions cancel in F and G. Contrast B shifts by k*Q4 I, preserving eigenvectors, ordering and simple multiplicity. Dirichlet form gives shifted lambda<=0 even when reducible.",
+      "If x1=0 the desired inequality is immediate. Otherwise symmetric Rayleigh quotient gives lambda>=B33.",
+      "If equality held, positive semidefiniteness of lambda I-A forces its third row to vanish, by principal two-by-two minors. Then e3 is a top eigenvector; simplicity implies x1=0, contradiction. Thus delta=lambda-B33>0, including lambda=0.",
+      "Eliminating x3 gives Eij=Bij+Bi3 B3j/delta. Positive-pivot Schur complement preserves semidefiniteness and nullity one, so lambda is its simple top eigenvalue. Off-diagonals remain nonnegative.",
+      "For positive off-diagonals, r=x2/x1 is the unique positive zero of E21+r(E22-E11)-r^2 E12. Nonnegative value at s>0 implies s<=r.",
+      "If one off-diagonal vanishes, diagonal symmetrizability makes both vanish. Simple top eigenvalue and x1>0 force x2=0 and E11>E22, making the polynomial strictly negative at s>0. Nonnegativity excludes this boundary case.",
+      "Verified delta times the ratio polynomial equals delta C+D*. G gives B31,B32>=0; G134 and G234 bound the two negative terms in B23-s B13. Thus D*>=0.",
+      "For C>=0 the sign follows immediately. For C<0, lambda<=0 gives delta C+D*>=-B33 C+D*, with the correct inequality direction.",
+      "Verified the positive prefactor times T=(c+e+f)N+q4(2ceq3(q1-q2)+fJ), where N=-2q1q2q3 F123>=0.",
+      "Face c=0 gives J>=0. Face a=0 writes J as (2q1+q3)/(2q1+q4) times -2q1q2 F124 plus 2e q1(q1-q2)(q3-q4)/(2q1+q4). Both terms are nonnegative without dividing by c or e.",
+      "For b=0, N=2a q2q3(q1-q2)+d q1q3(2q2+q3). If c<=e, J=(e-c)q1(2q2+q3)+c q3(q1-q2)>=0.",
+      "For b=0,c>e, N+q4J=2q1q2(q3-q4)(c-e)+d q1q3(2q2+q3)-2q1q2q3 F124>=0. Rewrite T=(c+e)N+f(N+q4J)+2ceq3q4(q1-q2).",
+      "The three zero-rate faces are exhaustive after reset and allow overlaps. No irreducibility of the shifted generator is assumed. This completes x2>=s x1, hence the stated first-three inequalities.",
+      "The focused lemma also asserts negative overlap on cooling, supplied by the separately reviewed contrast-sign theorem.",
+      "Combining the structural lemma with the previously checked conditional-average argument proves the strict finite-parameter upper bound. Full family admissibility for sharpness remains separate; neither sharp-bound theorem is marked fully reviewed."
+    ],
+    "limitations": "Only this statement and listed supporting arguments are covered; see review record for remaining obligations outside it."
+  },
+  "focused_paper.tex:3": {
+    "statement_sha256": "ec04320d798dd84d07eeccb8e40312d64ca61d978ced8fb3b25b65bbb68fd574",
+    "source_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Reviewed earlier first-three shape lemma supplies the mode inequalities; the ordered-conductance theorem supplies negative nonzero cooling overlaps.",
+      "Conditional mean on first three states is a constant plus nonnegative multiples of averages of (1,-1,0) and (1,1,-2). Both derivatives are positive for ordered energies at beta>=0, so the conditional mean is nondecreasing.",
+      "First-three mass P strictly increases and obeys 3/4<P<1 at finite beta>0. Thus r=P_c/P_h is greater than one and strictly below 4/3.",
+      "The identity b_c-r b_h=P_c(m_c-m_h)+(1-r)w4 has two nonnegative terms. Since both overlaps are negative, the absolute ratio is at most r<4/3. Equality is impossible at finite admissible parameters.",
+      "Both sharpness constructions approach ratio 4/3 for actual admissible finite preparations. Hence the bound is the sharp supremum. The KL leading quadratic coefficient gives advantage 1-(3/4)^2=7/16. The asymptotic threshold-time shift is log(|b_c|/|b_h|)/|lambda2|<log(4/3)/|lambda2|; this is not a finite-threshold universal time-saving statement.",
+      "Transcribed all three denominator polynomials and six rate formulas from SharpFamily.lean and matched the formal sharpness appendix term by term. The correspondence checker independently verifies exact eigen-equations, detailed balance, conservation, and all six rate limits.",
+      "Bath weights are strictly decreasing and positive for 0<epsilon<1/30. The mode has first component one and exact zero bath mean. Denominators P,-R,S have positive values at zero.",
+      "All thirteen continuity functions are rational with nonzero denominators at zero; their values are 68,12,21,3/2,20/17,15/7,20/17,12/17,9/14,117/70,66/425,276/595,1/17. A finite intersection of neighborhoods supplies simultaneous strict positivity for sufficiently small positive epsilon.",
+      "F124 and G234 vanish identically. The factorization e_rate-c_rate*t=epsilon*positive_function gives strict G124; G234 equality then gives strict G134. The remaining three F and G123 signs are among the thirteen checks. Positive clearing factors preserve original F signs.",
+      "Reconstructed all three positive contrast coordinates: the first uses w1-w2>0, the last uses w4<0, and the middle is the sum of positive multiples of -w3 and -w4. w3<0 for 0<epsilon<1/30.",
+      "Two strict G margins give strictly positive contrast edges connecting coordinate one to coordinates two and three. Other off-diagonals are nonnegative.",
+      "PositiveMode.lean proves the weighted-defect quadratic identity as a sum of nonnegative squared ratios. It proves maximal eigenvalue ordering and shows the kernel is one-dimensional from the two connecting edges. No assumed uniform gap or numerical eigenvalue is substituted.",
+      "The bridge reconstructs the full mode and transfers the positive-coordinate eigen-equation, variational ordering and one-dimensional eigenspace to SimpleSlowMode of the full generator.",
+      "SharpThermal.lean uses epsilon=exp(-L^2), hot=L^(-3), cold=L^(-1). For finite L>1 the temperatures are strictly ordered in (0,1). Epsilon is positive and eventually inside the admissibility interval.",
+      "Exact highest-state weights are exp(-2/L) and exp(-2L); their limits are one and zero. The other weights tend to one by continuity of real powers at positive limiting bases. The mode tends to (1,-4/5,-1/3,0).",
+      "The nonzero overlap limits -1/30 and -2/45 imply strict magnitude reversal eventually. The absolute-value ratio has limit 3/4, giving advantage 1/4.",
+      "SharpQuarter.lean defines attainability using actual positive rates, valid ordered weights, all original failures, SimpleSlowMode, finite strict cooling order and strict overlap reversal. Eventually_family_attainable joins the admissibility and limit facts. The strict upper bound plus this family establishes the least upper bound, nonattainment, and arbitrarily close attained advantages."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "research_report.tex:19": {
+    "statement_sha256": "b8e5b6733c700788cdb28c783134da2ba34920d349e3cd8984138d844bfbbfa9",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Checked the printed fast-space basis against the certificate output exactly. Its columns have zero bath mean, are orthogonal to w in the weighted product, and are independent because the last two rows are the identity matrix.",
+      "The two equations for B are formed directly from original F124 and G234 expressions. Their coefficient determinant has a continuous nonzero sign certificate, ensuring the rational solution is well-defined on 0<epsilon<=1/30.",
+      "The positive-sign routine removes powers of epsilon from numerator and denominator, substitutes epsilon=t/30, and uses exact Bernstein coefficients. Powers of epsilon preserve positivity on the open-left domain even with negative exponent. Strict positive coefficients include t=1; no finite mesh is accepted.",
+      "Thirty certificates cover B11, detB, the linear-system determinant, twelve off-diagonal rates, six strict original F/G signs, one spectral-gap inequality, and eight strict H signs. The remaining two triplet expressions vanish identically; their identities and all conservation, reversibility and eigen-equations are checked symbolically.",
+      "B11>0 and detB>0 imply positive definite symmetric B. J=Utranspose D U is positive definite because U has full column rank and D>0. BJ is similar to a symmetric positive definite matrix, so both fast increments are positive real numbers.",
+      "On the fast basis L acts as -3I-BJ/epsilon^2; w has eigenvalue -3, and the constant vector has eigenvalue zero. The four independent directions exhaust the space.",
+      "For positive increments a,b, ab/(a+b)<min(a,b). The certificate proves det(BJ/epsilon^2)/trace(BJ/epsilon^2)>1/3. This gives the claimed uniform separation and simple slow mode.",
+      "For this construction set L=log(1/epsilon), hot=L^-2, cold=L^-1/2. Since epsilon<=1/30, L>1 and finite preparations are ordered. The top weight tends to one for hot and zero for cold; other weights tend to one, giving the same two nonzero overlap limits.",
+      "H uses normalized bath weights and reduced conductances at most 100. Its negative weighted quadratic form is at most 100 times the bath variance. Therefore the perturbation operator norm is at most 100epsilon^4 on the nonstationary symmetric space.",
+      "Weyl perturbation bounds give gap greater than 1/3-200epsilon^4>1/4. Original positivity and positive H rates preserve all transition-rate positivity, and linearity makes all eight F/G inequalities strict.",
+      "Resolve the perturbed unit slow vector into old slow and fast components. The old fast resolvent has norm at most 1/(1/3-100epsilon^4), so the orthogonal component is bounded by 100epsilon^4 divided by that denominator.",
+      "After sign alignment the distance of unit vectors is at most sqrt(2) times the orthogonal component. Scaling to norm ||w||q<=1 gives less than 500epsilon^4. The correspondence checker verifies the worst-case rational constant inequality at epsilon=1/30.",
+      "Each normalized q_i>=epsilon^2/3 because sum(raw q)<3 and the minimum raw weight is epsilon^2. Hence coordinate errors are below 500sqrt(3)epsilon^3<1000epsilon^3; all thermal averages have at most that error, uniformly in preparation.",
+      "The perturbation error vanishes, so nonzero limiting overlaps and strict reversal eventually persist. The strict perturbation does not claim its slow eigenvalue stays exactly -3.",
+      "The finite example uses integer-power bisection from standalone_primary_check.py, whose domain, bracket invariant and explicit final inequality were inspected. The four quotient corners correctly enclose the signed average. Hot/cold gain endpoints and perturbation expansion use the worst signs correctly.",
+      "The 21-check correspondence run proves the manuscript decimal endpoints enclose the exact gain rationals and the strict perturbed lower bound exceeds 22 percent. The example remains separate from experimental feasibility and from the asymptotic approach-rate expansion."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "research_report.tex:21": {
+    "statement_sha256": "e24c26e3ab0cfba3c9ee588bf2a3f0970e2b06d7e8240d87509336936cf9b095",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Reviewed earlier first-three shape lemma supplies the mode inequalities; the ordered-conductance theorem supplies negative nonzero cooling overlaps.",
+      "Conditional mean on first three states is a constant plus nonnegative multiples of averages of (1,-1,0) and (1,1,-2). Both derivatives are positive for ordered energies at beta>=0, so the conditional mean is nondecreasing.",
+      "First-three mass P strictly increases and obeys 3/4<P<1 at finite beta>0. Thus r=P_c/P_h is greater than one and strictly below 4/3.",
+      "The identity b_c-r b_h=P_c(m_c-m_h)+(1-r)w4 has two nonnegative terms. Since both overlaps are negative, the absolute ratio is at most r<4/3. Equality is impossible at finite admissible parameters.",
+      "Both sharpness constructions approach ratio 4/3 for actual admissible finite preparations. Hence the bound is the sharp supremum. The KL leading quadratic coefficient gives advantage 1-(3/4)^2=7/16. The asymptotic threshold-time shift is log(|b_c|/|b_h|)/|lambda2|<log(4/3)/|lambda2|; this is not a finite-threshold universal time-saving statement.",
+      "Checked the printed fast-space basis against the certificate output exactly. Its columns have zero bath mean, are orthogonal to w in the weighted product, and are independent because the last two rows are the identity matrix.",
+      "The two equations for B are formed directly from original F124 and G234 expressions. Their coefficient determinant has a continuous nonzero sign certificate, ensuring the rational solution is well-defined on 0<epsilon<=1/30.",
+      "The positive-sign routine removes powers of epsilon from numerator and denominator, substitutes epsilon=t/30, and uses exact Bernstein coefficients. Powers of epsilon preserve positivity on the open-left domain even with negative exponent. Strict positive coefficients include t=1; no finite mesh is accepted.",
+      "Thirty certificates cover B11, detB, the linear-system determinant, twelve off-diagonal rates, six strict original F/G signs, one spectral-gap inequality, and eight strict H signs. The remaining two triplet expressions vanish identically; their identities and all conservation, reversibility and eigen-equations are checked symbolically.",
+      "B11>0 and detB>0 imply positive definite symmetric B. J=Utranspose D U is positive definite because U has full column rank and D>0. BJ is similar to a symmetric positive definite matrix, so both fast increments are positive real numbers.",
+      "On the fast basis L acts as -3I-BJ/epsilon^2; w has eigenvalue -3, and the constant vector has eigenvalue zero. The four independent directions exhaust the space.",
+      "For positive increments a,b, ab/(a+b)<min(a,b). The certificate proves det(BJ/epsilon^2)/trace(BJ/epsilon^2)>1/3. This gives the claimed uniform separation and simple slow mode.",
+      "For this construction set L=log(1/epsilon), hot=L^-2, cold=L^-1/2. Since epsilon<=1/30, L>1 and finite preparations are ordered. The top weight tends to one for hot and zero for cold; other weights tend to one, giving the same two nonzero overlap limits.",
+      "H uses normalized bath weights and reduced conductances at most 100. Its negative weighted quadratic form is at most 100 times the bath variance. Therefore the perturbation operator norm is at most 100epsilon^4 on the nonstationary symmetric space.",
+      "Weyl perturbation bounds give gap greater than 1/3-200epsilon^4>1/4. Original positivity and positive H rates preserve all transition-rate positivity, and linearity makes all eight F/G inequalities strict.",
+      "Resolve the perturbed unit slow vector into old slow and fast components. The old fast resolvent has norm at most 1/(1/3-100epsilon^4), so the orthogonal component is bounded by 100epsilon^4 divided by that denominator.",
+      "After sign alignment the distance of unit vectors is at most sqrt(2) times the orthogonal component. Scaling to norm ||w||q<=1 gives less than 500epsilon^4. The correspondence checker verifies the worst-case rational constant inequality at epsilon=1/30.",
+      "Each normalized q_i>=epsilon^2/3 because sum(raw q)<3 and the minimum raw weight is epsilon^2. Hence coordinate errors are below 500sqrt(3)epsilon^3<1000epsilon^3; all thermal averages have at most that error, uniformly in preparation.",
+      "The perturbation error vanishes, so nonzero limiting overlaps and strict reversal eventually persist. The strict perturbation does not claim its slow eigenvalue stays exactly -3.",
+      "The finite example uses integer-power bisection from standalone_primary_check.py, whose domain, bracket invariant and explicit final inequality were inspected. The four quotient corners correctly enclose the signed average. Hot/cold gain endpoints and perturbation expansion use the worst signs correctly.",
+      "The 21-check correspondence run proves the manuscript decimal endpoints enclose the exact gain rationals and the strict perturbed lower bound exceeds 22 percent. The example remains separate from experimental feasibility and from the asymptotic approach-rate expansion."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "research_report.tex:22": {
+    "statement_sha256": "76b7cb25a6b072508d2643297fb1a94ac0005397ff1d9f209512848820654af4",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Invert the positive nonzero overlap ratio bound to obtain advantage<=1-P_h/P_c, with no assumption that the advantage is positive.",
+      "Shift E1 to zero. Z3(beta_c)<=Z3(beta_h) and the top unnormalized weight falls by exp(-d). Therefore pi4_c/P_c>=exp(-d)*pi4_h/P_h.",
+      "Multiplication and P_c+pi4_c=1 give P_h/P_c>=P_h+exp(-d)pi4_h, proving advantage<=pi4_h(1-exp(-d)).",
+      "The strict pi4_h<1/4 and beta_c-beta_h<beta_b produce both remaining strict upper bounds. Solving g<(1-exp(-d))/4 gives d>-log(1-4g); the positive factor below one gives pi4_h>g.",
+      "Checked the example targets 1/10,1/5,6/25 give log(5/3),log(5),log(25). These are necessary conditions only, with no new sufficiency or sharpness claim."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "focused_appendices.tex:19": {
+    "statement_sha256": "b8e5b6733c700788cdb28c783134da2ba34920d349e3cd8984138d844bfbbfa9",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Checked the printed fast-space basis against the certificate output exactly. Its columns have zero bath mean, are orthogonal to w in the weighted product, and are independent because the last two rows are the identity matrix.",
+      "The two equations for B are formed directly from original F124 and G234 expressions. Their coefficient determinant has a continuous nonzero sign certificate, ensuring the rational solution is well-defined on 0<epsilon<=1/30.",
+      "The positive-sign routine removes powers of epsilon from numerator and denominator, substitutes epsilon=t/30, and uses exact Bernstein coefficients. Powers of epsilon preserve positivity on the open-left domain even with negative exponent. Strict positive coefficients include t=1; no finite mesh is accepted.",
+      "Thirty certificates cover B11, detB, the linear-system determinant, twelve off-diagonal rates, six strict original F/G signs, one spectral-gap inequality, and eight strict H signs. The remaining two triplet expressions vanish identically; their identities and all conservation, reversibility and eigen-equations are checked symbolically.",
+      "B11>0 and detB>0 imply positive definite symmetric B. J=Utranspose D U is positive definite because U has full column rank and D>0. BJ is similar to a symmetric positive definite matrix, so both fast increments are positive real numbers.",
+      "On the fast basis L acts as -3I-BJ/epsilon^2; w has eigenvalue -3, and the constant vector has eigenvalue zero. The four independent directions exhaust the space.",
+      "For positive increments a,b, ab/(a+b)<min(a,b). The certificate proves det(BJ/epsilon^2)/trace(BJ/epsilon^2)>1/3. This gives the claimed uniform separation and simple slow mode.",
+      "For this construction set L=log(1/epsilon), hot=L^-2, cold=L^-1/2. Since epsilon<=1/30, L>1 and finite preparations are ordered. The top weight tends to one for hot and zero for cold; other weights tend to one, giving the same two nonzero overlap limits.",
+      "H uses normalized bath weights and reduced conductances at most 100. Its negative weighted quadratic form is at most 100 times the bath variance. Therefore the perturbation operator norm is at most 100epsilon^4 on the nonstationary symmetric space.",
+      "Weyl perturbation bounds give gap greater than 1/3-200epsilon^4>1/4. Original positivity and positive H rates preserve all transition-rate positivity, and linearity makes all eight F/G inequalities strict.",
+      "Resolve the perturbed unit slow vector into old slow and fast components. The old fast resolvent has norm at most 1/(1/3-100epsilon^4), so the orthogonal component is bounded by 100epsilon^4 divided by that denominator.",
+      "After sign alignment the distance of unit vectors is at most sqrt(2) times the orthogonal component. Scaling to norm ||w||q<=1 gives less than 500epsilon^4. The correspondence checker verifies the worst-case rational constant inequality at epsilon=1/30.",
+      "Each normalized q_i>=epsilon^2/3 because sum(raw q)<3 and the minimum raw weight is epsilon^2. Hence coordinate errors are below 500sqrt(3)epsilon^3<1000epsilon^3; all thermal averages have at most that error, uniformly in preparation.",
+      "The perturbation error vanishes, so nonzero limiting overlaps and strict reversal eventually persist. The strict perturbation does not claim its slow eigenvalue stays exactly -3.",
+      "The finite example uses integer-power bisection from standalone_primary_check.py, whose domain, bracket invariant and explicit final inequality were inspected. The four quotient corners correctly enclose the signed average. Hot/cold gain endpoints and perturbation expansion use the worst signs correctly.",
+      "The 21-check correspondence run proves the manuscript decimal endpoints enclose the exact gain rationals and the strict perturbed lower bound exceeds 22 percent. The example remains separate from experimental feasibility and from the asymptotic approach-rate expansion."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "focused_appendices.tex:21": {
+    "statement_sha256": "e24c26e3ab0cfba3c9ee588bf2a3f0970e2b06d7e8240d87509336936cf9b095",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Reviewed earlier first-three shape lemma supplies the mode inequalities; the ordered-conductance theorem supplies negative nonzero cooling overlaps.",
+      "Conditional mean on first three states is a constant plus nonnegative multiples of averages of (1,-1,0) and (1,1,-2). Both derivatives are positive for ordered energies at beta>=0, so the conditional mean is nondecreasing.",
+      "First-three mass P strictly increases and obeys 3/4<P<1 at finite beta>0. Thus r=P_c/P_h is greater than one and strictly below 4/3.",
+      "The identity b_c-r b_h=P_c(m_c-m_h)+(1-r)w4 has two nonnegative terms. Since both overlaps are negative, the absolute ratio is at most r<4/3. Equality is impossible at finite admissible parameters.",
+      "Both sharpness constructions approach ratio 4/3 for actual admissible finite preparations. Hence the bound is the sharp supremum. The KL leading quadratic coefficient gives advantage 1-(3/4)^2=7/16. The asymptotic threshold-time shift is log(|b_c|/|b_h|)/|lambda2|<log(4/3)/|lambda2|; this is not a finite-threshold universal time-saving statement.",
+      "Checked the printed fast-space basis against the certificate output exactly. Its columns have zero bath mean, are orthogonal to w in the weighted product, and are independent because the last two rows are the identity matrix.",
+      "The two equations for B are formed directly from original F124 and G234 expressions. Their coefficient determinant has a continuous nonzero sign certificate, ensuring the rational solution is well-defined on 0<epsilon<=1/30.",
+      "The positive-sign routine removes powers of epsilon from numerator and denominator, substitutes epsilon=t/30, and uses exact Bernstein coefficients. Powers of epsilon preserve positivity on the open-left domain even with negative exponent. Strict positive coefficients include t=1; no finite mesh is accepted.",
+      "Thirty certificates cover B11, detB, the linear-system determinant, twelve off-diagonal rates, six strict original F/G signs, one spectral-gap inequality, and eight strict H signs. The remaining two triplet expressions vanish identically; their identities and all conservation, reversibility and eigen-equations are checked symbolically.",
+      "B11>0 and detB>0 imply positive definite symmetric B. J=Utranspose D U is positive definite because U has full column rank and D>0. BJ is similar to a symmetric positive definite matrix, so both fast increments are positive real numbers.",
+      "On the fast basis L acts as -3I-BJ/epsilon^2; w has eigenvalue -3, and the constant vector has eigenvalue zero. The four independent directions exhaust the space.",
+      "For positive increments a,b, ab/(a+b)<min(a,b). The certificate proves det(BJ/epsilon^2)/trace(BJ/epsilon^2)>1/3. This gives the claimed uniform separation and simple slow mode.",
+      "For this construction set L=log(1/epsilon), hot=L^-2, cold=L^-1/2. Since epsilon<=1/30, L>1 and finite preparations are ordered. The top weight tends to one for hot and zero for cold; other weights tend to one, giving the same two nonzero overlap limits.",
+      "H uses normalized bath weights and reduced conductances at most 100. Its negative weighted quadratic form is at most 100 times the bath variance. Therefore the perturbation operator norm is at most 100epsilon^4 on the nonstationary symmetric space.",
+      "Weyl perturbation bounds give gap greater than 1/3-200epsilon^4>1/4. Original positivity and positive H rates preserve all transition-rate positivity, and linearity makes all eight F/G inequalities strict.",
+      "Resolve the perturbed unit slow vector into old slow and fast components. The old fast resolvent has norm at most 1/(1/3-100epsilon^4), so the orthogonal component is bounded by 100epsilon^4 divided by that denominator.",
+      "After sign alignment the distance of unit vectors is at most sqrt(2) times the orthogonal component. Scaling to norm ||w||q<=1 gives less than 500epsilon^4. The correspondence checker verifies the worst-case rational constant inequality at epsilon=1/30.",
+      "Each normalized q_i>=epsilon^2/3 because sum(raw q)<3 and the minimum raw weight is epsilon^2. Hence coordinate errors are below 500sqrt(3)epsilon^3<1000epsilon^3; all thermal averages have at most that error, uniformly in preparation.",
+      "The perturbation error vanishes, so nonzero limiting overlaps and strict reversal eventually persist. The strict perturbation does not claim its slow eigenvalue stays exactly -3.",
+      "The finite example uses integer-power bisection from standalone_primary_check.py, whose domain, bracket invariant and explicit final inequality were inspected. The four quotient corners correctly enclose the signed average. Hot/cold gain endpoints and perturbation expansion use the worst signs correctly.",
+      "The 21-check correspondence run proves the manuscript decimal endpoints enclose the exact gain rationals and the strict perturbed lower bound exceeds 22 percent. The example remains separate from experimental feasibility and from the asymptotic approach-rate expansion."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "focused_appendices.tex:22": {
+    "statement_sha256": "76b7cb25a6b072508d2643297fb1a94ac0005397ff1d9f209512848820654af4",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/sharpness_review.json",
+      "research/detailed_audit/sharpness_correspondence.json"
+    ],
+    "steps": [
+      "Invert the positive nonzero overlap ratio bound to obtain advantage<=1-P_h/P_c, with no assumption that the advantage is positive.",
+      "Shift E1 to zero. Z3(beta_c)<=Z3(beta_h) and the top unnormalized weight falls by exp(-d). Therefore pi4_c/P_c>=exp(-d)*pi4_h/P_h.",
+      "Multiplication and P_c+pi4_c=1 give P_h/P_c>=P_h+exp(-d)pi4_h, proving advantage<=pi4_h(1-exp(-d)).",
+      "The strict pi4_h<1/4 and beta_c-beta_h<beta_b produce both remaining strict upper bounds. Solving g<(1-exp(-d))/4 gives d>-log(1-4g); the positive factor below one gives pi4_h>g.",
+      "Checked the example targets 1/10,1/5,6/25 give log(5/3),log(5),log(25). These are necessary conditions only, with no new sufficiency or sharpness claim."
+    ],
+    "limitations": "Only the named statement and explicitly reviewed dependencies are covered; unnumbered asymptotic approach rates and figures remain separate."
+  },
+  "research_report.tex:2": {
+    "statement_sha256": "ecbf45ef2288bea81446e4b83efa7c22d940e50f1be0f0b1df6ebd13ccbe02c2",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Reconstructed the primary witness separately from the focused rational-mode witness: bath weights agree, but rates 23 and 34 differ. All sixteen generator entries and all twelve kappa/F/G table values match the primary exact receipt.",
+      "Positive downward rates and positive ordered q imply all twelve off-diagonal rates positive. Column-sum diagonals conserve mass; detailed balance makes M diag(q) symmetric. Q=959/400 gives the printed stationary probabilities.",
+      "The cubic coefficients match. Three disjoint intervals with opposite endpoint signs exhaust its degree; their roots are simple and negative. Together with zero this gives all four eigenvalues and slow spectral gap >39.",
+      "All four appendix polynomials equal the adjugate column cofactors times the same nonzero factor -3184000000. Exact residuals modulo the cubic vanish for left and right vectors and bath orthogonality. The denominator cofactor interval excludes zero.",
+      "The squared weighted norm is positive and gives v=diag(q)w/N with w dot v=1. The arbitrary common cofactor factor cancels in w_i=P_i/P_1.",
+      "Rational interval addition, products, inversion and Horner evaluation enclose their arguments. Inversion rejects a zero-containing interval. Decimal root guesses are only proposals: nonnegative endpoints and exact nth-power inequalities certify every thermal root interval.",
+      "The eleven new correspondence checks confirm the printed slow-root interval, both widened overlap intervals, and the refined rational margin. Both overlaps are strictly negative and the finite temperatures satisfy 0<1/1000<1/100<1.",
+      "A simple reversible slow mode gives the eventual fixed-norm ordering. The Taylor expansion of KL about positive equilibrium has the same squared slow coefficient; initial KL derivative (beta-beta_b)Var(E)<0 establishes initial-to-eventual reversal. No all-time or numerical crossing time is inferred.",
+      "The standalone checker independently uses exact LDL congruence counts at six shifts. Every pivot is nonzero; inertia locates one root in each required negative interval. Its trial vector has exact zero bath mean.",
+      "Its residual bound controls the projection error on the two faster modes by eta/39; the stationary component is absent. The norm check proves the slow projection is nonzero. min(q)=1/400 converts the weighted error to a coordinate error by factor 20.",
+      "Integer bisection maintains lo^n*den<=target<hi^n*den. It terminates with adjacent integer endpoints and rechecks the rational inequalities. Signed numerator bounds and four quotient corners enclose every thermal overlap.",
+      "The standalone projection is normalized separately: positive first coordinate and an upper bound on that coordinate transfer the strict margin to normalization w1=1. Its coarser printed intervals are not confused with the sharper cofactor intervals.",
+      "Inspected all ten standalone negative/control tests, including optimized isolated execution, wrong transpose, triplet violation, wrong trial mode, wrong vector, reversed temperatures, zero rates, known inertia, zero-pivot rejection, and signed-root arithmetic.",
+      "The open-neighborhood claim uses strict rate/triplet/overlap margins and a separated simple eigenprojection. Reset addition preserves all F/G values and eigenvectors while shifting nonstationary eigenvalues. The alpha>24 extension allows negative reset relative to alpha=25 but its printed rates remain positive; no positivity inference from a negative reset is used."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:5": {
+    "statement_sha256": "68844a74792d262914d4ead2577192499f9048620cfc0eb7c06e5af9f8b8008e",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:6": {
+    "statement_sha256": "9e06f8a43c4734ffb87fb42a85e3e6ca170e2c354cd084b473f09276e541d05b",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:7": {
+    "statement_sha256": "ac65a80ce83c67cdc39534ea9edea2b4ab0671bd218e6a4aa441066f59915952",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:11": {
+    "statement_sha256": "1771fef9ee9e25427bc05ae0bcfbefab93ce65dc086b9ab35f66984fa09db4fe",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "For each cooling contrast R=-g>0, write its bracket as alpha-sum exp(beta gap). This bracket has negative first and second derivatives, so its log second derivative is strictly negative. Subtracting log Z adds -Var(E)<0, proving strict log concavity.",
+      "If gprime(0)>=0, log R has initial slope <=0 and strictly decreasing slope. Thus gprime(beta)>0 at every positive cooling beta, including equality at the endpoint.",
+      "Differentiated the quotient at beta=0 using Z=n and Zprime=-n mu. The printed endpoint expression and its k=1 sign mu-exp(beta_b a)(mu-a) follow exactly.",
+      "For y=E_(k+1)>=mu, the proper ordered-prefix average is strictly below the full mean, making the endpoint expression positive. This handles mu<=a as well.",
+      "For y<mu, compare averages of the increasing integrand 1/(mu-t). The interval starts at zero and extends beyond a for i=1; for i>1 its start is at least a. Each average is at least log(mu/(mu-a))/a. Exponentiation gives nonnegative endpoint summands under the threshold.",
+      "All cooling coordinates are then strictly ordered. Nonnegative contrast semigroup and nonnegative slow projector prove all-time weighted-square and asymptotic KL conclusions, including repeated slow eigenvalues; the simple-mode norm statement follows separately.",
+      "When the threshold fails, g1prime(0)<0 persists in a positive-beta interval and yields finite cooling witnesses. The first-contrast rank-one generator has positive rates for sufficiently small epsilon, simple slow eigenvalue -1+epsilon, and every G=0 because its top index in a triplet lies outside the two-state support.",
+      "The same construction has a diagonal contrast matrix, so both the G-only and the larger Metzler-contrast families attain the threshold obstruction. It need not satisfy the F inequalities.",
+      "Reviewed energy_threshold_certificate.py: exact boundary derivative factorization, positive rational rank-one example, complete characteristic polynomial, all G equalities and finite hot/cold overlap comparison are checked explicitly. It supports the example, not the general analytic theorem by sampling.",
+      "For span exclusion put r=a/c and d=n-2. mu>a implies r<d/(d+1); mu<=c(d+r)/n and beta_star decreases with mu. The resulting convergent log expansion has constant n/d and all higher coefficients positive.",
+      "Thus c beta_star>n/(n-2), proving absence even at the stated cutoff. Taking E2/c to zero and the remaining n-2 distinct energies to c makes the threshold approach n/(n-2), so any larger constant fails in the G-only family.",
+      "Checked equally spaced four-state threshold beta_b a<=log 3 and equally spaced three-state case mu=a. The cited sampling-box interpretation remains dependent on the separate original-source review."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:12": {
+    "statement_sha256": "4f5fab0f1d99a0f8bf8a0ad76b1f90a51d4eac3deb90a2ba2cae264f9ca8a2e9",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "For each cooling contrast R=-g>0, write its bracket as alpha-sum exp(beta gap). This bracket has negative first and second derivatives, so its log second derivative is strictly negative. Subtracting log Z adds -Var(E)<0, proving strict log concavity.",
+      "If gprime(0)>=0, log R has initial slope <=0 and strictly decreasing slope. Thus gprime(beta)>0 at every positive cooling beta, including equality at the endpoint.",
+      "Differentiated the quotient at beta=0 using Z=n and Zprime=-n mu. The printed endpoint expression and its k=1 sign mu-exp(beta_b a)(mu-a) follow exactly.",
+      "For y=E_(k+1)>=mu, the proper ordered-prefix average is strictly below the full mean, making the endpoint expression positive. This handles mu<=a as well.",
+      "For y<mu, compare averages of the increasing integrand 1/(mu-t). The interval starts at zero and extends beyond a for i=1; for i>1 its start is at least a. Each average is at least log(mu/(mu-a))/a. Exponentiation gives nonnegative endpoint summands under the threshold.",
+      "All cooling coordinates are then strictly ordered. Nonnegative contrast semigroup and nonnegative slow projector prove all-time weighted-square and asymptotic KL conclusions, including repeated slow eigenvalues; the simple-mode norm statement follows separately.",
+      "When the threshold fails, g1prime(0)<0 persists in a positive-beta interval and yields finite cooling witnesses. The first-contrast rank-one generator has positive rates for sufficiently small epsilon, simple slow eigenvalue -1+epsilon, and every G=0 because its top index in a triplet lies outside the two-state support.",
+      "The same construction has a diagonal contrast matrix, so both the G-only and the larger Metzler-contrast families attain the threshold obstruction. It need not satisfy the F inequalities.",
+      "Reviewed energy_threshold_certificate.py: exact boundary derivative factorization, positive rational rank-one example, complete characteristic polynomial, all G equalities and finite hot/cold overlap comparison are checked explicitly. It supports the example, not the general analytic theorem by sampling.",
+      "For span exclusion put r=a/c and d=n-2. mu>a implies r<d/(d+1); mu<=c(d+r)/n and beta_star decreases with mu. The resulting convergent log expansion has constant n/d and all higher coefficients positive.",
+      "Thus c beta_star>n/(n-2), proving absence even at the stated cutoff. Taking E2/c to zero and the remaining n-2 distinct energies to c makes the threshold approach n/(n-2), so any larger constant fails in the G-only family.",
+      "Checked equally spaced four-state threshold beta_b a<=log 3 and equally spaced three-state case mu=a. The cited sampling-box interpretation remains dependent on the separate original-source review."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:13": {
+    "statement_sha256": "289d64cc88a99566bc5f3dfa76285917299bd1cfbd21ed748f36b94438650bd8",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Under the reviewed contrast theorem, orient the simple slow mode with nonnegative coefficients. Cooling magnitude is sum v_k R_k with R_k>0.",
+      "For m=k+1, the positive numerator alpha-sum_i<m exp(beta(E_m-E_i)) decreases strictly. Let A_c be the cold denominator contribution from i<=m, which is at least m.",
+      "The hot denominator is at most A_c+n-m and the cold denominator is at least A_c. Therefore R_c/R_h<1+(n-m)/A_c<=n/m<=n/2, with strictness supplied by the numerator even if m=n.",
+      "The full overlap ratio is a weighted average of these ratios with nonnegative weights v_k R_k(hot) and positive total. It is strictly less than n/2.",
+      "For sharpness use E2=1/L and E_j=(j-2)L for j>=3, with L sufficiently large. The first-contrast rank-one construction with epsilon=(q1+q2)/2 reduces only the 12 reset rates by one half and leaves other off-diagonals unchanged, so positivity holds.",
+      "The spectrum is zero, -1+epsilon and the remaining -1 modes. All G are zero and the mode is simple. Hot beta=L^-2 makes all weights approach one; cold beta=L^-1/2 leaves only the first two weights near one.",
+      "The common overlap numerator is asymptotic to -1/L for both preparations. Denominators approach n and 2, so the ratio approaches n/2 and strict ordinary reversal occurs eventually for n>=3. The construction does not establish sharpness under F constraints."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:14": {
+    "statement_sha256": "62ccdae6df2359efeb7b6e50b0acd3e529492c42d35b33ad08562330a1468fe1",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Adjoining the constant column makes W(pi1prime,...,pikprime)=W(1,pi1,...,pik). Multiplying every function by Z multiplies the determinant by Z^(k+1), via a triangular product-rule row transformation.",
+      "Expand W(Z,f1,...,fk) in its first column. Repeated-column terms vanish, and the remaining exponential Vandermonde determinants give the printed sign (-1)^(k(k-1)/2), prefix energy-gap product and positive tail sum. This indexed argument works for every k<n.",
+      "For n=4, g=pi1prime>0 at all finite real beta. The k=2 identity gives g^2 uprime<0. The k=3 identity gives g^3(uprime)^3 d2v/du2<0, so v as a function of u has strictly positive curvature.",
+      "The mixed two-column Wronskian ratio gives s(x)=(c2 x^gamma-c0)/(c0+c1 x). All c_i>0, gamma>1; the printed derivative numerator is positive. s rises strictly from -1 to s(1)>-1 as x goes from zero to one.",
+      "Checked u(0),v(0) using pi_i prime=(mu-E_i)/4 and limits u(infinity)=-1,v(infinity)=0. The stable quotient formulas agree with the symbolic classification certificate.",
+      "For bprime=g Phi with Phi=A+B u+C v, C=0 gives a monotone or constant Phi. For C nonzero, Phiprime=uprime(B+C s); it has precisely one positive-beta critical point if -B/C lies strictly between -1 and s(1), otherwise none. Equality at either boundary yields no interior critical point.",
+      "The listed endpoint values and optional critical value are therefore the exact infimum/supremum on each bath side. Opposite strict signs occur in the open interval if and only if the finite list has min<0<max; limiting strict signs persist at finite beta by continuity.",
+      "Strict convexity gives at most two derivative zeros counting multiplicity: a nonvertical line meets a strictly convex graph at most twice, tangency has exactly order two, and C=0 has at most one. Identically zero derivative would force constant w by independence of exponentials, excluded by nonzero bath-orthogonal w.",
+      "If bprime has one sign on a bath side, bath value zero forces normal magnitude order. For opposite signs on cooling, the last sign-changing zero before the bath has nonzero b and creates increasing magnitude immediately to its left. For heating use the first sign-changing zero after the bath and decreasing magnitude immediately to its right.",
+      "Tangencies without opposite signs do not suffice. A stationary bath or an endpoint equality does not create an additional interior root. Finite positive witnesses follow from the open sign intervals.",
+      "The unnumbered strong-root prescription splits b at its finitely many stationary points. Strictly monotone pieces have one zero exactly for opposite nonzero endpoint values; stationary zero knots are counted once; zero at beta=0 or infinity is excluded.",
+      "Inspected classification_exact_certificate.py: symbolic derivative coordinates and slope identity, rank-one positivity/reversibility, full simple spectrum, cubic Gibbs numerator with three distinct exact roots, and exact stationary-root counts are checked. The all-energy result uses the analytic proof, not this finite example.",
+      "For the general zero-count consequence, nonzero prefix Wronskians support the repeated normalized Rolle argument; exponential Vandermonde supports at most n-1 numerator zeros. Interpolation at bath plus n-2 distinct positive temperatures has a one-dimensional kernel and saturates the bounds with simple zeros.",
+      "Rank-one realization preserves positivity when epsilon<min(1,N/max|w_i|^2), gives the chosen bath-orthogonal vector a simple slow eigenvalue, and realizes the sharp zero counts. Live source review confirms this construction is already in Klich et al. Appendix VIII, Eq.67."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "research_report.tex:15": {
+    "statement_sha256": "58645bcb6b68ed4ff9ad4aea548ea60877ac0408ade5e6a6ca94866e494f01ae",
+    "source_sha256": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Adjoining the constant column makes W(pi1prime,...,pikprime)=W(1,pi1,...,pik). Multiplying every function by Z multiplies the determinant by Z^(k+1), via a triangular product-rule row transformation.",
+      "Expand W(Z,f1,...,fk) in its first column. Repeated-column terms vanish, and the remaining exponential Vandermonde determinants give the printed sign (-1)^(k(k-1)/2), prefix energy-gap product and positive tail sum. This indexed argument works for every k<n.",
+      "For n=4, g=pi1prime>0 at all finite real beta. The k=2 identity gives g^2 uprime<0. The k=3 identity gives g^3(uprime)^3 d2v/du2<0, so v as a function of u has strictly positive curvature.",
+      "The mixed two-column Wronskian ratio gives s(x)=(c2 x^gamma-c0)/(c0+c1 x). All c_i>0, gamma>1; the printed derivative numerator is positive. s rises strictly from -1 to s(1)>-1 as x goes from zero to one.",
+      "Checked u(0),v(0) using pi_i prime=(mu-E_i)/4 and limits u(infinity)=-1,v(infinity)=0. The stable quotient formulas agree with the symbolic classification certificate.",
+      "For bprime=g Phi with Phi=A+B u+C v, C=0 gives a monotone or constant Phi. For C nonzero, Phiprime=uprime(B+C s); it has precisely one positive-beta critical point if -B/C lies strictly between -1 and s(1), otherwise none. Equality at either boundary yields no interior critical point.",
+      "The listed endpoint values and optional critical value are therefore the exact infimum/supremum on each bath side. Opposite strict signs occur in the open interval if and only if the finite list has min<0<max; limiting strict signs persist at finite beta by continuity.",
+      "Strict convexity gives at most two derivative zeros counting multiplicity: a nonvertical line meets a strictly convex graph at most twice, tangency has exactly order two, and C=0 has at most one. Identically zero derivative would force constant w by independence of exponentials, excluded by nonzero bath-orthogonal w.",
+      "If bprime has one sign on a bath side, bath value zero forces normal magnitude order. For opposite signs on cooling, the last sign-changing zero before the bath has nonzero b and creates increasing magnitude immediately to its left. For heating use the first sign-changing zero after the bath and decreasing magnitude immediately to its right.",
+      "Tangencies without opposite signs do not suffice. A stationary bath or an endpoint equality does not create an additional interior root. Finite positive witnesses follow from the open sign intervals.",
+      "The unnumbered strong-root prescription splits b at its finitely many stationary points. Strictly monotone pieces have one zero exactly for opposite nonzero endpoint values; stationary zero knots are counted once; zero at beta=0 or infinity is excluded.",
+      "Inspected classification_exact_certificate.py: symbolic derivative coordinates and slope identity, rank-one positivity/reversibility, full simple spectrum, cubic Gibbs numerator with three distinct exact roots, and exact stationary-root counts are checked. The all-energy result uses the analytic proof, not this finite example.",
+      "For the general zero-count consequence, nonzero prefix Wronskians support the repeated normalized Rolle argument; exponential Vandermonde supports at most n-1 numerator zeros. Interpolation at bath plus n-2 distinct positive temperatures has a one-dimensional kernel and saturates the bounds with simple zeros.",
+      "Rank-one realization preserves positivity when epsilon<min(1,N/max|w_i|^2), gives the chosen bath-orthogonal vector a simple slow eigenvalue, and realizes the sharp zero counts. Live source review confirms this construction is already in Klich et al. Appendix VIII, Eq.67."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:2": {
+    "statement_sha256": "ecbf45ef2288bea81446e4b83efa7c22d940e50f1be0f0b1df6ebd13ccbe02c2",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Reconstructed the primary witness separately from the focused rational-mode witness: bath weights agree, but rates 23 and 34 differ. All sixteen generator entries and all twelve kappa/F/G table values match the primary exact receipt.",
+      "Positive downward rates and positive ordered q imply all twelve off-diagonal rates positive. Column-sum diagonals conserve mass; detailed balance makes M diag(q) symmetric. Q=959/400 gives the printed stationary probabilities.",
+      "The cubic coefficients match. Three disjoint intervals with opposite endpoint signs exhaust its degree; their roots are simple and negative. Together with zero this gives all four eigenvalues and slow spectral gap >39.",
+      "All four appendix polynomials equal the adjugate column cofactors times the same nonzero factor -3184000000. Exact residuals modulo the cubic vanish for left and right vectors and bath orthogonality. The denominator cofactor interval excludes zero.",
+      "The squared weighted norm is positive and gives v=diag(q)w/N with w dot v=1. The arbitrary common cofactor factor cancels in w_i=P_i/P_1.",
+      "Rational interval addition, products, inversion and Horner evaluation enclose their arguments. Inversion rejects a zero-containing interval. Decimal root guesses are only proposals: nonnegative endpoints and exact nth-power inequalities certify every thermal root interval.",
+      "The eleven new correspondence checks confirm the printed slow-root interval, both widened overlap intervals, and the refined rational margin. Both overlaps are strictly negative and the finite temperatures satisfy 0<1/1000<1/100<1.",
+      "A simple reversible slow mode gives the eventual fixed-norm ordering. The Taylor expansion of KL about positive equilibrium has the same squared slow coefficient; initial KL derivative (beta-beta_b)Var(E)<0 establishes initial-to-eventual reversal. No all-time or numerical crossing time is inferred.",
+      "The standalone checker independently uses exact LDL congruence counts at six shifts. Every pivot is nonzero; inertia locates one root in each required negative interval. Its trial vector has exact zero bath mean.",
+      "Its residual bound controls the projection error on the two faster modes by eta/39; the stationary component is absent. The norm check proves the slow projection is nonzero. min(q)=1/400 converts the weighted error to a coordinate error by factor 20.",
+      "Integer bisection maintains lo^n*den<=target<hi^n*den. It terminates with adjacent integer endpoints and rechecks the rational inequalities. Signed numerator bounds and four quotient corners enclose every thermal overlap.",
+      "The standalone projection is normalized separately: positive first coordinate and an upper bound on that coordinate transfer the strict margin to normalization w1=1. Its coarser printed intervals are not confused with the sharper cofactor intervals.",
+      "Inspected all ten standalone negative/control tests, including optimized isolated execution, wrong transpose, triplet violation, wrong trial mode, wrong vector, reversed temperatures, zero rates, known inertia, zero-pivot rejection, and signed-root arithmetic.",
+      "The open-neighborhood claim uses strict rate/triplet/overlap margins and a separated simple eigenprojection. Reset addition preserves all F/G values and eigenvectors while shifting nonstationary eigenvalues. The alpha>24 extension allows negative reset relative to alpha=25 but its printed rates remain positive; no positivity inference from a negative reset is used."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:5": {
+    "statement_sha256": "68844a74792d262914d4ead2577192499f9048620cfc0eb7c06e5af9f8b8008e",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:6": {
+    "statement_sha256": "9e06f8a43c4734ffb87fb42a85e3e6ca170e2c354cd084b473f09276e541d05b",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:7": {
+    "statement_sha256": "ac65a80ce83c67cdc39534ea9edea2b4ab0671bd218e6a4aa441066f59915952",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "The difference map B annihilates constants and its right inverse H0 reconstructs a function up to its first value. L annihilates constants, so BL=BLH0 B=KB. In constant-plus-difference coordinates L is block triangular with blocks zero and K.",
+      "Derived both off-diagonal cumulative-rate formulas by applying L to the step functions H0 e_l. Verified all six four-state entries and that G<=0 controls each upper-entry upward-rate difference through detailed balance.",
+      "A sufficiently large shift makes Metzler K nonnegative. Perron theory gives a nonnegative nonzero eigenvector at its spectral abscissa, even if K is reducible. Its eigenvalue is the largest nonzero generator eigenvalue because the generator is reversible.",
+      "Lift the difference eigenvector to w and remove its bath mean. B(Lw-lambda w)=0 makes the residual constant; its zero bath expectation makes it zero. Nonnegative nonzero differences make w monotone and nonconstant.",
+      "The pairwise covariance formula then gives strictly negative derivative of the Gibbs expectation at every finite positive beta, since at least one strictly ordered pair contributes positively. Bath mean zero gives normal absolute-overlap ordering on both sides.",
+      "If all triplets additionally have kappa<=1, H<=0 and G<=0 imply A+B<=C(1+t), B>=At, hence A<=C. Every downward cumulative-rate difference is nonnegative; G handles the upward differences. Equality faces are retained.",
+      "For the gap-law subfamily, nonincreasing positive f and nonincreasing exp(-beta_b x)f(x) establish all downward and upward differences directly. This is a sufficient subfamily, not a characterization.",
+      "The semigroup intertwining B exp(tL)=exp(tK)B proves preservation of increasing functions. Conversely differentiation at t=0 on nonnegative difference coordinate vectors forces off-diagonal K>=0. Uniformization uses a common Poisson clock and inverse-CDF updates with ordered rows.",
+      "For convex-divergence order, the Gibbs covariance identity gives stochastic order of initial laws, preserved by the semigroup. Reversibility transports the density ratio by exp(tL), preserving its increasing orientation on cooling and decreasing orientation on heating.",
+      "A convex function finite on positive arguments admits monotone subgradients. The supporting-line inequality at the nearer distribution converts divergence difference into a nonnegative stochastic-order pairing. The heating pairing reverses both order and monotonicity, preserving its sign.",
+      "KL strict convexity gives a strict supporting-line gap whenever distributions differ; invertibility of exp(tM) preserves their distinctness at finite times. No simple eigenvalue is needed for this corollary, and it is not an all-norm statement.",
+      "Live source checks confirm OHI Result 2 uses monotone coupling and energy ordering, with its KL extension attached to Result 1; Baake-Sumner Proposition 3.11 identifies the transformed-generator condition with monotone semigroups. These are precedents rather than new general principles."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:11": {
+    "statement_sha256": "1771fef9ee9e25427bc05ae0bcfbefab93ce65dc086b9ab35f66984fa09db4fe",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "For each cooling contrast R=-g>0, write its bracket as alpha-sum exp(beta gap). This bracket has negative first and second derivatives, so its log second derivative is strictly negative. Subtracting log Z adds -Var(E)<0, proving strict log concavity.",
+      "If gprime(0)>=0, log R has initial slope <=0 and strictly decreasing slope. Thus gprime(beta)>0 at every positive cooling beta, including equality at the endpoint.",
+      "Differentiated the quotient at beta=0 using Z=n and Zprime=-n mu. The printed endpoint expression and its k=1 sign mu-exp(beta_b a)(mu-a) follow exactly.",
+      "For y=E_(k+1)>=mu, the proper ordered-prefix average is strictly below the full mean, making the endpoint expression positive. This handles mu<=a as well.",
+      "For y<mu, compare averages of the increasing integrand 1/(mu-t). The interval starts at zero and extends beyond a for i=1; for i>1 its start is at least a. Each average is at least log(mu/(mu-a))/a. Exponentiation gives nonnegative endpoint summands under the threshold.",
+      "All cooling coordinates are then strictly ordered. Nonnegative contrast semigroup and nonnegative slow projector prove all-time weighted-square and asymptotic KL conclusions, including repeated slow eigenvalues; the simple-mode norm statement follows separately.",
+      "When the threshold fails, g1prime(0)<0 persists in a positive-beta interval and yields finite cooling witnesses. The first-contrast rank-one generator has positive rates for sufficiently small epsilon, simple slow eigenvalue -1+epsilon, and every G=0 because its top index in a triplet lies outside the two-state support.",
+      "The same construction has a diagonal contrast matrix, so both the G-only and the larger Metzler-contrast families attain the threshold obstruction. It need not satisfy the F inequalities.",
+      "Reviewed energy_threshold_certificate.py: exact boundary derivative factorization, positive rational rank-one example, complete characteristic polynomial, all G equalities and finite hot/cold overlap comparison are checked explicitly. It supports the example, not the general analytic theorem by sampling.",
+      "For span exclusion put r=a/c and d=n-2. mu>a implies r<d/(d+1); mu<=c(d+r)/n and beta_star decreases with mu. The resulting convergent log expansion has constant n/d and all higher coefficients positive.",
+      "Thus c beta_star>n/(n-2), proving absence even at the stated cutoff. Taking E2/c to zero and the remaining n-2 distinct energies to c makes the threshold approach n/(n-2), so any larger constant fails in the G-only family.",
+      "Checked equally spaced four-state threshold beta_b a<=log 3 and equally spaced three-state case mu=a. The cited sampling-box interpretation remains dependent on the separate original-source review."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:12": {
+    "statement_sha256": "4f5fab0f1d99a0f8bf8a0ad76b1f90a51d4eac3deb90a2ba2cae264f9ca8a2e9",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "For each cooling contrast R=-g>0, write its bracket as alpha-sum exp(beta gap). This bracket has negative first and second derivatives, so its log second derivative is strictly negative. Subtracting log Z adds -Var(E)<0, proving strict log concavity.",
+      "If gprime(0)>=0, log R has initial slope <=0 and strictly decreasing slope. Thus gprime(beta)>0 at every positive cooling beta, including equality at the endpoint.",
+      "Differentiated the quotient at beta=0 using Z=n and Zprime=-n mu. The printed endpoint expression and its k=1 sign mu-exp(beta_b a)(mu-a) follow exactly.",
+      "For y=E_(k+1)>=mu, the proper ordered-prefix average is strictly below the full mean, making the endpoint expression positive. This handles mu<=a as well.",
+      "For y<mu, compare averages of the increasing integrand 1/(mu-t). The interval starts at zero and extends beyond a for i=1; for i>1 its start is at least a. Each average is at least log(mu/(mu-a))/a. Exponentiation gives nonnegative endpoint summands under the threshold.",
+      "All cooling coordinates are then strictly ordered. Nonnegative contrast semigroup and nonnegative slow projector prove all-time weighted-square and asymptotic KL conclusions, including repeated slow eigenvalues; the simple-mode norm statement follows separately.",
+      "When the threshold fails, g1prime(0)<0 persists in a positive-beta interval and yields finite cooling witnesses. The first-contrast rank-one generator has positive rates for sufficiently small epsilon, simple slow eigenvalue -1+epsilon, and every G=0 because its top index in a triplet lies outside the two-state support.",
+      "The same construction has a diagonal contrast matrix, so both the G-only and the larger Metzler-contrast families attain the threshold obstruction. It need not satisfy the F inequalities.",
+      "Reviewed energy_threshold_certificate.py: exact boundary derivative factorization, positive rational rank-one example, complete characteristic polynomial, all G equalities and finite hot/cold overlap comparison are checked explicitly. It supports the example, not the general analytic theorem by sampling.",
+      "For span exclusion put r=a/c and d=n-2. mu>a implies r<d/(d+1); mu<=c(d+r)/n and beta_star decreases with mu. The resulting convergent log expansion has constant n/d and all higher coefficients positive.",
+      "Thus c beta_star>n/(n-2), proving absence even at the stated cutoff. Taking E2/c to zero and the remaining n-2 distinct energies to c makes the threshold approach n/(n-2), so any larger constant fails in the G-only family.",
+      "Checked equally spaced four-state threshold beta_b a<=log 3 and equally spaced three-state case mu=a. The cited sampling-box interpretation remains dependent on the separate original-source review."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:13": {
+    "statement_sha256": "289d64cc88a99566bc5f3dfa76285917299bd1cfbd21ed748f36b94438650bd8",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Under the reviewed contrast theorem, orient the simple slow mode with nonnegative coefficients. Cooling magnitude is sum v_k R_k with R_k>0.",
+      "For m=k+1, the positive numerator alpha-sum_i<m exp(beta(E_m-E_i)) decreases strictly. Let A_c be the cold denominator contribution from i<=m, which is at least m.",
+      "The hot denominator is at most A_c+n-m and the cold denominator is at least A_c. Therefore R_c/R_h<1+(n-m)/A_c<=n/m<=n/2, with strictness supplied by the numerator even if m=n.",
+      "The full overlap ratio is a weighted average of these ratios with nonnegative weights v_k R_k(hot) and positive total. It is strictly less than n/2.",
+      "For sharpness use E2=1/L and E_j=(j-2)L for j>=3, with L sufficiently large. The first-contrast rank-one construction with epsilon=(q1+q2)/2 reduces only the 12 reset rates by one half and leaves other off-diagonals unchanged, so positivity holds.",
+      "The spectrum is zero, -1+epsilon and the remaining -1 modes. All G are zero and the mode is simple. Hot beta=L^-2 makes all weights approach one; cold beta=L^-1/2 leaves only the first two weights near one.",
+      "The common overlap numerator is asymptotic to -1/L for both preparations. Denominators approach n and 2, so the ratio approaches n/2 and strict ordinary reversal occurs eventually for n>=3. The construction does not establish sharpness under F constraints."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:14": {
+    "statement_sha256": "62ccdae6df2359efeb7b6e50b0acd3e529492c42d35b33ad08562330a1468fe1",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Adjoining the constant column makes W(pi1prime,...,pikprime)=W(1,pi1,...,pik). Multiplying every function by Z multiplies the determinant by Z^(k+1), via a triangular product-rule row transformation.",
+      "Expand W(Z,f1,...,fk) in its first column. Repeated-column terms vanish, and the remaining exponential Vandermonde determinants give the printed sign (-1)^(k(k-1)/2), prefix energy-gap product and positive tail sum. This indexed argument works for every k<n.",
+      "For n=4, g=pi1prime>0 at all finite real beta. The k=2 identity gives g^2 uprime<0. The k=3 identity gives g^3(uprime)^3 d2v/du2<0, so v as a function of u has strictly positive curvature.",
+      "The mixed two-column Wronskian ratio gives s(x)=(c2 x^gamma-c0)/(c0+c1 x). All c_i>0, gamma>1; the printed derivative numerator is positive. s rises strictly from -1 to s(1)>-1 as x goes from zero to one.",
+      "Checked u(0),v(0) using pi_i prime=(mu-E_i)/4 and limits u(infinity)=-1,v(infinity)=0. The stable quotient formulas agree with the symbolic classification certificate.",
+      "For bprime=g Phi with Phi=A+B u+C v, C=0 gives a monotone or constant Phi. For C nonzero, Phiprime=uprime(B+C s); it has precisely one positive-beta critical point if -B/C lies strictly between -1 and s(1), otherwise none. Equality at either boundary yields no interior critical point.",
+      "The listed endpoint values and optional critical value are therefore the exact infimum/supremum on each bath side. Opposite strict signs occur in the open interval if and only if the finite list has min<0<max; limiting strict signs persist at finite beta by continuity.",
+      "Strict convexity gives at most two derivative zeros counting multiplicity: a nonvertical line meets a strictly convex graph at most twice, tangency has exactly order two, and C=0 has at most one. Identically zero derivative would force constant w by independence of exponentials, excluded by nonzero bath-orthogonal w.",
+      "If bprime has one sign on a bath side, bath value zero forces normal magnitude order. For opposite signs on cooling, the last sign-changing zero before the bath has nonzero b and creates increasing magnitude immediately to its left. For heating use the first sign-changing zero after the bath and decreasing magnitude immediately to its right.",
+      "Tangencies without opposite signs do not suffice. A stationary bath or an endpoint equality does not create an additional interior root. Finite positive witnesses follow from the open sign intervals.",
+      "The unnumbered strong-root prescription splits b at its finitely many stationary points. Strictly monotone pieces have one zero exactly for opposite nonzero endpoint values; stationary zero knots are counted once; zero at beta=0 or infinity is excluded.",
+      "Inspected classification_exact_certificate.py: symbolic derivative coordinates and slope identity, rank-one positivity/reversibility, full simple spectrum, cubic Gibbs numerator with three distinct exact roots, and exact stationary-root counts are checked. The all-energy result uses the analytic proof, not this finite example.",
+      "For the general zero-count consequence, nonzero prefix Wronskians support the repeated normalized Rolle argument; exponential Vandermonde supports at most n-1 numerator zeros. Interpolation at bath plus n-2 distinct positive temperatures has a one-dimensional kernel and saturates the bounds with simple zeros.",
+      "Rank-one realization preserves positivity when epsilon<min(1,N/max|w_i|^2), gives the chosen bath-orthogonal vector a simple slow eigenvalue, and realizes the sharp zero counts. Live source review confirms this construction is already in Klich et al. Appendix VIII, Eq.67."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  },
+  "focused_appendices.tex:15": {
+    "statement_sha256": "58645bcb6b68ed4ff9ad4aea548ea60877ac0408ade5e6a6ca94866e494f01ae",
+    "source_sha256": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "status": "reviewed: stated scope",
+    "evidence": [
+      "research/detailed_audit/primary_order_classification_review.json"
+    ],
+    "steps": [
+      "Adjoining the constant column makes W(pi1prime,...,pikprime)=W(1,pi1,...,pik). Multiplying every function by Z multiplies the determinant by Z^(k+1), via a triangular product-rule row transformation.",
+      "Expand W(Z,f1,...,fk) in its first column. Repeated-column terms vanish, and the remaining exponential Vandermonde determinants give the printed sign (-1)^(k(k-1)/2), prefix energy-gap product and positive tail sum. This indexed argument works for every k<n.",
+      "For n=4, g=pi1prime>0 at all finite real beta. The k=2 identity gives g^2 uprime<0. The k=3 identity gives g^3(uprime)^3 d2v/du2<0, so v as a function of u has strictly positive curvature.",
+      "The mixed two-column Wronskian ratio gives s(x)=(c2 x^gamma-c0)/(c0+c1 x). All c_i>0, gamma>1; the printed derivative numerator is positive. s rises strictly from -1 to s(1)>-1 as x goes from zero to one.",
+      "Checked u(0),v(0) using pi_i prime=(mu-E_i)/4 and limits u(infinity)=-1,v(infinity)=0. The stable quotient formulas agree with the symbolic classification certificate.",
+      "For bprime=g Phi with Phi=A+B u+C v, C=0 gives a monotone or constant Phi. For C nonzero, Phiprime=uprime(B+C s); it has precisely one positive-beta critical point if -B/C lies strictly between -1 and s(1), otherwise none. Equality at either boundary yields no interior critical point.",
+      "The listed endpoint values and optional critical value are therefore the exact infimum/supremum on each bath side. Opposite strict signs occur in the open interval if and only if the finite list has min<0<max; limiting strict signs persist at finite beta by continuity.",
+      "Strict convexity gives at most two derivative zeros counting multiplicity: a nonvertical line meets a strictly convex graph at most twice, tangency has exactly order two, and C=0 has at most one. Identically zero derivative would force constant w by independence of exponentials, excluded by nonzero bath-orthogonal w.",
+      "If bprime has one sign on a bath side, bath value zero forces normal magnitude order. For opposite signs on cooling, the last sign-changing zero before the bath has nonzero b and creates increasing magnitude immediately to its left. For heating use the first sign-changing zero after the bath and decreasing magnitude immediately to its right.",
+      "Tangencies without opposite signs do not suffice. A stationary bath or an endpoint equality does not create an additional interior root. Finite positive witnesses follow from the open sign intervals.",
+      "The unnumbered strong-root prescription splits b at its finitely many stationary points. Strictly monotone pieces have one zero exactly for opposite nonzero endpoint values; stationary zero knots are counted once; zero at beta=0 or infinity is excluded.",
+      "Inspected classification_exact_certificate.py: symbolic derivative coordinates and slope identity, rank-one positivity/reversibility, full simple spectrum, cubic Gibbs numerator with three distinct exact roots, and exact stationary-root counts are checked. The all-energy result uses the analytic proof, not this finite example.",
+      "For the general zero-count consequence, nonzero prefix Wronskians support the repeated normalized Rolle argument; exponential Vandermonde supports at most n-1 numerator zeros. Interpolation at bath plus n-2 distinct positive temperatures has a one-dimensional kernel and saturates the bounds with simple zeros.",
+      "Rank-one realization preserves positivity when epsilon<min(1,N/max|w_i|^2), gives the chosen bath-orthogonal vector a simple slow eigenvalue, and realizes the sharp zero counts. Live source review confirms this construction is already in Klich et al. Appendix VIII, Eq.67."
+    ],
+    "limitations": "Analytic statement and listed supporting arguments reviewed. Classifier implementations, unlisted source attributions, physical interval engines and figures remain separate obligations."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-13T02:12:03.586747+00:00",
+  "guide_pages": 65,
+  "claim_instances_reviewed": 68,
+  "claim_instances_total": 68,
+  "new_details": 2,
+  "new_local_links_checked": 6,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "print_review": "New content pages49-53 inspected; summary orphan fixed with print break rules and page51 re-rendered; all65 pages nonempty",
+  "artifacts": {
+    "freshman_guide.html": "8ec0404a24c24074fb48b233878948b15f12609ae66d5a29d448625c4827f6dc",
+    "output/pdf/freshman_guide.pdf": "d9b758fe824b116cd5220bd2069bca863c904641433db259a92a99a559f2eb93",
+    "output/playwright/guide-dimensions-review.png": "6a5199b84777dfed200d108a670e0299fab8ea41fba5f06bd71c2b236b860ac5"
+  }
+}

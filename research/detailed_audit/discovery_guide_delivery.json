@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-13T03:20:11.708442+00:00",
+  "pages": {
+    "research_report": 126,
+    "focused_appendices": 81,
+    "freshman_guide": 85
+  },
+  "all_pages_nonempty": true,
+  "all_68_current_statement_reviews_preserved": true,
+  "inventory_hashes_current": true,
+  "unique_html_ids": true,
+  "local_links_resolve": true,
+  "new_lesson_exact_examples_checked": true,
+  "desktop_visual": "output/playwright/guide-discovery-review.png",
+  "mobile_viewport": 390,
+  "mobile_document_width": 390,
+  "visual_pdf_pages": [
+    71,
+    72
+  ],
+  "sha256": {
+    "research_report.tex": "f7069ff4e20f4b1e9fdabec7071eba1c41ba0b075c51faa8333e428d2e63b1ec",
+    "focused_appendices.tex": "4c615ff3c5fd252b93a8c82fc22e82798ffb4585d4652cec7e2249cb8dbbf961",
+    "freshman_guide.html": "6852c05cfe8c8c7cab65e8b7fdc222254b36456ea361e91db5637ee6856719cd",
+    "output/pdf/research_report.pdf": "4c3c51860abfe9c0fb5993bb1e1fddfb100813355ccd8c530195b74d982998f1",
+    "output/pdf/freshman_guide.pdf": "51d1522d2bbfe0c1cad9b0b83a5e4aa06f268fee3ecaf3986bc402aab8f3f920",
+    "research/build_freshman_guide.py": "0f18b7e6980017861cc28d33597c8326ce9d8f2ad2968c958bad5b7bf8fce3c7"
+  }
+}

@@ -1,0 +1,1 @@
+{"passed":true,"checks":295,"reference_bits":512,"scope":"Primitive and entire-function boundary regression points; analytic enclosure proof remains separate"}

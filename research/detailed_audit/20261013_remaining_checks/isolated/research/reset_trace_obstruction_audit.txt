@@ -1,0 +1,59 @@
+INDEPENDENT AUDIT: FIVE-STATE RESET/TRACE OBSTRUCTION
+
+The claim is correct. Independent exact calculations are in
+research/reset_trace_independent_audit.py and its JSON receipt. This script
+reconstructs the full generator directly from the physical reduced rates in the
+original receipt; it does not reuse the original sequential elimination routine.
+
+1. The bath weights are (100,4,3,2,1)/110, strictly positive and ordered.
+All physical off-diagonal rates are strictly positive. Conservation and detailed
+balance hold exactly. The minimum physical reduced conductance is exactly1.
+The largest (least negative) original F is -24033/27500000; the largest original
+G is -1/4000000. Thus every original predicate fails strictly.
+
+2. Subtracting the normalized unit reset R=q*1^T-I leaves a conservative
+reversible generator N with nonnegative rates, at least one zero rate, and
+exactly the same F/G values. No division by a zero original triplet rate is
+used: the triplet comparisons here are the linear F/G expressions.
+
+3. The physical trace onto A={1,2,3}, eliminating B={4,5}, is
+T=N_AA-N_AB*(N_BB)^(-1)*N_BA.
+The eliminated block determinant is
+2198102257945001/60500000000000000>0.
+The resulting T is conservative and reversible for the retained bath weights.
+Its effective-rate F123 equals
+452114029270345354793/30223906046743763750000>0,
+whereas its effective G123 remains negative. The original-rate tests and these
+trace-rate tests are different quantities. In particular this is not a direct
+counterexample to the original conjecture or to the first-three mode inequality.
+
+4. The direct physical trace also equals the zero-spectral-parameter Schur
+complement in the weighted Helmert coefficient matrix, after restriction to its
+first two coordinates. This identity was checked exactly, not inferred from
+analogy. At s=(q1-q2)q3/[2q2(q1+q2+q3)], the arithmetic Perron-ratio quadratic
+for that zero-parameter effective matrix is
+-17632447141543468836927/3233957947001582721250000<0.
+Thus the specific proposed zero-energy Schur sufficient lemma really fails.
+Replacing the actual slow spectral parameter by zero loses a potentially
+essential correction. This does not invalidate a proof using the actual
+spectral parameter or another comparison argument.
+
+CONDITIONAL HIGH-DIMENSION BOUND FRAGMENT
+
+I reread high_dimension_bound_reduction.tex against the actual theorem in
+ordered_conductance_theorem.tex. The normalized Helmert basis in that theorem
+and the unnormalized contrasts used by the reduction differ only by positive
+factors sqrt(eta_k), so nonnegative slow coordinates carry over. Every contrast
+has zero bath mean and strictly negative cooling overlap. The grouped first two
+contrasts are supported on123 and have zero conditional bath mean; higher
+contrasts are constant on123, so they do not affect either arithmetic difference.
+The displayed conditional-mean derivatives are strictly positive for nonzero
+first-three group satisfying the added arithmetic inequality. The highest
+full-support contrast is handled separately with P_n=1. The final overlap
+ratio is a positive weighted average, so the strict n/3 bound is valid.
+
+The supremum bracket and scope are correct: 1-3/n <= S_n <= 1-2/n under full
+F/G and a simple slow mode. The first-three inequality is an additional
+hypothesis for the conditional proposition, not a consequence asserted for all
+n. The four-state equality S_4=1/4 uses the separate established four-state
+arithmetic theorem. No correction to the fragment is needed.

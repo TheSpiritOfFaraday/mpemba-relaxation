@@ -1,0 +1,28 @@
+# Local environments, downloaded toolchains, and dependency/build caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+formal/.lake/
+formal/.tools/
+tmp/
+
+# Credentials, local configuration, and desktop metadata.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+._*
+.idea/
+.vscode/
+
+# Nested exports and archives. Prepared figures, PDFs, and historical logs are kept.
+anonymous-release/
+anonymous-research.zip
+github-publication/
+*.zip

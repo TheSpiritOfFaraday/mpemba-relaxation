@@ -1,0 +1,125 @@
+{
+  "reviewed_utc": "2026-10-13T01:27:36.923310+00:00",
+  "status": "partial project audit; complete reviews only for identified statements",
+  "source_hashes": {
+    "focused_paper.tex": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "research_report.tex": "dd5b3062ab2320b062862cec650c4d68a6a52cac973912e3500c590d15280d81",
+    "focused_appendices.tex": "d7ad003351c18766a628aa09ce7ba734dcf14bde1d6a52cf9a4160ec379592a8",
+    "research/predictive_mechanism.tex": "073b9488cb2973bb9c1a139f494c54e39753675a9744f33ebca0cbdec1375b00",
+    "research/ordered_conductance_theorem.tex": "cdf05955059d731106fb35095b0f65687bfc6f2d71fee4f40c347dea80ebd533",
+    "formal/Mpemba/ModeShape.lean": "e5d2bc8d22626d4478005255b14442751be724b8df2291b5c40f01dd9ddda4f6"
+  },
+  "matching_prior_replays": [
+    {
+      "receipt": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "script": "research/ordered_conductance_certificate.py",
+      "source_sha256": "89b284982aa466df4bacc81712bb1f6b6098cb22d79c5597efaeda165d475382",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/ordered_conductance_certificate.log",
+      "log_sha256": "27bc20f8feb80a94848cadfe27a0e3b793c03ca55525bef4ec968a43b5d88ed7",
+      "result": "prior passing replay remains applicable; source and log hashes match"
+    },
+    {
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "script": "research/mechanism_certificate.py",
+      "source_sha256": "ebc8863f80a0ad5de2fd49fd19032fb4e0aeca4fd4d21d9e7e75b8734ae8aee9",
+      "log": "research/detailed_audit/20261013T011946Z_core/mechanism_certificate.log",
+      "log_sha256": "1eaf3dceeec1dc04e100e598c78c088018e5f341e14c10ae6d462601a40cf5ee",
+      "result": "prior passing replay remains applicable; source and log hashes match"
+    },
+    {
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "script": "research/full_triplet_amplitude_certificate.py",
+      "source_sha256": "cb4171e23b9561ff8287923517415eaa277b3c2b770cf93d523b3cb2c3887804",
+      "log": "research/detailed_audit/20261013T011946Z_core/full_triplet_amplitude_certificate.log",
+      "log_sha256": "52ff4a4c19f0a83bdbd06d2e70dd937828c464f25aebb991ed51eecb01659b83",
+      "result": "prior passing replay remains applicable; source and log hashes match"
+    },
+    {
+      "receipt": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "script": "research/extended_arithmetic_certificate.py",
+      "source_sha256": "bc975e610b3b0f379061c24d8eb15bb9fda53a07aee3f980b6157e33ee155e1e",
+      "log": "research/detailed_audit/20261013T011946Z_core/extended_arithmetic_certificate.log",
+      "log_sha256": "b0ff009a0470601d17fe83655bc09ac941a251320390cc1bb393e395543cdbdf",
+      "result": "prior passing replay remains applicable; source and log hashes match"
+    }
+  ],
+  "document_correspondence": [
+    {
+      "fragment": "research/predictive_mechanism.tex",
+      "extent": "before figure placeholder",
+      "report_exact_match": true,
+      "appendix_match": true,
+      "allowed_appendix_change": "Two literal Appendix B references replaced by Appendix~ref{app:rational}"
+    },
+    {
+      "fragment": "research/ordered_conductance_theorem.tex",
+      "extent": "entire stripped fragment",
+      "report_exact_match": true,
+      "appendix_match": true,
+      "allowed_appendix_change": "none"
+    },
+    {
+      "extent": "First-three arithmetic restriction statement and complete proof",
+      "report_exact_match": true,
+      "appendix_exact_match": true
+    }
+  ],
+  "reviews": {
+    "single_turn_and_controlled_family": [
+      "All excited-state coefficients in N are negative, so Nprime>0. N(1)=0 then gives strict overlap signs on both sides, including beta=0.",
+      "Expanded Nprime Z-N Zprime into (w_i-w_j)(E_j-E_i)exp(-beta(E_i+E_j)); checked all six signs and c13>c23.",
+      "Regrouped J=exp(beta E4)D exactly. E4>E2+E3 makes the exponents positive; c13>c23 makes the inner factor positive. Every nonconstant summand strictly increases.",
+      "J(1)>0 follows from Nprime(1)Z(1)>0. J(0)<0 gives exactly one root in (0,1); J(0)>=0 gives none for beta>0, including equality.",
+      "Since b<0 on cooling, the unique derivative sign change is a magnitude maximum. Two positive beta values before it give finite preparations; no infinite-temperature witness is required.",
+      "On heating beta>1, J and b are positive, so the overlap magnitude has ordinary ordering.",
+      "Checked exact family bath orthogonality, conservation, detailed balance, and all four eigenvector equations. First equation gives lambda; second and fourth determine the varying rates.",
+      "Reviewed Bernstein conversion on z=lo+(hi-lo)t: coefficient k is sum_j<=k power_j binomial(k,j)/binomial(n,j). Positive coefficients and positive denominators certify every point of the interval.",
+      "Reviewed continuous checks of both varying-rate bounds, all eight strict F/G margins, branch signs, eigenvalue interval and mode hypotheses; rational inequalities do not accept floating samples.",
+      "Baseline symmetric form diag(q)(M0 transpose+50I) has nonzero LDL pivots with signs +,-,+,-. Congruence inertia gives exactly two eigenvalues below -50.",
+      "Increasing reversible rates increases the nonnegative Dirichlet form. Min-max preserves two eigenvalues below -50. Explicit lambda lies in (-20,-19); zero is simple by positivity. Four eigenvalues are exhausted, so the constructed mode is simple and slowest.",
+      "Second spectral check uses trace and trace-square to determine the residual quadratic. Reversibility gives real roots; positive value at -50 and mean below -50 place both below -50.",
+      "Substituting r=r0+eta z gives D0=U-Vz. Rational log enclosures establish V>0 and the strict printed bracket for U/V.",
+      "Log implementation reduces arguments to [1,2], uses t=(a-1)/(a+1) and the positive series; its remainder is at most 2t^(2m+1)/((2m+1)(1-t^2)). Checked endpoints and rounding direction.",
+      "Fixed-pair overlaps have affine form u+zv and are both negative. Positive v_h-v_c makes reversal equivalent to z>-(u_h-u_c)/(v_h-v_c). Integer-power bisection encloses each rational power.",
+      "At onset Jprime>0 and D=0 imply d*>0. D0=-V delta and Z0=4 give bprime(0)=-V delta/16 and bdoubleprime(0,z*)=d*/16. Taylor expansion gives beta_m=V delta/d*+O(delta^2) and magnitude gain V^2 delta^2/(32d*)+O(delta^3)."
+    ],
+    "ordered_conductance_theorem": [
+      "G_ijk=q_j(k_ik-k_jk), with q_j positive, establishes exact equivalence to ordered reduced conductances.",
+      "Every prefix contrast has q-mean zero. Its product with a longer contrast sums to zero; norm squared is Q_k Q_(k+1)/q_(k+1). The n-1 nonzero orthogonal vectors span the mean-zero space.",
+      "Detailed balance makes normalized contrast generator A symmetric. Derived Lh_l for i<=k+1<=l, then subtracted the k+1 value to obtain the printed off-diagonal identity with nonnegative differences.",
+      "Shifting A by cI makes every entry nonnegative. The exponential series then proves exp(tA)>=0 with strictly positive diagonal at finite t>=0.",
+      "Derived Gibbs contrast numerator using Q_k/q_(k+1)=sum exp(beta_b(E_(k+1)-E_i)). Positive gaps give the same strict sign in every coordinate on either side of the bath.",
+      "On heating N,T>0; Nprime/N>-E_(k+1) and Tprime/T<=-E_(k+1). The quotient derivative is strictly positive.",
+      "Likelihood ratio has constant coefficient one and contrast coordinates g; reversibility evolves them by exp(tA). Its positive diagonal preserves strict positive coordinate differences.",
+      "Orthonormality equates weighted squared distance with squared coordinate norm, proving the strict all-time heating inequality for that distance.",
+      "Spectral expansion gives Pi2=lim exp(-lambda2 t)exp(tA), nonnegative and nonzero. A vector with all entries of the same strict sign cannot be annihilated, including degenerate slow eigenspaces.",
+      "Nonzero orthogonal projection has a positive diagonal entry. With g,gprime>0, this gives 2(Pi2 g) dot (Pi2 gprime)>0. The local KL expansion has the same leading squared norm.",
+      "For simple slow mode, maximizing the symmetric quadratic form over the sphere and replacing coordinates by absolute values gives a nonnegative top eigenvector. Its dot product with g gives the stated strict overlap signs and heating monotonicity.",
+      "Specialized the off-diagonal formula to the three printed aggregate inequalities for four states. The subsequent single-cooling-interval paragraph still depends on the separately unreviewed global stationary-point bound."
+    ],
+    "first_three_mode_restriction": [
+      "B is positively diagonally similar to symmetric Metzler A; choose nonnegative top eigenvector x. Expanding Hx gives both easy inequalities and w1+w2-2w3=(2Q3/q3)(x2-sx1).",
+      "G puts a minimum reduced conductance in the first row. Subtracting k*(q 1transpose-Q4 I) leaves nonnegative reversible conservative rates with at least one of a12,a13,a14 zero.",
+      "Reset contributions cancel in F and G. Contrast B shifts by k*Q4 I, preserving eigenvectors, ordering and simple multiplicity. Dirichlet form gives shifted lambda<=0 even when reducible.",
+      "If x1=0 the desired inequality is immediate. Otherwise symmetric Rayleigh quotient gives lambda>=B33.",
+      "If equality held, positive semidefiniteness of lambda I-A forces its third row to vanish, by principal two-by-two minors. Then e3 is a top eigenvector; simplicity implies x1=0, contradiction. Thus delta=lambda-B33>0, including lambda=0.",
+      "Eliminating x3 gives Eij=Bij+Bi3 B3j/delta. Positive-pivot Schur complement preserves semidefiniteness and nullity one, so lambda is its simple top eigenvalue. Off-diagonals remain nonnegative.",
+      "For positive off-diagonals, r=x2/x1 is the unique positive zero of E21+r(E22-E11)-r^2 E12. Nonnegative value at s>0 implies s<=r.",
+      "If one off-diagonal vanishes, diagonal symmetrizability makes both vanish. Simple top eigenvalue and x1>0 force x2=0 and E11>E22, making the polynomial strictly negative at s>0. Nonnegativity excludes this boundary case.",
+      "Verified delta times the ratio polynomial equals delta C+D*. G gives B31,B32>=0; G134 and G234 bound the two negative terms in B23-s B13. Thus D*>=0.",
+      "For C>=0 the sign follows immediately. For C<0, lambda<=0 gives delta C+D*>=-B33 C+D*, with the correct inequality direction.",
+      "Verified the positive prefactor times T=(c+e+f)N+q4(2ceq3(q1-q2)+fJ), where N=-2q1q2q3 F123>=0.",
+      "Face c=0 gives J>=0. Face a=0 writes J as (2q1+q3)/(2q1+q4) times -2q1q2 F124 plus 2e q1(q1-q2)(q3-q4)/(2q1+q4). Both terms are nonnegative without dividing by c or e.",
+      "For b=0, N=2a q2q3(q1-q2)+d q1q3(2q2+q3). If c<=e, J=(e-c)q1(2q2+q3)+c q3(q1-q2)>=0.",
+      "For b=0,c>e, N+q4J=2q1q2(q3-q4)(c-e)+d q1q3(2q2+q3)-2q1q2q3 F124>=0. Rewrite T=(c+e)N+f(N+q4J)+2ceq3q4(q1-q2).",
+      "The three zero-rate faces are exhaustive after reset and allow overlaps. No irreducibility of the shifted generator is assumed. This completes x2>=s x1, hence the stated first-three inequalities.",
+      "The focused lemma also asserts negative overlap on cooling, supplied by the separately reviewed contrast-sign theorem.",
+      "Combining the structural lemma with the previously checked conditional-average argument proves the strict finite-parameter upper bound. Full family admissibility for sharpness remains separate; neither sharp-bound theorem is marked fully reviewed."
+    ]
+  },
+  "limitations": [
+    "No sign-off is inferred for sharpness-family admissibility, global derivative counting, remaining numbered results, physical interval internals, or figure accuracy.",
+    "Code checks dimensions 2 through 7 for the contrast identity; the indexed analytic proof, rather than those finite checks alone, establishes arbitrary finite n.",
+    "The existing Lean build supports previously formalized statements; not all newly reviewed analytic consequences are claimed to be formalized."
+  ]
+}

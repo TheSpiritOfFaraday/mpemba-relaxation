@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "original_max_F": "-24033/27500000",
+  "original_max_G": "-1/4000000",
+  "tail_block_determinant": "2198102257945001/60500000000000000",
+  "trace_F": "452114029270345354793/30223906046743763750000",
+  "trace_G": "-141206309717384837/3777988255842970468750",
+  "zero_energy_schur_arithmetic_quadratic": "-17632447141543468836927/3233957947001582721250000",
+  "trace_equals_helmert_zero_schur": true
+}

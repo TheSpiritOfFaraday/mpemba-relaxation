@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "bath_weights": [
+    "2/5",
+    "3/10",
+    "1/5",
+    "1/10"
+  ],
+  "positive_contrast_coordinates": [
+    "3/4",
+    "1/100",
+    "1/100"
+  ],
+  "likelihood_ratios": [
+    "177/100",
+    "1/50",
+    "39/40",
+    "91/100"
+  ],
+  "exp_of_ten_times_KL_derivative": "12408177664/132360153046875",
+  "KL_derivative_strictly_negative": true,
+  "chi_square_derivative": "63/1000",
+  "scope": "The KL function is not coordinatewise increasing on the entire positive weighted-prefix contrast cone. No common semigroup or Gibbs preparation pair is constructed; this is not a finite-time heating counterexample."
+}

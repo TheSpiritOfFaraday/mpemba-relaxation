@@ -1,0 +1,111 @@
+{
+  "group": "bounded original discovery and rejected-candidate rechecks",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/cone_search.py",
+      "command": [
+        "python3",
+        "research/cone_search.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.431103208,
+      "source_sha256": "592c9d7b14a83e5718f68e2c27c565689e73df9f8e9c6b97cace2a7e06a8db3b",
+      "log": "research/detailed_audit/20261013_historical_searches/cone_search.log",
+      "log_sha256": "63e3943f365ec29291e96680e0ffac3d4246b1eb88ed34443124ff5c04665c9f"
+    },
+    {
+      "script": "research/adversarial_search.py",
+      "command": [
+        "python3",
+        "research/adversarial_search.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 7.001868249999999,
+      "source_sha256": "8aa488cb0159234f0e7725c5a76129c215ff79c63b86b411c5eaddf8fd075b8e",
+      "log": "research/detailed_audit/20261013_historical_searches/adversarial_search.log",
+      "log_sha256": "8c87db50b93e27aba50f596a70072d208ae21afd79427d202a0b96a7c511c16e"
+    },
+    {
+      "script": "research/adversarial_signed.py",
+      "command": [
+        "python3",
+        "research/adversarial_signed.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.8282272499999994,
+      "source_sha256": "c01c4f911327d9fa73a54c354b03d793aad5c9d3de715cdc4239bf78a0682d2b",
+      "log": "research/detailed_audit/20261013_historical_searches/adversarial_signed.log",
+      "log_sha256": "a346536ac229796f101168a6493817e59b7b7f5f9d95c66dedac6e43cc9ed7e2"
+    },
+    {
+      "script": "research/exact_mode.py",
+      "command": [
+        "python3",
+        "research/exact_mode.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.27090666600000013,
+      "source_sha256": "214db7de0a628afad28e375c1577534d974f2d7bf3bf8a802579077790b88c1a",
+      "log": "research/detailed_audit/20261013_historical_searches/exact_mode.log",
+      "log_sha256": "2ecdbc9b6ad4ae2e93dd706af6fee603159fba38630a9a5d945fe8f0fd639903"
+    },
+    {
+      "script": "research/exact_mode_variant.py",
+      "command": [
+        "python3",
+        "research/exact_mode_variant.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.19777583299999968,
+      "source_sha256": "338a2714c405aa91eb5e78669f34d7675bbda5d362ff7f4c643c8f6457c5189d",
+      "log": "research/detailed_audit/20261013_historical_searches/exact_mode_variant.log",
+      "log_sha256": "b5eda5d6b30c1f35324f0b1009883066dab6a35352c5daedd80fa28444b271ee"
+    },
+    {
+      "script": "research/general_n_arithmetic_highprecision.py",
+      "command": [
+        "python3",
+        "research/general_n_arithmetic_highprecision.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.14483895799999935,
+      "source_sha256": "489225325cdd2d5df9500a94c9218efaf8cd07964ef476097b3e211528c8ae5f",
+      "log": "research/detailed_audit/20261013_historical_searches/general_n_arithmetic_highprecision.log",
+      "log_sha256": "316adbd65555d18c86b06c9cd10b276ea4e110488d6f8e7dfd0512dc9a51979e"
+    },
+    {
+      "script": "research/general_n_inverse_candidate_recheck.py",
+      "command": [
+        "python3",
+        "research/general_n_inverse_candidate_recheck.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.13911033299999964,
+      "source_sha256": "95435fb43772af5afb85d9cd53d9036f4269c72210bc2afc52d5d6c697b8ed15",
+      "log": "research/detailed_audit/20261013_historical_searches/general_n_inverse_candidate_recheck.log",
+      "log_sha256": "b05257e2ac511c802e4d2db46a0423a70f5852cfbec95ea9dddb38547369e520"
+    },
+    {
+      "script": "research/general_n_inverse_dual_search.py",
+      "command": [
+        "python3",
+        "research/general_n_inverse_dual_search.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.37361083399999906,
+      "source_sha256": "0d4de6e127473c7549bb7e02ae9ea0f305d65ff2fd9aaf03aa056aa93abc4e15",
+      "log": "research/detailed_audit/20261013_historical_searches/general_n_inverse_dual_search.log",
+      "log_sha256": "5842e4489b1f79294dfa5b87443d0c1656da6f4712e8cdbf6acb30cf9061bf53"
+    }
+  ]
+}

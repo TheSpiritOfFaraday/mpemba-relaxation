@@ -1,0 +1,125 @@
+Independent audit: complete full-triplet classification of a degenerate slow space
+2026-10-11. Verifier agent. Independently derived from the proposed spectral
+representation and original F/G formulas; compared with theorem agent's
+derivation only after doing the sign cases. No old classifier certificate was
+rerun, and no source fragment was edited.
+
+OUTCOME
+The classification is correct. A positive reversible four-state generator
+with distinct ordered energies, positive finite bath, all original triplet
+predicates failing, and lambda2=lambda3>lambda4 is exactly a positive reset
+generator plus additional reversible mixing on ONE ADJACENT pair. Conversely
+every such generator satisfies all F/G<=0 and has that multiplicity when
+the extra pair-mixing rate is positive. Triple slow degeneracy is the pure
+reset generator. These models have no cooling or heating reversal at any
+finite time for any convex f-divergence.
+
+Strictness caveat: ordering is strict for strictly convex f and distinct
+same-side preparations at every finite time. It cannot be asserted for every
+convex f: an affine f gives a constant/zero divergence. The parent and theorem
+agent were notified of this distinction.
+
+1. SPECTRAL FORM AND ORIGINAL PREDICATES
+Normalize q to sum to one and set D=diag(q), rho=-lambda2>0,
+delta=lambda2-lambda4>0. Reversibility gives a real fast left eigenfunction
+z with q^Tz=0 and N=z^TDz>0, and the complete spectral representation is
+  M=rho(q 1^T-I)-delta D z z^T/N.
+This follows because the stationary direction, double slow space and simple
+fast direction exhaust all four dimensions. The symmetric rank-one projector
+is D^(1/2)zz^TD^(1/2)/N. There is no hidden choice of one vector within the
+degenerate slow space in this representation.
+
+Let alpha=delta/N>0. The reset contribution to every F and G is zero.
+For any i<j<k, direct substitution into the original downward rates gives
+  G_ijk=-alpha q_j z_k(z_i-z_j),
+  F_ijk=alpha[(q_i-q_j)z_i z_j
+       -z_k{q_i z_i-q_j z_j+(q_k/2)(z_i-z_j)}].
+Therefore G<=0 is precisely z_k(z_i-z_j)>=0. No division by any component
+of z is used below. Multiplying z by -1 changes neither formula, so orient
+its highest nonzero component positively.
+
+2. EXHAUSTIVE SUPPORT CASES
+If z4>0, the G tests on triplets ending in4 give z1>=z2>=z3.
+If z1>z2, G123 forces z3>=0; then all four entries are nonnegative and
+z4 is positive, contradicting q^Tz=0. Hence z1=z2=a. Substitution in
+F124 yields alpha(q1-q2)a(a-z4)<=0, so 0<=a<=z4.
+F123 yields alpha(q1-q2)a(a-z3)<=0. Since z3<=a, both factors are
+nonnegative. If a>0 it forces z3=a, making all four entries positive,
+again contradicting centering. Therefore a=0, and centering forces z3<0.
+The fast support is exactly {3,4}.
+
+If z4=0 and z3>0, G123 gives z1>=z2. Centering forces z2<0, since
+z2>=0 would make all first three entries nonnegative with z3>0.
+F124=alpha(q1-q2)z1 z2<=0 implies z1>=0.
+F134=alpha(q1-q3)z1 z3<=0 implies z1<=0.
+Thus z1=0 and the fast support is exactly {2,3}.
+
+If z4=z3=0, the highest positive nonzero entry must be z2: support only
+on state1 would violate centering. Centering forces z1<0 and support is
+exactly {1,2}. There are no remaining cases, because the last nonzero
+component was oriented positively. Strict energy ordering makes every
+q_i-q_j used above strictly positive.
+
+3. CONVERSE AND CANONICAL GENERATOR
+For support on {k,k+1}, choose the harmless normalization
+  z_k=-1/q_k, z_(k+1)=1/q_(k+1), all other z_i=0.
+Then N=1/q_k+1/q_(k+1), and the extra term -delta Dzz^T/N has precisely
+the two off-diagonal entries
+  rate from k+1 to k = delta q_k/(q_k+q_(k+1)),
+  rate from k to k+1 = delta q_(k+1)/(q_k+q_(k+1)).
+Its two diagonal entries enforce conservation, and its only nonzero
+eigenvalue is -delta. It is ordinary additional mixing on an adjacent pair.
+Adding rho reset gives strictly positive rates everywhere and spectrum
+0,-rho,-rho,-rho-delta.
+
+Substitution in the F/G formulas verifies the converse with signs alone:
+  support12: only F123 and F124 are strictly negative; all G vanish;
+  support23: F123,F234,G123 are strictly negative; remaining F/G vanish;
+  support34: F134,F234,G134,G234 are strictly negative; remaining vanish.
+In each case the nonzero signs follow from z_k z_(k+1)<0 and positive
+weights. Thus every original predicate fails by the exact branch lemma.
+In particular a generator satisfying all eight F/G inequalities STRICTLY
+cannot have a degenerate slow eigenvalue in this four-state positive model.
+
+If the slow multiplicity is three, the entire nonstationary space has one
+decay rate and the spectral representation reduces to rho(q1^T-I).
+This covers all nonsimple slow cases.
+
+4. STOCHASTIC MONOTONICITY OF THE CLASSIFIED GENERATORS
+Let u be the pair's upward rate and d its downward rate, and let Bdiff map
+a function to its adjacent differences. For the pair-only row generator,
+the induced difference matrix has only column k nonzero:
+  entry (k,k)=-(u+d),
+  entry (k-1,k)=u when k>1,
+  entry (k+1,k)=d when k+1<4.
+All its off-diagonal entries are nonnegative. The reset contributes
+-rho I to the difference matrix. Hence the total induced matrix is Metzler,
+and its exponential preserves nonnegative adjacent differences. This proves
+stochastic monotonicity directly, without appealing to a general discrete-time
+birth-death rule or imposing an extra rate condition. Boundary pairs12 and34
+simply omit one neighbor entry.
+
+5. ALL-TIME CONVEX-DIVERGENCE ORDERING AND STRICTNESS
+The existing reversible-monotone corollary applies at this fixed bath.
+For completeness, its relevant implication is transparent: thermal initial
+laws are stochastically ordered, and the monotone semigroup preserves that
+order. Reversibility evolves their likelihood ratios p/q by the same
+order-preserving function semigroup. The nearer cooling preparation's ratio
+is increasing in energy; the nearer heating preparation's ratio is decreasing.
+A monotone subgradient of a convex f has the same order as that ratio.
+The supporting-line bound for the divergence difference is therefore a
+nonnegative stochastic-order expectation difference on either side of the
+bath. This holds at every finite time and needs no simple slow eigenspace.
+
+If f is strictly convex, its supporting-line remainder is strictly positive
+when the two time-evolved distributions differ. The matrix exponential is
+invertible, so two distinct thermal preparations remain distinct at every
+finite time. Thus KL and chi-squared, for example, have strictly ordinary
+ordering at each finite time. General convex f gives the required weak
+ordering and exclusion of a reversal, but may allow equality.
+
+SCOPE
+These are all-time f-divergence statements, not a claim about every arbitrary
+norm. The classification assumes detailed balance, distinct energies and a
+positive finite bath, as in the parent theorem. No assertion of publication
+novelty was examined in this audit. No substantive defect found.

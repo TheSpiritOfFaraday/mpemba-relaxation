@@ -1,0 +1,7 @@
+ALL CONTINUOUS-FAMILY EXACT CHECKS PASSED
+onset threshold: -0.017940111223364898
+fixed finite-pair threshold: -0.014800247983140107
+baseline LDL pivots: ['150971/4000', '-494381936093/12077680000', '2188881388080131/19775277443720', '-432951459178371/17511051104641048']
+continuous rational sign certificates: 37
+onset width coefficient: 1.768710565663889
+onset height coefficient: 0.9436837989762812

@@ -1,0 +1,111 @@
+INDEPENDENT FINAL AUDIT: ENTROPY THEOREMS, RATIO OBSTRUCTION, RARE-TAIL REDUCTION
+
+Outcome: the four mathematical arguments pass independent analytic review.
+No substantive correction is required. This is an internal independent audit,
+not external peer review or formal proof-assistant verification.
+
+1. near_bath_entropy_window.tex
+
+The signed coordinate representation is correct on both sides of the bath.
+For heating, the positive numerator is delta times an integral of exp(-delta*s);
+for cooling, the outward positive coordinate uses exp(+delta*s). The integral
+logarithmic derivative and partition-function logarithmic derivative lie in the
+same signed interval of width c, so their difference is in [-c,c], not [-2c,2c].
+Consequently y0/x0 is between 1/delta-c and 1/delta+c for either sign.
+The nonnegative contrast semigroup preserves these coordinatewise bounds.
+
+The stated angle estimate follows by the indicated quadratic moment inequality;
+its minimum is 4ab/(a+b)^2, giving cosine >=sqrt(1-z^2). The density interval has
+endpoint ratio exp(z), contains1 by its weighted mean, and is preserved by the
+backward Markov semigroup. Every straight-segment density used for the integrated
+Hessian remains in this interval. Orthonormality in D gives the exact Hessian
+bounds (1/r_plus)I <= T <= (1/r_minus)I. Gradient integration introduces one
+factor sigma and differentiation in outward delta introduces the other, so the
+cooling sign cancels correctly. The derivative is y^T T x on both sides.
+
+The center-radius operator bound then yields the displayed lower bound.
+For 0<z<=2/sqrt5<1, sqrt(1-z^2)>=z/2>tanh(z/2), including strictness at the
+upper endpoint. Finite-time x and y are nonzero. The bath endpoint is handled
+by equilibrium divergence0 and injectivity of the finite-time exponential,
+not by falsely asserting a positive derivative at delta0.
+The final arbitrary-heating condition using evolved kappa is also justified:
+the evolved interval contains1, and the initial positive coordinate-ratio bounds
+remain valid after applying the contrast semigroup. No spectral assumption is
+being smuggled into the argument.
+
+2. tridiagonal_contrast_entropy.tex
+
+The initial unnormalized coordinate numerator is delta times the truncated
+integral of the common positive measure Q(s)exp(-delta*s) ds. Extending the upper
+endpoint strictly raises its mean s, so the positive logarithmic thermal slopes
+are decreasing in contrast index. Positive diagonal rescaling between normalized
+and unnormalized Helmert bases does not change these ratios.
+
+For a Metzler tridiagonal matrix, its second additive compound has nonnegative
+off-diagonals in ordered wedge coordinates: an allowed adjacent index move cannot
+cross the other occupied index. Thus the exponential has all ordered2x2 minors
+nonnegative, including reducible chains. The paired-column determinant expansion
+has the correct sign and preserves the decreasing y/x order.
+
+The prefix identity S_k=sum_{j<=k}x_j g_j is exact: all higher unnormalized
+contrasts equal1 on that physical prefix, while the lower contrasts have zero
+weighted mean there. Hence c_k=1+sum_{j>k}x_j is its mean density, and S_k is a
+positive prefix mass times Cov(r,Phi'(r)). Abel summation has the stated signs.
+For strictly convex Phi the full covariance is strictly positive whenever the
+state is nonequilibrium, and the last ratio is positive. Finite-time exponential
+injectivity excludes equilibrium for a distinct initial Gibbs preparation.
+For nondifferentiable finite convex Phi, composition is locally Lipschitz on the
+positive compact density range; the chain rule with ordered subgradients holds
+almost everywhere. Strict convexity orders subgradients strictly at distinct
+arguments, so strictness survives this extension and integration.
+
+The numerical example is not a conflation: direct reconstruction of the
+three-state J3 with q=(3/5,3/10,1/10), z=(1,2,-12) gives
+J3=[[-59/135,71/135,47/45],
+    [71/270,-209/270,67/90],
+    [47/270,67/270,-161/90]],
+G123=-2/9 and its adjacent-difference entry a12-a13=-14/27.
+This same block is embedded in the five-state example; the full reset contributes
+zero to that difference. Thus the three-state citation's claimed value is valid.
+
+3. thermal_ratio_obstruction.tex and certificate
+
+The original F/G table and constant-downward strictification identities are
+correct. Re-ran the exact symbolic certificate: all nine identities pass.
+Adding a/q_i to every ordered reduced conductance changes d3 and d4 by the same
+amount a(1/q2-1/q1), leaving d4-d3=1.
+
+The large-beta derivative claim has an elementary independent justification:
+the kth prefix contrast equals its common first-k value until thermal mass reaches
+state k+1, so its first nonconstant contribution begins at exp[-beta(E_{k+1}-E1)].
+Thus y_k/y_1 tends0 for k>1, while x tends(1/sqrt(eta_k)). At t0 the off-diagonal
+numerators in f vanish, so differentiating the denominators adds no term.
+The displayed f'(0)=q1*Q3/sqrt(eta1)>0 is exact. Continuity first gives a fixed
+small positive time, then convergence in beta gives a finite large preparation
+with the claimed strict ratio reversal. The argument establishes an obstruction
+to monotone-contrast-ratio preservation, not a KL reversal.
+
+4. Constant rare-tail proposition in high_dimension_bound_reduction.tex
+
+Weighted orthogonal compression is a conservative reversible physical generator
+with the displayed weighted-average downward rates. A slow eigenfunction that is
+constant on the tail belongs to the compressed subspace and remains an exact
+eigenfunction. On the mean-zero compressed space its Rayleigh quotient cannot
+exceed the full slow eigenvalue, and equality can only occur in the original
+one-dimensional slow eigenspace. This proves both slow ordering and simplicity;
+full dynamic lumpability is not needed.
+
+Direct expansion of compressed F minus the weighted average of original F gives
+exactly sum q_k(Q_T-q_k)G_ijk/(2Q_T q_j). All coefficients are nonnegative.
+The aggregate condition Q_T<q3 ensures four distinct ordered compressed weights,
+so the proved four-state arithmetic lemma applies. The first two contrasts have
+the same coefficients before and after compression. The third compressed
+coefficient is -(Q_T/Q3) times the constant tail value, hence nonnegative since
+that value equals w_n<=0. Orientation is therefore consistent. The n/3 thermal
+bound follows from the independently audited conditional proposition.
+
+The proposition is read in the stated positive-rate reversible working domain.
+For standalone reuse it would be clearer to repeat those hypotheses explicitly;
+a zero-rate extension should not be inferred just from its abbreviated opening.
+The constant-tail and aggregate-weight restrictions are substantive, and neither
+this result nor the ratio obstruction resolves the unrestricted higher-n bound.

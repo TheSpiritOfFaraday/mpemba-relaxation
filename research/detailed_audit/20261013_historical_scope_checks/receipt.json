@@ -1,0 +1,85 @@
+{
+  "group": "historical-scope revision checks",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/revise_report.py",
+      "command": [
+        "python3",
+        "research/revise_report.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.032711042,
+      "source_sha256": "6e68817cd2bfbea587cc7294b141076962e0c1b5a5a154616d878eabdf506e8f",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/revise_report.log",
+      "log_sha256": "f741df2ec7a465c67276a8ec122cf6212afd09bb6a6e7f0be507210822bc0426"
+    },
+    {
+      "script": "research/check_pedagogical_revision.py",
+      "command": [
+        "python3",
+        "research/check_pedagogical_revision.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.322782875,
+      "source_sha256": "4cec46c82a6a11a10ddacee73d45361aa2587f4bf62ef8fad0550983cf5f84e3",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/check_pedagogical_revision.log",
+      "log_sha256": "ffe15136bab50c4527019c35e7330e6565cfd28cd05b717af82d791bcd292c6c"
+    },
+    {
+      "script": "research/check_publication_consistency.py",
+      "command": [
+        "python3",
+        "research/check_publication_consistency.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.6651492080000001,
+      "source_sha256": "1100bf4cc121a71b8c09f0cc9cd093721a525dff95fec3e03c1fc4ce8c5a82f5",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/check_publication_consistency.log",
+      "log_sha256": "8c07b34ec08619dd126977325a30f044d4ecb1fe5a8f19968a84fe1402972978"
+    },
+    {
+      "script": "research/check_historical_candidates.py",
+      "command": [
+        "python3",
+        "research/check_historical_candidates.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.22784083300000013,
+      "source_sha256": "24c7320e1b609b18cc0f5385e127540470d4297d448427869d2200f5299d010f",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/check_historical_candidates.log",
+      "log_sha256": "66d04839b395c283816ddc6aa85a55eaa7c2c67b44ca4bb6b5eeb2d506932d22"
+    },
+    {
+      "script": "research/audit_physical_goal_completion.py",
+      "command": [
+        "python3",
+        "research/audit_physical_goal_completion.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.544241166,
+      "source_sha256": "b5616152d43e1f22909eddfd5e1e0e27d3d10d089505c9c784deed715f4902ed",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/audit_physical_goal_completion.log",
+      "log_sha256": "b8568cf45cb2c5e2879645d7a231157734aa07259d60840c46a364636c9a77c8"
+    },
+    {
+      "script": "research/build_freshman_guide.py",
+      "command": [
+        "python3",
+        "research/build_freshman_guide.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.7238425829999999,
+      "source_sha256": "0f18b7e6980017861cc28d33597c8326ce9d8f2ad2968c958bad5b7bf8fce3c7",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/guide_build.log",
+      "log_sha256": "3afe398e1e32bc1248b28242c7f23e9a250e6ef03af8d695ef48bbd501917759"
+    }
+  ]
+}

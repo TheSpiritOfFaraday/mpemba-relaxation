@@ -1,0 +1,174 @@
+\subsection{Physical-model study: finite-time gains and certified robustness domains}
+\label{sec:physicalresults}
+\textbf{Status on 12 October 2026.}
+A constrained four-state Arrhenius network now meets both predeclared
+finite-time benchmarks throughout the simultaneous $\pm5\%$ parameter
+box. Continuous interval certificates establish at least $10\%$
+KL-distance advantage on $0.4\leq t/\tau\leq0.8$ and at least $5\%$
+time savings for every KL threshold in $[10^{-3},10^{-2}]$.
+The whole box also lies inside the declared physical parameter ranges;
+see Section~\ref{sec:physicalboxcertificate}. This is a separate
+physical-model study: two triplets satisfy the original test, so it does
+not strengthen the paper's all-triplet-failure counterexample.
+
+\paragraph{Model chosen before screening.}
+Let the energies be $E=(0,g_1,g_1+g_2,g_1+g_2+g_3)$, with basins
+$A=\{1,4\}$ and $B=\{2,3\}$. Their energy levels are interleaved.
+Use a common attempt frequency $\nu_0$ and
+\[
+ B_{ij}=\max(E_i,E_j)+h_{ij},\qquad
+ h_{14}=h_A,\quad h_{23}=h_B,\quad
+ h_{12}=h_{13}=h_{24}=h_{34}=h_X.
+\]
+The three shared activation excesses represent two types of intrabasin
+rearrangement and a more costly change of basin. They were not fitted
+independently on six edges or reconstructed from a chosen eigenvector.
+The dated model specification is \path{research/physical_model_design.txt}.
+This is a phenomenological network of metastable configurations; it is
+not yet derived from a specified material or continuum potential.
+Section~\ref{sec:thermalcollision} supplies an exact stochastic
+energy-conserving collision realization of these same rates, with its
+bath and contact assumptions stated explicitly.
+
+The refined parameters, rounded here for readability, are
+\[
+\begin{split}
+(g_1,g_2,g_3)&=(0.830894205,\ 0.116352749,\ 2.729136959),\\
+(h_A,h_B,h_X)&=(2.114063920,\ 2.822657579,\ 5.640080424),\\
+(T_c/T_b,T_h/T_b)&=(3.869407740,\ 9.472085162).
+\end{split}
+\]
+The certified model uses the full decimal inputs in
+\path{research/physical_rate_refined.json}, not the rounded display.
+Its energy span is $3.67638\,k_BT_b$ and its directed rate ratio is
+approximately $584.94$. The smallest and largest directed rates are
+approximately $0.000206426\,\nu_0$ and $0.120746\,\nu_0$;
+$\tau=147.232\,\nu_0^{-1}$. All rates are strictly positive and detailed
+balance follows from the symmetric saddles.
+
+\paragraph{Mechanism and physical interpretation.}
+The nominal decay rates in attempt-frequency units are approximately
+$0.0067920$, $0.116138$ and $0.130813$. Thus the two faster modes decay
+about 17 and 19 times as quickly as the slow mode.
+Normalize the slow left eigenfunction to have first component one.
+Numerically it is $(1,-1.24304,-1.24253,0.92447)$, nearly constant within
+each basin. The cold and hot preparations put respectively $0.46591$
+and $0.47963$ of their probability in basin $A$, compared with $0.55459$
+at the bath. The hotter preparation therefore has less of the slow
+basin-population mismatch, although it starts with a larger total KL
+distance. Its additional disturbance within the basins relaxes quickly.
+These numbers support the interpretation; exact lumpability is not assumed.
+The relevance of metastable populations is established in prior work,
+including \href{https://arxiv.org/abs/2304.06420v2}{Biswas, Rajesh and Pal
+(2023), Section IV and Fig.~2}. Their piecewise-linear Langevin model
+relates initial well populations to relaxation. Their Section VI also
+exhibits the effect without a metastable minimum: metastability is not a
+general necessary condition. The citation supplies a mechanism precedent,
+not a derivation of our four-state rates, an exact lumping theorem, or our
+robustness certificate. Neither that general mechanism nor Arrhenius
+kinetics is claimed new here.
+
+The barriers are only $2.11$--$5.64\,k_BT_b$ above the higher endpoint.
+Consequently a Kramers-type asymptotic rate approximation could have
+material errors even with a clear separation of the network's eigenvalues.
+The 17-fold spectral separation is between network modes, not a measurement
+of intrawell relaxation. A microscopic derivation must establish that
+separate scale and quantify the coarse-graining error. No experiment,
+absolute clock calibration, preparation cost or continuum validation is
+claimed by this calculation.
+The separate collision realization defines an exact thermalizing model
+without a large-barrier approximation; it does not validate a material's
+continuum escape-rate law.
+
+\paragraph{Finite-time evidence.}
+Direct 80-digit matrix exponentials give the following times, in
+$\nu_0^{-1}$ units:
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+KL threshold & Cold time & Hot time & Saved time & Saving\\
+\midrule
+$10^{-2}$ & $40.2978$ & $27.6018$ & $12.6960$ & $31.5055\%$\\
+$10^{-2.5}$ & $125.0952$ & $105.4404$ & $19.6548$ & $15.7118\%$\\
+$10^{-3}$ & $209.9825$ & $190.3277$ & $19.6548$ & $9.3602\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These spot checks are supplemented by outward interval arithmetic.
+The certificate proves at least $8.12\%$ time savings for
+\emph{every} threshold in $[10^{-3},10^{-2}]$, with both initial
+distances above the band and the hot preparation initially farther away.
+On the fixed time interval $[58.8927,117.7854]\,\nu_0^{-1}$ (endpoints
+rounded here), it proves $D_h\leq0.9D_c$ and $D_c>0.00349$.
+An interval LDL inertia calculation brackets the slow eigenvalue and
+checks that this interval is longer than $0.25\tau$ and ends before
+$5\tau$. The more precise endpoints are in the certificate receipt.
+The nominal gain is therefore resolved at finite distances and finite
+times, rather than inferred solely from a slow-mode amplitude.
+
+\paragraph{What the interval certificate establishes.}
+The checker uses uniformization with $\rho=1/2$:
+\[
+ e^{Mt}p=e^{-\rho t}\sum_{k=0}^{\infty}
+ \frac{(\rho t)^k}{k!}(I+M/\rho)^kp.
+\]
+The transition matrix is nonnegative and stochastic for the exact input.
+Each component of its iterates lies in $[0,1]$, so a geometric upper bound
+on the remaining Poisson mass encloses the truncated tail. All exponential
+and logarithmic evaluations use 60-digit outward interval arithmetic.
+Relative entropy decreases along either relaxation. On a time cell
+$[t_i,t_{i+1}]$, it therefore suffices to prove
+$D_h(t_i)<0.9D_c(t_{i+1})$. On a threshold cell
+$[\delta_i,\delta_{i+1}]$, it suffices to bound
+$1-t_h(\delta_i)/t_c(\delta_{i+1})$ from below.
+Eighty time cells and sixty threshold cells pass; interval sign checks
+bracket each threshold root. This is an executable numerical certificate
+with stated mathematical dependencies, not a new Lean formalization.
+
+\paragraph{Robustness: discovery evidence and continuous verification.}
+The refined candidate was checked at all $2^8=256$ corners and 3,000
+seeded interior points of the independent $\pm5\%$ box in the three
+energy gaps, three barrier excesses and two temperature excesses.
+At 31 thresholds per point, the smallest observed time saving was
+$5.1203\%$. The shortest sampled distance-advantage window exceeded
+$1.08\tau$. These samples found no failure of either performance target.
+Those samples alone do not exclude an interior parameter or threshold failure.
+The subsequent continuous certificates are distinguished from the samples
+in Section~\ref{sec:physicalboxcertificate}.
+Three further seeded adversarial searches varied all eight uncertain
+parameters and the threshold continuously. None found a saving below
+$5.1203\%$. These local/global numerical optimization attempts strengthen
+the screening evidence but do not prove the global minimum.
+The physical range constraints are interval-certified for
+the whole box: the energy span is below $3.86021$, every gap exceeds
+$0.11053$, barrier excesses lie in $[2.00836,5.92209]$, the rate ratio
+is below $993.753$, and both preparations remain in the declared range.
+
+An initial nominal optimization gave about $16.76\%$ minimum sampled time
+savings, but 441 of 1,256 subsequent perturbation cases failed at least
+one target or range constraint. A second search guarding the physical
+box and individual parameter changes still failed in 50 cases.
+Three refinements against adverse combinations produced the present
+candidate. Retaining these failures is important: checking one parameter
+at a time would have overstated robustness. The first two searches used
+19,728 and 14,973 objective evaluations; the three refinements used
+9,977, 10,094 and 9,743. These bounded searches do not establish global
+optimality or a no-go result for other models.
+
+The numerical original-triplet signs are $(F,G)=(-,-),(+,+),(+,+),(-,-)$
+for $123,124,134,234$, respectively; the positive margins are large
+compared with numerical error. Thus this example is outside the
+all-triplet-failure premise. Both finite-time benchmarks have now been certified on the full
+$\pm5\%$ box, independently of that additional triplet premise. The physical
+approximation check appears in Section~\ref{sec:activatedintermediates};
+it does not establish a continuum or material realization.
+Scripts and exact input provenance are listed in \path{RUNME.txt}.
+
+The nominal total-variation and Pearson chi-square trajectories are
+retained alongside KL in \path{output/figures/physical_finite_time.csv}.
+On the sampled grid in $0.4\leq t/\tau\leq0.8$, their distance advantages
+are approximately $12.50\%$ and $23.43\%$, respectively, compared with
+$23.39\%$ for KL. These diagnostics support the qualitative reversal for
+the other distances at the nominal point; the continuous robustness
+certificates below concern KL only.
+

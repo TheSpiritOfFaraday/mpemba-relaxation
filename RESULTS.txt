@@ -1,0 +1,74 @@
+Mpemba relaxation beyond triplet tests
+Research status, 12 October 2026; current-report review completed 13 October UTC
+
+MAIN DELIVERABLE
+focused_paper.tex and output/pdf/focused_paper.pdf present the central result.
+research_report.tex and output/pdf/research_report.pdf contain the statements,
+proofs, original-rate counterexample, literature scope, and open questions.
+RUNME.txt gives reproduction commands and distinguishes exact certificates,
+numerical checks, and analytic dependencies.
+
+CENTRAL RESULTS
+1. The four-state ordinary-cooling triplet implication is false. A strictly
+   positive reversible counterexample has a standalone exact rational checker.
+2. Under the full four-state triplet-failure premise, the ordinary cooling
+   slow-amplitude advantage has sharp supremum 25 percent. A controlled family
+   approaches it with a uniform spectral gap and all triplet tests strict.
+3. Within that premise, simple-mode cooling has a single-endpoint necessary
+   and sufficient criterion. Repeated slow modes have an exact reset-plus-
+   adjacent-pair classification and normal all-time convex-divergence ordering.
+4. In any dimension, the weaker G constraints exclude strong effects and
+   asymptotic heating. Nevertheless, full-triplet-failure examples approach
+   amplitude advantages 1-3/n. A certified finite five-state example exceeds
+   37.67 percent. These limits require large energy separation.
+5. General four-state simple slow modes admit a finite asymptotic classification.
+   Degenerate modes have a separate classification for the specified distances.
+   Exact implementations cover general commensurate rational systems, and
+   rational systems without commensurate energies under the full premise.
+6. Finite-time results include a complete weighted-Euclidean test for a specified
+   pair, a uniform relative-entropy ordering window around the bath, and normal
+   all-temperature heating order for every convex divergence when the contrast
+   generator is tridiagonal.
+
+WHAT THE PERCENTAGES MEAN
+The ordinary cooling advantage is 1-|b_hot|/|b_cold| for the asymptotic slow
+amplitude. It is not a measured refrigeration gain or a universal percentage
+reduction in relaxation time. Relative entropy has a quadratic leading
+amplitude. The report treats finite-time distances separately.
+
+WHAT IS STILL OPEN HERE
+For n>4, the full-premise sharp amplitude supremum lies between 1-3/n and
+1-2/n. A first-three slow-mode inequality would close the gap. It is proved
+for four states and a constant rare-tail subfamily, but not in full generality.
+An exact graph-coupling LP reduces proposed counterexamples to explicit
+feasibility problems. Exact trace counterexamples rule out one proposed
+shortcut; failed large numerical searches do not prove the missing inequality.
+
+General finite-time relative-entropy and total-variation reversals are not
+fully classified. The new entropy theorems cover specified hypotheses and
+temperature windows, not every possible trajectory and distance.
+
+REVIEW STATUS
+The work includes analytic proofs, exact executable certificates, independent
+calculations by separate agents within this project, and numerical crosschecks.
+It has not received external human peer review. Lean formalizes the rational
+companion counterexample, its eventual Pearson chi-square distance reversal,
+and the sharp four-state amplitude supremum. A fresh build and all 43 theorem
+axiom checks passed during the detailed re-audit. The broader classification,
+KL, higher-dimensional and physical-model results remain outside that formal
+coverage. Literature checks are bounded; publication priority is not guaranteed.
+Classical order, spectral, total-positivity, and transcendence tools are not
+claimed as inventions of this project.
+
+SEPARATE PHYSICAL-MODEL STUDY
+The report now includes a shared-barrier Arrhenius model with continuous
+interval certificates for >=10% KL-distance advantage on 0.4<=t/tau<=0.8
+and >=5% threshold-time savings for every KL threshold in [0.001,0.01]
+throughout the specified simultaneous +/-5% parameter box. Two triplets pass,
+so this is separate from the all-triplet-failure counterexample. The thermal
+collision realization is an idealized stochastic model, not a material or
+experimental validation. All eight continuous obligations were replayed to completion, with no pending
+cells or enclosure errors, and the implementation and analytic reduction were
+reviewed separately. See research/detailed_audit/final_completion.json for the
+current-report audit and freshman_guide.html for the walkthrough. Historical
+exploratory programs remain provenance, not independently certified proof routes.

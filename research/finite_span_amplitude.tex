@@ -1,0 +1,77 @@
+\section{A finite-span necessary condition for a specified advantage}
+\label{sec:finitespanamplitude}
+The sharp quarter bound has a more restrictive form when the energy span
+and the two preparation temperatures are specified.
+
+\begin{corollary}[Finite-span cooling bound]
+\label{cor:finitespanamplitude}
+Under the full four-state hypotheses of
+Theorem~\ref{thm:fulltripletbound}, put
+\[
+\Delta=E_4-E_1>0,\qquad
+ d=(\beta_c-\beta_h)\Delta>0,\qquad
+ p_{4,h}=\pi_4(\beta_h),
+\]
+for any finite $0<\beta_h<\beta_c<\beta_b$. The asymptotic
+slow-amplitude advantage satisfies
+\begin{equation}\label{eq:finitespanamplitude}
+\mathcal A:=1-\frac{|b_2(\beta_h)|}{|b_2(\beta_c)|}
+\leq p_{4,h}(1-e^{-d})
+<\frac{1-e^{-d}}4
+<\frac{1-e^{-\beta_b\Delta}}4.
+\end{equation}
+These bounds also hold when the ordering is ordinary and
+$\mathcal A\leq0$.
+Consequently, achieving $\mathcal A\geq g$ for a specified
+$0<g<1/4$ requires
+\[
+(\beta_c-\beta_h)\Delta> -\log(1-4g),
+\qquad p_{4,h}>g.
+\]
+In particular $\beta_b\Delta> -\log(1-4g)$ is necessary if the
+preparation temperatures may be chosen freely on the cooling side.
+These are necessary conditions only; no sufficiency or sharpness is
+asserted for these finite-span bounds.
+\end{corollary}
+\begin{proof}
+Write $P_3(\beta)=1-\pi_4(\beta)$. The proof of
+Theorem~\ref{thm:fulltripletbound} established
+\[
+\frac{|b_2(\beta_c)|}{|b_2(\beta_h)|}
+\leq\frac{P_3(\beta_c)}{P_3(\beta_h)}.
+\]
+Both overlaps are nonzero by the contrast theorem, so inversion gives
+$\mathcal A\leq1-P_3(\beta_h)/P_3(\beta_c)$.
+Shift the energy origin to $E_1=0$, leaving $E_4=\Delta$.
+Then $Z_3(\beta_c)\leq Z_3(\beta_h)$ and
+\[
+\frac{\pi_4(\beta_c)}{P_3(\beta_c)}
+=\frac{e^{-\beta_c\Delta}}{Z_3(\beta_c)}
+\geq e^{-d}\frac{\pi_4(\beta_h)}{P_3(\beta_h)}.
+\]
+Multiplying by $P_3(\beta_h)$ gives
+\[
+\frac{P_3(\beta_h)}{P_3(\beta_c)}
+\geq P_3(\beta_h)+e^{-d}p_{4,h},
+\]
+which proves the first bound. The highest-energy state has strictly
+less than one-quarter Gibbs mass at finite positive $\beta_h$, so the
+second inequality is strict. The last is strict because
+$\beta_c-\beta_h<\beta_b$. Solving
+$g<(1-e^{-d})/4$ gives the required dimensionless separation; also
+$g\leq\mathcal A\leq p_{4,h}(1-e^{-d})<p_{4,h}$.
+\end{proof}
+
+For example, amplitude advantages of at least $10\%$, $20\%$, and
+$24\%$ require, respectively,
+\[
+d>\log(5/3)\approx0.5108,\qquad
+d>\log5\approx1.6094,\qquad
+d>\log25\approx3.2189.
+\]
+They also require $p_{4,h}>0.10$, $0.20$, and $0.24$, respectively.
+These are restrictions on initial inverse-temperature separation and
+highest-state occupation, not guarantees that a generator satisfying
+them exhibits an effect. The quantity $\mathcal A$ concerns the
+asymptotic slow amplitude, not a finite-time distance or an absolute
+relaxation-time reduction.

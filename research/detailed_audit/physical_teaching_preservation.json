@@ -1,0 +1,17 @@
+{
+  "technical_part_byte_identical": true,
+  "before_report_sha256": "a4d2f296bdd7301a52688b475ba7cdd2295b5a99571b2381237312b398bf0187",
+  "after_report_sha256": "70e330dd5c321f72a816b81b735f6aae6719dd27cea5e175a7445cb115cc3a7e",
+  "unchanged_claim_reviews_rebound": 32,
+  "added_lessons": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "new_teaching_source": "research/physical_teaching_bridge.tex"
+}

@@ -1,0 +1,87 @@
+{
+  "scope": "Fresh bounded scientific smoke checks on a disposable copy of the publication package. Original work and staged research receipts were not modified.",
+  "all_requested_checks_passed": true,
+  "python_version": "3.9.13",
+  "installed_library_versions": {
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.2",
+    "pypdf": "6.11.0",
+    "Pillow": "10.4.0"
+  },
+  "dependency_usage": "The first four checks use only the standard library. The intermediate checker imports mpmath via its helper. Other listed versions describe the available packaging environment; their full suites were not replayed.",
+  "checks": [
+    {
+      "command": "python3 -I -S research/standalone_primary_check.py",
+      "exit_code": 0,
+      "passed": true,
+      "interpreter": "3.9.13",
+      "verified": true,
+      "triplets_checked": 4,
+      "scope": "Exact standard-library primary-counterexample check; independent of saved certificate files."
+    },
+    {
+      "command": "python3 -I -S research/test_standalone_primary_check.py",
+      "exit_code": 0,
+      "passed": true,
+      "interpreter": "3.9.13",
+      "tests_run": 10,
+      "verdict": "OK",
+      "scope": "Adversarial rejection tests, isolated execution, and optimized-mode behavior."
+    },
+    {
+      "command": "python3 -I -S research/check_freshman_walkthrough.py",
+      "exit_code": 0,
+      "passed": true,
+      "interpreter": "3.9.13",
+      "verified": true,
+      "checks_passed": 70,
+      "scope": "Exact focused-paper rational-witness arithmetic; not the distinct primary witness."
+    },
+    {
+      "command": "python3 -I -S research/test_freshman_walkthrough.py",
+      "exit_code": 0,
+      "passed": true,
+      "interpreter": "3.9.13",
+      "verified": true,
+      "negative_controls": 10,
+      "all_controls_rejected": true,
+      "scope": "Five deliberate corruptions rejected in normal and optimized Python."
+    },
+    {
+      "command": "python3 research/home_counterexample/certify_intermediate.py",
+      "exit_code": 0,
+      "passed": true,
+      "interpreter": "3.9.13",
+      "verified": true,
+      "amplitude_advantage_percent_enclosure": [
+        8.171823350104617,
+        8.182276030006802
+      ],
+      "scope": "Exact finite mathematical witness using spectral perturbation bound; no physical implementation or tolerance-box certification",
+      "receipt_comparison": {
+        "bytes_unchanged": true,
+        "values_unchanged": true,
+        "changed_top_level_fields": []
+      }
+    }
+  ],
+  "initial_environment_issue": {
+    "python_version": "3.15.2",
+    "standard_library_checks": "The same first four checks also passed with this interpreter.",
+    "command": "python3 research/home_counterexample/certify_intermediate.py",
+    "exit_code": 1,
+    "reason": "The ambient interpreter selected outside the project lacked mpmath.",
+    "resolution": "All five checks were rerun using the existing Python 3.9.13 interpreter with documented scientific dependency versions. All subprocess working directories and generated scientific files remained in the disposable copy."
+  },
+  "not_performed": [
+    "Full core/extensions/physical replay",
+    "New Lean build or theorem-axiom audit",
+    "Fresh dependency installation",
+    "External human peer review",
+    "A new review of every analytic dependency"
+  ],
+  "interpretation": "Successful executable checks support their stated finite scope. Packaging checks do not replace mathematical peer review or establish all claims in the manuscripts."
+}

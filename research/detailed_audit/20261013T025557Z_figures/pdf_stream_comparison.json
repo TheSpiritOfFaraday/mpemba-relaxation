@@ -1,0 +1,86 @@
+[
+  {
+    "file": "output/figures/focused_overview.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225559-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012120246-04'00'"
+    }
+  },
+  {
+    "file": "output/figures/mechanism_onset.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225558-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261011154359-04'00'"
+    }
+  },
+  {
+    "file": "output/figures/physical_finite_time.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225557-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012141548-04'00'"
+    }
+  },
+  {
+    "file": "output/figures/quarter_limit.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225559-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261011174035-04'00'"
+    }
+  },
+  {
+    "file": "output/figures/relaxation_crossing.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225558-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261011150336-04'00'"
+    }
+  },
+  {
+    "file": "output/figures/thermal_overlap.pdf",
+    "decoded_page_streams_identical": true,
+    "fresh_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261012225558-04'00'"
+    },
+    "original_metadata": {
+      "/Creator": "Matplotlib v3.9.2, https://matplotlib.org",
+      "/Producer": "Matplotlib pdf backend v3.9.2",
+      "/CreationDate": "D:20261011150336-04'00'"
+    }
+  }
+]

@@ -1,0 +1,112 @@
+BOUNDED HIGH-DIMENSION AMPLITUDE NOVELTY AUDIT -- 2026-10-11
+
+RESULT
+No matching 1-3/n achievable amplitude advantage, or near-unit ordinary-cooling
+advantage under failure of EVERY original triplet test, was found in this
+bounded primary-source search. This supports cautious comparison language,
+not an absolute priority claim. Generic amplitude suppression, engineered
+strong Mpemba effects, and Markov state aggregation are established ideas.
+
+EXACT CLAIM COMPARED
+For each fixed n>=4 the project constructs distinct energies and positive
+reversible rates at beta_b=1, all original F_ijk,G_ijk strictly negative, a
+simple slow rate with a gap bounded below, and finite cooling preparations
+with 1-|b_h|/|b_c| approaching 1-3/n. The leading KL advantage tends to 1-9/n^2.
+This is an achievable limit, not a proved sharp upper bound when n>4. The
+no-dimension-independent-bound consequence takes the fixed-n limit first.
+It is not a statement that relaxation times improve by the same percentage.
+
+PRIMARY-SOURCE COMPARISONS
+1. Avitan, Factor, Gelbwaser-Klimovsky, Necessary conditions for the Markovian
+Mpemba effect, arXiv:2603.04567v1, 2026-03-04.
+https://arxiv.org/html/2603.04567v1
+Previously checked full text and supporting information define the precise
+original-rate triplet premise. The proposed N-level exclusion is directly at
+issue. No dimension-dependent amplitude construction of the kind above was
+located. The same-day checked arXiv history lists only v1.
+
+2. Gelbwaser-Klimovsky, Efficient protocol for the Markovian Mpemba effect in
+N-level systems, arXiv:2609.09988v1, 2026-09-09.
+https://arxiv.org/html/2609.09988v1
+Section II's reset singular point and single-pair states deviation are related
+spectral constructions. The paper continues to assert triplet necessity; its
+large-N discussion concerns the success probability of its protocol, including
+100(N-2)/N at zero bath inverse temperature. That probability is not an amplitude
+advantage and must not be confused with the present 1-3/n expression. No cloning
+construction preserving all triplet failures was located. Full text was reopened
+in this focused check; the same-day arXiv history lists only v1.
+
+3. Klich, Raz, Hirschberg, Vucelja, The Mpemba index and anomalous relaxation,
+arXiv:1711.05829v3, 2018-12-18; Phys. Rev. X 9, 021060 (2019).
+https://arxiv.org/abs/1711.05829v3
+The earlier full-text review establishes the strong-effect framework, including
+zero slow overlap, and Appendix VIII's spectral-design construction. Thus
+complete slow-amplitude suppression is already possible without the present
+triplet restriction. The project's contribution cannot be advertised as the
+first mechanism for arbitrarily large generic Mpemba amplitude advantage.
+The specific contribution is amplification while every original-rate triplet
+test fails, with positive rates, distinct energies and a controlled slow gap.
+
+4. Carollo, Lasanta, Lesanovsky, Exponentially accelerated approach to stationarity
+in Markovian open quantum systems through the Mpemba effect,
+arXiv:2103.05020v1, 2021-03-08; Phys. Rev. Lett. 127, 060401 (2021).
+https://arxiv.org/abs/2103.05020
+Live primary abstract and version history checked. It engineers initial unitary
+rotations to eliminate overlap with the slowest mode. This independently shows
+why a broad novelty claim about amplitude engineering would be inappropriate.
+Those quantum preparations differ from the classical Gibbs-only preparation
+curve and do not impose the original triplet tests. Only the abstract and
+metadata were checked in this focused pass, not its entire proof.
+
+5. Rios-Monje, Patron-Castro, Plata, Sanchez-Rey, Prados,
+Optimal preparation and reachable-state constraints in the Mpemba effect,
+arXiv:2607.12955v1, 2026-07-14.
+https://arxiv.org/abs/2607.12955
+https://arxiv.org/html/2607.12955v1
+Primary abstract checked; HTML was accessible but its full proof was not audited.
+The optimization concerns preparation of
+uniformly heated granular fluids, using a Sonine approximation and reachable
+excess kurtosis. Its maximum-attainable-effect constraints concern that kinetic
+model. They are not dimension-dependent bounds for a finite reversible Gibbs
+chain, nor a result under the 2026 F/G inequalities. The checked live history
+lists v1 only. This is a related optimization paper, not a resolution of the
+present construction's priority.
+
+6. Buchholz, Exact and ordinary lumpability in finite Markov chains,
+Journal of Applied Probability 31(1), 59-75 (March 1994).
+https://www.cambridge.org/core/journals/journal-of-applied-probability/article/abs/exact-and-ordinary-lumpability-in-finite-markov-chains/2DC748F09D80BEEB03CCF18036E149D7
+Publisher abstract and bibliographic record checked. Markov aggregation that
+preserves stationary/transient information is established theory. The project
+uses a directly verified aggregation/spectral decomposition; it should not
+claim invention of state splitting or lumpability. The specific asymptotic
+normalization mechanism and preservation/repair of the original triplet
+inequalities are the application-specific steps. Full article was not read in
+this pass. The 2016 online date is not the original publication date.
+
+7. Klich and Vucelja, Solution of the Metropolis dynamics on a complete graph
+with application to the Markov chain Mpemba effect, arXiv:1812.11962v2,
+2019-02-05.
+https://arxiv.org/abs/1812.11962
+Primary abstract and history checked. Its all-dimension no-effect statement is
+for complete-graph Metropolis dynamics, not all reversible complete graphs.
+It therefore does not prohibit the current positive-rate construction.
+
+SEARCH AND ACCESS LIMITS
+Twenty-one focused web queries were executed in this pass. They combined Mpemba
+with dimension, number of states, amplitude ratios/bounds, 3/n and 1-3, triplets,
+cloning, splitting, lumping, degeneracy, multiplicity, density of states,
+entropy, and enlarged state spaces. General quantum cloning, unrelated uses of
+Mpemba as a proper name, and secondary automated summaries were excluded as
+evidence. Searches also located a 2026 paper titled Giant Mpemba Effect via Weak
+Interactions in Open Quantum Systems (Longhi, Entropy 28, 427); the publisher
+full-text request returned HTTP 429. Its full theorem was therefore NOT checked,
+and this audit makes no claim that it lacks every analogous quantitative result.
+No exhaustive citation-graph or unpublished-work search was attempted.
+
+RECOMMENDED REPORT WORDING
+"State aggregation and slow-mode engineering are established tools. Here they
+are combined with explicit triplet checks and a controlled perturbation to
+produce, for every fixed n>=4, achievable amplitude advantages tending to
+1-3/n while all original triplet tests fail strictly. No matching constrained
+construction was found in the primary sources checked on 11 October 2026;
+publication priority remains unverified. Sharpness for n>4 is open."

@@ -1,0 +1,95 @@
+\subsection{An exact infinite-temperature endpoint criterion}
+\label{sec:tripletendpoint}
+The full triplet premise also removes the possible hidden interior cooling
+interval: any anomaly begins at the high-temperature end of the Gibbs curve.
+Only an endpoint derivative is needed to decide its existence.
+
+\begin{corollary}[Cooling is decided by one endpoint covariance]
+\label{cor:tripletendpoint}
+Under the hypotheses and orientation of
+Lemma~\ref{lem:firstthreearithmetic}, an ordinary asymptotic cooling effect
+exists if and only if
+\[
+b_2'(0)<0,
+\quad\text{equivalently}\quad
+\operatorname{Cov}_{\mathrm{unif}}(w,E)>0.
+\]
+Here the uniform law is on all four states; $\beta=0$ is used only as an
+analytic endpoint, not as an allowed witness preparation. If this condition
+holds, there is exactly one finite positive stationary point of $b_2$.
+It lies in $(0,\beta_b)$, and $|b_2|$ has its unique cooling maximum there.
+The anomalous local ordering region is exactly $(0,\beta_{\rm turn})$.
+If $b_2'(0)\geq0$, then $b_2'(\beta)>0$ for every finite $\beta>0$,
+including when the endpoint derivative is zero, and no ordinary cooling
+effect occurs. With a simple slow mode these conclusions apply to every
+fixed norm asymptotically.
+\end{corollary}
+\begin{proof}
+Write $b=b_2$. The contrast theorem gives $b<0$ on cooling and
+$b'(\beta_b)>0$, as well as strict heating monotonicity. The derivative
+at the bath is strictly positive directly: every prefix-contrast numerator
+vanishes there with a strictly positive derivative, and the nonnegative
+Perron coordinate vector is nonzero.
+
+Put $C=w_3-w_4$. First suppose $C\geq0$. By the arithmetic restriction,
+\[
+m(0)=\frac{w_1+w_2+w_3}{3}\geq w_3\geq w_4,
+\]
+where $m$ is the conditional first-three Gibbs expectation from the sharp
+bound. Since $m$ is nondecreasing, $b=Pm+(1-P)w_4$ gives
+\[
+b'=Pm'+P'(m-w_4)>0 \qquad (\beta\geq0).
+\]
+To justify strictness, if the first three components are not all equal,
+the elementary contrast decomposition in the preceding proof gives
+$m'>0$. Otherwise $m$ is constant, and nonconstancy of the full mode,
+its zero bath mean and $w_4\leq0$ force $m>w_4$; then $P'>0$ supplies
+strictness. Thus this case has no cooling anomaly.
+
+Now suppose $C<0$. Use the derivative-curve representation
+\eqref{eq:finitephi}: $b'=g\Phi$, where $g=\pi_1'>0$,
+\[
+\Phi(u)=A+Bu+C v(u),\qquad
+u(\beta)\searrow-1 \text{ as }\beta\to\infty.
+\]
+The derivative-curve lemma makes $\Phi$ strictly concave in $u$.
+It extends continuously to the two endpoints of
+$[-1,u(0)]$, with
+\[
+\Phi(-1)=w_1-w_2\geq0,
+\qquad \operatorname{sign}\Phi(u(0))=\operatorname{sign}b'(0).
+\]
+If $\Phi(u(0))\geq0$, strict concavity puts its value strictly above the
+nonnegative chord at every interior point. Hence $b'(\beta)>0$ for every
+finite $\beta>0$, even in the endpoint equality case.
+
+If $\Phi(u(0))<0$, its positive value at the bath and its nonnegative
+left endpoint imply that it has exactly one zero between $u(\beta_b)$
+and $u(0)$. Indeed a concave function has an interval as its nonnegative
+superlevel set; strict concavity and positivity at the bath rule out an
+interior zero on the left-hand interval. On the right-hand interval the
+slope of chords is decreasing, so after reaching zero the function cannot
+return to nonnegative values. The zero is therefore unique, with negative
+values to its right and positive values to its left. Since $u$ decreases
+with $\beta$, $b'$ is negative for $0\leq\beta<\beta_{\rm turn}$ and
+positive thereafter. The turning point lies strictly before the bath.
+On cooling, $|b|=-b$, proving the stated maximum and anomalous interval.
+Strict negativity persists at small finite positive inverse temperatures,
+so the criterion supplies admissible finite witnesses.
+
+Finally $b'(0)=-\operatorname{Cov}_{\mathrm{unif}}(w,E)$ by the fixed-mode
+covariance identity. No interpretation of a stationary point alone is used.
+\end{proof}
+
+The covariance is explicitly
+\[
+\operatorname{Cov}_{\mathrm{unif}}(w,E)
+=\frac14\sum_{i=1}^4w_iE_i
+-\frac1{16}\Bigl(\sum_iw_i\Bigr)\Bigl(\sum_iE_i\Bigr).
+\]
+Thus within the triplet-failure family there is no need to scan the initial
+cooling temperatures or solve an interior derivative equation merely to
+decide existence. Section~\ref{sec:rateendpoint} gives an equivalent
+evaluation using one cubic root and original-rate matrix products,
+avoiding construction of the slow eigenvector. This is an asymptotic
+criterion; it does not classify transient distance crossings.

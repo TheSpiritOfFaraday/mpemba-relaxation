@@ -1,0 +1,122 @@
+Independent extended-theorem audit — 11 October 2026
+
+Scope: ordered_conductance_theorem.tex, energy_threshold.tex,
+amplitude_bound.tex, higher_dimension_extension.tex, plus the proposed
+energy-span corollary supplied by the parent. This audit rederived the
+arguments rather than relying on previous agent agreement. Manuscript
+fragments were not edited.
+
+Verdict: no material mathematical error found in the four stated theorem
+proofs. The G-only / original-F-and-G distinction is essential and is
+preserved in the statements. The claims involving degeneracy are justified
+by a nonnegative full spectral projector, not by choosing an arbitrary
+basis vector in a degenerate eigenspace.
+
+1. Ordered conductances.
+Recomputed the Helmert inner products: eta_k=Q_k Q_{k+1}/q_{k+1}; contrasts
+are mutually q-orthogonal and have zero q-mean. For k<l, Lh^(l) has value
+-Q_{l+1}k_{i,l+1}-sum_{j>l+1}q_j k_ij on i<=k+1, yielding precisely the
+printed off-diagonal identity. Hence A is symmetric Metzler. Every g_k has
+the bath-side sign claimed; on heating, its numerator grows relative to
+its positive complementary denominator, strictly. exp(tA) is nonnegative
+with positive diagonal, so componentwise strict heating comparisons imply
+strict squared-norm comparisons for every finite t. The limit projector
+Pi_2 is nonnegative and nonzero. Its positive diagonal entry supplies both
+noncancellation of every one-sign Gibbs coefficient vector and the strict
+heating derivative of ||Pi_2 g||^2. This covers reducible A and degenerate
+slow eigenspaces. No finite-time KL/TV conclusion is silently inferred.
+The three four-state aggregate inequalities match A12,A13,A23 exactly up
+to positive factors.
+
+The one-connected-cooling-interval claim is valid using the separate bound
+of TWO ZEROS COUNTING MULTIPLICITY and b'(beta_b)>0. Suggested clarification:
+add 'counting multiplicity' where this fragment invokes that bound. Counting
+only distinct zeros would not exclude a tangential zero splitting a negative
+interval. The full referenced universal_classification.tex does provide the
+multiplicity form, so this is a clarity issue rather than a proof gap.
+
+2. Energy threshold.
+The logarithm of alpha-sum(exp(beta gap)) has strictly negative second
+derivative on cooling; subtracting log Z preserves strict negativity.
+Thus g_k'(0)>=0 really suffices throughout the open cooling interval,
+including equality at beta=0. Recomputed the printed derivative at zero.
+The mean-prefix argument when y>=mu and the increasing-integrand divided
+logarithm argument when y<mu both hold, including k=1. The latter correctly
+requires mu>a, which follows in that case. The reverse direction realizes
+h^(1) by a positive rank-one perturbation with a simple slow mode and all
+G=0, and g_1'(0)<0 persists at small FINITE positive temperatures.
+Thus the universal equivalence and sharpness really concern G-only and the
+larger contrast-Metzler family; no original F-feasibility is proved by that
+sharpness construction, correctly acknowledged in the text.
+
+3. Amplitude bound.
+For each contrast, the numerator strictly decreases. Its hot denominator
+is <=A_c+n-m and its cold denominator >=A_c, proving the strict n/m bound.
+A nonnegative weighted average then proves strict n/2 for a simple slow
+mode even if some Perron coordinates vanish. The sharpness sequence has
+positive distinct energies for L>1 and finite ordered inverse temperatures.
+Its only negative rank-one pair correction is exactly -1/2 of the reset
+rate; epsilon=(q1+q2)/2 lies in (0,1). The spectrum and G equalities stated
+are exact. The two numerators have the same -1/L leading term, while the
+partition functions tend to n and 2. Hence supremum sharpness follows.
+Presentation correction: the displayed generator currently contains the
+literal string '+epsilon' where '+\\epsilon' is intended.
+The separate claim of a 25% full-premise lower bound depends on the
+quarter-limit construction elsewhere and was not re-proved in this audit.
+
+4. Higher-dimensional extension.
+The new F and G formulas check exactly. The singular limiting generator is
+block triangular, its added eigenvalue -nA is strictly faster, and its left
+slow coordinate is A sum(w)/(lambda2+nA). The denominator is nonzero.
+Ordinary simple-eigenvalue perturbation theory applies directly to this
+matrix despite the singular limiting equilibrium weight. Fixed positive
+initial inverse temperatures ensure epsilon^beta tends to zero, so a strict
+overlap comparison persists for finite small epsilon. Positivity, original
+rate retention, and all new strict predicates hold. The open-set conclusion
+uses the already-strict four-state seed and therefore does not incorrectly
+promote arbitrary equality-face seeds to strict neighborhoods.
+
+The explicit five-state certificate's residual estimate was also inspected:
+stationary projection is removed exactly; old non-slow modes are at least
+39 away from the rational trial eigenvalue; min sqrt(q_i) over old states
+is 1/20. Thus old coordinate error <=20 eta/39. The fifth row supplies
+new error <=(4 A olderr+2 eta)/(4 A-20), avoiding an invalid division by
+sqrt(q5). These are the constants used by its implementation.
+
+5. Proposed span-only corollary.
+Let m=n-2 and r=a/c, with c=E_n-E_1. If mu>a, then
+0<r<m/(m+1) and mu<=c(m+r)/n. Since beta_* decreases with mu,
+c beta_* >= [log(1+r/m)-log(1-(m+1)r/m)]/r.
+The power series equals n/m plus
+sum_{k>=2}[(-1)^(k+1)+(m+1)^k]r^(k-1)/(k m^k), with every coefficient
+strictly positive. Therefore c beta_*>n/(n-2). Equality of beta_b c with
+the proposed cutoff is safely on the absence side. The infimum is approached
+by two nearly equal lowest energies and the other n-2 energies clustered
+near c; each approximating system can retain distinct energies. The first-
+contrast realization establishes G-only sharpness above this cutoff.
+The source Figure 2 caption explicitly samples beta_b E_i in [0,1], so its
+scaled energy span is <=1. This lies inside the new absence region for every
+finite sampled n=4,5,6,7, without assuming the paper fixed beta_b=1.
+
+Executed verification:
+- ordered_conductance_certificate.py passed: exact symbolic identities and
+  positive-coefficient decompositions for n=2,...,7.
+- energy_threshold_certificate.py passed: exact boundary polynomial and a
+  G-only sharpness witness with simple slow eigenvalue -99/100.
+- five_state_extension_certificate.py: launched; result to be appended.
+These computations support but do not replace the all-dimension derivations.
+No numerical search for counterexamples was represented as a proof. Attempts
+to break the intermediate claims focused on degeneracy, reducible contrast
+matrices, equality at the threshold, tangential stationary points, and the
+singular added-state limit; none yielded a counterexample within the stated
+domains.
+
+Minor domain clarification: general n-state statements with a slowest
+nonstationary eigenspace should explicitly say n>=2; the span corollary
+requires n>=3 as stated. This is not a four-state issue.
+
+Completion of pending check: five_state_extension_certificate.py exited 0,
+verified all ten strict predicates and all spectral inertia brackets, and
+proved the finite-temperature overlap margin >1/10000 with uniform
+coordinate/overlap error bound 1/1000000. Its recorded elapsed time was
+12.84 seconds. No material issue was found in this check.

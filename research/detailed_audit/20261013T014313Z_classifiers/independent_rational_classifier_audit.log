@@ -1,0 +1,248 @@
+{
+  "verified": true,
+  "case_count": 33,
+  "elapsed_seconds": 8.53186297416687,
+  "cases": [
+    {
+      "name": "primary rational certified cooling",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "common weight scale 7/13",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "common weight scale 1000",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "common weight scale 1/104729",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "time scale 7/13",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "time scale 1000",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 1
+    },
+    {
+      "name": "time scale 1/104729",
+      "ordinary_cooling": true,
+      "endpoint_sign": 1,
+      "slow_multiplicity": 1,
+      "crosschecked": false,
+      "interval_rounds": 2
+    },
+    {
+      "name": "reset 1/2",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 3,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (1/2, 0)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (1/2, 1)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (1/2, 2)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "constant downward 1/2",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "simple slow with repeated faster roots 1/2",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (1/2, 0)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (1/2, 1)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (1/2, 2)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (1/2, 3)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "reset 2/3",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 3,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (2/3, 0)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (2/3, 1)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "accelerated adjacent pair (2/3, 2)",
+      "ordinary_cooling": false,
+      "endpoint_sign": null,
+      "slow_multiplicity": 2,
+      "crosschecked": true,
+      "interval_rounds": null
+    },
+    {
+      "name": "constant downward 2/3",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "simple slow with repeated faster roots 2/3",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (2/3, 0)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (2/3, 1)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (2/3, 2)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "strict perturbed full-premise (2/3, 3)",
+      "ordinary_cooling": false,
+      "endpoint_sign": -1,
+      "slow_multiplicity": 1,
+      "crosschecked": true,
+      "interval_rounds": 1
+    },
+    {
+      "name": "three real embeddings and scaled generator intervals",
+      "passed": true
+    },
+    {
+      "name": "six prime logs with nested exact enclosures and independent 90 digit check",
+      "passed": true
+    },
+    {
+      "name": "reject float weights",
+      "passed": true
+    },
+    {
+      "name": "reject equal weights",
+      "passed": true
+    },
+    {
+      "name": "reject zero rate",
+      "passed": true
+    },
+    {
+      "name": "reject outside premise",
+      "passed": true
+    }
+  ],
+  "limitation": "Equality and bounded-round inconclusive path are not exercised here; parent is constructing exact equality."
+}

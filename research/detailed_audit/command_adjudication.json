@@ -1,0 +1,1255 @@
+{
+  "complete": true,
+  "total_advertised_commands": 85,
+  "adjudicated_commands": [
+    {
+      "line": 12,
+      "command": "python3 -I -S research/check_freshman_walkthrough.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "3b98a3ef0626fb63338cb62757ebff02522de419429f16ad3177135f934d5ca8",
+      "current_local_import_sha256": {
+        "research/check_freshman_walkthrough.py": "3b98a3ef0626fb63338cb62757ebff02522de419429f16ad3177135f934d5ca8"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_0.log",
+      "log_sha256": "feeaec897ee68723862ec154267b336c6a3b660ee1beec8ac4c4c060bba48ba3",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 13,
+      "command": "python3 research/test_freshman_walkthrough.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "bc2a25aee16e56e6d870031ac7d53fb792fb9b482a24372ad9a27fd15bf8dc8d",
+      "current_local_import_sha256": {
+        "research/test_freshman_walkthrough.py": "bc2a25aee16e56e6d870031ac7d53fb792fb9b482a24372ad9a27fd15bf8dc8d"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/1_test_freshman_walkthrough.log",
+      "log_sha256": "41921f27de24c788cad400216b7018c46eedc6a26ee17855baf73fa51f18d44d",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 14,
+      "command": "python3 research/recheck_all.py --group core",
+      "status": "verified wrapper by complete child replay and source review",
+      "evidence": [
+        "research/detailed_audit/replay_wrapper_review.json",
+        "research/detailed_audit/20261013T011946Z_core/receipt.json"
+      ],
+      "source_sha256": "8f5b70dfad77ce682132c26d03b93f836f4f81bcde3ca7c79e7390fdfdd5d23c"
+    },
+    {
+      "line": 15,
+      "command": "python3 research/recheck_all.py --group extensions",
+      "status": "verified wrapper by complete child replay and source review",
+      "evidence": [
+        "research/detailed_audit/replay_wrapper_review.json",
+        "research/detailed_audit/20261013T012015Z_extensions/receipt.json"
+      ],
+      "source_sha256": "8f5b70dfad77ce682132c26d03b93f836f4f81bcde3ca7c79e7390fdfdd5d23c"
+    },
+    {
+      "line": 16,
+      "command": "python3 research/recheck_all.py --group physical",
+      "status": "verified wrapper by complete child replay and source review",
+      "evidence": [
+        "research/detailed_audit/replay_wrapper_review.json",
+        "research/detailed_audit/20261013T021448Z_physical/receipt.json"
+      ],
+      "source_sha256": "8f5b70dfad77ce682132c26d03b93f836f4f81bcde3ca7c79e7390fdfdd5d23c"
+    },
+    {
+      "line": 17,
+      "command": "python3 research/check_publication_consistency.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "1100bf4cc121a71b8c09f0cc9cd093721a525dff95fec3e03c1fc4ce8c5a82f5",
+      "current_local_import_sha256": {
+        "research/check_publication_consistency.py": "1100bf4cc121a71b8c09f0cc9cd093721a525dff95fec3e03c1fc4ce8c5a82f5"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/check_publication_consistency.log",
+      "log_sha256": "8c07b34ec08619dd126977325a30f044d4ecb1fe5a8f19968a84fe1402972978",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone.",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 18,
+      "command": "python3 research/check_sharpness_correspondence.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "b3e39009b7ff3ed176a2a7ce00c71e77d7dd17e3733360ae72daa7f1fca5fe77",
+      "current_local_import_sha256": {
+        "research/check_sharpness_correspondence.py": "b3e39009b7ff3ed176a2a7ce00c71e77d7dd17e3733360ae72daa7f1fca5fe77"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_source_approach/receipt.json",
+      "log": "research/detailed_audit/sharpness_correspondence.json",
+      "log_sha256": "9140bb0570cfbdd37097d099c3c2b71871cf8b265c8f232a66da017413a1513d",
+      "source_review_evidence": [
+        "research/detailed_audit/sharpness_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 19,
+      "command": "python3 research/check_quarter_approach.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "53977a6d01cd764aecd9c65ae95f028466c441da7c025d271ccbfe8db380e399",
+      "current_local_import_sha256": {
+        "research/check_quarter_approach.py": "53977a6d01cd764aecd9c65ae95f028466c441da7c025d271ccbfe8db380e399"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_source_approach/receipt.json",
+      "log": "research/detailed_audit/quarter_approach_checks.json",
+      "log_sha256": "4427c94ab0abc32e832eb1b1fd155077adba18b78157e3be40aca50099b1f9b1",
+      "source_review_evidence": [
+        "research/detailed_audit/quarter_approach_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 20,
+      "command": "python3 research/build_freshman_guide.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "e8f75a6749255c79a7e5e988f6131eb82e3f5dee9e7ec6c6889b548a12be36a7",
+      "execution_evidence": "research/detailed_audit/final_completion.json",
+      "log": "research/detailed_audit/final_delivery/build.log",
+      "log_sha256": "3afe398e1e32bc1248b28242c7f23e9a250e6ef03af8d695ef48bbd501917759",
+      "current_local_import_sha256": {
+        "research/build_freshman_guide.py": "e8f75a6749255c79a7e5e988f6131eb82e3f5dee9e7ec6c6889b548a12be36a7"
+      },
+      "source_review_evidence": [
+        "research/detailed_audit/final_completion.json"
+      ]
+    },
+    {
+      "line": 74,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706",
+      "current_local_import_sha256": {
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+        "research/search_physical_rate_model.py": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+      "log": "research/detailed_audit/20261013_discovery_replay/0_discovery.log",
+      "log_sha256": "2953bfd848965b0074de7340777f7c118f8314c7d10cb581407e990f61ebfd87",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 75,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py --profile robust_screen --iterations 150",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706",
+      "current_local_import_sha256": {
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+        "research/search_physical_rate_model.py": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+      "log": "research/detailed_audit/20261013_discovery_replay/1_discovery.log",
+      "log_sha256": "513289b726798c43670dbbca355c8da9aa677fc5506042bf1d5b7e841a8a7b7b",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 76,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/refine_physical_rate_model.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "b9ef7619cbf65099709cee715a4d1b0fc8bb5afee1635112ea960d72df6b87f6",
+      "current_local_import_sha256": {
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+        "research/refine_physical_rate_model.py": "b9ef7619cbf65099709cee715a4d1b0fc8bb5afee1635112ea960d72df6b87f6",
+        "research/search_physical_rate_model.py": "79060db0ac1ec85e754dd11daf0ed0f654afe49537bc8e9171164980b8f45706"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+      "log": "research/detailed_audit/20261013_discovery_replay/2_discovery.log",
+      "log_sha256": "f3128b8386982bde1c40acba8c7fac9f6d380e8c6eefa7c8923f118b4c5acb81",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 77,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/check_physical_rate_model.py research/physical_rate_refined.json --samples 3000",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+      "current_local_import_sha256": {
+        "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T025557Z_figures/receipt.json",
+      "log": "research/detailed_audit/20261013T025557Z_figures/check_physical_rate_model_3000.log",
+      "log_sha256": "2ff0ee8ce28e272eb1c3a6e7b19fa12c0e4116e7a9d1fa9590f0bee7a5c9e627",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 78,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/certify_physical_nominal.py research/physical_rate_refined.json",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "133efb0e665e2ad9c259a4bd24848d3f8dfd16659abe90d7c5bd0a76d49b62e6",
+      "current_local_import_sha256": {
+        "research/certify_physical_nominal.py": "133efb0e665e2ad9c259a4bd24848d3f8dfd16659abe90d7c5bd0a76d49b62e6",
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/certify_physical_nominal.log",
+      "log_sha256": "ffefe4bf6d8e7a7f36140b024094923f89a6dd534ad78cf8954732e39f0caa5c",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 79,
+      "command": "python3 research/physical_rate_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "d97ffa47eb580d1a20b3e5a54eb5fe5a67b95454cc9058b8e78d91ad9f6740a9",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_3.log",
+      "log_sha256": "f2149ec91cef612a929ddc983a06e0ac5c53902b36ab6de129d865cd830a9093"
+    },
+    {
+      "line": 80,
+      "command": "OPENBLAS_NUM_THREADS=1 python3 research/adversarial_physical_robustness.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "5874a32b7f1c9caeeba02799795969c6f22dbfd58fcbc93be286774fb9a4eb72",
+      "current_local_import_sha256": {
+        "research/adversarial_physical_robustness.py": "5874a32b7f1c9caeeba02799795969c6f22dbfd58fcbc93be286774fb9a4eb72",
+        "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_discovery_replay/receipt.json",
+      "log": "research/detailed_audit/20261013_discovery_replay/3_discovery.log",
+      "log_sha256": "29980cdd1af5489ef075600b266a9ee411f6ac1873e0441ddb3b587987dabedd",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 104,
+      "command": "sh research/build_papers.sh",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "601a74496f93af186d075b20d761a271cec6d99dcb2927080355b7243c144884",
+      "current_local_import_sha256": {
+        "research/build_papers.sh": "601a74496f93af186d075b20d761a271cec6d99dcb2927080355b7243c144884"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_rebuild/build.log",
+      "log_sha256": "2f27436bf2e461c3906d05670299bc45289fedeec54d7660e199a833c01e15cb",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone.",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 124,
+      "command": "python3 research/mechanism_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_1.log",
+      "log_sha256": "a0d6ed0473c3dc6da04bf8b605053ce5d8bf1661603d04497ea1597b946f099f"
+    },
+    {
+      "line": 125,
+      "command": "python3 research/quarter_limit_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_2.log",
+      "log_sha256": "469746eccca7539e7a459b5c9ce2964ab787301a079b41f2b7b5ad76f8c536c6"
+    },
+    {
+      "line": 126,
+      "command": "python3 research/focused_overview.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "1a6c47376f977fd5e6e3d270b69de13aa3198db7df329fc1dad7b69dcbede4d1",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_4.log",
+      "log_sha256": "d63c5b7bc14f5431d27e6de79d06cb888e63a59a646d08bf4335ec8e1a9f77b3"
+    },
+    {
+      "line": 137,
+      "command": "cd formal",
+      "status": "verified working-directory transition",
+      "evidence": [
+        "research/detailed_audit/20261013_formal_command/receipt.json"
+      ],
+      "finding": "check.sh executed from ./formal; its parent is the package root ."
+    },
+    {
+      "line": 138,
+      "command": "lake exe cache get",
+      "status": "conditional first-setup step; not needed for installed workspace",
+      "evidence": [
+        "formal/README.md",
+        "research/detailed_audit/20261013_formal_command/receipt.json"
+      ],
+      "finding": "Documentation limits cache fetch to first setup after installing elan/lake on PATH. Current local toolchain and pinned mathlib cache built the project successfully. No claim of having fetched a new cache or tested a clean machine."
+    },
+    {
+      "line": 139,
+      "command": "./check.sh",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "d0aadc97173a21f7a610d01e685f6ee70ade0dbd75d5188ab1e9da95e4cb36bc",
+      "execution_evidence": "research/detailed_audit/20261013_formal_command/receipt.json",
+      "log": "research/detailed_audit/20261013_formal_command/check.log",
+      "log_sha256": "fa726622d2ceaf58a4e4bbb99544b72f1817c9e3fc87dbbd57c158e8d59410af"
+    },
+    {
+      "line": 140,
+      "command": "cd ..",
+      "status": "verified working-directory transition",
+      "evidence": [
+        "research/detailed_audit/20261013_formal_command/receipt.json"
+      ],
+      "finding": "check.sh executed from ./formal; its parent is the package root ."
+    },
+    {
+      "line": 162,
+      "command": "python3 -I -S research/standalone_primary_check.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540",
+      "current_local_import_sha256": {
+        "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_1.log",
+      "log_sha256": "8d2a712ab7816dbea845c2e469ad5222c193d8f8b68d27fc246b1094dbcc7bb3",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json",
+        "research/detailed_audit/primary_order_classification_review.json",
+        "research/detailed_audit/sharpness_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 163,
+      "command": "python3 -I -S research/test_standalone_primary_check.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "407753f2eea005d84bb12fdb75701bf15596638e6564f74ad084ed33c6c6068b",
+      "current_local_import_sha256": {
+        "research/test_standalone_primary_check.py": "407753f2eea005d84bb12fdb75701bf15596638e6564f74ad084ed33c6c6068b"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_2.log",
+      "log_sha256": "bfb50fc4a31f73a7b34a058b6de93f57897fbdc0c08d96951418a9c0e65d87aa",
+      "source_review_evidence": [
+        "research/detailed_audit/primary_order_classification_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 184,
+      "command": "python3 research/adversarial_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "a65767fdc8ade269e7e8baf805107d7174b6a76145e40145449baab85252e6ba",
+      "current_local_import_sha256": {
+        "research/adversarial_certificate.py": "a65767fdc8ade269e7e8baf805107d7174b6a76145e40145449baab85252e6ba"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/adversarial_certificate.log",
+      "log_sha256": "9204c9dfab0b90fd8705b0331f894101d1953945dcf620c77cccd39f9b3554d0",
+      "source_review_evidence": [
+        "research/detailed_audit/primary_order_classification_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 185,
+      "command": "python3 research/adversarial_rational_mode_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "9a4da43fc3d0213b704acdcfa56d473bcc40047bb88110e5237fd7413141b4aa",
+      "current_local_import_sha256": {
+        "research/adversarial_rational_mode_certificate.py": "9a4da43fc3d0213b704acdcfa56d473bcc40047bb88110e5237fd7413141b4aa"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/adversarial_rational_mode_certificate.log",
+      "log_sha256": "91e87f35bf45e6606e090aa4b36551dbd443d77163f4c9ed2344fc1ffad089f2",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 186,
+      "command": "python3 research/independent_mode_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "796e12b01f85f6235402e92a35a57ffb1c13be79411178da4fe17c29770d2c77",
+      "current_local_import_sha256": {
+        "research/independent_mode_audit.py": "796e12b01f85f6235402e92a35a57ffb1c13be79411178da4fe17c29770d2c77"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/independent_mode_audit.log",
+      "log_sha256": "7af71f7b8682179bf10bc90eadf37b3b8c1ed047478303282a41fe0604dad5b3",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 187,
+      "command": "python3 research/finite_time_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "557ca5b7eeabce02a16068e7efcc0aaa2ce13586d56507391f1609793a22b258",
+      "current_local_import_sha256": {
+        "research/finite_time_certificate.py": "557ca5b7eeabce02a16068e7efcc0aaa2ce13586d56507391f1609793a22b258"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/finite_time_certificate.log",
+      "log_sha256": "f2d04eeaf36ed7e49b53b9e1f436be20240ea60ab1c63f89ae1893e4c8f26c33",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 201,
+      "command": "python3 research/physics_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "a1e9a48acca3822f83ed466b6d19ab01cb96d237dc19b8c15d899d1ee5353aab",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_0.log",
+      "log_sha256": "1c27d6cebf1821f45edecd9415eabea5b731059cfe1600b14403140277970dd8"
+    },
+    {
+      "line": 202,
+      "command": "python3 research/mechanism_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_1.log",
+      "log_sha256": "a0d6ed0473c3dc6da04bf8b605053ce5d8bf1661603d04497ea1597b946f099f"
+    },
+    {
+      "line": 203,
+      "command": "python3 research/revise_report.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "6e68817cd2bfbea587cc7294b141076962e0c1b5a5a154616d878eabdf506e8f",
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/revise_report.log",
+      "log_sha256": "f741df2ec7a465c67276a8ec122cf6212afd09bb6a6e7f0be507210822bc0426",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 272,
+      "command": "python3 research/mechanism_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "ebc8863f80a0ad5de2fd49fd19032fb4e0aeca4fd4d21d9e7e75b8734ae8aee9",
+      "current_local_import_sha256": {
+        "research/mechanism_certificate.py": "ebc8863f80a0ad5de2fd49fd19032fb4e0aeca4fd4d21d9e7e75b8734ae8aee9"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/mechanism_certificate.log",
+      "log_sha256": "1eaf3dceeec1dc04e100e598c78c088018e5f341e14c10ae6d462601a40cf5ee",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 273,
+      "command": "python3 research/mechanism_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "23a22d7fb96b06fd09b726344ccbc942eba54d6b261b32ab6f85f2dc030e7063",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_1.log",
+      "log_sha256": "a0d6ed0473c3dc6da04bf8b605053ce5d8bf1661603d04497ea1597b946f099f"
+    },
+    {
+      "line": 274,
+      "command": "python3 research/revise_report.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "6e68817cd2bfbea587cc7294b141076962e0c1b5a5a154616d878eabdf506e8f",
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/revise_report.log",
+      "log_sha256": "f741df2ec7a465c67276a8ec122cf6212afd09bb6a6e7f0be507210822bc0426",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 303,
+      "command": "python3 research/ordered_conductance_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "89b284982aa466df4bacc81712bb1f6b6098cb22d79c5597efaeda165d475382",
+      "current_local_import_sha256": {
+        "research/ordered_conductance_certificate.py": "89b284982aa466df4bacc81712bb1f6b6098cb22d79c5597efaeda165d475382"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/ordered_conductance_certificate.log",
+      "log_sha256": "27bc20f8feb80a94848cadfe27a0e3b793c03ca55525bef4ec968a43b5d88ed7",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 304,
+      "command": "python3 research/energy_threshold_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "b72b4960e8daeab557b65f4feeabf75461fe1740a6605abc7377293329f06866",
+      "current_local_import_sha256": {
+        "research/energy_threshold_certificate.py": "b72b4960e8daeab557b65f4feeabf75461fe1740a6605abc7377293329f06866"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/energy_threshold_certificate.log",
+      "log_sha256": "3dba56efc0b8b9a8633611ef2781f859c3eb99eae3205cceed3ecf1f45bb92ae",
+      "source_review_evidence": [
+        "research/detailed_audit/primary_order_classification_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 305,
+      "command": "python3 research/classification_exact_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "c8b86a8fda785fbbb34f753ad9852363bc2a8288798215a1bbd0e8e928221fde",
+      "current_local_import_sha256": {
+        "research/classification_exact_certificate.py": "c8b86a8fda785fbbb34f753ad9852363bc2a8288798215a1bbd0e8e928221fde"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/classification_exact_certificate.log",
+      "log_sha256": "310c186c9ae10798d5742d2fa3d4e0154e8eefbd12e646a026638b4c24f5590c",
+      "source_review_evidence": [
+        "research/detailed_audit/primary_order_classification_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 306,
+      "command": "python3 research/degenerate_exact_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "9615b774d71bbfc8e5ca4715468ea5db35e8d5f26fe72b691594ed65a6fe5011",
+      "current_local_import_sha256": {
+        "research/degenerate_exact_certificate.py": "9615b774d71bbfc8e5ca4715468ea5db35e8d5f26fe72b691594ed65a6fe5011"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/degenerate_exact_certificate.log",
+      "log_sha256": "8040cef91f438fbdcad9ed0319f054122cdec3ab87b0e11ce72063606eec3757",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 307,
+      "command": "python3 research/exact_mode_realizability.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8",
+      "current_local_import_sha256": {
+        "research/exact_mode_realizability.py": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/2_exact_mode_realizability.log",
+      "log_sha256": "308e28a00f0e385c1d0b0cdbf87e2a410d57cabca3deb6228cac8d303a76c9d3",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 308,
+      "command": "python3 research/inverse_realizability_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+      "current_local_import_sha256": {
+        "research/exact_mode_realizability.py": "8afa4535fbf520ae803123b6786ed0071175fee79e6ef01e9a956bd28cc60aa8",
+        "research/inverse_realizability_audit.py": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+        "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/inverse_realizability_audit.log",
+      "log_sha256": "12dbed2f8e6c94815643334d8d4e988ebfa34f47a0eb46ddd80e92f013b0eee9",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json",
+        "research/detailed_audit/primary_order_classification_review.json",
+        "research/detailed_audit/sharpness_review.json",
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 309,
+      "command": "python3 research/quarter_limit_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492",
+      "current_local_import_sha256": {
+        "research/quarter_limit_certificate.py": "1fe627a244f02a8aa8e8cf0f852985ed588d89394b83f7d3eceefaf402437492"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_certificate.log",
+      "log_sha256": "25997349d2bc2c961fc867715314c06039c8b3ef396b26333ba729513f8ecbd5",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 310,
+      "command": "python3 research/quarter_limit_thermal_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "79e0f177831cf0761f98cf79b04308cef22a2452a2337dc816a1b42a3b4d436f",
+      "current_local_import_sha256": {
+        "research/quarter_limit_thermal_certificate.py": "79e0f177831cf0761f98cf79b04308cef22a2452a2337dc816a1b42a3b4d436f",
+        "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/quarter_limit_thermal_certificate.log",
+      "log_sha256": "573d18c4a89c82c89df5d2b6a9b8156caf6a70c25bdbafd5200961e1c6b9b165",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json",
+        "research/detailed_audit/primary_order_classification_review.json",
+        "research/detailed_audit/sharpness_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 341,
+      "command": "python3 research/classifier_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "2c55f4831fa1aa0f22cc4790e8f56e215d37d187654bbcd45fc61dcdcad92069",
+      "current_local_import_sha256": {
+        "research/classifier_audit.py": "2c55f4831fa1aa0f22cc4790e8f56e215d37d187654bbcd45fc61dcdcad92069",
+        "research/exact_polynomial_reference.py": "a23e0e78f64f4e9201e4b296e535435190f97a274fe218d70d8e00afc6c801d1",
+        "research/four_state_classifier.py": "6f45a8838e1f18ec880255f87864615e90464e015c6947b2fd7712628e5a5d0c"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/3_classifier_audit.log",
+      "log_sha256": "fe4a8fcca0565257c4b101bee94f09f46263383aa27104f0e01daeb1e474c42a",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 342,
+      "command": "python3 research/ordered_conductance_numeric_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "2965415ac96847b5ad588d78d00882c64a96259c855d870b1a5de4a0e2f516c5",
+      "current_local_import_sha256": {
+        "research/ordered_conductance_numeric_audit.py": "2965415ac96847b5ad588d78d00882c64a96259c855d870b1a5de4a0e2f516c5"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/4_ordered_conductance_numeric_audit.log",
+      "log_sha256": "c65ba49acfc39d745d6fbf226eaf535065eef970a0715239dcc9f32db06c396b",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 363,
+      "command": "python3 research/exact_commensurate_classifier.py research/commensurate_example.json",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/5_exact_commensurate_classifier.log",
+      "log_sha256": "1b1a4ad6ac267b5435401d3b8791486f27c25192f0499bdf50f7bcdc9391d5b2",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 364,
+      "command": "python3 research/test_exact_commensurate_classifier.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/test_exact_commensurate_classifier.py": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/test_exact_commensurate_classifier.log",
+      "log_sha256": "fd79b2039f76c2864d7306737964eba013cbf724d75dd7225bf9035573897842",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 382,
+      "command": "python3 research/transient_only_chi_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "96efa7d783341df805e08063891fe8ffa8b6237f86477a57e16d753b167cf10a",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/transient_only_chi_certificate.py": "96efa7d783341df805e08063891fe8ffa8b6237f86477a57e16d753b167cf10a"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/transient_only_chi_certificate.log",
+      "log_sha256": "4af0fb1a0766c8147e7f549f7087e666e7d2045f5f8565869832c0096094480d",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 396,
+      "command": "python3 research/five_state_extension_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "29f4d7b66fb5f50e73e55aa5fe4179dca3279c4d33ea231ca5db89353f54a839",
+      "current_local_import_sha256": {
+        "research/five_state_extension_certificate.py": "29f4d7b66fb5f50e73e55aa5fe4179dca3279c4d33ea231ca5db89353f54a839",
+        "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_extension_certificate.log",
+      "log_sha256": "46f3dabd4c976342b2cbf9ad00b0308c023f1660fdb8c06d78b963afbb196c40",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json",
+        "research/detailed_audit/primary_order_classification_review.json",
+        "research/detailed_audit/sharpness_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 407,
+      "command": "python3 research/exact_classifier_cross_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "300a636d1f0293dde0e27a539d584b07b60b3d381886af22267c71a60cf6fed3",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_6.log",
+      "log_sha256": "8211361e20fe6755efe8a14cbbc0887037d30fa10f5b7f3cd02299b642ea0fe4"
+    },
+    {
+      "line": 408,
+      "command": "python3 research/quarter_limit_plots.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+      "execution_evidence": "research/detailed_audit/20261013_document_rebuild/receipt.json",
+      "log": "research/detailed_audit/20261013_document_rebuild/direct_2.log",
+      "log_sha256": "469746eccca7539e7a459b5c9ce2964ab787301a079b41f2b7b5ad76f8c536c6"
+    },
+    {
+      "line": 434,
+      "command": "python3 research/full_triplet_amplitude_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "cb4171e23b9561ff8287923517415eaa277b3c2b770cf93d523b3cb2c3887804",
+      "current_local_import_sha256": {
+        "research/full_triplet_amplitude_certificate.py": "cb4171e23b9561ff8287923517415eaa277b3c2b770cf93d523b3cb2c3887804"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/full_triplet_amplitude_certificate.log",
+      "log_sha256": "52ff4a4c19f0a83bdbd06d2e70dd937828c464f25aebb991ed51eecb01659b83",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 435,
+      "command": "python3 research/extended_arithmetic_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "bc975e610b3b0f379061c24d8eb15bb9fda53a07aee3f980b6157e33ee155e1e",
+      "current_local_import_sha256": {
+        "research/extended_arithmetic_certificate.py": "bc975e610b3b0f379061c24d8eb15bb9fda53a07aee3f980b6157e33ee155e1e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/extended_arithmetic_certificate.log",
+      "log_sha256": "b0ff009a0470601d17fe83655bc09ac941a251320390cc1bb393e395543cdbdf",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 436,
+      "command": "python3 research/extended_mode_obstruction_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac",
+      "current_local_import_sha256": {
+        "research/extended_mode_obstruction_certificate.py": "f2d4e86c3151898df57ca82e64646f03c50cabf76423e4945900806f8a8f0aac"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T011946Z_core/receipt.json",
+      "log": "research/detailed_audit/20261013T011946Z_core/extended_mode_obstruction_certificate.log",
+      "log_sha256": "a39ba06fca681cd19628957021f5d348f585554881330a57c47f38ea206aecbb",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 454,
+      "command": "python3 research/one_fast_mode_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "38c44b81268b75299fea66c12440b71521114ac193453211eac1c16334de55be",
+      "current_local_import_sha256": {
+        "research/one_fast_mode_certificate.py": "38c44b81268b75299fea66c12440b71521114ac193453211eac1c16334de55be"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/one_fast_mode_certificate.log",
+      "log_sha256": "17aea091336f059af9562c8434925d375e19244256073bb92acd2cab9e44b89d",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 455,
+      "command": "python3 research/compact_endpoint_equality_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "3fb03d772117f81de8fc5b6f53aeb28c10458bbf6060ade329d3d2eeff1fd156",
+      "current_local_import_sha256": {
+        "research/compact_endpoint_equality_certificate.py": "3fb03d772117f81de8fc5b6f53aeb28c10458bbf6060ade329d3d2eeff1fd156",
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/compact_endpoint_equality_certificate.log",
+      "log_sha256": "7a11a735105e65c076012ba9484abb125e9ef938a5fbd4f85cc7037aa3dab1a2",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 456,
+      "command": "python3 research/independent_rational_classifier_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "e125624254177eca9f992248a3c24a81e575fe63224e5b0b0ccaaba98cdc1b8f",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+        "research/independent_rational_classifier_audit.py": "e125624254177eca9f992248a3c24a81e575fe63224e5b0b0ccaaba98cdc1b8f"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/independent_rational_classifier_audit.log",
+      "log_sha256": "eba36dbe7631b16c6fde99774914fa3bb5aa48989d9470d47588ccdbe2b31acd",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 457,
+      "command": "python3 research/independent_classifier_nearzero_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "7c0e0dd8ac24b3ac507f2f73d587bc15887de6f8b72e7a56427356c8f07bdc9a",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+        "research/independent_classifier_nearzero_audit.py": "7c0e0dd8ac24b3ac507f2f73d587bc15887de6f8b72e7a56427356c8f07bdc9a"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/independent_classifier_nearzero_audit.log",
+      "log_sha256": "c296217cab19eed700a26bc8e049ab7acd2b51643470be4ce4093599bbda25d9",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 458,
+      "command": "python3 research/exact_rational_triplet_classifier.py research/rational_triplet_compact_equality.json",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/exact_rational_triplet_classifier.py": "8a6d7f195cd8a5beb5da28898a99848c9a2ca2c81b109e6478c43de045a6f264"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/6_exact_rational_triplet_classifier.log",
+      "log_sha256": "4398559bb4730cd9cf7a05d6ac6d04a1810338464a230073af88427fafc9793a",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 492,
+      "command": "python3 research/check_transient_heating_candidate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "f41007c8416c5dc6e2f9c6f9bf6757db6d4b5a4ec8c306f29b1ce04da3be3c67",
+      "current_local_import_sha256": {
+        "research/check_transient_heating_candidate.py": "f41007c8416c5dc6e2f9c6f9bf6757db6d4b5a4ec8c306f29b1ce04da3be3c67"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/7_check_transient_heating_candidate.log",
+      "log_sha256": "95e568eed1909788277cbfc79cc513a7a9db5b9ef67c9b603e7a4183fc3f8d34",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 497,
+      "command": "python3 research/high_dimension_amplitude_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "23ad4a43deb1a04510b5827656b17c10ce92e164c7e2555f4745604eb36482ce",
+      "current_local_import_sha256": {
+        "research/high_dimension_amplitude_certificate.py": "23ad4a43deb1a04510b5827656b17c10ce92e164c7e2555f4745604eb36482ce"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/high_dimension_amplitude_certificate.log",
+      "log_sha256": "a7cd55f3005c2919714bed92f2c7787183b6596ce7ebd2e55e473b0405e4f892",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 498,
+      "command": "python3 research/clone_rate_bound_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "cb98f4226d6a21a3c4d28e46d9c651c361b4eb98099286dfe1fe66cbf7cedcda",
+      "current_local_import_sha256": {
+        "research/clone_rate_bound_certificate.py": "cb98f4226d6a21a3c4d28e46d9c651c361b4eb98099286dfe1fe66cbf7cedcda"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/clone_rate_bound_certificate.log",
+      "log_sha256": "c5291966f74f4587a6841755d7d148a4507761afa007ce6ad72bfc0a512340ad",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 499,
+      "command": "python3 research/five_state_large_advantage_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "a95eae450502909285c4a48a340077ebdf71c1835c7d4a78d8cf8c5b4496d297",
+      "current_local_import_sha256": {
+        "research/five_state_large_advantage_certificate.py": "a95eae450502909285c4a48a340077ebdf71c1835c7d4a78d8cf8c5b4496d297",
+        "research/standalone_primary_check.py": "f7a252c796eb0976fe361ea60c4e093ae50805fc4fd4340c2442797b99b02540"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_large_advantage_certificate.log",
+      "log_sha256": "85649bc8f082f3780b6c38a6c4432786498d1538bb08b6db5b17556803936902",
+      "source_review_evidence": [
+        "research/detailed_audit/dimensional_constructions_review.json",
+        "research/detailed_audit/primary_order_classification_review.json",
+        "research/detailed_audit/sharpness_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 519,
+      "command": "python3 research/thermal_ratio_obstruction_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533",
+      "current_local_import_sha256": {
+        "research/thermal_ratio_obstruction_certificate.py": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/thermal_ratio_obstruction_certificate.log",
+      "log_sha256": "4fe596a01f1a1d8f16b21b718a746e94f7f9c8012f0bca50a95e35656c0690cf",
+      "source_review_evidence": [
+        "research/detailed_audit/entropy_dimensional_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 520,
+      "command": "python3 research/reset_trace_obstruction.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c",
+      "current_local_import_sha256": {
+        "research/reset_trace_obstruction.py": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_obstruction.log",
+      "log_sha256": "04e7d2694c1a2cb98a47adbec615f890b044f6528e4e38b9c3282f50270686f5",
+      "source_review_evidence": [
+        "research/detailed_audit/entropy_dimensional_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 521,
+      "command": "python3 research/reset_trace_independent_audit.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917",
+      "current_local_import_sha256": {
+        "research/reset_trace_independent_audit.py": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T012015Z_extensions/receipt.json",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_independent_audit.log",
+      "log_sha256": "f1eed0f1b65e5e5cc81ba75ccb49b4f3c3613f0e6e8107ff5e4fdfc38b44e6d4",
+      "source_review_evidence": [
+        "research/detailed_audit/entropy_dimensional_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 522,
+      "command": "python3 -I -S research/kl_contrast_gradient_obstruction.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "9fbd595400685b21e1e1c8c297f1ba8a65968ea85e1b4f74579dba078e27cc1f",
+      "execution_evidence": "research/detailed_audit/20261013_completion_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_completion_checks/1.log",
+      "log_sha256": "70f612283e6b73c7e644c70405b7a83489a720095af9709126e2f9690474be1d"
+    },
+    {
+      "line": 565,
+      "command": "python3 research/activated_intermediate_model.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "c412144838bd7ac027d0066dd78f55e155b2219f447848bfea74477f4ce7b24a",
+      "current_local_import_sha256": {
+        "research/activated_intermediate_model.py": "c412144838bd7ac027d0066dd78f55e155b2219f447848bfea74477f4ce7b24a",
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/activated_intermediate_model.log",
+      "log_sha256": "b7eadef833bd21a1515ef28d69142b7dc40931f1800765a97b4d960aac2cd23b",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 566,
+      "command": "python3 research/check_activated_intermediates.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "d51e24a639664955ddabce4cae004dc43f706c1abfa88ae110dd48a51927b50a",
+      "current_local_import_sha256": {
+        "research/activated_intermediate_model.py": "c412144838bd7ac027d0066dd78f55e155b2219f447848bfea74477f4ce7b24a",
+        "research/check_activated_intermediates.py": "d51e24a639664955ddabce4cae004dc43f706c1abfa88ae110dd48a51927b50a",
+        "research/check_physical_rate_model.py": "f675691fcf3899ea82dbe73eee7bc9a69b98ffe3b3b1cbdc2964dbd25c050581",
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/check_activated_intermediates.log",
+      "log_sha256": "c8648b3ba7067e7bcd2e3f041f9e760f5e879032ca27b42f46bc39ad133b3647",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 580,
+      "command": "python3 research/run_robust_finite_time_certificate.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177",
+      "current_local_import_sha256": {
+        "research/run_robust_finite_time_certificate.py": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T021448Z_physical/receipt.json",
+      "log": "research/detailed_audit/20261013T021448Z_physical/run_robust_finite_time_certificate.log",
+      "log_sha256": "45936b7c04b2dafbca94262d382f606778fa0eecb0f0ad437006532195b42160",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 594,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_temperature_reduction.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_temperature_reduction",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "e144f8851c9a4ad2e2f72949d2417f05b79f64ddcf37900459f1bcb522bff697",
+      "current_local_import_sha256": {
+        "research/check_temperature_reduction.cpp": "e144f8851c9a4ad2e2f72949d2417f05b79f64ddcf37900459f1bcb522bff697"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 595,
+      "command": "python3 research/check_temperature_reduction.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "5dfe98b5337e8294965d7474cfac8246f8aef1030ab3fb887dd0dfbe1c44c1eb",
+      "current_local_import_sha256": {
+        "research/check_physical_box_spectral.py": "612dbbb10f2ed960116418ad4750bbf1c1effc9cca60776d5c87e5c3c89b7fea",
+        "research/check_temperature_reduction.py": "5dfe98b5337e8294965d7474cfac8246f8aef1030ab3fb887dd0dfbe1c44c1eb"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_4.log",
+      "log_sha256": "995395e7fb5de761b07a942785cc971ba4fa044a735329f78531cd9ebad330dd",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 598,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_threshold_constraint_logic.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_threshold_constraint_logic",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "83b73d7562dfa1c3f15d33ef4d62212ab2e087cc9b95155e8ec13bd0b18ab862",
+      "current_local_import_sha256": {
+        "research/check_threshold_constraint_logic.cpp": "83b73d7562dfa1c3f15d33ef4d62212ab2e087cc9b95155e8ec13bd0b18ab862"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_5.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 599,
+      "command": "./tmp/check_threshold_constraint_logic",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "867fe96b116e0ccd35aa2d08fb9865c81c4ecfa9949787dd9cd6ed8259c5b777",
+      "current_local_import_sha256": {
+        "./tmp/check_threshold_constraint_logic": "867fe96b116e0ccd35aa2d08fb9865c81c4ecfa9949787dd9cd6ed8259c5b777"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_6.log",
+      "log_sha256": "119005f86f5c50e22d82be938e6d194bb985883d7d49994c549e62b051423214",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 609,
+      "command": "python3 research/thermal_collision_model.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "72867339479fbe2ac84e6526c4e6d014a096ff9977dabc7232f1b36152b608fc",
+      "current_local_import_sha256": {
+        "research/physical_rate_model.py": "ff1f2d093794120b4803d46f8b3212ad24d7cd5a12482aee2b241c9e4acd6b4e",
+        "research/thermal_collision_model.py": "72867339479fbe2ac84e6526c4e6d014a096ff9977dabc7232f1b36152b608fc"
+      },
+      "execution_evidence": "research/detailed_audit/20261013T022649Z_physical_support/receipt.json",
+      "log": "research/detailed_audit/20261013T022649Z_physical_support/thermal_collision_model.log",
+      "log_sha256": "55ee0a3f9ddb1ad10a006cc5938a2364c7c68141cdd0d83d3cef533bc018ccbe",
+      "source_review_evidence": [
+        "research/detailed_audit/figure_interpretation_review.json",
+        "research/detailed_audit/physical_discovery_review.json",
+        "research/detailed_audit/physical_support_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 624,
+      "command": "python3 research/audit_physical_goal_completion.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "b5616152d43e1f22909eddfd5e1e0e27d3d10d089505c9c784deed715f4902ed",
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/audit_physical_goal_completion.log",
+      "log_sha256": "b8568cf45cb2c5e2879645d7a231157734aa07259d60840c46a364636c9a77c8",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 634,
+      "command": "python3 research/revise_report.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "6e68817cd2bfbea587cc7294b141076962e0c1b5a5a154616d878eabdf506e8f",
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/revise_report.log",
+      "log_sha256": "f741df2ec7a465c67276a8ec122cf6212afd09bb6a6e7f0be507210822bc0426",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 635,
+      "command": "python3 research/check_pedagogical_revision.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "4cec46c82a6a11a10ddacee73d45361aa2587f4bf62ef8fad0550983cf5f84e3",
+      "current_local_import_sha256": {
+        "research/check_pedagogical_revision.py": "4cec46c82a6a11a10ddacee73d45361aa2587f4bf62ef8fad0550983cf5f84e3"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_historical_scope_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_historical_scope_checks/check_pedagogical_revision.log",
+      "log_sha256": "ffe15136bab50c4527019c35e7330e6565cfd28cd05b717af82d791bcd292c6c",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone.",
+      "scope_revision": "research/detailed_audit/historical_scope_revision/revision.json"
+    },
+    {
+      "line": 642,
+      "command": "python3 research/test_polynomial_reference.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "30ac65f98873feb5327e95c533d7eaa71c1c7f0f489eea2d422ddbe07e0aeac4",
+      "current_local_import_sha256": {
+        "research/exact_commensurate_classifier.py": "499e3af7a91e9195613765e5871189c74d7cd1f3e62bb75b63e8296785c0326c",
+        "research/exact_polynomial_reference.py": "a23e0e78f64f4e9201e4b296e535435190f97a274fe218d70d8e00afc6c801d1",
+        "research/test_polynomial_reference.py": "30ac65f98873feb5327e95c533d7eaa71c1c7f0f489eea2d422ddbe07e0aeac4"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/8_test_polynomial_reference.log",
+      "log_sha256": "6d3d3339144c85846a41d603f13a29220ebab8ae028539b105966031972ec5be",
+      "source_review_evidence": [
+        "research/detailed_audit/spectral_algorithms_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 650,
+      "command": "python3 research/check_entropy_reductions.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "9299f13d5d3c80843d8531727a7d58eb2e09a6b060d00306cfac59522a63323a",
+      "execution_evidence": "research/detailed_audit/20261013_completion_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_completion_checks/2.log",
+      "log_sha256": "def16d3cf3e65c5b500f1e69db8e8e5c225d2dd152eede0d260a682598b2c5d6"
+    },
+    {
+      "line": 651,
+      "command": "python3 research/test_entropy_audit_verdict.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "494b1bdd371ea0486bccf753cbdabd13cd808c73952d29185015fe8aa76c6a54",
+      "current_local_import_sha256": {
+        "research/test_entropy_audit_verdict.py": "494b1bdd371ea0486bccf753cbdabd13cd808c73952d29185015fe8aa76c6a54"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/9_test_entropy_audit_verdict.log",
+      "log_sha256": "93b56cbadb1dccd9f319a45fca20def16d08efee845fcde87232cd3a73775f43",
+      "source_review_evidence": [
+        "research/detailed_audit/entropy_dimensional_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 658,
+      "command": "python3 research/test_robust_runner_inputs.py",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "01ba5b6037e03db7937d59ac28499088cdb0491e8808e584984e0e068fdcbac8",
+      "current_local_import_sha256": {
+        "research/run_robust_finite_time_certificate.py": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177",
+        "research/test_robust_runner_inputs.py": "01ba5b6037e03db7937d59ac28499088cdb0491e8808e584984e0e068fdcbac8"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/10_test_robust_runner_inputs.log",
+      "log_sha256": "2f97d705adb851646d7aed5daec44ce0292b805751d45ff363016a91ae0eb453",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 659,
+      "command": "clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_interval_primitives.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_interval_primitives",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "e1d39d09b76a0a4b4ff85d817638126aadd4e8a8581a5d664674e88d198daddb",
+      "current_local_import_sha256": {
+        "research/check_interval_primitives.cpp": "e1d39d09b76a0a4b4ff85d817638126aadd4e8a8581a5d664674e88d198daddb"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_7.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_review_evidence": [
+        "research/detailed_audit/physical_interval_implementation_review.json"
+      ],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    },
+    {
+      "line": 660,
+      "command": "./tmp/check_interval_primitives",
+      "status": "verified command execution; stated scope retained",
+      "source_sha256": "51c4769da7a549868907bcdd4a6ef27e04b726c1cb51b3bf7031b3817a5ddbd4",
+      "current_local_import_sha256": {
+        "./tmp/check_interval_primitives": "51c4769da7a549868907bcdd4a6ef27e04b726c1cb51b3bf7031b3817a5ddbd4"
+      },
+      "execution_evidence": "research/detailed_audit/20261013_remaining_checks/receipt.json",
+      "log": "research/detailed_audit/20261013_remaining_checks/followup_8.log",
+      "log_sha256": "77a24e3d8a1a24fb0ef199c009d0a21433ca9e61d6fd14c3f85b16bf88bea521",
+      "source_review_evidence": [],
+      "limits": "A successful command is evidence for its stated calculation only. Analytic hypotheses, independent correspondence and continuum coverage are addressed in the linked source reviews; no stronger claim follows from process exit alone."
+    }
+  ],
+  "remaining_commands": 0,
+  "note": "Every advertised line reconciled for its documented purpose. Cache download is a conditional first-setup step, not claimed executed here. This command audit does not close remaining historical/source reviews or the overall research audit.",
+  "updated_utc": "2026-10-13T03:43:26.499305+00:00"
+}

@@ -1,0 +1,276 @@
+{
+  "group": "extensions",
+  "started_utc": "20261013T012015Z",
+  "complete": true,
+  "scope": "Executable replay only; analytic argument review remains separate.",
+  "python": "3.9.13 (main, Oct 27 2024, 16:26:11) \n[Clang 16.0.0 (clang-1600.0.26.3)]",
+  "checks": [
+    {
+      "script": "research/ordered_conductance_certificate.py",
+      "command": [
+        "python3",
+        "./research/ordered_conductance_certificate.py"
+      ],
+      "source_sha256_before": "89b284982aa466df4bacc81712bb1f6b6098cb22d79c5597efaeda165d475382",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/ordered_conductance_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.9733987080000001,
+      "source_sha256_after": "89b284982aa466df4bacc81712bb1f6b6098cb22d79c5597efaeda165d475382",
+      "log_sha256": "27bc20f8feb80a94848cadfe27a0e3b793c03ca55525bef4ec968a43b5d88ed7"
+    },
+    {
+      "script": "research/energy_threshold_certificate.py",
+      "command": [
+        "python3",
+        "./research/energy_threshold_certificate.py"
+      ],
+      "source_sha256_before": "b72b4960e8daeab557b65f4feeabf75461fe1740a6605abc7377293329f06866",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/energy_threshold_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.16396954099999994,
+      "source_sha256_after": "b72b4960e8daeab557b65f4feeabf75461fe1740a6605abc7377293329f06866",
+      "log_sha256": "3dba56efc0b8b9a8633611ef2781f859c3eb99eae3205cceed3ecf1f45bb92ae"
+    },
+    {
+      "script": "research/classification_exact_certificate.py",
+      "command": [
+        "python3",
+        "./research/classification_exact_certificate.py"
+      ],
+      "source_sha256_before": "c8b86a8fda785fbbb34f753ad9852363bc2a8288798215a1bbd0e8e928221fde",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/classification_exact_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.4730230830000002,
+      "source_sha256_after": "c8b86a8fda785fbbb34f753ad9852363bc2a8288798215a1bbd0e8e928221fde",
+      "log_sha256": "310c186c9ae10798d5742d2fa3d4e0154e8eefbd12e646a026638b4c24f5590c"
+    },
+    {
+      "script": "research/degenerate_exact_certificate.py",
+      "command": [
+        "python3",
+        "./research/degenerate_exact_certificate.py"
+      ],
+      "source_sha256_before": "9615b774d71bbfc8e5ca4715468ea5db35e8d5f26fe72b691594ed65a6fe5011",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/degenerate_exact_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.29036700000000004,
+      "source_sha256_after": "9615b774d71bbfc8e5ca4715468ea5db35e8d5f26fe72b691594ed65a6fe5011",
+      "log_sha256": "8040cef91f438fbdcad9ed0319f054122cdec3ab87b0e11ce72063606eec3757"
+    },
+    {
+      "script": "research/inverse_realizability_audit.py",
+      "command": [
+        "python3",
+        "./research/inverse_realizability_audit.py"
+      ],
+      "source_sha256_before": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/inverse_realizability_audit.log",
+      "exit_code": 0,
+      "seconds": 0.17468591700000013,
+      "source_sha256_after": "269c4ccf7018b880545f929fd628092636d3d0751f3a887c0cd23d682fa1062f",
+      "log_sha256": "12dbed2f8e6c94815643334d8d4e988ebfa34f47a0eb46ddd80e92f013b0eee9"
+    },
+    {
+      "script": "research/test_exact_commensurate_classifier.py",
+      "command": [
+        "python3",
+        "./research/test_exact_commensurate_classifier.py"
+      ],
+      "source_sha256_before": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/test_exact_commensurate_classifier.log",
+      "exit_code": 0,
+      "seconds": 2.052619792,
+      "source_sha256_after": "026b54450c7e2dab0e9063ba145201221c2b7d71372a279c508d0918656b4b15",
+      "log_sha256": "fd79b2039f76c2864d7306737964eba013cbf724d75dd7225bf9035573897842"
+    },
+    {
+      "script": "research/transient_only_chi_certificate.py",
+      "command": [
+        "python3",
+        "./research/transient_only_chi_certificate.py"
+      ],
+      "source_sha256_before": "96efa7d783341df805e08063891fe8ffa8b6237f86477a57e16d753b167cf10a",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/transient_only_chi_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.1655226660000002,
+      "source_sha256_after": "96efa7d783341df805e08063891fe8ffa8b6237f86477a57e16d753b167cf10a",
+      "log_sha256": "4af0fb1a0766c8147e7f549f7087e666e7d2045f5f8565869832c0096094480d"
+    },
+    {
+      "script": "research/five_state_extension_certificate.py",
+      "command": [
+        "python3",
+        "./research/five_state_extension_certificate.py"
+      ],
+      "source_sha256_before": "29f4d7b66fb5f50e73e55aa5fe4179dca3279c4d33ea231ca5db89353f54a839",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_extension_certificate.log",
+      "exit_code": 0,
+      "seconds": 10.824776,
+      "source_sha256_after": "29f4d7b66fb5f50e73e55aa5fe4179dca3279c4d33ea231ca5db89353f54a839",
+      "log_sha256": "46f3dabd4c976342b2cbf9ad00b0308c023f1660fdb8c06d78b963afbb196c40"
+    },
+    {
+      "script": "research/one_fast_mode_certificate.py",
+      "command": [
+        "python3",
+        "./research/one_fast_mode_certificate.py"
+      ],
+      "source_sha256_before": "38c44b81268b75299fea66c12440b71521114ac193453211eac1c16334de55be",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/one_fast_mode_certificate.log",
+      "exit_code": 0,
+      "seconds": 3.0207742919999987,
+      "source_sha256_after": "38c44b81268b75299fea66c12440b71521114ac193453211eac1c16334de55be",
+      "log_sha256": "17aea091336f059af9562c8434925d375e19244256073bb92acd2cab9e44b89d"
+    },
+    {
+      "script": "research/compact_endpoint_equality_certificate.py",
+      "command": [
+        "python3",
+        "./research/compact_endpoint_equality_certificate.py"
+      ],
+      "source_sha256_before": "3fb03d772117f81de8fc5b6f53aeb28c10458bbf6060ade329d3d2eeff1fd156",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/compact_endpoint_equality_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.1840150410000021,
+      "source_sha256_after": "3fb03d772117f81de8fc5b6f53aeb28c10458bbf6060ade329d3d2eeff1fd156",
+      "log_sha256": "7a11a735105e65c076012ba9484abb125e9ef938a5fbd4f85cc7037aa3dab1a2"
+    },
+    {
+      "script": "research/independent_rational_classifier_audit.py",
+      "command": [
+        "python3",
+        "./research/independent_rational_classifier_audit.py"
+      ],
+      "source_sha256_before": "e125624254177eca9f992248a3c24a81e575fe63224e5b0b0ccaaba98cdc1b8f",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/independent_rational_classifier_audit.log",
+      "exit_code": 0,
+      "seconds": 9.067291583000003,
+      "source_sha256_after": "e125624254177eca9f992248a3c24a81e575fe63224e5b0b0ccaaba98cdc1b8f",
+      "log_sha256": "eba36dbe7631b16c6fde99774914fa3bb5aa48989d9470d47588ccdbe2b31acd"
+    },
+    {
+      "script": "research/independent_classifier_nearzero_audit.py",
+      "command": [
+        "python3",
+        "./research/independent_classifier_nearzero_audit.py"
+      ],
+      "source_sha256_before": "7c0e0dd8ac24b3ac507f2f73d587bc15887de6f8b72e7a56427356c8f07bdc9a",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/independent_classifier_nearzero_audit.log",
+      "exit_code": 0,
+      "seconds": 3.6653465410000017,
+      "source_sha256_after": "7c0e0dd8ac24b3ac507f2f73d587bc15887de6f8b72e7a56427356c8f07bdc9a",
+      "log_sha256": "c296217cab19eed700a26bc8e049ab7acd2b51643470be4ce4093599bbda25d9"
+    },
+    {
+      "script": "research/high_dimension_amplitude_certificate.py",
+      "command": [
+        "python3",
+        "./research/high_dimension_amplitude_certificate.py"
+      ],
+      "source_sha256_before": "23ad4a43deb1a04510b5827656b17c10ce92e164c7e2555f4745604eb36482ce",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/high_dimension_amplitude_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.32668937500000084,
+      "source_sha256_after": "23ad4a43deb1a04510b5827656b17c10ce92e164c7e2555f4745604eb36482ce",
+      "log_sha256": "a7cd55f3005c2919714bed92f2c7787183b6596ce7ebd2e55e473b0405e4f892"
+    },
+    {
+      "script": "research/clone_rate_bound_certificate.py",
+      "command": [
+        "python3",
+        "./research/clone_rate_bound_certificate.py"
+      ],
+      "source_sha256_before": "cb98f4226d6a21a3c4d28e46d9c651c361b4eb98099286dfe1fe66cbf7cedcda",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/clone_rate_bound_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.2356385000000003,
+      "source_sha256_after": "cb98f4226d6a21a3c4d28e46d9c651c361b4eb98099286dfe1fe66cbf7cedcda",
+      "log_sha256": "c5291966f74f4587a6841755d7d148a4507761afa007ce6ad72bfc0a512340ad"
+    },
+    {
+      "script": "research/five_state_large_advantage_certificate.py",
+      "command": [
+        "python3",
+        "./research/five_state_large_advantage_certificate.py"
+      ],
+      "source_sha256_before": "a95eae450502909285c4a48a340077ebdf71c1835c7d4a78d8cf8c5b4496d297",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/five_state_large_advantage_certificate.log",
+      "exit_code": 0,
+      "seconds": 1.1469853330000035,
+      "source_sha256_after": "a95eae450502909285c4a48a340077ebdf71c1835c7d4a78d8cf8c5b4496d297",
+      "log_sha256": "85649bc8f082f3780b6c38a6c4432786498d1538bb08b6db5b17556803936902"
+    },
+    {
+      "script": "research/thermal_ratio_obstruction_certificate.py",
+      "command": [
+        "python3",
+        "./research/thermal_ratio_obstruction_certificate.py"
+      ],
+      "source_sha256_before": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/thermal_ratio_obstruction_certificate.log",
+      "exit_code": 0,
+      "seconds": 0.1922114999999991,
+      "source_sha256_after": "88483e9daffda329970f233b2c03596fdc027375e463447435dd508f82e69533",
+      "log_sha256": "4fe596a01f1a1d8f16b21b718a746e94f7f9c8012f0bca50a95e35656c0690cf"
+    },
+    {
+      "script": "research/reset_trace_obstruction.py",
+      "command": [
+        "python3",
+        "./research/reset_trace_obstruction.py"
+      ],
+      "source_sha256_before": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_obstruction.log",
+      "exit_code": 0,
+      "seconds": 0.1411274579999997,
+      "source_sha256_after": "820f335e7817cab9915d81ade487389e5cad0e9947f09ba8412a5286891d483c",
+      "log_sha256": "04e7d2694c1a2cb98a47adbec615f890b044f6528e4e38b9c3282f50270686f5"
+    },
+    {
+      "script": "research/reset_trace_independent_audit.py",
+      "command": [
+        "python3",
+        "./research/reset_trace_independent_audit.py"
+      ],
+      "source_sha256_before": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/reset_trace_independent_audit.log",
+      "exit_code": 0,
+      "seconds": 0.1419130830000057,
+      "source_sha256_after": "3ebce9c7a736f1ec18ecc3e091f5a4631f4ea204c1ee1c0279091b9249191917",
+      "log_sha256": "f1eed0f1b65e5e5cc81ba75ccb49b4f3c3613f0e6e8107ff5e4fdfc38b44e6d4"
+    },
+    {
+      "script": "research/kl_contrast_gradient_obstruction.py",
+      "command": [
+        "python3",
+        "./research/kl_contrast_gradient_obstruction.py"
+      ],
+      "source_sha256_before": "9fbd595400685b21e1e1c8c297f1ba8a65968ea85e1b4f74579dba078e27cc1f",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T012015Z_extensions/kl_contrast_gradient_obstruction.log",
+      "exit_code": 0,
+      "seconds": 0.019607958000001702,
+      "source_sha256_after": "9fbd595400685b21e1e1c8c297f1ba8a65968ea85e1b4f74579dba078e27cc1f",
+      "log_sha256": "70f612283e6b73c7e644c70405b7a83489a720095af9709126e2f9690474be1d"
+    }
+  ],
+  "all_passed": true
+}

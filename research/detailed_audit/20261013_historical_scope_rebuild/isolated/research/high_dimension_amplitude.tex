@@ -1,0 +1,201 @@
+\section{Hidden cooling advantages approaching unity with dimension}
+\label{sec:highdimamplitude}
+The sharp four-state bound does not give a dimension-independent bound.
+Cloning the high-energy state produces an increasingly large normalization
+change along the initial Gibbs curve, while retaining a uniformly isolated
+slow relaxation mode.
+
+\begin{theorem}[A dimension-dependent achievable advantage]
+\label{thm:highdimamplitude}
+For every integer $n\geq4$ there is a family of strictly positive,
+reversible $n$-state generators at bath inverse temperature one, with
+all energies distinct and all original $F_{ijk},G_{ijk}<0$, such that
+finite $0<\beta_h<\beta_c<1$ satisfy
+\[
+1-\frac{|b_2(\beta_h)|}{|b_2(\beta_c)|}
+\longrightarrow 1-\frac3n.
+\]
+The slow eigenvalue tends to $-3$ and its separation from the next mode
+is greater than $1/4$ for all sufficiently small family parameters.
+The corresponding leading asymptotic KL advantage tends to $1-9/n^2$.
+Consequently no dimension-independent upper bound less than one can
+hold for these amplitude or leading KL advantages under the full
+triplet premise. Sharpness is asserted only for $n=4$, by the preceding
+four-state theorem; no matching upper bound is claimed for $n>4$.
+\end{theorem}
+\begin{proof}
+Fix $n$, put $m=n-3$, and choose strictly decreasing clone weights
+\[
+r_j=\frac{2^{m-j}}{2^m-1},\qquad j=1,\ldots,m,\qquad \sum_jr_j=1.
+\]
+Start with the quarter-limit family $M_\varepsilon$, its normalized bath
+weights $q_i$, and its left slow vector $w$ from
+Theorem~\ref{thm:quarterlimit}. Replace its fourth state by $m$ states
+$c_1,\ldots,c_m$ with weights $q_4r_j$. Equivalently the unnormalized
+bath weights are
+\[
+\widehat q^{(n)}=(1,1-\varepsilon/3,3/5,
+                  \varepsilon^2r_1,\ldots,\varepsilon^2r_m).
+\]
+Their sum remains the four-state partition function. For small positive
+$\varepsilon$ they give $n$ distinct ordered energies
+$E_i=-\log\widehat q_i^{(n)}$.
+
+Keep the original rates among the first three states. From each clone to
+low state $i\leq3$ set $a_{i,c_j}=a_{i4}$, and in the reverse direction
+set $a_{c_j,i}=r_j a_{4i}$. Within the clone block use conditional reset
+at rate four: $a_{c_j,c_k}=4r_j$ for $j\ne k$.
+Set all diagonals by conservation, giving a generator $\overline M$.
+All rates are positive and detailed balance is immediate.
+Lumping the clone probabilities exactly recovers $M_\varepsilon$.
+The additional $(m-1)$-dimensional subspace consists of probability
+perturbations supported on the clones whose sum is zero. On this
+subspace the generator is scalar, with eigenvalue
+\[
+-4-\sum_{i=1}^3a_{i4}<-4.
+\]
+Thus $\overline M$ retains the simple slow eigenvalue $-3$, gap exceeding
+$1/3$, and left eigenvector
+\[
+\overline w=(1,-4/5,w_3,-\varepsilon,\ldots,-\varepsilon).
+\]
+It has zero bath mean and weighted norm at most one for small
+$\varepsilon$.
+
+Here are all the original-rate triplet checks before a small repair.
+Triplets in the first three states are unchanged. For two low states
+$i<j\leq3$ and a clone $c_l$,
+\[
+G_{ijc_l}=G_{ij4},\qquad
+F_{ijc_l}=F_{ij4}+
+ \frac{(r_l-1)q_4}{2q_j}G_{ij4}.
+\]
+For one low state $i$ and two clones $c_j<c_k$,
+\[
+G_{ic_jc_k}=r_j(a_{4i}-4),\qquad
+F_{ic_jc_k}=(r_j+r_k/2)(a_{4i}-4).
+\]
+All-clone triplets have $F=G=0$.
+The original rates satisfy $0<a_{i4}<2$ throughout
+$0<\varepsilon\leq1/30$. This bound is proved by three exact Bernstein
+checks on the rational generator. Their finite limits are
+\[
+(a_{14},a_{24},a_{34})\longrightarrow(220,220,132)/169.
+\]
+Consequently $a_{4i}=a_{i4}q_4/q_i\leq(10/3)\varepsilon^2<4$,
+so the one-low triplets are strictly negative. For the two-low/clone
+triplets, $G_{ij4}\leq0$ and $-G_{ij4}\leq a_{j4}<2$, while
+$q_4/q_j\leq(5/3)\varepsilon^2$. Thus the possible positive defect in
+$F$ is at most $(5/3)\varepsilon^2$. Every $G$ is already nonpositive.
+
+Define an auxiliary generator $H$ at the new bath weights. On the first
+three states its reduced conductances are
+$k_{12}=100,k_{13}=10,k_{23}=11$. Between low state $i$ and any clone
+use $k_{i,c_j}=i$; among ordered clones use constant downward rate four,
+with reverse rates fixed by detailed balance. All its tests are strictly
+negative throughout $0<\varepsilon\leq1/30$.
+The first-three tests are exactly those of the certified auxiliary
+generator in the quarter-limit construction. Write
+$Q=13/5-\varepsilon/3+\varepsilon^2$ for the unchanged partition sum.
+For low pairs $12,13,23$ and clone $c_l$, the $F$ values of $H$ are
+\[
+\frac{-1-98\varepsilon/3-\varepsilon^2r_l/2}{Q},\qquad
+\frac{-24/5-\varepsilon^2r_l}{Q},\qquad
+\frac{-21/5+3\varepsilon-\varepsilon^2r_l/2}{Q}.
+\]
+Each is at most $-1/3$ on the interval, and the $G$ values are
+strictly negative. For one low state $i$ and clones $j<k$ the tests are
+\[
+G=i q_{c_j}-4<0,\qquad F=G(1+q_{c_k}/(2q_{c_j}))<0.
+\]
+For three clones they are $G=4(t-1)<0$ and
+$F=4(t-1)(1+u/2)<0$, since the $r_j$ are distinct and ordered.
+
+Now put $\widetilde M=\overline M+6\varepsilon^2H$.
+Linearity makes every $G$ strict. In two-low/clone triplets,
+\[
+F(\widetilde M)\leq(5/3)\varepsilon^2
+                 -6\varepsilon^2/3=-\varepsilon^2/3<0.
+\]
+All other $F$ tests are already negative or acquire a strict negative
+contribution from $H$. Thus all tests are strict on the entire
+interval $0<\varepsilon\leq1/30$.
+
+The repair does not spoil the spectrum or limiting overlaps. Let
+$D_n=\operatorname{diag}(q^{(n)})$.
+The symmetric matrix $D_n^{-1/2}HD_n^{1/2}$ has operator norm at most
+\[
+C_n=2\{103+4(m-1)\}.
+\]
+Indeed all rates leaving a low state sum to at most $103$, and those
+leaving a clone sum to at most $3+4(m-1)$; each upward internal clone
+rate is at most its downward rate four. Gershgorin applied to the
+column generator and reversibility place its eigenvalues in
+$[-C_n,0]$. This argument avoids any assumption of uniformly bounded
+reduced conductances inside the increasingly rare clone block.
+Weyl's inequality gives slow separation at least
+$1/3-12C_n\varepsilon^2>1/4$ for sufficiently small $\varepsilon$.
+The isolated eigenvector perturbation estimate in the quarter-limit
+proof gives, with consistent orientation and equal weighted norm,
+\[
+\|\widetilde w-\overline w\|_{q^{(n)}}=O_n(\varepsilon^2).
+\]
+Since $q_i^{(n)}\geq r_m\varepsilon^2/3$ for small $\varepsilon$,
+\[
+\max_i|\widetilde w_i-\overline w_i|=O_n(\varepsilon).
+\]
+Every thermal overlap changes by at most this quantity, uniformly in
+initial inverse temperature. The constants may depend on the fixed
+integer $n$; no joint limit with $n$ and $\varepsilon$ is used.
+
+Finally put $L=\log(1/\varepsilon)$ and choose
+$\beta_h=L^{-2}$, $\beta_c=L^{-1/2}$. At $\beta_h$ every unnormalized
+Gibbs weight tends to one. At $\beta_c$ each clone weight
+$\exp(-2\sqrt L)r_j^{1/\sqrt L}$ tends to zero, while the first three
+weights tend to one. Since the first three limiting slow components
+sum to $-2/15$ and all clone components tend to zero,
+\[
+b_h\longrightarrow-\frac{2}{15n},\qquad
+b_c\longrightarrow-\frac2{45}.
+\]
+The repair error tends to zero, so the ratio tends to $3/n$.
+Both limiting overlaps are nonzero for each fixed $n$, and $3/n<1$,
+which proves an admissible strict cooling witness for sufficiently
+small positive $\varepsilon$. The leading KL ratio is the square of
+the amplitude ratio, giving the stated KL advantage. Letting $n$
+grow after taking these fixed-dimensional limits proves the absence
+of a dimension-independent bound below one.
+\end{proof}
+
+The checker \path{research/high_dimension_amplitude_certificate.py}
+records the exact cloning identities and six Bernstein sign certificates.
+It also constructs the rational five-state member with
+$\varepsilon=1/1000$ and clone weights $(2/3,1/3)$, verifies every strict
+triplet test, positivity, conservation and detailed balance, and certifies
+a perturbed slow gap of at least $124037/375000>1/4$.
+This illustrative finite member verifies the generator construction; it
+is not presented as a separately interval-certified thermal witness.
+The all-dimensional thermal advantage is established by the limit proof.
+
+There is also a separately certified finite five-state thermal witness.
+For $m=2$, every outgoing rate sum of $H$ is at most $100$, so its
+symmetric operator norm is at most $200$. Write
+$\eta=1200\varepsilon^2$ for the perturbation bound. For
+$\varepsilon\leq1/200$, the gap stays above
+$1/3-2\eta\geq41/150>1/4$, and the oriented eigenvector estimate gives
+\[
+\|\widetilde w-\overline w\|_{q^{(5)}}
+\leq\frac{\sqrt2\,\eta}{1/3-\eta}<6000\varepsilon^2.
+\]
+The normalization is the same weighted norm as $\overline w$, which is
+at most one. Since the smallest normalized bath weight is at least
+$\varepsilon^2/9$, every component and thermal overlap changes by less
+than $18000\varepsilon$.
+At $\varepsilon=10^{-50}$, $\beta_h=1/10000$ and $\beta_c=1/50$,
+integer-power root bounds, combined with that error, enclose the repaired
+amplitude advantage between $37.6778168708\%$ and $37.6778168731\%$.
+The exact rational endpoints and reproducible computation are in
+\path{research/five_state_large_advantage_certificate.py} and its JSON
+receipt. This witness exceeds the four-state supremum. Its very large
+energy span remains a mathematical construction, not evidence of a
+practical cooling protocol.

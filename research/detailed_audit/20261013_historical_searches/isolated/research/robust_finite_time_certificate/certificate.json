@@ -1,0 +1,315 @@
+{
+  "complete": true,
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "relative_radius": 0.05,
+  "parameter_coordinates": [
+    "g1",
+    "g2",
+    "g3",
+    "hA",
+    "hB",
+    "hX",
+    "Tc-1",
+    "Th-1"
+  ],
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.4.4.1)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "input_sha256": "713911a4840ef63004f022ff924e77f6e26d890653d8525992a4eafa2d27717b",
+  "parameter_decimal_strings": [
+    "0.8308942048583045",
+    "0.11635274930182392",
+    "2.729136958784003",
+    "2.11406392019699",
+    "2.822657578561883",
+    "5.640080424208037",
+    "3.8694077398491555",
+    "9.472085161836484"
+  ],
+  "runner_sha256": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177",
+  "builds": {
+    "physical_temperature_reduction": {
+      "source_sha256": "121561f78fd5f0b23eb986678d5c289ff60e180f0f1166af197da3eaf04c917c",
+      "binary_sha256": "25574b1baded716c7dde623ed9ac3be0350787d7f423214bf472b1ee7cbfa74f",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "./research/physical_temperature_reduction.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "./tmp/final_physical_temperature_reduction"
+      ]
+    },
+    "physical_temperature_reduced_combined": {
+      "source_sha256": "7e9435c46d11f66154b52925becbe15d42c8cfb72d4b7b001f74f012b4781cb9",
+      "binary_sha256": "91fe15af817f2a09011c256890add664d7a180f90d554cecbf0d1c7599123c1b",
+      "command": [
+        "clang++",
+        "-O2",
+        "-std=c++17",
+        "-ffp-contract=off",
+        "-I/opt/homebrew/include",
+        "./research/physical_temperature_reduced_combined.cpp",
+        "-L/opt/homebrew/lib",
+        "-lmpfr",
+        "-lgmp",
+        "-o",
+        "./tmp/final_physical_temperature_reduced_combined"
+      ]
+    }
+  },
+  "obligations": {
+    "4": {
+      "complete": true,
+      "mode": 4,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 135721,
+      "passed": 67861,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 177.567633417,
+      "source": "physical_temperature_reduction",
+      "command": [
+        "./tmp/final_physical_temperature_reduction",
+        "cover",
+        ".05",
+        "1000000",
+        "4",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "52e0a175c68a526bc8ded644474b523458256c61fc373e0c50a044d923c38284"
+    },
+    "5": {
+      "complete": true,
+      "mode": 5,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 52785,
+      "passed": 26393,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 66.328066291,
+      "source": "physical_temperature_reduction",
+      "command": [
+        "./tmp/final_physical_temperature_reduction",
+        "cover",
+        ".05",
+        "1000000",
+        "5",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "8f551423e49912b110173ebad7976344e28a3888c87d56d011ba69d85f611dd1"
+    },
+    "7": {
+      "complete": true,
+      "mode": 7,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 54425,
+      "passed": 27213,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 143.40623975,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "7",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "3a3d340ac34d7df98effd44c546e3e9017f21ca17386d2747df2fc264f2c9b4a"
+    },
+    "8": {
+      "complete": true,
+      "mode": 8,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 65045,
+      "passed": 32523,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 157.427876208,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "8",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "bfc3cec66fed394da3f8eef2028bb228bc02598d3583d9a63344126282684665"
+    },
+    "1": {
+      "complete": true,
+      "mode": 1,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 23351,
+      "passed": 11676,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 36.489203458,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "1",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "86eebebfb8e9cb1ea6f8ee059d6dd9039b2658643fc97faa111a4e9b9aa17513"
+    },
+    "2": {
+      "complete": true,
+      "mode": 2,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 105,
+      "passed": 53,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.155809208,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "2",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "f4ae2a82e36a0020622e0753c32b1dc2b013ee41ad506fefc7c6900653bf74fa"
+    },
+    "3": {
+      "complete": true,
+      "mode": 3,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001626333,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "3",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "c7cdfed781ce42a9f059bf057731e67987717787c89b3cf25d434f5cad44e98c"
+    },
+    "6": {
+      "complete": true,
+      "mode": 6,
+      "radius": 0.05,
+      "start_u": [
+        0.09999999999999999,
+        0.1
+      ],
+      "end_u": [
+        2,
+        2
+      ],
+      "cells": 1,
+      "passed": 1,
+      "pending": 0,
+      "enclosure_errors": 0,
+      "seconds": 0.001720625,
+      "source": "physical_temperature_reduced_combined",
+      "command": [
+        "./tmp/final_physical_temperature_reduced_combined",
+        "cover",
+        ".05",
+        "1000000",
+        "6",
+        ".1",
+        "2"
+      ],
+      "log_sha256": "0bf085d429c9ddf4693b043f88e330c1de6debb0b9e634dc50c427bf174c7862"
+    }
+  },
+  "conclusion": {
+    "distance": "Dh <= 0.9 Dc and Dc >= 0.001 throughout u in [0.4,0.8]",
+    "time": "th(delta) <= 0.95 tc(delta) for every delta in [0.001,0.01]",
+    "domain": "entire simultaneous independent +/-5% box in the eight listed coordinates",
+    "reduction": "Cold KL concavity makes the earliest cold threshold time occur at a temperature endpoint. Hot KL temperature derivative at threshold roots is nonpositive, making the lowest hot temperature worst. Modes 7 and 8 certify both remaining cases.",
+    "scope": "Executable interval proof with analytic dependencies; not Lean or external peer review."
+  }
+}

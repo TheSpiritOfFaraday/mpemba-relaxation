@@ -1,0 +1,92 @@
+Independent audit: single-endpoint classification under the full triplet premise
+2026-10-11. Verifier agent.
+
+OUTCOME
+The proposed corollary is valid for the stated four-state, reversible,
+positive-finite-bath, SIMPLE-slow-mode domain with all original triplet
+predicates failing. Orient w using its nonnegative Helmert coordinates,
+so b(beta)<0 on cooling. Then an ordinary asymptotic cooling effect exists
+if and only if b'(0)<0. If it exists there is exactly one stationary point
+beta_m in (0,beta_b), a strict maximum of |b|, and the interval on which
+|b| increases with beta is exactly (0,beta_m). Thus no separate cooling
+anomaly interval can begin at a strictly positive beta under this premise.
+The beta=0 endpoint is used only for a derivative test, not as an allowed
+finite preparation. This is not a finite-time distance classification.
+
+DEPENDENCIES
+The independently audited arithmetic lemma gives
+  w1>=w2, w1+w2>=2w3, w4<=0.
+The contrast theorem gives b<0 on cooling and the derivative-curve identity
+is b'=g Phi with g=pi1'>0, Phi=A+B u+C v(u), C=w3-w4. The curve v(u)
+is strictly convex, and u decreases from u0=u(0) to -1 as beta increases
+from zero to infinity. The finite limiting endpoint is
+  Phi(-1)=w1-w2>=0.
+
+The additionally needed strict bath derivative can be checked directly.
+Each unnormalized Helmert thermal numerator is
+  Nk(beta)=exp(-beta E_(k+1))
+    sum_(i<=k)[exp(beta(E_(k+1)-Ei))-exp(beta_b(E_(k+1)-Ei))].
+Nk(beta_b)=0 and Nk'(beta_b)>0 since all gaps are positive. Dividing by
+the positive partition and norm factors preserves this sign. A nonzero
+nonnegative combination therefore has b'(beta_b)>0. Heating monotonicity
+alone would not prove strict derivative at its boundary; this explicit
+calculation supplies it.
+
+CASE 1: C>=0
+Write b=P m+(1-P)w4, where m is the conditional expectation on states1-3
+and P their Gibbs mass. The arithmetic lemma implies
+  m(0)=(w1+w2+w3)/3>=w3>=w4,
+and m is nondecreasing for beta>=0. Also P'>0. Hence
+  b'=P m'+P'(m-w4)>=0.
+Strictness holds everywhere: if the first three entries are not identical,
+their decomposition into the two established positive-derivative contrasts
+gives m'>0 at every finite beta>=0. If they are identical, m is constant,
+and m>w4 unless the entire eigenvector is constant, which is excluded.
+Thus b'>0 on this whole domain, including beta=0. No cooling anomaly occurs.
+
+CASE 2: C<0
+Phi(u) is strictly concave on -1<u<u0 and continuous at the two limiting
+endpoints. If Phi(u0)>=0, both endpoint values are nonnegative. Strict
+concavity gives Phi(u)>0 at every interior point. This includes the cases
+Phi(u0)=0 and/or Phi(-1)=0: endpoint equality creates no interior negative
+interval and no finite stationary point. Consequently no effect occurs.
+
+If Phi(u0)<0, the bath value Phi(ub)>0 forces a root between ub and u0.
+On the interval from -1 to ub, concavity and the nonnegative/positive endpoint
+values make Phi strictly positive. To the right of ub, a concave function
+that ends negative has exactly one zero: after crossing from positive to
+negative its chord slopes cannot increase enough to cross back. Equivalently,
+its nonnegative superlevel set is an interval, and strict concavity excludes
+a zero plateau. Thus there is exactly one root u_m in (ub,u0). Since u
+decreases with beta, Phi is negative for 0<=beta<beta_m and positive for
+all beta>beta_m. At the root its slope in u is strictly negative (bounded
+above by the negative secant slope from ub), so the zero is simple.
+
+Because b<0 on cooling, |b|'=-b'. The unique root is therefore the strict
+cooling maximum and the anomalous derivative interval is (0,beta_m).
+Any two sufficiently close finite positive temperatures inside this interval
+give a strict cooling witness. Conversely, all other endpoint/sign cases
+have b'>0 throughout the open cooling domain and admit no such pair.
+
+UNIFORM COVARIANCE FORM
+At beta=0 the Gibbs distribution is uniform, so the criterion is equivalently
+  Cov_uniform(w,E)>0,
+since b'(0)=-Cov_uniform(w,E). The bath/generator/eigenvector remain fixed
+while differentiating. The orientation of w must be the specified one;
+reversing it reverses this raw derivative sign. No derivative scan or auxiliary
+thermal root is needed to decide existence, although determining beta_m itself
+still requires solving b'(beta_m)=0.
+
+SCOPE AND EQUALITY AUDIT
+- The equality b'(0)=0 excludes an effect; it is not an undecided threshold.
+- Equality w1=w2 is allowed; Phi(infinity)=0 causes no extra finite root.
+- C=0 belongs to the first case and has strictly positive derivative.
+- Nonnegative Helmert coordinates may contain zeros; the arguments need only
+  a nonzero simple mode and the already proved arithmetic inequalities.
+- No claim is made for a degenerate slow space or for generators outside the
+  full F/G premise. The more general endpoint/extremum classifier remains
+  necessary for those broader simple-mode generators.
+
+No sign or concavity-boundary counterexample survives these implications.
+No additional numerical sampling was needed: the two cases exhaust the sign
+of C and retain every endpoint equality explicitly.

@@ -1,0 +1,57 @@
+{
+  "group": "formal verification command and existing setup",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "formal/check.sh",
+      "command": [
+        "./check.sh"
+      ],
+      "working_directory": "formal",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 22.516136250000002,
+      "source_sha256": "d0aadc97173a21f7a610d01e685f6ee70ade0dbd75d5188ab1e9da95e4cb36bc",
+      "log": "research/detailed_audit/20261013_formal_command/check.log",
+      "log_sha256": "fa726622d2ceaf58a4e4bbb99544b72f1817c9e3fc87dbbd57c158e8d59410af"
+    }
+  ],
+  "sources": {
+    "formal/Mpemba/SlowModeBridge.lean": "4d9eafa5b40e1d9177d2ce9a25c9c9b61f870428f6282b1fd092aeaab5502c6e",
+    "formal/Mpemba/QuarterBound.lean": "1bb8ad1be8c82f85f73a54f13c19376056c218561cab4e04d6438665ada5fb3a",
+    "formal/Mpemba/Data.lean": "646ead23a4d739ab95d80b9b17bd5957c9c84074a987b64eaebbea9a98dff21f",
+    "formal/Mpemba/QuarterSchur.lean": "cab17cd30e6d55843e0cbe0a45f5b484d413fca9abfde77b0d576843d8278220",
+    "formal/Mpemba/FourState.lean": "679ed48566876b227229db264bec0c77138cdbf73c958906e2ac3aabe69f175d",
+    "formal/Mpemba/Thermal.lean": "e8ebc9fc2d4748bce7b7e8d870e75a44ec92b350b698c53df9a110f195e6f0f5",
+    "formal/Mpemba/FourStatePhysics.lean": "f116b0474075c99c0070eba8c1ded4bba09305e914a2a25ef617ca2d66dd7968",
+    "formal/Mpemba/SharpThermal.lean": "0964da8299b2d800a1e658c988f8ac5a575507fb83503b2b8180dd359597a92c",
+    "formal/Mpemba/SharpFamily.lean": "77f3d65c705b77e9ceb081e4ffdf799936538026089d4ac9c21119ef1518d69b",
+    "formal/Mpemba/QuarterBoundary.lean": "1d4c8a5c7c21406a474acc43b79d6880c86daba0b9f3564100478d9225bbedea",
+    "formal/Mpemba/Multiplicity.lean": "927b47168ae96c993e2a898d3f845bb617c842b303ba152ec3594c3e30f0622c",
+    "formal/Mpemba/Uniqueness.lean": "d64723d768b23ceb5961352b07c2d8da6cfb48f123ad4ce3dba2632d7a5c1f65",
+    "formal/Mpemba/Spectral.lean": "9448aa8a19bc839352da3ed31e92a7d09f781e212d389df1ed77149efcc34b64",
+    "formal/Mpemba/Reset.lean": "a7625846c2985dd7922366fadda2fb353f7869d69ecc2ab9fb0496edd3848b17",
+    "formal/Mpemba/Relaxation.lean": "7d1d22e09ee407fee9e7e9a46dfe464190b5de555a28feb009a0e539925215a2",
+    "formal/Mpemba/ModeShape.lean": "e5d2bc8d22626d4478005255b14442751be724b8df2291b5c40f01dd9ddda4f6",
+    "formal/Mpemba/PositiveMode.lean": "1494677cb93a158a150f92d6167ce5f84b3f5494fed83658ce4cf600b7187f7e",
+    "formal/Mpemba/InitialDistance.lean": "b53024a4206cde491fbc013b7c4d6a1f481c373719bf990fbd2644560e48de36",
+    "formal/Mpemba/CoolingOverlap.lean": "f1824ab5ffc05cd6e7faf7dedfa8a393355ab017713122d2810c979f7e034fde",
+    "formal/Mpemba/Counterexample.lean": "161a154b23227b80dbb4566c6cc2ac9614f6b37b598ad9c0894b9be2fbeb2c68",
+    "formal/Mpemba/TopMode.lean": "4ba5d38da8ad40eef3aef079644cc9336a0b70b4e3974e7d65a56923c7ebf1bb",
+    "formal/Mpemba/Dynamics.lean": "7c50a32ff82e74b1d1b5d9d1fce9703777ba96bc2295c0e3a3184b8979e95733",
+    "formal/Mpemba/SchurSpectral.lean": "85d0c781b71a997440fe1c090a5e1b0582a0f12fb9571a2163edc1b851c94f40",
+    "formal/Mpemba/OriginalTriplets.lean": "33ed6619f7c2e8c707e0b1195b1a61ecf312ce93420470706e559f0162315221",
+    "formal/Mpemba/QuarterGibbs.lean": "11f164db1665c1fcbff7034aa8bf7b504ccbac2578f2acbea77dd2b6602f2544",
+    "formal/Mpemba/TripletLogic.lean": "aac7ccabf65500f49406dcc65ae427c166165f4c0556a4ddcc445db60635f0ec",
+    "formal/Mpemba/SharpQuarter.lean": "a921878e866b44d355c32a3d215a022e376f2aa43221a74f4444ee0c779af3fa",
+    "formal/Mpemba.lean": "e033f0512f216df34c7030b2c9e0c92cbcfa4e637ecaf463f157e91f00bca1aa",
+    "formal/Audit.lean": "6c04bf3c556c5179389457b2b86e0a1ded111324e3cfbbb10fc7757df801cbf9",
+    "formal/check.sh": "d0aadc97173a21f7a610d01e685f6ee70ade0dbd75d5188ab1e9da95e4cb36bc",
+    "formal/lakefile.toml": "f10a8c7472f71bb761d1f143374ea57f90b5c1f26daf413f0ef7c599307a229f",
+    "formal/lake-manifest.json": "85b5e729161111844f2144b7e3693e8d4afaab22d00e579a205b1197efd52e30",
+    "formal/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  },
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "first_setup_cache": "Conditional first-setup operation not needed in this installed workspace; check.sh uses the existing local toolchain and dependency cache. A new machine still needs the documented initial setup."
+}

@@ -1,0 +1,61 @@
+\subsection{The contrast-ratio argument does not extend automatically}
+\label{sec:thermalratioobstruction}
+The decreasing contrast-derivative ratios used in the preceding proof
+can fail for a physically reachable Gibbs preparation under the full
+triplet premise. This is an obstruction to that proof route, not a KL
+counterexample.
+
+Take four bath weights $q_1>q_2>q_3>q_4>0$, normalized to sum one, and
+reduced conductances, in pair order $12,13,14,23,24,34$,
+\[
+k^{(0)}=(2,2,1,2,2,3).
+\]
+The original tests are
+\[
+\begin{array}{c|cc}
+ijk&F_{ijk}&G_{ijk}\\ \hline
+123&0&0\\
+124&-q_1-q_4/2&-q_2\\
+134&-q_1-q_3-q_4&-2q_3\\
+234&-q_3-q_4/2&-q_3
+\end{array}
+\]
+Add any positive multiple $a>0$ of the constant-downward-one generator:
+$k_{ij}=k^{(0)}_{ij}+a/q_i$ for $i<j$. Every rate is positive and every
+$F,G$ is now strict. The two differences
+\[
+d_3=k_{23}-k_{13},\qquad d_4=k_{24}-k_{14}
+\]
+still satisfy $d_4-d_3=1$.
+
+Use orthonormal Helmert coordinates, with contrast generator $A$,
+$P_t=e^{tA}$, initial heating coordinates $x(\beta)$, and thermal
+derivative $y(\beta)$. As $\beta\to\infty$,
+\[
+x_k(\beta)\longrightarrow x_{\infty,k}=1/\sqrt{\eta_k},
+\qquad y(\beta)/y_1(\beta)\longrightarrow(1,0,0)^\top.
+\]
+The second limit holds because the first contrast derivative decays
+on the first energy-gap scale, while subsequent contrast derivatives
+begin at successively larger gaps.
+For fixed $t$ the difference of evolved derivative ratios, divided
+by $y_1(\beta)>0$, therefore tends to
+\[
+f(t)=\frac{(P_t)_{31}}{(P_tx_\infty)_3}
+     -\frac{(P_t)_{21}}{(P_tx_\infty)_2}.
+\]
+Here $f(0)=0$, while the exact Helmert off-diagonal identity gives
+\[
+f'(0)=\sqrt{\eta_3}A_{31}-\sqrt{\eta_2}A_{21}
+=\frac{q_1Q_3}{\sqrt{\eta_1}}(d_4-d_3)>0.
+\]
+Thus $f(t)>0$ for all sufficiently small positive times. Fix any such
+time; for a sufficiently large but finite heating inverse temperature,
+\[
+\frac{(P_ty)_3}{(P_tx)_3}>
+\frac{(P_ty)_2}{(P_tx)_2}.
+\]
+This is an actual thermal evolution satisfying all original triplet
+failures, but its derivative ratios are not decreasing. A proof of
+unrestricted finite-time KL heating order under all $G$ must therefore
+use information beyond that monotone-ratio condition.

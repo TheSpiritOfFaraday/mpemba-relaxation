@@ -1,0 +1,663 @@
+Four-state Mpemba research result
+
+Freshman walkthrough and detailed re-audit (in progress)
+------------------------------------------------------
+Open freshman_guide.html directly in a browser. Its twenty lessons introduce
+probability, rates, thermal weights, the exact counterexample, the amplitude
+bound, and the separate finite-time physical study. The guide also has expandable advanced walkthroughs, including the report's
+Lessons 33-40 on physical clocks and certificates. The comprehensive report
+builds through 40 foundational lessons before its retained technical research.
+The calculator is a numerical illustration; exact acceptance evidence is linked separately.
+
+  python3 -I -S research/check_freshman_walkthrough.py
+  python3 research/test_freshman_walkthrough.py
+  python3 research/recheck_all.py --group core
+  python3 research/recheck_all.py --group extensions
+  python3 research/recheck_all.py --group physical
+  python3 research/check_publication_consistency.py
+  python3 research/check_sharpness_correspondence.py
+  python3 research/check_quarter_approach.py
+  python3 research/build_freshman_guide.py
+
+The detailed_audit directory records fresh execution logs, a source inventory,
+numbered-claim review status, negative controls, and explicit remaining work.
+A passing replay is not a completed review of every analytic dependency.
+The sharpness correspondence check uses SymPy to compare transcribed formulas,
+the printed fast basis, perturbation constants, and finite-witness enclosures;
+its scope and analytic dependencies are recorded separately in detailed_audit.
+The new standalone arithmetic check uses the rational focused-paper witness;
+the earlier standalone_primary_check.py uses the different primary witness.
+The focused paper's equation 15 had a missing backslash before quad. The
+one-character correction is documented and bounded by a source/PDF comparison
+against the preserved baseline; no mathematical content was changed.
+
+Document guide
+--------------
+Focused paper: focused_paper.tex -> output/pdf/focused_paper.pdf
+  Counterexample, controlled mechanism, sharp 25% amplitude bound, one overview
+  figure and precise Lean coverage. The main manuscript is designed for 8-12 pages.
+Technical appendices: focused_appendices.tex -> output/pdf/focused_appendices.pdf
+  Full proofs and remaining results, with a reading guide and contents.
+Comprehensive research report: research_report.tex -> output/pdf/research_report.pdf
+  The full account, explicitly labeled "Comprehensive research report".
+  The focused revision preserved its body; the subsequent research-priority
+  update adds the physical finite-time program and its verified outcome below.
+Unmodified pre-revision snapshot:
+  research/archive/research_report_before_focused_paper.tex
+  research/archive/research_report_before_focused_paper.pdf
+
+Priority research goal (12 October 2026; original benchmarks preserved):
+  research/physical_finite_time_goal.tex is included by revise_report.py and
+  mirrored in the technical appendices. It prioritizes a constrained physical
+  rate model, moderate parameter ranges and robust finite-time cooling.
+  Targets: 10% KL distance reduction over a resolved time interval,
+  5% time-to-threshold savings across a fixed band, and a +/-5% physical
+  parameter neighborhood. The fragment states the exact ranges, physical
+  interpretation requirements and separate triplet-counterexample criteria.
+  research/focused_paper_audit.json records the earlier focused-paper revision;
+  research/physical_finite_time_goal_audit.json records this later update.
+
+Physical finite-time study (12 October 2026; full-box certificates completed):
+  research/physical_finite_time_results.tex contains the first model study.
+  The fixed Arrhenius candidate has interval-certified >=8.12% nominal time
+  savings across KL thresholds [0.001,0.01]. Across the entire simultaneous
+  +/-5% box, continuous certificates prove >=5% time savings at every such
+  threshold and >=10% KL-distance advantage on 0.4 <= t/tau <= 0.8 with
+  cold KL >=0.001. All physical range constraints hold throughout the box.
+  The sampled envelope is discovery evidence; the interval proofs provide
+  the continuous guarantees. Two triplets satisfy the original test, so
+  this is not a new all-triplet-failure counterexample. An exact stochastic
+  thermal-collision model realizes these rates and their physical clock.
+  This is an idealized bath model, not a material or continuum validation.
+
+Reproduce this study (Python 3; NumPy, SciPy, mpmath, matplotlib):
+  OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py
+  OPENBLAS_NUM_THREADS=1 python3 research/search_physical_rate_model.py --profile robust_screen --iterations 150
+  OPENBLAS_NUM_THREADS=1 python3 research/refine_physical_rate_model.py
+  OPENBLAS_NUM_THREADS=1 python3 research/check_physical_rate_model.py research/physical_rate_refined.json --samples 3000
+  OPENBLAS_NUM_THREADS=1 python3 research/certify_physical_nominal.py research/physical_rate_refined.json
+  python3 research/physical_rate_plots.py
+  OPENBLAS_NUM_THREADS=1 python3 research/adversarial_physical_robustness.py
+
+To verify the preserved candidate without repeating optimization, run the
+audit, nominal interval-certificate and plot commands, plus the complete
+robustness replay described below. The optional adversarial
+command searches the whole uncertainty/threshold box numerically; it is
+not a global robustness certificate. The full decimal parameters in
+research/physical_rate_refined.json define the certified model; source/report
+roundings are for display. Search receipts retain seeds, evaluated candidates
+or improving histories, bounded search counts, and rejected robustness cases.
+Discovery used SciPy 1.13.1; version/BLAS differences may alter optimizer paths.
+The fixed-input verification is independent of reproducing those paths.
+The interval checker uses mpmath.iv at 60 digits, positive uniformization,
+an explicit Poisson-tail bound, interval LDL inertia, and KL contractivity
+to cover continuous time and threshold cells. Run without Python -O.
+The 80-digit direct-exponential audit is separate from the discovery
+eigendecomposition. No new Lean coverage is claimed.
+
+Figure/data: output/figures/physical_finite_time.pdf and .png,
+physical_finite_time.csv, physical_threshold_savings.csv.
+The inline LaTeX figure is generated from the same data so the report
+remains compatible with the standalone editor compiler.
+
+Rebuild all three documents (Python 3 with mpmath and matplotlib; Tectonic):
+  sh research/build_papers.sh
+This selects Tectonic on PATH or the existing workspace-local tmp/pdfs/tectonic.
+Alternatively compile each root .tex file with a standard LaTeX engine, from
+the package root. The focused paper requires output/figures/focused_overview.pdf.
+The desktop editor's standalone compiler cannot load that external figure;
+use the exported PDF to view the full focused paper.
+
+Edit focused_paper.tex directly. Edit research/lean_verification.tex and the
+other report fragments through research/revise_report.py for report changes.
+The appendices are generated by research/build_focused_appendices.py; all
+77 original technical labels are retained, with an added formal-family appendix.
+The original report's proof/figure numbering and the appendix numbering differ.
+The focused paper leads with the rational witness, formerly Appendix B; do not
+reuse the primary witness's time-dependent plot values for this generator.
+
+Overview figure: output/figures/focused_overview.pdf and .png.
+Its source is research/focused_overview.py; the new rational-witness evolution
+uses 70-digit arithmetic and is cross-checked against direct matrix exponentiation.
+Panel B reads mechanism_onset.csv and panel C reads quarter_gain_data.csv.
+To recompute those upstream numerical curves, run:
+  python3 research/mechanism_plots.py
+  python3 research/quarter_limit_plots.py
+  python3 research/focused_overview.py
+Figure data/receipt: output/figures/focused_relaxation.csv and
+output/figures/focused_overview_receipt.json. Curves are illustrations, not
+exact acceptance certificates. The main paper's caption distinguishes the
+three generators/families and the amplitude/distance observables.
+
+Read research_report.tex in the Codex LaTeX editor for the source and PDF preview.
+The exported report, when present, is output/pdf/research_report.pdf.
+
+Lean verification of the Appendix B companion, its Pearson chi-square relaxation
+reversal, and the sharp four-state 25% amplitude supremum:
+  cd formal
+  lake exe cache get
+  ./check.sh
+  cd ..
+
+First setup needs elan, Git, Python 3, a POSIX shell and network access. Keep the
+committed lean-toolchain, lakefile.toml and lake-manifest.json; do not run lake
+update for reproduction. Lean 4.19.0 and mathlib revision
+c44e0c8ee63ca166450922a373c7409c5d26b00b are pinned. The script builds all 27 proof
+modules and checks 43 theorem axiom reports. Expected final line:
+  PASS: 43 theorem axiom audits; standard logical axioms only.
+For an existing setup, only ./check.sh is needed. It selects the workspace-local
+elan installation when present. formal/README.md gives the interpreter fallback
+if the compiled mathlib cache downloader fails to link.
+
+Scope: the formal witness is Appendix B, not the primary plotted generator.
+The bridge proves eventual Pearson chi-square ordering, not KL or a numerical
+crossing bracket. Sharpness uses a valid family with two triplet equalities;
+the uniform-gap estimate and all-strict perturbed family are outside Lean's
+coverage, as are the report's classifiers and higher-dimensional results.
+The source for the paper's coverage section is research/lean_verification.tex;
+research/revise_report.py incorporates it on every manuscript rebuild.
+
+Recommended first check: alternative exact proof of the PRIMARY counterexample.
+Only Python 3's standard library is needed; no certificate files are read:
+  python3 -I -S research/standalone_primary_check.py
+  python3 -I -S research/test_standalone_primary_check.py
+
+The checker may be copied alone to an empty directory and run there. It prints a
+JSON receipt after checking the rates, original Boolean triplet predicates,
+eigenvalue ordering by rational inertia counts, and the actual slow-mode overlap
+by a residual bound and integer-root enclosures. It does not use characteristic
+polynomials, cofactor eigenvectors, SymPy, floating point, or prior JSON data.
+Its explicit checks stay active with Python -O. Both normal and optimized test
+runs passed. The ten tests include corrupted inputs and isolated execution.
+
+Saved receipt: research/standalone_primary_check.json
+Test logs: research/standalone_primary_tests.log and *_optimized.log
+Proof and scope: report section "A separate proof using inertia and residual bounds"
+Audit: research/independent_verification_audit.json
+
+This is a separate implementation with a different mathematical argument within
+the same model-assisted project, not external authorship or peer review. It
+certifies the primary asymptotic counterexample; finite-time crossing brackets
+still use the separate uniformization certificate described below.
+
+Core exact verification (run from this directory; Python 3 and SymPy required):
+  python3 research/adversarial_certificate.py
+  python3 research/adversarial_rational_mode_certificate.py
+  python3 research/independent_mode_audit.py
+  python3 research/finite_time_certificate.py
+
+Every acceptance comparison in the first two scripts uses exact integer/rational
+arithmetic. Decimal evaluations only propose root bounds; integer powers verify
+those bounds. The scripts write full rational certificate data to research/*.json.
+Do not run the four older scripts in the preceding block with -O: they use
+assertions. This restriction does not apply to the new standalone checker.
+
+Validated library versions:
+  SymPy 1.14.0
+  NumPy 1.26.4 and SciPy 1.13.1 (discovery and plotting)
+  mpmath 1.3.0 and Matplotlib 3.9.2 (numerical figures)
+
+Rebuild the physical illustrations and standalone report source, in this order:
+  python3 research/physics_plots.py
+  python3 research/mechanism_plots.py
+  python3 research/revise_report.py
+
+The plotting script reads the primary certificate JSON. It writes numerical
+curves, CSV data, and physics_metrics.json under output/figures/. It uses 80-digit
+arithmetic and checks spectral propagation against direct matrix exponentiation.
+These numerical plots are distinct from the exact certificates.
+
+The finite-time certificate uses only the Python standard library and reads the
+primary certificate JSON, revalidating its algebraic initial-state enclosures.
+It proves at least one TV crossing in (0.10,0.11) and one KL crossing in
+(0.14,0.16), using rational uniformization and logarithm remainder bounds.
+It does not certify a unique or earliest crossing.
+
+The revision script builds from research/archive/research_report_before_physics_revision.tex
+and the figure CSVs, incorporating the research/*.tex fragments explicitly
+listed in the script. Edit the revision script or those fragments
+for persistent changes. The generated LaTeX embeds all plot data and fragments
+and compiles as a standalone file.
+
+Primary certificate: research/adversarial_certificate.py
+Primary exact data: research/adversarial_certificate.json
+Rational-mode companion: research/adversarial_rational_mode_certificate.py
+Independent symbolic audit: research/independent_mode_audit.py
+Source and definition audit: research/source_audit.md
+Executed search record: research/adversarial_notes.md
+Proof-oriented derivations: research/theorem_notes.md
+Initial route comparison: research/approaches.md
+Hypothesis comparison with prior work: research/monotonicity_literature_comparison.md
+Finite-time certificate audit: research/finite_time_audit.md
+Expansion completion evidence: research/expansion_completion_audit.json
+Published-claim correspondence audit: research/claim_scope_audit.json
+
+Section 2.3 states the original finite-temperature inference and maps each
+hypothesis to the counterexample. It distinguishes the zero-temperature theorem,
+the later exact three-state mechanisms, and the authors' finite sampling boxes.
+The example refutes the unrestricted conjecture, not the reported sample counts;
+its dimensionless energy span lies outside both discussed sampling boxes.
+
+The supporting order theorem is presented as an application of established
+stochastic monotonicity and thermomajorization. The novelty subsection compares OHI,
+Fill--Kahn, Baake--Sumner and Vu--Hayakawa, including exact theorem/identity
+locations, and distinguishes established tools from problem-specific deductions.
+Search scope and source evidence: research/novelty_search_audit.json.
+The all-lower-branch and gap-law statements are applications without priority
+claims. Reset algebra and the general convex-divergence consequence are also
+supporting material. The newer contrast, classification, inverse-realization
+and amplitude-bound results are distinguished from these established tools.
+The original counterexample's amplitude reduction is about 0.1102%; its
+asymptotic KL reduction is about 0.2202%. A newer uniformly gapped family has
+amplitude advantage approaching 25%, with an exactly certified finite example
+above 22%. Neither construction establishes
+a useful experimental cooling protocol. Model-assisted checks are not external
+peer review, and no general priority claim is made for the supporting corollary.
+
+The original-rate four-triplet absence implication is false. The report gives
+an explicit positive reversible counterexample, a strict finite-temperature
+cooling witness, an exact parameter family, and corrected sufficient conditions.
+The source searches are bounded; no exhaustive publication-priority claim is made.
+
+The research scripts exact_mode.py and exact_mode_variant.py are exploratory
+backward-construction calculations. The first rough design was rejected for
+violating triplet inequalities; the variant became the certified companion.
+
+The report was successfully checked with the built-in Codex LaTeX compiler.
+For command-line PDF export, a working native LaTeX engine is needed. The Mac's
+older x86_64 pdflatex could not execute in this environment; a temporary native
+Tectonic 0.17.0 binary was used for export. No system TeX installation was changed.
+
+Predictive mechanism and continuous-parameter onset theorem:
+  python3 research/mechanism_certificate.py
+  python3 research/mechanism_plots.py
+  python3 research/revise_report.py
+
+The exact checker requires SymPy and uses explicit checks active under -O.
+It certifies an entire interval z in [-0.03,-0.004], not a sampled grid:
+positive rates, strict original-rate triplet failures, an exact prescribed
+slow eigenvector, a uniform spectral gap, and a cooling threshold
+z* = -0.0179401112233648969... . Cooling reversal occurs iff z>z* within
+this family. There is no asymptotic heating reversal in the family.
+The fixed pair beta=1/1000 and 1/100 reverses iff
+z > -0.014800247983140107... . Both thresholds are defined exactly in the
+report; rounded numbers here are explanatory, not acceptance tests.
+
+The proof reduces the thermal derivative to a strictly increasing exponential
+expression after multiplication by a positive factor. It proves one maximum
+above threshold and monotonicity throughout cooling below threshold, including
+the equality case. The near-onset inverse-temperature window grows linearly;
+the advantage over the infinite-temperature limit grows quadratically.
+Actual witnesses always use two finite positive temperatures.
+
+Certificate: research/mechanism_certificate.json and .log
+Independent numerical cross-checks: research/mechanism_numeric_audit.json
+Illustrations: output/figures/mechanism_onset.pdf and .png
+Source fragment: research/predictive_mechanism.tex
+Exploration only (not proof): research/mechanism_explore.py
+The family extends the rational-mode companion, not the primary witness by
+reset addition. Its eigenvectors vary with z. This is a restricted mechanism
+and classification, not a general classification of all four-state effects.
+
+Extended theory and classification (added during the three-hour research goal):
+  python3 research/ordered_conductance_certificate.py
+  python3 research/energy_threshold_certificate.py
+  python3 research/classification_exact_certificate.py
+  python3 research/degenerate_exact_certificate.py
+  python3 research/exact_mode_realizability.py
+  python3 research/inverse_realizability_audit.py
+  python3 research/quarter_limit_certificate.py
+  python3 research/quarter_limit_thermal_certificate.py
+
+These use SymPy except the thermal interval checker, which uses only standard
+library integer arithmetic and imports the standalone primary checker.
+Read the associated source fragments for the complete analytic arguments:
+  ordered_conductance_theorem.tex: all-n exclusion of strong effects and
+    asymptotic heating; all-time heating exclusion in weighted Euclidean distance.
+  energy_threshold.tex: sharp energy/bath threshold for universal cooling
+    absence over the larger G-only or aggregate-Metzler rate family.
+  universal_classification.tex: necessary-and-sufficient finite test for ordinary
+    asymptotic cooling and heating for every simple four-state slow mode;
+    Gibbs Wronskian identity and sharp n-2 stationary-point bound.
+  degenerate_extension.tex: sharp n-r-1 strong-preparation bound and finite
+    asymptotic chi-squared/KL classification for degenerate four-state modes.
+  mode_realizability.tex: exact inverse feasibility at fixed q,w via eight
+    half-planes intersecting an open disk; rational implementation is exact.
+  amplitude_bound.tex: sharp amplitude bound 1-2/n for the G-only family.
+  quarter_limit_family.tex: full-triplet family attaining a 25% amplitude
+    advantage limit, fixed slow eigenvalue -3 and spectral gap greater than 1/3;
+    perturbation makes all eight triplet inequalities strict, preserving a gap
+    greater than 1/4 and the limiting advantage.
+
+The quarter-limit generator certificate covers every 0<epsilon<=1/30 using
+30 exact rational Bernstein sign certificates, rather than a sampled grid.
+The finite example epsilon=10^-50, beta_hot=1/10000, beta_cold=1/50 has amplitude
+advantage in [22.617159747850778%,22.617159750540477%]; conservative displayed
+bounds in the paper are rounded outward. The strict perturbation retains an
+advantage greater than 22%. The energy separation is extreme; the claim is
+mathematical, with no asserted experimental practicality.
+
+Numerical cross-checks (not substitutes for the proofs):
+  python3 research/classifier_audit.py
+  python3 research/ordered_conductance_numeric_audit.py
+The classifier audit compares 20,000 side classifications with independently
+scaled covariance sampling, 600 exact polynomial Sturm tests, and 40 high-
+precision Wronskian checks. The floating classifier cannot certify arbitrary
+transcendental equality cases. The inverse audit separately checks accepted
+generators by rational LDL inertia and rejects invalid or excluded directions.
+
+The initial primary certificate and all expanded theorems have different scopes.
+The universal scalar test concerns simple modes and asymptotic effects, not all
+finite-time distance crossings. Degenerate classification is for specified
+asymptotic distances. The larger G-only amplitude bound is not asserted sharp
+under the full F-and-G triplet premise. A separate theorem now proves that
+the full-premise four-state supremum is exactly 25%. The general G-only
+all-temperature finite-time heating exclusion is for weighted Euclidean distance.
+Separate results establish a near-bath KL window and all-time convex-divergence
+ordering for structured contrast generators. General all-temperature KL/TV
+ordering outside those hypotheses remains open. The completed 1200-second transient-KL search
+found no negative derivative among 6,740,275,200 sampled evaluations; this is
+only a search result. Its final receipt is transient_heating_status.json.
+
+Exact executable commensurate-energy classifier:
+  python3 research/exact_commensurate_classifier.py research/commensurate_example.json
+  python3 research/test_exact_commensurate_classifier.py
+
+Input JSON specifies a rational base in (0,1), four ordered integer energy
+exponents, and six rational downward rates in 12,13,14,23,24,34 order.
+E_i=-m_i log(base), beta_b=1. Zero rates are accepted only for a connected
+transition graph. The result decides ordinary asymptotic cooling/heating and
+counts finite nonbath strong temperatures, for every slow multiplicity.
+It uses exact ordered-algebraic coefficient signs and Sturm root counts, with
+explicit handling of temperature endpoints and even-multiplicity tangencies.
+Sixteen tests passed, including an irrational cubic slow eigenvalue and all
+slow multiplicities. In contrast to the floating classifier, this algorithm
+does certify equality cases within its rational/commensurate domain.
+
+The manuscript also gives a complete finite-time weighted-Euclidean test for
+any specified thermal pair in any reversible four-state system: at most one
+interior time and the two endpoints need evaluation. This does not classify
+finite-time KL or TV. The elementary exponential-sum argument is not claimed
+as a new general zero-counting method.
+  python3 research/transient_only_chi_certificate.py
+This exact construction has two chi-squared crossings for a fixed cooling
+pair while retaining normal initial and eventual ordering. It establishes
+that four states suffice for this transient pattern. It is not an example
+of full-triplet failure and does not claim that the generator has no other
+asymptotic anomalous pairs. The very small crossing distances are noted in
+the manuscript.
+
+Additional attribution check: Emmerson, Zenodo21298061 v1, explicitly gives
+the scalar strong-temperature sign-variation bound and its bath-zero
+corollary. We do not claim novelty for the n-2 scalar nonbath strong count.
+His full text was inspected; audit: research/extended_novelty_audit.json.
+
+Dimension extension:
+  python3 research/five_state_extension_certificate.py
+The higher_dimension_extension.tex theorem extends strict counterexamples to
+every n>=4 by adding fast high-energy states while preserving every old
+off-diagonal rate. New triplets fail strictly. The exact five-state check
+adds E5=9000 log(10) and four downward rates of 1000 to the primary witness;
+it proves all ten triplet failures and retains a finite overlap advantage
+greater than 1/10000. Its proof controls the new mode coordinate directly,
+rather than using an invalid uniform bound involving 1/sqrt(q5). Large added
+energies serve the mathematical embedding and are not a practical proposal.
+
+Additional audit and illustration commands:
+  python3 research/exact_classifier_cross_audit.py
+  python3 research/quarter_limit_plots.py
+
+The exact classifier cross-audit covers100 systems (200 side comparisons):
+70-digit symmetric diagonalization supplies modes to the separate floating
+thermal-curve classifier. No disagreement or unresolved comparison was found.
+This is implementation cross-checking, not an exact certificate of arbitrary inputs.
+The first run exposed a scaled-CRootOf handling defect; the failure log is
+archived, the field-generator representation repaired, and two regression
+cases added. All16 boundary and algebraic-embedding tests now pass.
+
+The inverse feasibility test is complete for the original premise at slack=0.
+Positive slack tests stronger inequalities: rejection then does not exclude
+the original premise. Accepted generators still satisfy the original tests.
+Ten inverse checks include this scope distinction and negative-slack rejection.
+
+The fourth report figure illustrates the quarter-limit family with finite hot
+preparations; its growing effect requires increasing energy separation. Its
+CSV data and 80-digit computation receipt are in output/figures/.
+
+The energy-span corollary guarantees cooling absence when
+beta_b*(E_n-E_1)<=n/(n-2), n>=3, under the contrast-Metzler condition.
+For four states the cutoff is2. The original March sampling span<=1 lies
+entirely within this restricted absence theorem. Sharpness of this universal
+span cutoff is established for G-only, not the full F-and-G premise.
+
+Sharp full-triplet bound and single-endpoint criterion (added subsequently):
+  python3 research/full_triplet_amplitude_certificate.py
+  python3 research/extended_arithmetic_certificate.py
+  python3 research/extended_mode_obstruction_certificate.py
+
+full_triplet_amplitude_bound.tex proves w1+w2>=2w3 for the consistently
+oriented simple slow mode. Combined with prefix Gibbs monotonicity it proves
+amplitude advantage<25% for every finite cooling pair; the quarter-limit
+family makes the supremum sharp. Nineteen exact Schur/face identities passed,
+and a separate Perron-coupling proof has its own symbolic checker.
+full_triplet_endpoint_criterion.tex proves ordinary cooling exists exactly
+when Cov_uniform(w,E)>0, with one cooling maximum and no hidden interior
+anomalous interval. Beta=0 is an analytic endpoint, not a witness temperature.
+These results assume a simple slow mode and concern asymptotic ordering.
+
+Independent project-agent audits: extended_theorem_audit.txt,
+extended_classifier_audit.txt, extended_family_audit.txt,
+sharp_quarter_bound_audit.txt, single_endpoint_audit.txt. These are independent
+calculations inside this project, not external human peer review or Lean proofs.
+
+Complete degenerate boundary and rational-input endpoint decision:
+  python3 research/one_fast_mode_certificate.py
+  python3 research/compact_endpoint_equality_certificate.py
+  python3 research/independent_rational_classifier_audit.py
+  python3 research/independent_classifier_nearzero_audit.py
+  python3 research/exact_rational_triplet_classifier.py research/rational_triplet_compact_equality.json
+
+one_fast_mode_classification.tex proves that, in every n>=4, exactly one
+faster mode plus all F/G failures forces reset plus mixing on an adjacent
+pair. The reset-plus-pair construction is prior SPSD work; necessity is the
+classification established here. It covers every repeated slow multiplicity
+in four states, but not every repeated slow multiplicity in higher dimensions.
+For the classified generators, all convex f-divergences have normal ordering
+at every time. The certificate checks1,694 symbolic identities/converse cases.
+five_state_degenerate_nonmonotone.py gives an exact limitation for a smaller
+slow multiplicity in five states; nonmonotonicity alone is not a thermal witness.
+
+rate_endpoint_criterion.tex reduces the simple-slow full-premise decision to
+one cubic root and a scalar quadratic evaluated there, without computing an
+eigenvector. rational_log_endpoint.tex proves termination of an exact decision
+for rational rates/bath weights even without commensurate energies. It factors
+the weights into primes and uses Baker's established theorem to resolve exact
+zero of the algebraic linear combination of prime logarithms. Nonzero signs
+are certified by rational intervals. This extra classifier REQUIRES the full
+triplet-failure premise and rejects inputs outside it. It is not a replacement
+for the general commensurate classifier on unconstrained generators.
+
+The independent rational-input audit passed33 groups, including20 comparisons
+with exact Sturm classification. Two near-zero examples exercise the optional
+resource limit: unresolved is returned rather than absence, while unrestricted
+refinement proves opposite signs. A compact exact equality fixture has a
+simple slow mode and zero endpoint sign. No floating-point tolerance decides
+acceptance, equality, or a final sign in this implementation. Dependence on
+SymPy and the stated transcendence theorem remains explicit; no Lean proof
+or external human peer review has been performed.
+
+The targeted finite-time KL heating optimizer finished3602.32seconds and
+66,396,528 objective calls, without a negative score. Its best candidate has
+a positive derivative under a100-digit direct matrix exponential:
+  python3 research/check_transient_heating_candidate.py
+Receipt: research/transient_heating_final_high_precision.json.
+This is a numerical search/cross-check, not a no-reversal theorem.
+
+Higher-dimensional amplitude construction:
+  python3 research/high_dimension_amplitude_certificate.py
+  python3 research/clone_rate_bound_certificate.py
+  python3 research/five_state_large_advantage_certificate.py
+
+For every n>=4, splitting the high-energy state into n-3 distinct states and
+adding a controlled positive perturbation gives all F/G strictly negative,
+a simple uniformly separated slow mode, and amplitude advantages tending
+to1-3/n. Leading KL advantages tend to1-9/n^2. These are achievable limits;
+sharpness is proved only for n=4. The general G-only upper bound remains
+1-2/n. There is therefore no dimension-independent bound below100percent
+under all original triplet failures. Each fixed-n construction retains
+nonzero slow overlaps and does not contradict the strong-effect exclusion.
+
+The n=5 family has an exact finite thermal witness at epsilon=10^-50,
+beta_hot=1/10000, beta_cold=1/50. Rational root enclosures plus an explicit
+18000epsilon overlap perturbation bound give advantage between
+37.6778168708percent and37.6778168731percent. Generator/triplet/gap proofs
+are separate analytic dependencies identified by the certificate. Large
+energy separation limits practical interpretation. All-dimension claims
+rest on the written cloning proof, not finite sampling.
+
+Latest finite-time and dimensional results:
+  python3 research/thermal_ratio_obstruction_certificate.py
+  python3 research/reset_trace_obstruction.py
+  python3 research/reset_trace_independent_audit.py
+  python3 -I -S research/kl_contrast_gradient_obstruction.py
+
+tridiagonal_contrast_entropy.tex proves finite-time normal heating order for
+every convex f-divergence when the weighted-prefix contrast generator is
+tridiagonal and Metzler. This condition is on contrast coordinates, not on
+physical state transitions. The proof uses total positivity and an Abel-sum
+covariance argument. It does not establish the same conclusion for every
+G-admissible generator. thermal_ratio_obstruction.tex gives an exact family
+where physically reachable thermal derivative ratios violate the ordering
+used by that proof; this is not a KL-reversal example.
+
+near_bath_entropy_window.tex proves finite-time KL ordering on either bath
+side whenever abs(beta-beta_b)*(E_n-E_1)<=2/sqrt(5), under all G inequalities.
+There is no spectral simplicity assumption. The constant is sufficient,
+not claimed sharp. finite_span_amplitude.tex bounds a four-state cooling
+advantage A by p4_hot*(1-exp(-(beta_c-beta_h)*(E4-E1))), hence by one-quarter
+of the same factor. These are necessary, not sufficient, effect-size bounds.
+
+high_dimension_bound_reduction.tex proves the conditional n/3 overlap-ratio
+bound and a constant rare-tail subfamily. The all-dimensional implication
+w1+w2>=2w3 remains unproved. general_n_arithmetic_lp.tex gives an exact
+fixed-mode graph-coupling LP and a rational-witness/semialgebraic reduction
+of strict arithmetic violations. This is not a solution of that feasibility
+problem for every possible input and does not by itself resolve the thermal
+amplitude supremum.
+
+reset_trace_obstruction.py and its independent direct-matrix audit disprove
+a proposed zero-energy Schur proof route using exact rational arithmetic.
+They test effective trace rates separately from the original rates. The
+general_n_arithmetic_search_audit.txt records executed broad and targeted
+searches, including rejected numerical candidates; none is evidence of a
+general no-counterexample theorem. The standard-library KL contrast-gradient
+checker similarly rejects unrestricted coordinatewise KL monotonicity on
+the whole cone, without claiming thermal reachability or an Mpemba effect.
+
+Unless explicitly stated otherwise, mathematical certificate scripts use
+Python assertions and must be run without -O. The standalone primary checker,
+the compact endpoint equality checker, and the KL contrast-gradient checker
+use explicit checks that remain active with -O. Exact arithmetic is not a
+Lean formalization; the analytic dependencies and implementation assumptions
+remain part of the reviewable proof package.
+
+Activated-intermediate physical-clock check (numerical, not a certificate):
+  python3 research/activated_intermediate_model.py
+  python3 research/check_activated_intermediates.py
+
+These scripts retain six short-lived intermediates, full weighted Gibbs
+preparations and their residence times. The expanded ten-state model lies
+outside the original all-state rate/energy box; it tests coarse graining.
+The 2,268 perturbation samples and threshold/time grids do not prove
+continuous robustness. See activated_intermediate_study.tex for scope.
+
+physical_box_interval.cpp is an experimental enclosure implementation.
+Its full-box attempt is unresolved due to enclosure width; it is not a
+completed robustness certificate and is not needed to reproduce the
+accepted fixed-parameter certificate.
+
+Complete continuous +/-5% verification (C++17, MPFR/GMP):
+  python3 research/run_robust_finite_time_certificate.py
+
+This compiles the temperature-reduction and combined-enclosure sources,
+checks their full decimal inputs, and runs eight independent coverage
+obligations. It records source, binary, and log hashes in
+research/robust_finite_time_certificate/certificate.json. Expect several
+minutes. A complete=false receipt, pending cells, or nonzero exit is never
+accepted as a certificate. All eight obligations are required, together
+with the analytic reduction in physical_robustness_certificate.tex.
+The full-box physical-range receipt is physical_box_ranges_recheck.json;
+its performance_certified=false describes that range-only routine, not
+the separate complete performance certificate.
+
+Independent 70-digit temperature-derivative cross-check:
+  clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_temperature_reduction.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_temperature_reduction
+  python3 research/check_temperature_reduction.py
+
+False-claim controls for the final combined checker:
+  clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_threshold_constraint_logic.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_threshold_constraint_logic
+  ./tmp/check_threshold_constraint_logic
+
+The earlier run_physical_box_certificate.py and physical_box_spectral.cpp
+are retained as historical methods. Their +/-1% run completed; direct
++/-5% time runs were incomplete and are superseded by the exact temperature
+reduction, not misreported as failures of the model. The final proof does
+not rely on those incomplete runs. No Lean or external peer review is
+claimed for the new interval proof, and no experiment is claimed.
+
+Exact thermal-collision realization of the original Arrhenius generator:
+  python3 research/thermal_collision_model.py
+
+The analytic contact rule conserves system-plus-reservoir energy and
+reduces exactly to the same four-state rates for every allowed parameter.
+The independent event-clock check uses 500,000 trajectories per preparation
+and Poisson contacts, including rejected-gate waiting times by exact thinning.
+It is an idealized stochastic bath model, not a material/continuum derivation.
+
+Proof-method investigations are retained in physical_box_constrained.cpp,
+physical_box_entropy.cpp, physical_box_relative_entropy.cpp and
+physical_box_dyson.cpp. Their logs must explicitly end with complete=true
+and pending=0 before being used as continuous robustness certificates.
+An incomplete coverage limit or stopped method is not a physical failure.
+
+Completion audit after rebuilding certificates and PDFs:
+  python3 research/audit_physical_goal_completion.py
+
+This checks source/input/log hashes, all eight completed proof obligations,
+physical range bounds, independent audit receipts, scope statements,
+document contents, and preserved original/focused-paper hashes. It writes
+research/physical_finite_time_completion_audit.json. It does not replace
+review of the analytic proof or rendered pages; the revised report and
+appendix pages were separately rendered and visually inspected.
+
+Expanded teaching report: 40 lessons before the retained technical text.
+  python3 research/revise_report.py
+  python3 research/check_pedagogical_revision.py
+
+The check verifies the original additive preservation, the explicitly reviewed
+later technical edits, all 40 lessons, and worked algebra. It does not certify
+all advanced proofs or replace PDF visual review.
+
+Exact boundary regression for the independent polynomial reference:
+  python3 research/test_polynomial_reference.py
+
+This includes a thermal derivative root within 10^-30 of the bath boundary.
+The reference counts open-interval roots exactly; approximate isolating-box
+locations are not used to exclude roots. The main exact classifier already
+handled this case correctly and is unchanged.
+
+Entropy and dimensional-reduction audit identities:
+  python3 research/check_entropy_reductions.py
+  python3 research/test_entropy_audit_verdict.py
+The first command checks symbolic local identities supporting the analytic proofs.
+The second injects contradictory counters into the numerical audit verdict code
+to verify that failed checks cause a failing result. Neither resolves the open
+higher-dimensional arithmetic conjecture or replaces the analytic arguments.
+
+Physical interval implementation audit controls:
+  python3 research/test_robust_runner_inputs.py
+  clang++ -O2 -std=c++17 -ffp-contract=off -I/opt/homebrew/include research/check_interval_primitives.cpp -L/opt/homebrew/lib -lmpfr -lgmp -o tmp/check_interval_primitives
+  ./tmp/check_interval_primitives
+These exercise exact decimal input binding and arithmetic/function boundary
+regressions. They supplement the analytic enclosure review and eight complete
+coverage obligations; passing point checks alone do not prove a whole box.

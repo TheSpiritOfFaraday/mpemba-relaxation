@@ -1,0 +1,27 @@
+<details class="proof-route" id="approach-rate-walkthrough"><summary>Why approaching 25% can require enormous energy separation</summary>
+<h3>1. A limit does not tell you how quickly you get there</h3>
+<p>The sequence 1−1/n and the sequence 1−1/log(n) both approach 1 as n grows, but the second approaches much more slowly. In the report, the amplitude advantage approaches 25%. A separate calculation is needed to describe the remaining gap.</p>
+<h3>2. Replace a tiny parameter with a large, readable one</h3>
+<p>The family uses a small positive number ε. Set L = log(1/ε), so ε = exp(−L). Its highest energy is 2L in bath-scaled units. Increasing L means increasing the energy separation. Define a = log(5/3), y = exp(−aβ), and x = exp(−2Lβ). The third-state weight y changes slowly with inverse temperature β; the highest-state weight x changes quickly.</p>
+<div class="math">Leading positive slow amplitude:<br>R(β) = (y/3 − 1/5)/(2 + y + x).</div>
+<p>The exact formula differs by order ε on the cooling interval. “Order ε” means bounded by a constant times ε for sufficiently small ε, not equal to ε. Differentiation can introduce the large factor 2L, so the derivative error must be checked separately; it is order Lε.</p>
+<h3>3. Locate the balance between two competing changes</h3>
+<p>Emptying the highest state reduces the denominator and initially increases the amplitude. Changing the third-state weight eventually reduces the numerator enough to reverse that trend. Differentiate the quotient, using y′ = −ay and x′ = −2Lx. After multiplying by the positive denominator factor, the leading stationary-point equation is:</p>
+<div class="math">x[(10L−5a)y−6L] − 13ay = 0.</div>
+<p>Near the maximum, y approaches 1. The bracket therefore behaves like 4L, giving x approximately 13a/(4L). Since x = exp(−2Lβ), taking logarithms gives the first approximation to the maximizing inverse temperature:</p>
+<div class="math">βₘ ≈ log(4L/(13a))/(2L).</div>
+<p>The report also proves uniqueness using its earlier bound on stationary points. A numerical root solver by itself cannot establish that there are no other maxima.</p>
+<h3>4. Control the error in stages</h3>
+<p>The initial equation still contains an error proportional to βₘ. First absorb that term into the left side to prove βₘ is at most a constant times log(L)/L. Only then substitute the new bound back to obtain the smaller error of order log(L)/L². This two-stage argument prevents using an unproved estimate to justify itself.</p>
+<div class="math">Advantage ≈ 1/4 − [13a/(16L)]·[log(4L/(13a)) + 1].</div>
+<p>The remaining deficit is of order log(L)/L. Because the highest energy is 2L, this explains why a clear separation between slow and fast decay modes does not guarantee a near-25% advantage at modest energy separation.</p>
+<h3>5. Compare the same quantities</h3>
+<p>This formula compares the peak with the infinite-temperature limit β = 0. The figure instead uses a finite hot preparation β = 1/L². Both approach 25%, but they have different smaller correction terms. The graph must not be treated as a direct plot of the displayed asymptotic formula.</p>
+<p class="small">The <a href="research/check_quarter_approach.py">independent checker</a> verifies six exact algebra identities and recomputes five plotted maxima. Its <a href="research/detailed_audit/quarter_approach_checks.json">numerical residuals</a> illustrate the predicted error scales; the <a href="research/quarter_limit_family.tex">analytic derivation</a> proves them.</p>
+</details>
+<details class="proof-route" id="physical-source-boundaries"><summary>What the cited physical literature establishes</summary>
+<p><a href="https://www.osti.gov/servlets/purl/4390578">Metropolis and colleagues (1953)</a> supply the familiar energy-dependent acceptance rule. The model’s Poisson clock needs its own justification.</p>
+<p><a href="https://www.latticeguy.net/mypubs/pub070.pdf">Creutz (1983), pages 1411–1412</a>, describes both a retained energy-carrying demon and thermal refreshment. Fresh auxiliary energy is therefore established prior art.</p>
+<p><a href="https://arxiv.org/abs/2304.06420v2">Biswas, Rajesh and Pal (2023), Sections IV and VI</a>, explain population mechanisms and show that metastability is not necessary. Their paper does not certify this project’s rates or uncertainty box.</p>
+<p>These are checked source correspondences, not an exhaustive priority search. The <a href="research/detailed_audit/physical_source_review.json">review record</a> identifies the inspected locations and the limits of each attribution.</p>
+</details>

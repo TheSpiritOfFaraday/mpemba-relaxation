@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "precision_digits": 70,
+  "scope": "Every row of nine figure CSVs checked numerically. Exact claims rely on separate reviewed certificates; sampled envelope uses its separately replayed audit.",
+  "groups": {
+    "primary direct evolution": {
+      "comparisons": 1400,
+      "max_absolute_error": "0.00000000000000008149686860590204295686648708054930056048823562458465221580343663053394"
+    },
+    "primary overlap": {
+      "comparisons": 1200,
+      "max_absolute_error": "0.00000000000001893962895565728253904150558287374605425756885632842425924768864980233"
+    },
+    "rational direct evolution": {
+      "comparisons": 543,
+      "max_absolute_error": "0.000000000000002064548118430842222518515260880518817892752171670886872833164021920166"
+    },
+    "mechanism curves": {
+      "comparisons": 604,
+      "max_absolute_error": "0.000000000000001273295970632436606273995827031516798949566231942347056417625715577724"
+    },
+    "mechanism peak derivative": {
+      "comparisons": 101,
+      "max_absolute_error": "0.000000000000000001787369759993781517620184014080859854942293617796810880056139084272057"
+    },
+    "quarter thermal curves": {
+      "comparisons": 453,
+      "max_absolute_error": "0.00000000000001087607932358202177185812025285113839764262322915580132881857291288121"
+    },
+    "quarter hot preparation": {
+      "comparisons": 453,
+      "max_absolute_error": "0.000000000000000001197782130003882125148233272758197723450899013378768292639049410338207"
+    },
+    "quarter maxima": {
+      "comparisons": 303,
+      "max_absolute_error": "0.00000000000002577346203748846925460453098391507619351574971316434732470591483787283"
+    },
+    "physical time units": {
+      "comparisons": 151,
+      "max_absolute_error": "0.00000000000003840000000000000000000000000000000000000000000000000000141400006835157"
+    },
+    "physical direct evolution": {
+      "comparisons": 906,
+      "max_absolute_error": "0.000000000000002867112544246595552993823626711053264990565540460051767643178780286762"
+    },
+    "physical envelope correspondence": {
+      "comparisons": 124,
+      "max_absolute_error": "0.00000000000001296961058014000000000000000000000000000000000000000000005368468662368"
+    }
+  },
+  "source_sha256": {
+    "research/check_figure_data.py": "9f4587e29276f38accbf530cbc26f8e469f97d16b3948fdf32a591a13a8e9257",
+    "output/figures/focused_relaxation.csv": "e6762772cb6e1bb1425a23e86ebc3076d3a590b685e05b897dc8a7d53b73eefd",
+    "output/figures/mechanism_curves.csv": "d44d98c65fc4f6a5adf8b02a79f4de55fa9e05e8bc4a71c3060d5fb1e31d8a69",
+    "output/figures/mechanism_onset.csv": "f8ad8b2a933c286209a93d5ea2cf6a9fdcc2ef4e0e3fe8815b20bfec0ac07a9b",
+    "output/figures/overlap_data.csv": "ea176109eff76977c01729ae520937e262ab38a41f1061002095bb8609b665ac",
+    "output/figures/physical_finite_time.csv": "95323814942420428a04b01d22a5a95788cfdeb52d94100a9eb39624dca75742",
+    "output/figures/physical_threshold_savings.csv": "cfd1ce3b9fdd0cbc2eec38c876ddccf18188533e93a74b13c9be136a5c3c6302",
+    "output/figures/quarter_gain_data.csv": "b4e862aa2ef316b168b2ea28cb45be1d5caa569e8f744d2cb4e1bf9b3b860f6c",
+    "output/figures/quarter_overlap_data.csv": "5143064944262cdc63fb9bcb70eb89a3f3a26007076f1e7cd2a0a604902380e6",
+    "output/figures/relaxation_data.csv": "3939df4598d0ad2dbb0e1769c9773c7388acff26539ebbc4761de1aea04f3429"
+  }
+}

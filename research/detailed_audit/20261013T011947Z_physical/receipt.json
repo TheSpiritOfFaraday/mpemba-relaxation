@@ -1,0 +1,24 @@
+{
+  "group": "physical",
+  "started_utc": "20261013T011947Z",
+  "complete": true,
+  "scope": "Executable replay only; analytic argument review remains separate.",
+  "python": "3.9.13 (main, Oct 27 2024, 16:26:11) \n[Clang 16.0.0 (clang-1600.0.26.3)]",
+  "checks": [
+    {
+      "script": "research/run_robust_finite_time_certificate.py",
+      "command": [
+        "python3",
+        "./research/run_robust_finite_time_certificate.py"
+      ],
+      "source_sha256_before": "66cb119f1fea307507f23e547c5d3bb72ce21783556075e8e30136f143ff0079",
+      "status": "passed",
+      "log": "research/detailed_audit/20261013T011947Z_physical/run_robust_finite_time_certificate.log",
+      "exit_code": 0,
+      "seconds": 337.251259292,
+      "source_sha256_after": "66cb119f1fea307507f23e547c5d3bb72ce21783556075e8e30136f143ff0079",
+      "log_sha256": "45936b7c04b2dafbca94262d382f606778fa0eecb0f0ad437006532195b42160"
+    }
+  ],
+  "all_passed": true
+}

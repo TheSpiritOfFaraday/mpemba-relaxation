@@ -1,0 +1,78 @@
+\subsection{Broader literature assessment and contribution scope}\label{sec:novelty}
+The starting contribution is the explicit, certified failure of the published original-rate triplet implication. Sections~\ref{sec:orderedconductances}--\ref{sec:degenerateextension} add a surviving all-dimension exclusion theorem and a finite four-state asymptotic classification; their precise novelty is assessed separately from the established tools used in their proofs. Section~\ref{sec:mechanism} also supplies a controlled family and a proved onset classification for a specified eigenvector geometry. This is a problem-specific structural result; its individual publication priority has not been established. The supporting results organize and apply established mathematics. The following comparison was checked on 11 October 2026; it separates mathematical validity from publication priority.
+
+\paragraph{The matrix criterion and reset algebra have direct precedents.}
+\href{https://arxiv.org/abs/2007.11433v3}{Baake and Sumner, \emph{On equal-input and monotone Markov matrices}, v3, 25 September 2022}, Fact 3.1 and Proposition 3.11, give the cumulative-coordinate characterization of stochastic monotonicity for matrices and generators. In their row-generator convention, let $T_{ij}=\mathbf1_{i\geq j}$. Its coordinates are $(f_1,Bf)$, so
+\[
+T^{-1}LT=\begin{pmatrix}0&*\\0&K\end{pmatrix}.
+\]
+The upper row outside the diagonal consists of outgoing-rate tail sums and is automatically nonnegative. Their transformed-generator criterion is therefore exactly our condition that $K$ is Metzler. Our Perron and covariance argument is an application of that order structure, not a new monotonicity criterion.
+
+Their Section 2.1 also treats equal-input generators $C-cI$, with identical rows in $C$ and $C^2=cC$. Our reset generator is the transpose of this construction, with $C=\mathbf1\pi_b^\top$ and $c=1$. Its scalar action on nonstationary modes is elementary equal-input algebra. The useful calculation here is its compatibility with the particular triplet inequalities, $F(R_0)=G(R_0)=0$; the general reset construction is not claimed as new.
+
+\paragraph{The divergence corollary also follows from established thermomajorization.}
+\href{https://arxiv.org/html/2410.06686v2}{Vu and Hayakawa, \emph{Thermomajorization Mpemba Effect}, v2, 6 January 2025}, give the Lorenz-curve and all-convex-divergence characterizations of thermomajorization. The connection to our corollary is explicit. In cooling, both $p_h/\pi_b$ and $p_c/\pi_b$ are increasing, so both curves use the order $n,n-1,\ldots,1$. At their common horizontal knots,
+\[
+x_k=\sum_{i=k}^n\pi_{bi},\qquad
+y_{h,k}=\sum_{i=k}^np_{hi}\geq\sum_{i=k}^np_{ci}=y_{c,k},
+\]
+by stochastic ordering. Linear interpolation orders the entire curves: $p_h$ thermomajorizes $p_c$. Heating uses the order $1,\ldots,n$ and lower-tail inequalities, so $p_c$ thermomajorizes $p_h$. This yields the corollary from the known convex-divergence characterization. The supporting-line proof above is an alternative elementary derivation; neither derivation establishes priority for a new general theorem.
+
+This absence argument does not assert a thermomajorization reversal for our counterexample. Vu and Hayakawa's Result 4 distinguishes that stronger notion from the scalar slow-overlap criterion. The counterexample's stated conclusions remain eventual fixed-norm and KL ordering, with separate finite-time KL and TV brackets.
+
+\paragraph{What is claimed, and what is retained only as support.}
+\begin{itemize}
+\item \textbf{Central result:} the four-state witness satisfying all original-rate triplet failures, its exact certification and the consequent refutation of $(\mathcal C_4)$. The checked sources do not supply this witness or settle that precise implication. This bounded finding is not an exhaustive priority guarantee.
+\item \textbf{Established tools:} reversible symmetrization, slow-mode overlaps, Perron theory, stochastic monotonicity, likelihood-ratio evolution, thermomajorization, and equal-input reset algebra. The report claims no methodological novelty for these tools or for rational certification itself.
+\item \textbf{Applications proved here:} the additional rate inequalities, the all-$\kappa\leq1$ subfamily, the nonincreasing gap-law subfamily, and the all-time convex-divergence corollary. Their role is to explain sufficient conditions that survive the failed conjecture. They are not promoted as independently novel theorems.
+\item \textbf{Problem-specific deductions:} the identity $F=hG+dH$, the feasible-cone formulation, and reset compatibility simplify construction and verification. They are proved directly; their individual publication priority remains unestablished. The open-neighborhood result is a continuity consequence, not a new perturbation principle.
+\end{itemize}
+
+The review covers the exact source conjecture, OHI's coupling result and SI, Fill--Kahn's comparison and density-ratio argument, Baake--Sumner's matrix and generator criteria, and Vu--Hayakawa's thermomajorization formulation. Searches combined Mpemba, triplet, monotonicity, convex divergence, likelihood ratio, nonincreasing rates and equal-input generators. Relevant full-text sections were inspected, rather than inferred from titles. No identical all-lower-branch or gap-law statement was located in this bounded review; that absence is insufficient evidence of novelty. Unindexed work and exhaustive citation tracing remain outside the check. The counterexample remains a contribution independently of supporting priority questions. The added contrast-cone and classification results must be evaluated on their exact hypotheses and conclusions; the bounded search is not a guarantee that these consequences are unprecedented.
+
+\paragraph{Additional sources for the classification and realization arguments.}
+The explicit slow-mode realization is already proved in \href{https://arxiv.org/abs/1711.05829v3}{Klich et al., v3, 18 December 2018}, Appendix VIII, particularly Eq.~(67). Our rank-one formula is that construction in different normalization, and the rank-$r$ version uses the same projector idea. The Mpemba index and parity criteria are likewise prior results from that work. \href{https://arxiv.org/abs/2502.01758v3}{Teza et al., v3, 16 April 2025}, Sections 2.1 and 5.2.3, review those results. Both primary full texts were inspected on 11 October 2026. The university-hosted journal PDF failed to download; the arXiv review version was inspected instead, and differences in the final journal text have not been excluded.
+
+The nonvanishing-Wronskian characterization of extended complete Chebyshev systems is classical; Gasull, Geyer and Ma\~nosas (2020), Lemma 2.3, states the criterion used here. The Gibbs Wronskian formula and the convex-curve test are explicit applications. The weighted Helmert basis, Metzler semigroup positivity and Perron theory are also established. What is supplied here is the rate-to-contrast identity, the resulting asymmetric cooling/heating implications of the triplet premise, and the explicit finite thermal test. Searches combining Mpemba with Helmert, conductance ordering, strong-effect absence, Chebyshev systems and stationary-point counts did not locate matching statements in the inspected primary sources. This is a bounded attribution assessment, not an exhaustive priority claim.
+
+\paragraph{An explicit prior strong-temperature count.}
+A further search located \href{https://doi.org/10.5281/zenodo.21298061}{Parker
+Emmerson, \emph{Organizational Mechanics of Effective Cardinality Transitions}},
+Zenodo v1, with a stated publication date of 10 July 2026 and repository creation
+date of 17 July 2026. The full text was inspected on 11 October 2026.
+Theorem 7.3 applies the classical sign-variation bound to the slow-overlap
+numerator; Corollary 7.5 subtracts the forced bath zero. Thus the scalar
+nonbath strong-temperature bound $n-2$ is explicitly present in prior work
+and is not a novelty claim here. Section 11 gives a four-state sharpness example
+using a preparation landscape different from the stationary one. Warning 7.13
+distinguishes simultaneous mode cancellation from the scalar result.
+Our rank-$r$ bound $n-r-1$ addresses that simultaneous-cancellation problem;
+its priority remains subject to further review. The bound on \emph{stationary
+points} and the derivative-curve classifier concern different objects from
+zeros of the overlap numerator. No statement about the manuscript's peer-review
+status is needed for this attribution.
+
+The coexistence of strong cooling and heating in four states is also prior
+work: \href{https://arxiv.org/abs/2308.04557v1}{Bera, Walker and Vucelja,
+v1, 8 August 2023}, Section IV and Fig.~4, give a four-state ring example and
+discuss nonoverlap of the strong effects in three states. Those passages
+were checked in the primary full text on 11 October 2026. Our rational
+coexistence example is a sharpness and verification construction, not the
+first observation of that phenomenon. The general derivative test also
+covers ordinary effects that need not cancel the slow mode.
+
+\paragraph{The sharp full-triplet conclusions.}
+The additional results in Sections~\ref{sec:fulltripletbound} and
+\ref{sec:tripletendpoint} concern the precise original-rate premise:
+a sharp $25\%$ amplitude-advantage supremum and an exact endpoint covariance
+criterion for ordinary cooling. Their proofs use a restriction on the first
+three components of the slow eigenfunction, established through a reversible
+Schur complement and three nonnegative-rate boundary faces. A separate
+Perron-coupling proof supports the same restriction. These are proposed
+problem-specific contributions, not new Schur-complement or Perron principles.
+Searches combining Mpemba with amplitude bounds, triplet constraints,
+four-state systems and energy-span thresholds located no matching theorem
+in the inspected primary sources. Expert assessment of priority remains
+necessary. The spacing-independent exclusion also explains why the March
+paper's finite-temperature sampling box lies entirely within a region where
+the original inference is valid.

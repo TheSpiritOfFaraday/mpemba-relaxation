@@ -1,0 +1,324 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Mp}{M}
+\title{A counterexample to the four state Mpemba triplet conjecture}
+\author{Research report and reproducible mathematical certificate}
+\date{11 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The four-state implication specified in the assignment is false. An explicit reversible generator with strictly positive rates and four distinct energies fails the necessary-condition test of Avitan, Factor and Gelbwaser-Klimovsky on every original-rate triplet, but has an ordinary asymptotic cooling Mpemba effect between two finite positive initial temperatures. The bath inverse temperature is one; the initial inverse temperatures are $1/1000$ and $1/100$. Rational interval arithmetic certifies the thermal-overlap inequality. The example has a simple slow mode and strict margins, hence belongs to an open family of counterexamples. We also prove a corrected sufficient condition for absence using the generator acting on adjacent differences, and derive a finite-temperature theorem for the entire all-$\kappa\leq1$ subfamily, for any number of states.
+\end{abstract}
+
+\section{Outcome}
+The main result is a mathematical counterexample, not an inference from an unsuccessful search or an approximate spectral plot. Every input rate and bath weight is rational. The energies are logarithms of those weights. A cubic with integer coefficients specifies the slow eigenvalue, and cofactor polynomials specify its left eigenvector exactly. Thermal probabilities at the two selected temperatures are algebraic numbers bounded by rational numbers whose correctness is checked by integer powers.
+
+A companion example has an exactly rational slow eigenvalue and left eigenvector. It gives a second, simpler spectral certificate, at the expense of two less compact rates. Both examples are strictly inside the required positive-rate and simple-slow-mode domain. No assertion about a strong Mpemba effect is needed: the two displayed slow-mode overlaps are nonzero.
+
+\section{Problem and literature status}
+The target is the inference that failure of Eq.~(3) on every energy-ordered triplet of a four-state reversible thermalizing generator precludes the Mpemba effect. The triplets retain the original off-diagonal rates. This is the conjecture in \href{https://arxiv.org/html/2603.04567v1}{Avitan, Factor and Gelbwaser-Klimovsky, arXiv:2603.04567v1}, submitted 4 March 2026. Its main text and supporting information, particularly S2--S14, were checked on 11 October 2026. The version history listed only v1. Its finite-temperature claim is numerical; the analytic theorem assumes zero bath temperature and stronger triplet inequalities.
+
+The later \href{https://arxiv.org/html/2609.09988v1}{Gelbwaser-Klimovsky, arXiv:2609.09988v1}, submitted 9 September 2026, repeats the inference without providing a general proof. Its examples without an exact three-state mechanism concern a different, stronger predicate. Searches by title, identifier, conjecture, correction and counterexample located no other primary-source resolution. This establishes the scope of the literature check; it does not exclude unindexed or unpublished work. The target was not changed. Publication priority or exhaustive novelty is not claimed.
+
+For definitions we use \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC5441807/}{Lu and Raz, PNAS 114, 5083--5088 (2017)}, and distinguish the strong effect of \href{https://arxiv.org/abs/1711.05829}{Klich et al., Phys. Rev. X 9, 021060 (2019)}. The decisive conclusion here is eventual relaxation ordering, not a prescribed finite crossing time.
+
+\subsection{Model and reductions}
+With column probabilities, $\dot p=Mp$, $M_{ij}=a_{ij}$ for $i\ne j$, and $M_{jj}=-\sum_{i\ne j}a_{ij}$. The rate $a_{ij}$ goes from $j$ to $i$. Write
+\[
+q_i=e^{-\beta_b E_i},\qquad Q=\sum_iq_i,\qquad \pi_b=q/Q.
+\]
+Detailed balance is $M_{ij}q_j=M_{ji}q_i$. An energy shift sets $E_1=0$; measuring energies in bath units sets $\beta_b=1$. A common positive multiplier of $M$ changes only the time unit. We use $a_{12}=1$. We neither assume equally spaced energies nor normalize the total energy span. These would impose additional restrictions.
+
+If $D=\diag(\pi_b)$, detailed balance makes $S=D^{-1/2}MD^{1/2}$ symmetric: $MD=DM^\top$. Hence the spectrum is real and the generator is diagonalizable. Its Dirichlet form is
+\[
+-f^\top D M^\top f=\sum_{i<j}c_{ij}(f_i-f_j)^2,\qquad c_{ij}=M_{ij}\pi_{bj}=c_{ji}.
+\]
+In the positive-rate domain the stationary eigenvalue is simple. The slowest nonzero eigenvalue is additionally assumed simple and is certified below.
+
+\subsection{Exact predicate and its negation}
+For $i<j<k$, put $A=a_{ik}$, $B=a_{jk}$, $C=a_{ij}$, $t=q_j/q_i$, $u=q_k/q_j$. The source's $(-,0,+)$ correspond to $(i,j,k)$. Its exact test is
+\begin{align*}
+\kappa&=\frac{A+B}{C(1+t)},&G&=At-B,\\
+F&=A(1+tu/2)-B(1+u/2)-C(1-t),\\
+P_{ijk}&=(\kappa\geq1\ \land\ F>0)\ \lor\ (\kappa\leq1\ \land\ G>0).
+\end{align*}
+Both strict comparisons and both inclusive branch comparisons match Eq.~(3) and S9. The assignment's transcription is correct.
+
+\begin{lemma}[The branch logic reduces to a convex cone]
+For positive $C$ and $0<t<1$, $\neg P_{ijk}$ is equivalent to $F\leq0$ and $G\leq0$.
+\end{lemma}
+\begin{proof}
+Let $H=A+B-C(1+t)$, $d=(1-t)/(1+t)>0$, and $h=2/(1+t)+u/2>0$. Direct expansion gives $F=hG+dH$. If $H>0$, failure is $F\leq0$, which forces $G<0$. If $H<0$, failure is $G\leq0$, which forces $F<0$. At $H=0$ both branches apply, but $F=hG$, so their strict tests agree. These cases prove both directions.
+\end{proof}
+For fixed energies the eight linear inequalities define one closed polyhedral cone. The admissible rates are its intersection with the strictly positive orthant. This conclusion does not discard the original branch logic; it proves an equivalent formulation including $\kappa=1$.
+
+The supporting-information fast-vector formulas divide by $-uG$. We do not use that division. When $G=0$, direct triplet diagonalization gives nonzero eigenvalues $-A(1+t+tu)$ and $-[C(1+t)+Atu]$. If also $H=0$, they coincide. The predicate remains well-defined whenever $C>0$. Isolated triplet generators require their diagonals to be recomputed, not inherited as principal submatrices.
+
+\subsection{What the cooling witness proves}
+Choose $Mv_2=\lambda_2v_2$, $w_2^\top M=\lambda_2w_2^\top$ and $w_2^\top v_2=1$. Since $\lambda_2\ne0$, $w_2^\top\pi_b=0$. Thus
+\[
+b_2(\beta)=w_2^\top[\pi(\beta)-\pi_b]=w_2^\top\pi(\beta).
+\]
+All initial temperatures here are finite and positive. Cooling has $0<\beta_h<\beta_c<\beta_b$, with anomalous ordering $|b_2(\beta_h)|<|b_2(\beta_c)|$. Heating instead has $\beta_b<\beta_h<\beta_c$ and requires $|b_2(\beta_c)|<|b_2(\beta_h)|$.
+
+With a simple slow mode,
+\[
+p(t;\beta)-\pi_b=e^{\lambda_2t}b_2(\beta)v_2+O(e^{\lambda_3t}).
+\]
+Consequently a strict overlap comparison gives the same eventual comparison in every fixed norm. For relative entropy,
+\[
+D_{\rm KL}(p(t;\beta)\Vert\pi_b)=\tfrac12e^{2\lambda_2t}b_2(\beta)^2
+\sum_i v_{2i}^2/\pi_{bi}+o(e^{2\lambda_2t}).
+\]
+The hotter initial Gibbs state is initially farther in this distance because
+\[
+\frac{d}{d\beta}D_{\rm KL}(\pi(\beta)\Vert\pi_b)
+=(\beta-\beta_b)\Var_{\pi(\beta)}(E).
+\]
+Thus the example gives a genuine initial-to-eventual distance reversal. It does not claim reversal at every time or for arbitrary distance functionals without appropriate hypotheses. A strong effect would require a nonbath preparation with zero slow overlap; that is not the witness used here.
+
+Holding the bath, generator and eigenvectors fixed gives
+\[
+b_2'(\beta)=-\Cov_{\pi(\beta)}(w_2,E)
+=-\sum_{i<j}\pi_i(\beta)\pi_j(\beta)(w_{2j}-w_{2i})(E_j-E_i).
+\]
+A stationary point alone does not prove a maximum. We instead certify two strict overlap values on the same bath side. Since $b_2(1)=0$, their increasing absolute ordering also forces an interior maximum somewhere between $\beta_h$ and the bath.
+
+\section{Main result and exact counterexample}
+\begin{theorem}
+The four-triplet absence inference is false for four distinct energies, a positive finite bath temperature, strictly positive reversible rates and a simple slowest nonzero eigenvalue.
+\end{theorem}
+\begin{proof}
+Set
+\[
+\beta_b=1,\quad q=(1,199/200,2/5,1/400),\quad
+E=(0,\log(200/199),\log(5/2),\log400).
+\]
+These energies are distinct and strictly ordered. The downward rates in the order $(12,13,14,23,24,34)$ are
+\[
+(1,28,249/10,1799/8,4983/200,251/25).
+\]
+Set upward rates by $a_{ji}=a_{ij}q_j/q_i$ for $i<j$. The full generator is
+\[
+M=\begin{pmatrix}
+-49029/4000&1&28&249/10\\
+199/200&-7280583/79600&1799/8&4983/200\\
+56/5&17990/199&-1011751/4000&251/25\\
+249/4000&4983/79600&251/4000&-11971/200
+\end{pmatrix}.
+\]
+Every off-diagonal entry is positive. Its columns sum to zero and $M\diag(q)$ is symmetric. Since $Q=959/400$, the equilibrium is $\pi_b=(400,398,160,1)/959$.
+
+Exact original-rate triplet evaluations are:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule Triplet&$\kappa$&$F$&$G$\\\midrule
+123&$7225/57$&$-1176493/4975$&$-39403/200$\\
+124&$3321/133$&$-32119/1592000$&$-279/2000$\\
+134&$1747/1960$&$-7761/4000$&$-2/25$\\
+234&$1391209/12548025$&$-190400119/1592000$&$-119/4975$\\\bottomrule
+\end{tabular}
+\end{center}
+All four predicates fail strictly, with two upper branches and two lower branches. No boundary convention is needed.
+
+The characteristic polynomial is $xC(x)/1273600000000$, where
+\begin{align*}
+C(x)={}&1273600000000x^3+530473008000000x^2\\
+&+35732953114072400x+510539126345027563.
+\end{align*}
+Exact opposite endpoint signs show one root in each of $(-337,-336)$, $(-60,-59)$ and $(-20,-19)$. These three disjoint sign-changing intervals exhaust a cubic's roots; all are simple. The largest, denoted $r$, is $\lambda_2$. Approximately,
+\[
+(\lambda_2,\lambda_3,\lambda_4)=(-19.86836952145,-59.91747997894,-336.72876105237).
+\]
+In particular the slow-mode spectral gap exceeds 39 in these time units.
+
+Define four polynomials
+\begin{align*}
+P_1(x)={}&3184000000x^3+1287155436000x^2\\
+&+74562002576870x+532366138003157,\\
+P_2(x)={}&3184000000x^2+9060415184000x+532366138003157,\\
+P_3(x)={}&89152000000x^2+14211422840400x+532366138003157,\\
+P_4(x)={}&79281600000x^2+28279185628400x+532366138003157.
+\end{align*}
+Their common nonzero factor corresponds to the first column of $\operatorname{adj}(M^\top-xI)$. Put $w_i=P_i(r)/P_1(r)$. The nonvanishing denominator is certified by the rational isolating interval below. The adjugate identity proves $M^\top w=rw$. It also follows that $q^\top w=0$. To impose the required biorthogonal normalization set
+\[
+N=\sum_iq_iw_i^2>0,\qquad v_i=q_iw_i/N.
+\]
+Detailed balance gives $Mv=rv$ and $w^\top v=1$. Thus $w=w_2$, $v=v_2$ is a valid consistently normalized pair. Approximately,
+\[
+w=(1,-0.75893729814493,-0.61211930644096,-0.0038663077658171).
+\]
+The relevant overlap is exactly
+\[
+b_2(\beta)=\frac{\sum_iw_iq_i^\beta}{\sum_iq_i^\beta}.
+\]
+For $\beta_h=1/1000$ and $\beta_c=1/100$, rational interval certification gives the following deliberately widened enclosures:
+\begin{align*}
+-0.0937454280&<b_2(\beta_h)<-0.0937454279,\\
+-0.0938488357&<b_2(\beta_c)<-0.0938488356.
+\end{align*}
+Every displayed terminating decimal denotes an exact rational number. In particular
+\[
+|b_2(\beta_c)|-|b_2(\beta_h)|>0.0001034076>0.
+\]
+Both preparations have finite temperatures, $T_h=1000$ and $T_c=100$ in units with $k_B=1$, versus $T_b=1$. The strict overlap comparison and spectral expansion establish the ordinary cooling Mpemba effect. The verification construction below proves the enclosures without relying on floating-point acceptance tests. This completes the counterexample.
+\end{proof}
+
+\subsection{An exact rational slow-mode companion}
+Keep the same $q$, $a_{12}$, $a_{13}$, $a_{14}$ and $a_{24}$, but set
+\[
+a_{23}=\frac{330154675693}{1470375000},\qquad
+ a_{34}=\frac{1527327066}{151990625}.
+\]
+Use detailed balance and conservative diagonals as before. Then
+\[
+w=\left(1,-\frac{759}{1000},-\frac{48957}{80000},-\frac1{250}\right),
+\qquad \lambda_2=-\frac{4966671}{250000}
+\]
+obey $M^\top w=\lambda_2w$ and $q^\top w=0$ by rational arithmetic. Here $N=27567998009/16000000000$ and $v=\diag(q)w/N$.
+
+The characteristic polynomial factors as
+\[
+\frac{x(250000x+4966671)R(x)}{632507162050000000000000},
+\]
+where
+\begin{align*}
+R(x)={}&2530028648200000000x^2\\
+&+1002356769715761942000x+50981800562345565497767.
+\end{align*}
+One root of $R$ lies in $(-337,-336)$ and the other in $(-60,-59)$, as exact endpoint signs show. The rational eigenvalue is therefore the simple slow mode. The companion certificate checks all original predicates strictly and proves
+\begin{align*}
+b_2(1/1000)&\in(-0.093755177882,-0.093755177881),\\
+b_2(1/100)&\in(-0.093857287853,-0.093857287852).
+\end{align*}
+This is an independent exact realization of the same thermal mechanism, constructed backward from a prescribed mode.
+
+\section{Mathematical explanation and corrected theorem}
+\subsection{Why the triplet inference fails}
+The highest-energy state's slow-mode value is almost zero, while the intermediate states have strongly negative values. At very high initial temperature, occupation of state 4 therefore dilutes the negative slow overlap. The slightly cooler preparation depopulates state 4 enough to increase the magnitude of that overlap. At still lower temperatures, transfer toward the positive ground-state component returns the overlap to zero at the bath. This explanation concerns projection onto a relaxation mode, not merely mean energy.
+
+An isolated triplet has a different eigenvector and a different equilibrium normalization from the full four-state system. Pairwise detailed balance and the inequalities $F,G<0$ do not control the orientation of the full slow eigenvector relative to the entire Gibbs curve. In particular, nonmonotone slow eigenvectors are permitted. This explains the missing implication in a triplet-only argument.
+
+All rates, $F$ and $G$ are strict; the slow eigenvalue is separated; the overlap gap is strict. Continuous dependence of a simple eigenprojection, Gibbs probabilities and the predicates on rates and energies therefore yields an open neighborhood of counterexamples, including varying energies. This is not an equality-surface artifact. No numerical radius for that neighborhood is claimed.
+
+There is also an explicit one-parameter family. Let $R_0=\pi_b\mathbf1^\top-I$ and $M_\rho=M+\rho R_0$ for $\rho\geq0$. Its off-diagonal reset rates are $\rho\pi_{bi}$, for which $F=G=0$ on every triplet. Thus $F,G$ remain unchanged. On the zero-sum subspace $R_0=-I$, so every nonzero eigenvalue shifts by $-\rho$ and every mode and overlap is preserved. Positivity and the counterexample persist for all $\rho\geq0$. A subsequent common positive time rescaling also preserves the result. More explicitly, for every $\alpha>24$, the same $q$ and the downward rates
+\[
+(\alpha-24,\alpha+3,\alpha-1/10,
+199\alpha/200+200,199\alpha/200+1/25,2\alpha/5+1/25)
+\]
+form a counterexample. Their generator equals $M+(\alpha-25)(q\mathbf1^\top-QI)$. All nonzero eigenvalues shift by $-(\alpha-25)Q$, while their ordering, modes, overlaps and all $F,G$ remain unchanged. Positivity follows directly from $\alpha>24$.
+
+\subsection{A corrected sufficient condition}
+Let $L=M^\top$ act on functions, $(Lf)_i=\sum_{j\ne i}a_{ji}(f_j-f_i)$. Define adjacent differences $y_i=f_{i+1}-f_i$, the difference map $Bf=y$, and $(H_0y)_j=\sum_{\ell<j}y_\ell$. Then $BL=KB$ with $K=BLH_0$, since $L\mathbf1=0$. In the constant-plus-differences basis, $L$ is block triangular with blocks 0 and $K$, so $K$ has precisely the nonzero generator eigenvalues. For its off-diagonal entries,
+\[
+K_{i\ell}=\begin{cases}
+\sum_{j\leq\ell}(a_{j,i}-a_{j,i+1}),&\ell<i,\\
+\sum_{j>\ell}(a_{j,i+1}-a_{j,i}),&\ell>i.
+\end{cases}
+\]
+\begin{theorem}[Order-preserving sufficient condition]
+For any finite number of states, strictly ordered energies, a fixed $0<\beta_b<\infty$, positive reversible rates and a simple slowest nonzero eigenvalue, if every off-diagonal entry of $K$ is nonnegative, there is no asymptotic cooling or heating Mpemba effect at positive initial temperatures.
+\end{theorem}
+\begin{proof}
+Such a matrix $K$ is called Metzler. After a sufficiently large scalar diagonal shift it is nonnegative. Perron theory gives a nonzero nonnegative eigenvector $y$ at its spectral abscissa, which is $\lambda_2$. This does not require irreducibility of $K$. Choose $w$ with $Bw=y$ and $\pi_b^\top w=0$. Then $B(Lw-\lambda_2w)=0$, so $Lw-\lambda_2w$ is constant. Its bath expectation is zero, hence it vanishes. Thus $w$ is the slow left eigenfunction, nondecreasing and nonconstant in energy.
+
+The covariance identity now gives $b_2'(\beta)<0$ for every finite positive $\beta$: all its pairwise summands are nonnegative and at least one is strictly positive. Because $b_2(\beta_b)=0$, its absolute value decreases toward the bath on the cooling side and increases away from the bath on the heating side. These are exactly the normal asymptotic orderings.
+\end{proof}
+In four states, the six off-diagonal entries are
+\begin{align*}
+K_{12}&=a_{32}+a_{42}-a_{31}-a_{41},&K_{13}&=a_{42}-a_{41},\\
+K_{21}&=a_{12}-a_{13},&K_{23}&=a_{43}-a_{42},\\
+K_{31}&=a_{13}-a_{14},&K_{32}&=a_{13}+a_{23}-a_{14}-a_{24}.
+\end{align*}
+The original failures already ensure the three upper entries are nonnegative, since $G\leq0$ orders upward rates. A corrected, directly checkable sufficient condition is therefore the four original failures together with
+\[
+a_{12}\geq a_{13},\qquad a_{13}\geq a_{14},\qquad
+ a_{13}+a_{23}\geq a_{14}+a_{24}.
+\]
+This is a proved sufficient condition, not a proposed necessary characterization.
+
+\begin{corollary}
+If every triplet has $\kappa\leq1$ and fails the original predicate, then the absence conclusion is true, for any state count under the theorem's assumptions.
+\end{corollary}
+\begin{proof}
+$H\leq0$ and $G\leq0$ give $A+B\leq C(1+t)$ and $B\geq At$, so $A\leq C$. These comparisons make each downward summand in $K$ nonnegative; $G\leq0$ and detailed balance do the same for each upward summand. Apply the theorem.
+\end{proof}
+A second subfamily consists of downward gap laws $a_{ij}=f(E_j-E_i)$, $i<j$, with positive nonincreasing $f$. Both $f(x)$ and $e^{-\beta_bx}f(x)$ are nonincreasing, so every required summand is nonnegative. This establishes the same absence conclusion directly, without the false general triplet conjecture. These order arguments are independently derived here; priority relative to the wider stochastic-monotonicity literature has not been established.
+
+\section{Approaches explored}
+The initial route comparison, including explicit continue/change criteria, is recorded in \path{research/approaches.md}. The decisive work covered both theorem construction and adversarial falsification.
+\begin{enumerate}
+\item \textbf{Reversible spectral geometry.} Symmetrization and the Dirichlet form gave reliable eigenvalue ordering and an equilibrium-orthogonal search space. The obstacle was that rate inequalities do not make the slow-mode orientation convex. Spectral certificates remain essential; this route did not yield the full absence theorem.
+\item \textbf{Order and covariance.} The first calculation was $K=BLH_0$. Its Metzler subfamily yielded the theorem above. An exact auxiliary example in \path{theorem_notes.md} disproves the intermediate claim that all triplet failures force a monotone slow eigenvector. This identified the missing implication rather than assuming it.
+\item \textbf{Exponential-polynomial zero counting.} Multiplying by $Z(\beta)^2$ gives
+\[
+Z^2b_2'=-\sum_{i<j}(w_j-w_i)(E_j-E_i)e^{-\beta(E_i+E_j)}.
+\]
+For four states there are at most six distinct exponential terms. Chebyshev/variation arguments could bound turning points, but cannot exclude the certified turning behavior. No new general zero-count theorem is claimed. This route became explanatory, not decisive.
+\item \textbf{Feasible-rate geometry.} The identity $F=hG+dH$ converted apparent branch enumeration into eight linear inequalities. A search enumerated extremal rays after removing the reset direction, then sampled positive mixtures. It found the first root-search candidate after 67,000 systems. Extremal rays were used for discovery only: we did not assume eigenvector properties are inherited by mixtures.
+\item \textbf{Backward eigenvector design.} Starting from the discovered thermal mode, we prescribed rational $q$ and rational $w$ with $q^\top w=0$, then solved the linear eigenvector equations for rates. This produced the rational-mode companion and an exact eigenvalue. The remaining spectrum was checked independently; realization of an arbitrary faster eigenmode would not suffice.
+\item \textbf{Lumping and perturbation.} The near-neutral highest state explains the observed mode. No adiabatically eliminated rate was substituted into the original predicate. Strict-margin continuity supplies a rigorous open family; a separate singular-perturbation theorem was unnecessary once a finite positive example was certified.
+\item \textbf{Difficult regimes and targeted sampling.} Broad positive-rate sampling missed the effect. Signed-cone directions plus reset restoration found an independent witness. This concentrated the search on unequal energy gaps and narrow high-temperature windows, where a coarse temperature grid is weak.
+\item \textbf{Algebraic proof.} Rational bath weights made the selected Gibbs probabilities algebraic even though the energy gaps are not commensurate. Exact root brackets and rational interval arithmetic proved the two-temperature inequality. Commensurate energies were therefore not needed.
+\item \textbf{Additional idea: reset lineality.} The reset generator lies in the lineality space of all the triplet inequalities and acts as a scalar on nonstationary modes. This allowed signed directions to be made physical without changing their mode geometry, and gives the explicit counterexample family above. The September paper also studies the fully degenerate reset point; general novelty of that point is not claimed.
+\item \textbf{Additional idea: thermal dual cones.} The cone spanned by Gibbs tangent vectors would have a dual consisting of modes with controlled derivative sign. The first calculation was the covariance expansion. The counterexample shows that the original rate cone's slow modes cross the required thermal dual. A complete dual-cone characterization remains an extension, not a premise used in the proof.
+\end{enumerate}
+
+\section{Verification and reproducibility}
+\subsection{Exact certificate construction}
+Run from the workspace root:
+\begin{verbatim}
+python3 research/adversarial_certificate.py
+python3 research/adversarial_rational_mode_certificate.py
+\end{verbatim}
+The primary script uses SymPy rational/integer arithmetic to check positivity, column sums, detailed balance and the original Boolean predicates. It derives the characteristic polynomial and cofactor vector and verifies its eigenvector residual and bath expectation modulo $C(x)$. The actual slow root is enclosed between
+\[
+-\frac{42820190741029}{2155193997917}
+\quad\hbox{and}\quad
+-\frac{135549509489200}{6822377112669}.
+\]
+Opposite exact polynomial signs certify this interval. Two disjoint negative intervals similarly contain the other roots; degree three proves completeness. The interval evaluation of $P_1$ excludes zero, so division by it is justified.
+
+For each $q_i^{1/n}$, $n=1000,100$, the script proposes adjacent grid points $L_i,U_i$ of mesh $10^{-24}$, then checks exactly
+\[
+0\leq L_i,\qquad L_i^n\leq q_i\leq U_i^n.
+\]
+Strict monotonicity of the positive $n$th-power map proves the enclosure. Approximate arithmetic only proposes the endpoints; it never accepts an inequality. Polynomial Horner evaluation, products and division use exact interval endpoints. All denominators are verified to exclude zero. The final interval comparison is also exact. Full rational endpoints, rather than merely rounded decimals, are saved in the JSON certificates.
+
+The tighter certified margin in the primary normalization is greater than
+\[0.00010340762800011847331527.\]
+The deliberately widened report bounds are conservative. Scaling $w$ consistently changes the displayed numbers but never the conclusion; search logs may use a unit weighted norm, whereas the final report fixes $w_1=1$.
+
+\subsection{Executed discovery calculations}
+The discovery environment used Python with NumPy 1.26.4, SciPy 1.13.1 and SymPy 1.14.0. Seeds and actual parameters are retained in the scripts and output files. Floating-point discovery outputs are not mathematical certificates.
+
+\path{cone_search.py} used seed 10411, energy gaps $\exp U[-4,2]$, 1,000 ray mixtures per energy set, and 150 cooling inverse temperatures from 0.001 to 0.999. It stopped after 67 energy sets, 67,000 systems, on a strict candidate. Coefficients of the ray mixtures were $\exp U[-9,3]$; a reset direction restored positivity. SVD acceptance tolerances for rays were $10^{-8}$ and $10^{-9}$, and deduplication tolerance $10^{-6}$. These are discovery tolerances only.
+
+The independent positive-rate search used seed 934256 and 20,000,000 draws. Gaps were $10^{U[-3,1]}$, rates $10^{U[-5,5]}$ rescaled by their maximum; 2,020,118 draws passed the predicates. It found no accepted witness on its 18-point cooling/heating grid, under the margins and spectral filters in \path{adversarial_search.py}. The signed search used seed 742908, gaps $10^{U[-3,0.7]}$, and normal signed variables scaled by $10^{U[-3,3]}$, alternating an additional destination-weight factor. It stopped at 9,950,000 draws (573,427 feasible) with a witness. Full grids, filters and stopping records are retained in the scripts and \path{adversarial_notes.md}. Neither a failed search nor its sample count was used as proof. The independent verifier checked the primary candidate at 70 digits, then reviewed the exact certificate's matrix orientation, branch logic, root exhaustion and interval operations. The rational-mode companion was checked separately by symbolic equations and root counts.
+
+No experiments, empirical measurements, messages to authors, or external publication were performed. All generator tests use original rates. All promised executed certificate checks passed.
+
+\subsection{Boundary audit}
+The disproof does not require zero rates, $\beta_b=0$, a zero-temperature bath, equality of energies or spectral degeneracy. The source numerically discusses equal and zero rates but does not supply a general finite-temperature boundary proof. If zero rates are allowed, irreducibility must still be checked; otherwise bath equilibrium need not be unique. The printed $\kappa$ quotient is undefined if $C=0$. A closure defined through $F,G$ requires a stated extension, not silent division by zero.
+
+For a degenerate slow eigenspace the scalar $b_2$ must be replaced by the full slow spectral projection. Its norm or entropy contribution can depend on several coefficients. Reversibility prevents Jordan blocks but not this ambiguity. Continuity of a selected scalar mode cannot be assumed across an eigenvalue crossing. Our strict spectral separation avoids these issues. The corrected theorem is stated only with a simple slowest nonzero eigenvalue; no unstated limit to the degenerate case is used.
+
+\section{Remaining gap}
+There is no remaining mathematical gap in the specified four-state implication: the counterexample disproves it. What remains open in this work is a sharp replacement characterization, a complete phase diagram of admissible slow-mode orientations, and a minimal structural description of all counterexamples. We have not proved that a particular number of upper-$\kappa$ triplets is necessary, nor that all effects under the failed premise share the near-neutral-state mechanism.
+
+The corrected order-preserving conditions are sufficient, not necessary. The report proves an asymptotic effect and does not compute a specific finite crossing time or characterize every transient distance crossing. The literature search is bounded and does not establish priority over unpublished work.
+
+\section{Best next step}
+A concrete next calculation is to fix the rational bath weights above, impose $w_1=1$ and $q^\top w=0$, and solve the linear rate feasibility problem as $(w_2,w_4)$ vary. Combine each feasible solution with an exact slow-mode spectral check and the sign of $b_2(\beta)b_2'(\beta)$ on $0<\beta<1$. This would map the boundary between the corrected order-preserving region and the open counterexample family, and test whether one upper-$\kappa$ triplet can suffice. The existing rational-mode companion provides a fully specified starting point.
+
+For external review, the immediate useful package is this report plus the two exact certificate scripts and their JSON outputs. Any eventual publication should separately check priority, polish the structural theorem and have a researcher independently run the certificates. The mathematical result here does not depend on that future step.
+\end{document}

@@ -1,0 +1,56 @@
+{
+  "verified": true,
+  "new_energy": "9000 log(10)",
+  "new_downward_rates": "1000 to each original state",
+  "beta_hot": "1/1000",
+  "beta_cold": "1/100",
+  "beta_bath": "1",
+  "triplets_checked": 10,
+  "all_F_and_G_strict": true,
+  "spectral_counts": [
+    [
+      -4001,
+      5
+    ],
+    [
+      -3999,
+      4
+    ],
+    [
+      -337,
+      4
+    ],
+    [
+      -336,
+      3
+    ],
+    [
+      -60,
+      3
+    ],
+    [
+      -59,
+      2
+    ],
+    [
+      -20,
+      2
+    ],
+    [
+      -19,
+      1
+    ]
+  ],
+  "uniform_overlap_error_bound": "1/1000000",
+  "displayed_hot_interval": [
+    -0.09374642799403217,
+    -0.09374442799334351
+  ],
+  "displayed_cold_interval": [
+    -0.09384983562197538,
+    -0.09384783562127604
+  ],
+  "margin_proved_greater_than": "1/10000",
+  "elapsed_seconds": 10.803956985473633,
+  "scope": "Exact five-state extension of the original four-state witness; not a practical energy scale"
+}

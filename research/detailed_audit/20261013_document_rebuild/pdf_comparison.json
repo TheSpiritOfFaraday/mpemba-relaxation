@@ -1,0 +1,26 @@
+{
+  "research_report": {
+    "pages": [
+      126,
+      126
+    ],
+    "page_text_identical": true,
+    "page_streams_identical": true
+  },
+  "focused_appendices": {
+    "pages": [
+      81,
+      81
+    ],
+    "page_text_identical": true,
+    "page_streams_identical": true
+  },
+  "focused_paper": {
+    "pages": [
+      10,
+      10
+    ],
+    "page_text_identical": true,
+    "page_streams_identical": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-10-13T03:31:53.543817+00:00",
+  "pages": {
+    "report": 126,
+    "appendices": 81,
+    "focused_paper": 10,
+    "guide": 88
+  },
+  "all_68_current_reviews_preserved": true,
+  "all_85_command_lines_adjudicated": true,
+  "first_setup_cache_condition_explicit": true,
+  "html_ids_unique": true,
+  "local_links_resolve": true,
+  "pdf_pages_nonempty": true,
+  "pdf_command_text_copyable_ascii": true,
+  "desktop_screenshot": "output/playwright/guide-rebuild-review.png",
+  "mobile_width": 390,
+  "mobile_document_width": 390,
+  "visually_reviewed_pdf_pages": [
+    72,
+    73,
+    74
+  ],
+  "sha256": {
+    "freshman_guide.html": "ed49c338585195b15479ecac2bad338af37cb2673fc223579c7a6a417edcff84",
+    "output/pdf/freshman_guide.pdf": "1fffcc9d8e8f95605fe3376478397fd91c6d00ba93845fc9a3e3891ac700236d",
+    "research_report.tex": "f7069ff4e20f4b1e9fdabec7071eba1c41ba0b075c51faa8333e428d2e63b1ec",
+    "focused_appendices.tex": "4c615ff3c5fd252b93a8c82fc22e82798ffb4585d4652cec7e2249cb8dbbf961",
+    "focused_paper.tex": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb"
+  }
+}

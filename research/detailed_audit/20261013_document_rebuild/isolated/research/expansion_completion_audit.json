@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-11",
+  "objective": "Tighten supporting-theorem novelty and make the physics visible",
+  "requirements": [
+    {
+      "requirement": "Compare the supporting theorem with Ohga, Hayakawa and Ito and tighten novelty claims",
+      "status": "verified",
+      "evidence": [
+        "sources/2410.06623v2.txt Result 2 and SI D2; full-text comparison inspected",
+        "research/monotonicity_literature_comparison.md",
+        "research_report.tex section 4.4: hypothesis table, equivalence to stochastic monotonicity, separate observable and time scopes, no general novelty claim",
+        "All-time convex divergence corollary has a self-contained reversible total-order proof; no priority claim"
+      ]
+    },
+    {
+      "requirement": "Keep the counterexample distinct from the supporting order theorem",
+      "status": "verified",
+      "evidence": [
+        "research_report.tex abstract and section 4.4",
+        "K21 = a12 - a13 = -27, so counterexample does not satisfy monotonicity hypotheses"
+      ]
+    },
+    {
+      "requirement": "Add a clear overlap plot",
+      "status": "verified",
+      "evidence": [
+        "research_report.tex Figure 1, full cooling interval plus high-temperature enlargement",
+        "output/figures/thermal_overlap.pdf",
+        "output/figures/overlap_data.csv",
+        "Rendered final page 6 inspected at 1200 px"
+      ]
+    },
+    {
+      "requirement": "Show an actual relaxation-distance crossing",
+      "status": "verified",
+      "evidence": [
+        "research_report.tex Figure 2 with KL distance and ratio panels",
+        "output/figures/physics_metrics.json: 80-digit propagation agrees with direct expm within 6e-81",
+        "research/finite_time_certificate.py rerun successfully on 2026-10-11",
+        "research/finite_time_certificate.json: exact TV crossing in (0.10,0.11) and KL crossing in (0.14,0.16)",
+        "Report widened rational endpoint intervals checked against exact JSON; no unique or earliest crossing claim"
+      ]
+    },
+    {
+      "requirement": "Simplify the presentation",
+      "status": "verified",
+      "evidence": [
+        "research_report.tex outcome explains physical ordering plainly",
+        "Cofactor polynomials and rational-mode companion moved to Appendices A and B",
+        "All 14 rendered pages reviewed in final contact sheet, figures and comparison table inspected enlarged",
+        "Standalone source compiles with both native Tectonic export and built-in compiler; no overfull boxes"
+      ]
+    },
+    {
+      "requirement": "Explain approximately 0.11 percent effect and practical limitations",
+      "status": "verified",
+      "evidence": [
+        "research_report.tex section 4.2: amplitude reduction 0.11018531 percent, asymptotic KL reduction 0.22024921 percent",
+        "Same decay exponent, ordinary rather than strong effect",
+        "Asymptotic time advance 5.5488e-5 in a12 inverse units; distinguished from percent total cooling time",
+        "Temperature ratios 1000 and 100, no experimental timescale or practically useful protocol established"
+      ]
+    },
+    {
+      "requirement": "Leave reproducible deliverables",
+      "status": "verified",
+      "evidence": [
+        "RUNME.txt: exact verification, figure and source rebuild commands, dependencies and scope limits",
+        "research/finite_time_audit.md",
+        "research/artifact_sha256.json"
+      ]
+    }
+  ],
+  "outstanding_required_work": [],
+  "limitations": [
+    "No external human peer review performed",
+    "No exhaustive publication-priority claim",
+    "No proof of uniqueness or earliest finite-time crossing",
+    "No practical cooling protocol demonstrated"
+  ]
+}

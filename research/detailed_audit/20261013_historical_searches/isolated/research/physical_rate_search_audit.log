@@ -1,0 +1,21 @@
+{
+  "corners": 256,
+  "random_interior": 1000,
+  "seed": 12102027,
+  "min_time_saving_sampled": -0.044549604823402866,
+  "min_window_width_tau_sampled": 1.013983983983984,
+  "max_rate_ratio_sampled": 1469.5465329374817,
+  "failing_cases": 441,
+  "worst_time_parameters": [
+    0.7331807028594344,
+    0.10571143119804684,
+    2.9041321084883904,
+    2.222187766499989,
+    2.1430757402410627,
+    5.40739168713995,
+    3.0108962158895602,
+    9.07307970921437
+  ],
+  "certified_neighborhood": false
+}
+All triplet tests fail: False

@@ -1,0 +1,62 @@
+{
+  "status": "superseded incomplete coverage attempts",
+  "stopped_processes": [
+    {
+      "pid": 81574,
+      "session": 92139,
+      "method": "monotone faces",
+      "log": "research/spectral_monotone_5pct_time.log"
+    },
+    {
+      "pid": 82257,
+      "session": 64126,
+      "method": "entropy endpoint cells",
+      "log": "research/entropy_endpoint_5pct_time.log"
+    },
+    {
+      "pid": 82412,
+      "session": 42205,
+      "method": "threshold multipliers with hyperbolic fast-mode formula",
+      "log": "research/constrained_5pct_time.log"
+    },
+    {
+      "pid": 82696,
+      "session": 12370,
+      "method": "relative-entropy difference identity",
+      "log": "research/relative_entropy_5pct_time.log"
+    },
+    {
+      "pid": 84438,
+      "session": 44976,
+      "method": "Dyson first-order enclosure",
+      "log": "research/dyson_5pct_time.log"
+    },
+    {
+      "pid": 85845,
+      "session": 61213,
+      "method": "Dyson optimized multipliers",
+      "log": "research/dyson_optimized_5pct_time.log"
+    },
+    {
+      "pid": 86019,
+      "session": 8158,
+      "method": "Dyson monotone faces",
+      "log": "research/dyson_faces_5pct_time.log"
+    },
+    {
+      "pid": 86136,
+      "session": 96832,
+      "method": "Dyson entropy chain rule",
+      "log": "research/chain_entropy_5pct_time.log"
+    },
+    {
+      "pid": 89148,
+      "session": 2661,
+      "method": "direct eight-parameter combined enclosure",
+      "status": "stopped after successful temperature reduction; not a completed certificate"
+    }
+  ],
+  "reason": "Verified progress-volume diagnostics showed that explicit threshold-constraint multipliers covered the early difficult region more efficiently. Baseline and constrained runs continue. The rigorously bounded Dyson fast block subsequently covered comparable early regions several times faster; slower incomplete branches were stopped. A combined exact/Dyson enclosure and certified temperature-reduction route supersede the unfinished direct runs. None was labeled a full certificate.",
+  "scope": "Proof-method comparison, not a physical failure or a certified full-box result.",
+  "superseding_certificate": "research/robust_finite_time_certificate/certificate.json"
+}

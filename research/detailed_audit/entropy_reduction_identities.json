@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "count": 14,
+  "checks": [
+    "Exterior-square differential operator has exactly the stated crossing signs",
+    "Tridiagonal specialization removes both negative off-diagonal crossing terms",
+    "Angle lower bound follows from an exact square",
+    "Elementary KL threshold gives 1-z^2-z^2/4=1-5z^2/4",
+    "Compressed G weighted-average identity 01",
+    "Compressed F weighted-average plus nonpositive correction 01",
+    "Compressed G weighted-average identity 02",
+    "Compressed F weighted-average plus nonpositive correction 02",
+    "Compressed G weighted-average identity 12",
+    "Compressed F weighted-average plus nonpositive correction 12",
+    "Compressed conservation and detailed balance",
+    "Graph quadratic form is an exact sum of edge squares",
+    "Graph kernel contains prescribed mode exactly",
+    "Arithmetic violation is the displayed strict coordinate inequality"
+  ],
+  "scope": "Exact local identities supporting the analytic entropy/dimensional review.\nThis checks algebra, not the universal analytic theorems or the open conjecture."
+}

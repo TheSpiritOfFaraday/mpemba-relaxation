@@ -1,0 +1,50 @@
+INDEPENDENT AUDIT: FIXED-MODE GRAPH-COUPLING LP
+
+The reduction in general_n_arithmetic_lp.tex is mathematically valid on its
+intended higher-dimensional domain. One statement-level correction was sent to
+the author: explicitly require n>=4 (n>=3 suffices for the algebra). For n=2 the
+normalization sum ell=1 is impossible and the first-three inequality is undefined.
+Do not leave the intended dimensional restriction implicit in surrounding prose.
+
+The reconstructed backward operator is L0=H B eta^{-1} H^T D, hence L0 H=H B
+and L0*1=0. Since eta B is symmetric, B eta^{-1} is symmetric; consequently
+D L0 is symmetric. Thus M0=L0^T is the correct column generator convention,
+conserves probability, and satisfies detailed balance with q, although its
+physical off-diagonal rates may have either sign.
+
+The displayed energy identity is exact: each graph edge contributes
+ell_ij[(x_j/x_i)y_i^2+(x_i/x_j)y_j^2-2y_i y_j]. With ell>=0 and x>0 this
+is nonnegative, and its kernel consists precisely of vectors y whose ratios
+y_i/x_i are constant on connected components. Connectivity is exactly the
+simple-zero-eigenvalue condition. The diagonal similarity X^{-1}BX is a
+reversible backward Markov generator, with weights eta_i*x_i^2 as stated.
+
+Adding rho(q*1^T-I) shifts every contrast eigenvalue by -rho, leaves F/G
+unchanged, and makes all physical rates positive for a sufficiently large
+finite rho because every q_i>0. Hence the connected graph realizes Hx exactly
+as the unique slow left mode. Conversely strict original G makes every
+contrast off-diagonal positive by the established Helmert identity. Shifting
+the slow eigenvalue to zero reconstructs exactly the displayed ell form; time
+rescaling supplies sum ell=1. A finite minimum of strictly positive margins
+then gives a positive LP margin, and vice versa.
+
+Strictification is valid: the detailed-balanced generator with every downward
+rate one has F=(t-1)(1+u/2)<0 and G=t-1<0 for all distinct ordered bath weights.
+A sufficiently small addition preserves an existing strict arithmetic violation
+and simple spectral ordering. It also makes every contrast off-diagonal
+positive, so Perron coordinates become strictly positive. This is a global
+existence argument, not a claim that a fixed boundary mode itself admits the
+strict LP. The final cut-constraint paragraph correctly distinguishes the weak
+fixed-mode problem and its connectivity requirement.
+
+Rational density is justified because the construction parameterizes the mode
+exactly rather than perturbing an arbitrary matrix and hoping its eigenvector
+stays rational. Normalize q and ell in their affine simplexes, choose nearby
+rational q,x,ell within the open set of strict inequalities, and reconstruct
+B and M0 from them. Every eta_i and x_i denominator stays positive. A rational
+sufficiently large reset may also be selected, yielding a fully rational
+physical generator and an exactly rational Hx. All tests are rational functions,
+so clearing positive denominators gives an existential polynomial system at
+fixed n. This proves a decision reduction for arithmetic-inequality violation;
+it does not prove that inequality, compute the thermal amplitude supremum, or
+make a violating mode automatically violate a proposed thermal bound.

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "Opposite exact endpoint signs imply an interior sign change",
+    "Old finite-width reference would omit the near-bath root and report only negative values",
+    "New reference counts the near-bath sign change exactly",
+    "excluded endpoints",
+    "even stationary tangency",
+    "odd repeated stationary root",
+    "two simple interior roots",
+    "constant nonzero",
+    "near zero endpoint",
+    "near infinite temperature endpoint",
+    "Main exact classifier independently handles the newly exposed boundary case",
+    "Algebraic coefficient field retains odd multiplicity and excludes endpoint",
+    "Algebraic strong-root count includes even interior multiplicity once"
+  ],
+  "count": 13,
+  "finding": "Supporting classifier_audit.py formerly used finite-width isolating boxes to decide whether roots were interior. A root just above x=1/2 could be skipped. Production exact_commensurate_classifier.py was unaffected.",
+  "repair": "Replace that reference with exact rational odd-factor root counts and exact endpoint-factor removal."
+}

@@ -1,0 +1,121 @@
+\section{A finite-time convex-divergence theorem for contrast chains}
+\label{sec:contrastchainentropy}
+A stronger finite-time conclusion is available when cooperation in the
+contrast basis has a nearest-neighbor structure. This condition concerns
+the generator in contrast coordinates, not transitions between physical
+energy levels.
+
+\begin{theorem}[Heating order for a tridiagonal contrast generator]
+\label{thm:contrastchainentropy}
+Let an irreducible reversible finite-state generator have strictly ordered
+energies and positive finite bath temperature. Assume all $G_{ijk}\leq0$
+and that its weighted Helmert contrast matrix is tridiagonal. Then for
+any two finite heating preparations
+$\beta_b<\beta_1<\beta_2$, every convex divergence satisfies
+\[
+D_\Phi(p_t(\beta_2)\Vert q)
+\geq D_\Phi(p_t(\beta_1)\Vert q)
+\qquad(t\geq0),
+\quad
+D_\Phi(p\Vert q)=\sum_iq_i\Phi(p_i/q_i),
+\]
+where $\Phi$ is convex and finite on positive arguments, with $\Phi(1)=0$.
+For strictly convex $\Phi$ the inequality is strict at every finite time.
+No spectral simplicity or irreducibility in contrast coordinates is
+required. The proof in fact needs only a Metzler tridiagonal contrast
+matrix, rather than the original $G$ inequalities themselves.
+\end{theorem}
+\begin{proof}
+Use the unnormalized Helmert matrix $H$ and write the density ratio as
+$r=\mathbf1+Hx$. The contrast generator $B$ is Metzler and tridiagonal,
+and $x(t,\beta)=P_t x(0,\beta)$, where $P_t=e^{tB}$.
+On heating both $x(0,\beta)$ and its thermal derivative
+$y(0,\beta)=\partial_\beta x(0,\beta)$ are strictly positive by the
+prefix-contrast calculation in Theorem~\ref{thm:orderedk}.
+
+Put $\delta=\beta-\beta_b>0$, shift $E_1=0$, and write
+$Z_\delta=\sum_iq_i e^{-\delta E_i}$.
+Up to a positive coordinate normalization independent of $\delta$,
+\[
+x_k(0,\beta)=\frac{f_k(\delta)}{Z_\delta},\qquad
+f_k=\sum_{i\leq k}q_i
+ (e^{-\delta E_i}-e^{-\delta E_{k+1}})
+=\delta\int_0^{E_{k+1}}Q(s)e^{-\delta s}\,ds,
+\]
+where $Q(s)=\sum_{E_i\leq s}q_i$.
+The weighted mean of $s$ in this truncated integral strictly increases
+with its upper endpoint. Consequently
+\[
+\frac{y_k(0,\beta)}{x_k(0,\beta)}
+=\frac1\delta-\frac{Z_\delta'}{Z_\delta}
+ -\frac{\int_0^{E_{k+1}}sQ(s)e^{-\delta s}\,ds}
+        {\int_0^{E_{k+1}}Q(s)e^{-\delta s}\,ds}
+\]
+is decreasing in $k$, and remains positive.
+
+Every ordered $2\times2$ minor of $P_t$ is nonnegative. One elementary
+proof uses the differential equation for the exterior square: its
+matrix is the second additive compound of $B$. Tridiagonality ensures
+that every off-diagonal entry of that compound is nonnegative, since
+one index can move only to a neighboring unoccupied index without
+crossing the other. Its exponential is therefore nonnegative, and its
+entries are precisely the ordered $2\times2$ minors of $P_t$.
+This is the classical total-positivity implication of
+\href{https://msp.org/pjm/1970/32-1/pjm-v32-n1-p20-p.pdf}{Schwarz (1970),
+Theorem 2}; the argument covers zero couplings as well as irreducible
+contrast chains.
+For positive vectors $x,y$, expansion by paired column indices gives
+\[
+(P_ty)_i(P_tx)_j-(P_ty)_j(P_tx)_i
+=\sum_{k<l}\det(P_t)_{\{i,j\},\{k,l\}}
+  (y_kx_l-y_lx_k)\geq0\qquad(i<j).
+\]
+It follows that the evolved ratios $R_k=y_k(t,\beta)/x_k(t,\beta)$
+remain nonincreasing and positive. Positivity of the exponential's
+diagonal guarantees $x,y>0$, even if some contrast couplings vanish.
+
+First suppose $\Phi$ is differentiable, and let
+$g_k=\sum_iq_i H_{ik}\Phi'(r_i)$ be the coordinate gradient of the
+divergence. Its weighted prefix sums satisfy
+\[
+S_k:=\sum_{j\leq k}x_jg_j
+=\sum_{i\leq k+1}q_i(r_i-c_k)\Phi'(r_i)\geq0,
+\qquad c_k=1+\sum_{j>k}x_j.
+\]
+Indeed the higher contrasts are constant on this physical prefix,
+and $\sum_{i\leq k+1}q_i(r_i-c_k)=0$. Thus $S_k$ is the prefix mass
+times the covariance of $r$ with the nondecreasing function $\Phi'(r)$,
+which is nonnegative by the pairwise covariance identity.
+Abel summation now yields
+\[
+\partial_\beta D_\Phi
+=\sum_kR_k x_kg_k
+=R_{n-1}S_{n-1}
+ +\sum_{k=1}^{n-2}(R_k-R_{k+1})S_k\geq0.
+\]
+For strictly convex $\Phi$, the full-prefix covariance $S_{n-1}$ is
+strictly positive unless $r$ is constant. At finite time the evolved
+state is not equilibrium, by invertibility of $e^{tM}$, while
+$R_{n-1}>0$. This proves strictness.
+
+For a nondifferentiable convex function, the same argument holds at
+almost every $\beta$, using subgradients at the finitely many density
+ratios. Subgradients at distinct arguments remain ordered, so the
+covariance calculation is unchanged, including its strictness for a
+strictly convex function. On each compact interval of finite heating
+temperatures, all density ratios are bounded away from zero and infinity;
+the divergence is therefore locally Lipschitz as a function of $\beta$.
+Integrating its almost-everywhere derivative proves the claimed ordering
+and strictness. Alternatively, convex smooth approximation proves the
+nonstrict assertion directly.
+\end{proof}
+
+The condition is broader than stochastic monotonicity of physical
+energy states. For example, the certified three-state generator used
+in the dimension caveat after Theorem~\ref{thm:tripletdegenerate} has
+$G_{123}<0$ and a two-dimensional, automatically tridiagonal contrast
+matrix, but its physical adjacent-difference entry is
+$K_{21}=-14/27<0$. Thus this theorem does not merely restate the
+physical stochastic-order corollary. The argument uses classical total
+positivity and covariance tools; no novelty claim is made for those
+underlying principles.

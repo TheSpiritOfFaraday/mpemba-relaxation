@@ -1,0 +1,208 @@
+\subsection{Continuous verification of the full $\pm5\%$ parameter box}
+\label{sec:physicalboxcertificate}
+\textbf{Verified scope on 12 October 2026.}
+Both predeclared finite-time benchmarks hold throughout the simultaneous
+$\pm5\%$ uncertainty box. For every parameter vector in that box,
+\[
+ D_h(t)\leq0.9D_c(t),\quad D_c(t)\geq10^{-3},
+ \qquad 0.4\leq t/\tau\leq0.8,
+\]
+and
+\[
+ t_h(\delta)\leq0.95t_c(\delta)
+ \qquad\text{for every }10^{-3}\leq\delta\leq10^{-2}.
+\]
+The distance interval has length $0.4\tau$ and ends before $5\tau$.
+These are continuous parameter, time and threshold claims, not inferences
+from a perturbation cloud. They concern KL distance only.
+
+The eight independently perturbed coordinates are the three gaps, three
+shared barrier excesses and two temperature excesses $T_x/T_b-1$.
+The generator and Gibbs preparations are rebuilt throughout the box;
+no independently chosen matrix entries or eigenvectors are perturbed.
+This preserves the physical geometry and detailed balance exactly.
+The uncertainty domain remains inside all predeclared moderate ranges,
+as recorded in Section~\ref{sec:physicalresults}.
+
+\paragraph{Threshold inequalities and an exact temperature reduction.}
+For fixed physical parameters, the simple slow eigenvalue $\lambda<0$
+and $\tau=-1/\lambda$ do not depend on the preparation temperatures.
+Set $u=t/\tau$ and $\mathcal D_x(T,u)=D_x(T,u\tau)$.
+Separate interval checks prove that both preparations have distance
+above $10^{-2}$ at $u=0.1$ and below $10^{-3}$ at $u=2$ throughout
+the box. KL is strictly decreasing along every nonstationary trajectory
+of this irreducible reversible generator. Each threshold root in the
+specified band is therefore unique and belongs to $(0.1,2)$.
+
+Two additional continuous certificates prove
+\[
+ \partial_{T_c}^2\mathcal D_c\leq0
+ \quad(0.1\leq u\leq2),\qquad
+ \partial_{T_h}\mathcal D_h\leq0
+ \quad\text{whenever }10^{-3}\leq\mathcal D_h\leq10^{-2},
+ \quad0.1\leq u\leq2.
+\]
+Both cover all six physical parameters and the full relevant temperature
+interval. The other preparation temperature is irrelevant to each
+single-preparation distribution and may be fixed in that check.
+Let $T_c^-,T_c^+$ and $T_h^-$ denote the box's cold endpoints and lowest
+hot temperature. For any fixed threshold, write $u_x=t_x/\tau$ and
+$m=\min\{u_c(T_c^-,\delta),u_c(T_c^+,\delta)\}$.
+At time $m$, both endpoint cold distances are at least $\delta$.
+Concavity in $T_c$ puts every interior cold distance above the chord,
+so $u_c(T_c,\delta)\geq m$. For the hot preparation, implicit
+ differentiation at its threshold root gives
+\[
+ \partial_{T_h}u_h=-\frac{\partial_{T_h}\mathcal D_h}
+                              {\partial_u\mathcal D_h}\leq0.
+\]
+Thus the slowest hot arrival is at $T_h^-$. It remains to prove just two
+boundary-temperature inequalities, still continuous in all six physical
+parameters and in $u$:
+\[
+ 10^{-3}\leq\mathcal D_c(T_c^\pm,u)\leq10^{-2}
+ \quad\Longrightarrow\quad
+ \mathcal D_h(T_h^-,0.95u)\leq\mathcal D_c(T_c^\pm,u).
+\]
+The two completed certificates imply
+\[
+ u_h(T_h,\delta)\leq u_h(T_h^-,\delta)
+ \leq0.95m\leq0.95u_c(T_c,\delta).
+\]
+This proves the whole temperature domain; checking its endpoints without
+the derivative certificates would not suffice.
+
+\paragraph{Temperature derivatives.}
+For the Gibbs distribution $q(T)$, let $U=\sum_iq_iE_i$ and
+$V=\operatorname{Var}_q(E)$. The checker propagates
+\[
+ q_i'=q_i\frac{E_i-U}{T^2},\qquad
+ q_i''=q_i\left[\frac{(E_i-U)^2-V}{T^4}
+                      -\frac{2(E_i-U)}{T^3}\right]
+\]
+through the same semigroup as $q$. Since their masses vanish,
+\[
+ D_T=\sum_i p_i'\log(p_i/\pi_i),\qquad
+ D_{TT}=\sum_i\left[\frac{(p_i')^2}{p_i}
+                         +p_i''\log(p_i/\pi_i)\right].
+\]
+Normal initial ordering also follows analytically: for a Gibbs preparation
+above the bath, $\partial_T D(\pi(T)\Vert\pi_b)
+=(\beta_b-\beta)\operatorname{Var}_{\pi(T)}(E)/T^2>0$.
+The early endpoint bounds and contractivity place both initial distances
+above the threshold band.
+
+\paragraph{Semigroup enclosures.}
+Conservation of mass reduces probability deviations to three coordinates.
+A fixed basis close to the nominal eigenbasis transforms the reduced
+generator to $R$. Each constant edge matrix is transformed before being
+multiplied by its uncertain rate, retaining cancellation of intrabasin
+flux. An interval characteristic-polynomial bracket isolates $\lambda$;
+interval Newton and a Schur-complement enclosure tighten it, while
+implicit differentiation encloses its parameter derivatives.
+Reversibility supplies real, diagonalizable eigenvalues. Explicit
+spectral bounds verify that both remaining eigenvalues lie below $\lambda$.
+
+Let $P$ be the slow spectral projector and $Q=I-P$.
+The implementation uses two complementary fast-block enclosures.
+Writing $R$ in a scalar plus $2\times2$ block form with first row
+$(r_{00},b)$ and bottom-right block $F$, normalize its slow right
+vector to $(1,v)^\top$. Set $H=F-vb$, $W=(-v,I_2)$ and
+$V_f=Q[:,2:3]$. Then
+\[
+ e^{Rt}=e^{\lambda t}P+V_f e^{Ht}W.
+\]
+For $Ht=D+C$ with $D$ diagonal and $C$ off diagonal, the first two
+Dyson terms have diagonal $e^{D_{ii}}$ and off-diagonal
+$C_{ij}e^{(D_{11}+D_{22})/2}\operatorname{sinhc}((D_{11}-D_{22})/2)$.
+With $m=\max_iD_{ii}$ and $c=\|C\|_\infty$, the omitted terms have norm
+at most $e^m(e^c-1-c)$. For each parameter derivative the remainder norm
+is at most
+\[
+ e^m\left[\|D'\|_\infty(e^c-1-c)
+               +\|C'\|_\infty(e^c-1)\right].
+\]
+Outward bounds on these expressions are added to the value and derivative
+intervals. This is an enclosure of the truncation error, not an assertion
+that the approximation error is roundoff-sized.
+
+For the distance, endpoints and two boundary-temperature time checks,
+the checker intersects this enclosure with the exact identity
+\[
+ e^{Rt}=e^{\lambda t}P+
+ e^{at}\left[\cosh(dt)Q+\frac{\sinh(dt)}{d}(R-aI)Q\right],
+\]
+where the fast eigenvalues have sum $2a$ and squared half-gap $d^2\geq0$.
+Entire-function evaluations of $\cosh\sqrt z$ and
+$\sinh\sqrt z/\sqrt z$ handle coincident fast modes without dividing by
+an uncertain gap. Intersecting two valid enclosures retains validity and
+avoids a fixed Dyson truncation floor on small boxes.
+
+\paragraph{Sign verification and coverage.}
+KL is evaluated using its chain rule into a binary basin distance plus
+two conditional binary distances. The binary terms use
+$\phi(z)=(1+z)\log(1+z)-z$, with its correct monotone branches.
+Interval automatic differentiation and centered mean-value bounds reduce
+dependency overestimation. For the time margin
+$F=\mathcal D_c(u)-\mathcal D_h(0.95u)$, either of
+\[
+ F+\alpha(\mathcal D_c-10^{-2})\geq0,
+ \qquad F+\alpha(10^{-3}-\mathcal D_c)\geq0,
+ \qquad\alpha\geq0,
+\]
+is a sufficient certificate on the threshold band. Heuristics choose
+multipliers, but acceptance always requires a whole-box outward sign
+bound. Sign-definite partial derivatives may move the minimum of this
+same expression to a face. A face's being outside the threshold band
+never excludes the original box.
+
+Basic binary64 operations are widened outward by one neighboring value;
+MPFR evaluates decimal inputs and transcendental functions with directed
+rounding. Compilation excludes fast-math and floating-point contraction.
+An unresolved sign causes subdivision, never acceptance. Closed child
+boxes share their boundary. A coverage run succeeds only when the queue
+is empty; a node-limit exit is incomplete, not a certificate or a physical
+failure. The input rounding encloses the exact requested $\pm5\%$ box.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Proof obligation & Tree nodes & Accepted leaves\\
+\midrule
+Distance window & 23,351 & 11,676\\
+Both early endpoints & 105 & 53\\
+Cold late endpoint & 1 & 1\\
+Cold temperature concavity & 135,721 & 67,861\\
+Hot temperature monotonicity on band & 52,785 & 26,393\\
+Hot late endpoint & 1 & 1\\
+Time saving: $T_c^-,T_h^-$ & 54,425 & 27,213\\
+Time saving: $T_c^+,T_h^-$ & 65,045 & 32,523\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every listed run ended with zero pending cells and no enclosure errors.
+Earlier $\pm1\%$ certificates and incomplete direct eight-parameter
+coverage attempts remain in the record. The temperature reduction
+supersedes those incomplete attempts without shrinking the requested domain.
+
+\paragraph{Reproducibility and limits.}
+Run \path{research/run_robust_finite_time_certificate.py} to compile
+\path{research/physical_temperature_reduction.cpp} and
+\path{research/physical_temperature_reduced_combined.cpp}, then replay
+all eight obligations. The runner checks embedded inputs against
+\path{research/physical_rate_refined.json} and records source, binary and
+log hashes in \path{research/robust_finite_time_certificate/certificate.json}.
+The independent checker \path{research/check_temperature_reduction.py}
+uses the original four-state generator and 70-digit direct matrix
+exponentials: 6,744 value checks for KL and its first two temperature
+derivatives, plus 360 parameter/time derivative checks, pass at the
+nominal point, all 256 corners and 24 seeded interior points as specified
+in its receipt. Finite differences are implementation cross-checks, not
+the justification of the analytic interval derivative bounds.
+
+This is an executable interval proof with reviewable mathematical and
+software dependencies, not a Lean formalization or external peer review.
+The exact stochastic realization in Section~\ref{sec:thermalcollision}
+supplies a bath interpretation of the same rate model. Numerical
+certification does not establish a material's rate law, an experimentally
+calibrated cooling clock, preparation costs or experimental feasibility.

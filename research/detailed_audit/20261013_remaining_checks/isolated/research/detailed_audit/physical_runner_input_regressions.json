@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "count": 8,
+  "checks": [
+    "Exact parameters accepted",
+    "Regression values collapse to the same binary64 value",
+    "Different decimals with equal floats rejected",
+    "Missing parameter rejected",
+    "Nonfinite parameter rejected",
+    "Missing array rejected",
+    "Exact current input matches physical_temperature_reduction",
+    "Exact current input matches physical_temperature_reduced_combined"
+  ],
+  "finding": "Runner float-only equality could hide a decimal input mismatch. Current inputs already match exactly; completion audit had a separate exact Decimal check. Runner now rejects that mismatch before compilation."
+}

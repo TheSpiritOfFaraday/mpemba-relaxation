@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "interval": "0<epsilon<=1/30",
+  "input_dependency": "quarter_limit_certificate.json exact generator formulas",
+  "rate_upper_bound": "2",
+  "H_low_pair_clone_F": [
+    "(-e**2*r/2 - 98*e/3 - 1)/(e**2 - e/3 + 13/5)",
+    "(-e**2*r - 24/5)/(e**2 - e/3 + 13/5)",
+    "(-e**2*r/2 + 3*e - 21/5)/(e**2 - e/3 + 13/5)"
+  ],
+  "H_low_pair_clone_F_upper_bound": "-1/3",
+  "split_F_deficit_upper_bound": "(5/3)*epsilon^2",
+  "perturbation": "6*epsilon^2*H",
+  "repaired_F_upper_bound": "-(1/3)*epsilon^2",
+  "n5_clone_fractions": [
+    "2/3",
+    "1/3"
+  ],
+  "n5_epsilon_cap": "1/200",
+  "H_norm_upper_bound": "200",
+  "n5_slow_gap_lower_bound": "41/150",
+  "n5_weighted_error_upper_bound": "6000*epsilon^2",
+  "n5_coordinate_overlap_error_upper_bound": "18000*epsilon",
+  "scope": "Exact extra rate bounds and algebra/constants; analytic cloning, perturbation and thermal-limit arguments are in the companion audit."
+}

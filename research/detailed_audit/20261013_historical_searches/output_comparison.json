@@ -1,0 +1,20 @@
+{
+  "cone_candidate": {
+    "json_exact_match": true
+  },
+  "adversarial_result": {
+    "json_exact_match": true
+  },
+  "adversarial_signed_candidate": {
+    "json_exact_match": true
+  },
+  "general_n_arithmetic_highprecision": {
+    "json_exact_match": true
+  },
+  "general_n_inverse_candidate_recheck": {
+    "json_exact_match": true
+  },
+  "general_n_inverse_dual_search": {
+    "json_exact_match": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "seed": 111031,
+  "systems": 1000,
+  "state_space_heating_checks": 5000,
+  "errors": [],
+  "minimum_relative_heating_margin": 0.2603931421092856,
+  "max_contrast_identity_residual": 5.684341886080802e-14,
+  "elapsed_seconds": 0.2445509433746338,
+  "scope": "Floating-point original-state-space verification in dimensions 3,4,5,7,10"
+}

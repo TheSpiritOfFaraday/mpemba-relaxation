@@ -1,0 +1,70 @@
+General-n first-three arithmetic restriction: current status
+===========================================================
+Target: under all original F/G failures, with simple slow mode oriented by
+nonnegative Helmert coefficients, prove or disprove w1+w2>=2w3.
+This remains unresolved. No successful numerical search is a proof.
+
+Schur reduction
+---------------
+Let B be the generator in unnormalized weighted Helmert coordinates,
+eta its diagonal metric, and s=(q1-q2)q3/[2q2(q1+q2+q3)]. Partition
+coordinates into {1,2} and T={3,...,n-1}. Under strict G, B is irreducible
+Metzler and the slow Perron vector has positive coordinates. At the Perron
+root lambda, R_lambda=(lambda I-B_TT)^-1 is nonnegative. The desired
+x2>=s x1 is equivalent to nonnegativity at s of the effective2x2 ratio
+quadratic. Its value is
+
+C+v R_lambda u,
+C=B21+s(B22-B11)-s^2 B12,
+v=B2T-s B1T,
+u=B_T1+s B_T2.
+
+All G inequalities imply u>=0 and v>=0. For the latter, let a=(1,1,-2,0,...)
+and take a tail Helmert column h^l (l>=3). Then
+
+a^T L h^l = Q_(l+1)(2k_3,l+1-k_1,l+1-k_2,l+1)
+             + sum_(j>l+1) qj(2k_3j-k_1j-k_2j)>=0.
+This equals (2Q3/q3)v_l.
+
+After subtracting the minimum reset, the generator remains physical and
+lambda<=0. Therefore R_lambda>=(-B_TT)^-1 whenever the nonnegative
+resolvents are defined, suggesting the sufficient condition
+C+v(-B_TT)^-1u>=0. The zero-energy expression corresponds to the
+first-three trace generator's F123 condition.
+
+That sufficient condition is FALSE for n=5. The exact certificate
+reset_trace_obstruction.py/.json starts from bath weights proportional to
+(100,4,3,2,1), reduced rates
+(1,.999,.999,0,1,.999,0,2,0,2), and adds a small all-downward-one repair.
+It subtracts the resulting minimum and adds reset1 to create a strictly
+positive physical input with every F/G strict. Its minimum reset is1.
+After removing that minimum and eliminating states5 and4, the trace has
+F123=452114029270345354793/30223906046743763750000>0.
+Thus the four-state proof's zero-energy Schur bound cannot simply be
+extended to higher dimensions. The actual lambda-dependent expression
+may still have the required sign; this example does not refute the
+slow-mode arithmetic conjecture.
+
+A useful complementary formulation
+---------------------------------
+Prescribe positive Helmert coordinates x and parameterize a zero-Perron
+symmetrizable Metzler matrix by nonnegative graph couplings ell_ij:
+B_ij=ell_ij/eta_i, B_ii=-sum_j ell_ij*x_j/(eta_i*x_i).
+An added reset restores positive physical rates without changing F/G,
+mode orientation or ordering. This converts inverse realization of an
+offending x into a linear feasibility problem in ell. Each graph edge
+contributes a negative reversible rank-one matrix
+-ell_ij*x_i*x_j D f f^T,
+f=h^i/(eta_i*x_i)-h^j/(eta_j*x_j).
+For i,j>=3, f is constant on physical states123; these tail-tail edges
+therefore cancel identically from F123 and G123. A potential proof would
+combine F123 and the F12k inequalities with positive coefficients to
+eliminate all incident coordinate2-tail edges, while controlling the
+remaining tail-tail terms. The four-state dual certificate accomplishes
+this with one tail coordinate; no arbitrary-tail sign argument is yet
+established.
+
+The verifier's high_dimension_bound_reduction.tex proves that this
+arithmetic inequality, if valid, would imply a sharp advantage supremum
+1-3/n, matching the independently proved cloned family. Without the
+arithmetic lemma that sharp upper bound must remain explicitly conditional.

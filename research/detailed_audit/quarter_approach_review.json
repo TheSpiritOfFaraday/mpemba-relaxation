@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-13T02:50:02.419150+00:00",
+  "analytic_steps": [
+    "Exact negative overlap numerator equals -1+(4/5)d^beta-r y+epsilon x, denominator 1+d^beta+y+x.",
+    "On [0,1], d^beta=1+O(epsilon), r=-1/3+O(epsilon), and denominator >=1, giving uniform O(epsilon) error.",
+    "Differentiated high-state term contributes O(L epsilon); other errors remain O(epsilon), validating the separate derivative bound.",
+    "Full-premise sign theorem fixes b<0 below bath; amplitude derivative is -b derivative there.",
+    "Initial amplitude derivative is positive of order L; bath overlap derivative positive gives negative amplitude derivative approaching bath.",
+    "At most two stationary zeros counting multiplicity with opposite derivative endpoint signs implies exactly one simple interior maximum; a tangency in addition would require multiplicity at least three.",
+    "For each fixed positive beta the limiting leading ratio decreases strictly; uniform convergence excludes a maximizing beta bounded away from zero.",
+    "If L beta at the maximum remained bounded, x would stay bounded below and the positive order-L normalization derivative could not cancel; hence L beta tends infinity.",
+    "Exact leading derivative numerator after positive multiplier 15(2+y+x)^2 is x[(10L-5a)y-6L]-13ay.",
+    "At beta_m tending zero the x coefficient behaves like4L; derivative remainder O(L epsilon) produces an O(epsilon) absolute x correction.",
+    "Solve for x=13a/(4L)[1+O(beta_m+1/L)]; L epsilon is smaller than these algebraic scales.",
+    "Logarithm yields 2L beta_m=log(4L/(13a))+O(beta_m+1/L). Absorb beta_m to establish O(logL/L) before sharpening the remainder.",
+    "Taylor expansion of leading amplitude relative to2/45 has coefficients -13a/6 for beta and -1/3 for x, with quadratic mixed remainder.",
+    "Infinite-hot amplitude equals1/30+O(epsilon); reciprocal expansion gives gain coefficient13a/(16L) times[log(4L/(13a))+1].",
+    "Remainder O(logL^2/L^2) includes beta error, x relative error, and second-order Taylor terms; exponentially small epsilon is dominated.",
+    "Finite-hot plot beta_h=L^-2 has x_h=e^-2/L, so numerator differs from infinite-hot by O(1/L); leading supremum same, subleading curves differ.",
+    "Independent100-digit numerical differentiation and bisection reproduce five CSV maxima and their energy spans; residual table is diagnostic only."
+  ],
+  "step_count": 17,
+  "verification_script": "research/check_quarter_approach.py",
+  "scope": "Unnumbered large-energy expansion and quarter-plot maxima; other figures remain separately pending.",
+  "sources": {
+    "research/quarter_limit_family.tex": "5fa4a4276dae32230948dbb1ad290fafcf114e0b0c812d4847a9bb9037a07931",
+    "research/quarter_limit_plots.py": "68a458bb0fdbee727e6235f30672b0715fe2afe38fcf88fe80c3b132754fe7a6",
+    "research/check_quarter_approach.py": "53977a6d01cd764aecd9c65ae95f028466c441da7c025d271ccbfe8db380e399"
+  }
+}

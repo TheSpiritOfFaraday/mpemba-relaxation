@@ -1,0 +1,38 @@
+{
+  "scope": "Three bounded prose clarifications only; mathematical statements and all other source content preserved.",
+  "replacements": [
+    {
+      "before": "67,000 systems, on a strict candidate.",
+      "after": "67,000 systems, on a numerical candidate with a positive reversal score."
+    },
+    {
+      "before": "A completed 1200-second search evaluated 6,740,275,200 sampled derivatives in dimensions 4, 5, 6 and 8 and found none negative; this is search evidence, not a proof.",
+      "after": "A completed 1200-second search recorded 6,740,275,200 attempted derivative evaluations in dimensions 4, 5, 6 and 8. Its smallest retained normalized score was positive. The count includes points rejected by positivity or signal-size filters; spectral and bath-weight filters also restrict the sampled domain. Excluded points were not certified, and this finite search is not a proof."
+    },
+    {
+      "before": "A subsequent 3602-second targeted four-state optimizer made 66,396,528 objective calls and found no negative score.",
+      "after": "A subsequent 3602-second targeted four-state optimizer made 66,396,528 objective calls, including penalty returns for excluded inputs; no admissible negative score was recorded."
+    }
+  ],
+  "documents": {
+    "research_report.tex": {
+      "before_sha256": "f7069ff4e20f4b1e9fdabec7071eba1c41ba0b075c51faa8333e428d2e63b1ec",
+      "after_sha256": "3044a0fb078698ec3e5626e7cf9d7087fa2c0f0b2f92c9645ea3c2e21e109001",
+      "only_three_declared_prose_changes": true,
+      "numbered_statements_identical": 32
+    },
+    "focused_appendices.tex": {
+      "before_sha256": "4c615ff3c5fd252b93a8c82fc22e82798ffb4585d4652cec7e2249cb8dbbf961",
+      "after_sha256": "493e0240553df717ce644a547106dd275716b9ffb646e7f7817230714e14462f",
+      "only_three_declared_prose_changes": true,
+      "numbered_statements_identical": 32
+    }
+  },
+  "reviewed_technical_sha256": "13935e1690d44fd4fa467f2ee10a154db79cc76aa12b9358c3c3bd003ea656fb",
+  "evidence_sources": [
+    "research/cone_search.py",
+    "research/transient_heating_search.py",
+    "research/transient_heating_optimize.py"
+  ],
+  "original_pre_teaching_baseline_unchanged": true
+}

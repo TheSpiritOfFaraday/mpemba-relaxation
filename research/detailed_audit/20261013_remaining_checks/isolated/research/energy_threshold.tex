@@ -1,0 +1,134 @@
+\subsection{A sharp energy-and-bath threshold for the contrast family}\label{sec:energythreshold}
+The contrast theorem also determines exactly which energy/bath choices
+exclude ordinary cooling \emph{uniformly over the entire rate family}.
+Shift $E_1=0$, let $a=E_2>0$, and let
+$\mu=n^{-1}\sum_iE_i$ be the arithmetic mean energy, not the bath mean.
+
+\begin{theorem}[Uniform cooling threshold]\label{thm:energythreshold}
+Fix distinct ordered energies and a positive finite bath. The following are
+equivalent:
+\begin{enumerate}
+\item Every positive reversible generator satisfying
+$k_{ik}\leq k_{jk}$ for $i<j<k$ has no ordinary asymptotic cooling effect
+in weighted Euclidean distance.
+\item Either $\mu\leq a$, or
+\begin{equation}\label{eq:energythreshold}
+\beta_b\leq\beta_*:=\frac1a\log\frac{\mu}{\mu-a}.
+\end{equation}
+\end{enumerate}
+Under condition 2, absence is stronger: it holds at every time in weighted
+Euclidean distance, for asymptotic relative entropy at any slow multiplicity,
+and asymptotically in every fixed norm when the slow mode is simple. The
+same universal equivalence holds for the larger family in which the
+contrast matrix is Metzler. Failure of condition 2 does not by itself assert
+existence under the additional original $F$ inequalities.
+\end{theorem}
+\begin{proof}
+For cooling, each contrast amplitude $R_k=-g_k$ is strictly positive.
+With $\alpha_k=Q_k/q_{k+1}=\sum_{i\leq k}e^{\beta_b(E_{k+1}-E_i)}$,
+\[
+R_k=\frac{e^{-\beta E_{k+1}}}
+{\sqrt{\eta_k}Z}\left(\alpha_k-
+\sum_{i=1}^ke^{\beta(E_{k+1}-E_i)}\right),\qquad \beta<\beta_b.
+\]
+The logarithmic derivative of the bracket is negative and strictly
+decreasing, while $(\log Z)''=\operatorname{Var}_{\pi(\beta)}E>0$.
+Therefore $(\log R_k)''<0$: every cooling contrast amplitude is strictly
+log-concave. It follows that $g_k'(0)\geq0$ implies $g_k'(\beta)>0$ for
+every $0<\beta<\beta_b$, including the equality case at $0$.
+
+Direct differentiation gives
+\begin{equation}\label{eq:contrastD0}
+n^2\sqrt{\eta_k}\,g_k'(0)=
+n\sum_{i=1}^k\left[
+e^{\beta_b(E_{k+1}-E_i)}(E_{k+1}-\mu)+(\mu-E_i)\right].
+\end{equation}
+For $k=1$ this has the sign of
+$\mu-e^{\beta_ba}(\mu-a)$. It is nonnegative precisely under condition 2.
+We show that this one condition makes every other expression nonnegative.
+Put $y=E_{k+1}$. If $y\geq\mu$, the sum equals
+$\alpha_k(y-\mu)+k\mu-\sum_{i\leq k}E_i>0$, because the mean of a proper
+ordered prefix is below the full arithmetic mean.
+If $y<\mu$, necessarily $a<\mu$. For every $i\leq k$,
+\[
+\frac{\log(\mu-E_i)-\log(\mu-y)}{y-E_i}
+=\frac1{y-E_i}\int_{E_i}^{y}\frac{dt}{\mu-t}
+\geq\frac1a\int_0^a\frac{dt}{\mu-t}=\beta_*.
+\]
+The inequality holds because the integrand increases: for $i=1$, the
+interval starts at zero and extends at least to $a$; for $i>1$ its entire
+interval starts at or above $a$. Thus $\beta_b\leq\beta_*$ implies
+$e^{\beta_b(y-E_i)}\leq(\mu-E_i)/(\mu-y)$, making each summand in
+\eqref{eq:contrastD0} nonnegative. Consequently all $g_k$ strictly increase
+throughout cooling. Their negatives are ordered componentwise for two
+cooling preparations, and the positive contrast semigroup gives the same
+finite-time norm ordering as in Theorem~\ref{thm:orderedk}. The spectral
+projection argument gives the asymptotic conclusions.
+
+Conversely, suppose $a<\mu$ and $\beta_b>\beta_*$. The first contrast has
+$g_1'(0)<0$, so $|g_1|$ initially increases with inverse temperature and
+gives finite positive cooling witnesses. Realize $h^{(1)}$ as the simple
+slow mode with the established rank-one construction
+\[
+M=-I+q\mathbf1^\top+\epsilon
+\frac{D h^{(1)}(h^{(1)})^\top}{\eta_1}
+\]
+for sufficiently small $0<\epsilon<1$. Positivity and the simple slow
+eigenvalue follow as before. Its reduced conductances are
+$k_{ij}=1+\epsilon h_i^{(1)}h_j^{(1)}/\eta_1$. For every $i<j<k$,
+$h_k^{(1)}=0$, so $k_{ik}=k_{jk}=1$. Thus all $G$ inequalities hold
+at equality. Its contrast matrix is diagonal, so it also belongs to the
+larger family. This proves sharpness of the uniform threshold.
+\end{proof}
+
+For four equally spaced energies $(0,a,2a,3a)$, the threshold is
+$\beta_ba\leq\log3$. Throughout that range, failure of all triplet tests
+really does exclude ordinary cooling as well as the other effects covered
+above. Outside that range, the larger $G$-only family permits cooling, but
+the original $F$-constrained equal-spacing question is not settled by the
+sharpness example. For three equally spaced energies, $\mu=a$, so the
+$G$-only family has no cooling effect at any finite positive bath temperature.
+
+\begin{corollary}[A spacing-independent energy-span exclusion]\label{cor:span}
+For $n\geq3$, write $c=E_n-E_1$. If
+\[
+\beta_b c\leq \frac{n}{n-2},
+\]
+every positive reversible generator with a Metzler contrast matrix has no
+finite-time cooling reversal in weighted Euclidean distance. The asymptotic
+conclusions of Theorem~\ref{thm:energythreshold} hold as well. In particular,
+these exclusions apply under failure of all original triplet predicates.
+The constant $n/(n-2)$ is optimal uniformly over energy spacings in the
+larger $G$-only family; optimality under the additional $F$ constraints is
+not asserted.
+\end{corollary}
+\begin{proof}
+Shift $E_1=0$, set $r=a/c$, and put $d=n-2$. The case $\mu\leq a$ is
+already covered. Otherwise $0<r<d/(d+1)$ and
+$\mu\leq c(d+r)/n$. The threshold decreases as $\mu$ increases, so
+\[
+c\beta_*\geq
+\frac{\log(1+r/d)-\log(1-(d+1)r/d)}{r}
+>\frac nd.
+\]
+The strict inequality follows by expanding the logarithms: the constant
+term is $n/d$, and the coefficient of $r^{k-1}$ for every $k\geq2$ is
+$[(-1)^{k+1}+(d+1)^k]/(k d^k)>0$. Both series converge on the stated
+interval. This proves absence, including equality at the advertised cutoff.
+
+For sharpness, let $E_2/c\to0$ and let the remaining $n-2$ distinct energies
+approach $c$ from below (with $E_n=c$). Then $c\beta_*\to n/(n-2)$.
+Any fixed larger value of $\beta_b c$ therefore violates the threshold for
+some strictly ordered finite energy vector. The first-contrast construction
+in the preceding theorem realizes ordinary cooling with all $G=0$.
+\end{proof}
+
+For four states, the spacing-independent exclusion is $\beta_b c\leq2$.
+This also explains a limitation of the numerical evidence for the original
+conjecture. The March paper's Fig.~2 samples $\beta_bE_i$ between zero and
+one, hence $\beta_b c\leq1$. Every triplet-failing sample in that box lies
+inside the proved exclusion region, for each of the tested state counts
+$n=4,\ldots,7$. Its absence of observed counterexamples in that box is thus
+consistent with a stronger restricted theorem, while it cannot justify the
+unrestricted inference. The September sampling box with span up to five is
+not covered by this corollary.

@@ -1,0 +1,126 @@
+{
+  "requirements_checked": true,
+  "pages": {
+    "focused_paper": 10,
+    "research_report": 126,
+    "focused_appendices": 81
+  },
+  "requirements": [
+    {
+      "requirement": "Physically motivated reversible model with shared geometry",
+      "evidence": [
+        "research/physical_model_design.txt",
+        "research/thermal_collision_realization.tex",
+        "research/thermal_collision_audit.json"
+      ],
+      "finding": "Fixed two-basin geometry, symmetric saddles, and exact energy-conserving canonical collision realization; idealized stochastic assumptions explicit."
+    },
+    {
+      "requirement": "Moderate energies, barriers, rates and temperatures across the robustness domain",
+      "evidence": [
+        "research/physical_box_ranges_recheck.json"
+      ],
+      "finding": {
+        "scope": "entire independent +/-5% parameter box",
+        "energy_span_upper": 3.8602031085913384,
+        "min_adjacent_gap_lower": 0.1105351118367327,
+        "barrier_excess_range": [
+          2.0083607241871397,
+          5.922084445418439
+        ],
+        "rate_ratio_upper": 993.7522347006822,
+        "preparation_ranges": [
+          [
+            3.7259373528566972,
+            4.012878126841613
+          ],
+          [
+            9.048480903744657,
+            9.89568941992831
+          ]
+        ],
+        "performance_certified": false
+      }
+    },
+    {
+      "requirement": "Finite-time distance advantage at resolved distances",
+      "evidence": [
+        "research/robust_finite_time_certificate/certificate.json"
+      ],
+      "finding": "Mode 1 covers full +/-5% box and u in [0.4,0.8]: Dh<=0.9Dc, Dc>=0.001. Interval length0.4tau exceeds0.25tau."
+    },
+    {
+      "requirement": "Time savings at every threshold and all simultaneous +/-5% perturbations",
+      "evidence": [
+        "research/physical_robustness_certificate.tex",
+        "research/robust_finite_time_certificate/certificate.json"
+      ],
+      "finding": "Modes2,3,6 bracket all roots; mode4 proves cold concavity; mode5 proves hot-root monotonicity; modes7,8 prove both sufficient endpoint cases. Analytic reduction yields th<=0.95tc for every threshold in[.001,.01]."
+    },
+    {
+      "requirement": "Independent verification, explicit numerical error and reproducibility",
+      "evidence": [
+        "research/temperature_reduction_independent_audit.json",
+        "research/threshold_constraint_logic_audit.json",
+        "research/run_robust_finite_time_certificate.py",
+        "RUNME.txt"
+      ],
+      "finding": "Fresh source-bound coverage replay, 70-digit direct-exponential and derivative cross-check, false-claim controls, and separate nominal uniformization certificate. Reviewable interval proof, not Lean or external peer review."
+    },
+    {
+      "requirement": "Report methods, metrics, mechanism, physical limits and search history",
+      "evidence": [
+        "research_report.tex",
+        "output/pdf/research_report.pdf",
+        "output/figures/physical_finite_time.csv",
+        "research/activated_intermediate_study.tex"
+      ],
+      "finding": "KL distance versus threshold time, absolute and normalized clocks, alternative-distance diagnostics, rejected candidates, exact stochastic bath and separate coarse-graining sensitivity recorded. No material, experimental, global-optimum or new-triplet-counterexample claim."
+    },
+    {
+      "requirement": "Preserve focused paper and archived original; retain appendices",
+      "evidence": [
+        "focused_paper.tex",
+        "output/pdf/focused_paper.pdf",
+        "research/archive/research_report_before_focused_paper.tex",
+        "research/archive/research_report_before_focused_paper.pdf",
+        "output/pdf/focused_appendices.pdf"
+      ],
+      "finding": "Preserved baseline hashes or the verified equation-15 typography revision match; focused paper remains10 pages. Updated report and appendices compile and were rendered for separate visual inspection."
+    }
+  ],
+  "focused_typography_revision": {
+    "source_before_sha256": "f49ed22fa5394bdf1f1bb455dbdc8ed1b0c5643f7c334b17ef569c025293bb1e",
+    "pdf_before_sha256": "d32fbbc7aaf947f764dccc8ae1cfe204568812178ba06bbf31e43f4d83105c75",
+    "source_after_sha256": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "pdf_after_sha256": "338083e5d49de4466111e307586d41ca530e2fe2893e48c454c16bdf27e652fb",
+    "changed_pages": [
+      6
+    ],
+    "change": "Restore one missing LaTeX backslash in equation 15.",
+    "visual_check": "This function checks extracted text only. Hash-bound visual inspection is recorded separately in browser_and_pdf_review.json."
+  },
+  "artifact_sha256": {
+    "RUNME.txt": "13705be2bb352de3c8c605baf4a42e1537521cbada77d4da341519c542281b5d",
+    "focused_paper.tex": "9e7d07d994fe98db3ac0bf912ebb19a7121a078f71a09c2141ef42cc06eadcdb",
+    "output/figures/physical_finite_time.csv": "95323814942420428a04b01d22a5a95788cfdeb52d94100a9eb39624dca75742",
+    "output/pdf/focused_appendices.pdf": "e927c97a8c2cc205c61e0c45ec0eaf4f35fa248f393d1178aac73e472fc3ea37",
+    "output/pdf/focused_paper.pdf": "338083e5d49de4466111e307586d41ca530e2fe2893e48c454c16bdf27e652fb",
+    "output/pdf/research_report.pdf": "6cae39aa09055a00297c52058078dfb85c833903a4b0f64311c7fe21b1770bc4",
+    "research/activated_intermediate_study.tex": "8cf6c098b07c1cc29ab6b283a71db9149a25b689384e0a6069b8188c8569d008",
+    "research/archive/research_report_before_focused_paper.pdf": "d8052d5049348c30197b3d2092cc8a5c895bf2326ee1d53dbdb4a30d2617719c",
+    "research/archive/research_report_before_focused_paper.tex": "346bceb86c912d45af05a5dbcb0216510988adb140306ca873bac5c701a29569",
+    "research/physical_box_ranges_recheck.json": "2aca94ff6fd0292b6c58d6a4ee30425cd8c84d503e117922551793d2afdd6ec2",
+    "research/physical_model_design.txt": "c6bdb3a51c843020cb744b09c1fec71bf8abb4b28c3a32288511cde976f72e54",
+    "research/physical_robustness_certificate.tex": "aca001f090535db244f8074390eae65628bd3cddc27b0d090e7f1cb991071b14",
+    "research/robust_finite_time_certificate/certificate.json": "adce32d8b97e88451fa363faf03ac2af9e29cda4e75cf31549e10a4ec217d9f3",
+    "research/run_robust_finite_time_certificate.py": "9f15b8eeabda83a2c9143ca7aad308a1312fb7774c1c70b963a763d215802177",
+    "research/temperature_reduction_independent_audit.json": "49d1d58fa3538672e0a652406d8a3b5e2efc7a8fc1ae15a4ea87b5dd4d5f342f",
+    "research/thermal_collision_audit.json": "ac6fa43aa2fceeedf9bfc31d3989e9c2bde385f26038700b6d948a8e7447193b",
+    "research/thermal_collision_realization.tex": "925f01c58ee6c13ed961a84af5923f02e7b092ee486c1256658b06ead9e7df0a",
+    "research/threshold_constraint_logic_audit.json": "119005f86f5c50e22d82be938e6d194bb985883d7d49994c549e62b051423214",
+    "research_report.tex": "3044a0fb078698ec3e5626e7cf9d7087fa2c0f0b2f92c9645ea3c2e21e109001"
+  },
+  "scope": "Research goal achieved for an idealized reversible stochastic rate model at the predeclared quantitative benchmarks. No experimentally demonstrated cooling, preparation-cost advantage, universal metric claim, or material validation.",
+  "visual_review": "Recorded separately by the authoring agent; this script checks text/artifact consistency, not page pixels."
+}

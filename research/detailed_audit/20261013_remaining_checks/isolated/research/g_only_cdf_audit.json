@@ -1,0 +1,7 @@
+{
+  "seed": 111030,
+  "count": 1000000,
+  "bad": [],
+  "elapsed_seconds": 4.0055460929870605,
+  "scope": "G-only numerical check, no proof"
+}

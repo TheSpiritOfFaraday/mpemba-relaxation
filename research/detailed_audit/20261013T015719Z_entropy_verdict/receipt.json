@@ -1,0 +1,21 @@
+{
+  "group": "entropy audit explicit failure verdict",
+  "complete": true,
+  "all_passed": true,
+  "source_sha256": {
+    "research/finite_time_entropy_independent_audit.py": "d5d20c1456b2c67262d37c08e9e7f5310ea9d035efb53e0946ac6ac8de7edbf2",
+    "research/general_n_arithmetic_search.py": "9d49665252f2070a2fba651dc6ad27b3551011e86750a348951f586d4055497d"
+  },
+  "checks": [
+    {
+      "script": "research/finite_time_entropy_independent_audit.py",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 1.526345083,
+      "log": "research/detailed_audit/20261013T015719Z_entropy_verdict/finite_time_entropy_independent_audit.log",
+      "log_sha256": "42e63caab4cf3eb17fae7ae354ddf1f358a1f5bdde54c1754130a3ed04aed546"
+    }
+  ],
+  "result_sha256": "4725e07a872ce864c60c2f02c6c2620117d2d0ccf8e7096bfcd8a2fcbcead388",
+  "scope": "Fixed-seed floating-point sampling with declared tolerances and tiny-value exclusions; analytic proofs are separate."
+}

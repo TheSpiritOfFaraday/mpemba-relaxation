@@ -1,0 +1,19 @@
+Wrote physical finite-time figure, inline TeX and inspectable CSV data.
+Revised standalone LaTeX written, including inline-data figures and the physical-model study.
+{"source": "research_report.tex", "retained_labels": 83, "all_original_labels_retained": true, "added_appendix": "Explicit rates for the formal sharpness family", "scope": "All technical report sections retained from Problem and literature status onward."}
+{
+  "precision_digits": 70,
+  "generator": "Appendix B rational companion",
+  "spectral_vs_expm_max_absolute_error": "1.358351861824006855126367893633168767102379679720870728437392233490325e-71",
+  "initial_D_hot": "24.65273743160048612622492956602548476472523383787039427501540195568332",
+  "initial_D_cold": "22.81386119701701865842393392608153489655440021233868800033175362233733",
+  "amplitude_advantage_percent": "0.108792798789613697127436971203004672950421662971749294196981045488976",
+  "asymptotic_distance_advantage_percent": "0.2174672388485426205396466758857803421638121572209812750175925206507219",
+  "panel_B_source": "output/figures/mechanism_onset.csv",
+  "panel_C_source": "output/figures/quarter_gain_data.csv",
+  "panel_C_hot_beta": "1/log(1/epsilon)^2; cold at numerical overlap maximum",
+  "scope": "Numerical illustration only. No rigorous finite crossing time is inferred."
+}
+Built output/pdf/focused_paper.pdf
+Built output/pdf/focused_appendices.pdf
+Built output/pdf/research_report.pdf

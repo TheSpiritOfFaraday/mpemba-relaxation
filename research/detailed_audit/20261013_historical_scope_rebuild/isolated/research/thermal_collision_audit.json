@@ -1,0 +1,262 @@
+{
+  "parameters": [
+    0.8308942048583045,
+    0.11635274930182392,
+    2.729136958784003,
+    2.11406392019699,
+    2.822657578561883,
+    5.640080424208037,
+    3.8694077398491555,
+    9.472085161836484
+  ],
+  "algebra": {
+    "symbolic_acceptance": "exp(-beta*(d + h))",
+    "exact_energy_and_involution_checks": 60,
+    "binary_Hamiltonian": {
+      "epsilon_x": "1661788409716609/2000000000000000",
+      "epsilon_y": "183819195647206571/50000000000000000",
+      "J": "-1424012465456923/400000000000000"
+    },
+    "theorem": "For every allowed symmetric saddle and beta>0, a_ij=nu0 exp[-beta(B_ij-E_j)].",
+    "bath_assumptions": [
+      "independent fresh canonical energy on each contact",
+      "constant density of bath energy states",
+      "independent Poisson pair-contact clocks",
+      "instantaneous idealized energy-conserving contact map"
+    ]
+  },
+  "event_audit": {
+    "trajectories_per_preparation": 500000,
+    "seed": 12102043,
+    "clock": "Poisson contacts including rejected-gate waiting time by exact thinning",
+    "fixed_time_step": false,
+    "eligible_contacts": 40825433,
+    "accepted_transitions": 7273548,
+    "maximum_probability_error": 0.0011776853825404554,
+    "all_diagnostic_checks_passed": true,
+    "records": [
+      {
+        "preparation": "cold",
+        "time": 0.0,
+        "empirical_probability": [
+          0.335194,
+          0.27195,
+          0.262576,
+          0.13028
+        ],
+        "direct_exponential_probability": [
+          0.33598649501130323,
+          0.2710590674356743,
+          0.26302967181059683,
+          0.12992476574242567
+        ],
+        "maximum_probability_error": 0.0008909325643257082,
+        "empirical_KL": 0.23103311914740754,
+        "exact_KL": 0.22983110207296265,
+        "empirical_mean_energy": 0.9536452914251272,
+        "exact_mean_energy": 0.9520287824514126,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "cold",
+        "time": 30.0,
+        "empirical_probability": [
+          0.464354,
+          0.274466,
+          0.246862,
+          0.014318
+        ],
+        "direct_exponential_probability": [
+          0.464785966790272,
+          0.27522737889777493,
+          0.24568431461745954,
+          0.014302339694493672
+        ],
+        "maximum_probability_error": 0.0011776853825404554,
+        "empirical_KL": 0.011842798955843547,
+        "exact_KL": 0.011704588825482485,
+        "empirical_mean_energy": 0.5145299512940511,
+        "exact_mean_energy": 0.513989444421108,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "cold",
+        "time": 60.0,
+        "empirical_probability": [
+          0.480502,
+          0.267564,
+          0.23956,
+          0.012374
+        ],
+        "direct_exponential_probability": [
+          0.4806147912783562,
+          0.26825534556367436,
+          0.23880091602693088,
+          0.012328947131038714
+        ],
+        "maximum_probability_error": 0.000759083973069119,
+        "empirical_KL": 0.007663004509945195,
+        "exact_KL": 0.0076433979797835535,
+        "empirical_mean_energy": 0.49473143190607843,
+        "exact_mean_energy": 0.49442119530436723,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "cold",
+        "time": 120.0,
+        "empirical_probability": [
+          0.500788,
+          0.257886,
+          0.22877,
+          0.012556
+        ],
+        "direct_exponential_probability": [
+          0.5008210491039506,
+          0.25734957705172296,
+          0.2290747745150189,
+          0.01275459932930768
+        ],
+        "maximum_probability_error": 0.0005364229482770488,
+        "empirical_KL": 0.003427836057188989,
+        "exact_KL": 0.0033884650468096753,
+        "empirical_mean_energy": 0.4771383450282278,
+        "exact_mean_energy": 0.47771145841959695,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "cold",
+        "time": 210.0,
+        "empirical_probability": [
+          0.519622,
+          0.247374,
+          0.219626,
+          0.013378
+        ],
+        "direct_exponential_probability": [
+          0.5191495518902962,
+          0.2474239777082909,
+          0.22024295827038287,
+          0.013183512131030112
+        ],
+        "maximum_probability_error": 0.0006169582703828835,
+        "empirical_KL": 0.0009430061377334247,
+        "exact_KL": 0.000999761950598383,
+        "empirical_mean_energy": 0.46276434657435717,
+        "exact_mean_energy": 0.46267527253226853,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "hot",
+        "time": 0.0,
+        "empirical_probability": [
+          0.28609,
+          0.261986,
+          0.258206,
+          0.193718
+        ],
+        "direct_exponential_probability": [
+          0.28578155632337676,
+          0.26178077695465507,
+          0.2585847961997518,
+          0.19385287052221645
+        ],
+        "maximum_probability_error": 0.00037879619975178525,
+        "empirical_KL": 0.41245824352547555,
+        "exact_KL": 0.4130695769389686,
+        "empirical_mean_energy": 1.174449235047589,
+        "exact_mean_energy": 1.1751333657731777,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "hot",
+        "time": 30.0,
+        "empirical_probability": [
+          0.472306,
+          0.271084,
+          0.240706,
+          0.015904
+        ],
+        "direct_exponential_probability": [
+          0.47279972993063357,
+          0.27013537916984615,
+          0.24128889037916834,
+          0.015776000520351982
+        ],
+        "maximum_probability_error": 0.0009486208301538457,
+        "empirical_KL": 0.00943289371722034,
+        "exact_KL": 0.009297225877301899,
+        "empirical_mean_energy": 0.5117193597293399,
+        "exact_mean_energy": 0.5110127220873905,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "hot",
+        "time": 60.0,
+        "empirical_probability": [
+          0.488086,
+          0.264544,
+          0.2348,
+          0.01257
+        ],
+        "direct_exponential_probability": [
+          0.4881185713212733,
+          0.26417591011029706,
+          0.23517555678005236,
+          0.012529961788377493
+        ],
+        "maximum_probability_error": 0.00037555678005235515,
+        "empirical_KL": 0.0058551850062998866,
+        "exact_KL": 0.005855651380936156,
+        "empirical_mean_energy": 0.48843380715254114,
+        "exact_mean_energy": 0.4883365125752268,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "hot",
+        "time": 120.0,
+        "empirical_probability": [
+          0.506066,
+          0.255014,
+          0.22603,
+          0.01289
+        ],
+        "direct_exponential_probability": [
+          0.5058292602557605,
+          0.2546374218371421,
+          0.22666150441885757,
+          0.01287181348824016
+        ],
+        "maximum_probability_error": 0.0006315044188575647,
+        "empirical_KL": 0.002560233621001884,
+        "exact_KL": 0.002595738395677862,
+        "empirical_mean_energy": 0.47338447244439935,
+        "exact_mean_energy": 0.4736029058692396,
+        "bath_mean_energy": 0.4448344094686763
+      },
+      {
+        "preparation": "hot",
+        "time": 210.0,
+        "empirical_probability": [
+          0.521474,
+          0.245236,
+          0.219938,
+          0.013352
+        ],
+        "direct_exponential_probability": [
+          0.5218672884816438,
+          0.2459522141706237,
+          0.21893338361407993,
+          0.013247113733652588
+        ],
+        "maximum_probability_error": 0.0010046163859200596,
+        "empirical_KL": 0.0007926026637019239,
+        "exact_KL": 0.000765750034820196,
+        "empirical_mean_energy": 0.4611878498323315,
+        "exact_mean_energy": 0.4604457260421896,
+        "bath_mean_energy": 0.4448344094686763
+      }
+    ],
+    "simulation_is_not_a_robustness_certificate": true
+  },
+  "scope": "Exact stochastic collision realization of the same four-state rates, not an autonomous Hamiltonian or identified material."
+}

@@ -1,0 +1,61 @@
+{
+  "group": "remaining exact and physical completion checks",
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "script": "research/audit_physical_goal_completion.py",
+      "command": [
+        "python3",
+        "research/audit_physical_goal_completion.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 4.598477084,
+      "source_sha256": "b5616152d43e1f22909eddfd5e1e0e27d3d10d089505c9c784deed715f4902ed",
+      "log": "research/detailed_audit/20261013_completion_checks/0.log",
+      "log_sha256": "b8568cf45cb2c5e2879645d7a231157734aa07259d60840c46a364636c9a77c8"
+    },
+    {
+      "script": "research/kl_contrast_gradient_obstruction.py",
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "research/kl_contrast_gradient_obstruction.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.01731870800000035,
+      "source_sha256": "9fbd595400685b21e1e1c8c297f1ba8a65968ea85e1b4f74579dba078e27cc1f",
+      "log": "research/detailed_audit/20261013_completion_checks/1.log",
+      "log_sha256": "70f612283e6b73c7e644c70405b7a83489a720095af9709126e2f9690474be1d"
+    },
+    {
+      "script": "research/check_entropy_reductions.py",
+      "command": [
+        "python3",
+        "research/check_entropy_reductions.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.25007749999999973,
+      "source_sha256": "9299f13d5d3c80843d8531727a7d58eb2e09a6b060d00306cfac59522a63323a",
+      "log": "research/detailed_audit/20261013_completion_checks/2.log",
+      "log_sha256": "def16d3cf3e65c5b500f1e69db8e8e5c225d2dd152eede0d260a682598b2c5d6"
+    },
+    {
+      "script": "research/build_freshman_guide.py",
+      "command": [
+        "python3",
+        "research/build_freshman_guide.py"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.613452958,
+      "source_sha256": "0f18b7e6980017861cc28d33597c8326ce9d8f2ad2968c958bad5b7bf8fce3c7",
+      "log": "research/detailed_audit/20261013_completion_checks/guide_build.log",
+      "log_sha256": "8cf84f8291d6495ca7e8c0162d27930c96a745f6c6d38dafb868825a5fc4c4ea"
+    }
+  ]
+}

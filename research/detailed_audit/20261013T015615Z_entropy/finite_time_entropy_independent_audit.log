@@ -1,0 +1,470 @@
+general_G 50
+general_G 100
+general_G 150
+general_G 200
+tridiagonal 50
+tridiagonal 100
+tridiagonal 150
+tridiagonal 200
+{
+  "seed": 202610112253,
+  "general_G": {
+    "generators": 240,
+    "dimensions": {
+      "3": 40,
+      "4": 40,
+      "5": 40,
+      "6": 40,
+      "7": 40,
+      "8": 40
+    },
+    "ratio_order_failure_count": 2235,
+    "minimum_generator_offdiag": 3.258565465841336e-10,
+    "largest_column_sum_residual": 1.1925711656812675e-13,
+    "expm_spotchecks": [
+      {
+        "case": 0,
+        "relative_derivative_error": 2.3106809069237e-15,
+        "finite_difference_relative_error": 6.702401559563516e-08,
+        "max_probability_error": 1.1102230246251565e-15
+      },
+      {
+        "case": 20,
+        "relative_derivative_error": 8.181252463124217e-15,
+        "finite_difference_relative_error": 3.5798397333355146e-10,
+        "max_probability_error": 5.551115123125783e-16
+      },
+      {
+        "case": 40,
+        "relative_derivative_error": 4.871692648640222e-16,
+        "finite_difference_relative_error": 4.709324004353692e-09,
+        "max_probability_error": 8.326672684688674e-17
+      },
+      {
+        "case": 60,
+        "relative_derivative_error": 2.238317665288246e-15,
+        "finite_difference_relative_error": 6.600438177088962e-11,
+        "max_probability_error": 7.771561172376096e-16
+      },
+      {
+        "case": 80,
+        "relative_derivative_error": 3.520631983471623e-15,
+        "finite_difference_relative_error": 1.2707382996021267e-08,
+        "max_probability_error": 1.3877787807814457e-16
+      },
+      {
+        "case": 100,
+        "relative_derivative_error": 5.244312381425377e-14,
+        "finite_difference_relative_error": 9.060121187019533e-08,
+        "max_probability_error": 1.9984014443252818e-15
+      },
+      {
+        "case": 120,
+        "relative_derivative_error": 1.0867692107451772e-15,
+        "finite_difference_relative_error": 4.2907649766475027e-07,
+        "max_probability_error": 3.552713678800501e-15
+      },
+      {
+        "case": 140,
+        "relative_derivative_error": 2.4210977568514485e-15,
+        "finite_difference_relative_error": 6.565662022243456e-11,
+        "max_probability_error": 1.1102230246251565e-16
+      },
+      {
+        "case": 160,
+        "relative_derivative_error": 1.3308796034617744e-13,
+        "finite_difference_relative_error": 1.5819065783504447e-09,
+        "max_probability_error": 3.3306690738754696e-15
+      },
+      {
+        "case": 180,
+        "relative_derivative_error": 2.827963694148298e-16,
+        "finite_difference_relative_error": 4.6031623619429385e-08,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 200,
+        "relative_derivative_error": 1.325094751914597e-16,
+        "finite_difference_relative_error": 1.4320652784239811e-09,
+        "max_probability_error": 1.1102230246251565e-16
+      },
+      {
+        "case": 220,
+        "relative_derivative_error": 1.6683699342709084e-13,
+        "finite_difference_relative_error": 8.556369199348338e-09,
+        "max_probability_error": 1.915134717478395e-15
+      }
+    ],
+    "generators_also_satisfying_G": 240,
+    "KL": {
+      "evaluations": 20160,
+      "accepted": 20160,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.9948480451176689,
+      "worst": {
+        "case": 122,
+        "n": 5,
+        "z": 0.8944271909999159,
+        "side": -1,
+        "tau": 0,
+        "beta": 0.23556918192568344,
+        "physical_time": 0.0
+      }
+    },
+    "first_ratio_order_failure": {
+      "case": 2,
+      "n": 5,
+      "z": 0.0001,
+      "side": 1,
+      "tau": 0.1,
+      "beta": 1.000008020527918,
+      "physical_time": 18.60467715600395,
+      "q": [
+        0.9997929451336071,
+        8.81552026626101e-05,
+        8.331254960259886e-05,
+        3.1740103985001204e-05,
+        3.847010142741405e-06
+      ],
+      "E": [
+        0.0,
+        9.336204553994037,
+        9.392704288340282,
+        10.35772249041616,
+        12.468007221359652
+      ],
+      "M": [
+        [
+          -4.991697012625393e-05,
+          0.48707685500273723,
+          0.0038467697524852203,
+          0.004994823459474127,
+          1.6868308262926033
+        ],
+        [
+          4.2947251302413416e-05,
+          -0.4941185385627143,
+          0.007442951683824802,
+          1.4390243737996807e-06,
+          0.00016222603032654468
+        ],
+        [
+          3.205505673686005e-07,
+          0.0070340860507306655,
+          -0.01134211279861039,
+          1.1166960422551057e-05,
+          0.0010424764522536762
+        ],
+        [
+          1.5856904848358007e-07,
+          5.18117840828531e-07,
+          4.254346874496649e-06,
+          -0.0053754926803795495,
+          0.0030367389098779596
+        ],
+        [
+          6.49059920798833e-06,
+          7.07939140553516e-06,
+          4.813701542587129e-05,
+          0.00036806323610907176,
+          -1.6910722676850614
+        ]
+      ],
+      "A": [
+        [
+          -91.9370336750129,
+          1.346101277466366,
+          0.00011148337132368204,
+          0.0005243583430639094
+        ],
+        [
+          1.346101277466366,
+          -2.110337771661695,
+          0.0012349095503462893,
+          0.036055832033613955
+        ],
+        [
+          0.00011148337132368204,
+          0.0012349095503462893,
+          -1.0001204942470265,
+          0.19321903757683256
+        ],
+        [
+          0.0005243583430639094,
+          0.036055832033613955,
+          0.19321903757683256,
+          -314.61974622287545
+        ]
+      ],
+      "ratios": [
+        124675.37844031876,
+        124675.37823194031,
+        124674.89514070826,
+        124674.9918842913
+      ]
+    }
+  },
+  "tridiagonal": {
+    "generators": 240,
+    "dimensions": {
+      "3": 40,
+      "4": 40,
+      "5": 40,
+      "6": 40,
+      "7": 40,
+      "8": 40
+    },
+    "ratio_order_failure_count": 0,
+    "minimum_generator_offdiag": 3.2241864380763707e-07,
+    "largest_column_sum_residual": 1.595434895307335e-11,
+    "expm_spotchecks": [
+      {
+        "case": 0,
+        "relative_derivative_error": 1.1372990225944487e-15,
+        "finite_difference_relative_error": 2.7740078286982995e-06,
+        "max_probability_error": 1.1102230246251565e-16
+      },
+      {
+        "case": 20,
+        "relative_derivative_error": 2.227216391111808e-15,
+        "finite_difference_relative_error": 8.418765623175909e-09,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 40,
+        "relative_derivative_error": 1.0064033625533902e-15,
+        "finite_difference_relative_error": 8.036733067383782e-08,
+        "max_probability_error": 5.551115123125783e-17
+      },
+      {
+        "case": 60,
+        "relative_derivative_error": 9.67453728136128e-16,
+        "finite_difference_relative_error": 9.424302593149404e-09,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 80,
+        "relative_derivative_error": 1.12898701652043e-15,
+        "finite_difference_relative_error": 2.6652742900539086e-08,
+        "max_probability_error": 1.1102230246251565e-16
+      },
+      {
+        "case": 100,
+        "relative_derivative_error": 8.041143184172685e-16,
+        "finite_difference_relative_error": 3.1470699810947416e-09,
+        "max_probability_error": 4.440892098500626e-16
+      },
+      {
+        "case": 120,
+        "relative_derivative_error": 1.0643781632796349e-15,
+        "finite_difference_relative_error": 4.105319551958533e-06,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 140,
+        "relative_derivative_error": 5.087974269585777e-16,
+        "finite_difference_relative_error": 3.996884899338022e-10,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 160,
+        "relative_derivative_error": 8.4237081003724525e-16,
+        "finite_difference_relative_error": 2.3059534493467223e-09,
+        "max_probability_error": 2.220446049250313e-16
+      },
+      {
+        "case": 180,
+        "relative_derivative_error": 1.297941299995094e-15,
+        "finite_difference_relative_error": 5.612157484341867e-09,
+        "max_probability_error": 2.3852447794681098e-18
+      },
+      {
+        "case": 200,
+        "relative_derivative_error": 6.548155177184418e-16,
+        "finite_difference_relative_error": 1.892412480769512e-09,
+        "max_probability_error": 5.551115123125783e-17
+      },
+      {
+        "case": 220,
+        "relative_derivative_error": 1.939283755852876e-16,
+        "finite_difference_relative_error": 3.897755366971287e-09,
+        "max_probability_error": 1.1102230246251565e-16
+      }
+    ],
+    "generators_also_satisfying_G": 240,
+    "KL": {
+      "evaluations": 10080,
+      "accepted": 10080,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.38453131117482875,
+      "worst": {
+        "case": 165,
+        "n": 6,
+        "z": 8,
+        "side": 1,
+        "tau": 0.01,
+        "beta": 7.451658532562207,
+        "physical_time": 0.002748795685527799
+      }
+    },
+    "chi2": {
+      "evaluations": 10080,
+      "accepted": 10080,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.23229309993020555,
+      "worst": {
+        "case": 165,
+        "n": 6,
+        "z": 8,
+        "side": 1,
+        "tau": 0,
+        "beta": 7.451658532562207,
+        "physical_time": 0.0
+      }
+    },
+    "reverse_KL": {
+      "evaluations": 10080,
+      "accepted": 10080,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.7315715584081551,
+      "worst": {
+        "case": 48,
+        "n": 3,
+        "z": 8,
+        "side": 1,
+        "tau": 0.1,
+        "beta": 6.959870656066307,
+        "physical_time": 0.058853987213650594
+      }
+    },
+    "Hellinger": {
+      "evaluations": 10080,
+      "accepted": 10080,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.6235951944729429,
+      "worst": {
+        "case": 48,
+        "n": 3,
+        "z": 8,
+        "side": 1,
+        "tau": 0.1,
+        "beta": 6.959870656066307,
+        "physical_time": 0.058853987213650594
+      }
+    },
+    "quartic": {
+      "evaluations": 10080,
+      "accepted": 9760,
+      "skipped_tiny": 320,
+      "negative": 0,
+      "min_relative": 0.4933674909476849,
+      "worst": {
+        "case": 165,
+        "n": 6,
+        "z": 8,
+        "side": 1,
+        "tau": 0,
+        "beta": 7.451658532562207,
+        "physical_time": 0.0
+      }
+    },
+    "total_variation": {
+      "evaluations": 10080,
+      "accepted": 10080,
+      "skipped_tiny": 0,
+      "negative": 0,
+      "min_relative": 0.012312461992945826,
+      "worst": {
+        "case": 230,
+        "n": 5,
+        "z": 8,
+        "side": 1,
+        "tau": 0,
+        "beta": 4.546427804824712,
+        "physical_time": 0.0
+      }
+    }
+  },
+  "exact_J3": {
+    "matrix": [
+      [
+        "-59/135",
+        "71/135",
+        "47/45"
+      ],
+      [
+        "71/270",
+        "-209/270",
+        "67/90"
+      ],
+      [
+        "47/270",
+        "67/270",
+        "-161/90"
+      ]
+    ],
+    "K21": "-14/27",
+    "F123": "0",
+    "G123": "-2/9",
+    "spectrum": [
+      "-2",
+      "-1",
+      "0"
+    ]
+  },
+  "elapsed_seconds": 0.8819012641906738,
+  "tolerances": {
+    "tiny_absolute_sum_cutoff": 1e-24,
+    "relative_negative_cutoff": 1e-10,
+    "ratio_order_cutoff": 1e-08,
+    "ratio_min_coordinates": 1e-12
+  },
+  "ranges": {
+    "n": [
+      3,
+      8
+    ],
+    "energy_span": [
+      1,
+      15
+    ],
+    "raw_general_reduced_rates": [
+      0.001,
+      1000
+    ],
+    "tridiagonal_raw_scales": [
+      0.01,
+      100
+    ],
+    "time_in_inverse_slowest_rate": [
+      0,
+      0.001,
+      0.01,
+      0.1,
+      1,
+      3,
+      10
+    ],
+    "general_z": [
+      0.0001,
+      0.05,
+      0.25,
+      0.5,
+      0.8,
+      0.8944271909999159
+    ],
+    "tridiagonal_heating_z": [
+      0.001,
+      0.05,
+      0.3,
+      1,
+      3,
+      8
+    ]
+  }
+}

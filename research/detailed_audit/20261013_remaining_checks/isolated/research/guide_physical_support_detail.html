@@ -1,0 +1,713 @@
+<p class="small">The following eight walkthroughs reproduce Lessons 33–40 of the expanded report. Equations use native MathML and work offline.</p>
+<details class="proof-route" id="physical-lesson-33"><summary>Lesson 33. A rate is not a probability: build the clock first</summary>
+
+<h3>Begin with units.</h3>
+<p>A probability is a number between zero and one. A rate has units of
+inverse time. A rate of three events per second is perfectly meaningful;
+a probability of three is not. If an event has constant rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
+its probability of occurring in a very short interval of length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>h</mi><mo>+</mo><mi>o</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">rh+o(h)</annotation></semantics></math>.
+The notation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>o</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">o(h)</annotation></semantics></math>
+means that the error divided by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+tends to zero as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+tends to zero. It does not mean that the approximation is exact for a
+one-second interval.</p>
+<h3>Derive the waiting law.</h3>
+<p>Let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S(t)</annotation></semantics></math>
+be the probability that no event has happened by time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Assume that, conditional on no event so far, the chance in the next
+short interval is still
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>h</mi><mo>+</mo><mi>o</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">rh+o(h)</annotation></semantics></math>.
+Then
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>r</mi><mi>h</mi><mo>+</mo><mi>o</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><msup><mi>S</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>r</mi><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">S(t+h)=S(t)(1-rh+o(h)),\qquad S&#39;(t)=-rS(t),\qquad S(0)=1.</annotation></semantics></math></div>
+The function with this derivative and initial value is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">S(t)=e^{-rt}</annotation></semantics></math>.
+Thus the probability of at least one event by time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">1-e^{-rt}</annotation></semantics></math>.
+For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">r=2</annotation></semantics></math>
+per second and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">t=0.1</annotation></semantics></math>
+seconds, this is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>0.2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1-e^{-0.2}</annotation></semantics></math>,
+approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.1813</mn><annotation encoding="application/x-tex">0.1813</annotation></semantics></math>.
+The short-time estimate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>t</mi><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">rt=0.2</annotation></semantics></math>
+is close but different. For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t=1</annotation></semantics></math>
+second the estimate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>t</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">rt=2</annotation></semantics></math>
+is not a probability at all.</p>
+<h3>Why the mean wait is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</h3>
+<p>The density of the first event time is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">re^{-rt}</annotation></semantics></math>.
+Its mean is
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>∞</mi></msubsup><mi>t</mi><mi>r</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mi>t</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup><msubsup><mo stretchy="false" form="postfix">]</mo><mn>0</mn><mi>∞</mi></msubsup><mo>+</mo><msubsup><mo>∫</mo><mn>0</mn><mi>∞</mi></msubsup><msup><mi>e</mi><mrow><mi>−</mi><mi>r</mi><mi>t</mi></mrow></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi><mo>=</mo><mfrac><mn>1</mn><mi>r</mi></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\int_0^\infty t r e^{-rt}\,dt
+ =[-te^{-rt}]_0^\infty+\int_0^\infty e^{-rt}\,dt=\frac1r.</annotation></semantics></math></div>
+The integration by parts has merely moved the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+onto a derivative. There is also a geometric interpretation: the mean
+waiting time is the area under the survival curve
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S(t)</annotation></semantics></math>.</p>
+<h3>Several possible exits.</h3>
+<p>From state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+let the exit rates to other states be
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math>.
+Independent exponential clocks compete. The probability that none has
+rung by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+is the product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∏</mo><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></msub><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\prod_{i\ne j}e^{-a_{ij}t}</annotation></semantics></math>,
+hence the total exit rate is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>j</mi></msub><mo>=</mo><msub><mo>∑</mo><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></msub><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_j=\sum_{i\ne j}a_{ij}</annotation></semantics></math>.
+Conditional on an exit, its destination is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+with probability
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>/</mi><msub><mi>r</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_{ij}/r_j</annotation></semantics></math>.
+This produces the diagonal entry
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mrow><mi>j</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>−</mi><msub><mi>r</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">M_{jj}=-r_j</annotation></semantics></math>
+and explains why a column sums to zero. The negative diagonal does not
+describe a negative probability; it describes probability leaving.</p>
+<h3>Try it.</h3>
+<p>Suppose the rates from one state to two others are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>
+per second. The mean residence time is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">1/5</annotation></semantics></math>
+second, and the next destination probabilities are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">2/5</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">3/5</annotation></semantics></math>.
+Multiplying all rates by ten divides every waiting time by ten. It does
+not change these destination probabilities or the equilibrium
+distribution. Consequently, a percentage time advantage alone supplies
+no absolute number of seconds without a physical rate calibration.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-34"><summary>Lesson 34. Replace unequal clocks by one clock and harmless pauses</summary>
+
+<h3>A deliberately simple
+two-state example.</h3>
+<p>Use a column probability vector and let
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>ρ</mi><mo>=</mo><mn>2</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><mo>=</mo><mi>I</mi><mo>+</mo><mi>M</mi><mi>/</mi><mi>ρ</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn><mi>/</mi><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn><mi>/</mi><mn>2</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">M=\begin{pmatrix}-2&amp;1\\2&amp;-1\end{pmatrix},\qquad
+ \rho=2,\qquad
+ P=I+M/\rho=\begin{pmatrix}0&amp;1/2\\1&amp;1/2\end{pmatrix}.</annotation></semantics></math></div>
+The first state exits at rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>;
+the second exits at rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Instead ring a clock of rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+in either state. At each ring, choose the next state using the current
+column of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>.
+In state two, half the rings leave the state unchanged. Its actual
+transition rate is therefore
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2\times(1/2)=1</annotation></semantics></math>,
+exactly as required. The pauses are real elapsed time.</p>
+<h3>Generalize only after the
+example.</h3>
+<p>Choose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+at least as large as every exit rate. Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>I</mi><mo>+</mo><mi>M</mi><mi>/</mi><mi>ρ</mi></mrow><annotation encoding="application/x-tex">P=I+M/\rho</annotation></semantics></math>
+has nonnegative entries and unit column sums. Such a matrix is called
+stochastic: it sends probability vectors to probability vectors. The
+identity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo>−</mo><mi>I</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M=\rho(P-I)</annotation></semantics></math>
+gives
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>M</mi><mi>t</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>ρ</mi><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo>−</mo><mi>I</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>ρ</mi><mi>t</mi></mrow></msup><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mo accent="false">∞</mo></munderover><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>ρ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow><mrow><mi>k</mi><mi>!</mi></mrow></mfrac><msup><mi>P</mi><mi>k</mi></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">e^{Mt}=e^{\rho t(P-I)}
+ =e^{-\rho t}\sum_{k=0}^\infty\frac{(\rho t)^k}{k!}P^k.</annotation></semantics></math></div>
+The factorization is allowed because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+commutes with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>.
+It would not be legitimate to split an arbitrary matrix exponential into
+two factors without checking commutation.</p>
+<h3>Read every factor as a
+probability.</h3>
+<p>Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>ρ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\mu=\rho t</annotation></semantics></math>.
+A Poisson random variable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+has probabilities
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Pr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo>=</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>μ</mi></mrow></msup><msup><mi>μ</mi><mi>k</mi></msup><mi>/</mi><mi>k</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">\Pr(N=k)=e^{-\mu}\mu^k/k!</annotation></semantics></math>.
+Here
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+counts clock rings by time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Conditional on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">N=k</annotation></semantics></math>,
+the distribution is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mi>k</mi></msup><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P^kp(0)</annotation></semantics></math>.
+Averaging these conditional distributions gives the displayed formula.
+This procedure is called uniformization. It is an exact continuous-time
+construction, not a small-time-step approximation.</p>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mu=1</annotation></semantics></math>,
+the probabilities of zero, one and two rings are respectively
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">e^{-1}/2</annotation></semantics></math>.
+Their sum is about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.9197</mn><annotation encoding="application/x-tex">0.9197</annotation></semantics></math>.
+The missing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.0803</mn><annotation encoding="application/x-tex">0.0803</annotation></semantics></math>
+is the probability of three or more rings; it cannot simply be discarded
+when a rigorous error bound is required.</p>
+<h3>Check the two-state
+equilibrium.</h3>
+<p>Solving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>π</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">M\pi=0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>+</mo><msub><mi>π</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\pi_1+\pi_2=1</annotation></semantics></math>
+gives
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>/</mi><mn>3</mn><mo>,</mo><mn>2</mn><mi>/</mi><mn>3</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">\pi=(1/3,2/3)^\top</annotation></semantics></math>.
+Starting from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">(1,0)^\top</annotation></semantics></math>,
+the exact first component is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mi>/</mi><mn>3</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>3</mn><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">p_1(t)=1/3+(2/3)e^{-3t}</annotation></semantics></math>
+and the second is its complement. Differentiating verifies
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>p</mi><mn>1</mn><mo>′</mo></msubsup><mo>=</mo><mn>1</mn><mo>−</mo><mn>3</mn><msub><mi>p</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">p&#39;_1=1-3p_1</annotation></semantics></math>,
+which is also the first row of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Mp</annotation></semantics></math>.
+This small solvable model is a useful check of the matrix convention,
+the clock interpretation and any implementation of uniformization.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-35"><summary>Lesson 35. Bound the part of an infinite sum that you did not compute</summary>
+
+<h3>First learn the geometric
+comparison.</h3>
+<p>For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>q</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0\leq q&lt;1</annotation></semantics></math>,
+multiplying
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>q</mi><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">1+q+q^2+\cdots</annotation></semantics></math>
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">1-q</annotation></semantics></math>
+cancels every term except the first, giving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>q</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(1-q)</annotation></semantics></math>.
+If a nonnegative series starts with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and every later term is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+times its predecessor, its whole sum is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>q</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a/(1-q)</annotation></semantics></math>.
+Equality is unnecessary; an upper bound suffices.</p>
+<p>For Poisson weights
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>k</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>μ</mi></mrow></msup><msup><mi>μ</mi><mi>k</mi></msup><mi>/</mi><mi>k</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">w_k=e^{-\mu}\mu^k/k!</annotation></semantics></math>,
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>w</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>w</mi><mi>k</mi></msub></mfrac><mo>=</mo><mfrac><mi>μ</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{w_{k+1}}{w_k}=\frac{\mu}{k+1}.</annotation></semantics></math></div>
+After keeping terms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+through
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>,
+the first omitted weight is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mrow><mi>K</mi><mo>+</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">w_{K+1}</annotation></semantics></math>.
+Every subsequent ratio is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mi>μ</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q=\mu/(K+2)</annotation></semantics></math>.
+Provided
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">q&lt;1</annotation></semantics></math>,
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>K</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mi>K</mi><mo>+</mo><mn>1</mn></mrow><mo accent="false">∞</mo></munderover><msub><mi>w</mi><mi>k</mi></msub><mo>≤</mo><mfrac><msub><mi>w</mi><mrow><mi>K</mi><mo>+</mo><mn>1</mn></mrow></msub><mrow><mn>1</mn><mo>−</mo><mi>μ</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">R_K=\sum_{k=K+1}^\infty w_k
+ \leq\frac{w_{K+1}}{1-\mu/(K+2)}.</annotation></semantics></math></div> The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">K+2</annotation></semantics></math>
+in the denominator is intentional: it bounds the ratio from the first
+omitted term to the next omitted term. Confusing it with the first
+omitted term’s index is an easy off-by-one mistake.</p>
+<h3>Work a numerical example.</h3>
+<p>Take
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mu=1</annotation></semantics></math>
+and keep
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">K=2</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mn>3</mn></msub><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>/</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">w_3=e^{-1}/6</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">q=1/4</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>≤</mo><mn>2</mn><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>/</mi><mn>9</mn></mrow><annotation encoding="application/x-tex">R_2\leq 2e^{-1}/9</annotation></semantics></math>,
+approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.08175</mn><annotation encoding="application/x-tex">0.08175</annotation></semantics></math>.
+The actual missing mass is approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.08030</mn><annotation encoding="application/x-tex">0.08030</annotation></semantics></math>,
+below the bound. The bound is a little wider than necessary, but its
+validity is transparent.</p>
+<h3>Turn a scalar tail
+into a vector guarantee.</h3>
+<p>Every component of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mi>k</mi></msup><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P^kp(0)</annotation></semantics></math>
+lies in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mi>i</mi></msub><annotation encoding="application/x-tex">s_i</annotation></semantics></math>
+is the computed partial sum for component
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>s</mi><mi>i</mi></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo>+</mo><msub><mi>R</mi><mi>K</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">p_i(t)\in[s_i,s_i+R_K]</annotation></semantics></math>.
+These independent intervals need not sum to exactly one; they are an
+enclosure of a probability vector, not themselves a new probability
+vector. Renormalizing their endpoints without a proof could invalidate
+the enclosure.</p>
+<h3>Include
+arithmetic error as well as truncation error.</h3>
+<p>An exact tail formula does not excuse rounding errors in the partial
+sum. The nominal checker computes interval bounds for inputs,
+exponentials, matrix products and logarithms. If the entire probability
+interval is positive, it can enclose each term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>p</mi><mi>i</mi></msub><mi>/</mi><msub><mi>π</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_i\log(p_i/\pi_i)</annotation></semantics></math>
+and hence KL. An interval crossing zero requires a valid alternative
+treatment or a failure to certify; a logarithm of an invalid endpoint is
+not evidence.</p>
+<p>In the replayed nominal calculation, at most 281 terms were needed
+and the largest reported tail upper bound was below
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>45</mn></mrow></msup><annotation encoding="application/x-tex">10^{-45}</annotation></semantics></math>.
+The small tail is one part of the certificate. The validity of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>,
+the input correspondence, the outward arithmetic and the later
+comparison inequalities remain separate necessary parts. More printed
+digits alone establish none of them.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-36"><summary>Lesson 36. Prove a whole time interval using its endpoints</summary>
+
+<h3>A descending staircase
+picture.</h3>
+<p>Suppose two distances
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_c(t)</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_h(t)</annotation></semantics></math>
+are nonincreasing in time. On a cell
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[a,b]</annotation></semantics></math>,
+the cold distance is at least its value at the right endpoint, while the
+hot distance is at most its value at the left endpoint:
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">D_c(t)\geq D_c(b),\qquad D_h(t)\leq D_h(a).</annotation></semantics></math></div>
+Therefore a single strict inequality
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>0.9</mn><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_h(a)&lt;0.9D_c(b)</annotation></semantics></math></div>
+proves
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>0.9</mn><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_h(t)&lt;0.9D_c(t)</annotation></semantics></math>
+for every time in that cell. The endpoints are deliberately mismatched
+to use the worst case for each curve. Merely checking
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>0.9</mn><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_h(a)&lt;0.9D_c(a)</annotation></semantics></math>
+and the analogous inequality at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+would not control a crossing between them.</p>
+<h3>Why KL decreases here.</h3>
+<p>For a stochastic transition matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+and positive equilibrium
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>,
+let
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>=</mo><msub><mi>p</mi><mi>i</mi></msub><mi>/</mi><msub><mi>π</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">r_i=p_i/\pi_i</annotation></semantics></math>.
+When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>π</mi><mo>=</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">K\pi=\pi</annotation></semantics></math>,
+the output likelihood ratio is
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>p</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>j</mi></msub></mrow><msub><mi>π</mi><mi>j</mi></msub></mfrac><mo>=</mo><munder><mo>∑</mo><mi>i</mi></munder><mfrac><mrow><msub><mi>K</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><msub><mi>π</mi><mi>i</mi></msub></mrow><msub><mi>π</mi><mi>j</mi></msub></mfrac><msub><mi>r</mi><mi>i</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{(Kp)_j}{\pi_j}=\sum_i\frac{K_{ji}\pi_i}{\pi_j}r_i.</annotation></semantics></math></div>
+The coefficients in this sum are nonnegative and sum to one. Convexity
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>r</mi><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">f(r)=r\log r</annotation></semantics></math>
+says that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+of this weighted average is no greater than the weighted average of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.
+Multiply by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>π</mi><mi>j</mi></msub><annotation encoding="application/x-tex">\pi_j</annotation></semantics></math>,
+sum over
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+and use
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>j</mi></msub><msub><mi>K</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sum_jK_{ji}=1</annotation></semantics></math>
+to obtain
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>p</mi><mo stretchy="false" form="postfix">‖</mo><mi>π</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo stretchy="false" form="postfix">‖</mo><mi>π</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">D(Kp\Vert\pi)\leq D(p\Vert\pi).</annotation></semantics></math></div>
+Apply this to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>M</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>−</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">K=e^{M(b-a)}</annotation></semantics></math>.
+This argument proves the monotonicity used above. It does not say that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D_h(t)/D_c(t)</annotation></semantics></math>
+is monotone.</p>
+<h3>A hand-checkable cell.</h3>
+<p>Suppose outward bounds give
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mn>0.0080</mn></mrow><annotation encoding="application/x-tex">D_h(a)\leq0.0080</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><mn>0.0090</mn></mrow><annotation encoding="application/x-tex">D_c(b)\geq0.0090</annotation></semantics></math>.
+Then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.9</mn><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>D</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><mn>0.0001</mn><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0.9D_c(b)-D_h(a)\geq0.0001&gt;0</annotation></semantics></math>.
+Every interior time passes the ten-percent comparison. If the computed
+margin interval were
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mn>0.0001</mn><mo>,</mo><mn>0.0002</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[-0.0001,0.0002]</annotation></semantics></math>,
+no conclusion would follow; a narrower cell might resolve it.</p>
+<h3>Join the cells and check
+the floor.</h3>
+<p>A finite list
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>t</mi><mn>1</mn></msub><mo>&lt;</mo><mi>⋯</mi><mo>&lt;</mo><msub><mi>t</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">t_0&lt;t_1&lt;\cdots&lt;t_N</annotation></semantics></math>
+covers the entire closed interval
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>t</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mi>N</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[t_0,t_N]</annotation></semantics></math>
+without gaps. Proving the endpoint inequality on every cell proves the
+full window. Since cold KL decreases, a lower bound
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mi>N</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">D_c(t_N)\geq10^{-3}</annotation></semantics></math>
+also proves that floor throughout the window. The nominal replay used 80
+cells and a minimum certified comparison margin greater than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.0004408</mn><annotation encoding="application/x-tex">0.0004408</annotation></semantics></math>.
+Its fixed endpoints were approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>58.89269</mn><annotation encoding="application/x-tex">58.89269</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>117.78539</mn><annotation encoding="application/x-tex">117.78539</annotation></semantics></math>
+in attempt-time units. The script separately encloses the slow time to
+justify the window-length requirement; a decimal time chosen from a
+numerical eigenvalue does not become exact merely by being described as
+a multiple of that numerical estimate.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-37"><summary>Lesson 37. Prove a whole band of target distances</summary>
+
+<h3>Reverse the graph in your
+mind.</h3>
+<p>For a positive target
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+below the initial distance, define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">t_x(\delta)</annotation></semantics></math>
+as the first time preparation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+reaches that target. A smaller target means getting closer to
+equilibrium, so it takes longer. Thus if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mi>a</mi></msub><mo>&lt;</mo><msub><mi>δ</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">\delta_a&lt;\delta_b</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>a</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><msub><mi>t</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>b</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">t_x(\delta_a)\geq t_x(\delta_b)</annotation></semantics></math>.
+For the irreducible reversible model and a nonequilibrium preparation,
+KL strictly decreases until its limiting equilibrium value; positive
+targets below the initial value have unique crossings.</p>
+<h3>A root
+estimate proposes; a sign bracket verifies.</h3>
+<p>A numerical solver might propose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>10.1234</mn></mrow><annotation encoding="application/x-tex">t=10.1234</annotation></semantics></math>.
+To verify a bracket
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>L</mi><mo>,</mo><mi>U</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[L,U]</annotation></semantics></math>,
+enclose
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>L</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">D(L)-\delta</annotation></semantics></math>
+strictly above zero and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">D(U)-\delta</annotation></semantics></math>
+strictly below zero. Continuity gives a crossing between them; strict
+decrease gives uniqueness. An approximate residual close to zero is
+weaker than these two certified signs. We also need
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>L</mi><mo>&lt;</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">0&lt;L&lt;U</annotation></semantics></math>
+for the ratio bound below.</p>
+<h3>Choose the unfavorable
+corners.</h3>
+<p>For every
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><msub><mi>δ</mi><mi>a</mi></msub><mo>,</mo><msub><mi>δ</mi><mi>b</mi></msub><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\delta\in[\delta_a,\delta_b]</annotation></semantics></math>,
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><msub><mi>t</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>a</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><msub><mi>U</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>a</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>t</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><msub><mi>t</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>b</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>≥</mo><msub><mi>L</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>b</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">t_h(\delta)\leq t_h(\delta_a)\leq U_h(\delta_a),\qquad
+ t_c(\delta)\geq t_c(\delta_b)\geq L_c(\delta_b)&gt;0.</annotation></semantics></math></div>
+Division by a positive denominator preserves the intended order, giving
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mfrac><mrow><msub><mi>t</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>t</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>≥</mo><mn>1</mn><mo>−</mo><mfrac><mrow><msub><mi>U</mi><mi>h</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>a</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msub><mi>L</mi><mi>c</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>δ</mi><mi>b</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">1-\frac{t_h(\delta)}{t_c(\delta)}
+ \geq 1-\frac{U_h(\delta_a)}{L_c(\delta_b)}.</annotation></semantics></math></div>
+If the right side exceeds
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.05</mn><annotation encoding="application/x-tex">0.05</annotation></semantics></math>,
+every target in that cell has at least five-percent time saving. Notice
+that the numerator and denominator use opposite ends of the target cell.
+This conservative mismatch is exactly what covers its interior.</p>
+<h3>Try the ratio with
+ordinary numbers.</h3>
+<p>Suppose the hottest trajectory’s slowest permitted arrival is at most
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math>
+seconds and the cold trajectory’s fastest permitted arrival is at least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>100</mn><annotation encoding="application/x-tex">100</annotation></semantics></math>
+seconds. The saving is at least
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>90</mn><mi>/</mi><mn>100</mn><mo>=</mo><mn>10</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">1-90/100=10\%</annotation></semantics></math>.
+If the denominator were instead only known to exceed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>92</mn><annotation encoding="application/x-tex">92</annotation></semantics></math>,
+the bound would fall to about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.17</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">2.17\%</annotation></semantics></math>,
+even if all sampled same-target comparisons looked better. The proof
+must use the bounds it has actually established.</p>
+<p>The nominal certificate covers
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup><mo>,</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[10^{-3},10^{-2}]</annotation></semantics></math>
+with 60 target cells. Its conservative lower bound on time saving is
+approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.12245</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">8.12245\%</annotation></semantics></math>.
+This is a guaranteed lower bound for that nominal model, not the exact
+minimum. The later eight-obligation certificate handles the full
+uncertain four-state parameter box. It is a distinct proof, not a
+conclusion obtained by silently extrapolating the nominal
+calculation.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-38"><summary>Lesson 38. Derive a transition rate from an energy exchange</summary>
+
+<h3>Begin with one uphill move.</h3>
+<p>Let two system energies be
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>j</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">E_j=1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">E_i=3</annotation></semantics></math>,
+with barrier energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">B=5</annotation></semantics></math>.
+Draw a nonnegative reservoir energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+with density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>Y</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\beta e^{-\beta Y}</annotation></semantics></math>.
+The move from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+is allowed when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>Y</mi><mo>≥</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">1+Y\geq5</annotation></semantics></math>,
+namely when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>≥</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">Y\geq4</annotation></semantics></math>.
+At acceptance, set
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo>′</mo></msup><mo>=</mo><mi>Y</mi><mo>+</mo><mn>1</mn><mo>−</mo><mn>3</mn><mo>=</mo><mi>Y</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">Y&#39;=Y+1-3=Y-2</annotation></semantics></math>.
+It is nonnegative, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo>+</mo><msup><mi>Y</mi><mo>′</mo></msup><mo>=</mo><mn>3</mn><mo>+</mo><mi>Y</mi><mo>−</mo><mn>2</mn><mo>=</mo><mn>1</mn><mo>+</mo><mi>Y</mi><mo>=</mo><msub><mi>E</mi><mi>j</mi></msub><mo>+</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">E_i+Y&#39;=3+Y-2=1+Y=E_j+Y</annotation></semantics></math>:
+combined energy is conserved. The reverse contact sees the same total
+energy and can undo the move.</p>
+<h3>Integrate the acceptance
+probability.</h3>
+<p>For any
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c\geq0</annotation></semantics></math>,
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Pr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>≥</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∫</mo><mi>c</mi><mi>∞</mi></msubsup><mi>β</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>y</mi></mrow></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>y</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>c</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\Pr(Y\geq c)=\int_c^\infty\beta e^{-\beta y}\,dy=e^{-\beta c}.</annotation></semantics></math></div>
+If contacts for this pair arrive at rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ν</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\nu_0</annotation></semantics></math>,
+the accepted rate from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+is therefore
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>ν</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">a_{ij}=\nu_0e^{-\beta(B-E_j)}.</annotation></semantics></math></div>
+The reverse rate is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo>=</mo><msub><mi>ν</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>−</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">a_{ji}=\nu_0e^{-\beta(B-E_i)}</annotation></semantics></math>.
+Their ratio is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></msup><annotation encoding="application/x-tex">e^{-\beta(E_i-E_j)}</annotation></semantics></math>.
+Multiplying by Gibbs weights gives the stronger flux identity
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><msub><mi>E</mi><mi>j</mi></msub></mrow></msup><mo>=</mo><msub><mi>a</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><msub><mi>E</mi><mi>i</mi></msub></mrow></msup><mo>=</mo><msub><mi>ν</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>B</mi></mrow></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">a_{ij}e^{-\beta E_j}=a_{ji}e^{-\beta E_i}
+ =\nu_0e^{-\beta B},</annotation></semantics></math></div> which is detailed
+balance before the common normalization is inserted.</p>
+<h3>Separate
+an always-required gate from the uphill cost.</h3>
+<p>Write
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mi>B</mi><mo>−</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo>,</mo><msub><mi>E</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h=B-\max(E_i,E_j)</annotation></semantics></math>.
+Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub><mo>=</mo><mi>h</mi><mo>+</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">B-E_j=h+\max(E_i-E_j,0)</annotation></semantics></math>,
+the rate becomes
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>ν</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>h</mi></mrow></msup><mrow><mi mathvariant="normal">min</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>i</mi></msub><mo>−</mo><msub><mi>E</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo stretchy="false" form="postfix">}</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">a_{ij}=\nu_0e^{-\beta h}\min\{1,e^{-\beta(E_i-E_j)}\}.</annotation></semantics></math></div>
+In the example at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\beta=1</annotation></semantics></math>,
+the common gate contributes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-2}</annotation></semantics></math>,
+the uphill acceptance contributes another
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-2}</annotation></semantics></math>,
+and their product is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>4</mn></mrow></msup><annotation encoding="application/x-tex">e^{-4}</annotation></semantics></math>.
+The reverse move has only the common
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-2}</annotation></semantics></math>
+gate.</p>
+<h3>Why
+simulation may omit attempts but not their time.</h3>
+<p>One can retain only contacts with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>≥</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">Y\geq h</annotation></semantics></math>.
+Their clock has rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ν</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>h</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\nu_0e^{-\beta h}</annotation></semantics></math>.
+Conditional on passing the gate,
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Pr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>−</mo><mi>h</mi><mo>≥</mo><mi>z</mi><mo>∣</mo><mi>Y</mi><mo>≥</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo>+</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>h</mi></mrow></msup></mfrac><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>z</mi></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\Pr(Y-h\geq z\mid Y\geq h)
+ =\frac{e^{-\beta(h+z)}}{e^{-\beta h}}=e^{-\beta z}.</annotation></semantics></math></div>
+Thus a retained mark is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+plus a fresh exponential energy. This proves the thinning rule used in
+the event simulation. Counting every attempted contact as an accepted
+transition would alter the process; ignoring rejected contacts without
+adjusting the clock would alter physical time.</p>
+<h3>What this construction
+establishes.</h3>
+<p>Under independent fresh thermal marks, independent Poisson pair
+clocks, constant reservoir density of energy states, and instantaneous
+updates, the rate identity holds exactly for every allowed barrier and
+energy. It supplies a stochastic bath interpretation of the same
+four-state model. It does not identify a material or derive an
+autonomous microscopic bath. The replayed simulation of 500,000
+trajectories per preparation agrees with direct evolution at five times
+to within
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.00118</mn><annotation encoding="application/x-tex">0.00118</annotation></semantics></math>
+per component. That is a diagnostic check of the simulation; the rate
+identity above is the reason the mathematical generators coincide.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-39"><summary>Lesson 39. An intermediate state introduces a second clock</summary>
+
+<h3>Insert a waiting room
+between two wells.</h3>
+<p>Suppose the desired well-to-well rates are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>.
+Insert state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>.
+Use entrance rates
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>u</mi></mrow><annotation encoding="application/x-tex">2u</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>v</mi></mrow><annotation encoding="application/x-tex">2v</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>,
+and exit rate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+to each well. On entering
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+the next well is selected with probabilities
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>.
+Half the visits return to the well just left.</p>
+<p>If the clock is stopped during every visit to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+the successful transition rate from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>u</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">2u\times(1/2)=u</annotation></semantics></math>.
+This is the trace clock: only time actually spent in the wells is
+retained. With ordinary physical time, each visit adds a mean wait
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(2b)</annotation></semantics></math>.
+Those waits cannot be removed when claiming a physical completion
+time.</p>
+<h3>Derive the block
+identity one entry at a time.</h3>
+<p>Order the wells as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>,</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(j,i)</annotation></semantics></math>.
+Their direct block, the entrance block, the exit block and the
+intermediate block are
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>w</mi><mi>w</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn><mi>v</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>Q</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>2</mn><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>2</mn><mi>v</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>Q</mi><mrow><mi>w</mi><mi>s</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>b</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>Q</mi><mrow><mi>s</mi><mi>s</mi></mrow></msub><mo>=</mo><mi>−</mi><mn>2</mn><mi>b</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">Q_{ww}=\begin{pmatrix}-2u&amp;0\\0&amp;-2v\end{pmatrix},\quad
+ Q_{sw}=\begin{pmatrix}2u&amp;2v\end{pmatrix},\quad
+ Q_{ws}=\begin{pmatrix}b\\b\end{pmatrix},\quad Q_{ss}=-2b.</annotation></semantics></math></div>
+The subscripts give destination first, as everywhere else.
+Multiplication now gives
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>w</mi><mi>w</mi></mrow></msub><mo>−</mo><msub><mi>Q</mi><mrow><mi>w</mi><mi>s</mi></mrow></msub><msubsup><mi>Q</mi><mrow><mi>s</mi><mi>s</mi></mrow><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><msub><mi>Q</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>2</mn><mi>v</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>v</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>v</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>v</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>u</mi></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>v</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">Q_{ww}-Q_{ws}Q_{ss}^{-1}Q_{sw}
+ =\begin{pmatrix}-2u&amp;0\\0&amp;-2v\end{pmatrix}
+  +\begin{pmatrix}u&amp;v\\u&amp;v\end{pmatrix}
+ =\begin{pmatrix}-u&amp;v\\u&amp;-v\end{pmatrix}.</annotation></semantics></math></div>
+This is exactly the intended two-well generator. Adding the six pair
+contributions gives the four-well identity in the technical report. This
+exact algebra identifies the trace generator; it does not assert that
+the physical-time well probabilities solve that same four-state
+equation.</p>
+<h3>Equilibrium and
+preparation also change.</h3>
+<p>In the expanded model, each intermediate has energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+and phase-space weight
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta&gt;0</annotation></semantics></math>.
+Its equilibrium weight is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>B</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\eta e^{-B}</annotation></semantics></math>,
+compared with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>E</mi><mi>j</mi></msub></mrow></msup><annotation encoding="application/x-tex">e^{-E_j}</annotation></semantics></math>
+for a well. Taking
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>2</mn><mi>/</mi><mi>η</mi></mrow><annotation encoding="application/x-tex">b=2/\eta</annotation></semantics></math>
+in attempt-time units gives mean intermediate residence time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\eta/4</annotation></semantics></math>
+and matched equilibrium fluxes. At preparation temperature
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+all ten states must be prepared with weights
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>a</mi></msub><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>E</mi><mi>a</mi></msub><mi>/</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">g_a e^{-E_a/T}</annotation></semantics></math>.
+Preparing only the wells would be a different experiment. The
+phase-space weight
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+need not be an integer count.</p>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\eta=0.05</annotation></semantics></math>,
+the nominal cold and hot preparations place about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.90</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">1.90\%</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.07</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">4.07\%</annotation></semantics></math>
+of their mass in intermediates. Full ten-state calculations retain those
+populations and every residence time. Their finite-time advantage
+persists at the tested points. The expanded system also has higher
+energies and faster rates outside the original all-state caps. It is a
+separate test of a modeling assumption, not a new certificate inside the
+original constrained four-state class.</p>
+
+</details>
+<details class="proof-route" id="physical-lesson-40"><summary>Lesson 40. Read a computational result at the right strength</summary>
+
+<h3>Four questions before
+accepting a result.</h3>
+<p>What object was calculated? What inputs were used? Which errors were
+bounded? Which variables were covered continuously? An answer such as
+“70 digits” only addresses numerical precision, and even then does not
+itself establish a bound on every implementation or modeling error.</p>
+<p>The independent ten-state calculation directly constructs and
+exponentiates the full generator at 70-digit working precision. It
+agrees with the fast spectral implementation within
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.55</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>13</mn></mrow></msup></mrow><annotation encoding="application/x-tex">6.55\times10^{-13}</annotation></semantics></math>
+in KL at five tested times. Different formulas agreeing is useful
+evidence against a numerical implementation mistake. Neither
+implementation uses outward error bounds for that comparison, so it is a
+high-precision diagnostic, not an interval certificate.</p>
+<h3>Interpret a large sample
+precisely.</h3>
+<p>For each of three fixed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+values, the study tests 256 corners and 500 seeded interior parameter
+points. The total is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>256</mn><mo>+</mo><mn>500</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2268</mn></mrow><annotation encoding="application/x-tex">3(256+500)=2268</annotation></semantics></math>.
+Each point is further tested on finite target and time grids. No sampled
+case fails the declared benchmarks. This says exactly what happened on
+those grids. It does not exclude a narrow failure between points,
+between time samples, between targets, or at an untested value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>.
+The continuous four-state certificate cannot be transferred to this
+ten-state extension merely because their trace generators agree.</p>
+<h3>A percentage
+needs a denominator and a clock.</h3>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\eta=0.05</annotation></semantics></math>
+and target
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math>,
+the independently computed arrival times are approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>210.67249</mn><annotation encoding="application/x-tex">210.67249</annotation></semantics></math>
+for cold and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>190.05131</mn><annotation encoding="application/x-tex">190.05131</annotation></semantics></math>
+for hot. Using the cold time as denominator gives
+<div class="equation-scroll"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>210.67249</mn><mo>−</mo><mn>190.05131</mn></mrow><mn>210.67249</mn></mfrac><mo>≈</mo><mn>0.0978826</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">\frac{210.67249-190.05131}{210.67249}\approx0.0978826,</annotation></semantics></math></div>
+or about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9.78826</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">9.78826\%</annotation></semantics></math>.
+Dividing by the hot time would answer a different percentage question.
+These are attempt-time units, not calibrated seconds. The calculation
+includes post-quench intermediate residence times but does not include
+the cost or duration of preparing the hotter initial state.</p>
+<h3>Know what a
+program’s success message establishes.</h3>
+<p>A zero exit code means that the process completed without a reported
+execution failure. Some exploratory programs record failures in JSON
+without returning a nonzero code. Read the recorded failure counts,
+input hashes, unresolved cells, parameter scope and numerical residuals.
+A certificate runner must also reject incomplete coverage. A numerical
+search that found nothing has a different meaning from a complete proof
+that nothing exists.</p>
+<h3>The final handoff to
+advanced mathematics.</h3>
+<p>You can now read the physical section by following a chain of
+explicit claims: construct valid rates; establish equilibrium; evolve
+preparations; bound numerical error; prove continuous comparisons; and
+interpret the clock and physical assumptions. The advanced spectral and
+interval methods make that chain efficient over an uncertain parameter
+box. They do not replace any link. When a later formula looks
+forbidding, identify which link it serves before trying to manipulate
+its symbols.</p>
+
+</details>

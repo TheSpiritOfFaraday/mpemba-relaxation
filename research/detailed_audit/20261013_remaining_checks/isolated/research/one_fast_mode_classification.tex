@@ -1,0 +1,174 @@
+\subsection{Exact classification when only one mode is faster}
+\label{sec:fulltripletdegenerate}
+The full triplet premise is especially restrictive when all but one of
+the nonstationary modes share the slow rate. The resulting classification
+holds in every dimension at least four and completely covers slow
+spectral degeneracy in four states.
+
+\begin{theorem}[A single faster mode must mix an adjacent pair]
+\label{thm:tripletdegenerate}
+Let $n\geq4$, and let $M$ be an irreducible reversible $n$-state generator
+with distinct energy levels, positive finite bath temperature, and
+$F_{ijk},G_{ijk}\leq0$ on every original-rate energy-ordered triplet.
+Write $q=\pi(\beta_b)$, $D=\operatorname{diag}(q)$ and
+$R=q\mathbf1^\top-I$. Suppose
+\[
+0>\lambda_2=\cdots=\lambda_{n-1}>\lambda_n.
+\]
+Then for exactly one $k\in\{1,\ldots,n-1\}$,
+\[
+M=\rho R+\delta J^{(k)},\qquad \rho>0,\quad\delta>0,
+\]
+where $J^{(k)}$ is supported on the adjacent pair $(k,k+1)$,
+\[
+J^{(k)}_{k,k+1}=\frac{q_k}{q_k+q_{k+1}},\qquad
+J^{(k)}_{k+1,k}=\frac{q_{k+1}}{q_k+q_{k+1}},
+\]
+and its diagonal is set by zero column sums. Conversely, every such
+matrix obeys all the triplet inequalities, with eigenvalues $0$,
+$-\rho$ of multiplicity $n-2$, and $-\rho-\delta$.
+If all nonzero eigenvalues coincide, then $M=\rho R$.
+
+Every generator in these classes preserves stochastic order.
+Consequently, for cooling or heating Gibbs preparations, the farther
+preparation has at least as large a convex divergence from the bath at
+every $t\geq0$. This holds for every convex function finite on positive
+arguments; it is strict at finite times for strictly convex functions
+and distinct preparations. In particular there is no ordinary or strong
+asymptotic effect in KL or weighted Euclidean distance.
+\end{theorem}
+\begin{proof}
+Use normalized weights $q_1>\cdots>q_n>0$.
+Set $\rho=-\lambda_2$ and $\delta=\lambda_2-\lambda_n$.
+The reversible spectral resolution gives
+\[
+M=\rho R-\frac{\delta}{N}Dzz^\top,
+\qquad q^\top z=0,\qquad N=z^\top Dz>0,
+\]
+where $z$ is a real fast left eigenvector. Substitution of
+$a_{ij}=\rho q_i-\delta q_i z_i z_j/N$ into the original tests gives
+\begin{align*}
+G_{ijk}&=-\frac{\delta q_j}{N}z_k(z_i-z_j),\\
+F_{ijk}&=\frac{\delta}{N}\left\{
+(q_i-q_j)z_i z_j-z_k\left[q_i z_i-q_j z_j
+ +\frac{q_k}{2}(z_i-z_j)\right]\right\}.
+\end{align*}
+Thus $G\leq0$ means $z_k(z_i-z_j)\geq0$.
+When $z_i=z_j=a$, the second identity is
+$F_{ijk}=\delta(q_i-q_j)a(a-z_k)/N$; when $z_k=0$ it is
+$F_{ijk}=\delta(q_i-q_j)z_i z_j/N$.
+
+Let $m$ be the largest index with $z_m\ne0$ and orient $z_m>0$.
+Zero bath mean excludes $m=1$.
+If $m\geq4$, the tests $G_{ijm}\leq0$ order the entire prefix:
+\[
+z_1\geq z_2\geq\cdots\geq z_{m-1}.
+\]
+If some $i<j\leq m-2$ had $z_i>z_j$, the test
+$G_{ij,m-1}\leq0$ would force $z_{m-1}\geq0$.
+Every earlier entry would then be nonnegative, contradicting zero bath
+mean because $z_m>0$ and all later entries vanish. Hence
+\[
+z_1=\cdots=z_{m-2}=a.
+\]
+Since $m-2\geq2$, $F_{12m}\leq0$ gives $0\leq a\leq z_m$.
+Zero bath mean forces $z_{m-1}<0$, and $F_{12,m-1}\leq0$
+then forces $a=0$. Therefore the support is exactly $(m-1,m)$.
+
+If $m=3$, the condition $n\geq4$ supplies the zero component $z_4$.
+The test $G_{123}\leq0$ gives $z_1\geq z_2$, and zero bath mean
+forces $z_2<0$. Now $F_{124}\leq0$ gives $z_1\geq0$, whereas
+$F_{134}\leq0$ gives $z_1\leq0$. Thus $z_1=0$, and the support
+is exactly $(2,3)$. If $m=2$, zero bath mean immediately gives support
+exactly $(1,2)$. This proves that only an adjacent pair can occur.
+
+For support $(k,k+1)$ choose
+$z_k=-1/q_k$, $z_{k+1}=1/q_{k+1}$.
+Then $-Dzz^\top/N=J^{(k)}$ with the displayed rates. This proves
+necessity and uniqueness of the pair. It also proves strict positivity
+of all off-diagonal rates, even if only nonnegative rates were assumed.
+
+For the converse put $d=\delta/(q_k+q_{k+1})$.
+The only nonzero triplet tests are
+\begin{align*}
+F_{k,k+1,l}&=-(q_k-q_{k+1})d &&(l>k+1),\\
+F_{i,k,k+1}&=-(q_k+q_{k+1}/2)d &&(i<k),\\
+G_{i,k,k+1}&=-q_kd &&(i<k).
+\end{align*}
+They are all negative; every omitted test is zero.
+The matrix $J^{(k)}$ has eigenvalue $-1$ on the right eigenvector
+$Dz$ and vanishes on its $(n-1)$-dimensional kernel. The reset $R$
+is $-I$ on the zero-sum probability-perturbation subspace. This proves
+the spectrum. If all nonzero eigenvalues coincide, the reversible
+spectral resolution directly gives $M=\rho R$.
+
+For stochastic monotonicity, take adjacent differences
+$d_i=f_{i+1}-f_i$ of functions. The backward reset generator induces
+$-I$ on these differences. The difference matrix of $J^{(k)}$ has
+only column $k$ nonzero: its diagonal entry is $-1$, its entry in
+row $k-1$, when present, is $q_{k+1}/(q_k+q_{k+1})$, and its entry
+in row $k+1$, when present, is $q_k/(q_k+q_{k+1})$.
+Thus the difference generator is Metzler. The earlier reversible
+stochastic-order argument gives all-time convex-divergence ordering.
+Strict convexity makes its supporting-line inequality strict for
+unequal evolved distributions, which remain unequal at finite times
+because $e^{tM}$ is invertible. This argument never selects a scalar
+vector from the repeated slow eigenspace. The strong-effect exclusion
+also follows directly from the earlier all-$G$ projection theorem.
+\end{proof}
+
+\begin{corollary}[The complete four-state degenerate boundary]
+Under the full four-state triplet premise, a double slow eigenvalue
+forces reset plus one adjacent-pair mixing term, and a triple slow
+eigenvalue forces pure reset. Both cases have all-time convex-divergence
+ordering. In particular every ordinary asymptotic cooling counterexample in KL
+or weighted Euclidean distance has a simple slow eigenvalue. Strict failure of all eight linear tests
+also forces spectral simplicity at the slow rate, since the classified
+degenerate generators have several triplet equalities.
+\end{corollary}
+
+The inequalities $F,G\leq0$ are the primary hypotheses if zero
+rates are initially allowed; they agree with the original branchwise
+predicate for positive rates. This avoids defining $\kappa$ by division
+by a possibly zero rate. The classification then implies positivity.
+
+The reset-plus-pair family itself is prior work. Section II of
+\href{https://arxiv.org/html/2609.09988v1}{Gelbwaser-Klimovsky,
+\emph{Efficient protocol for the Markovian Mpemba effect in $N$-level
+systems}, arXiv:2609.09988v1, 9 September 2026} introduces the single-pair
+states-deviation protocol (SPSD). Our $\delta>0$ adjacent-pair family is
+its positive-deviation case, with
+$\Delta=\delta/[\rho(q_k+q_{k+1})]$. That source already shows that
+positive pair deviation can activate the triplet test only when a level
+lies strictly between the pair. The necessity proved here is a converse
+classification: under the one-fast-mode spectrum and all triplet
+failures, every admissible generator must belong to that adjacent-pair
+family. The all-time divergence conclusion is an application of the
+established stochastic-order method, not a new construction or principle.
+
+The restriction $n\geq4$ is essential for the rank-one classification.
+For $n=3$, take $q=(3/5,3/10,1/10)$, $z=(1,2,-12)$, and
+$M=R-Dzz^\top/(z^\top Dz)$. All rates are positive, its spectrum is
+$0,-1,-2$, and $F_{123}=0$, $G_{123}=-2/9$, but the fast mode uses
+all three states. There is no repeated slow eigenvalue in that dimension;
+the example pinpoints why an additional triplet is needed in the proof.
+For $n>4$, the theorem concerns slow multiplicity exactly $n-2$ (or
+$n-1$ for reset). It does not classify smaller repeated slow eigenspaces
+with two or more distinct faster modes. No publication-priority claim
+is made for this classification.
+
+Exact rank-one identities and general pair formulas are audited by
+\path{research/one_fast_mode_certificate.py}. The script additionally
+checks explicit symbolic matrices in dimensions four through eight,
+including their projector identities, spectra, triplet tables and
+Metzler difference matrices; the arbitrary-dimensional statement is
+proved by the support argument above, not inferred from those checks.
+
+The restriction on multiplicity matters structurally. A five-state
+counterexample to extending the monotonicity conclusion to every repeated
+slow space has $q=(24,12,4,2,1)/43$ and spectrum
+$0,-1,-1,-2,-3$. It obeys all $F,G\leq0$, yet its adjacent-difference
+matrix has entry $K_{21}=-14/27$. The exact construction is given in
+\path{research/five_state_degenerate_nonmonotone.txt} and checked by its
+companion script. This rules out that stronger structural inference;
+it does not by itself exhibit a thermal divergence reversal.

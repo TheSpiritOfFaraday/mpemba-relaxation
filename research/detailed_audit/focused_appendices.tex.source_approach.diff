@@ -1,0 +1,88 @@
+--- 
++++ 
+@@ -2115,7 +2115,25 @@
+ =\frac{13a}{4L}\left[1+O\!\left(\beta_m+\frac1L\right)\right].
+ \]
+ The exponentially small remainder does not change the indicated algebraic
+-orders. Taking logarithms and then substituting into
++orders. More explicitly, the exact numerator of the positive amplitude is
++$-1+(4/5)(1-\varepsilon/3)^\beta-r y+\varepsilon x$,
++and its denominator is $1+(1-\varepsilon/3)^\beta+y+x$.
++On $0\leq\beta\leq1$, their differences from the displayed leading
++numerator and denominator are $O(\varepsilon)$; their derivative
++differences are $O(L\varepsilon)$. The denominator stays bounded below.
++For the leading ratio, multiplying its derivative by $15(2+y+x)^2$
++gives exactly
++\[
++x\bigl[(10L-5a)y-6L\bigr]-13ay.
++\]
++Near the maximum $y\to1$, so the coefficient of $x$ is asymptotic to
++$4L$ and the exponentially small derivative error remains negligible.
++Taking logarithms first gives
++$2L\beta_m=\log(4L/(13a))+O(\beta_m+1/L)$.
++Absorbing the $O(\beta_m)$ term into the left side proves
++$\beta_m=O(\log L/L)$; substituting this bound back gives the stated
++$O(\log L/L^2)$ remainder. This intermediate bound is needed before
++the sharper remainder can be asserted. Substituting into
+ \[
+ R(\beta_m)=\frac2{45}
+ \left[1-\frac{13a}{6}\beta_m-\frac{x}{3}
+@@ -2126,6 +2144,17 @@
+ $\log L/L$, equivalently $\log E_4/E_4$. Thus a nonvanishing spectral gap
+ does not imply that a near-quarter amplitude advantage requires only modest
+ energy separation.
++
++The numerical figure uses the finite hot preparation $\beta_h=L^{-2}$,
++whereas \eqref{eq:quarterapproach} uses the limiting reference $\beta_h=0$.
++The finite-hot numerator differs by $O(1/L)$, since its highest-state
++weight is $e^{-2/L}$ instead of one. Both advantages approach $1/4$,
++but their subleading corrections are not identical.
++\path{research/check_quarter_approach.py} verifies the stationarity and
++Taylor-coefficient algebra symbolically and independently recomputes five
++plotted maxima at 100-digit precision. Its finite residual table is a
++diagnostic illustration of the remainder scales, not a proof of a big-$O$
++bound; the analytic argument above supplies that bound.
+ 
+ \begin{figure}[htbp]
+ \centering
+@@ -4029,8 +4058,14 @@
+ distance. Its additional disturbance within the basins relaxes quickly.
+ These numbers support the interpretation; exact lumpability is not assumed.
+ The relevance of metastable populations is established in prior work,
+-including \href{https://arxiv.org/abs/2304.06420}{Biswas, Rajesh and Pal (2023)};
+-neither that general mechanism nor Arrhenius kinetics is claimed new here.
++including \href{https://arxiv.org/abs/2304.06420v2}{Biswas, Rajesh and Pal
++(2023), Section IV and Fig.~2}. Their piecewise-linear Langevin model
++relates initial well populations to relaxation. Their Section VI also
++exhibits the effect without a metastable minimum: metastability is not a
++general necessary condition. The citation supplies a mechanism precedent,
++not a derivation of our four-state rates, an exact lumping theorem, or our
++robustness certificate. Neither that general mechanism nor Arrhenius
++kinetics is claimed new here.
+ 
+ The barriers are only $2.11$--$5.64\,k_BT_b$ above the higher endpoint.
+ Consequently a Kramers-type asymptotic rate approximation could have
+@@ -4423,9 +4458,20 @@
+ Equivalently, with $h_{ij}=B_{ij}-\max(E_i,E_j)$, the rate is
+ $\nu_0e^{-\beta_bh_{ij}}\min\{1,e^{-\beta_b(E_i-E_j)}\}$.
+ The acceptance factor is the familiar
+-\href{https://doi.org/10.1063/1.1699114}{Metropolis form (1953)};
+-auxiliary-energy simulation methods also have a long history, for example
+-\href{https://doi.org/10.1103/PhysRevLett.50.1411}{Creutz (1983)}.
++\href{https://doi.org/10.1063/1.1699114}{Metropolis form (1953)}.
++The original method accepts downhill proposals and accepts uphill proposals
++with the Boltzmann factor; rejected proposals still contribute to its
++configuration averages (Section II, pp.~5--6 of the
++\href{https://www.osti.gov/servlets/purl/4390578}{Los Alamos report}).
++Auxiliary-energy simulation methods also have a long history.
++\href{https://doi.org/10.1103/PhysRevLett.50.1411}{Creutz (1983)},
++pp.~1411--1412, introduces a retained energy-carrying demon with conserved
++combined energy. He also explicitly describes redrawing its energy from
++the Boltzmann distribution before each visit, recovering Metropolis sampling.
++Thus a refreshed thermal auxiliary energy is itself an established device.
++Our specified pair clocks and symmetric barrier gates provide the rate and
++time interpretation used here; neither cited sampling method alone
++establishes that physical clock or this model's finite-time performance.
+ No new thermostat or sampling algorithm is claimed here.
+ The contribution of this construction is an explicit bath interpretation
+ of the particular constrained rate family and its finite-time clock.
